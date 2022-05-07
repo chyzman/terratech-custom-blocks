@@ -1,0 +1,78 @@
+{
+  "Name": "GreenTech Intermediary Recycled Block Corner",
+  "Description": "A Recycled Block that connects to different corner sizes.",
+  "ID": 911149, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2775, 
+  "HP": 4800,
+  "Mass": 16,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 9, 9, 9, 9, 32, 32, 32, 32, 45, 52, 52", 
+  "IconName": "GT_Intermediary_Recycled_Block_Corner_Icon.png", 
+  "MeshName": "GT_Intermediary_Recycled_Block_Corner.obj", 
+  "ColliderMeshName": "GT_Intermediary_Recycled_Block_Corner_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "xxxx",
+    "   x"
+  ],
+  [
+    "xxxx",
+    "  xx"
+  ],
+  [
+    "xxx ",
+    " xxx"
+  ],
+  [
+    "xx  ",
+    "xxx "
+  ]
+],
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 3, "y": -0.5, "z": 0},	
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": 3, "y": 0, "z": -0.5}, 
+    {"x": 0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": 0.5}, 
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 1.5},
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": 0, "y": 1.5,"z": 0},
+    {"x": 0, "y": 0.5, "z": 1},
+    {"x": 0, "y": 1.5,"z": 1},
+    {"x": 1, "y": 0.5, "z": 0},	
+    {"x": 1, "y": 1.5,"z": 0},
+    {"x": 1, "y": 0.5, "z": 1},
+    {"x": 0, "y": 0.5, "z": 2},
+    {"x": 2, "y": 0.5, "z": 0},
+    {"x": -0.5, "y": 1, "z": 0},
+    {"x": -0.5, "y": 1, "z": 1},
+    {"x": -0.5, "y": 1, "z": 2},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 1, "y": 1, "z": -0.5},
+    {"x": 2, "y": 1, "z": -0.5},
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 2.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

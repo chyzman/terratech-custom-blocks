@@ -1,0 +1,244 @@
+
+{
+  "Name": "Hawkeye Magnus Watchtower",
+  "Description": "Magnus is an AI Module built over a towering anchor foundation, able of detecting enemies farther than conventional AI modules./nThe rotative structure provides a solid base for large weapons and robust support systems, as well as heavy armouring.",
+  "ID": 910631, 
+
+  "Faction": 5, 
+  "Category": 1, 
+  "Grade": 2, 
+  "Price": 23748,
+  "HP": 25000,
+  "Mass": 80,
+  "Fragility": 0,
+
+  "IconName": "HE_Turret_Platform_Icon.png", 
+  
+  "Recipe": 
+  "5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
+  7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 
+  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 
+  53, 53, 53, 53, 53, 53, 
+  54, 54, 54, 54, 54, 54, 
+  65", 
+
+  "SupressBoxColliderFallback": true,
+
+    "Cells": [ 
+        { "x": 1, "y": 0, "z": 0 },
+		{ "x": 2, "y": 0, "z": 0 },
+		{ "x": 3, "y": 0, "z": 0 },
+		{ "x": 4, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 5, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 5, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 5, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 4 },
+		{ "x": 2, "y": 0, "z": 4 },
+		{ "x": 3, "y": 0, "z": 4 },
+		{ "x": 4, "y": 0, "z": 4 },
+		{ "x": 5, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 5 },
+		{ "x": 2, "y": 0, "z": 5 },
+		{ "x": 3, "y": 0, "z": 5 },
+		{ "x": 4, "y": 0, "z": 5 },
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 2, "y": 1, "z": 0 },
+		{ "x": 3, "y": 1, "z": 0 },
+		{ "x": 4, "y": 1, "z": 0 },
+		{ "x": 5, "y": 1, "z": 0 },
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 5, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 5, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 5, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },
+		{ "x": 1, "y": 1, "z": 4 },
+		{ "x": 2, "y": 1, "z": 4 },
+		{ "x": 3, "y": 1, "z": 4 },
+		{ "x": 4, "y": 1, "z": 4 },
+		{ "x": 5, "y": 1, "z": 4 },
+		{ "x": 0, "y": 1, "z": 5 },
+		{ "x": 1, "y": 1, "z": 5 },
+		{ "x": 2, "y": 1, "z": 5 },
+		{ "x": 3, "y": 1, "z": 5 },
+		{ "x": 4, "y": 1, "z": 5 },
+		{ "x": 5, "y": 1, "z": 5 },
+    ],
+  
+    "APs": [ 
+		{"x": 2,"y": -0.5,"z": 2},
+		{"x": 2,"y": -0.5,"z": 3},
+		{"x": 3,"y": -0.5,"z": 2},
+		{"x": 3,"y": -0.5,"z": 3},
+		{"x": 1,"y": 1.5,"z": 0},
+		{"x": 2,"y": 1.5,"z": 0},
+		{"x": 3,"y": 1.5,"z": 0},
+		{"x": 4,"y": 1.5,"z": 0},
+		{"x": 0,"y": 1.5,"z": 1},
+		{"x": 1,"y": 1.5,"z": 1},
+		{"x": 2,"y": 1.5,"z": 1},
+		{"x": 3,"y": 1.5,"z": 1},
+		{"x": 4,"y": 1.5,"z": 1},
+		{"x": 5,"y": 1.5,"z": 1},
+		{"x": 0,"y": 1.5,"z": 2},
+		{"x": 1,"y": 1.5,"z": 2},
+		{"x": 2,"y": 1.5,"z": 2},
+		{"x": 3,"y": 1.5,"z": 2},
+		{"x": 4,"y": 1.5,"z": 2},
+		{"x": 5,"y": 1.5,"z": 2},
+		{"x": 0,"y": 1.5,"z": 3},
+		{"x": 1,"y": 1.5,"z": 3},
+		{"x": 2,"y": 1.5,"z": 3},
+		{"x": 3,"y": 1.5,"z": 3},
+		{"x": 4,"y": 1.5,"z": 3},
+		{"x": 5,"y": 1.5,"z": 3},
+		{"x": 0,"y": 1.5,"z": 4},
+		{"x": 1,"y": 1.5,"z": 4},
+		{"x": 2,"y": 1.5,"z": 4},
+		{"x": 3,"y": 1.5,"z": 4},
+		{"x": 4,"y": 1.5,"z": 4},
+		{"x": 5,"y": 1.5,"z": 4},
+		{"x": 1,"y": 1.5,"z": 5},
+		{"x": 2,"y": 1.5,"z": 5},
+		{"x": 3,"y": 1.5,"z": 5},
+		{"x": 4,"y": 1.5,"z": 5},
+		{"x": 2,"y": 1,"z": -0.5},
+		{"x": 3,"y": 1,"z": -0.5},
+		{"x": 2,"y": 1,"z": 5.5},
+		{"x": 3,"y": 1,"z": 5.5},
+		{"x": -0.5,"y": 1,"z": 2},
+		{"x": -0.5,"y": 1,"z": 3},
+		{"x": 5.5,"y": 1,"z": 2},
+		{"x": 5.5,"y": 1,"z": 3},
+    ],
+
+    "GamePrefabReference": " HE_AI_Turret_111",
+	"ReferenceOffset": { "x": 2.5, "y": 0.5, "z": 2.5 },
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ 
+		{
+		"SubOverrideName":"HE_AITurret_111",
+		"MeshName": "HE_Turret_Platform.obj",
+		"MeshMaterialName": "HE_Main",
+		"ColliderMeshName": "HE_Turret_Platform_Collider.obj",
+		"SubPosition":{"x":0,"y":0,"z":0},
+		"SubRotation":{"x":0,"y":0,"z":0}
+		},
+		{
+		"SubOverrideName":"m_HE_Anchor_Tripod_Base",
+		"MeshName": "HE_Turret_Platform_Anchor.obj",
+		"MeshMaterialName": "HE_Main",
+		"ColliderMeshName": "HE_Turret_Platform_Anchor_Collider.obj",
+		"SubPosition":{"x":-2.5,"y":-0.5,"z":-2.5}
+		},		
+		{
+		"SubOverrideName":"HEAnchorTripod",
+		"SubPosition":{"x":0,"y":0,"z":0}
+		}
+	],
+	"JSONBLOCK": {
+	    "GameObject|CentreOfMass": {
+		    "UnityEngine.Transform": { 
+				"localPosition": { "x":2.5, "y":0.5, "z":2.5 } 
+		    },
+		},
+		"ModuleVision": {
+			"visionRange": 200.0,
+			"Range": 200.0
+        },
+		"ModuleAnchor":{
+			"m_MaxAngularVelocity": 75.0,
+			"m_MaxTorque": 600000,
+			"m_BrakeTorque": 300000.0,
+			"m_ForceHorizontal": true,
+			"m_APsBlockedByAnchor": [
+			    1, 2, 3, 4
+			]
+		},
+		
+		"GameObject|HE_AITurret_111": {
+			"GameObject|_gimbalBase": {
+			  "GameObject|_gimbalElev": {
+				"GameObject|_barrel": {
+					"UnityEngine.Transform": { 
+						"localPosition": { "x":0, "y":-5000, "z":0 } 
+					}
+				}
+			  }
+			}
+		},
+		/* "TargetAimer": null,
+		"ModuleWeapon":null,
+		"ModuleWeaponGun": null,
+		"FireData": null, */
+		"ModuleWeapon": {
+			"m_PreventShootingTowardsFloor": true,
+			"m_LimitedShootAngle": 90.0,
+			"m_FireSFXType": 0
+		},
+		"ModuleWeaponGun": {
+			"m_ShotCooldown": 1000
+		},
+		"FireData": {
+			"m_MuzzleVelocity": 1000.0,
+			"m_CasingVelocity": 1000.0,
+			"m_BulletSprayVariance": 0,
+			"m_BulletSpin": 0.0,
+			"m_CasingEjectVariance": 0,
+			"m_CasingEjectSpin": 0.0,
+			"m_KickbackStrength": 0.0
+		},
+
+		"GameObject|_anchor":{
+			"GameObject|HEAnchorTripod": {
+			    "BlockAnchor":{
+				   "m_GroundPoint":{
+					    "localPosition": {
+							"x": 0,
+							"y": -5,
+							"z": 0,
+							"normalized": {
+							    "x": 0.0,
+							    "y": -1.0,
+							    "z": 0.0,
+							},
+				        }
+				    },
+				    "m_SnapToleranceUp":5,
+				    "m_SnapToleranceDown":8
+			    }
+		    }
+		}
+	}
+}

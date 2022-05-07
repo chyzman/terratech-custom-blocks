@@ -1,0 +1,75 @@
+{
+  "Name": "SiegeCorps Sensor Suite",
+  "Description": "This mysterious device is an extremely long-range radar, far outpacing what advanced radars can see and target. Also comes with a Hover Computer. It always seems that the ancients have outclassed modernity.",
+  "ID": 5000506, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 15435, 
+  "HP": 1600, 
+  "Mass": 6,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "5, 5, 43, 43, 43, 43, 48, 56, 65" ,
+  "IconName": "startblock_thumbnail.png", 
+  "MeshName": "Sensorscaledandmoved.obj",
+   "ColliderMeshName":           "Sensorscaledandmoved.obj",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "SensorTex.png", 
+  "MeshGlossTextureName": "Black.png", 
+  "MeshEmissionTextureName": "Black.png",
+ 
+	"Cells": [ //The grid space to be occupied
+        { "x": -1, "y": 0, "z": 0 }, 
+        { "x": -1, "y": 0, "z": -1 }, 
+        { "x": -1, "y": 0, "z": 1 }, 
+		{ "x": 0, "y": 0, "z": 0 }, 
+        { "x": 0, "y": 0, "z": -1 }, 
+        { "x": 0, "y": 0, "z": 1 }, 
+        { "x": 1, "y": 0, "z": 0 }, 
+        { "x": 1, "y": 0, "z": -1 }, 
+        { "x": 1, "y": 0, "z": 1 },
+        { "x": -1, "y": 1, "z": 0 }, 
+        { "x": -1, "y": 1, "z": -1 }, 
+        { "x": -1, "y": 1, "z": 1 }, 
+		{ "x": 0, "y": 1, "z": 0 }, 
+        { "x": 0, "y": 1, "z": -1 }, 
+        { "x": 0, "y": 1, "z": 1 }, 
+        { "x": 1, "y": 1, "z": 0 }, 
+        { "x": 1, "y": 1, "z": -1 }, 
+        { "x": 1, "y": 1, "z": 1 },
+    ],
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+  
+  "GamePrefabReference": "BF_Radar_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+
+  "JSONBLOCK": {
+    "ModuleRadar": {
+      "m_Range": 4000,
+      "Range": 1500
+    },
+    "ModuleVision": {
+        "visionRange": 1500,
+        "m_Range": 4000,
+		"visionConeAngle": 10.0 
+    },
+	"ModuleStabiliser": {},				// Enable Hover Computer
+	"ModulePowerGauge": {},             // Enables the Gauge UIs
+    "ModuleFuelGauge": {},  
+  }
+}

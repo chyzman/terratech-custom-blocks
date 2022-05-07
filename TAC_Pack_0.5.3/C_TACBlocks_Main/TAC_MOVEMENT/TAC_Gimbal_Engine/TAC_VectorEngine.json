@@ -1,0 +1,302 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Vector Engine",
+  "Description": "A gimballed jet engine that angles it's thrust with user input. \nThis is known as thrust vectoring.  \n\nOffers far greater control over movement than the Turbulence, but it doesn't go anywhere as fast. \n\nThis still classifies as a turbojet engine, and will not handle well with a stability computer. \n\nAIs cannot use this nicely, so please avoid placing this on your little AI buddies. \n\n\nGotta blast", //You can make multiple lines with \n
+  "ID": 584217, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 50025, //fly, with SPPED AN CONTROLLOS
+  "HP": 1750, //Not very strong. Defend with care!  
+  "Mass": 6.0,//More dense than the Turbulence
+
+  "IconName": "SwerveJet.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "47, 47, 51, 51, 51, 51, 52, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 60, 61, 61", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+  	//Front APs
+    { "x": 0, "y": 0, "z": 3.5 },
+    { "x": 1, "y": 0, "z": 3.5 },
+    //Bottom APs
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 2 },
+    { "x": 1, "y": -0.5, "z": 2 },
+    { "x": 0, "y": -0.5, "z": 3 },
+    { "x": 1, "y": -0.5, "z": 3 },
+    //Top APs
+    { "x": 0, "y": 0.5, "z": 1 },
+    { "x": 1, "y": 0.5, "z": 1 },
+    { "x": 0, "y": 0.5, "z": 2 },
+    { "x": 1, "y": 0.5, "z": 2 },
+    { "x": 0, "y": 0.5, "z": 3 },
+    { "x": 1, "y": 0.5, "z": 3 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 1,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Wing_Tail(122)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,  
+  "DeathExplosionReference":"HE_ArmouredBlock_114",//sized explodo
+  // "KeepReferenceColliders": true,
+ //  "ReferenceOffset": { "x":1.0, "y":2.0, "z":8.0 }, //Shift the subobjects of the block prefab by x, y and z 
+	// // "ReferenceOffset": { "x":1.0, "y":2.0, "z":8 }, //Shift the subobjects of the block prefab by x, y and z 
+ //  "ReferenceScale": { "x": 1.0, "y": 1.0, "z": 1.0 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+	  { //Base
+	   "SubOverrideName": "m_VEN_Wing_Tail_122_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "TACGimbalEngineBase.obj",
+	    "ColliderMeshName": "TACGimbalEngineBase.obj",
+	    "MakeBoxCollider": false,
+	    "MeshTextureName": null,
+	    "MeshMaterialName": "HE_Main",
+	    //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+	  },
+	  { //Engine
+	   "SubOverrideName": "m_BF_IonDrive_Small_112_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "TACGimbalEngineThruster.obj",
+	    "ColliderMeshName": "TACGimbalEngineThruster.obj",
+	    "MakeBoxCollider": false,
+	    "MeshTextureName": null,
+	    "MeshMaterialName": "HE_Main",
+	    //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+	  },
+	  { //Removal of unwanted details
+	   "SubOverrideName": "m_VEN_Wing_Tail_122_Flap",
+	    "DestroyExistingRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MakeBoxCollider": false,
+	  },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|SmokeTrail": {
+      // "UnityEngine.Transform": {
+      //   //"localScale": { "x":3, "y":3, "z":3 },
+      //   "localPosition": { "x":0, "y":0.0, "z":0 },
+      //   // "localEulerAngles": { "x":0, "y":0, "z":90 }
+      // },
+      "SmokeTrail": null,
+
+    },
+    // "GameObject|SmokeTrail (1)": {
+    //   "UnityEngine.Transform": {
+    //     //"localScale": { "x":3, "y":3, "z":3 },
+    //     "localPosition": { "x":0, "y":0.0, "z":0 },
+    //     // "localEulerAngles": { "x":0, "y":0, "z":90 }
+    //   },
+    // },
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":0.5, "y":0, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":90 }
+      },
+    },
+    "GameObject|m_VEN_Wing_Tail_122_Base": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":0.5, "y":0.0, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":180, "z":90 }
+      },
+      "GameObject|_Pivot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.55 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 } 
+        },
+        "GameObject|m_VEN_Wing_Tail_122_Flap": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":0.0, "z":0.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 } 
+          },
+          "Reference|BF_IonDrive_Small_112/m_BF_IonDrive_Small_112_Base": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":-0.5 },
+              "localEulerAngles": { "x":0, "y":180, "z":0, "w":1 } 
+            },
+          },
+          "Reference|BF_IonDrive_Small_112/fx_Trail": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":-1.35 },
+              "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 } 
+            },
+            "UnityEngine.TrailRenderer": { //Paint them trails
+              "material": {
+                "mainTexture": "LED_BeamBlockVE.png",
+                "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+              },
+              "time": 0.25,
+              "startWidth": 0.225,
+              "endWidth": 0.05,
+              "widthMultiplier": 0.25,
+              "autodestruct": false,
+              "emitting": 0.2,
+              "numCornerVertices": 6,
+              "numCapVertices": 8,
+              "minVertexDistance": 1,
+              "startColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+              },
+              "endColor": {
+                "r": 1.0,
+                "g": 0.75,
+                "b": 0.5,
+                "a": 0.0
+              },
+              "positionCount": 1,
+              "shadowBias": 0.0,
+              "generateLightingData": false,
+              "textureMode": 0,
+              "alignment": 0,
+            }
+          },
+          "Reference|BF_IonDrive_Small_112/_fanJet": { //GameObject child - IMPORTANT: FanJet MUST be in GameObject|_fanJet or THE GAME WILL CRASH!
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":-0.5 },
+              "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 } 
+            },
+            "FanJet": { // Propeller Properties - This is where you put the custom prop stats.
+              "force" : 7500.0, //Max force forwards
+              //was  just before this
+              "backForce" : 1000.0, //Max force backwards - not the best for backwards
+              "spinDelta" : 0.25, //0.075 //How long it takes the thing to spool up - Slow, but not as much as the Turb
+              // "spinSpeed" : 25000.0, //Max animation rotation speed
+              "detachedForceFactor": 0.2
+            } 
+          },
+          // "GameObject|_spinner": {
+          //   "UnityEngine.Transform": {
+          //     // "localScale": { "x":1, "y":1, "z":1 },
+          //     "localPosition": { "x":0.5, "y":0.5, "z":2 },
+          //     "localEulerAngles": { "x":180, "y":0, "z":0, "w":1 } 
+          //   },
+          //   "GameObject|m_Fan_Blades": {
+          //     "UnityEngine.Transform": {
+          //       "localScale": { "x":1, "y":1, "z":1 },
+          //       "localPosition": { "x":0, "y":0, "z":0 },
+          //       "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 } 
+          //     }
+          //   },
+          //   "Spinner": {
+          //     "m_Speed": 250,
+          //     "m_AutoSpin": false,
+          //     "m_SpinUpTime": 10.0,
+          //     "m_CurrentAngle": 0.0,
+          //     "m_CurrentAutoSpeed": 0.0,
+          //     "m_CurrentSpeedFraction": 0.0,
+          //     "m_SpinnerSound": null,
+          //     "m_SpinnerSoundOriginalPitch": 0.0,
+          //     // "Speed": 10.0,
+          //     // "SpeedFraction": 0.0,
+          //     // "AtFullSpeed": false
+          //   }
+          // },
+        }
+      },
+    },// Back to main layer
+
+      //The madness starts here
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        "m_BoosterAudioType": 3,
+        "m_UseBoostControls": true,
+        "m_UseDriveControls": true,
+        // BoosterEngineType
+        // {
+        //   Propeller,
+        //   LargeRotor,
+        //   MediumRotor,
+        //   RotorFan,
+        //   Fan,
+        //   SteeringHover,
+        //   IonDrive
+        // }
+    },
+    "ModuleWing": {
+      "m_Aerofoils": [
+        {
+          "trans": "m_VEN_Wing_Tail_122_Base/_Pivot",
+          "flap": "m_VEN_Wing_Tail_122_Base/_Pivot/Spinner.", //"flapName"
+          //"liftCurve": , //AnimationCurve - F^#k 
+          //UnityEngine "AnimationCurve|liftCurve"
+          "liftStrength": 0.1, //How strong this redirects based on angle of attack
+          // "flapAngleRangeActual": 90, //How far the flap turns in terms of forces
+          // "flapAngleRangeVisual": 90, //How far flap turns visually
+          "flapAngleRangeActual": 35, //How far the flap turns in terms of forces
+          "flapAngleRangeVisual": 35, //How far flap turns visually
+          "flapTurnSpeed": 3 //How fast the flap turns
+        }
+      ],
+      "m_AttackAngleDamping": 100.0,//Weak, not a wing
+      "m_TrailMinVelocity": 200.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1,
+      "m_AverageLiftCoeff": 0.0,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.5,//Does not block shotgun attacks that well
+    },
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,256 @@
+{
+  "Name": "Old Star Mobile Refinery",
+  "Description": "Now this is how the Old Star do. Our refinery lives up to its name for being able to be used without the need to be anchored down. Usefull for both factions of Old Star to refine any and all raw ores that they find to make a better profit or to help create new parts and/or components.",
+
+  "ID": 300050,
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 2,
+  "Price": 1656,
+  "HP": 2000,
+  "Mass": 16,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 44, 48",
+  "IconName": "OS_Mobile_Refinery_Icon.png",
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+
+  "Cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1
+    },
+
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 0
+    }
+
+  ],
+  "APs": [
+    {
+      "x": -1.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+
+    {
+      "x": -1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": -0.5
+    },
+
+    {
+      "x": -1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "VEN_Refinery_222",
+  "KeepRenderers": false,
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_Refinery_222_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "MeshName": "OS_Refinery_Base.obj",
+      "ColliderMeshName": "OS_Refinery_Base.obj"
+    },
+    {
+      "SubOverrideName": "m_VEN_Refinery_222_Hatch",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_Refinery_Hatch.obj",
+      "ColliderMeshName": "OS_Refinery_Hatch.obj"
+    },
+    {
+      "SubOverrideName": "OS_Refinery_Flywheel",
+      "MeshName": "OS_Refinery_Flywheel.obj",
+      "ColliderMeshName": "OS_Refinery_Flywheel.obj"
+    },
+    {
+      "SubOverrideName": "GreenLight",
+      "MeshName": "OS_Refinery_ON.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "MeshMaterialName": "VEN_Main"
+    },
+    {
+      "SubOverrideName": "RedLight",
+      "MeshName": "OS_Refinery_OFF.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "MeshMaterialName": "VEN_Main"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|GreenLight": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "active": false
+      }
+    },
+    "GameObject|RedLight": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "active": false
+      }
+    },
+    "GameObject|m_VEN_Refinery_222_Base": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 1.0,
+          "m_RotationAxis": {
+            "axis": 0
+          },
+          "m_SteerAxis": {
+            "axis": 0
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.35,
+            "z": 0.06
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GameObject|OS_Refinery_Flywheel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+      }
+    },
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": -0.3,
+      "m_BeamStrength": 500.0
+    },
+    "ModuleItemConsume": {
+      "m_PullArrowPrefab": "GreenLight",
+      "m_PushArrowPrefab": "RedLight"
+    }
+  }
+}

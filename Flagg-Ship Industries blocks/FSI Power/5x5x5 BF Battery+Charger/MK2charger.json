@@ -1,0 +1,66 @@
+{
+	"Name": "Power Complex MK2 shield",
+	"Description": "With the discovery of an unknown element, simply named 'Chaos,' The Mark 2 Singularity power complex empowers the singularity with the strange energy to futher saturate it. It is strangly stable as a result... It's still extremely heavy, though roughly the same as the MK1. \nThis also acts as a wireless charger due to the nature of the shield. It's not as strong as the inline charger, but it transfers much faster. (Note from the mod creator, i am unable to make it into both a charger and a battery, so i've split up the item in two parts. This is the charger.)", //You can make multiple lines with \n
+	"ID": 1700017, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 1, //The grade minus one
+	"Price": 1749840,
+	"HP": 50,
+	"Mass": 10,
+
+	"IconName": "Power_Complex_MK2Icon.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, " ,	
+	
+	
+	
+	
+	
+	
+	"MeshMaterialName": "BF_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }
+        
+		
+		
+		
+		 
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": 0, "y": -0.5, "z": 0 }
+		
+					
+    ],
+	
+	
+	"GamePrefabReference": "GCRemoteCharger(212)",
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [{
+    "SubOverrideName":"charger","MeshMaterialName":"Mat_Pickup_Resource_RodiusCapsule",
+	"DestroyExistingColliders": true,
+    "MeshName": "Power_Complex2_Bright.obj",
+	"ColliderMeshName": "Power_Complex2_Bright.obj",
+	
+    
+	"SubPosition":{"x":-2,"y":-2,"z":2},
+	"SubScale":{"x":1,"y":1,"z":1}
+	
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleRemoteCharger": {"m_PowerTransferPerArc":150,"m_ArcFiringInterval":0.1,"m_ChargingRadius":250}
+	}
+}

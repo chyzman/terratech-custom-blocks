@@ -1,0 +1,214 @@
+{
+  "Name": "GSO-FSI Omni-terminal",
+  "Description": "A Payload terminal that is connected to all block services in the offworld. It does have the downside of being rather heavy and expensive for a terminal. Must be anchored to work, and gives a fancy display once it is.",
+  "ID": 1700246, 
+
+  "Faction": 1, 
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 348630,
+  "HP": 1400,
+  "Mass": 15,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 3,
+
+  "IconName": "FSI_Term_Icon.png", 
+  
+  
+  "Recipe": "64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66,64, 65, 66",
+
+    "BlockExtents":
+  {
+    "x": 3,
+    "y": 6,
+    "z": 3
+  },
+  
+  "APs": [ 
+	{"x": 1,"y": -0.5,"z": 1},
+	{"x": 1,"y": 1,"z": 2.5},
+	{"x": 1,"y": 1,"z": -0.5},
+	{"x": -0.5,"y": 1,"z": 1},
+	{"x": 2.5,"y": 1,"z": 1},
+  ],
+
+  "GamePrefabReference": "GSO_Shop_121",
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0},
+	"ReferenceScale": { // Squish the side and top down to 'line up' the animation
+    "x": 1,
+    "y": 4,
+    "z": 1
+  },
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [
+	{
+    "SubOverrideName":"m_GSO_SolarGen_141_Pole_A",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+    },{
+    "SubOverrideName":"m_GSO_SolarGen_141_Pole_B",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+    },{
+    "SubOverrideName":"m_GSO_SolarGen_141_Pole_C",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+    },
+	{
+    "SubOverrideName":"m_GSO_Base_Rotating_Stand_111",
+    "MeshName": "FSI_Term_Anchor.obj",
+	
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"GSOAnchorRotating",
+    "MeshName": "FSI_Term_Anchor.obj",
+	"SubScale":{"x":1,"y":0.25,"z":1},
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"m_GSO_Anchor_Hook",
+    "MeshName": "FSI_Term_Anchor_Hook.obj",
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+  "SubOverrideName":"Term_Col",
+      "SubPosition": { "x": 1, "y": 1, "z": 1},
+	"MeshColliderName":"FSI_Term_Base.obj",
+  },
+  {
+    "SubOverrideName":"m_GSO_Terminal_111_Base",
+    "MeshName": "FSI_Term_Base.obj",
+	
+      "SubPosition": { "x": 1, "y": 1, "z": 1},
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"FalseInside",
+    "MeshName": "FSI_Term_Base2.obj",
+	
+      "SubPosition": { "x": 1, "y": 1, "z": 1},
+  },
+  {
+    "SubOverrideName":"m_GSO_Terminal_111_Antenna_A",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+  },
+  {
+    "SubOverrideName":"m_GSO_Terminal_111_Antenna_B",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+  },
+  {
+    "SubOverrideName":"m_GSO_Terminal_111_Antenna_C",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+  },
+  {
+    "SubOverrideName":"FSI_Term_Ant_1",
+	"SubPosition":{"x":1,"y":0.15,"z":1},
+	"SubScale":{"x":1,"y":0.25,"z":1},
+    "MeshName": "FSI_Term_Ant_1.obj",
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"FSI_Term_Ant_2",
+	"SubPosition":{"x":1,"y":0.15,"z":1},
+	"SubScale":{"x":1,"y":0.25,"z":1},
+    "MeshName": "FSI_Term_Ant_2.obj",
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"FSI_Term_Ant_3",
+	"SubPosition":{"x":1,"y":0.15,"z":1},
+	"SubScale":{"x":1,"y":0.25,"z":1},
+    "MeshName": "FSI_Term_Ant_3.obj",
+	"MeshMaterialName": "GSO_Main"
+  },
+  {
+    "SubOverrideName":"FSI_Term_Ant_Spinner",
+	"SubPosition":{"x":1,"y":0.2,"z":1},
+	"SubScale":{"x":1,"y":0.25,"z":1},
+    "MeshName": "FSI_Term_Ant_Spin.obj",
+	"MeshTextureName": "FSI_Basic_Texture.png", 
+    "MeshGlossTextureName": "FSI_Basic_Texture.png", 
+    "MeshEmissionTextureName": "FSI_Basic_Texture.png"
+  },
+	],
+	
+	"Deserializer":{
+	"GameObject|m_GSO_Terminal_111_Base":{
+		"GameObject|m_GSO_Terminal_111_Antenna_A":{
+			"GameObject|FSI_Term_Ant_1":{
+				"UnityEngine.Transform": {
+					"parent":"m_GSO_Terminal_111_Antenna_A"}},
+			"GameObject|m_GSO_Terminal_111_Antenna_B":{
+				"GameObject|FSI_Term_Ant_2":{
+					"UnityEngine.Transform": {
+						"parent":"m_GSO_Terminal_111_Antenna_B"}},
+				"GameObject|m_GSO_Terminal_111_Antenna_C":{
+					"GameObject|FSI_Term_Ant_3":{
+						"UnityEngine.Transform": {
+							"parent":"m_GSO_Terminal_111_Antenna_C"},
+							"GameObject|FSI_Term_Ant_Spinner":{
+						"UnityEngine.Transform": {
+							"parent":"m_GSO_Terminal_111_Antenna_C"},
+							"Spinner":{
+	  "m_Speed": 0.1,
+      "Speed": 0.1, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        },},},
+					
+												}
+											}
+										}
+									},
+		"GameObject|_anchor":{
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":1, "z":1 }
+      },
+	  "GameObject|GSOAnchorRotating":{
+	  "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+	  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 0.0,
+            "y": -0.4,
+            "z": 0.0
+          }
+        },
+		  "m_SnapToleranceUp":1,
+      "m_SnapToleranceDown":0.6
+        },
+	   "GameObject|m_GSO_Base_Rotating_Stand_111": {
+       "UnityEngine.Transform": { 
+         "localPosition": { "x":0, "y":0, "z":0 }
+       },
+		 "GameObject|m_GSO_Anchor_Hook": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+			
+		  
+      }
+	 }}
+    },
+      
+    "ModuleShop": {
+      "m_SingleCorpToShow": 0
+    }
+  } 
+}

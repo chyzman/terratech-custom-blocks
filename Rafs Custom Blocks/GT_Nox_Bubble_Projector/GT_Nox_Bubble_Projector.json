@@ -1,0 +1,364 @@
+{
+  "Name": "GreenTech Nox Bubble Projector",
+  "Description": "A bubble of charged corrosive particles, held together by a potent electromagnetic field.\n The technology used comes from energy shields, with inverted mechanisms to contain what is inside instead of blocking what is outside, also protecting the Tech using it. Without energy, safety systems will shut it down.",
+  
+  "ID": 911058,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 3, 
+  "Price": 7299,
+  "HP": 2500,
+  "Mass": 8,
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  
+  "Recipe": "5, 7, 7, 13, 13, 13, 13, 43, 43, 56, 56, 57",
+  
+  "IconName": "GT_Nox_Bubble_Projector_Icon.png",
+  "MeshName": "GT_Nox_Bubble_Projector.obj",
+  "ColliderMeshName": "GT_Nox_Bubble_Projector_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+  "GamePrefabReference": "GSO_Shield_Bubble_111", 
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.5
+  },
+  "DeathExplosionReference": "GSO_Battery_111",
+  
+  "SubObjects": [
+    
+	{
+      "SubOverrideName": "ExperimentalCorp_Base_Shield",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge(Clone)",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge 1",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "_shield",
+      "SubPosition": { "x": 0.5, "y": 5.15, "z": 0.5},
+      "SubScale": { "x": 1, "y": 1, "z": 1 }
+
+    },
+    {
+      "SubOverrideName": "_bubbleCollider",
+      "layer": 14 //23
+    },
+    {
+      "SubOverrideName": "ShieldSphereOuter",
+      "MeshName": "GT_Nox_Bubble_Projector_BubbleOuter.obj",
+      //"MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    },
+    {
+      "SubOverrideName": "ShieldSphereInner",
+      "MeshName": "GT_Nox_Bubble_Projector_BubbleInner.obj",
+      "MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    },
+    {
+      "SubOverrideName": "ShieldSphereEdge",
+      "MeshName": "GT_Nox_Bubble_Projector_BubbleOuter.obj",
+      "MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    }
+    
+  ],
+
+ 
+
+  
+  
+  "JSONBLOCK": {
+    "GameObject|_shield": {
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          "UnityEngine.SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "UnityEngine.SphereCollider": {
+            "enabled": false
+          }
+        },
+        "GameObject|_bubbleCollider": {
+            "UnityEngine.SphereCollider": {
+              "isTrigger": true,
+              "enabled": true
+            }
+        },
+        "GameObject|ShieldSphereEdge": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 0.25,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          },
+          "GameObject|ShieldSphereInner": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0.0,
+                  "b": 0.2,
+                  "a": 0.5
+                }
+              }
+            }
+          },
+          "GameObject|ShieldSphereOuter": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0.0,
+                  "b": 0.2,
+                  "a": 0.5
+                }
+              }
+            }
+          }
+        },
+      "Spinner": {
+        "m_Speed": 0.1,
+      "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+      "m_AutoSpin": true,
+      "m_SpinUpTime": 0.1
+      }
+    },
+    "Spinner": {
+      "m_Speed": 0.1,
+      "m_RotationAxis": {
+        "axis": 0
+      },
+      "m_SteerAxis": {
+        "axis": 0
+      },
+      "m_AutoSpin": true,
+      "m_SpinUpTime": 0.1
+    }
+  },
+    "ModuleShieldGenerator": {
+      "m_Radius": 10.0,
+      "m_EnergyConsumptionPerSec": 4,
+      "m_InitialChargeEnergy": 500.0,
+      "Instantiate|m_ChargingParticlesPrefab": {
+        "startSize": 0.5,
+        "startColor": {
+          "r": 0.25,
+          "g": 0.0,
+          "b": 1.0,
+          "a": 0.5
+        }
+      }
+  },
+  "ModuleDrill": {
+    "activeColliders": ["_bubbleCollider/SphereCollider."],
+    "m_Blade": "_bubbleCollider/Transform.gameObject",
+    "m_Vibrations": "_bubbleCollider/Transform.gameObject",
+    "impactDamageMultiplier": 1.0,
+    "damagePerSecond": 200.0,
+    "m_SpinOnCollisionDuration": 1,
+    "m_DamageType": 7
+  }
+  /* "ModuleWeapon":{
+    "m_FireSFXType":0//49
+  },
+  "GameObject|_gimbalBase": {
+    "UnityEngine.Transform": {
+     "localPosition": {
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0
+      },
+      "localEulerAngles": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      }
+    },
+    "GimbalAimer": { //Useful component - Horizontal Aiming
+      "rotationLimits": [-0.1, 0.1] //[-Left,+Right](Degrees)
+    },
+  "GameObject|_gimbalElev":{
+    "UnityEngine.Transform": { 
+        "localPosition": { "x": 0, "y": 4, "z": 0 }  
+        },
+    "GimbalAimer": {
+      "rotationLimits": [-0.1, 0.1] 
+    },
+    "GameObject|_barrel": {
+      "Spinner": {
+        "m_Speed": 0.0
+      },
+      "GameObject|_beam": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 0, "z": 0 }  
+          },
+        "BeamWeapon": {
+            "m_Range": 0,
+            "m_DamagePerSecond": 0
+          },
+        "UnityEngine.LineRenderer": {
+            "startWidth": 0,
+            "endWidth": 0
+        }
+      },
+        "UnityEngine.Transform": { 
+        "localPosition": { "x": 0, "y": 0, "z": 0 }  
+        },
+         "GameObject|_muzzleFlash": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": 0, "y": -4, "z": 0 }  
+            },
+            "GameObject|_light": null,
+  "Reference|GSO_Shield_111/_shield": {
+    "GameObject|_bubble": {
+      "GameObject|_bubbleTechTrigger": {
+        "UnityEngine.SphereCollider": {
+        }
+      },
+      "GameObject|_bubbleBulletTrigger": {
+        "UnityEngine.SphereCollider": {
+          "enabled": false
+        }
+      },
+      "GameObject|_bubbleCollider": {
+          "UnityEngine.SphereCollider": {
+            "isTrigger": true,
+            "enabled": true
+          }
+      },
+      "GameObject|ShieldSphereOuter": {
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "color": {
+              "r": 0.25,
+              "g": 0.0,
+              "b": 1.0,
+              "a": 1.0
+            }
+          }
+        },
+        "GameObject|ShieldSphereInner": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.2,
+                "a": 0.5
+              }
+            }
+          }
+        },
+        "GameObject|ShieldSphereOuter": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.2,
+                "a": 0.5
+              }
+            }
+          },
+          "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0} ,
+               "localScale": {
+                "x": 0.36,
+                "y": 0.36,
+                "z": 0.36
+              }
+             },
+            "ParticleSystem": {
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": true,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+              "emissionRate": 100.0,
+              "startSpeed": -0.5,
+              "startSize": 12,
+              "startColor": {
+                "r": 1,
+                "g": 0.1,
+                "b": 1,
+                "a": 0.5
+              },
+              "startLifetime": 1,
+              "gravityModifier": 0.08,
+              "maxParticles": 1000,
+              "simulationSpace": 0,
+              "scalingMode": 2
+            },
+            "ParticleSystemRenderer": {
+              "material": "Mat_FX_Smoke_Dark"
+            }
+          }
+        }
+      },
+    "Spinner": {
+      "m_Speed": 0.05
+    }
+  }
+}
+}
+}
+  }
+  },
+  "Reference|GSO_Shield_111/ModuleShieldGenerator.": {
+    "m_Radius": 10.0,
+    "m_EnergyConsumptionPerSec": 2.5,
+    "m_InitialChargeEnergy": 300.0,
+    "Instantiate|m_ChargingParticlesPrefab": {
+      "startSize": 0.5,
+      "startColor": {
+        "r": 0.25,
+        "g": 0.0,
+        "b": 1.0,
+        "a": 0.5
+      }
+    }
+},
+"ModuleDrill": {
+  "activeColliders": ["_bubbleCollider/SphereCollider."],
+  "m_Blade": "_bubbleCollider/Transform.gameObject",
+  "m_Vibrations": "_bubbleCollider/Transform.gameObject",
+  "impactDamageMultiplier": 1.0,
+  "damagePerSecond": 200.0,
+  "m_SpinOnCollisionDuration": 1,
+  "m_DamageType": 7
+}*/
+  }			
+}

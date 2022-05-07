@@ -1,0 +1,347 @@
+{
+  "Name": "GreenTech Husk Wheel",
+  "Description": "The structure of the Husk Wheel comes with plenty of APs and a small hollow interior for carrying blocks within.",
+  "ID": 911024, 
+  "PairedBlock": 911024,
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 3, 
+  "Price": 6432, 
+  "HP": 3500, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 0.0, "y": 2.5, "z": 2.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 43, 43, 43, 43, 44, 44, 45, 45, 47, 47, 48, 48",
+  "IconName": "GT_Husk_Wheel_Icon.png", 
+  "MeshName": "GT_Husk_Wheel.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "Cells": [ 
+    { "x": 0, "y": 0, "z": 2 },
+    { "x": 0, "y": 1, "z": 1 },
+	{ "x": 0, "y": 2, "z": 0 },
+	{ "x": 0, "y": 0, "z": 3 },
+    { "x": 0, "y": 1, "z": 2 },
+	{ "x": 0, "y": 2, "z": 1 },
+	{ "x": 0, "y": 3, "z": 0 },
+	{ "x": 0, "y": 1, "z": 3 },
+	{ "x": 0, "y": 3, "z": 1 },
+	{ "x": 0, "y": 1, "z": 4 },
+	{ "x": 0, "y": 4, "z": 1 },
+	{ "x": 0, "y": 2, "z": 4 },
+	{ "x": 0, "y": 4, "z": 2 },
+	{ "x": 0, "y": 2, "z": 5 },
+	{ "x": 0, "y": 3, "z": 4 },
+	{ "x": 0, "y": 4, "z": 3 },
+	{ "x": 0, "y": 5, "z": 2 },
+	{ "x": 0, "y": 3, "z": 5 },
+	{ "x": 0, "y": 4, "z": 4 },
+	{ "x": 0, "y": 5, "z": 3 },
+	{ "x": 0, "y": 2, "z": 2 },
+	{ "x": 0, "y": 2, "z": 3 },
+	{ "x": 0, "y": 0, "z": 1 },
+	{ "x": 0, "y": 0, "z": 3 },
+	{ "x": 0, "y": 5, "z": 1 },
+	{ "x": 0, "y": 5, "z": 3 },
+	{ "x": 0, "y": 1, "z": 0 },
+	{ "x": 0, "y": 4, "z": 0 },
+	{ "x": 0, "y": 1, "z": 5 },
+	{ "x": 0, "y": 4, "z": 5 },
+  ], 
+  
+  "APs": [ 
+    {"x": 0.5, "y": 1, "z": 2},
+	{"x": 0.5, "y": 1, "z": 3},
+	{"x": 0.5, "y": 2, "z": 1},
+	{"x": 0.5, "y": 3, "z": 1},
+	{"x": 0.5, "y": 4, "z": 2},
+	{"x": 0.5, "y": 4, "z": 3},
+	{"x": 0.5, "y": 2, "z": 4},
+	{"x": 0.5, "y": 3, "z": 4},
+	{"x": -0.5, "y": 1, "z": 2},
+	{"x": -0.5, "y": 1, "z": 3},
+	{"x": -0.5, "y": 2, "z": 1},
+	{"x": -0.5, "y": 3, "z": 1},
+	{"x": -0.5, "y": 4, "z": 2},
+	{"x": -0.5, "y": 4, "z": 3},
+	{"x": -0.5, "y": 2, "z": 4},
+	{"x": -0.5, "y": 3, "z": 4},
+	{"x": 0, "y": 2.5, "z": 2},
+	{"x": 0, "y": 2.5, "z": 3},
+	{"x": 0, "y": 3.5, "z": 2},
+	{"x": 0, "y": 3.5, "z": 3},
+	{"x": 0.5, "y": 2, "z": 2},
+	{"x": 0.5, "y": 2, "z": 3},
+	{"x": -0.5, "y": 2, "z": 2},
+	{"x": -0.5, "y": 2, "z": 3},
+	{"x": 0, "y": 3, "z": 1.5},
+	{"x": 0, "y": 3, "z": 3.5},
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Armoured_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"MakeBoxCollider": true,
+		"SubScale": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.5
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 4,
+			"z": 2.5
+		},
+		"Layer": 8
+	  },
+	{
+		"ColliderMeshName": "GT_Husk_Wheel_Collider_1.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Husk_Wheel_Collider_2.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Husk_Wheel_Collider_3.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Husk_Wheel_Collider_4.obj",
+		"Layer": 14
+	},
+	{
+		"SubOverrideName": "m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "GT_Husk_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 2.49,
+			"z": 2.5
+		}
+	},
+	{
+		"SubOverrideName": "Tire_Collider_A",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_B",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_C",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_D",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_E",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_F",
+		"ColliderMeshName": "GT_Husk_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|m_HE_EnclosedWheel_Wheel_122": {
+			"GameObject|Tire_Collider_A": {
+				"UnityEngine.Transform": {
+					"localScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+					},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+			    }
+			},
+			"GameObject|Tire_Collider_B": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 60.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_C": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 120.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_D": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": -60.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_E": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": -120.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_F": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 180.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			}
+		}
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 20000,
+		   "torqueCurveMaxRpm": 135,
+		  "passiveBrakeMaxTorque": 30000,
+		   "reverseBrakeMaxRpm": 200,
+		   "basicFrictionTorque": 200,
+		   "fullCompressFrictionTorque": 1000
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 4.0,
+					"gripFactorLat": 2.0
+				}
+			  },
+			"radius": 2.7,
+			"thicknessAngular": 10,
+			"suspensionSpring": 30000.0,
+			"suspensionDamper": 1000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.19,
+			"steerAngleMax": 5,
+			"steerSpeed": 3
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0,
+	}
+     }
+}

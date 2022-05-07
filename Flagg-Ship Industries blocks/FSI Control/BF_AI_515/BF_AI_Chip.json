@@ -1,0 +1,101 @@
+{
+	"Name": "Better Future Artifical Intelligence Chip",
+	"Description": "While large for an AI Chip, it works best for simple, cubic bases. Also flush with the 5x5 series", 
+	"ID": 1700066, 	
+
+	"Faction": 7, 
+	"Category": 1,
+	"Grade": 2, 
+	"Price": 151047,
+	"HP": 2000,
+	"Mass": 2.5,
+	"IconName": "AI Chip.png",
+	"Recipe":  "45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 65, 65, 65, 65, 65, 65, " 	,
+	
+	
+	
+	
+	
+	
+
+	"MeshName": null, 
+	"MeshMaterialName": null,
+	
+	"Cells": [ 
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 }, 
+		{ "x": 0, "y": 0, "z": 2 }, 
+		{ "x": 0, "y": 0, "z": 3 }, 
+		{ "x": 0, "y": 0, "z": 4 }, 
+		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 }, 
+		{ "x": 1, "y": 0, "z": 2 }, 
+		{ "x": 1, "y": 0, "z": 3 }, 
+		{ "x": 1, "y": 0, "z": 4 }, 
+		
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 }, 
+		{ "x": 2, "y": 0, "z": 2 }, 
+		{ "x": 2, "y": 0, "z": 3 }, 
+		{ "x": 2, "y": 0, "z": 4 }, 
+		
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 }, 
+		{ "x": 3, "y": 0, "z": 2 }, 
+		{ "x": 3, "y": 0, "z": 3 }, 
+		{ "x": 3, "y": 0, "z": 4 }, 
+		
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 }, 
+		{ "x": 4, "y": 0, "z": 2 }, 
+		{ "x": 4, "y": 0, "z": 3 }, 
+		{ "x": 4, "y": 0, "z": 4 }, 
+	
+	
+		 
+        
+  
+    ],
+    "APs": [ 
+		{ "x": 0, "y": 0.5, "z": 0 }, 
+		{ "x": 0, "y": 0.5, "z": 4 }, 
+		{ "x": 4, "y": 0.5, "z": 0 }, 
+		{ "x": 0, "y": 0.5, "z": 4 },
+	
+        { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 }, 
+		{ "x": 4, "y": -0.5, "z": 0 }, 
+		{ "x": 4, "y": -0.5, "z": 4 }, 
+        
+		
+		
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 }, 
+		
+        { "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 4, "y": 0, "z": -0.5 }, 
+		
+        { "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 4 }, 
+		
+        { "x": 0, "y": 0, "z": 4.5 }, 
+		{ "x": 4, "y": 0, "z": 4.5 }, 
+    ],
+	
+	
+	"GamePrefabReference": "GSO_AIAnchor_121",
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset": {"x": 2,"y": 0,"z": 2},
+	
+	"SubObjects": [ {
+    "SubOverrideName":"AI_Chip",
+	"DestroyExistingColliders": true,
+    "MeshName": "BF_AI_Chip.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_AI_Chip.obj",
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	} ],
+	
+	
+    }

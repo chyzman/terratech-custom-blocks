@@ -1,0 +1,283 @@
+{
+  "Name": "GreenTech Rotary Plasma Claw",
+  "Description": "Compact mining device with three angled plasma beams mounted on a rotative support, providing decent coverage despite its small size.",
+  "ID": 911252, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 2, 
+  "Price": 1593, 
+  "HP": 300,
+  "Mass": 1,
+  "CenterOfMass": {"x": 0.5, "y": 0, "z": -0.25},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 7, 13, 13, 13, 15",
+  "IconName": "GT_Rotary_Plasma_Claw_Icon.png",
+  
+  
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},
+  
+  "APs": [
+    {"x": 0, "y": 0, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "GC_PlasmaCutter_Auto_434",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference": "GSO_MGun_Fixed_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "Mesh",
+      "MeshName": "GT_Rotary_Plasma_Claw_Base.obj",
+      "ColliderMeshName": "GT_Rotary_Plasma_Claw_Collider.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Rotor",
+      "MeshName": "GT_Rotary_Plasma_Claw_Rotor.obj"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Mesh": {},
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "GimbalAimer": { 
+				"rotationLimits": [-0.1, 0.1]
+			},
+        "GameObject|Rotor": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale":{
+              "x": 1,
+              "y": 1,
+              "z": 1
+             }
+           }
+         },
+         "Spinner": {
+          "m_RotationAxis": {
+            "axis": 2
+          },
+          "m_SteerAxis": {
+            "axis": 2
+          },
+          "m_AutoSpin": false,
+          "m_Speed": -0.5,
+          "m_SpinUpTime": 0.5
+         },
+         "GameObject|_gimbalElev": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.2,
+              "z": 0.08
+             },
+             "localEulerAngles": {
+              "x": -45,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GimbalAimer": { 
+            "rotationLimits": [-0.1, 0.1]
+          },
+          "GameObject|_barrel": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+            "GameObject|_beam": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.05
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+              "BeamWeapon": {
+                "m_Range": 4,
+                "m_DamagePerSecond": 300,
+                "m_FadeOutTime": 0.5,
+                "Instantiate|m_BeamParticlesPrefab": {
+                  "UnityEngine.Transform": {
+                    "gameObject": {
+                      "active": true
+                    }
+                  },
+                  "GameObject|FX_Sparkles": {
+                    "UnityEngine.Transform": {
+                      "gameObject": {
+                        "active": true
+                      },
+                      "localScale": {
+                        "x": 0.45,
+                        "y": 0.45,
+                        "z": 0.7
+                      }
+                    },
+                    "UnityEngine.ParticleSystem": {
+                      "startDelay": 0.0,
+                      "loop": true,
+                      "playOnAwake": false,
+                      "maxParticles": 1000,
+                      "startLifetime": 1.0,
+                      "duration": 1.0,
+                          "playbackSpeed": 1.0,
+                      "emissionRate": 50,
+                      "startSpeed": 1,
+                      "startSize": 0.15,
+                      "startColor": {
+                        "r": 1.0,
+                        "g": 0.3,
+                        "b": 0.05,
+                        "a": 0.5
+                      },
+                      "shape": {
+                       "radius": 0.25,
+                       "length": 4
+                      }
+                    },
+                    "UnityEngine.ParticleSystemRenderer": {
+                    }
+                  },
+                  "UnityEngine.ParticleSystem": {
+                    "startDelay": 0.0,
+									"loop": true,
+									"playOnAwake": false,
+									"duration": 0.13,
+									"playbackSpeed": 1.0,
+									"enableEmission": true,
+									"emissionRate": 200.0,
+									"startSpeed": 10.0,
+									"startSize": 0.45,
+									"startColor": {
+										"r": 1.0,
+										"g": 0.12,
+										"b": 0.03,
+										"a": 1.0
+									},
+									"startRotation": 0.0,
+									"startLifetime": 0.35,
+									"gravityModifier": 0.0,
+									"maxParticles": 1000
+                  }
+                },
+                "Instantiate|m_HitParticlesPrefab": {
+                  "startSize": 0.001,
+                  "startLifetime": 0.2,
+                  "startColor": {
+                    "r": 1.0,
+                    "g": 0.12,
+                    "b": 0.03,
+                    "a": 0.6
+                  },
+                  "sizeOverLifetime": {
+                    "enabled": false
+                  }
+                }
+              }
+            },
+            "GameObject|_muzzleFlash": {
+              "GameObject|_light": {
+                "UnityEngine.Light": {
+                  "color": {
+                    "r": 1.0,
+                    "g": 0.4,
+                    "b": 0.0,
+                    "a": 1.0
+                  },
+                 "range": 1,
+                 "intensity": 3
+             }
+           }
+            },
+            "CannonBarrel": {
+              
+            }
+          }
+        },
+        "Duplicate|_gimbalElev": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -0.175,
+              "y": -0.1,
+              "z": 0.08
+             },
+             "localEulerAngles": {
+              "x": 27.2,
+              "y": -37.8,
+              "z": 0
+             }
+           }
+        },
+        "Duplicate|_gimbalElev_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.175,
+              "y": -0.1,
+              "z": 0.08
+             },
+             "localEulerAngles": {
+              "x": 27.2,
+              "y": 37.8,
+              "z": 0
+             }
+           }
+        }
+      },
+    
+    "ModuleDrill": {
+      "m_SFXType": 0
+    }
+  }
+}

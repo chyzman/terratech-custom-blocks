@@ -1,0 +1,61 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "GSO Curved Corner Block",
+  "Description": "Round corner GSO block covered in armour plating, a mid-ground between a one block and a half block in terms of APs, health and weight.", //You can make multiple lines with \n
+  "ID": 910081, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 723,
+  "HP": 250,
+  "Mass": 0.5,
+
+  "IconName": "GSO_Curved_Corner_Block_Icon.png", 
+  "MeshName": "GSO_Curved_Corner_Block.obj", 
+
+  "Recipe":  "1, 1, 1, 5, 5, 5, 7, 44",
+ 
+  "MeshMaterialName": "GSO_Main",
+  "ColliderMeshName": "GSO_Curved_Corner_Block_Collider.obj", 
+  "SupressBoxColliderFallback": true,
+
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    }
+  ],
+
+  
+  "GamePrefabReference": "GSO_Block_Half_111", 
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  } 
+} 
+
+  

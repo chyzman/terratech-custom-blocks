@@ -1,0 +1,61 @@
+{
+	"Name": "GeoCorp Impact Inverted tri corner",
+	"Description": "A heavy-duty block made for crashing into things.", //You can make multiple lines with \n
+	"ID": 1700077, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 2, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 0, //The grade minus one
+	"Price": 2862,
+	"HP": 2500,
+	"Mass": 2,
+"IconName": "Impact3.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+	   { "x": 0.5, "y": 0, "z": 0 }, 
+	   { "x": 0, "y": -0.5, "z": 0 }, 
+	   { "x": 0, "y": 0, "z": -0.5 },
+	   { "x": 0, "y": 0, "z": 0.5 },
+	   { "x": 0, "y": 0.5, "z": 0 },
+		
+
+					
+    ],
+	"DamageableType": 1,
+	"Fragility": 0,
+	
+	"GamePrefabReference": "GSO_Block_Half_Long_211",
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"Impacter3",
+	"DestroyExistingColliders": true,
+    "MeshName": "Impact_Corner_Trio_Inv.obj",
+	"MeshMaterialName": "GC_Main",
+	"ColliderMeshName": "Impact_Corner_Trio_Inv.obj",
+    
+	
+	}]
+	
+	
+	}

@@ -1,0 +1,252 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC DONUT-16 Fuel Tank",
+  "Description": "A very safe fuel tank with a modest fuel supply and decent regeneration. \n\nIt also doubles as a lifesaver, for whatever reason.", //You can make multiple lines with \n
+  "ID": 584436, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 27471,//
+  "HP": 3500,//
+  "Mass": 4,
+
+  "IconName": "donutFueled.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "47, 47, 49, 49, 51, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57",
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 2, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 }, 
+
+    { "x": 2, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 },
+    { "x": 1, "y": 0, "z": 2 },
+    { "x": 2, "y": 0, "z": 2 },
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Front
+    { "x": 0, "y": 0, "z": 2.5 },
+    { "x": 2, "y": 0, "z": 2.5 },
+    //Back
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 2, "y": 0, "z": -0.5 },
+    //Left
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 2 },
+    //Right
+    { "x": 2.5, "y": 0, "z": 0 },
+    { "x": 2.5, "y": 0, "z": 2 },
+    //Top
+    { "x": 0, "y": 0.5, "z": 0 },
+    { "x": 0, "y": 0.5, "z": 2 },
+    { "x": 2, "y": 0.5, "z": 0 },
+    { "x": 2, "y": 0.5, "z": 2 },
+    //Bottom
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 2 },
+    { "x": 2, "y": -0.5, "z": 0 },
+    { "x": 2, "y": -0.5, "z": 2 },
+    //Inside
+    { "x": 0.5, "y": 0, "z": 1 },
+    { "x": 1.5, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 1.5 },
+    { "x": 1, "y": 0, "z": 0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    // "x": 2,
+    // "y": 2,
+    // "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+  "GamePrefabReference": "HE_Block_Alt_01_(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"  "KeepReferenceRenderers": true,
+	//"ReferenceOffset": { "x": 0.5, "y": 0., "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "MakeBoxCollider": true,
+    },
+    { //Base
+      "SubOverrideName": "m_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_TorusTank.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":1, "y":0, "z":1 } 
+      },
+    },
+    "GameObject|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":1, "y":0, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 1.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+    },
+    "Duplicate|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":0, "y":0, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1.5
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":1, "y":0, "z":2 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 1.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":2, "y":0, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1.5
+        }
+      }
+    },
+    "Reference|GSO_Cab_111/ModuleFuelTank.": {//
+      "m_Capacity": 320.0,//TAC Fuel per block is 40
+      "m_RefillRate": 8.0,//TAC fuel regen is 1.0 per block
+    },
+  "ModuleFuelGauge": {},
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+      "Instantiate|deathExplosion": {
+        "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Shockwave": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 }, // Recenter it
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 125.0,
+                // "startRotation": 5.0,
+                // "startSpeed": 17.5, //How far you want the particles to spread
+                "startColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.6,
+                  "a": 1.0
+                },
+                "duration": 10.0,
+                "playbackSpeed": 0.50,
+                // "emissionRate": 25.0,
+                "maxParticles": 7,
+                "emission": {
+                  "rateMultiplier": 50.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 7,
+                    "maxCount": 7,
+                    "minCount": 7,
+                  }
+                },
+              }
+            }
+          }
+        },
+      },
+    },
+    "Damageable": {
+      "m_DamageableType": 5, 
+      "m_AoEDamageBlockPercent": 0.1,//Shotguns go right through
+    },
+  }
+}

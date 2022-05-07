@@ -1,0 +1,117 @@
+/*
+This is the basic standard block for LK.
+
+Pros:   Uses "Armor" block type - good against bullets and explosives, but bad against plasma and energy weapons
+        Higher HP than other blocks per cell
+        Doesn't detach
+Cons:   More expensive than a vanilla block per cell
+        Heavy
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Small Standard Block",
+    "Description":          "A block wrought from the hearth-home of the Lemon Kingdom. Extremely durable, but also very  heavy. \n\n \"Our steel reflects us as a people; tenacious, implacable, unwavering in our resolve. Does it burden us? Of course! But humanity's existence had always been of struggle. Let its unending strife wash over thee, for you the bulwark. You are a Lemon.\"\n\n -- Herildon, Supersoldier, Iron Peel",
+
+    "ID": 419001,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 2,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 17304,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body: AP: 24 Plubonic Alloy, 4 Titania Alloy, 4 Rugged Fiblar
+    */
+    "Recipe" : { "54": 4, "52": 4, "53": 24, "7": 8 },
+      
+    "IconName":                   "LK_small_block_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_small_block.obj",                                      // Name of the block's mesh                                        
+    "MeshColliderName":           "LK_small_block_col.obj",                                      // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 4000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 20.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 2,"z": 2 },
+
+    "APs": 
+        [ 
+        // Front Face
+        { "x": 0, "y": 0, "z": -0.5 }, { "x": 1, "y": 0, "z": -0.5 },
+        { "x": 0, "y": 1, "z": -0.5 }, { "x": 1, "y": 1, "z": -0.5 },
+        // Back Face
+        { "x": 0, "y": 0, "z": 1.5 }, { "x": 1, "y": 0, "z": 1.5 },
+        { "x": 0, "y": 1, "z": 1.5 }, { "x": 1, "y": 1, "z": 1.5 },
+        // Top Face
+        { "x": 0, "y": 1.5, "z": 0 }, { "x": 1, "y": 1.5, "z": 0 },
+        { "x": 0, "y": 1.5, "z": 1 }, { "x": 1, "y": 1.5, "z": 1 },
+        // Bottom Face
+        { "x": 0, "y": -0.5, "z": 0 },{ "x": 0, "y": -0.5, "z": 1 },
+        { "x": 1, "y": -0.5, "z": 0 },{ "x": 1, "y": -0.5, "z": 1 },
+        // Left Face
+        { "x": 1.5, "y": 0, "z": 0 }, { "x": 1.5, "y": 0, "z": 1 },
+        { "x": 1.5, "y": 1, "z": 0 }, { "x": 1.5, "y": 1, "z": 1 },
+        // Right Face
+        { "x": -0.5, "y": 0, "z": 0 },{ "x": -0.5, "y": 0, "z": 1 },
+        { "x": -0.5, "y": 1, "z": 0 },{ "x": -0.5, "y": 1, "z": 1 },
+        ],
+
+
+
+
+
+
+}

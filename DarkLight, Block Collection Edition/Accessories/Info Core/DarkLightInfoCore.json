@@ -1,0 +1,127 @@
+{
+  "Name": "DarkLight Informational Core",
+  "Description": "An all-in-one structural block for the non-radar informational needs of DarkLight techs. Best used alongside cabs in the core of ally vehicles.\n\n\nInstead of the usual energy symbol, we instead have chosen to put the Alkis Gals solar system's symbol on. For all they have done and contributed to DarkLight, they do deserve recognition.",
+                 //You can make multiple lines with \n
+  "ID": 2000085, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 5, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 2
+  "Price": 12950, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 2250, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 8.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.0, "z": 0.5},
+
+  "Fragility": 1.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 48, 51,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLInfoCore.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": "DLInfoCore.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": "DLInfoCoreCollider.obj",
+  "SupressBoxColliderFallback": true,
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward, very useful
+
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": 0,    "y": 0.5,  "z": 0    }, { "x": 0,    "y": -0.5, "z": 0    },
+    { "x": 0,    "y": 0.5,  "z": 1    }, { "x": 0,    "y": -0.5, "z": 1    },
+    { "x": 0,    "y": 0,    "z": -0.5 }, { "x": 0,    "y": 0,    "z": 1.5  },
+    { "x": -0.5, "y": 0,    "z": 0    }, { "x": -0.5, "y": 0,    "z": 1    },
+     // ^ X layer 1, 8 APs
+    { "x": 1,    "y": 0.5,  "z": 0    }, { "x": 1,    "y": -0.5, "z": 0    },
+    { "x": 1,    "y": 0.5,  "z": 1    }, { "x": 1,    "y": -0.5, "z": 1    },
+    { "x": 1,    "y": 0,    "z": -0.5 }, { "x": 1,    "y": 0,    "z": 1.5  },
+    { "x": 1.5,  "y": 0,    "z": 0    }, { "x": 1.5,  "y": 0,    "z": 1    }
+     // ^ X layer 2, 8 APs
+  ],
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_Radar_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Radar_111_Dish",
+      "MeshName": "DLInfoCoreCore.obj",
+      //"ColliderMeshName": "DLNeiaHorizontalCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": { //its literally a knockoff of the BL ones
+    "ModuleRadar": null,
+    "ModulePowerGauge": {},
+    "ModuleFuelGauge": {},
+    "ModuleAltimeter": {},
+    "ModuleSpeedo": {
+      "m_SpinnerRotationModifier": null,
+      "m_SpinnerMaxRotationSpeedChange": null,
+      "m_StationaryEpsilon": null,
+      "m_Spinners": [],
+      "m_CurrentSpeed": null
+    }, //yikes
+
+    "GameObject|_spindle": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 0.5, "y": 0, "z": 0.5 },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "Spinner": {
+        "m_Speed": 0.2,
+        "Speed": 0.2
+      }
+    }
+  }
+
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

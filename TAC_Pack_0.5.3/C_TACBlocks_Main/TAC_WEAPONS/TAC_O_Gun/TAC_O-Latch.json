@@ -1,0 +1,764 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "O-Latch Halo Wavecaster Energy Panel",
+  "Description": "This fires out O-shaped rings that can serve multiple purposes beyond just grinding down the enemy's blocks.  \n\nIt also can push enemy Techs away if they get close. \n\n\nSomebody!? confused this as a door lock once.  We know it happened for certain because the mistake was embarrassingly audible.", //You can make multiple lines with \n
+  "ID": 584287, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 65913,
+  "HP": 5000,//Takes up 12 area
+  "Mass": 14.0,//Heavy
+
+  "IconName": "DonutEat.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 48, 48, 49, 49, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 53, 53, 54, 54, 56, 56, 58, 58, 58, 60", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //Decently well armored.
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     //Back     
+     { "x": 0, "y": 0, "z": -0.5 },
+     { "x": 1, "y": 0, "z": -0.5 },
+     { "x": 2, "y": 0, "z": -0.5 },
+     { "x": 0, "y": 1, "z": -0.5 },
+     { "x": 1, "y": 1, "z": -0.5 },
+     { "x": 2, "y": 1, "z": -0.5 },
+     //Left
+     { "x": -0.5, "y": 0, "z": 0 },
+     { "x": -0.5, "y": 1, "z": 0 },
+     //Right
+     { "x": 2.5, "y": 0, "z": 0 },
+     { "x": 2.5, "y": 1, "z": 0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 2,
+    "z": 1 //meh
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Flamethrower(121)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_ArmouredBlock_114",//sized explodo
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base Model
+     "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "ULotchBase.obj",
+      "ColliderMeshName": "ULotchBase.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //RotatingPart Model
+     "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "ULotchRotPart.obj",
+      "ColliderMeshName": "ULotchRotPart.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    // { //RotatingPart Model
+    //  "SubOverrideName": "HitCollider",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false,
+    //   "MeshName": "ULotchRotPart.obj",
+    //   "ColliderMeshName": "ULotchRotPart.obj",
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    { //Elevation Model
+     "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      // "MeshName": "ULotchRotPart.obj",
+      // "ColliderMeshName": "ULotchRotPart.obj",
+      // "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "FXFlameThrower",
+      "MeshTextureName": "O_Latch.png",
+      // "MakeBoxCollider": false,
+      "MeshMaterialName": "FX_Shockwave_t_explosion_wave_01",
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.5
+      }
+    },
+    // { //
+    //   "SubOverrideName": "Jet Light",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACDonutBlock.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+  ],
+	
+  //
+  //
+  "JSONBLOCK": { //Root GameObject
+
+    //
+    //GameObjects
+    //
+          // "Reference|GSO_FixedDrill_112/_sparksLocator": {
+          //   "GameObject|SparksDrill": {
+          //   }
+          // },
+          // "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+          //   "UnityEngine.Transform": {
+          //     // "localScale": { "x":0.2, "y":0.2, "z":0.2 },
+          //     // "localEulerAngles": { "x":0, "y":0, "z":0},
+          //     "localPosition": { "x":0, "y":0, "z":-9.35 }
+          //   },
+          // },
+    "GameObject|_gimbalHorizontal": {
+      "UnityEngine.Transform": { //Moving the barrel
+        "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+        "localPosition": { "x":1, "y":0.5, "z":-0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0}
+      },
+      "GimbalAimer": {
+        "rotationLimits": [-55, 55]//Testing //[-65, 65] //Default
+      }, //For horizontal aim restrictions
+      "GameObject|m_VEN_FlameThrower_121_RotatingPart": {
+        "UnityEngine.Transform": { //Moving the barrel
+          "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0}
+        },
+      },
+      "GameObject|_gimbalVertical": {
+        "UnityEngine.Transform": { //Moving the barrel
+          "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0}
+        },
+        "GimbalAimer": {
+          "rotationLimits": [-40, 40] //Vertical aim restrictions
+        },
+        "GameObject|m_VEN_FlameThrower_121_Barrel": {
+        },
+        "GameObject|FirePoint": {//Where particles happen from
+          "UnityEngine.Transform": { //Moving the GameObject
+            "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+            "localPosition": { "x":0, "y":0, "z":-0.25 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0}
+          },
+        },
+        "GameObject|Jet Light": {//End of the particles
+          "UnityEngine.Light": {
+            "color": {  //Color of muzzleflash
+              "r": 1.0,
+              "g": 0.5,
+              "b": 0.7,
+              "a": 1.0
+            },
+            // "areaSize": 5.0,//2.0
+            // "intensity": 2.5,//2.0
+            // "range": 6.5,
+          },
+          // "Spinner": {
+          //   "m_Speed": 0.05,
+          //   "m_RotationAxis": {
+          //     "axis": 2
+          //   },
+          //   "m_SteerAxis": {
+          //     "axis": 1
+          //   },
+          //   "m_AutoSpin": false,
+          //   "m_SpinUpTime": 0.5,
+          // },
+          // "GameObject|JumpCollider": {//End of the particles
+          //   "GameObject|HitCollider": {//End of the particles
+          //     "UnityEngine.SphereCollider": {
+          //       "gameObject": {
+          //         "layer": 10 //ID 524288Layers:
+          //           // (0) Default//Collides with normal things
+          //           // (1) TransparentFX //Bypasses Shields, hits self
+          //           // (2) Ignore Raycast//Raycasts cannot detect, hits self
+          //           // (3) 
+          //           // (4) Water//
+          //           // (5) UI//No collision
+          //           // (6) 
+          //           // (7) 
+          //           // (8) Tank //Bypasses shields, collides with self
+          //           // (9) Cosmetic//Collides with nothing.
+          //           // (10) Bullet //normal projectile
+          //           // (11) Container //Crates, Collides with nothing.
+          //           // (12) Shield //Clips through shields, collides with self
+          //           // (13) Terrain //
+          //           // (14) TankIgnoreTerrain //Ignores terrain, hits self
+          //           // (15) Scenery //normal
+          //           // (16) Pickup //normal
+          //           // (17) Trigger //No collision
+          //           // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+          //           // (19) 3D UI //No collision
+          //           // (20) WheelSuspension // normal
+          //           // (21) ShieldBulletFilter //collides with bullets and shields
+          //           // (22) TerrainCollidingParticles
+          //           // (23) ShieldTechFilter //collides with Techs
+          //           // (24) TerrainOnly //idk
+          //           // (25) RenderImageForPrefab
+          //           // (26) SceneryCoarse
+          //           // (27) Landmarks
+          //       },
+          //       "isTrigger": true,
+          //       "enabled": true,
+          //       "radius": 1.05,
+          //     },
+          //     "UnityEngine.Transform": { //Moving the GameObject
+          //       "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+          //       "localPosition": { "x":0, "y":0, "z":1.5 },
+          //       // "localEulerAngles": { "x":0, "y":0, "z":0}
+          //     },
+          //   }
+          // },
+          // "Reference|GSO_FixedDrill_112/_spindle": {
+          //   "UnityEngine.Transform": { //Moving the GameObject
+          //     "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+          //     "localPosition": { "x":0, "y":0, "z":0.001 },
+          //     // "localEulerAngles": { "x":0, "y":0, "z":0}
+          //   },
+          //   "GameObject|m_GSO_Drill_112_DrillBit": {
+          //     // "CapsuleCollider": {
+          //     //   "center": {
+          //     //     "x": -0.00147365779,
+          //     //     "y": 0.008269034,
+          //     //     "z": 0.59,
+          //     //   },
+          //     //   "radius": 0.15,
+          //     //   "height": 1.14,
+          //     //   "direction": 2
+          //     // },
+
+          //   }
+          // },
+        },
+        "GameObject|Tip Light": {
+          "UnityEngine.Transform": { //Moving the GameObject
+            "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+            "localPosition": { "x":0, "y":0, "z":1 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0}
+          },
+          "UnityEngine.Light": {
+            "color": {  //Color of muzzleflash
+              "r": 1.0,
+              "g": 0.5,
+              "b": 0.7,
+              "a": 1.0
+            },
+            // "areaSize": 5.0,//2.0
+            // "intensity": 2.5,//2.0
+            // "range": 6.5,
+          },
+        },
+        "GameObject|FXFlameThrower": {  //Credit to Rafs for the Particle Weapons
+          "UnityEngine.Transform": { //Moving the GameObject
+            "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0}
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0, //0 means direct at camera, 1 means locked y-axis
+            // "sortMode": 0,
+            "lengthScale": 1.0,
+            // "velocityScale": 0.0,
+            // "cameraVelocityScale": 0.0,
+            // "normalDirection": 1.0,
+            // "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.05,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {         //Determine the color of the projectile
+                  "r": 1.0,
+                  "g": 0.2,
+                  "b": 0.9,
+                  "a": 1.0
+                },
+                "scalingMode": 0,
+                // "loop": true,       //breaks the flamethrower lol
+                "playbackSpeed": 1.0,   //How fast it plays
+                "startSize": {       //Size of particles
+                  "enabled": true,
+                  "mode": 0,
+                  "curve": {
+                    "keys": [
+                      {
+                        "time": 0.0,
+                        "value": 1.0,
+                        "inTangent": 1.0,
+                        "outTangent": 0.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      },
+                      {
+                        "time": 1.0,
+                        "value": 0.0,
+                        "inTangent": 0.0,
+                        "outTangent": 1.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      }
+                    ],
+                    "length": 2,
+                    "preWrapMode": 8,
+                    "postWrapMode": 8,
+                  },
+                  "constantMax": 5.0,
+                  "constantMin": 5.0,
+                  "constant": 5.0,
+                },
+                "startLifetime": 1.0,
+
+                "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+                "startSpeed": 90.0,     //How far you want the particles to spread
+                "emissionRate": 35.0,   //Rate of particles
+                "maxParticles": 7500,   //Maximum particles before the game gives up on spawning more for this gun
+                "shape": {
+                  "radius": 0.0,// how far out on a flat circle particles spawn
+                  "randomDirectionAmount": 0.5,
+                  // "radiusSpread": 0.5,
+                  "angle": 15.0,
+                  "sphericalDirectionAmount": 0.0, //Rotational Inaccuraccy of Particle Weapon
+                  "radiusSpeedMultiplier": 0.0,
+                },
+                "speedOverLifetime": null,          //Prevents particle slowdown
+                "collision": {
+                  "enabled": true, 
+                  // "enabled": false,                                   //Setting this to false will break the Particle Weapon
+                  "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                  "bounceMultiplier": 1.0,//0.5 is default          //How hard it bounces on contact with something
+                  "lifetimeLossMultiplier": 1.2,                     //How fast it will dissappear after contact
+                  "colliderForce": 2500,
+                  // "collidesWith": //Makes it collide with EVERYTHING
+                  // {
+                  //   "m_Mask": -1,
+                  //   "value": -1//512
+                  // },
+                  // "minKillSpeed": 0.0,
+                  // "maxKillSpeed": 10000.0,
+                },
+                "inheritVelocity": {
+                  "enabled": true,
+                  "mode": 0,
+                  "curve": {
+                    "keys": [
+                      {
+                        "time": 0.0,
+                        "value": 1.0,
+                        "inTangent": 1.0,
+                        "outTangent": 0.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      },
+                      {
+                        "time": 1.0,
+                        "value": 0.0,
+                        "inTangent": 0.0,
+                        "outTangent": 1.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      }
+                    ],
+                    "length": 2,
+                    "preWrapMode": 8,
+                    "postWrapMode": 8,
+                  },
+                  // "curveMax": null,
+                  // "curveMin": null,
+                  // "constantMax": 0.0,
+                  // "constantMin": 0.0,
+                  // "constant": 0.0,
+                    // "curve": null
+                  "curveMultiplier": 1.0
+                },
+                "noise": { //
+                  "enabled": false,
+                },
+                "sizeOverLifetime": { //Annoying module that manages size
+                  "enabled": false,
+                  "size": {
+                    "mode": 0,
+                    "curveMultiplier": 1.0,
+                    // "curveMax": null,
+                    "curveMin": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 0.4,
+                          "inTangent": 1.78363419,
+                          "outTangent": 1.78363419,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 0.304975033,
+                          "value": 0.7,
+                          "inTangent": 0.9498066,
+                          "outTangent": 0.9498066,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 1.0,
+                          "inTangent": 0.5839253,
+                          "outTangent": 0.5839253,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 3,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8
+                    },
+                    "curveMax": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 0.4,
+                          "inTangent": 1.78363419,
+                          "outTangent": 1.78363419,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 0.304975033,
+                          "value": 0.7,
+                          "inTangent": 0.9498066,
+                          "outTangent": 0.9498066,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 1.0,
+                          "inTangent": 0.5839253,
+                          "outTangent": 0.5839253,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 3,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8
+                    },
+                    // "curveMin": null,
+                    "constantMax": 0.0,
+                    "constantMin": 0.0,
+                    "constant": 0.0,
+                    "curve": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 0.4,
+                          "inTangent": 1.78363419,
+                          "outTangent": 1.78363419,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 0.304975033,
+                          "value": 0.7,
+                          "inTangent": 0.9498066,
+                          "outTangent": 0.9498066,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 1.0,
+                          "inTangent": 0.5839253,
+                          "outTangent": 0.5839253,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 3,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8
+                    }
+                  },
+                  "sizeMultiplier": 1.0,
+                  "x": {
+                    "mode": 0,
+                    "curveMultiplier": 1.0,
+                    "curveMax": null,
+                    // "curveMax": {
+                    //   "keys": [
+                    //     {
+                    //       "time": 0.0,
+                    //       "value": 0.4,
+                    //       "inTangent": 1.78363419,
+                    //       "outTangent": 1.78363419,
+                    //       "inWeight": 0.333333343,
+                    //       "outWeight": 0.333333343,
+                    //       "weightedMode": 0,
+                    //       "tangentMode": 0
+                    //     },
+                    //     {
+                    //       "time": 0.304975033,
+                    //       "value": 0.7,
+                    //       "inTangent": 0.9498066,
+                    //       "outTangent": 0.9498066,
+                    //       "inWeight": 0.333333343,
+                    //       "outWeight": 0.333333343,
+                    //       "weightedMode": 0,
+                    //       "tangentMode": 0
+                    //     },
+                    //     {
+                    //       "time": 1.0,
+                    //       "value": 1.0,
+                    //       "inTangent": 0.5839253,
+                    //       "outTangent": 0.5839253,
+                    //       "inWeight": 0.333333343,
+                    //       "outWeight": 0.333333343,
+                    //       "weightedMode": 0,
+                    //       "tangentMode": 0
+                    //     }
+                    //   ],
+                    //   "length": 3,
+                    //   "preWrapMode": 8,
+                    //   "postWrapMode": 8
+                    // },
+                    "curveMin": null,
+                    "constantMax": 0.0,
+                    "constantMin": 0.0,
+                    "constant": 0.0,
+                    "curve": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 0.4,
+                          "inTangent": 1.78363419,
+                          "outTangent": 1.78363419,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 0.304975033,
+                          "value": 0.7,
+                          "inTangent": 0.9498066,
+                          "outTangent": 0.9498066,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 1.0,
+                          "inTangent": 0.5839253,
+                          "outTangent": 0.5839253,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 3,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8
+                    }
+                  },
+                  "xMultiplier": 1.0,
+                  "separateAxes": false
+                },
+              }
+            }
+          },
+        }
+      }
+    },
+    "GameObject|m_VEN_FlameThrower_121_Base": {
+      "UnityEngine.Transform": { //Moving the base
+        "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+        "localPosition": { "x":1, "y":0.5, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0}
+      },
+    },
+
+    //
+    //Modules
+    //
+    // TAC Standard - Shockwave Dissipation Armor
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.6,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "VENLaserMG",//"CoilLaserSmall", //Firing noise GSOCab, CoilLaserSmall, VENLaserMG
+      "m_ShotCooldown" : 1.0,        //Cooldown between noises, vital to prevent sound overload
+      // "m_AutoFire" : true,//1.0,        //Will this fire automatically?
+      "m_LimitedShootAngle": 120,    //The maximum degree the enemy fires slightly off-target
+      "m_RotateSpeed" : 100.0        //SPEED of turret aiming, not homing
+    },
+
+    "ModuleWeaponFlamethrower": {
+      //Basics
+      "m_MaxFlameLength": 125.0,//Max range before the particles vanish
+      "m_DPS": 750.0,//MUCH higher because of reduced contact time          //Damage on particle target contact per second
+      "m_DamageType": 2,       //Damage Typing (Standard, Bullet, Laser, etc.)
+      "m_ExtendTime": 0.5,     //How long to fully extend the "flames"
+      "m_RetractTime": 0.5,    //How long to fully retract the "flames"
+
+      //
+      //Variable VFX Parameters
+      //
+      "m_TipLightVariance": 1.5,
+      "m_TipLightIntensity": 2.0,
+      "m_JetLightVariance": 1.5,
+      "m_JetLightIntensity": 2.0,
+
+      //Experimentals
+      "m_ModuleType": 0,//Yet to mess with this 
+    },
+    // "Reference|GSO_FixedDrill_112/ModuleDrill.": {
+    // // "ModuleDrill": {
+    //   "impactDamageMultiplier": 1.0,
+    //   "damagePerSecond": 50.0,
+    //   "m_DamageType": 4,
+    //   "activeColliders": ["_spindle/m_GSO_Drill_112_DrillBit/CapsuleCollider."],
+    //   // "activeColliders": ["JumpCollider/HitCollider/SphereCollider."],
+    //   // "m_Blade": "JumpCollider/HitCollider/Transform.gameObject",
+    //   // "m_Vibrations": "JumpCollider/HitCollider/Transform.gameObject",
+    //   "scaleHitParticles": 1.0,
+    //   "m_SpinOnCollisionDuration": 1.0,
+    //   // "m_ContactFlags": 10,
+    //   // "m_SFXType": 28,
+    //   // "m_ContactTimeout": 0.1,
+    //   // "m_DisabledWhenAttachedToBlocks": false,
+    //   // "OnAudioTickUpdate": {},
+    //   "m_ModuleType": 0,
+    //   "hitEffect": null,
+    //   // "Instantiate|hitEffect": {
+    //   //   "Explosion": { //wOW a component - A bit lacking atm, I still have yet to figure out how to make the visual explosion effect without crashing the game
+    //   //     "m_DamageType" : "Explosive", //What damage modifier the explosion does
+    //   //     "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+    //   //     "m_ExplosionType": "Fuel", //What the explosion looks like
+    //   //     "m_EffectRadius": 2, //weak
+    //   //     "m_EffectRadiusMaxStrength": 1, //MaxDamageStrength within this radius, then damage falloff occurs.
+    //   //     "m_MaxDamageStrength": 10, //This affects splash damage - 300 splash damage that really kills weak blocks, like GSO One Blocks
+    //   //     "m_MaxImpulseStrength": 10 //How hard to push things, explosion force -YEET
+    //   //   },  
+    //   //   "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+    //   //     "UnityEngine.Transform": {
+    //   //       // "localScale": { "x":0.2, "y":0.2, "z":0.2 },
+    //   //       // "localEulerAngles": { "x":0, "y":0, "z":0},
+    //   //       "localPosition": { "x":0, "y":0, "z":0 }
+    //   //     },
+    //   //     "UnityEngine.ParticleSystem": {
+    //   //       "main": {
+    //   //         "m_ParticleSystem": {
+    //   //           "startColor": {         //Determine the color of the projectile
+    //   //             "r": 1.0,
+    //   //             "g": 1.0,
+    //   //             "b": 0.4,
+    //   //             "a": 0.885
+    //   //           },
+    //   //           // "loop": true,       //breaks the flamethrower lol
+    //   //           // "playbackSpeed": 1.0,   //How fast it plays
+    //   //           "startSize": 2.5,       //Size of particles
+
+    //   //           // "startSpeed": 30.0,     //How far you want the particles to spread
+    //   //           // "emissionRate": 30.0,   //Rate of particles
+    //   //           // "maxParticles": 2500,   //Maximum particles before the game gives up on spawning more for this gun
+    //   //         }
+    //   //       }
+    //   //     },
+    //   //   },
+    //   // },
+    // },
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns
+    },
+  }
+}

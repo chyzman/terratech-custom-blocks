@@ -1,0 +1,192 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Torque Single-Axis Gyro",
+  "Description": "Very powerful in a not-so-compact frame, the Torque Gyro delivers powerful correction for its cumbersome size, suited for larger airships and things that <b>must</b> stay upright. \nIt features passive torsion forces which reduces bouncy-roll syndrome. \n\nAfter seeing the impact that the QuantumFlux Rotary Generator had without the inline stabilizer, the Torque gyro was created. \n\nCreated from a mistake. Like all great things in life, sometimes mistakes can be the source of goodness.  This was one of those happy accidents.  Excluding the painful fact that the final prototype fell on Anjaro's foot.  Yeouch. \n\nSome called it lazy. \nOthers called it revolutionary. \n\n<b>Ba-dum-tiss!</b>", //You can make multiple lines with \n
+  "ID": 584258, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 20319, //GSO's is 4326
+  "HP": 3500, //Battleship Cannon has 5500 health  
+  "Mass": 10.0, //9 area consumed, 10.0 due to mass of rotator.
+
+  "IconName": "SomewhatAGyro.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 53, 53, 53, 53, 54, 54, 57, 57, 57, 57, 60", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    { "x":1, "y":-0.5, "z":0 },
+    { "x":1, "y":2.5, "z":0 },
+    { "x":-0.5, "y":1, "z":0 },
+    { "x":2.5, "y":1, "z":0 },
+    { "x":1, "y":1, "z":-0.5 },
+    { "x":1, "y":1, "z":0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_Gyro_SingleAxis_Active(112)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, 
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, //Shift the subobjects of the block prefab by x, y and z 
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_BF_Gyro_SingleAxis_Active_112__Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGyro.obj",
+      // "ColliderMeshName": "TACQFluxRotGenSpinFront.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Rotator
+     "SubOverrideName": "m_BF_Gyro_SingleAxis_Active_112_Gyro",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGyroSpinner.obj",
+      // "ColliderMeshName": "TACQFluxRotGenSpinner.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_BF_Gyro_SingleAxis_Active_112__Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.3, "y":0.3, "z":0.333333 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 1.5,
+          "z": 1.5
+        }
+      },
+    },
+    "GameObject|m_BF_Gyro_SingleAxis_Active_112_Gyro": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.31, "y":0.31, "z":0.33333 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":1, "y":1, "z":0 } 
+        },
+      "CapsuleCollider": {
+        "radius": 0.5,
+        "height": 1.0,
+        "direction": 2
+      }
+    },
+    // "GameObject|_spindle": {
+    //   "Spinner": { //We want this to be always rotating, similar to the MT construct that this is supposed to represent.
+    //     "m_Speed": 1.25,
+    //     "m_AutoSpin": true,
+    //     "m_SpinUpTime": 0.75,
+    //     "m_CurrentAngle": 0.0,
+    //     "m_CurrentAutoSpeed": 0.0,
+    //     "m_CurrentSpeedFraction": 0.0,
+    //     "m_SpinnerSound": null,
+    //     "m_SpinnerSoundOriginalPitch": 0.0,
+    //     "Speed": 1.25,
+    //     "SpeedFraction": 0.0,
+    //     "AtFullSpeed": false
+    //   },
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":90, "z":0 },
+    //     "localPosition": { "x":3, "y":3, "z":1 } 
+    //   },
+    //   "GameObject|m_SpinPart": {
+    //     "UnityEngine.Transform": {
+    //       "localScale": { "x":0.29, "y":0.29, "z":0.333 },
+    //       "localEulerAngles": { "x":0, "y":90, "z":0 },
+    //       "localPosition": { "x":0, "y":0, "z":0 } 
+    //     },
+    //   }
+    // },// Back to main layer
+    //---------------------------------
+      //The madness starts here
+  
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,
+      "m_TrimAdjustSpeed": 0.0,
+      "m_UsePassive": 1,
+      "m_PassiveStrength": {
+        //BF's is all 300 for the below, but this is bigger so it's more impactful
+        // However, due to the torque effect, the Z axis has the least resistive force
+        "x": 1200.0,
+        "y": 1200.0,
+        "z": 50.0,
+        // "magnitude": 173.205078,
+        // "sqrMagnitude": 30000.0
+      },
+      "m_UseActive": 1,
+      "m_ActiveSpeed": 600.0,//BF one is 100.0 in 2 block area
+      "m_ActiveStability": 6.75,//Was 1.25
+      "m_RotationAnimSpeed": 4.0,
+      "m_RotationMinSpeed": 4.0,
+      "m_RotationMaxSpeed": 270.0,
+      "m_Trim": 0.0,
+      "m_HasTurnInput": false,
+      "m_HasDriveInput": false,
+      "m_ControlTrim": 0.0,
+      "m_ControlTrimTarget": 0.0,
+      "Trim": 0.0
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Will not stop shotguns
+    },
+  }
+}
+
+
+
+
+
+
+

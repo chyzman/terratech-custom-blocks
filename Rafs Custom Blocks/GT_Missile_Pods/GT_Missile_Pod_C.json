@@ -1,0 +1,330 @@
+{
+  "Name": "GreenTech Chunk Gatherer Missile Pod",
+  "Description": "A harmless projectile that seeks chunks and implodes in a vacuum to group these together.",
+  
+  "ID": 911076,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 3,  
+  "Price": 8013,
+  "HP": 1200,
+  "Mass": 12,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+
+  "Recipe": "1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 32, 47, 48, 51, 57",
+  "IconName": "GT_Missile_Pod_C_Icon.png",
+  "EmissionMode": 1,
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 1}, 
+  
+  "APs": [ 
+  {"x": 0, "y": -0.5, "z": 0},
+  {"x": 1, "y": -0.5, "z": 0},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 1, "z": 0},
+	{"x": 1.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 1, "z": 0},
+	{"x": 0, "y": 0, "z": -0.5},
+  {"x": 0, "y": 0, "z": 0.5},
+	{"x": 0, "y": 1,"z": -0.5},
+  {"x": 0, "y": 1, "z": 0.5},
+  {"x": 1, "y": 0, "z": -0.5},
+  {"x": 1, "y": 0, "z": 0.5},
+	{"x": 1, "y": 1,"z": -0.5},
+	{"x": 1, "y": 1, "z": 0.5}
+  ],
+
+  "GamePrefabReference": "HE_BombBay_113", 
+  "KeepRenderers": false,
+  "Keepcolliders": false,
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Base",
+      "MeshName": "GT_Missile_Pod.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Bomb",
+      "MeshName": "GT_Missile_Pod_C_Projectile.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "GT_Missile_Pod_C_Projectile.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "GT_Missile_Pod_C_Projectile.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+        "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+        "MeshName": "GT_Missile_Pod_C_Projectile.obj", 
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": -90
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 2.0,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": -90.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.2
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|_recoiler": {
+        "Animation": {
+        "clip": {
+          "length": 0.01
+        }
+      },
+        "GameObject|m_HE_BombBay_113_Base": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -2.0
+            },
+            "localEulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "GameObject|m_HE_BombBay_113_Bomb": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": -90.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+        }
+      }
+    },
+    "Duplicate|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 2.0,
+          "z": 0.0
+        }
+      }
+    },
+    "Duplicate|_barrel_1_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.0,
+          "y": 2.0,
+          "z": 0.0
+        }
+      }
+    },
+
+    "ModuleWeapon": { 
+      "m_FireSFXType": 79
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 1.5,
+      "m_BurstShotCount": 3,
+    "m_BurstCooldown": 1.0,
+    "m_FireControlMode": 0,
+    "m_CooldownVariancePct": 0.1
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 60.0,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.0,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 0.0,
+      "m_KickbackStrength": 10.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|CentreOfMass": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "WeaponRound": { 
+          "m_DamageType" : 3, 
+          "m_Damage": 0
+        },
+        "Rigidbody": {
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+          "mass": 0.0001
+        },
+        "RandomAdditions.SeekingProjectileIgnoreLock":{},
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 60.0,
+          "m_TurnSpeed": 500,
+          "m_UpdateVisibleInterval": 0.01,
+          "m_ActivationDelay": 0.05,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_SeekType" : "Chunk",
+          "m_TargetingType" : "CenterOfMass"
+          },
+          "Projectile": {
+            "m_LifeTime": 10.0,
+            "m_ImpactSFXType" : 2,
+            "m_FlightSFXType" : 1,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_DamageType" : 3,
+                "m_EffectRadius":100,
+                "m_EffectRadiusMaxStrength": 99, 
+                "m_MaxDamageStrength": 0, 
+                "m_MaxImpulseStrength": -6
+              },
+              "GameObject|Sparks": null,
+              "GameObject|ExplosionBright": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 5, "y": 5, "z": 5 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor":{
+                        "r": 0.12,
+                        "g": 0.3,
+                        "b": 1.0,
+                        "a": 0.1
+                      },
+                      "startSize": 30,
+                      "startSpeed": -50,
+                      "emission": {
+                        "rateMultiplier": 2.0,
+                        "rateOverTimeMultiplier": 0.2
+                        /*"burst": {
+                          "count": 3,
+                          "maxCount": 2,
+                          "minCount": 1
+                        }*/
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionDark": null,
+              "GameObject|ExplosionSmoke": null,
+              "GameObject|Point light": null
+            }
+          },
+        "GameObject|_particles": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 0.1,
+              "y": 0.1,
+              "z": 0.1
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 0.2,
+          "height": 1,
+          "direction": 2
+        },
+        "MissileProjectile": {
+          "m_MaxBoosterLifetime": 0.0,
+          "m_BoosterActivationDelay": 0.0,
+          "m_ArmDelay": 0.0,
+          "m_DeathDelayNotArmed": 0.0
+        }
+      }
+    }
+  }			
+}

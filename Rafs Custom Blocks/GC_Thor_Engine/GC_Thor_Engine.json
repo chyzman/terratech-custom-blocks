@@ -1,0 +1,167 @@
+{
+  "Name": "GeoCorp Thor Engine",
+  "Description": "The mighty Thor Engine provides increased maximum wheel rotation, improved braking, and strengthens suspension hydraulic systems.\nDeveloped for faster and safer transporation of heavy payloads.",
+  "ID": 910694, 
+
+  "Faction": 2, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 53868,
+  "HP": 5000,
+  "Mass": 30,
+  "CenterOfMass": {"x": 1.5, "y": 1, "z": 1.5},
+
+  "IconName": "GC_Thor_Engine_Icon.png",
+  
+  "Recipe": "44, 44, 44, 44, 44, 44, 47, 47, 47, 47, 49, 49, 49, 49, 49, 49, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 63, 63",
+  
+  "EmissionMode": 0,
+
+  "CellMap":
+	[
+		[
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "    ",
+      " xx ",
+      " xx "
+    ]
+  ],
+
+  "APs": [
+    {"x": 0, "y": -0.5,"z": 0},
+    {"x": 0, "y": -0.5,"z": 1},
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 1, "y": -0.5,"z": 1},
+    {"x": 2, "y": -0.5,"z": 0},
+    {"x": 2, "y": -0.5,"z": 1},
+    {"x": 3, "y": -0.5,"z": 0},
+    {"x": 3, "y": -0.5,"z": 1},
+    {"x": 1, "y": -0.5,"z": 2},
+    {"x": 1, "y": -0.5,"z": 3},
+    {"x": 2, "y": -0.5,"z": 2},
+    {"x": 2, "y": -0.5,"z": 3},
+    {"x": 0, "y": 0,"z": -0.5},
+    {"x": 0, "y": 1,"z": -0.5},
+    {"x": 1, "y": 0,"z": -0.5},
+    {"x": 1, "y": 1,"z": -0.5},
+    {"x": 2, "y": 0,"z": -0.5},
+    {"x": 2, "y": 1,"z": -0.5},
+    {"x": 3, "y": 0,"z": -0.5},
+    {"x": 3, "y": 1,"z": -0.5},
+    {"x": -0.5, "y": 0,"z": 0},
+    {"x": -0.5, "y": 1,"z": 0},
+    {"x": 3.5, "y": 0,"z": 0},
+    {"x": 3.5, "y": 1,"z": 0}
+  ],
+
+  "GamePrefabReference": "GC_Block_222",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_BigBertha_845", 
+  
+  "SubObjects": [
+    {
+    	"MeshName": "GC_Thor_Engine.obj",
+      "MeshMaterialName": "GC_Main",
+      "ColliderMeshName": "GC_Thor_Engine_Collider_1.obj"
+    },
+    {
+      "ColliderMeshName": "GC_Thor_Engine_Collider_2.obj"
+    },
+    {
+      "ColliderMeshName": "GC_Thor_Engine_Collider_3.obj"
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWheels.m_TorqueParams.torqueCurveMaxRpm",
+        "ModuleWheels.m_TorqueParams.passiveBrakeMaxTorque", 
+        "ModuleWheels.m_TorqueParams.basicFrictionTorque",
+        "ModuleWheels.m_WheelParams.suspensionSpring",
+        "ModuleWheels.m_WheelParams.suspensionDamper" ],
+      "m_Strength": [1.40, 1.5, 1.5, 1.25, 1.25],
+      "m_AddAfter": [0, 0, 0, 0, 0],
+      "m_NeedsToBeAnchored": [false, false, false, false, false]
+    },
+    
+     "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.39,
+          "y": 2.3,
+          "z": 2
+         },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+         "localScale": {
+          "x": 0.02,
+          "y": 0.02,
+          "z": 0.02
+        }
+       },
+      "ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 1.5,
+        "enableEmission": true,
+        "emissionRate": 50.0,
+        "startSpeed": 0.1,
+        "startSize": 0.4,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.1
+        },
+        "startLifetime": 6,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "material": "Mat_FX_Smoke_Dark"
+      }
+    } ,      
+    "Duplicate|FX_Smoker_Steam":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.61,
+          "y": 2.3,
+          "z": 2
+        }
+      }
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "type": "Attach"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam_copy/ParticleSystem.",
+          "type": "Attach"
+        }
+      ]
+    },      
+  }
+}

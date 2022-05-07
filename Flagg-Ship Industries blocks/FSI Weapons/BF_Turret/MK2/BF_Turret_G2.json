@@ -1,0 +1,373 @@
+{
+  "Name": "Better Future MK2 Kairos Turret",
+  "Description": "Based off of a separate planet's defense system, the Kairos turret rapidly fires projectiles at enemies. The MK2 is the next upgrade from the MK1, firing faster, but also more expensive", //You can make multiple lines with \n
+  "ID": 1700069,
+
+  "Faction": 7,
+  "Category": 4,
+  "Grade": 1,
+  "Price": 48798,
+  "HP": 2250,
+  "Mass": 20,
+"IconName": "Kairos MK2.png",
+  "MeshName": null,
+"Recipe":  "43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 49, 49, 49, 49, 51, 51, 51, 51, 55, 55, 57, 57, 57, 57, 65, " 	,
+	
+	
+	
+	
+	
+	
+
+  "MeshTextureName": null,
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },	
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 4 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 4 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 4 },	
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },
+		{ "x": 0, "y": 4, "z": 3 },
+		{ "x": 0, "y": 4, "z": 4 },		
+        { "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+		{ "x": 1, "y": 4, "z": 3 },
+		{ "x": 1, "y": 4, "z": 4 },
+        { "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+		{ "x": 2, "y": 4, "z": 3 },
+		{ "x": 2, "y": 4, "z": 4 },
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 3, "y": 4, "z": 1 },
+		{ "x": 3, "y": 4, "z": 2 },
+		{ "x": 3, "y": 4, "z": 3 },
+		{ "x": 3, "y": 4, "z": 4 },	
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+		{ "x": 4, "y": 4, "z": 3 },
+		{ "x": 4, "y": 4, "z": 4 },
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 }, 
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 }, 
+
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": 4.5 },
+		{ "x": 0, "y": 4, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": -0.5 } 
+
+					
+    ],
+"GamePrefabReference": "VEN_Cannon_Rapid_313", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel_L/_recoiler/m_VEN_CannonRapid_313_Barrel_L",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": null,
+      "MeshMaterialName": null,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_R/_recoiler/m_VEN_CannonRapid_313_Barrel_R",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": null,
+      "MeshMaterialName": null,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Gattling_Base.obj",
+      "MeshMaterialName": "BF_Main",
+      "SubPosition": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Gattling_Body2.obj",
+      "MeshMaterialName": "BF_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Gattling_cannon.obj",
+      "MeshMaterialName": "BF_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": { 
+    "GameObject|_gimbalBase": { 
+      "UnityEngine.Transform": { 
+        "localPosition": { "x": 2, "y": 2, "z": 2 }
+      },
+      "GimbalAimer": {
+		    
+	    }, 
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x": -0, "y": -0, "z": -0 }
+        },
+        "GimbalAimer": { 
+          "rotationLimits": [-10, 10] 
+        },
+
+        "GameObject|_barrel_L": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": -1.4, "y": 0.45, "z": 1 }
+          },
+          "GameObject|_smoke": { 
+            "UnityEngine.Transform": { 
+              "localScale": { "x": 1, "y": 1, "z": 1},
+              "localPosition": { "x": 0, "y": -1, "z": 0 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": { 
+              "localScale": { "x": 0.2, "y": 0.2, "z": 1 },
+              "localPosition": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": 0, "z": 2.5 }
+            }
+          }
+        },
+
+        "GameObject|_barrel_R": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": 1.4, "y": 0.45, "z": 1 }
+          },
+          "GameObject|_smoke": { 
+            "UnityEngine.Transform": { 
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localPosition": { "x": 0, "y": -1, "z": 0 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": { 
+              "localScale": { "x": 0.2, "y": 0.2, "z": 1 },
+              "localPosition": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": 0, "z": 2.5 }
+            }
+          }
+        }
+      }
+      
+    }, 
+    "ModuleWeapon": { 
+      "m_FireSFXType": 66, 
+      "m_RotateSpeed" : 180
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.08,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 150, 
+      "m_BulletSprayVariance": 0.025,
+      "m_KickbackStrength": 1,
+      "Instantiate|m_BulletCasingPrefab": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+        }
+      },
+      "Instantiate|m_BulletPrefab": { 
+        "WeaponRound": { 
+          "m_Damage": 260
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1.1, "y": 1.1, "z": 1.25 }
+        },
+        "Projectile": {
+          "m_ImpactSFXType" : "Cannon",
+          "UnityEngine.TrailRenderer": {
+            "widthMultiplier": 0.25
+          },
+          "Instantiate|m_Explosion": { 
+            "Explosion": { 
+              "m_ExplosionSize": 1,
+              "m_EffectRadius": 3,
+              "m_MaxDamageStrength": 260,
+              "m_MaxImpulseStrength": 100
+            }
+          }
+        }
+      }
+    }
+  }
+}

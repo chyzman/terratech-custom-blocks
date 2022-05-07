@@ -1,0 +1,56 @@
+{
+  "Name": "Old Star External Battery",
+  "Description": "Now this ain't how the Old Star do. The External Battery is fairly light for its size and can hold a decent amount too. Way more than those small batteries from GSO and Venture. The batery was designed by the newest member of the development team and he insisted that we have some way of harnesing the power of our steam engines so we don't need to keep them active all the time. And you know what, our customers agreed and bought them up like hot cakes!",
+  "ID": 300034, 
+
+  "Faction": 4, 
+  "Category": 6, 
+  "Grade": 1, 
+  "Price": 5689, 
+  "HP": 1200, 
+  "Mass": 10, 
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "Recipe":  "5, 9, 32, 43, 45, 48, 50",  
+  "IconName": "OS_Battery_Icon.png",
+  "SupressBoxColliderFallback": false,
+  
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "BlockExtents":{"x": 2,"y": 2, "z": 2},   
+  "APsOnlyAtBottom": true,
+  
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  
+  "SubObjects": [ 
+    {
+    "SubOverrideName":"GC_Battery_222",
+    "MeshName": "External_Battery.obj",  
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName":"OST2.png",
+    "MeshEmissionTextureName":"OST3.png",
+	"MakeBoxCollider": true
+	},
+	{
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "External_Battery_LED.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 9001}
+	}
+}

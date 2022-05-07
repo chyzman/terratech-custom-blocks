@@ -1,0 +1,487 @@
+{
+  "Name": "Old Star Heavy Iron Mountain Scraper",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! The Mountain Scraper is a large rotating mining wheel that can pulverize any rock/tree/bandit with ease when it connects. Mind that this is also Old Star's Heaviest item so ensure your not using a tiny tech to carry this",
+  "ID": 300110,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 10098,
+  "HP": 10000,
+  "Mass": 60.0,
+  "EmissionMode": 2,
+  "IconName": "OS_Mountain Scraper_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 45, 45, 45, 48, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "CenterofMass": {
+    "x": 0.5,
+    "y": 2.5,
+    "z": 2.5
+  },
+
+  "APs": [
+    {
+      "x": -0.5,
+      "y": 2.0,
+      "z": 2.0
+    },
+    {
+      "x": -0.5,
+      "y": 2.0,
+      "z": 3.0
+    },
+    {
+      "x": -0.5,
+      "y": 3.0,
+      "z": 3.0
+    },
+    {
+      "x": -0.5,
+      "y": 3.0,
+      "z": 2.0
+    },
+    {
+      "x": 1.5,
+      "y": 2.0,
+      "z": 2.0
+    },
+    {
+      "x": 1.5,
+      "y": 2.0,
+      "z": 3.0
+    },
+    {
+      "x": 1.5,
+      "y": 3.0,
+      "z": 2.0
+    },
+    {
+      "x": 1.5,
+      "y": 3.0,
+      "z": 3.0
+    }
+  ],
+  "Cells": [
+    //x=0
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 5
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 5
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "z": 5
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "z": 4
+    },
+    //x=1
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 5
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 5
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "z": 5
+    },
+
+    {
+      "x": 1,
+      "y": 5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 5
+    }
+  ],
+  /*
+  "BlockExtents": {
+    "x": 2,
+    "y": 6,
+    "z": 6
+  }, */ // A vector of (1, 1, 1) returns a one-celled block
+
+  "APsOnlyAtBottom": false,
+  "GamePrefabReference": "GC_BuzzSaw_246",
+  "KeepColliders": true,
+
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  //Shift the subobjects of the block prefab by x, y and z
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_BuzzSaw_246_Blade",
+      "MeshName": "HI_MS_Digger.obj",
+      "ColliderMeshName": "HI_MS_Digger.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_GC_BuzzSaw_246_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HI_MS_Base.obj",
+      "ColliderMeshName": "HI_MS_Base.obj.obj",
+      "Position": {
+        "x": 0.0,
+        "y": 2.0,
+        "z": 2.0
+      }
+    },
+    {
+      "SubOverrideName": "drillcollider",
+      "layer": 14
+    },
+    {
+      "ObjectName": "aCol",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|m_GC_BuzzSaw_246_Body/_Spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "Scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "Spinner": {
+        "m_Speed": 2.8,
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 2.0,
+        "m_CurrentAngle": 0.0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        "Speed": 0.8,
+        "SpeedFraction": 0.0,
+        "AtFullSpeed": false,
+        "useGUILayout": true,
+        "enabled": true,
+        "isActiveAndEnabled": false
+      }
+    },
+    "ModuleDrill": {
+      "impactDamageMultiplier": 5.0,
+      "damagePerSecond": 5800.0,
+      "m_SpinOnCollisionDuration": 1,
+      "m_DamageType": 4,
+      "scaleHitParticles": 2.0,
+      "m_ContactFlags": 10,
+      "m_SFXType": 63,
+      "m_ContactTimeout": 0.1
+    }
+  }
+}

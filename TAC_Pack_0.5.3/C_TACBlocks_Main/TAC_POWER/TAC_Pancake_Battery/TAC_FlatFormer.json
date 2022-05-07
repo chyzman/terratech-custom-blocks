@@ -1,0 +1,339 @@
+{// TAC Breakfast Batteries
+	"Name": "TAC Pancake Battery",
+	"Description": "A TAC capacity battery with high durability.  It's usually painful to place, but it <b>is</b> safety. It holds if anything the TOP safety rating in TAC for a self-contained self-maintaining battery in operation as of it's release, given the two other compeditors have a tendency to explode in some cases. \nFeatures an additional onboard power generation unit that works when the sun is up.  \n\nThis battery has a built-in sterling generator that works well when it's hot.  Being out in the sun lets this generate a very low, but steady supply of energy to hopefully upkeep your shields at tops. \n\nIf you want more battery, I suggest you go for the waffle. \n But if you need more daytime regeneration, 3 of these in the volume of 1 Waffle yields 9 energy per second (daytime) vs 5 (all time)", //You can make multiple lines with \n
+	"ID": 584425, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 6231, //Costs 6231, more expensive than a GEO battery which is 5946 BB, but has less power storage.
+	//was 2910x3=8730 before nerf
+	"HP": 2200, //TAC Waffle Battery is 450 in 1 block volume - This one is 550 due to the TAC smaller block buff factor
+	//BF Battery is 250 in 1 block volume
+	//HE Battery is 400 in 1 block volume
+	//GC Battery is 162 in a 1 block volume
+	//GC Battery is 1296 in a 8 block volume
+	//LK Battery is 1000 in a 1 block volume
+	//LK Battery is 2000 in a 2 block volume
+
+	"Mass": 12.0, //TAC Battery IS 3 in 1 block volume, buffed because lack of APs make it hard to use nicely
+	//TAC Battery WAS 3.25 in 1 block volume, roughly between the BF and HE batteries
+	//BF Battery is 2.7 in 1 block volume
+	//HE Battery is 4 in 1 block volume
+	//LK Battery is 10 in 1 block volume
+	
+
+	"IconName": "flatBattery.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "56,56,54,54", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+        // {
+        //   "name": "Titanic Alloy",
+        //   "id": 54
+        // },
+        // {
+        //   "name": "Rugged Fiblar",
+        //   "id": 52
+        // },
+        // {
+        //   "name": "Ion Pulse Cell",
+        //   "id": 56
+        // }
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Bottom
+        { "x": 0, "y": -0.5, "z": 0 }, 
+        { "x": 0, "y": -0.5, "z": 1 }, 
+    	//Top
+        { "x": 0, "y": 1.5, "z": 0 }, 
+        { "x": 0, "y": 1.5, "z": 1 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 2,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "HEBattery(211)",
+	"KeepReferenceRenderers": true,  
+	"DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_HE_Battery_211_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "TACPancakeBatteryBase.obj",
+			"ColliderMeshName" : "TACPancakeBatteryBase.obj",
+	    "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "m_TAC_LED_5.obj",
+	    // "MeshTextureName": "m_TAC_Battery_SevenSeg_Power2.png",
+	    "MeshTextureName": "m_TAC_Battery_LED_Power_1.png",
+	    // "MeshTextureName": "CirculatedBattery.png",
+      // "MeshMaterialName": "HE_Main",
+		},
+		// {
+	 //    "SubOverrideName":"m_HE_Battery_211_LEDs_copy",
+	 //    // "DestroySubReferenceRenderer": true,
+	 //    // "DestroyExistingColliders": true,
+	 //    "MeshName": "m_TAC_LED_5.obj",
+	 //    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    // "MeshTextureName": "CirculatedBattery.png",
+  //     "MeshMaterialName": "HE_Main"
+		// },
+		{
+	    "SubOverrideName":"m_Pancake",
+	    "MeshName": "TACPancakeBatteryRotPart.obj",
+			"ColliderMeshName" : "TACPancakeBatteryRotPart.obj",
+	    "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_Pancake_Major",
+	    "MeshName": "TACPancakeBatteryRotPart2.obj",
+			"ColliderMeshName" : "TACPancakeBatteryRotPart2.obj",
+	    "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+		},
+  ],
+	
+	"JSONBLOCK": {
+		"GameObject|m_HE_Battery_211_Base":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0.5, "z":0.5 } 
+      },
+	    "GameObject|_spindle": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":1, "y":1, "z":1 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":0 } 
+	      },
+	      "Spinner": {
+	        "m_Speed": -0.5,
+	        "m_AutoSpin": true,
+	        "m_SpinUpTime": 0.75,
+	        "m_CurrentAngle": 0.0,
+	        "m_CurrentAutoSpeed": 0.0,
+	        "m_CurrentSpeedFraction": 0.0,
+	        "m_SpinnerSound": null,
+	     //    "m_SpinnerSound": {
+		    //     "playOnAwake": true,
+		    //     "pitch": 1.0,
+		    //     "loop": false,
+      // "m_EventPath": "event:/OldAssets/GSO_ShieldUP",
+		    //     // "priority": 1.0,
+
+
+
+
+	     //    },
+	        "m_SpinnerSoundOriginalPitch": 0.0,
+	        "Speed": 0.5,
+	        "SpeedFraction": 0.0,
+	        "AtFullSpeed": false
+	      },
+		    "GameObject|m_Pancake": {
+		      "UnityEngine.Transform": {
+		        "localScale": { "x":1, "y":1, "z":1 },
+		        "localEulerAngles": { "x":0, "y":0, "z":90 },
+		        "localPosition": { "x":0, "y":0, "z":0 } 
+		      }
+		    },
+		  },
+	    "GameObject|_spindle2": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":1, "y":1, "z":1 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":0 } 
+	      },
+	      "Spinner": {
+	        "m_Speed": 0.175,
+	        "m_AutoSpin": true,
+	        "m_SpinUpTime": 0.75,
+	        "m_CurrentAngle": 0.0,
+	        "m_CurrentAutoSpeed": 0.0,
+	        "m_CurrentSpeedFraction": 0.0,
+	        "m_SpinnerSound": null,
+	        "m_SpinnerSoundOriginalPitch": 0.0,
+	      },
+		    "GameObject|m_Pancake_Major": {
+		      "UnityEngine.Transform": {
+		        "localScale": { "x":1, "y":1, "z":1 },
+		        "localEulerAngles": { "x":0, "y":0, "z":90 },
+		        "localPosition": { "x":0, "y":0, "z":0 } 
+		      }
+		    },
+		  }
+		},
+		"GameObject|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":1.45, "y":1.45, "z":1.825 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0.4875, "z":0.5 }, 
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90 }
+      },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          "doubleSidedGI": false,
+          // "mainTexture": "m_TAC_Battery_LED_Power_1.png",
+          // "mainTexture": "m_TAC_Battery_SevenSeg_Power2.png",
+          "mainTexture": {
+          	// "filterMode": "Bilinear", // Point, Bilinear
+          	"filterMode": "Point", // Point, Bilinear
+	          "texelSize": {
+	            "x": 0.025,
+	            "y": 0.025,
+	          },
+          },
+          "mainTexture": "m_TAC_Battery_LED_Power_1.png",//THIS MUST BE DIRECTLY BELOW  "mainTexture": {"filterMode": "Point"} OR IT WILL NOT WORK!
+          // },
+        }
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.025,
+	      //       "y": 0.025,
+	      //     }
+	      //   }
+	      // },
+	    },
+		},
+		"Duplicate|m_HE_Battery_211_LEDs":{//Reset the LEDs to Vanilla
+      "UnityEngine.Transform": {
+	        "localScale": { "x":0.01, "y":0.01, "z":0.01 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":1.5, "y":0.9875, "z":0.5 },
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90 }
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.125,
+	      //       "y": 0.125,
+	      //     }
+	      //   }
+	      // },
+	    },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          // "anisoLevel": 9,
+          // "enableInstancing": true,
+          "doubleSidedGI": false,
+          // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          // "mainTextureOffset": {"x":0.0, "y":0.0},
+          // "mainTextureScale": {"x":1, "y":1},
+          // "mipMapBias": 5.0,
+          // "wrapMode": false,
+          // "wrapModeU": false,
+          // "wrapModeV": false,
+          // "wrapModeW": false,
+          // "globalIlluminationFlags": 1,
+          // "mainTexture": "m_DefaultPower_1.png",
+          // "mainTexture": "m_TAC_Battery_LED_Power_2.png",
+          "mainTexture": {
+	          "filterMode": "Point",
+	          // "filterMode": "Bilinear",
+	        },
+          // "shaderKeywords": [
+          //   "_ALBEDO",
+          //   "_EMISSION",
+          //   "_NORMALMAP"
+          // ],
+        }
+      },
+
+		},
+
+		//Coding
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+    "ModuleEnergyStore": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+    	"m_Capacity": 7100 //TAC batteries have 1775 m_Capacity in a volume of 1 block
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+
+    //Bonus generation:
+    "ModuleEnergy": {//Infinity Generator
+      // "m_OutputEnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+      "m_Priority": -100,
+      "m_OutputPerSecond": 3.0,//125- generation of Quantumflux, nowhere near enough to run the Grudge alone.
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 2,//Daytime only
+		  // OutputConditionFlags
+			// {
+			// 	Anchored = 0x1,
+			// 	DayTime = 0x2,
+			// 	Thermal = 0x4
+			// }
+      "m_GeneratingSFXType": 0,//no noise.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 0.0,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.1, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for batteries
+    },
+	}
+}
+
+
+
+

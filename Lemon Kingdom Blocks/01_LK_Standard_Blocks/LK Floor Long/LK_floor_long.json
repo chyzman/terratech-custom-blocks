@@ -1,0 +1,46 @@
+/*
+Description:    A long floor tile
+Pros:           Smooth colliders make it a good fit for ramps and flooring.
+                Decent HP for its size and doesn't fall off
+Cons:           Fragile by LK standards
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Long Floor Tile",
+    "Description":          "This variant of the marble floor tile is twice as large! It's also smooth enough for vehicles to move on it. \n\n\"Mountains will be leveled; Valleys will be raised!\"",
+
+    "ID":                   419071,      
+
+    "Faction":              2,           
+    "Category":             2,    
+    "Rarity":               2,           
+    "Grade":                3,            
+    "Price":                2124,         
+    
+    // Recipe: 2 Rugged Fiblar, 2 Plubonic Alloy, 2 Titania Ingot
+    "Recipe" : { "52": 2, "53": 2, "7": 2 },
+      
+    "IconName":             "LK_floor_long_icon.png",                // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":             "LK_floor_long_body.obj",                // Name of the block's mesh                                        
+    "MeshColliderName":     "LK_floor_long_col.obj",                 // Name of the block's collider.
+    "NoBoxCollider":        true,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                   200,                     
+    "Mass":                 4,              // Floor Tiles = 2 per cell
+    "DamageableType":       6,              
+    "DetachFragility":      0.0, 
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 1, "y": 1,"z": 2 },
+
+    "APs": [ 
+        // Front Face
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 0, "y": -0.5, "z": 1 },
+    ]
+
+}

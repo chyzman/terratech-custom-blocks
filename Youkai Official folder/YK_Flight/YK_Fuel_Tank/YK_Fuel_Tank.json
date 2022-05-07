@@ -1,0 +1,86 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+
+// Helpful site for https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+  "Name": "Youkai Yami Fuel Tank",
+  "Description": "This dense fuel tank stores lots of fuel for your boosters with a good refuel rate, but it is quite heavy.", //You can make multiple lines with \n
+  "ID": 19078, //A random ID that MUST be unique
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 6627, //The price is measured by sum of recipe value times 3
+  "HP": 1000, //A GSO one block has 250 health
+  "Mass": 8,
+  "Rarity": 0,
+  "Fragility": 0.25, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all. For example, SCUs do not fall off when attacked
+  "DamageableType": 1, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+
+  "Recipe": "45, 45, 45, 45, 45, 47, 47, 47, 56", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  "IconName": "YK_Fuel_Tank.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+ "Cells": [
+
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": -1 }
+  ],
+
+  "APs": [
+    {"x": 0, "y": 0, "z": -1.5},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": -1},
+    {"x": -0.5, "y": 0, "z": -1},
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "VEN_FuelPod_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  
+  "SubObjects": [
+    {
+    "SubOverrideName": "m_VEN_FuelPod_111",
+    "MeshName": "YK_Fuel_Tank_Base.obj",
+    "ColliderMeshName": "YK_Fuel_Tank_Base_Collider.obj",
+    "MeshTextureName": "YK_Texture 1.png", 
+    "MeshGlossTextureName": "YK_Texture 2.png",
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+    "SubOverrideName": "LED0",
+    "MeshName": "YK_Fuel_Tank_LED1.obj",
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+    "SubOverrideName": "LED1",
+    "MeshName": "YK_Fuel_Tank_LED2.obj",
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+    "SubOverrideName": "LED2",
+    "MeshName": "YK_Fuel_Tank_LED3.obj",
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+    }
+  ],
+
+  "JSONBLOCK": {
+      "ModuleFuelTank": {
+        "m_Capacity": 65.0,
+        "m_RefillRate": 3.0
+      }
+  }
+}

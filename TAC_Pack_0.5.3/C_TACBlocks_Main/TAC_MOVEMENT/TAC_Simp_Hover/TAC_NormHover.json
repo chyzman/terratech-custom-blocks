@@ -1,0 +1,323 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Bunsen Hover Thruster",
+  "Description": "A reasonably responsive hover lodged in a strong frame. \nThis hover isn't too great when it comes to large loads or dealing with damage, however, it rules in the handling category, for when you need that bit of control normal hovers can't quite reach.  \n\nThe first prototype was a failure because it kept messing up the coordinate vectors due to using a variable thruster instead of the more common Terraphobe Hover Technology.  \nSo TAC reached out to Hyperion Systems who specializes in the field of hover technology.  They were able to come up with an articulate algorithm that can handle the thruster AND hover at the same time! \n\n\nWorks wonders with the AI.", //You can make multiple lines with \n
+  "ID": 584353, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 17913,//BF's LARGE hover ring is 19224
+  "HP": 3500, //This would be 5400 following averge TAC block healths, but it's also fairly powerful.
+  "Mass": 10.0, //heavier than usual
+
+  "IconName": "OverControl.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 51, 53, 54, 63", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //Thermo jet thruster hover
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top
+    { "x": 0, "y": 2.5, "z": 0 },
+    { "x": 1, "y": 2.5, "z": 0 },
+    { "x": 0, "y": 2.5, "z": 1 },
+    { "x": 1, "y": 2.5, "z": 1 },
+    //Front
+    { "x": 0, "y": 1, "z": 1.5 },
+    { "x": 1, "y": 1, "z": 1.5 },
+    //Back
+    { "x": 0, "y": 1, "z": -0.5 },
+    { "x": 1, "y": 1, "z": -0.5 },
+    //Left
+    { "x": -0.5, "y": 2, "z": 0 },
+    { "x": -0.5, "y": 2, "z": 1 },
+    //Right
+    { "x": 1.5, "y": 2, "z": 0 },
+    { "x": 1.5, "y": 2, "z": 1 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 3,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_Hover_Ring_Small(212)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x":1, "y":1.5, "z":3.5 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACSimpHover.obj",
+      "ColliderMeshName": "TACSimpHover.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Hover Replacement
+     "SubOverrideName": "m_HoverBellCenter",
+      "MeshName": "SmolBoosterBell.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { //removing OG hover
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover/_hoverJet/p_Hover",
+      // "MeshMaterialName": "Sparks",
+      "MeshTextureName": "ExhaustParticles.png",
+      "MakeBoxCollider": false,
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0.0,
+      //   "z": 1.5
+      // }
+    },
+    //
+    // -COMPRESSOR-
+    //
+    {  
+      "SubOverrideName": "m_CompressorCore",
+      "MeshName": "CompressorCoreSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressInnerRot",
+      "MeshName": "CompressorInnerSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressMidRot",
+      "MeshName": "CompressorMidSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressOuterRot",
+      "MeshName": "CompressorOuterSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":1, "z":0.5 } 
+      },
+    },
+
+    "GameObject|CompressorCenter": {//COMPRESSOR
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":0.85 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.9, "z":0.5 } 
+      },
+      "UnityEngine.Light": {
+        "cookieSize": 4.0,
+        "spotAngle": 360.0,
+        "color": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.3,
+          "a": 1.0
+        }, 
+        "intensity": 8.5,//2.0
+        "bounceIntensity": 1.0, 
+        "renderMode": "Auto", 
+        //Auto, ForcePixel, ForceVertex
+        "type": "Point",
+        //Spot, Directional, Point, Rectangle, Disc
+        "range": 0.25,
+        // "flare": null
+      },
+      "GameObject|m_CompressorCore": {//COMPRESSOR
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.75 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 1.59,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressInnerRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.90,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressMidRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1.25 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": -0.75,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressOuterRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.3,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+    },
+
+
+    //
+    // NORMAL PARTS
+    //
+    "GameObject|m_BF_Hover_Ring_Small_212_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":1, "z":0.5 } 
+      },
+    },
+    "GameObject|m_BF_Hover_Ring_Small_212_Hover": { //Main
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0, "z":0.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|m_HoverBellCenter": { //Model
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0.0, "y":0, "z":0.0 },
+          "localScale": { "x":0.55, "y":0.55, "z":0.5 },
+          "localEulerAngles": { "x":270, "y":0, "z":0 } 
+        },
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 0.9,
+          "forceMax": 10000.0, //GC's is 15000.0
+          //Less powerful, bigger and more expensive than GC's, but more responsive
+          "forceRangeMax": 50.0, //How far the hover reaches
+          "m_DampingScale": 0.01, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 85.0, //Handles even on sharp edges
+          "m_MaxClimbDistance": 100.0,
+          "m_VectoredThrustMaxAngle": 20.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 10,
+          "m_AutoStabiliseStrength": 0.5,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 90.0, //This controls how well it handles
+          "m_HoverPowerChangePerSecond": 150.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {//Particle handler
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            // "renderMode": 0,
+            // "sortMode": 0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.15,
+            // "motionVectorGenerationMode": 1,
+          },
+          "UnityEngine.ParticleSystem": {
+            "startColor": {
+              "r": 0.65,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            // "startDelay": 0.0,
+            // "loop": true,
+            // "playOnAwake": true,
+            // "playbackSpeed": 1.0,
+            // "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 20.0,
+            "startSize": 2.5,
+            // "startRotation": 1.7,
+            "startLifetime": 0.2,
+            // "gravityModifier": 0.0,
+            "maxParticles": 10,
+            // "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+            // "scalingMode": 2,
+            // "automaticCullingEnabled": false,
+          },
+        }
+      }
+    },
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      //"m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+  }
+}
+
+
+
+
+
+
+

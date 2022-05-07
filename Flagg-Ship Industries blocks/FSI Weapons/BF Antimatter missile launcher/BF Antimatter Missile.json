@@ -1,0 +1,465 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "BF Antimatter Missile system",
+  "Description": " <color=#ff0000><b><size=20>       !!WARNING!!</size></b></color> \nThis device launches missiles with an <color=#ff0000><b>Antimatter payload!</b></color> Has a blast radius of 300 meters, though friendlies can safely be within the radius, up to 100 meters.\n\nUsing a container with 2909.69 micrograms of anti-iron, it is an extremely expensive and dangerous weapons system. The original price for anti-iron of the same mas was 181 million block-bucks, but with both the discovery of 'chaos' and 'supervoidal' energy, antimatter production has been made much easier, though still expensive.", //You can make multiple lines with \n
+  "ID": 1700134, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+  //Models by Shido
+
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Rarity":3,
+  "Grade": 3, //The desired grade minus one
+  "Price": 3433980,
+  //was 70734
+  "HP": 50000,//For the area this consumes compared to the normal 450 per TAC block, this isn't a lot.
+  "Mass": 250.0,//Heavy
+  
+  "CenterOfMass": {"x": 2, "y": 2, "z": 7},
+
+  "IconName": "Antimatter.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+
+ "Recipe":  "17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 46, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, " ,	
+	
+	
+	
+	
+	
+	
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    
+	
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		
+		{ "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 },
+		{ "x": 4.5, "y": 4, "z": 4 },
+		
+		{ "x": 0, "y": -0.5, "z": 5 }, 
+		{ "x": 0, "y": -0.5, "z": 9 },
+		{ "x": 4, "y": -0.5, "z": 5 },
+		{ "x": 4, "y": -0.5, "z": 9 },
+		
+		{ "x": 0, "y": 4.5, "z": 5 }, 
+		{ "x": 0, "y": 4.5, "z": 9 },
+		{ "x": 4, "y": 4.5, "z": 5 },
+		{ "x": 4, "y": 4.5, "z": 9 },
+		
+		{ "x": -0.5, "y": 0, "z": 5 }, 
+		{ "x": -0.5, "y": 0, "z": 9 },
+		{ "x": -0.5, "y": 4, "z": 5 },
+		{ "x": -0.5, "y": 4, "z": 9 },
+		
+		{ "x": 4.5, "y": 0, "z": 5 }, 
+		{ "x": 4.5, "y": 0, "z": 9 },
+		{ "x": 4.5, "y": 4, "z": 5 },
+		{ "x": 4.5, "y": 4, "z": 9 },
+		
+		{ "x": 0, "y": -0.5, "z": 10 }, 
+		{ "x": 0, "y": -0.5, "z": 14 },
+		{ "x": 4, "y": -0.5, "z": 10 },
+		{ "x": 4, "y": -0.5, "z": 14 },
+		
+		{ "x": 0, "y": 4.5, "z": 10 }, 
+		{ "x": 0, "y": 4.5, "z": 14 },
+		{ "x": 4, "y": 4.5, "z": 10 },
+		{ "x": 4, "y": 4.5, "z": 14 },
+		
+		{ "x": -0.5, "y": 0, "z": 10 }, 
+		{ "x": -0.5, "y": 0, "z": 14 },
+		{ "x": -0.5, "y": 4, "z": 10 },
+		{ "x": -0.5, "y": 4, "z": 14 },
+		
+		{ "x": 4.5, "y": 0, "z": 10 }, 
+		{ "x": 4.5, "y": 0, "z": 14 },
+		{ "x": 4.5, "y": 4, "z": 10 },
+		{ "x": 4.5, "y": 4, "z": 14 },
+		
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 4, "z": -0.5 },
+		
+
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 5,
+    "y": 5,
+    "z": 21 //Massive, for now
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_BombBay_113",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    
+	  
+	{
+      "SubOverrideName":        "m_HE_BombBay_113_Base",
+      "MeshName":               "BF_Antimatter_Missile_Bay.obj", 
+      "MeshMaterialName":       "BF_Main",
+      "MakeBoxCollider":        true,
+      "SubPosition":            { "x": 0, "y": 0, "z": 0 },
+      "SubRotation":            { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "SubOverrideName":        "m_HE_BombBay_113_Bomb",
+      "MeshName":               "BF_Antimatter_Missile.obj",
+      "MeshMaterialName":       "BF_Main",
+      "SubPosition":            { "x": 0, "y": 0, "z": 0 },
+      "SubRotation":            { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "SubOverrideName":        "FireData.m_BulletPrefab/m_HE_Bomb",
+      "MeshName":               "BF_Antimatter_Missile.obj", 
+      "MeshMaterialName":       "BF_Main",
+      "SubPosition":            { "x": 0, "y": 0.0, "z": 0.0 },
+      "SubRotation":            { "x": 0, "y": 0, "z": 0 }
+    },
+	{
+     "SubOverrideName": "m_HE_BombBay_113_Door_L",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BF_Antimatter_Missile_Hatch2.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+	  "SubPosition": {"x": 2.5,"y": 0,"z": -12.5},
+	  "SubRotation": {"x": 0,"y": 0,"z": 0},
+      "MeshMaterialName": "BF_Main"
+    },
+    { //Making that hatch that disappears when firing
+     "SubOverrideName": "m_HE_BombBay_113_Door_R",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BF_Antimatter_Missile_Hatch.obj",
+	  "SubPosition": {"x": -2.5,"y": 0,"z": -12.5},
+	  "SubRotation": {"x": 0,"y": 0,"z": 0},
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "BF_Main"
+    }
+  ],
+	
+  //
+  // Deadly NUKE
+  //
+  "JSONBLOCK": {
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 2, "y": 2.0, "z": 5.5 },
+        "localEulerAngles": { "x": 180, "y": 0.0, "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.2 },
+          "localEulerAngles": { "x": 180, "y": 0.0, "z": 0.0 }
+        }
+      },
+      "GameObject|_recoiler": {
+        "Animation": {
+           "clip": {
+              "length": 0.01
+            }
+          },
+        }     
+    },
+
+    "ModuleWeapon": { 
+      "m_FireSFXType": 18
+    },
+    "ModuleWeaponGun": {
+	"m_ShotCooldown": 30,
+      "m_BurstShotCount": 1,
+    "m_BurstCooldown": 30.0,
+    "m_CooldownVariancePct": 0.0
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 135,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.0,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 0.0,
+      "m_KickbackStrength": 135.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|CentreOfMass": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+            "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+          "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        "WeaponRound": { 
+          "m_DamageType" : 3, 
+          "m_Damage": 100
+        },
+        "Rigidbody": {
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+          "mass": 0.0001
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 1000.0,
+          "m_TurnSpeed": 45,
+          "m_UpdateVisibleInterval": 0.01,
+          "m_ActivationDelay": 0.3,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType" : "RandomBlockOnVehicle"
+          },
+        "Projectile": {
+            "m_LifeTime": 30,
+            "m_ImpactSFXType" : 2,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Explosive", //What damage modifier the explosion does - Setup to HEAL armor to prevent blockkill unless direct cab hit.
+              "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+              "m_ExplosionType": "Fuel", //What the explosion SOUNDS like
+              "m_EffectRadius": 300, //KA-BAM
+              //Was 500
+              "m_EffectRadiusMaxStrength": 250, 
+              //Was 12.5
+              "m_MaxDamageStrength": 20000, //This affects splash damage
+              //Was 2000
+              //This will surely end MANY things
+              "m_MaxImpulseStrength": 2500 //How hard to push things, explosion force -YEET
+            },
+			"Reference|8/ModuleDamage.deathExplosion/FX_Explosion_Shockwave": { 
+                            "UnityEngine.Transform": 
+							{ "localPosition": {"x":0, "y":1, "z":0}
+							}, 
+                            "UnityEngine.ParticleSystem": {
+				"main":{	 "m_ParticleSystem":{		
+                                "startDelay": 0,
+								"startColor": {
+							 	 "r": 1.0,
+							     "g": 1.0,
+								 "b": 1.0,
+								 "a": 1.0
+								},
+                               "playbackSpeed": 4,							
+                                "startSize": 3000,      
+                                "startLifetime": 40 
+                            }}}
+                        },
+                        "GameObject|Point light": {     
+                            "UnityEngine.Light": {
+                                "intensity": 50.0,
+                                "range": 500.0,
+								"color": {
+                  "r": 0.0,
+                  "g": 0.8,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+                            },
+                            "FadeInOutLight": {
+                                "StartDelay": 0.0,
+                                "FadeInSpeed": 10,
+                                "FadeOutDelay": 0.0,
+                                "FadeOutSpeed": 12
+                            }
+                        }, // The actual glow
+			
+            
+              
+          "GameObject|Sparks": { 
+              "Explosion": { //wOW a component -BONUS for more SOUND, plus friendly fire!
+                "m_DamageType" : "Plasma", //What damage modifier the explosion does
+                "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+                "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+                "m_EffectRadius": 100, //KA-BAM
+                "m_EffectRadiusMaxStrength": 95, 
+                "m_MaxDamageStrength": 20000, //This affects splash damage
+                "m_MaxImpulseStrength": 2500 //How hard to push things
+              },
+			  
+			  }, "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.0,
+                      "g": 0.6,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+                    "startSize": 250,
+					"playbackSpeed": 0.08,
+                    "startSpeed": 75, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        //"cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                   "startSize": 500,
+				   "startColor": {
+                      "r": 0.0,
+                      "g": 0.0,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+					"playbackSpeed": 0.08,
+                    "startSpeed": 125, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        //"cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.0,
+                      "g": 0.0,
+                      "b": 0.0,
+                      "a": 0.85
+                    },
+                    "startSize": 500,
+					"playbackSpeed": 0.075,
+                    "startSpeed": 275, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "duration": 6.5,
+                    "playbackSpeed": 0.75,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        "cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                    // "shape": {
+                    //   "texture": {
+                    //     "mainTexture": "Sparks",
+                    //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    //   }
+                    // },
+                  }
+                }
+              }
+            }
+        },
+               "GameObject|_particles": {
+                 "UnityEngine.Transform": {
+                     "localScale": {"x": 5, "y": 5, "z": 5},
+                     "localPosition": { "x": 0.0, "y": 0, "z": 0.0 },
+                     "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0 }
+                    },
+                          
+                  }
+             },
+            "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 1.5,
+          "height": 10,
+          "direction": 2,
+             },
+            "MissileProjectile": {
+          "m_MaxBoosterLifetime": 0.0,
+          "m_BoosterActivationDelay": 0.0,
+          "m_ArmDelay": 0.5,
+          "m_DeathDelayNotArmed": 20
+             }
+          }   
+      }
+    }	}

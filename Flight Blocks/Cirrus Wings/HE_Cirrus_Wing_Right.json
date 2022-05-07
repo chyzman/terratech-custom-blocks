@@ -1,0 +1,112 @@
+{
+  "Name": "Hawkeye Right Cirrus Wing",
+  "Description": "An angled wing from Hawkeye Black Labs, useful for tailfins or rudders when paired with its counterpart.",
+  "ID": 117062, 
+
+  "Faction": 5,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 2022, 
+  "HP": 1500, 
+  "Mass": 4,
+  
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 2,
+
+  "Recipe":  "7, 7, 7, 7, 11, 11, 11, 43, 43, 52, 52",
+  "IconName": "HE_Cirrus_Wing_Right.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+ 
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": -1},
+    {"x": 0, "y": 0, "z": -2},
+    {"x": 0, "y": 0, "z": -3},
+    {"x": 0, "y": 0, "z": -4},
+
+    {"x": 1, "y": 0, "z": 0},
+    {"x": 1, "y": 0, "z": -1},
+    {"x": 1, "y": 0, "z": -2},
+    {"x": 1, "y": 0, "z": -3},
+    {"x": 1, "y": 0, "z": -4},
+
+    {"x": 0, "y": 1, "z": 0},
+    {"x": 0, "y": 1, "z": -1},
+    {"x": 0, "y": 1, "z": -2},
+    {"x": 0, "y": 1, "z": -3},
+    {"x": 0, "y": 1, "z": -4},
+
+    {"x": 1, "y": 1, "z": 0},
+    {"x": 1, "y": 1, "z": -1},
+    {"x": 1, "y": 1, "z": -2},
+    {"x": 1, "y": 1, "z": -3},
+    {"x": 1, "y": 1, "z": -4},
+ 
+    {"x": 2, "y": 0, "z": 0},
+    {"x": 2, "y": 0, "z": -1},
+    {"x": 2, "y": 0, "z": -2},
+    {"x": 2, "y": 0, "z": -3},
+    {"x": 2, "y": 0, "z": -4},
+
+    {"x": 2, "y": 1, "z": 0},
+    {"x": 2, "y": 1, "z": -1},
+    {"x": 2, "y": 1, "z": -2},
+    {"x": 2, "y": 1, "z": -3},
+    {"x": 2, "y": 1, "z": -4},
+
+    {"x": 3, "y": 1, "z": -1},
+    {"x": 3, "y": 1, "z": -2},
+    {"x": 3, "y": 1, "z": -3},
+    {"x": 3, "y": 1, "z": -4},
+  ],
+  
+  "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": -1},
+    {"x": -0.5, "y": 0, "z": -2},
+
+    {"x": 3, "y": 1.5, "z": -2},
+    {"x": 3, "y": 1.5, "z": -3},
+  ],
+  
+  "GamePrefabReference":   "GSO_Wing_Diagonal_Right_533",
+  "ReferenceOffset":        { "x": 0, "y": 0, "z": 0 },
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+
+  "SubObjects": [
+    {
+    "SubOverrideName":     "m_GSO_Wing_Diagonal_Right_533_Base",
+    "MeshName":            "HE_Cirrus_Wing_Right.obj",
+    "ColliderMeshName":    "HE_Cirrus_Wing_Right.obj",
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 },
+    "MeshMaterialName":    "HE_Main",
+    },  
+    {
+    "SubOverrideName":     "_pivot",
+    "SubPosition":         { "x": 1.5,  "y": 0.85,  "z": -3.25 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 23.5 },
+    },
+    {
+    "SubOverrideName":     "m_GSO_Wing_Diagonal_Left_533_Flap",
+    "MeshName":            "HE_Cirrus_Wing_Right_Aileron.obj",
+    "ColliderMeshName":    null,
+    "SubPosition":         { "x": 0,  "y": 0,  "z": -0.5 },
+    "MeshMaterialName":    "HE_Main",
+    },
+  ],
+
+  "Deserializer": {
+    "GameObject|SmokeTrail": {
+        "UnityEngine.Transform": {
+            "localPosition": {"x": 2.9, "y": 1.4, "z": -3.5},
+            "localRotation": { "x": 0, "y":0, "z": 0 }
+          },
+    }
+
+  }
+}

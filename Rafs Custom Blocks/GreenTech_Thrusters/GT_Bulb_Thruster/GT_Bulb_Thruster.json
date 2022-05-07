@@ -1,0 +1,137 @@
+{
+  "Name": "GreenTech Bulb Thruster",
+  "Description": "A hefty thruster mounted on a gimbal, capable of rotating 30° on either side.",
+  "ID": 911034, 
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 23847, 
+  "HP": 3200, 
+  "Mass": 6.5,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "32, 32, 32, 32, 52, 52, 53, 54, 56, 56, 56, 59, 63, 63",
+  "IconName": "GT_Bulb_Thruster_Icon.png", 
+  "MeshName": "GT_Bulb_Thruster_Base.obj",
+  "ColliderMeshName": "GT_Bulb_Thruster_Base_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "BF_Wing_Medium_Outside_413",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 90  // Roll
+  },
+
+  "SubObjects": [
+    
+  {
+    "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Wing",
+    "MeshName": "GT_Bulb_Thruster.obj",
+    "ColliderMeshName": "GT_Bulb_Thruster_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+    "DestroyExistingRenderer": true,
+    "SubPosition": { "x":  0, "y": 0.5, "z": -0.5},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": -90
+    }
+},
+
+{
+  "SubOverrideName": "_Pivot",
+  "DestroyExistingRenderer": true,
+  "SubPosition": { "x":  0.5, "y": 0, "z": 0.5 }
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Base",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Arm_1",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Arm_2",
+  "DestroyExistingRenderer": true
+}
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot": {
+      "GameObject|m_BF_Wing_Medium_Outside_413_Wing": {
+        "Reference|VEN_SteeringHover_Single_111/boosterFront": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1
+            },
+            "localEulerAngles": {
+              "x": -90,
+              "y": 90,
+              "z": 0
+            }
+          },
+          "BoosterJet": {
+            "m_Force": 4500.0
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "GameObject|FX_HoverForce": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "startSizeMultiplier": 0.6,
+                  "startSpeedMultiplier": 4
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Reference|VEN_SteeringHover_Single_111/ModuleBooster.": {
+      "m_BoosterAudioType": 5
+    },
+    "ModuleWing": {
+      "m_Aerofoils": [{
+        "flapAngleRangeActual": 30, //How far the flap turns in terms of forces
+        "flapAngleRangeVisual": 30, //How far flap turns visually
+        "flapTurnSpeed": 10
+      }],
+      "m_AttackAngleDamping": 0,
+      "m_TrailMinVelocity": 0,
+      "m_TrailAlphaStrength": 0,
+      "m_TrailFadeSpeed": 0,
+      "m_WingTrails": null,
+      "m_AverageLiftCoeff": 0.0
+    }
+  }
+}

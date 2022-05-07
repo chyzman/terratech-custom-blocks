@@ -1,0 +1,229 @@
+
+
+
+{
+  "Name": "B'Geth Laser",
+  "Description": "This weapon is odd as it appears to be a drone that has full rotation but sticks like a normal weapon",
+  "ID": 620023,
+
+  "Faction": 5,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 60677,
+  "HP": 5000,
+  "Mass": 50,
+
+  "IconName": "B'Geth Laser.png",
+
+  "MeshName": null,
+
+  "Recipe":  "52, 53, 53, 54, 54, 56, 56, 56, 58, 58, 58, 59, 60, 62, 62, 62, 64",
+
+  "MeshTextureName": null,
+
+  "ColliderMeshName": null,
+
+  "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                            // Any character placement that is not a space will be filled as a cell
+        [ // Z Layer 0
+			"xxx",
+            "xxx",
+            "   ",
+            "   ",
+            "xxx"
+        ],
+		[ // Z Layer 1
+            "xxx",
+            "xxx",
+            "   ",
+            "   ",
+            "xxx"
+        ],
+		[ // Z Layer 2
+            "xxx",
+            "xxx",
+            "   ",
+            "   ",
+            "xxx"
+        ],
+    ],
+
+  "APs": [
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+
+  "GamePrefabReference": "BF_Laser_Melee_212", //Bigger explosions, more menancing shells
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 1,
+    "y": 0,
+    "z": 1
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "HE_Spindle_Outer",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "null.obj",
+      "ColliderMeshName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "HE_Spindle_Inner",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "null.obj",
+      "ColliderMeshName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Melee_212_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true
+
+    },
+    {
+      "SubOverrideName": "HE_Plasma_Beam_Mount",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Plasma_Base.obj",
+	  "ColliderMeshName": "Plasma_Base.obj",
+	"MeshTextureName": "Ellydium 1.png", 
+    "MeshGlossTextureName": "Ellydium 2.png", 
+    "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Melee_212_Laser",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Plasma_Elevation.obj",
+	  "ColliderMeshName": "Plasma_Elevation.obj",
+	"MeshTextureName": "Ellydium 1.png", 
+    "MeshGlossTextureName": "Ellydium 2.png", 
+    "MeshEmissionTextureName": "Ellydium 3.png"
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "SubPosition": {
+        "x": 1,
+        "y": -0.5,
+        "z": 1
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "SubPosition": {
+        "x": 0,
+        "y": 5.0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [-180, 180]
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [-180, 180]
+        },
+        "GameObject|m_BF_Laser_Melee_212_Laser": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 1.15 }
+          },
+          "GameObject|HE_Spindle_Inner": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0.15 }
+            }
+          },
+          "Spinner": {
+            "m_Speed": 1.5,
+            "Speed": 1.5,
+            "m_SpinUpTime": 0.4
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_light": {
+              "UnityEngine.Light": {
+                "color": {
+                  "r": 0,
+                  "g": 1,
+                  "b": 0,
+                  "a": 1.0
+                }
+              }
+            }
+          },
+          "GameObject|_beam": {
+            "BeamWeapon": {
+              "m_DamagePerSecond": 400,
+              "m_Range": 400,
+              "m_DamageType": 2
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 1.55 }
+            }
+          },
+        },
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 180, "z": 0 },
+            "localPosition": { "x": 0, "y": 0, "z": 1.15 }
+          },
+          "GameObject|HE_Spindle_Outer": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 180, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": -0.10 }
+            }
+          },
+          "Spinner": {
+            "m_Speed": 0.5,
+            "Speed": 0.5,
+            "m_SpinUpTime": 0.2
+          },
+          "GameObject|_beam": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 180, "z": 0 }
+            },
+            "BeamWeapon": {
+              "m_DamagePerSecond": 300,
+              "m_Range": 400
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 180, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 0 }
+            }
+          }
+        }
+      },
+      "GameObject|HE_Plasma_Beam_Mount": {}
+    },
+    "ModuleWeapon": {
+      "m_RotateSpeed" : 100
+    }
+  }
+}

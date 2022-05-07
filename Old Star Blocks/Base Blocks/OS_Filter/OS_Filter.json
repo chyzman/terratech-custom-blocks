@@ -1,0 +1,104 @@
+{
+  "Name": "Old Star Filter",
+  "Description": "Now this is how the Old Star do. Sorting what you need to go where you need it. That is how the Filter do.",
+  "ID": 300114,
+
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 1,
+  "HP": 600,
+  "Mass": 1.5,
+  "CenterOfMass": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  "Price": 420,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 32",
+  "IconName": "OS_Filter_Icon.png",
+  "MeshTextureName": null,
+  "MeshGlossTextureName": null,
+  "MeshEmissionTextureName": null,
+  //"MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything! (You can use this in combination with the above)
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+  // X is right and left, Y is up and down, and Z is forward and backward
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+
+  "APs": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+  "GamePrefabReference": "VEN_Filter_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "Conveyor_Filter_01",
+      "MeshName": "OS_Filter.obj",
+      "ColliderMeshName": "OS_Filter.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_CraftDots_01_Lo",
+      "KeepRenderers": true,
+      "KeepColliders": true,
+      "MeshMaterialName": "VEN_Main"
+    },
+    {
+      "SubOverrideName": "m_CraftDots_01_Hi",
+      "KeepRenderers": true,
+      "KeepColliders": true,
+      "MeshMaterialName": "VEN_Main"
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleItemFilter": {},
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [ 0, 1 ] } ]
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": 1.0,
+      "m_BeamStrength": 500.0
+    }
+  }
+}

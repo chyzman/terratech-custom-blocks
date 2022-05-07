@@ -1,0 +1,210 @@
+{
+  "Name": "G'Thar'Ro Wheel",
+  "Description": "Crystal version of the rover wheel with active suspension to 'catch' the tech when falling also is faster",
+  "ID": 620001, 
+
+  "Faction": 5,
+  "Category": 3, 
+  "Grade": 3, 
+  "Price": 40000, 
+  "HP": 6050, 
+  "Mass": 240.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "IconName": "rover2.png", 
+
+  "BlockExtents":{"x": 4,"y": 2, "z": 3}, 
+  
+  "APs": [ 
+    {"x": -0.5, "y": 1, "z": 1}
+  ],
+  
+  "GamePrefabReference": "VEN_Wheel_211",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 1,
+    "z": -1
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Base",
+		"MeshName": "G'Thar'Ro_Wheel.obj",
+		"MeshTextureName": "Ellydium 1blue.png",
+		"MeshGlossTextureName": "Ellydium 2.png",
+		"MeshEmissionTextureName": "Ellydium 3.png",
+		"ColliderMeshName": "G'Thar'Ro_Wheel.obj",
+		"MakeBoxCollider": false,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 1
+		}
+	}, 
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Tyre",
+		"MeshName": "G'Thar'Ro_Wheel_Tire.obj",
+		"MeshTextureName": "Ellydium 1blue.png",
+		"MeshGlossTextureName": "Ellydium 2.png",
+		"MeshEmissionTextureName": "Ellydium 3.png",
+		"ColliderMeshName": "G'Thar'Ro_Wheel_Collider.obj",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Suspension",
+		"MeshName": "G'Thar'Ro_Wheel_Suspension.obj",
+		"MeshMaterialName": "MAT_BF_LaserBeam",
+		"SubPosition": {
+			"x": 0,
+			"y": 0.15,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 180,
+			"y": -90,
+			"z": 55
+		}
+	},
+	{
+		"SubOverrideName": "Suspension",
+		"SubPosition": {
+			"x": 0.0,
+			"y": 0.7,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 2.38,
+			"y": 0,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Up",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 1
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|_tireFrame": {
+			"GameObject|_suspensionColliderLower": {
+			  "UnityEngine.Transform": {
+				"localPosition": { "x":0, "y":0, "z":0 },
+				"localScale": { "x":1, "y":1, "z":2 }
+			  },
+			  /*"UnityEngine.SphereCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.05
+			  }*/
+			}
+		  },
+		  "UnityEngine.SphereCollider": {
+			"center": {
+			  "x": 0.0,
+			  "y": 0.001,
+			  "z": 1.0
+			},
+			"radius": 1.12
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 24850,
+		   "torqueCurveMaxRpm": 6400,
+		  "passiveBrakeMaxTorque": 24850,
+		   "reverseBrakeMaxRpm": 300,
+		   "basicFrictionTorque": 800.0,
+		   "fullCompressFrictionTorque": 500
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 8.0,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 1.25,
+			"thicknessAngular": 20,
+			"suspensionSpring": 60000.0,
+			"suspensionDamper": 3000.0,
+			"maxSuspensionAcceleration": 50.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 3,
+			"steerAngleMax": 35,
+			"steerSpeed": 10
+		},
+		"m_DriveTurnPower": 2.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 2.0,
+		"m_DustMinimumRPM": 20.0
+	},
+    
+}
+}

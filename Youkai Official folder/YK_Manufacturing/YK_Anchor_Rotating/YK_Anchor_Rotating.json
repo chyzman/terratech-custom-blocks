@@ -1,0 +1,107 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Youkai Rotating Anchor",
+  "Description": "A long Youkai anchor for propping up even your larger techs for charging up!",
+  "ID": 19042, 
+
+  "Faction": 1, 
+  "Category": 7, 
+  "Grade": 2, 
+  "Price": 3021,
+  "HP": 550,
+  "Mass": 2.5,
+
+  "IconName": "YK_Anchor_Rotating.png", 
+  
+  "Recipe": "45, 45, 45, 45, 53, 53, 44", 
+
+  "SupressBoxColliderFallback": true,
+
+    "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "GSO_Anchor_Rotating_111",
+	"ReferenceOffset": { "x": 0, "y": 0.0, "z": 0 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ 
+	{
+  "SubOverrideName":"m_GSO_Base_Rotating_Top_111",
+	  "DestroyExistingColliders": true,
+    "MeshName": "YK_Anchor_Rotating.obj",
+    "ColliderMeshName": "YK_Anchor.obj",
+    "MeshTextureName": "YK_Texture 1.png", 
+    "MeshGlossTextureName": "YK_Texture 2.png", 
+  	"SubPosition":{"x":0,"y":0,"z":0},
+  	"SubRotation":{"x":0,"y":0,"z":0}
+	},
+	{
+  "SubOverrideName":"m_GSO_Base_Rotating_Stand_111",
+	  "DestroyExistingColliders": true,
+    "MeshName": "YK_Anchor_Rotating_Hook.obj",
+    "MeshTextureName": "YK_Texture 1.png", 
+    "MeshGlossTextureName": "YK_Texture 2.png", 
+    "ColliderMeshName": "YK_Anchor_Rotation_Hook.obj",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	  "SubScale":{"x":0,"y":0,"z":0}
+	}
+	],
+	
+	"JSONBLOCK":{
+		"GameObject|_anchor":{
+		 "GameObject|GSOAnchorRotating": {
+		  "BlockAnchor":{
+        "m_GroundPoint":{
+         "localPosition": {
+             "x": 0.0,
+             "y": -1.5,
+             "z": 0.0,
+             "normalized": {
+               "x": 0.0,
+               "y": -1.0,
+               "z": 0.0,
+               "magnitude": 1.0,
+               "sqrMagnitude": 1.0
+             }
+           }
+         }
+       }
+     }
+   }
+  }
+}

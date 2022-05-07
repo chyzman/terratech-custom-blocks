@@ -1,0 +1,38 @@
+/*
+This is a minor basic block meant for closing gaps and as a finish for most LK Techs. Decorative, but tough.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Outer Corner Battlement Block",
+    "Description":          "This cornered variant of the Battlement block can be used to connect other Battlement blocks. Not very roomy, but gets the job done.\n\n\"Knights can expect to operate against foreign forces who wish to compromise the soveriegnity of the Lemon Kingdom. In the Operational Environment (OE), knights will often enjoy unparalleled firepower superiority against most, if not all enemy combatants using procureable offworld equipment. (GSO, GeoCorp, Venture, Hawkeye, etc.)\"\n\n-- Infantry Field Manual",
+
+    "ID": 419019,
+    "Faction": 2,           
+    "Category": 2,          
+    "Grade": 3,         
+
+    "Price": 1536,       
+    "Recipe":  "54, 53, 7",
+	
+    "IconName":                   "LK_outerCorner_battlement_icon.png",                          
+    "MeshName":                   "LK_outerCorner_battlement_block.obj",                                            
+    "ColliderMeshName":           "LK_outerCorner_battlement_block_col.obj",    
+    "SupressBoxColliderFallback": false,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    null,
+
+    // Basic Block HP Values
+    "HP": 500,            
+    "Mass": 2.5,             
+
+    "DamageableType": 1,   
+    "Fragility": 0.0,       
+    
+    // Block Dimensions
+    "BlockExtents":     
+    { "x": 1,"y": 1, "z": 1 },
+
+    "APs": [ {"x": 0.0, "y": -0.5, "z": 0.0 } ]
+}

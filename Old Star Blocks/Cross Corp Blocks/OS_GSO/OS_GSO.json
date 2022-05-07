@@ -1,0 +1,44 @@
+{
+  "Name": "GSO to Old Star Transition Block",
+  "Description": "A transition block to blend Old Star and GSO together",
+  "ID": 300133,
+  "Faction": 1,
+  "Category": 2,
+  "Grade": 1,
+  "Rarity": 0,
+  "Price": 396,
+  "HP": 550,
+  "Mass": 1.5,
+  "IconName": "OS_GSO_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5",
+  "EmissionMode": 2,
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+  "APsOnlyAtBottom": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Block_112",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GSO_2.obj",
+      "ColliderMeshName": "OS_GSO_2.obj",
+      "MeshMaterialName": "GSO_Main"
+    },
+    {
+      "ObjectName": "OS_Half",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GSO_1.obj",
+      "ColliderMeshName": "OS_GSO_1.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "Name": "Youkai Solar Generator",
+  "Description": "This Solar Generator is quite powerful for it's size and has a fast deploy speed, but is quite expensive as a result. Due to it's tactical design it can actually generate a small amount of energy passively, but of course it generates more when it is anchored.",
+  "ID": 19024, 
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 4968,
+  "HP": 425,
+  "Mass": 5.5,
+  "CenterOfMass": {"x": 0, "y": 1, "z": 0 },
+
+  "Recipe": "45, 45, 13, 13, 56, 56, 56",
+
+  "IconName": "YK_Generator.png",
+
+  "MeshName": "YK_Generator.obj",
+
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+
+  "ColliderMeshName": null,
+
+  "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+	{ "x": 0, "y": 1, "z": 0 },
+	{ "x": 0, "y": 2, "z": 0 }
+  ],
+
+  "APs": [
+    { "x": 0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 0 },
+	{ "x": 0, "y": -0.5, "z": 0 },
+	{ "x": 0, "y": 0, "z": 0.5 },
+    { "x": 0, "y": 0, "z": -0.5 }
+  ],
+
+  "GamePrefabReference": "GSO_SolarGen_141",
+	"ReferenceOffset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ 
+	{
+    "SubOverrideName":"m_GSO_SolarGen_141_Base",
+	"DestroyExistingColliders": true,
+    "MeshName": "YK_Generator.obj",
+	"MakeBoxCollider": true,
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	},
+	{
+    "SubOverrideName":"GSO_Anchor",
+	"DestroyExistingColliders": false,
+    "MeshName": "YK_Anchor_Hook.obj",
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+	"MakeBoxCollider": true,
+    "SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":0,"y":0,"z":0},
+	}
+	],
+
+	"JSONBLOCK": 
+	{
+		"GameObject|_anchor":{
+		 "GameObject|GSOAnchorFixed": {
+		  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 0.0,
+            "y": -1.5,
+            "z": 0.0,
+            "normalized": {
+              "x": 0.0,
+              "y": -1.0,
+              "z": 0.0,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            }
+          }
+        }
+      }
+    }
+  },
+
+     "ModuleEnergy": {
+      "m_Priority": -10,
+      "m_OutputPerSecond": 80,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 3,
+      "m_SequentialPowerUp": true,
+      "m_PowerUpDelay": 1,
+      "m_GeneratingSFXType": 0,
+       }
+  }
+  }

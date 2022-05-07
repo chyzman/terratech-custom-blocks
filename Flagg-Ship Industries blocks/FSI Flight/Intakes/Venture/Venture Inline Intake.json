@@ -1,0 +1,34 @@
+{
+	"Name": "Venture Inline Intake",
+	"Description": "More efficent than the curved intake due to a wider surface area. it's also a bit heavier as a result.", 
+	"ID": 1700091, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Intake VEN2.png",
+	"Faction": 4,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 5009,
+	"HP": 300,
+	"Mass": 1.25,
+	"Recipe": "zeropointsplitter,blastcaps,blastcaps,fuelinjector,olasticbrick,olasticbrick",
+
+	"MeshName": "Venture_Inline_Intake.obj", 
+	"MeshMaterialName": "VEN_Main", 
+	"ColliderMeshName": "Venture_Inline_Intake.obj", 
+
+	"Cells": [ 
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 }
+	],
+	"APs": [ 
+		{ "x": 0.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": -0.5 },		
+		{ "x": 0, "y": -0.5, "z": 1},
+		{ "x": 0, "y": -0.5, "z": 0}
+	],
+	"GamePrefabReference": "VENFuelPod(111)", 
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 1 },
+	"JSONBLOCK":{"ModuleFuelTank":{
+				 "m_Capacity":10,"m_RefillRate":20}}
+}

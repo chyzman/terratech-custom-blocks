@@ -1,0 +1,382 @@
+
+{
+  "Name": "Old Star Dual Caster Wheels",
+  "Description": "This here is how the Old Star do. The Caster Wheels are a great way to introduce others to Old Stars standard of having ground clearance and speed on nearly all of the wheel blocks and this one is for those that want to keep thier block count down.", //You can make multiple lines with \n
+  "ID": 300106,
+
+  "Faction": 4, 
+  "Category": 3,
+  "Grade": 0,
+  "Price": 2940,
+  "HP": 1500,  
+  "Mass": 5.0,
+  
+
+  "IconName": "OS_Dual_Caster_Wheels_Icon.png",
+  "MeshName": null,
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 5, 5, 5, 5, 43, 43, 47, 47, ",
+  "EmissionMode": 2,
+
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top APs
+    { "x": 0, "y": 0.5, "z": 0 }, 
+
+    // Back
+    { "x": 0  , "y": 0, "z": -0.5 },
+
+    // Front
+    { "x": 0  , "y": 0, "z": 0.5 }
+    
+  ],
+  "Cells": [
+    { "x": -1, "y": 0, "z": 0 }, { "x": 0, "y": 0, "z": 0 }, { "x": 1, "y": 0, "z": 0 },
+
+    { "x": -1, "y":-1, "z": 0 }, { "x": 0, "y":-1, "z": 0 }, { "x": 1, "y":-1, "z": 0 }
+  ],
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+ // Advanced Settings
+ "PrefabReference":                  "VEN_Tracks_112",
+ "KeepRenderers": false,
+ "KeepColliders": false,                     // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+ "PrefabPosition":                   { "x": 1, "y": 0, "z": 0 },
+
+ "SubObjects":[
+   // Main Models----------------------------------------------------
+   {
+    "ObjectName":                 "m_VEN_Tracks_112_Body",
+    "MeshName":                   "OS_Caster_Wheel_Body.obj",
+    "ColliderMeshName":           "OS_Caster_Wheel_Body.obj",
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 0, "y": 0, "z": 0 }    
+   },
+
+   {
+     "ObjectName":                 "m_VEN_Tracks_112_Wheel1",
+     "MeshName":                   "OS_Caster_Wheel_Wheel.obj",
+     "ColliderMeshName":           "OS_Caster_Wheel_Wheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}        
+   },
+   
+   {
+     "ObjectName":                 "m_VEN_Tracks_112_Wheel2",
+     "MeshName":                   "OS_Caster_Wheel_Wheel.obj",
+     "ColliderMeshName":           "OS_Caster_Wheel_Wheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}          
+   },
+
+//Wheel Locations---------------------------------------------------
+
+   {
+     "ObjectName":                 "_wheel_1",//
+     "Position":                   { "x": 1, "y": -0.2, "z": 0 },
+     "Scale":                      { "x":-1, "y": 1, "z": 1 }        
+   },
+   {
+     "ObjectName":                 "_wheel_2",
+     "Position":                   { "x":-1, "y": -0.2, "z": 0 }     
+   },    
+   {
+     "ObjectName":                 "b_Wheel_1",
+     "Position":                   { "x": 1.5, "y":-0.3, "z": 0 },  
+     "Scale":                      { "x": 1, "y": 1, "z": 1 }        
+   },  
+   {
+     "ObjectName":                 "b_Wheel_2",
+     "Position":                   { "x":-1.5, "y":-0.3, "z": 0 },
+     "Scale":                      { "x":-1, "y": 1, "z": 1 }       
+   }, 
+//Suspension physics peices--------------------------------------------
+{
+    "ObjectName":                 "m_VEN_Tracks_112_Suspension1",
+    "ColliderMeshName":           null,
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 0, "y": 0, "z": 0 },
+    "Scale":                      {"x": 1, "y": 1, "z": 1}          
+},
+{
+    "ObjectName":                 "m_VEN_Tracks_112_Suspension2",
+    "ColliderMeshName":           null,
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 0, "y": 0, "z": 0 },
+    "Scale":                      {"x":-1, "y": 1, "z": 1}          
+},
+{
+    "ObjectName":                 "Suspension_Up",
+    "Position":                   { "x": 0, "y": 0, "z": 0 },
+    "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+    "ObjectName":                 "Suspension_1A",
+    "Position":                   { "x": 0, "y":-0.3, "z": 0 },
+    "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+    "ObjectName":                 "Suspension_2A",
+    "Position":                   { "x": 0, "y": 0, "z": 0 },
+    "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+    "ObjectName":                 "Suspension_1B",
+    "Position":                   { "x": 0, "y": 0, "z": 0 },
+    "Scale":                      { "x":-1, "y": 1, "z": 1 }       
+}, 
+{
+    "ObjectName":                 "Suspension_2B",
+    "Position":                   { "x": 0, "y":-0.3, "z": 0 },
+    "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+//Suspension follow pivots
+{
+  "ObjectName":                 "Caster_Wheel_Body_Pivot1",
+  "Position":                   { "x": 0, "y":-0.3, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Body_Pivot2",
+  "Position":                   { "x": 0, "y":-0.3, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Wheel_Pivot1",///
+  "Position":                   { "x": 0, "y": 0, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Wheel_Pivot2",
+  "Position":                   { "x": 0, "y": 0, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+//Suspension follow parts
+{
+  "ObjectName":                 "Caster_Wheel_Upper_Sus1",
+  "MeshName":                   "OS_Caster_Wheel_Upper_Sus.obj",
+  "ColliderMeshName":           "OS_Caster_Wheel_Upper_Sus.obj",
+  "Position":                   { "x": 0, "y":0, "z": 0 },
+  "Scale":                      { "x":-1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Upper_Sus2",
+  "MeshName":                   "OS_Caster_Wheel_Upper_Sus.obj",
+  "ColliderMeshName":           "OS_Caster_Wheel_Upper_Sus.obj",
+  "Position":                   { "x": 0, "y":0, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Lower_Sus1",//
+  "MeshName":                   "OS_Caster_Wheel_Lower_Sus.obj",
+  "ColliderMeshName":           "OS_Caster_Wheel_Lower_Sus.obj",
+  "Position":                   { "x":-0.2, "y":0, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+{
+  "ObjectName":                 "Caster_Wheel_Lower_Sus2",
+  "MeshName":                   "OS_Caster_Wheel_Lower_Sus.obj",
+  "ColliderMeshName":           "OS_Caster_Wheel_Lower_Sus.obj",
+  "Position":                   { "x":-0.2, "y":0, "z": 0 },
+  "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+}, 
+//other
+{
+    "ObjectName":                 "m_VEN_Tracks_112_tracks",
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 1, "y": 0, "z": 0 }    
+},
+{
+ "OverrideName":                "b_Static",
+ "SubPosition":                 { "x": 0, "y": 0, "z": 0},
+ "SubRotation":                 { "x":  0,  "y": 0,"z": 0}
+}
+
+ ],
+"Deserializer":{
+         // follow code 1-------------------------------------------------------
+         "GameObject|Caster_Wheel_Body_Pivot1": { // Base to wheel
+          // Using this as a followTransform bone for the relocated "Caster_Wheel_Upper_Sus1" which is now positioned within the same gameobject as "Caster_Wheel_Wheel_Pivot1"
+          // This is to copy those rotational aiming movements and complete the loop without redeclaring "Caster_Wheel_Body_Pivot1" below "Caster_Wheel_Wheel_Pivot1" and risking it
+        },
+        "GameObject|Suspension_Up": {
+          // As Suspension_Up is supposed to determine the z-axis upright rotation of FollowSuspensions assigned to it, it's genrerally the safest case to leave it in the base GameObject.
+          "UnityEngine.Transform": {
+            "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "localPosition": {
+                "x": 0,
+                "y": 2,
+                "z": 0
+            },
+            "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            }
+          }
+        },
+        "GameObject|b_Wheel_1": {
+            "GameObject|Caster_Wheel_Wheel_Pivot1": { //Wheel to Base
+              "GameObject|Caster_Wheel_Lower_Sus1": { // Thin on the wheel
+                "UnityEngine.Transform": {//
+                  "localPosition": {//(Remember to offset this for the chugga movement)
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                  },
+                  "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                  }
+                },
+                "FollowSuspension": {// (set this to point at the fixed base)
+                  "m_TargetWheelTrans": "/Caster_Wheel_Body_Pivot1",
+                  "m_TargetUpTrans": "/Suspension_Up",
+                  "m_KeepOriginalRotationOffset": false,
+                  "m_ScaleToMatchDistance": false
+                },
+                "GameObject|Caster_Wheel_Upper_Sus1": { //(placed this within "Caster_Wheel_Lower_Sus1" to follow the orientation of the parent GameObject [Caster_Wheel_Lower_Sus1])
+                  "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y":-0.3,
+                      "z": 0.0
+                    },
+                    "localEulerAngles": {
+                      "x": 0,//Get it to aim back at the other half of the piston-
+                      "y": 0,
+                      "z": 0
+                    }
+                  },
+                  "FollowTransform": { // FollowTransform provides the "anchor point" around which the EPiston Thin can rotate.
+                    //It can also be used to fasten this GameObject's center to somewhere else on the model and keep the rotation of this GameObject's originatingParent.
+                    //  to do this, just keep "m_FollowOrientation": false,
+                    "m_TransformToFollow": "/Caster_Wheel_Body_Pivot1", //This path determines the "anchor point". Caster_Wheel_Wheel_Pivot1 can rotate around this point, but the distance stays fixed.
+                    "m_FollowOrientation": false
+                  }
+                }
+              }
+            }
+          
+        },// end of follow code 1
+         // follow code 2-------------------------------------------------------
+         "GameObject|Caster_Wheel_Body_Pivot2": { 
+        },
+        "GameObject|b_Wheel_2": {
+            "GameObject|Caster_Wheel_Wheel_Pivot2": { 
+              "GameObject|Caster_Wheel_Lower_Sus2": { 
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                  },
+                  "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                  }
+                },
+                "FollowSuspension": {
+                  "m_TargetWheelTrans": "/Caster_Wheel_Body_Pivot2",
+                  "m_TargetUpTrans": "/Suspension_Up",
+                  "m_KeepOriginalRotationOffset": false,
+                  "m_ScaleToMatchDistance": false
+                },
+                "GameObject|Caster_Wheel_Upper_Sus2": {
+                  "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y":-0.3,
+                      "z": 0.0
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    }
+                  },
+                  "FollowTransform": {
+                    "m_TransformToFollow": "/Caster_Wheel_Body_Pivot2", 
+                    "m_FollowOrientation": false
+                  }
+                }
+              }
+            }
+          
+        },// end of follow code 2      
+ 
+ // Torque Parameters
+ "ModuleWheels": {
+   "m_TorqueParams": {
+     "torqueCurveMaxTorque":       10000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                               // A high torque value is good for offroad wheels.
+
+     "torqueCurveMaxRpm":          510.0,      //  Dictates the speed of the wheel. A higher number is faster. 
+                                               // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+     "passiveBrakeMaxTorque":      4200.0,     // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+     "reverseBrakeMaxRpm":         150.0,       // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+     "basicFrictionTorque":        200.0,      // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+     "fullCompressFrictionTorque": 200.0       // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+   },
+   
+   // Aesthetic parameters
+   "m_UseTireTracks":              true,       // Enables the wheel to leave tire tracks
+   "m_WheelTrackType":             0,          // Changes the tracks the wheel leaves behind
+   "m_AudioType":                  4,          // Changes the sound of the wheels when running
+                                               // 1 = Heavy GeoCorp wheels
+   "m_TireTrackWidth":             5,         // Does not work; supposedly, it should be able to change the width of the tire tracks.
+   
+   
+   "m_DustMinimumRPM":             5.0,       // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+                                               // This is related to "torqueCurveMaxRpm"
+   "m_DriveTurnPower": 10.0,
+   "m_DriveTurnBrake": 0.3,
+   "m_DriveTurnDifferential": 1.0,
+   "m_TurnOnSpotPower": 50.0,
+
+   "m_WheelParams":{
+     // Basic Wheel parameters
+     "radius":                     0.45,     // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+     "steerAngleMax":              25.0,      // Dictates how much the wheel is able to turn.
+     "steerSpeed":                 2,        // Dictates the time it takes for the wheel to fully go into turning position.
+     "thicknessAngular":           41.1,       // Dictates the width of the tire tracks
+     // Tire Parameters
+     "Instantiate|tireProperties":{
+       "Instantiate|props":{
+         "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+         "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+         "gripFactorLong": 1.5,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+         "gripFactorLat": 1.5                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+       }
+     },
+
+     // Suspension parameters
+     "suspensionSpring":           2000.0,  // Dictates the amount of bounciness of the suspension's spring. 
+                                               // It also affects the wheel's ability to carry weight.
+     "suspensionDamper":           200.0,     // This tells the suspension how much the springiness will be dampened. 
+                                               // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+     "maxSuspensionAcceleration":  15.0,
+     "suspensionQuadratic":        false,
+     "suspensionTravel":           0.5       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   }
+  }
+ }
+}

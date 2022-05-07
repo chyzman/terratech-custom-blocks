@@ -1,0 +1,1853 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Pursuit Convergence Missile Bay",
+  "Description": "Much like Impact Missiles, Pursuit Missiles collide with things.  BUT this time, MUCH BIGGER things in general.  \n\nThis missile utilises <b>Gridnella</b> Grid Fin technology as well as a good old Thrust Vectoring scramjet to achieve unrealistic control in the sky at high speeds. \n\nthese certainly do not like the water, and while they can still function in water, it will greatly limit it's potential.", //You can make multiple lines with \n
+  //Pursuit Missiles have outstanding tracking and can hit aircraft very well.
+  //Indirect reference to R-Type's Contact and Trace Missiles all in one block with Tactics logic.
+  "ID": 584383, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 309456,//well this thing has 7 KING MISSILES that have OVERKILL TRACKING
+  
+
+
+  "HP": 2400,// Not a lot
+  "Mass": 24.0,//Fair
+
+  "IconName": "moreMacross.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+
+  "Recipe":  "43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 57, 57, 57, 57, 57, 57, 57, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 63, 63, 63, 63, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 66, 66, 66, 66",
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     //Bottom
+     { "x":1, "y":-0.5, "z":0 },
+     { "x":2, "y":-0.5, "z":0 },
+     { "x":1, "y":-0.5, "z":1 },
+     { "x":2, "y":-0.5, "z":1 },
+     { "x":1, "y":-0.5, "z":4 },
+     { "x":2, "y":-0.5, "z":4 },
+     { "x":1, "y":-0.5, "z":5 },
+     { "x":2, "y":-0.5, "z":5 },
+     //Forwards
+     { "x":0, "y":0, "z":5.5 },
+     { "x":1, "y":0, "z":5.5 },
+     { "x":2, "y":0, "z":5.5 },
+     { "x":3, "y":0, "z":5.5 },
+     //Backwards
+     { "x":0, "y":0, "z":-0.5 },
+     { "x":1, "y":0, "z":-0.5 },
+     { "x":2, "y":0, "z":-0.5 },
+     { "x":3, "y":0, "z":-0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 2,
+    "z": 6
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_Laser_Gatling_(423)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z  
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base Model
+     "SubOverrideName": "m_GantryBase",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACPursuitMBase.obj",
+      "ColliderMeshName": "TACPursuitMBase.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    //Begin Hatches
+    { //Setting hatch to open
+     "SubOverrideName": "HatchLMajor",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMDoorMajor.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting hatch to open
+     "SubOverrideName": "SUperHatchLMinor",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMDoorMinor.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting hatch to open
+     "SubOverrideName": "HatchRMajor",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMDoorMajor.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting hatch to open
+     "SubOverrideName": "HatchRMinor",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMDoorMinor.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+
+    //Missile models (animation on block)
+    { //Missile
+     "SubOverrideName": "PursuitMissile1/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy/m_PursuitMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    // { //Missile
+    //  "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy/m_PursuitMissile1",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACPursuitMissile.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // }, 
+    // { //Missile Fin
+    //  "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy_copy/m_PursuitMissile1/m_LeftGridFinGreeble",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TAC_GridFin.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // }, 
+    // { //Missile Fin
+    //  "SubOverrideName": "PursuitMissile1_copy_copy_copy_copy_copy_copy_copy/m_PursuitMissile1/m_RightGridFinGreeble",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TAC_GridFin.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // }, 
+
+    //Stationary missiles
+    { //Missile
+     "SubOverrideName": "m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy_copy_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy_copy/m_StationedMissile",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPursuitMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy_copy/m_StationedMissile/m_LeftGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //Missile Fin
+     "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy_copy/m_StationedMissile/m_RightGridFinGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_GridFin.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+
+
+    //HARDPOINTS
+    { //
+     "SubOverrideName": "m_Hardpoint1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //
+     "SubOverrideName": "m_Hardpoint2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //
+     "SubOverrideName": "m_Hardpoint3",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //
+     "SubOverrideName": "m_Hardpoint4",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //
+     "SubOverrideName": "m_Hardpoint5",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+    { //
+     "SubOverrideName": "m_Hardpoint6",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGantryHardpoint.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    }, 
+
+
+    //Debug Checkers
+    // { //Checking if the bone is working
+    //  "SubOverrideName": "HatchLMajor/b_DoorHinge",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // }, 
+    // { //Checking if the bone is working
+    //  "SubOverrideName": "Bonefollow",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+
+    //DESTROY ALL UNWANTED
+    {
+      "SubOverrideName":"m_HE_BombBay_113_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Arm_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Arm_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Flap_1_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Flap_2_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Flap_1_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Gatling_423_Flap_2_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    // {
+    //   "SubOverrideName":"m_BF_Laser_Gatling_423_Gun",
+    //   "DestroyExistingRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false,
+    // },
+    // {
+    //   "SubOverrideName":"m_BF_Laser_Gatling_423_Barrel",
+    //   "DestroyExistingRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false,
+    // },
+  ],
+	
+  //
+  // Missssssssssssssssssssile
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1.5, "y":0, "z":2.5}
+      }
+    },
+    "GameObject|MainBody": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1.5, "y":0, "z":2.5}
+      },
+      "GameObject|m_GantryBase": {
+        "UnityEngine.MeshCollider":{
+          "gameObject": {
+            "layer": 8 //ID 524288Layers:
+          }
+        },
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.5, "z":0}
+        }
+      },
+      "GameObject|b_LeftDoorRootBone": {
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":-1.8, "y":0.4, "z":0}
+        }
+      },
+      "GameObject|b_RightDoorRootBone": {
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":1.8, "y":0.4, "z":0}
+        }
+      },
+    },
+
+
+    "GameObject|BF_Laser_Gatling_423": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1.5, "y":0, "z":2.5},
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Flap_1_A": {//PREDECLARATION
+        "GameObject|HatchRMajor": {
+          "GameObject|b_DoorHinge": {
+          },
+        },
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Flap_2_A": {
+        "GameObject|HatchLMajor": {
+          "GameObject|b_DoorHinge": {
+          }
+        }
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Flap_2_A": {
+        "GameObject|HatchLMajor": {
+          "FollowTransform": {// 
+            "m_TransformToFollow": "/MainBody/b_LeftDoorRootBone",
+            "m_FollowOrientation": false,
+          },
+          "UnityEngine.MeshCollider":{
+            "gameObject": {
+              "layer": 8 //ID 524288Layers:
+            }
+          },
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|b_DoorHinge": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.9, "y":0, "z":0 },
+            },
+          },
+        },
+        "GameObject|_HatchRMinor2": {
+          "GameObject|_HatchRMinor": {
+            "GameObject|HatchRMinor": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":-1 },
+                "localPosition": { "x":-0.85, "y":0.05, "z":0 },
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+              },
+              "UnityEngine.MeshCollider":{
+                "gameObject": {
+                  "layer": 8 //ID 524288Layers:
+                }
+              }
+            },
+            // "FollowTransform": {// 
+            //   "m_TransformToFollow": "/BF_Laser_Gatling_423/m_BF_Laser_Gatling_423_Flap_2_A/HatchLMajor/b_DoorHinge",
+            //   "m_FollowOrientation": false,
+            // },
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/BF_Laser_Gatling_423/m_BF_Laser_Gatling_423_Flap_1_A/HatchRMajor/b_DoorHinge",
+              "m_FollowOrientation": false,
+            },
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0, "z":0 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+            }
+          }
+        },
+        "GameObject|m_BF_Laser_Gatling_423_Flap_2_B": {
+        }
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Flap_1_A": {
+        "GameObject|HatchRMajor": {
+          "FollowTransform": {// 
+            "m_TransformToFollow": "/MainBody/b_RightDoorRootBone",
+            "m_FollowOrientation": false,
+          },
+          "UnityEngine.MeshCollider":{
+            "gameObject": {
+              "layer": 8 //ID 524288Layers:
+            }
+          },
+          "UnityEngine.Transform": {
+            "localScale": { "x":-1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|b_DoorHinge": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.9, "y":0, "z":0 },
+            },
+          },
+        },
+        "GameObject|_HatchLMinor2": {
+        },
+        "GameObject|m_BF_Laser_Gatling_423_Flap_1_B": {
+        }
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Base": {
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Arm_B": {
+      },
+      "GameObject|m_BF_Laser_Gatling_423_Arm_A": {
+      },
+      "GameObject|b_RotatingPart": {
+        "GameObject|_gimbalBase": null,
+      }
+    },
+
+    //WEAPONS
+    "GameObject|MissileGantry": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+      },
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/BF_Laser_Gatling_423/b_RotatingPart/m_BF_Laser_Gatling_423_RotatingBase",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|MissileGantryRecenter": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.5, "y":-0.25, "z":0.0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        "Reference|HE_BombBay_113/_barrel_1": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          //Stationary models!
+          "GameObject|m_StationedMissile": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.0, "y":-0.5, "z":-1.0 },
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+            },
+            "UnityEngine.MeshCollider":{
+              "gameObject": {
+                "layer": 8 //ID 524288Layers:
+              }
+            },
+            "GameObject|m_LeftGridFinGreeble": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":-0.175, "y":0, "z":-1.9 },
+                "localEulerAngles": { "x":0.0, "y":0, "z":0 },
+                "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+              }
+            },
+            "GameObject|m_RightGridFinGreeble": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0.175, "y":0, "z":-1.9 },
+                "localEulerAngles": { "x":0.0, "y":0, "z":0 },
+                "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+              }
+            },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":270, "y":90, "z":0 },
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_HE_BombBay_113_Base": {
+              "UnityEngine.MeshFilter": null,// Removing existing model
+              "GameObject|m_HE_BombBay_113_Door_L": null,
+              "GameObject|m_HE_BombBay_113_Door_R": null,
+              "GameObject|m_HE_BombBay_113_Bomb": {
+                "UnityEngine.MeshFilter": null,
+                "GameObject|b_PursuitMissileBone": {
+                  "UnityEngine.Transform": {
+                    // "localScale": { "x":1, "y":1, "z":1 },
+                    "localPosition": { "x":0, "y":0, "z":-0.5 },
+                    "localEulerAngles": { "x":270, "y":0, "z":0 },
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Duplicate|_barrel_1": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.4, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":275, "y":90, "z":00 },
+            }
+          },
+        },
+        "Duplicate|_barrel_1_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.4, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":265, "y":90, "z":90 },
+            }
+          },
+        },
+        "Duplicate|_barrel_1_copy_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.8, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":280, "y":90, "z":0 },
+            }
+          },
+        },
+        "Duplicate|_barrel_1_copy_copy_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.8, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":260, "y":90, "z":0 },
+            }
+          },
+        },
+        "Duplicate|_barrel_1_copy_copy_copy_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":1.2, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":285, "y":90, "z":0 },
+            }
+          },
+        },
+        "Duplicate|_barrel_1_copy_copy_copy_copy_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-1.2, "y":0.8, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.5},
+              "localEulerAngles": { "x":255, "y":90, "z":0 },
+            }
+          },
+        },
+
+        //Hardpoints
+        "GameObject|m_Hardpoint1": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":0.2, "y":0.5, "z":-2.0 },
+          }
+        },
+        "GameObject|m_Hardpoint2": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":-0.2, "y":0.5, "z":-2.0 },
+          }
+        },
+        "GameObject|m_Hardpoint3": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":0.6, "y":0.5, "z":-2.0 },
+          }
+        },
+        "GameObject|m_Hardpoint4": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":-0.6, "y":0.5, "z":-2.0 },
+          }
+        },
+        "GameObject|m_Hardpoint5": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":1.0, "y":0.5, "z":-2.0 },
+          }
+        },
+        "GameObject|m_Hardpoint6": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.5, "y":3, "z":6 },
+            "localPosition": { "x":-1.0, "y":0.5, "z":-2.0 },
+          }
+        },
+      }
+    },
+
+    //NOW the missile models seperate to prevent rescale and allow sliding down rails animation
+    "GameObject|PursuitMissile1": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|m_PursuitMissile1": {
+        "UnityEngine.MeshCollider":{
+          "gameObject": {
+            "layer": 8 //ID 524288Layers:
+          }
+        },
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":-0.5, "z":0.0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        "GameObject|m_LeftGridFinGreeble": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.175, "y":0, "z":-1.9 },
+            "localEulerAngles": { "x":0.0, "y":0, "z":0 },
+            "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+          }
+        },
+        "GameObject|m_RightGridFinGreeble": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.175, "y":0, "z":-1.9 },
+            "localEulerAngles": { "x":0.0, "y":0, "z":0 },
+            "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+          }
+        },
+      }
+    },
+    "Duplicate|PursuitMissile1": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+    "Duplicate|PursuitMissile1_copy": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+    "Duplicate|PursuitMissile1_copy_copy": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+    "Duplicate|PursuitMissile1_copy_copy_copy": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+    "Duplicate|PursuitMissile1_copy_copy_copy_copy": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy_copy_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+    "Duplicate|PursuitMissile1_copy_copy_copy_copy_copy": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/MissileGantry/MissileGantryRecenter/_barrel_1_copy_copy_copy_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/b_PursuitMissileBone",
+        "m_FollowOrientation": false,
+      },
+    },
+
+    //Left minor door since the easy way wasn't working
+    "GameObject|Bonefollow": {
+      "FollowTransform": {// 
+        "m_TransformToFollow": "/BF_Laser_Gatling_423/m_BF_Laser_Gatling_423_Flap_1_A",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|2_HatchLMinor": {
+        "FollowTransform": {// 
+          "m_TransformToFollow": "/BF_Laser_Gatling_423/m_BF_Laser_Gatling_423_Flap_2_A/HatchLMajor/b_DoorHinge",
+          "m_FollowOrientation": false,
+        },
+        "GameObject|SUperHatchLMinor": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":-1, "y":1, "z":-1 },
+            "localPosition": { "x":0.85, "y":0.05, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "UnityEngine.MeshCollider":{
+            "gameObject": {
+              "layer": 8 //ID 524288Layers:
+            }
+          },
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":1, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+      },
+    },
+
+
+
+    //------------------
+    //Back to GameObject
+    //------------------
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0,
+      //Remember, always say no to "die"
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : "Plasma", //What damage modifier the explosion does
+          "m_ExplosionSize": 5, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius": 4.0, //
+          "m_EffectRadiusMaxStrength": 2.5, 
+          "m_MaxDamageStrength": 1250, //This affects splash damage
+          "m_MaxImpulseStrength": 200 //How hard to push things, explosion force
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startDelay": 0.0,
+                "startColor": {
+                  "r": 0.25,
+                  "g": 0.25,
+                  "b": 1.0,
+                  "a": 0.6
+                },
+                "playbackSpeed": 1.0,
+                "gravityModifier": 0.0,//No gravity
+                "shape": {
+                  // "radiusMode": true,
+                  "shapeType": "Sphere",
+                  "arc": 360.0,
+                  "radius": 0.0,
+                  "radiusSpread": 5.0,
+                  "angle": 360.0,
+                  "length": 0.5,
+                  "randomDirectionAmount": 10.0,
+                },
+                "startSize": 10,
+                "startSpeed": 5,               //How far you want the particles to spread
+                // "emissionRate": 75.0,
+                "maxParticles": 7500,
+                // "maxParticles": 0,
+                // "emission": {
+                //   "rateMultiplier": 50.0,
+                //   "rateOverTimeMultiplier": 0.2,
+                // }
+                "shape": {
+                  "texture": {
+                    "mainTexture": "EPMCEnergyBall.png",
+                    // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                  }
+                },
+              }
+            }
+          }
+        },
+        "Duplicate|Sparks": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":180, "y":0, "z":0 },
+          },
+        },
+      },
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns - armor doors
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "VENRPGLauncher", //Firing noise
+      "m_LimitedShootAngle": 30,
+      "m_RotateSpeed" : 150.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": { // Another component
+      // "m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      "m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      "m_ShotCooldown" : 0.0, //This is the cooldown between every burst shot.
+      // "m_DeploySFXType": "BFLaserGatlingDeploy",
+      // "m_ResetBurstOnInterrupt" : true,
+      // "m_CooldownVariancePct" : 0.24, 
+      "m_BurstShotCount" : 7, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 8.0, //8 seconds between bursts.
+      "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      // "m_HasCooldownAnim" : false, //Doesn't change anything
+      // "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "Reference|HE_CruiseMissile_121/FireData.": { //Component, but with a catch
+      "m_MuzzleVelocity": 20, //YEET the missile before booster
+      "m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 5.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+      //   "GameObject|CentreOfMass": {
+      //     "UnityEngine.Transform": {
+      //       // "localScale": { "x":1, "y":1, "z":1 },
+      //       "localPosition": { "x":0, "y":0, "z":10}
+      //     }
+      //   },
+      //   // "PlayAudioLoop": { //Component
+      //   //   "m_SFXType" : " CabDetachKlaxon", //IntroCabImpact,IntroWhoosh,Artefact,IntroExplosion
+      //   // },
+        // "UnityEngine.Transform": {
+        //   "localPosition": { "x":0, "y":0, "z":3 },
+        //   "localScale": { "x":1, "y":1, "z":1 }, 
+        //   "localEulerAngles": { "x":0, "y":0, "z":0 },
+        // },
+        "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+          "useGravity": true,
+          // "centerOfMass": { "x":0, "y":0, "z":0 },
+        },     
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          // "gameObject": {
+          //   "layer": 8 //ID 524288Layers:
+          // },
+          "radius": 0.2,
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "height": 0.2,
+          "direction": 2
+        },
+
+        //Setting up Bones
+        "GameObject|b_LeftGridBone": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.175, "y":0, "z":-3.4 },
+          }
+        },
+        "GameObject|b_RightGridBone": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.175, "y":0, "z":-3.4 },
+          }
+        },
+
+        //MAIN ANIMATIONS FIXED TO THIS!
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":-2.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 } //{ "x":1.5, "y":1.5, "z":4 }
+          },
+          "UnityEngine.MeshFilter": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": {
+            "UnityEngine.Transform": {
+              //"localPosition": { "x":0, "y":0, "z":2 },
+              "localScale": { "x":3, "y":3, "z":3 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+            "UnityEngine.MeshFilter": null,// Removing existing model
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": {
+            "UnityEngine.Transform": {
+              //"localPosition": { "x":0, "y":0, "z":2 },
+              "localScale": { "x":3, "y":3, "z":3 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+            "UnityEngine.MeshFilter": null,// Removing existing model
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": {
+            "UnityEngine.Transform": {
+              //"localPosition": { "x":0, "y":0, "z":2 },
+              "localScale": { "x":1, "y":1, "z":1 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+            "UnityEngine.MeshFilter": null,// Removing existing model
+            "GameObject|RightGridFin":{
+              "FollowTransform": {// 
+                "m_TransformToFollow": "/b_RightGridBone",
+                "m_FollowOrientation": false,
+              },
+              "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {//creating new off-setted gameobject for gridfins...
+                "UnityEngine.Transform": {
+                  "localPosition": { "x":0, "y":0, "z":0 },
+                  "localEulerAngles": { "x":0, "y":0, "z":0 },
+                  "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+                },
+                "UnityEngine.MeshFilter": {
+                  "sharedMesh": "TAC_GridFin.obj"  
+                },
+              },
+            }
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+            "UnityEngine.Transform": {
+              //"localPosition": { "x":0, "y":0, "z":2 },
+              "localScale": { "x":1, "y":1, "z":1 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+            "UnityEngine.MeshFilter": null,// Removing existing model
+            "GameObject|LeftGridFin":{
+              "FollowTransform": {// 
+                "m_TransformToFollow": "/b_LeftGridBone",
+                "m_FollowOrientation": false,
+              },
+              "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {//creating new off-setted gameobject for gridfins...
+                "UnityEngine.Transform": {
+                  "localPosition": { "x":0, "y":0, "z":0 },
+                  "localEulerAngles": { "x":0, "y":0, "z":0 },
+                  "localScale": { "x":0.25, "y":0.25, "z":-0.25 } 
+                },
+                "UnityEngine.MeshFilter": {
+                  "sharedMesh": "TAC_GridFin.obj"  
+                },
+              },
+            }
+          },
+        },
+
+        //OTHER ANIMATED WINGS
+        "GameObject|Restrainer": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":0.0, "y":0.0, "z":1.0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "GameObject|WingAnimLink": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA",
+              "m_FollowOrientation": true,
+            },
+            "GameObject|Refixer_Driver": {
+              "FollowTransform": {// 
+                "m_TransformToFollow": "/Restrainer",
+                "m_FollowOrientation": true,
+              },
+              "GameObject|b_ZDriver": {
+                "UnityEngine.Transform": {
+                  "localPosition": { "x":-5, "y":0, "z":0 },
+                },
+              },
+            }
+          }
+        },
+
+        // Minor Wing bones
+        "GameObject|b_ForwardsUpRight": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.11, "y":0.11, "z":0 },
+          },
+        },
+        "GameObject|b_BackUpRight": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.14, "y":0.14, "z":-4 },
+          },
+        },
+        "GameObject|b_ForwardsUpLeft": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.11, "y":0.11, "z":0 },
+          },
+        },
+        "GameObject|b_BackUpLeft": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.14, "y":0.14, "z":-4 },
+          },
+        },
+        "GameObject|b_ForwardsDownLeft": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.11, "y":-0.11, "z":0 },
+          },
+        },
+        "GameObject|b_BackDownLeft": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.14, "y":-0.14, "z":-4 },
+          },
+        },
+        "GameObject|b_ForwardsDownRight": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.11, "y":-0.11, "z":0 },
+          },
+        },
+        "GameObject|b_BackDownRight": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.14, "y":-0.14, "z":-4 },
+          },
+        },
+
+        //Rotating Animators
+        "GameObject|DiagonalUp1": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":45 },
+          },
+        },
+        "GameObject|DiagonalUp2": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":135 },
+          },
+        },
+        "GameObject|DiagonalTilt1": {
+          "FollowSuspension": {//Follow the animation
+            "m_TargetWheelTrans": "/Restrainer/WingAnimLink/Refixer_Driver/b_ZDriver",
+            "m_TargetUpTrans": "/DiagonalUp1",
+            "m_KeepOriginalRotationOffset": false,
+            "m_ScaleToMatchDistance": false,
+            "m_OriginalDistance": 2.0,
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.1, "y":0.1, "z":0 },
+          },
+          "GameObject|DiagonalTiltWingFront": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_ForwardsUpRight",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-0.60, "y":0.60, "z":-0.60 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          },
+          "GameObject|DiagonalTiltWingBack": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_BackUpRight",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-1.25, "y":0.75, "z":-0.75 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          }
+        },
+
+        "GameObject|DiagonalTilt2": {
+          "FollowSuspension": {//Follow the animation
+            "m_TargetWheelTrans": "/Restrainer/WingAnimLink/Refixer_Driver/b_ZDriver",
+            "m_TargetUpTrans": "/DiagonalUp2",
+            "m_KeepOriginalRotationOffset": false,
+            "m_ScaleToMatchDistance": false,
+            "m_OriginalDistance": 2.0,
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.1, "y":0.1, "z":0 },
+          },
+          "GameObject|DiagonalTiltWingFront": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_ForwardsUpLeft",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-0.60, "y":0.60, "z":-0.60 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          },
+          "GameObject|DiagonalTiltWingBack": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_BackUpLeft",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-1.25, "y":0.75, "z":-0.75 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          }
+        },
+        "GameObject|DiagonalTilt3": {
+          "FollowSuspension": {//Follow the animation
+            "m_TargetWheelTrans": "/Restrainer/WingAnimLink/Refixer_Driver/b_ZDriver",
+            "m_TargetUpTrans": "/DiagonalUp1",
+            "m_KeepOriginalRotationOffset": false,
+            "m_ScaleToMatchDistance": false,
+            "m_OriginalDistance": 2.0,
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":-0.1, "y":-0.1, "z":0 },
+          },
+          "GameObject|DiagonalTiltWingFront": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_ForwardsDownLeft",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-0.60, "y":0.60, "z":0.60 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          },
+          "GameObject|DiagonalTiltWingBack": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_BackDownLeft",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-1.25, "y":0.75, "z":0.75 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          }
+        },
+        "GameObject|DiagonalTilt4": {
+          "FollowSuspension": {//Follow the animation
+            "m_TargetWheelTrans": "/Restrainer/WingAnimLink/Refixer_Driver/b_ZDriver",
+            "m_TargetUpTrans": "/DiagonalUp2",
+            "m_KeepOriginalRotationOffset": false,
+            "m_ScaleToMatchDistance": false,
+            "m_OriginalDistance": 2.0,
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.1, "y":-0.1, "z":0 },
+          },
+          "GameObject|DiagonalTiltWingFront": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_ForwardsDownRight",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-0.60, "y":0.60, "z":0.60 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          },
+          "GameObject|DiagonalTiltWingBack": {
+            "FollowTransform": {// 
+              "m_TransformToFollow": "/b_BackDownRight",
+              "m_FollowOrientation": false,
+            },
+            "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":-1.25, "y":0.75, "z":0.75 },
+                "localEulerAngles": { "x":0, "y":270, "z":0 },
+              },
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "TACPursuitMissileFin.obj"  
+              },
+            },
+          }
+        },
+
+
+
+        //Other models
+        "Duplicate|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":-1.5 },
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "TACPursuitMissile.obj"  
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": null,
+        },
+        "GameObject|_particles": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 }, 
+            "localPosition": { "x":0, "y":0, "z":-4.5 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "Reference|HE_BombBay_113/FireData.m_BulletPrefab/_particles/SmokeTrail": {
+            "UnityEngine.LineRenderer": {
+              // "startWidth": 0.35,
+              // "endWidth": 0.175,
+              // "textureMode": 1,
+              // "numCapVertices": 8,
+              "startColor": {
+                "r": 0.3,
+                "g": 0.3,
+                "b": 1.0,
+                "a": 0.8,
+                "maxColorComponent": 1.0
+              },
+              // "endColor": {
+              //   "r": 0.6,
+              //   "g": 0.6,
+              //   "b": 1.0,
+              //   "a": 0.2,
+              //   "maxColorComponent": 1.0
+              // },
+            },
+            "SmokeTrail": {
+              "numberOfPoints": 15,
+              // "updateSpeed": 0.07,
+              "riseSpeed": 0.1,
+            }
+          }
+        },
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":1.25 }, 
+            "localPosition": { "x":0, "y":0.0, "z":-4.4 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|Effector": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0.0, "z":0 },
+              "localEulerAngles": { "x":0, "y":180, "z":0 }
+            },
+          },
+          "BoosterJet": {
+            "m_Force": 0.15,
+            //"m_BurnRate": 60.0,
+            //"m_FireRateFalloff": 3.0,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1.5 }, 
+              "localPosition": { "x":0, "y":0, "z":0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0 }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              "UnityEngine.Transform": {
+                // "localScale": { "x":1, "y":1, "z":1.5 }, 
+                "localPosition": { "x":0, "y":0, "z":0 },
+                // "localEulerAngles": { "x":0, "y":0, "z":0 }
+              },
+              "UnityEngine.MeshRenderer": {
+                "material": {
+                  "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                  "shaderKeywords": [
+                    "_ALBEDO",
+                    "_EMISSION",
+                    "_NORMALMAP"
+                  ],
+                  "mainTexture": "EPMCEnergyBall.png",
+                  "globalIlluminationFlags": 1,
+                }
+              },
+              "UnityEngine.ParticleSystem": {
+                "startColor": {         //Determine the color of the projectile
+                  "r": 0.1,
+                  "g": 0.1,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                // "startDelay": 0.0,
+                // "loop": true,
+                // "playOnAwake": true,
+                // "duration": 0.2,
+                // "playbackSpeed": 1.0,
+              },
+            }
+          }
+        },
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Explosive", //What damage modifier the weapon does
+          "m_Damage": 750 //Damage for successful projectile contact hit
+          // Cruise deals 1000
+        },
+        // "PlayAudioLoop": { //Component
+        //   "m_SFXType" : "PayloadIncoming",//" CabDetachKlaxon", -earrip lol //IntroCabImpact,Artefact,IntroWhoosh,IntroWindAndAlarm
+        // },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_LifeTime": 2.5, //Time before BOOM
+          //"m_DeathDelay": 0.00001,
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel" : true,
+          "m_StickOnContact" : false,
+          "m_ExplodeOnStick" : false,
+          "m_HideProjectileOnStick": false,
+          "m_SingleImpact" : true,
+          "m_RotateWithVelocity": false,
+          "m_CanHaveGravity" : true,
+          //"m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          "m_ImpactSFXType" : "Mortar", //BAM
+          "m_FlightSFXType" : "Missile", // Allows for homing effect
+          //"m_Trail" : {"startWidth": 3},
+          //"m_Explosion": null
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Explosive", //What damage modifier the explosion does
+              "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+              "m_ExplosionType": "Fuel", //What the explosion SOUNDS like
+              "m_EffectRadius": 6, //Blompf
+              //Cruise has 8
+              "m_EffectRadiusMaxStrength": 4.5, //TAC Explosion focusing
+              //Cruise has 4
+              "m_MaxDamageStrength": 100,//Cruise deals 175 damage
+              "m_MaxImpulseStrength": 150 //How hard to push things, explosion force -YEET
+            },
+            "GameObject|Point light": {//Does work
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+              "UnityEngine.Light": {
+                "cookieSize": 4.0,
+                "spotAngle": 360.0,
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.0,
+                  "a": 1.0
+                },
+                "colorTemperature": 6570.0,
+                "intensity": 2.0,//2.0
+                "bounceIntensity": 1.0,
+                "shadowCustomResolution": -1,
+                "shadowBias": 0.5,
+                "shadowNormalBias": 1.0,
+                "shadowNearPlane": 0.2,
+                "renderMode": "Auto",
+                //Auto, ForcePixel, ForceVertex
+                "type": "point",
+                //Spot, Directional, Point, Rectangle, Disc
+                "range": 7.50,
+                "flare": null
+              }, 
+              "FadeInOutLight": {
+                "StartDelay": 0.0,
+                "FadeInSpeed": 0.1,
+                "FadeOutDelay": 0.2,
+                "FadeOutSpeed": 0.2,
+                "FadeOutAfterCollision": true,
+                "UseHideStatus": true,
+                // "goLight": "TheLightSpecifiedAbove",
+                // "canStart": true,
+              }
+            }
+          }
+        },
+        "SeekingProjectile": {
+          "m_LockOntoTarget": true, //Will this find and home in?
+          "m_ApplyRotationTowardsTarget": true, //Will it visually point at the target?
+          "m_SeekType" : "Vehicle", //What can this target?
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          "m_UpdateVisibleInterval" : 0.3, //idk
+          "m_ActivationDelay": 0.1, //How long before we aim at the target?
+          "m_VisionRange": 150, //How far can we see targets?
+          //Was 200
+          "m_VisionConeAngle": 90, //How wide can we see targets?
+          "m_TurnSpeed": 120 // How strong the turn is towards the enemy
+          // "m_TurnSpeed": 60 // How strong the turn is towards the enemy
+        },
+        "MissileProjectile": {
+          "m_UsesGravity" : true,
+          "m_ArmDelay" : 0.25,
+          "m_BoosterActivationDelay" : 0.3,
+          "m_DeathDelayNotArmed" : 0.25,
+          "m_MaxBoosterLifetime" : 1.5, // How long till the Bees run outta juice
+          "Instantiate|m_SmokeTrailPrefab": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1},
+              "localPosition": { "x":0, "y":0, "z":0 },
+            },
+            "GameObject|ParticleSystemVaporTrail": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":1},
+                "localPosition": { "x":3.0, "y":0, "z":0 },
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {// The smoke that follows the missile
+                  "m_ParticleSystem": {
+                    "startSize": 2.0,
+                  }
+                }
+              },
+            }
+          }
+        }
+      }
+    } 
+  }
+}

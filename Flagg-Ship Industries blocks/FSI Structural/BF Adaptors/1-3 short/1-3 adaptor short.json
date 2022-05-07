@@ -1,0 +1,93 @@
+{
+	"Name": "Better Future Short tri adaptor",
+	"Description": "An Adaptor of sorts, shorter than the first one.", //You can make multiple lines with \n
+	"ID": 1700110, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 0, //The grade minus one
+	"Price": 8585,
+	"HP": 3000,
+	"Mass": 12.5,
+"IconName": "Tri Adaptor S.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 0 },
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 0 },
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		
+		{ "x": 0, "y": 2, "z": 0 },
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 0 },
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 0 },
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": 0, "y": -0.5, "z": 0 },
+	   { "x": 0, "y": -0.5, "z": 1 },
+	   { "x": 0, "y": -0.5, "z": 2 },
+	   { "x": 1, "y": -0.5, "z": 0 },
+	   { "x": 1, "y": -0.5, "z": 1 },
+	   { "x": 1, "y": -0.5, "z": 2 },
+	   { "x": 2, "y": -0.5, "z": 0 },
+	   { "x": 2, "y": -0.5, "z": 1 },
+	   { "x": 2, "y": -0.5, "z": 2 },
+	   
+	   { "x": 1, "y": 2.5, "z": 1 },
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "GSO_Block_Half_Long_211",
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"1 to 3 short",
+	"DestroyExistingColliders": true,
+    "MeshName": "1-3_Adaptor_Short.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName": "1-3_Adaptor_Short.obj",
+    
+	"SubPosition":{"x":1,"y":0,"z":1}
+
+	}]
+	
+	
+	}

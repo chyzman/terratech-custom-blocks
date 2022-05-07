@@ -1,0 +1,410 @@
+/*
+Description:    A 10-tubed missile pod.
+Pros:           Has 10 missiles with the same range as an HE Cruise Missile.
+                Stackable, can be placed just about anywhere alongside other blocks
+
+Cons:           Poor tracking: good for saturation bombardment but not for precision strikes
+                Heavy, expensive and has a long reload time
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Pike M10 Missile Pod",
+    "Description":          "A heavy missile pod containing 10 missiles. While the missiles have a lot of range and are very compact, they're not very powerful nor quick to turn. \n\n \"Cost-effective and easy to produce, the Bolt GP-4 Missile is the epitome of the Lemon Kingdom's combat pragmatism.\" ",
+
+    "ID": 419049,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 187116,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*  The resources/components needed to make this block. For the full ID Resource/Component list, 
+        please refer to the Terratech Wiki.
+        Recipe:     Main Body:  8 Titanic Alloy, 8 Rugged Fiblar, 8 Plubonic Alloy
+                    Missiles:   10 Seed AI, 10 Thermo Jet, 10 Fibre Plating
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 8, "52": 8, "44" : 8,
+        // Missiles
+        "65": 10, "63": 10, "43": 10 
+    },
+      
+    "IconName":                   "LK_missile_pike_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                       // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                       // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 4800,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons (300/cell for Missile weapons)
+                            // 300/cell = Wheels
+                            
+    "Mass": 64.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 2,"z": 4 },
+
+    "APs": [ 
+        // Left APs
+        { "x": -0.5, "y": 0, "z": 1.0 }, { "x": -0.5, "y": 0, "z": 2.0 },
+        { "x": -0.5, "y": 1, "z": 1.0 }, { "x": -0.5, "y": 1, "z": 2.0 },
+
+        // Right APs
+        { "x": 1.5, "y": 0, "z": 1.0 }, { "x": 1.5, "y": 0, "z": 2.0 },
+        { "x": 1.5, "y": 1, "z": 1.0 }, { "x": 1.5, "y": 1, "z": 2.0 },
+      ],
+
+  
+    // Advanced Settings
+    "PrefabReference":  "649", // GSO Missile Battery Block ID
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0.0, "y": -0.5, "z": 1 },
+ 
+    "SubObjects":[
+        // Replace the original meshes with new ones 
+        {
+            "ObjectName":                   "m_GSO_MiniMissile_222_Barrel",
+            "MeshName":                     "LK_missile_pike_body.obj",
+            "ColliderMeshName":             "LK_missile_pike_body_col.obj",
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+
+        // Replace the Left Missile Dummies
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_1/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_2/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },     
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_3/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },             
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_4/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_4_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        // Replace the Right Missile Dummies
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_1_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_2_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_3_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_4_copy_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        {
+            "ObjectName":                   "_gimbalBase/_gimbalElev/_barrel_1_copy_copy/_recoiler/m_GSO_MiniMissile_222_Dummy",
+            "MeshName":                     "LK_missile_pike_missile.obj",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        }, 
+        // Move the Barrels and their duplicates
+        {
+            "ObjectName":"_barrel_1",
+            "Position":{ "x": 0.72, "y": 0.515, "z": -1.85}
+        },
+        {
+            "ObjectName":"_barrel_2",
+            "Position":{ "x": 0.265, "y": 0.265, "z": -1.85}
+        },
+        {
+            "ObjectName":"_barrel_3",
+            "Position":{ "x": -0.265, "y": 0.265, "z": -1.85}
+        },
+        {
+            "ObjectName":"_barrel_4",
+            "Position":{ "x": -0.72, "y": 0.515, "z": -1.85}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_4_copy",
+            "Position":{ "x": 0.72, "y": 0.0, "z": -1.85}
+        },
+        // 
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_1_copy",
+            "Position":{ "x": 0.265, "y": -0.265, "z": -1.85}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_2_copy",
+            "Position":{ "x": -0.265, "y": -0.265, "z": -1.85}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_3_copy",
+            "Position":{ "x": -0.72, "y": 0.0, "z": -1.85}
+            
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_4_copy_copy",
+            "Position":{ "x": -0.72, "y": -0.515, "z": -1.85}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_1_copy_copy",
+            "Position":{ "x": 0.72, "y": -0.515, "z": -1.85}
+        },
+
+        // Change the missile spawning positions to match the barrels
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_1/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_2/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },      
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_3/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_4/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },    
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_4_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },       
+        // 
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_1_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        }, 
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_2_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },                 
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_3_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },  
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_4_copy_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },         
+        {
+            "ObjectName":"_gimbalBase/_gimbalElev/_barrel_1_copy_copy/_spawnBullet",
+            "Position":{ "x": 0, "y": 0, "z": 0}
+        },   
+        
+        {
+            "ObjectName":"_gimbalBase",
+            "Position":{ "x": 0.5, "y": 0.5, "z": 1.5}
+        },      
+        {
+            "ObjectName":"_gimbalElev",
+            "Position":{ "x":0, "y": 0, "z": 0}
+        },      
+    ],
+
+    "Deserializer":{
+        "GameObject|_gimbalBase": {
+            "GameObject|_gimbalElev": {
+            "Duplicate|_barrel_4":{},
+
+            // Duplicate the barrels to complete the tubes
+            "Duplicate|_barrel_1":{},
+            "Duplicate|_barrel_2":{},
+            "Duplicate|_barrel_3":{},
+            "Duplicate|_barrel_4_copy":{},
+            "Duplicate|_barrel_1_copy":{},
+            }
+        },
+        
+        /********** ModuleWeapon **********/
+        "ModuleWeapon":{
+            "m_RotateSpeed":          0,            // Dictates the speed of the gun's rotation whenever it aims at a target.
+            "m_FireSFXType":          18,           // Dictates the sound used when firing
+                                                    // 4  = GSO 3-Pounder Cannon
+                                                    // 6  = GSO Megaton Cannon
+                                                    // 18 = HE Cruise Missile
+                                                    // 64 = GSO Gigaton Cannon
+                                                    // 77 = GSO Big Bertha Cannon
+        },
+
+        // Gun Attributes
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 2.0,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+            "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+
+            "m_BurstShotCount": 10,                 // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                    // A non-zero, integer value will dictate the number of shots fired.
+                                                    // The pause uses the value in m_BurstCooldown
+
+            "m_BurstCooldown": 7.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                    // This is automatically disabled when m_BurstShotCount is set to 0
+
+            "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                    // Only applies when m_BurstShotCount is NOT set to 0
+
+            "m_FireControlMode": 0,                 // Dictates how the guns will fire
+                                                    //  0 =   The guns will fire one at a time
+                                                    //  1 =   All guns will fire at the same time
+
+
+            "m_SeekingRounds": true,                // Dictates whether the projectiles fired by this weapon will home toward targets
+            "m_NumCannonBarrels": 10,               // The number of barrels the block uses. Can be useful in some cases.
+        },
+
+        "FireData":{
+            "m_MuzzleVelocity":             15.0,   // Dictates the projectile's speed. The higher the value, the faster it will travel.
+            "m_KickbackStrength":           2.0,    // Dictates the strength of the recoil when firing the gun
+            "m_BulletSprayVariance":        0.00,   // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+
+            //*******************************//
+            "Instantiate|m_BulletPrefab": {
+                "GameObject|m_GSO_MiniMissile":{
+                    // Replace the missile mesh with a new one
+                    "UnityEngine.MeshFilter": {
+                        "sharedMesh": "LK_missile_pike_missile.obj"
+                    },
+                    "UnityEngine.MeshRenderer": {
+                        "material": {
+                            "mainTexture": "LK_tex_1.png"
+                        }
+                    },
+                    "UnityEngine.Transform": {
+                        "localRotation": { "x": 0.0, "y": 0.0, "z": 180 }
+                    },
+                },
+
+                //
+                "GameObject|_boostJet":{
+                    "BoosterJet": {
+                        "m_Force":              0.15,                   // Dictates the speed of the missile. The higher the value, the faster it becomes.
+                    }
+                },
+
+                "Projectile": {
+                    "m_Damage":                         400,            // The damage of the bullet when directly hitting a block
+                    "m_LifeTime":                       2.2,            // The duration of the bullet's existence before despawning
+                    "m_ExplodeAfterLifetime":           true,           // If set to true, the bullet will explode when despawning
+                    "m_IgnoreCollisionWithBarrel":      true,           // If set to true, the bullet will ignore any collisions for a set period. Useful for complex-shaped barrels
+                    
+                    "m_DeathDelay": 0.0,                                // Dictates the amount of time the bullet lives after it hits a target before it despawns. 
+                                                                        // Default is 0.0: the bullet will despawn after hitting an object.
+
+                    "m_ExplodeOnTerrain": true,                         // If set to true, the bullet will explode when it hits terrain 
+
+                    "Instantiate|m_Explosion": {
+                        "Explosion": {
+                            "m_EffectRadiusMaxStrength":    4.0,        // Dictates the damage type of the explosion
+                            "m_EffectRadius":               8.0,        // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_MaxDamageStrength":          175.0,      // The splash damage done
+                            "m_MaxImpulseStrength":         175.0,      // The strength of the knockback done by the explosion
+                            
+                            "m_DamageType":                 3,          // The type of damage the explosion will inflict
+                        },
+
+                        // Copy the settings of the HE Cruise Missile smoke. Due to the difference in the smoke's spritesheet, it will look different but will have roughly the same size.
+                        "GameObject|ExplosionSmoke": {
+                            "ParticleSystem":{
+                                "startSpeed":   14.0,       
+                                "startSize":    10.0,
+                                "radius":       2.0,
+                            },
+                        }
+
+                    }
+
+                },
+
+                //********** SeekingProjectile: Used mainly by missiles; this is where the missile propulsion behaviors are. **********//
+                "MissileProjectile": {
+                    "m_MaxBoosterLifetime":         1.1,    // This parameter is related to "BoosterJet" m_force: This dictates the amount of time the missile will propel itself before it falls to the ground.
+                                                            // This is disabled if set to 0
+                    "m_BoosterActivationDelay":     0.0,    // Dictates the delay before "BoosterJet" m_force is activated. 
+                    "m_ArmDelay": 0.0,                      // Dicates the time it takes for the missile to arm itself.
+                },
+
+                //********** SeekingProjectile: Used mainly by missiles; this is where the main missile AI behaviors are. **********//
+                "SeekingProjectile": {
+                    "m_VisionConeAngle":                50.0,          // Dictates how wide the missile will search a target in front of it. A higher value allows it to home onto targets regardless of the angle it's fired  
+                    "m_VisionRange":                    130.0,         // Dictates how far the target is before the missile can start homing into it. 
+                    "m_TurnSpeed":                      20.0,          // Dictates how fast the missile turns in midair. The higher the value, the faster it will turn.
+                },
+
+                // Shorten the missile collider so it doesn't destroy itself when firing
+                "CapsuleCollider": {
+                    "height": 0.2
+                }
+
+            }
+
+        
+        },
+
+
+    }
+
+
+}

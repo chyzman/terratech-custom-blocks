@@ -1,0 +1,75 @@
+
+{
+    "Name": "Reticule Research Experimental Capacitor",
+    "Description": "Heavy, high capacity lab battery.",
+    "ID": 546318,
+  
+    "Faction": 3,
+    "Category": 6,
+    "Rarity": 1,
+    "Grade": 1,
+    "Price": 7950,
+    "HP": 2160, //270 hp per 1 block
+    "Mass": 32, //4 mass per 1 block
+  
+    "Recipe": "56, 56, 56, 56, 57, 57",
+  
+    "IconName": "RR_Battery_546318.png",
+    "MeshName": null,
+  
+    "MeshMaterialName": "RR_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": null,
+  
+    "BlockExtents":
+    {
+      "x": 2,
+      "y": 2,
+      "z": 2
+    },
+  
+   "APs": [
+    { "x": 0.0, "y":-0.5, "z": 0.0 },{ "x": 0.0, "y":-0.5, "z": 1.0 },
+    { "x": 1.0, "y":-0.5, "z": 0.0 },{ "x": 1.0, "y":-0.5, "z": 1.0 },
+    { "x": 1.5, "y": 0.0, "z": 0.0 },{ "x":-0.5, "y": 0.0, "z": 0.0 },
+    { "x": 1.5, "y": 0.0, "z": 1.0 },{ "x":-0.5, "y": 0.0, "z": 1.0 },
+  ],
+    
+    
+    
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GSO_Block_111",
+  
+  "SubObjects": [ 
+  {
+      "SubOverrideName": "GC_Battery_222",
+      "DestroyExistingRenderer": true,
+      "MeshName": "RR_Battery_546318.obj",
+      "MeshMaterialName": "EXP_Main",
+	  "MeshTextureName": "EXP_1", 
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+  },
+	{
+      "SubOverrideName": "_energyGauge",
+      "MeshName": "RR_Battery_546318_LED.obj",
+      "DestroyExistingRenderer":    false,
+      "DestroyExistingColliders":   true,
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+	}
+    ],
+
+
+
+  "JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 15400} //1925 cap per 1 block
+  }
+}

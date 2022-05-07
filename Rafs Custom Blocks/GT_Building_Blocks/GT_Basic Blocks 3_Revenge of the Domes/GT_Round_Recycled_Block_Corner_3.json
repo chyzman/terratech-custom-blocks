@@ -1,0 +1,101 @@
+{
+  "Name": "GreenTech Round Recycled Block Corner Three",
+  "Description": "A much larger round corner version of the Recycled Block, great for making big domes.",
+  "ID": 911148, 
+
+  "Faction": 0, 
+  "Category": 0,
+  "Grade": 4, 
+  "Price": 3909, 
+  "HP": 7500,
+  "Mass": 25,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 9, 9, 9, 9, 9, 32, 32, 32, 32, 32, 52, 52, 52, 54",  
+  "IconName": "GT_Round_Recycled_Block_Corner_3_Icon.png", 
+  "MeshName": "GT_Round_Recycled_Block_Corner_3.obj", 
+  "ColliderMeshName": "GT_Round_Recycled_Block_Corner_3_Collider_1.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[ 
+    "xxx ",
+    " xxx",
+    "  xx",
+    "   x"
+  ],
+  [ 
+    "xxx ",
+    "xxxx",
+    "  xx",
+    "  xx"
+  ],
+  [ 
+    "xx  ",
+    "xxx ",
+    "xxxx",
+    " xxx"
+  ],
+  [ 
+    "    ",
+    "xx  ",
+    "xxx ",
+    "xxx "
+  ]
+], 
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 3, "y": -0.5, "z": 0},	
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": 3, "y": 0, "z": -0.5}, 
+    {"x": 0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": 0.5}, 
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 1.5},
+    {"x": 0, "y": 1, "z": 1.5},
+    {"x": 1, "y": 1, "z": 1.5},
+    {"x": 2, "y": 1, "z": -0.5},
+    {"x": 1.5, "y": 1, "z": 0},
+    {"x": 1.5, "y": 1, "z": 1},
+    {"x": -0.5, "y": 1, "z": 2},
+    {"x": 0.5, "y": 2, "z": 0},
+    {"x": -0.5, "y": 2, "z": 1},
+    {"x": -0.5, "y": 2, "z": 2},
+    {"x": 0, "y": 2, "z": 0.5},
+    {"x": 1, "y": 2, "z": -0.5},
+    {"x": 2, "y": 2, "z": -0.5},
+    {"x": 0, "y": 3, "z": -0.5},
+    {"x": -0.5, "y": 3, "z": 0},
+    {"x": 0, "y": 2.5, "z": 0},
+    {"x": 1, "y": 1.5, "z": 0},
+    {"x": 0, "y": 1.5, "z": 1},
+    {"x": 1, "y": 1.5, "z": 1},
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 2.5},
+    {"x": 2, "y": 0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 2}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "ColliderMeshName": "GT_Round_Recycled_Block_Corner_3_Collider_2.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Round_Recycled_Block_Corner_3_Collider_3.obj",
+      "Layer": 8
+    }
+  ]
+}

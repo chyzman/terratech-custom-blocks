@@ -1,0 +1,109 @@
+/*
+Description:    An armor slope
+Pros:           Has twice the HP compared to regular LK blocks
+Cons:           Is twice as heavy compared to regular LK blocks, has less APs, and is also expensive
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Medium Corner Slope Armor",
+    "Description":          "This version of the Medium Slope Armor can also withstand a lot of damage, and it also doesn't break off when hit. \n\n \"Those melted are simply remade anew - and the process is repeated, imperfections removed, until it passes our tests.\" \n\n --Caesar Auroch, Chief Forgemaster, Excerpt 5",
+
+    "ID": 419067,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 2,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 23184,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe: 11 Rugged Fiblar, 22 Titanic Alloy, 5 Plubonic Alloy  
+    */
+    "Recipe" : { "54": 22, "52": 11, "53": 5 },
+      
+    "IconName":                   "LK_armor_medium_slope_corner_icon.png",            // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_armor_medium_slope_corner.obj",                 // Name of the block's mesh                                        
+    "MeshColliderName":           "LK_armor_medium_slope_corner_col.obj",             // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 8250,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 55,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Cell Map    
+    "CellMap": [           
+        [ // Z Layer 0
+        "XX",
+        "XX",
+        ],
+        [ // Z Layer 1
+        "X ",
+        "XX",
+        ],
+        [ // Z Layer 2
+        "X ",
+        "XX",
+        ],
+        [ // Z Layer 3
+        "  ",
+        "X ",
+        ],
+    ],
+    "APs": [ 
+        // Back APs
+        { "x": 0, "y": 0, "z": -0.5 },
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 0, "y": -0.5, "z": 1 },
+        // Left APs 
+        { "x": -0.5, "y": 0.0, "z": 0.0 }, { "x": -0.5, "y": 0, "z": 1.0 },           
+      ],
+}

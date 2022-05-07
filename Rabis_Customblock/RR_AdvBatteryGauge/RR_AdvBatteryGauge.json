@@ -1,0 +1,2262 @@
+{ // Name description ID subobjectNumber gaugeValue 
+    "Name": "Reticule Research Battery Analyzer",
+    "Description": "This computer measures the battery level of your tech and shows it on a holographic display. Be sure to measure the battery when it is fully charged.", //You can make multiple lines with \n
+    "ID": 546364, //A random ID that MUST be unique
+
+    "Faction": 3, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 1, //The desired grade minus one
+    "Price": 23331, //The price is measured by sum of recipe value times 3
+    "HP": 250, //A GSO one block has 250 health
+    "Mass": 1,
+    //"CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.0},
+
+    "Fragility": 0.1, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+    "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+    "Rarity": 1, // Common = 0, Uncommon = 1, Rare = 2
+
+    "Recipe": "56, 56, 56, 56, 60, 62, 62, ",
+
+    //"DropFromCrates": false, // No change = true
+    //"PairedBlock": 534968, // ID of paired block (Can be used to drop 2 wheels)
+
+
+    "IconName": "RR_AdvBatteryGauge.png",
+    "MeshName": "RR_AdvBatteryGauge.obj",
+    "MeshTextureName": null,
+    "MeshMaterialName": "RR_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything! (You can use this in combination with the above)
+    "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+    "ColliderMeshName": "RR_AdvBatteryGauge_c.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+    "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+    "BlockExtents":
+    {"x": 1,"y": 1,"z": 1},
+    "APsOnlyAtBottom": false,
+    "APs": [
+        {"x": 0,"y": -0.5,"z": 0},
+        {"x": 0,"y": 0,"z": 0.5},
+    ],
+
+    //OPTIONAL
+    "GamePrefabReference": "HE_ChainGun_112",
+    "KeepRenderers": false,
+    "KeepColliders": false,
+    //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+    "ReferenceOffset": {"x": 0,"y": 0,"z": 0},
+    "SubObjects": [
+      { // cosmetic FX projector beam
+        "ObjectName": "RR_AdvBatteryGauge_beam",
+        "MeshName": "RR_AdvBatteryGauge_beam.obj",
+        "MeshMaterialName": "FX_Shield_Beam",
+      },
+      { // !!! Root object !!!
+        "SubOverrideName": "RR_AdvBatteryGauge_Root",
+        //"DestroyExistingRenderer": false,
+        //"DestroyExistingColliders": true,
+        //"MeshName": "RR_AdvBatteryGauge_Root.obj",
+        //"MakeBoxCollider": false,
+        //"MakeSphereCollider": false,
+        //"ColliderMeshName": null,
+        //"MeshMaterialName": "ExplosionLaser",
+        // ------------------------------!!! master transform !!!-------------------------------
+        "SubPosition": {
+          "x": 0,
+          "y": 0.5,
+          "z": -2.3
+        },
+        "SubScale": {
+          "x": 0.32,
+          "y": 0.32,
+          "z": 0.32
+        },
+        "SubRotation": {
+          "x": 70, // Pitch
+          "y": 180, // Yaw
+          "z": 0 // Roll
+        }
+        // ------------------------------!!! master transform !!!-------------------------------
+      },
+      { // Dummy SubObjects (small panels root object)
+        "ObjectName": "RR_AdvBatteryGauge_SmallPanels"
+      },
+        { // Dummy SubObjects for retract panels (root object)
+          "ObjectName": "RR_AdvBatteryGauge_panel_1_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_2_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_3_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_4_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_5_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_6_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_7_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_8_root"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_9_root"
+        },
+        { // ---------- RR Logo
+          "SubOverrideName": "RR_AdvBatteryGauge_Logo",
+          "MeshName": "RR_AdvBatteryGauge_Logo.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          //"SubScale": {"x": 0.8,"y": 0.8,"z": 0.8},
+          //"SubPosition": { "x": 5, "y": 0, "z": 2 },
+        },
+        { // ---------- Panel Back Ground
+          "ObjectName": "RR_AdvBatteryGauge_bg_1",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_2",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -13, "y": 0, "z": 0 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_3",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -26, "y": 0, "z": 0 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_4",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -39, "y": 0, "z": 0 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_5",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -52, "y": 0, "z": 0 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_6",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -0, "y": 0, "z": -13 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_7",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -13, "y": 0, "z": -13 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_8",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -26, "y": 0, "z": -13 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_9",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -39, "y": 0, "z": -13 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_bg_10",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          //"SubPosition": { "x": -52, "y": 0, "z": -13 }
+        },
+        { // ---------- Panels
+          "ObjectName": "RR_AdvBatteryGauge_panel_1",
+          "MeshName": "RR_AdvBatteryGauge_panel_1.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_2",
+          "MeshName": "RR_AdvBatteryGauge_panel_2.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_3",
+          "MeshName": "RR_AdvBatteryGauge_panel_3.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_4",
+          "MeshName": "RR_AdvBatteryGauge_panel_4.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_5",
+          "MeshName": "RR_AdvBatteryGauge_panel_5.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_6",
+          "MeshName": "RR_AdvBatteryGauge_panel_6.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_7",
+          "MeshName": "RR_AdvBatteryGauge_panel_7.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_8",
+          "MeshName": "RR_AdvBatteryGauge_panel_8.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_9",
+          "MeshName": "RR_AdvBatteryGauge_panel_9.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_panel_10",
+          "MeshName": "RR_AdvBatteryGauge_panel_10.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        { // ---------- Energy Gauge Bar
+          "ObjectName": "energyGauge_1",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_2",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_3",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_4",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_5",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_6",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_7",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_8",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_9",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_10",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_11",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_12",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_13",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_14",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_15",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_16",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_17",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_18",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_19",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_20",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_21",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_22",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_23",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_24",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_25",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_26",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_27",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_28",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_29",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_30",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_31",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_32",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_33",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_34",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_35",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_36",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_37",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_38",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_39",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_40",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_41",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_42",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_43",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_44",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_45",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_46",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_47",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_48",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_49",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_50",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        //  51~100
+        {
+          "ObjectName": "energyGauge_51",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_52",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_53",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_54",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_55",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_56",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_57",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_58",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_59",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_60",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_61",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_62",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_63",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_64",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_65",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_66",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_67",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_68",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_69",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_70",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_71",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_72",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_73",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_74",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_75",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_76",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_77",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_78",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_79",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_80",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_81",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_82",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_83",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_84",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_85",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_86",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_87",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_88",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_89",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_90",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_91",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_92",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -1.0 }
+        },
+        {
+          "ObjectName": "energyGauge_93",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -2.0 }
+        },
+        {
+          "ObjectName": "energyGauge_94",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_95",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -4.0 }
+        },
+        {
+          "ObjectName": "energyGauge_96",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -5.0 }
+        },
+        {
+          "ObjectName": "energyGauge_97",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_98",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -7.0 }
+        },
+        {
+          "ObjectName": "energyGauge_99",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -8.0 }
+        },
+        {
+          "ObjectName": "energyGauge_100",
+          "MeshName": "RR_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 3.0, "y": 0.0, "z": -9.0 }
+        },
+        // ------ large scale
+      { // root object
+        "ObjectName": "RR_AdvBatteryGauge_large_sign",
+        "MeshName": "RR_AdvBatteryGauge_large_sign.obj",
+        "MeshMaterialName": "ExplosionLaser",
+        "SubPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -5.0
+        }
+      },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_bg",
+          "MeshName": "RR_AdvBatteryGauge_bg.obj",
+          "MeshMaterialName": "Resource_Highlight",
+          "MeshTextureName": "RR_AdvBatteryGauge_bg.png",
+          "SubPosition": { "x": 0, "y": 0, "z": 2 },
+          "SubScale": { "x": 2.75, "y": 2.5, "z": 2.5 }
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_1",
+          "MeshName": "RR_AdvBatteryGauge_large_1.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_2",
+          "MeshName": "RR_AdvBatteryGauge_large_2.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_3",
+          "MeshName": "RR_AdvBatteryGauge_large_3.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_4",
+          "MeshName": "RR_AdvBatteryGauge_large_4.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_5",
+          "MeshName": "RR_AdvBatteryGauge_large_5.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_6",
+          "MeshName": "RR_AdvBatteryGauge_large_6.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_7",
+          "MeshName": "RR_AdvBatteryGauge_large_7.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_8",
+          "MeshName": "RR_AdvBatteryGauge_large_8.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "RR_AdvBatteryGauge_large_9",
+          "MeshName": "RR_AdvBatteryGauge_large_9.obj",
+          "MeshMaterialName": "ExplosionLaser"
+        },
+        {
+          "ObjectName": "energyGauge_large_1",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -0.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_2",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -3.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_3",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -6.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_4",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -9.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_5",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -12.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_6",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -15.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_7",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -18.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_8",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -21.0 }
+        },
+        {
+          "ObjectName": "energyGauge_large_9",
+          "MeshName": "RR_AdvBatteryGauge_bar_large.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 15.0, "y": 0.0, "z": -24.0 }
+        }
+
+      ],
+
+
+    "Deserializer": {
+      // HE Chain gun's GameObject ------------------------
+      "GameObject|m_HE_50Cal_112_Base":{
+        "GameObject|_gimbalBase":{
+          "GameObject|_gimbalElev":{
+            "GameObject|_barrel":{
+              "UnityEngine.Transform": {
+                //"localEulerAngles": { "x":0, "y":0, "z":0 },
+                //"localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":0, "y":0, "z":10000 }
+              },
+            }
+          }
+        }
+      },
+      "GameObject|RR_AdvBatteryGauge_Root": {
+        "GameObject|RR_AdvBatteryGauge_Logo":{},
+        "GameObject|RR_AdvBatteryGauge_SmallPanels": {
+          "GameObject|RR_AdvBatteryGauge_panel_1_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_1": {
+              "GameObject|RR_AdvBatteryGauge_bg_1": {},
+              "GameObject|energyGauge_1": {},
+              "GameObject|energyGauge_2": {},
+              "GameObject|energyGauge_3": {},
+              "GameObject|energyGauge_4": {},
+              "GameObject|energyGauge_5": {},
+              "GameObject|energyGauge_6": {},
+              "GameObject|energyGauge_7": {},
+              "GameObject|energyGauge_8": {},
+              "GameObject|energyGauge_9": {},
+              "GameObject|energyGauge_10": {},
+            },
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_2_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_2": {
+              "GameObject|RR_AdvBatteryGauge_bg_2": {},
+              "GameObject|energyGauge_11": {},
+              "GameObject|energyGauge_12": {},
+              "GameObject|energyGauge_13": {},
+              "GameObject|energyGauge_14": {},
+              "GameObject|energyGauge_15": {},
+              "GameObject|energyGauge_16": {},
+              "GameObject|energyGauge_17": {},
+              "GameObject|energyGauge_18": {},
+              "GameObject|energyGauge_19": {},
+              "GameObject|energyGauge_20": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_3_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_3": {
+              "GameObject|RR_AdvBatteryGauge_bg_3": {},
+              "GameObject|energyGauge_21": {},
+              "GameObject|energyGauge_22": {},
+              "GameObject|energyGauge_23": {},
+              "GameObject|energyGauge_24": {},
+              "GameObject|energyGauge_25": {},
+              "GameObject|energyGauge_26": {},
+              "GameObject|energyGauge_27": {},
+              "GameObject|energyGauge_28": {},
+              "GameObject|energyGauge_29": {},
+              "GameObject|energyGauge_30": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_4_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_4": {
+              "GameObject|RR_AdvBatteryGauge_bg_4": {},
+              "GameObject|energyGauge_31": {},
+              "GameObject|energyGauge_32": {},
+              "GameObject|energyGauge_33": {},
+              "GameObject|energyGauge_34": {},
+              "GameObject|energyGauge_35": {},
+              "GameObject|energyGauge_36": {},
+              "GameObject|energyGauge_37": {},
+              "GameObject|energyGauge_38": {},
+              "GameObject|energyGauge_39": {},
+              "GameObject|energyGauge_40": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_5_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_5": {
+              "GameObject|RR_AdvBatteryGauge_bg_5": {},
+              "GameObject|energyGauge_41": {},
+              "GameObject|energyGauge_42": {},
+              "GameObject|energyGauge_43": {},
+              "GameObject|energyGauge_44": {},
+              "GameObject|energyGauge_45": {},
+              "GameObject|energyGauge_46": {},
+              "GameObject|energyGauge_47": {},
+              "GameObject|energyGauge_48": {},
+              "GameObject|energyGauge_49": {},
+              "GameObject|energyGauge_50": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_6_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_6": {
+              "GameObject|RR_AdvBatteryGauge_bg_6": {},
+              "GameObject|energyGauge_51": {},
+              "GameObject|energyGauge_52": {},
+              "GameObject|energyGauge_53": {},
+              "GameObject|energyGauge_54": {},
+              "GameObject|energyGauge_55": {},
+              "GameObject|energyGauge_56": {},
+              "GameObject|energyGauge_57": {},
+              "GameObject|energyGauge_58": {},
+              "GameObject|energyGauge_59": {},
+              "GameObject|energyGauge_60": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_7_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_7": {
+              "GameObject|RR_AdvBatteryGauge_bg_7": {},
+              "GameObject|energyGauge_61": {},
+              "GameObject|energyGauge_62": {},
+              "GameObject|energyGauge_63": {},
+              "GameObject|energyGauge_64": {},
+              "GameObject|energyGauge_65": {},
+              "GameObject|energyGauge_66": {},
+              "GameObject|energyGauge_67": {},
+              "GameObject|energyGauge_68": {},
+              "GameObject|energyGauge_69": {},
+              "GameObject|energyGauge_70": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_8_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_8": {
+              "GameObject|RR_AdvBatteryGauge_bg_8": {},
+              "GameObject|energyGauge_71": {},
+              "GameObject|energyGauge_72": {},
+              "GameObject|energyGauge_73": {},
+              "GameObject|energyGauge_74": {},
+              "GameObject|energyGauge_75": {},
+              "GameObject|energyGauge_76": {},
+              "GameObject|energyGauge_77": {},
+              "GameObject|energyGauge_78": {},
+              "GameObject|energyGauge_79": {},
+              "GameObject|energyGauge_80": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_9_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_9": {
+              "GameObject|RR_AdvBatteryGauge_bg_9": {},
+              "GameObject|energyGauge_81": {},
+              "GameObject|energyGauge_82": {},
+              "GameObject|energyGauge_83": {},
+              "GameObject|energyGauge_84": {},
+              "GameObject|energyGauge_85": {},
+              "GameObject|energyGauge_86": {},
+              "GameObject|energyGauge_87": {},
+              "GameObject|energyGauge_88": {},
+              "GameObject|energyGauge_89": {},
+              "GameObject|energyGauge_90": {},
+            }
+          },
+          "GameObject|RR_AdvBatteryGauge_panel_10_root": {
+            "GameObject|RR_AdvBatteryGauge_panel_10": {
+              "GameObject|RR_AdvBatteryGauge_bg_10": {},
+              "GameObject|energyGauge_91": {},
+              "GameObject|energyGauge_92": {},
+              "GameObject|energyGauge_93": {},
+              "GameObject|energyGauge_94": {},
+              "GameObject|energyGauge_95": {},
+              "GameObject|energyGauge_96": {},
+              "GameObject|energyGauge_97": {},
+              "GameObject|energyGauge_98": {},
+              "GameObject|energyGauge_99": {},
+              "GameObject|energyGauge_100": {},
+            }
+          },
+        },
+        "GameObject|RR_AdvBatteryGauge_large_sign":{
+          "GameObject|RR_AdvBatteryGauge_large_bg": {},
+          "GameObject|RR_AdvBatteryGauge_large_1": {},
+          "GameObject|RR_AdvBatteryGauge_large_2": {},
+          "GameObject|RR_AdvBatteryGauge_large_3": {},
+          "GameObject|RR_AdvBatteryGauge_large_4": {},
+          "GameObject|RR_AdvBatteryGauge_large_5": {},
+          "GameObject|RR_AdvBatteryGauge_large_6": {},
+          "GameObject|RR_AdvBatteryGauge_large_7": {},
+          "GameObject|RR_AdvBatteryGauge_large_8": {},
+          "GameObject|RR_AdvBatteryGauge_large_9": {},
+          "GameObject|energyGauge_large_1": {},
+          "GameObject|energyGauge_large_2": {},
+          "GameObject|energyGauge_large_3": {},
+          "GameObject|energyGauge_large_4": {},
+          "GameObject|energyGauge_large_5": {},
+          "GameObject|energyGauge_large_6": {},
+          "GameObject|energyGauge_large_7": {},
+          "GameObject|energyGauge_large_8": {},
+          "GameObject|energyGauge_large_9": {},
+        }
+      },
+
+
+      "ModuleWeapon": {
+        "m_FireSFXType": 0,
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 999,
+      },
+      "FireData": {
+        //"m_MuzzleVelocity": 135,
+        "m_KickbackStrength": 0,
+        "Instantiate|m_BulletPrefab":{
+          "Projectile":{
+            "m_LifeTime": 0.001,
+          }
+        }
+      },
+
+      "ModuleConsumeEnergyToShell": {
+            "EnergyCost":           0,   // How much energy is needed to fire one round 
+                                            // (For continuous weapons, how much energy per second)
+            "EnergyCapacity":       0,   // How much energy this block can hold
+                                            
+            // The two below are intended for flamethrowers and beam weapons
+            "LowestPermittedEnergy": 0,    // The minimum amount of energy that can be left in a system 
+                                            // (Useful for continuous weapons: Don't drain all energy)
+            "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                            // (Useful for continuous weapons: Prevents studdering effect)
+
+            "CustomGauges": [                // Optional animatable transform
+              // ---------- Panel Setting
+              { // ---------- root
+                "GaugeObject": "RR_AdvBatteryGauge_Root",
+                "MinValue": 0,
+                "MaxValue": 1,
+                "EnableAt": 1
+              },
+              { // ---------- Retract small panels
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_1_root",
+                  "MinValue": 1000000,
+                  "MaxValue": 1000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 4.5, "y": 0, "z": -12},
+                  //"Dampen": 100
+                  // Dampen animation is a bit baggy
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_2_root",
+                  "MinValue": 2000000,
+                  "MaxValue": 2000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 1.3, "y": 0, "z": -12}, // X -3.2
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_3_root",
+                  "MinValue": 3000000,
+                  "MaxValue": 3000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -1.9, "y": 0, "z": -12},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_4_root",
+                  "MinValue": 4000000,
+                  "MaxValue": 4000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -5.1, "y": 0, "z": -12},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_5_root",
+                  "MinValue": 5000000,
+                  "MaxValue": 5000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -8.3, "y": 0, "z": -12},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_6_root",
+                  "MinValue": 6000000,
+                  "MaxValue": 6000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 4.5, "y": 0, "z": -15.2},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_7_root",
+                  "MinValue": 7000000,
+                  "MaxValue": 7000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 1.3, "y": 0, "z": -15.2}, // X -3.2
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_8_root",
+                  "MinValue": 8000000,
+                  "MaxValue": 8000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -1.9, "y": 0, "z": -15.2},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_9_root",
+                  "MinValue": 9000000,
+                  "MaxValue": 9000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -5.1, "y": 0, "z": -15.2},
+                  //"Dampen": 100
+              },
+              {
+                  "GaugeObject": "RR_AdvBatteryGauge_panel_10_root",
+                  "MinValue": 10000000,
+                  "MaxValue": 10000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": -8.3, "y": 0, "z": -15.2},
+                  //"Dampen": 100
+              },
+              { // ---------- Retract when open large panel
+                  "GaugeObject": "RR_AdvBatteryGauge_SmallPanels",
+                  "MinValue": 10000000,
+                  "MaxValue": 10000001,
+                  //"ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  //"ScaleMax": {"x": 0.25, "y": 0.25, "z": 0.25},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 10, "y": 0, "z": -20},
+                  //"Dampen": 0.2
+              },
+              { // ---------- Move RR Logo when open large panel
+                  "GaugeObject": "RR_AdvBatteryGauge_Logo",
+                  "MinValue": 10000000,
+                  "MaxValue": 10000001,
+                  "ScaleMin": {"x": 1, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1.5, "y": 1.5, "z": 1.5},
+                  "PositionMin": {"x": 0, "y": 0, "z": 0},
+                  "PositionMax": {"x": 8, "y": 0, "z": -2},
+                  //"Dampen": 0.2
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_1",
+                "MinValue": 0,
+                "MaxValue": 1,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_2",
+                "MinValue": 999999,
+                "MaxValue": 1000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_3",
+                "MinValue": 1999999,
+                "MaxValue": 2000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_4",
+                "MinValue": 2999999,
+                "MaxValue": 3000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_5",
+                "MinValue": 3999999,
+                "MaxValue": 4000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_6",
+                "MinValue": 4999999,
+                "MaxValue": 5000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_7",
+                "MinValue": 5999999,
+                "MaxValue": 6000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_8",
+                "MinValue": 6999999,
+                "MaxValue": 7000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_9",
+                "MinValue": 7999999,
+                "MaxValue": 8000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_10",
+                "MinValue": 8999999,
+                "MaxValue": 9000000,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_large_sign",
+                "MinValue": 10000000,
+                "MaxValue": 10000001,
+                "EnableAt": 1
+              },
+              /*{
+                "GaugeObject": "RR_AdvBatteryGauge_large_1",
+                "MinValue": 10000000,
+                "MaxValue": 10000001,
+                "EnableAt": 1
+              },
+              {
+                "GaugeObject": "RR_AdvBatteryGauge_panel_2",
+                "MinValue": 0,
+                "MaxValue": 10000000,
+                "EnableAt": 0.8
+              },*/
+              // ------------ Gauge 
+              {
+                  "GaugeObject": "energyGauge_1",
+                  "MinValue": 0,
+                  "MaxValue": 100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_2",
+                  "MinValue": 100000,
+                  "MaxValue": 200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_3",
+                  "MinValue": 200000,
+                  "MaxValue": 300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_4",
+                  "MinValue": 300000,
+                  "MaxValue": 400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_5",
+                  "MinValue": 400000,
+                  "MaxValue": 500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_6",
+                  "MinValue": 500000,
+                  "MaxValue": 600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_7",
+                  "MinValue": 600000,
+                  "MaxValue": 700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_8",
+                  "MinValue": 700000,
+                  "MaxValue": 800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_9",
+                  "MinValue": 800000,
+                  "MaxValue": 900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_10",
+                  "MinValue": 900000,
+                  "MaxValue": 1000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_11",
+                  "MinValue": 1000000,
+                  "MaxValue": 1100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_12",
+                  "MinValue": 1100000,
+                  "MaxValue": 1200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_13",
+                  "MinValue": 1200000,
+                  "MaxValue": 1300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_14",
+                  "MinValue": 1300000,
+                  "MaxValue": 1400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_15",
+                  "MinValue": 1400000,
+                  "MaxValue": 1500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_16",
+                  "MinValue": 1500000,
+                  "MaxValue": 1600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_17",
+                  "MinValue": 1600000,
+                  "MaxValue": 1700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_18",
+                  "MinValue": 1700000,
+                  "MaxValue": 1800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_19",
+                  "MinValue": 1800000,
+                  "MaxValue": 1900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_20",
+                  "MinValue": 1900000,
+                  "MaxValue": 2000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_21",
+                  "MinValue": 2000000,
+                  "MaxValue": 2100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_22",
+                  "MinValue": 2100000,
+                  "MaxValue": 2200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_23",
+                  "MinValue": 2200000,
+                  "MaxValue": 2300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_24",
+                  "MinValue": 2300000,
+                  "MaxValue": 2400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_25",
+                  "MinValue": 2400000,
+                  "MaxValue": 2500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_26",
+                  "MinValue": 2500000,
+                  "MaxValue": 2600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_27",
+                  "MinValue": 2600000,
+                  "MaxValue": 2700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_28",
+                  "MinValue": 2700000,
+                  "MaxValue": 2800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_29",
+                  "MinValue": 2800000,
+                  "MaxValue": 2900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_30",
+                  "MinValue": 2900000,
+                  "MaxValue": 3000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_31",
+                  "MinValue": 3000000,
+                  "MaxValue": 3100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_32",
+                  "MinValue": 3100000,
+                  "MaxValue": 3200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_33",
+                  "MinValue": 3200000,
+                  "MaxValue": 3300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_34",
+                  "MinValue": 3300000,
+                  "MaxValue": 3400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_35",
+                  "MinValue": 3400000,
+                  "MaxValue": 3500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_36",
+                  "MinValue": 3500000,
+                  "MaxValue": 3600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_37",
+                  "MinValue": 3600000,
+                  "MaxValue": 3700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_38",
+                  "MinValue": 3700000,
+                  "MaxValue": 3800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_39",
+                  "MinValue": 3800000,
+                  "MaxValue": 3900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_40",
+                  "MinValue": 3900000,
+                  "MaxValue": 4000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_41",
+                  "MinValue": 4000000,
+                  "MaxValue": 4100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_42",
+                  "MinValue": 4100000,
+                  "MaxValue": 4200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_43",
+                  "MinValue": 4200000,
+                  "MaxValue": 4300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_44",
+                  "MinValue": 4300000,
+                  "MaxValue": 4400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_45",
+                  "MinValue": 4400000,
+                  "MaxValue": 4500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_46",
+                  "MinValue": 4500000,
+                  "MaxValue": 4600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_47",
+                  "MinValue": 4600000,
+                  "MaxValue": 4700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_48",
+                  "MinValue": 4700000,
+                  "MaxValue": 4800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_49",
+                  "MinValue": 4800000,
+                  "MaxValue": 4900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_50",
+                  "MinValue": 4900000,
+                  "MaxValue": 5000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_51",
+                  "MinValue": 5000000,
+                  "MaxValue": 5100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_52",
+                  "MinValue": 5100000,
+                  "MaxValue": 5200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_53",
+                  "MinValue": 5200000,
+                  "MaxValue": 5300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_54",
+                  "MinValue": 5300000,
+                  "MaxValue": 5400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_55",
+                  "MinValue": 5400000,
+                  "MaxValue": 5500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_56",
+                  "MinValue": 5500000,
+                  "MaxValue": 5600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_57",
+                  "MinValue": 5600000,
+                  "MaxValue": 5700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_58",
+                  "MinValue": 5700000,
+                  "MaxValue": 5800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_59",
+                  "MinValue": 5800000,
+                  "MaxValue": 5900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_60",
+                  "MinValue": 5900000,
+                  "MaxValue": 6000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_61",
+                  "MinValue": 6000000,
+                  "MaxValue": 6100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_62",
+                  "MinValue": 6100000,
+                  "MaxValue": 6200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_63",
+                  "MinValue": 6200000,
+                  "MaxValue": 6300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_64",
+                  "MinValue": 6300000,
+                  "MaxValue": 6400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_65",
+                  "MinValue": 6400000,
+                  "MaxValue": 6500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_66",
+                  "MinValue": 6500000,
+                  "MaxValue": 6600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_67",
+                  "MinValue": 6600000,
+                  "MaxValue": 6700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_68",
+                  "MinValue": 6700000,
+                  "MaxValue": 6800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_69",
+                  "MinValue": 6800000,
+                  "MaxValue": 6900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_70",
+                  "MinValue": 6900000,
+                  "MaxValue": 7000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_71",
+                  "MinValue": 7000000,
+                  "MaxValue": 7100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_72",
+                  "MinValue": 7100000,
+                  "MaxValue": 7200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_73",
+                  "MinValue": 7200000,
+                  "MaxValue": 7300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_74",
+                  "MinValue": 7300000,
+                  "MaxValue": 7400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_75",
+                  "MinValue": 7400000,
+                  "MaxValue": 7500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_76",
+                  "MinValue": 7500000,
+                  "MaxValue": 7600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_77",
+                  "MinValue": 7600000,
+                  "MaxValue": 7700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_78",
+                  "MinValue": 7700000,
+                  "MaxValue": 7800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_79",
+                  "MinValue": 7800000,
+                  "MaxValue": 7900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_80",
+                  "MinValue": 7900000,
+                  "MaxValue": 8000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_81",
+                  "MinValue": 8000000,
+                  "MaxValue": 8100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_82",
+                  "MinValue": 8100000,
+                  "MaxValue": 8200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_83",
+                  "MinValue": 8200000,
+                  "MaxValue": 8300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_84",
+                  "MinValue": 8300000,
+                  "MaxValue": 8400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_85",
+                  "MinValue": 8400000,
+                  "MaxValue": 8500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_86",
+                  "MinValue": 8500000,
+                  "MaxValue": 8600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_87",
+                  "MinValue": 8600000,
+                  "MaxValue": 8700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_88",
+                  "MinValue": 8700000,
+                  "MaxValue": 8800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_89",
+                  "MinValue": 8800000,
+                  "MaxValue": 8900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_90",
+                  "MinValue": 8900000,
+                  "MaxValue": 9000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_91",
+                  "MinValue": 9000000,
+                  "MaxValue": 9100000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_92",
+                  "MinValue": 9100000,
+                  "MaxValue": 9200000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_93",
+                  "MinValue": 9200000,
+                  "MaxValue": 9300000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_94",
+                  "MinValue": 9300000,
+                  "MaxValue": 9400000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_95",
+                  "MinValue": 9400000,
+                  "MaxValue": 9500000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_96",
+                  "MinValue": 9500000,
+                  "MaxValue": 9600000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_97",
+                  "MinValue": 9600000,
+                  "MaxValue": 9700000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_98",
+                  "MinValue": 9700000,
+                  "MaxValue": 9800000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_99",
+                  "MinValue": 9800000,
+                  "MaxValue": 9900000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_100",
+                  "MinValue": 9900000,
+                  "MaxValue": 10000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              // -------large energyGauge_large_1
+              {
+                  "GaugeObject": "energyGauge_large_1",
+                  "MinValue": 10000000,
+                  "MaxValue": 20000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_2",
+                  "MinValue": 20000000,
+                  "MaxValue": 30000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_3",
+                  "MinValue": 30000000,
+                  "MaxValue": 40000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_4",
+                  "MinValue": 40000000,
+                  "MaxValue": 50000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_5",
+                  "MinValue": 50000000,
+                  "MaxValue": 60000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_6",
+                  "MinValue": 60000000,
+                  "MaxValue": 70000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_7",
+                  "MinValue": 70000000,
+                  "MaxValue": 80000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_8",
+                  "MinValue": 80000000,
+                  "MaxValue": 90000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge_large_9",
+                  "MinValue": 90000000,
+                  "MaxValue": 100000000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              }
+            ]
+      }
+    }
+}

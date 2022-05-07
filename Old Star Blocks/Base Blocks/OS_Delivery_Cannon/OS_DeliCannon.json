@@ -1,0 +1,114 @@
+{
+  "Name": "Old Star Mobile Delivery Cannon",
+  "Description": "Now this is how the Old Star do. By selling resoursed found by the Old Star we can buy more Fibron to create more blocks for you to use so find whatcha can and start blasting them skyward!",
+  
+  "ID": 300054,
+  "Faction": 4,
+  "Category": 7,
+  "Rarity": 2,
+  "Grade": 2,
+  "Price": 15000,
+  "Mass": 8,
+  "HP": 1000, 
+  "IconName": "OS_Delivery_Cannon_icon.png",
+  "MeshName": null,
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, ", 	
+  "GamePrefabReference": "GSO_DeliCannon_221",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "EmissionMode": 2,
+
+"Cells":[
+    { "x": 0.0, "y": 0, "z": 0.0 },
+    { "x": 0.0, "y": 0, "z":-1.0 },{ "x": 0.0, "y": 1.0, "z":-1.0 },
+    { "x": 0.0, "y": 0, "z":-2.0 }
+],
+  "APsOnlyAtBottom": false,
+  "APs": [ 
+    //Front/Back
+    { "x": 0.0, "y": 0, "z":-2.5 },{ "x": 0.0, "y": 0, "z": 0.5 },
+    //Bottom
+    { "x": 0.0, "y":-0.5, "z": 0.0},{ "x": 0.0, "y":-0.5, "z":-1.0},{ "x": 0.0, "y":-0.5, "z":-2.0},
+    //Left
+    { "x": 0.5, "y": 0, "z": 0.0 },{ "x": 0.5, "y": 0, "z":-1.0 },{ "x": 0.5, "y": 0, "z":-2.0 },
+    { "x":-0.5, "y": 0, "z": 0.0 },{ "x":-0.5, "y": 0, "z":-1.0 },{ "x":-0.5, "y": 0, "z":-2.0 }
+
+  ],
+
+  "SubObjects":[
+  {
+    "ObjectName":                 "m_GSO_DeliveryCannon_112",
+    "MeshName":                   "OS_Delivery_Cannon_Base.obj",
+    "MeshColliderName":           "OS_Delivery_Cannon_Base.obj",
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName":"OST2.png",
+    "MeshEmissionTextureName":"OST3.png",
+    "KeepRenderers": false, 
+    "KeepColliders": false,
+    "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+},
+{
+    "ObjectName":                 "m_GSO_DeliveryCannon_112_Barrel_A",
+    "MeshName":                   "OS_Delivery_Cannon_A.obj",
+    "MeshColliderName":           "OS_Delivery_Cannon_A.obj",
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName":"OST2.png",
+    "MeshEmissionTextureName":"OST3.png",
+    "KeepRenderers": false, 
+    "KeepColliders": false,
+    "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+},
+{
+  "ObjectName":                 "m_GSO_DeliveryCannon_112_Barrel_B",
+  "MeshName":                   "OS_Delivery_Cannon_B.obj",
+  "MeshColliderName":           "OS_Delivery_Cannon_B.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+},
+{
+  "ObjectName":                 "m_GSO_DeliveryCannon_112_Barrel_C",
+  "MeshName":                   "OS_Delivery_Cannon_C.obj",
+  "MeshColliderName":           "OS_Delivery_Cannon_C.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+},  {
+    "SubOverrideName":"GSO_Base_PullIndicator_01",
+    "MeshName": "OS_DeliCannon_ON.obj",
+    "SubPosition": { "x": 0, "y": 0.0, "z": 0 },
+    "MeshMaterialName": "VEN_Main"
+  }
+],
+
+"JSONBLOCK": {
+  "ModuleAnchor": null,                       
+  "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+          "localPosition": { "x": 0.0, "y": 0.1, "z":-1.0 } 
+      }
+    },
+    "GameObject|GreenLight":{
+        "UnityEngine.Transform": { 
+          "localScale":  { "x": 0, "y": 0, "z": 0 },
+          "active": false }
+       },
+    "ModuleItemHolder": {
+        "m_CapacityPerStack": 1
+      },
+    "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": -0.3,
+    "m_BeamStrength": 500.0
+    }, 
+    "ModuleItemConsume": {
+        "m_PullArrowPrefab": "GSO_Base_PullIndicator_01"
+        
+    }
+  }  
+}

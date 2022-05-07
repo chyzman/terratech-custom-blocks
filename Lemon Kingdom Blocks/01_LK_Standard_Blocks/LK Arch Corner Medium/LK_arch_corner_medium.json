@@ -1,0 +1,84 @@
+/*
+Description:    A medium arch
+Pros:           High HP and armored
+Cons:           Heavy and expensive, also not a lot of APs
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Medium Corner Arch",
+    "Description":          "A larger arch for larger buildings. While heavy, it's well-armored.",
+
+    "ID":                   419062,           
+    "Faction":              2,           
+    "Category":             2,          
+    "Rarity":               2,            
+    "Grade":                3,
+    "Price":                36420,         
+    
+    "Recipe" :              { "54": 30, "53": 16, "7": 30 },
+      
+    "IconName":             "LK_arch_corner_medium_icon.png",                    
+    "MeshName":             "LK_arch_corner_medium_body.obj", 
+    "MeshColliderName":     "LK_arch_corner_medium_body_col.obj",                
+    "NoBoxCollider":        true,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+
+    // Basic Block Values
+    "HP":                   15000,                
+    "Mass":                 75.0,           
+    "DamageableType":       1,    
+    "DetachFragility":      0.0, 
+
+    // Block Cell Map    
+    "CellMap": [           
+        [ // Z Layer 0
+            "XX",
+            "XX",
+            "XX",
+            "XX"
+        ],
+        [ // Z Layer 1
+            "XX",
+            "XX",
+            "XX",
+            "XX"
+        ],
+        [ // Z Layer 2
+            "XX",
+            "XX",
+            "XX",
+            "XX",
+        ],
+        [ // Z Layer 3
+            "XX",
+            "XX",
+            "XX",
+            "  ",
+        ],
+    ],
+
+    "APs": [ 
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 0.0 }, { "x": 1, "y": -0.5, "z": 0.0 },
+        { "x": 0, "y": -0.5, "z": 1.0 }, { "x": 1, "y": -0.5, "z": 1.0 },
+
+        // Front APs
+        { "x": 0, "y": 2.0, "z": 3.5 }, { "x": 0, "y": 3.0, "z": 3.5 },
+        { "x": 1, "y": 2.0, "z": 3.5 }, { "x": 1, "y": 3.0, "z": 3.5 },
+
+        // Top APs
+        { "x": 0, "y": 3.5, "z": 0.0 }, { "x": 0, "y": 3.5, "z": 3.0 },
+        { "x": 1, "y": 3.5, "z": 0.0 }, { "x": 1, "y": 3.5, "z": 3.0 },
+
+        // Back APs
+        { "x": 0, "y": 0.0, "z": -0.5 }, { "x": 0, "y": 3.0, "z": -0.5 },
+        { "x": 1, "y": 0.0, "z": -0.5 }, { "x": 1, "y": 3.0, "z": -0.5 },        
+
+    ],
+
+    
+
+}

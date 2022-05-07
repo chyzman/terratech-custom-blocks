@@ -1,0 +1,124 @@
+
+{
+  "Name": "IEC Anchored Reactor",
+  "Description": "A large base reactor that only generates power when anchored. A lot of power too.",
+  "ID": 100533,
+
+  "Faction": 0,
+  "Category": 6,
+  "Grade": 3,
+  "Price": 7368, 
+
+  "HP": 3500, 
+  "Mass": 3.75,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0, 
+
+  "Recipe":"5, 5, 5, 5, 5, 8, 8, 8, 8, 8, 17, 17, 48, 48, 49, ",
+  "IconName": "IEC_AnchoredReactorIcon.png",    
+  "BlockExtents": {
+    "x": 3,
+    "y": 2,
+    "z": 3
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ //ech I hate AP's
+    { "x": 1,    "y": -0.5, "z": 0    }, 
+    { "x": 1,    "y": -0.5, "z": 1    }, 
+    { "x": 2,    "y": -0.5, "z": 1    }, 
+    { "x": 1,    "y": -0.5, "z": 2    }, 
+    { "x": 0,    "y": -0.5, "z": 1    }, 
+    { "x": 1,    "y": 1.5, "z": 0    }, 
+    { "x": 1,    "y": 1.5, "z": 1    }, 
+    { "x": 2,    "y": 1.5, "z": 1    }, 
+    { "x": 1,    "y": 1.5, "z": 2    }, 
+    { "x": 0,    "y": 1.5, "z": 1    }, 
+    { "x": 1,    "y": 0, "z": 2.5    }, 
+    { "x": 1,    "y": 0, "z": -0.5    },
+    { "x": 2.5,    "y": 0, "z": 1    }, 
+    { "x": -0.5,    "y": 0, "z": 1    },
+    { "x": 1,    "y": 1, "z": 2.5    }, 
+    { "x": 1,    "y": 1, "z": -0.5    },
+    { "x": 2.5,    "y": 1, "z": 1    }, 
+    { "x": -0.5,    "y": 1, "z": 1    },
+  ],
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "Base",
+      "MeshName": "IEC Anchored Reactor Base.obj",
+      "SubPosition": { "x": 0,    "y": 0, "z": 2    }, 
+      "MeshTextureName":"IEC Textures.png",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "Spinny 1",
+      "MeshName": "IEC Anchored Reactor Spinny 1.obj",
+      "SubPosition": { "x": 1,    "y": 0, "z": 1    }, 
+      "MeshTextureName":"IEC Textures.png",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "Spinny 2",
+      "MeshName": "IEC Anchored Reactor Spinny 2.obj",
+      "SubPosition": { "x": 1,    "y": 0.5, "z": 1    }, 
+      "MeshTextureName":"IEC Textures.png",
+      "MakeBoxCollider": true
+    },
+  ],
+
+  "JSONBLOCK": {
+    "ModuleSpinWhenAnchored": {},
+    "GameObject|Spinny 1":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0, "z": 0 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+       },
+       "Spinner": {
+          "m_AutoSpin":true,
+          "m_SpinUpTime": 5,
+          "Speed": 0.6,
+          "m_Speed": 0.6,
+          "m_RotationAxis": {
+              "axis": 1
+            },
+          "m_SteerAxis": {
+              "axis": 1
+            },
+       }
+    
+  },
+  "GameObject|Spinny 2":{
+    "UnityEngine.Transform": {
+      "localPosition": { "x": 0, "y": 0, "z": 0 },
+      "localEulerAngles": { "x": 0, "y": 0, "z": 180 },
+     },
+     "Spinner": {
+        "m_AutoSpin":true,
+        "m_SpinUpTime": 5,
+        "Speed": 0.6,
+        "m_Speed": 0.6,
+        "m_RotationAxis": {
+            "axis": 1
+          },
+        "m_SteerAxis": {
+            "axis": 1
+          },
+     }
+  
+},
+"ModuleEnergy": {
+  "m_Priority": -100,
+  "m_OutputPerSecond": 300,
+  "m_OutputEnergyType": 0,
+  "m_GeneratingSFXType": 43,
+  "m_OutputConditions": 1,
+  "m_SequentialPowerUp": false,
+  "m_PowerUpDelay": 5
+},
+  }
+}                

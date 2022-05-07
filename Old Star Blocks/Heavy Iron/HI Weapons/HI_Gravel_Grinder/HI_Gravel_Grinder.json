@@ -1,0 +1,188 @@
+{
+  "Name": "Old Star Heavy Iron Gravel Grinder",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! The Gravel Grinder is a rotating mining wheel that can grind up any rock/tree/bandit with ease when it connects. This is Old Star's best intro to their mining equipment item so its great for a tiny tech to carry and use.",
+  "ID": 300111,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 4761,
+  "HP": 5000,
+  "Mass": 16.0,
+  "EmissionMode": 2,
+  "IconName": "OS_Gravel_Grinder_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 48, 53, 53, 54, 54",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "CenterofMass": {
+    "x": 0.0,
+    "y": 0.5,
+    "z": 0.5
+  },
+
+  "APs": [
+    {
+      "x": 0.0,
+      "y": -0.5,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": -0.5,
+      "z": 1.0
+    }
+  ],
+  "Cells": [
+    //x=0
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0
+    },
+
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": 1,
+      "z": 0
+    }
+
+  ],
+  /*
+	"BlockExtents": {
+		"x": 2,
+		"y": 6,
+		"z": 6
+	}, */ // A vector of (1, 1, 1) returns a one-celled block
+
+  "APsOnlyAtBottom": false,
+  "GamePrefabReference": "GC_BuzzSaw_312",
+  "KeepColliders": true,
+
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  //Shift the subobjects of the block prefab by x, y and z
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_BuzzSaw_213_Blade",
+      "MeshName": "HI_GG_Blade.obj",
+      "ColliderMeshName": "HI_GG_Blade.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_GC_BuzzSaw_213_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HI_GG_Base.obj",
+      "ColliderMeshName": "HI_GG_Base.obj",
+      "Position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "drillcollider",
+      "layer": 14
+    },
+    {
+      "ObjectName": "aCol",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|m_GC_BuzzSaw_213_Base/_Spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.65,
+          "z": 0.0
+        },
+        "Scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "Spinner": {
+        "m_Speed": 2.8,
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 2.0,
+        "m_CurrentAngle": 0.0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        "Speed": 0.8,
+        "SpeedFraction": 0.0,
+        "AtFullSpeed": false,
+        "useGUILayout": true,
+        "enabled": true,
+        "isActiveAndEnabled": false
+      }
+    },
+    "ModuleDrill": {
+      "impactDamageMultiplier": 5.0,
+      "damagePerSecond": 1440.0,
+      "m_SpinOnCollisionDuration": 1,
+      "m_DamageType": 4,
+      "scaleHitParticles": 2.0,
+      "m_ContactFlags": 10,
+      "m_SFXType": 63,
+      "m_ContactTimeout": 0.1
+    }
+  }
+}

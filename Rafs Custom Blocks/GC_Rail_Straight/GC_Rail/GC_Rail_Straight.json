@@ -1,0 +1,257 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "GeoCorp Straight Rail",
+  "Description": "A 64-blocks length rail which repels hovers, while also having gaps for wheels; perfect for all kinds of trains. It uses an energy pillar to sustain the track piece, enabling a train to fully encase the rail. The base is capable of anchoring, and the edges of the rails attract each other.",
+  "ID": 910633, 
+
+  "Faction": 2, 
+  "Category": 0, 
+  "Grade": 2, 
+  "Price": 11556,
+  "HP": 8000,
+  "Mass": 50,
+
+  "IconName": "GC_Rail_Straight_Icon.png", 
+  
+  "Recipe": "5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 17, 17, 45, 45, 45, 45, 45, 45, 45, 45, 50, 56",
+
+  "SupressBoxColliderFallback": true,
+
+    "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 1,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 1,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  ],
+  
+  "APs": [ 
+	{"x": 0,"y": -0.5,"z": 1},
+	{"x": 0,"y": -0.5,"z": 0},
+	{"x": 1,"y": -0.5,"z": 1},
+	{"x": 1,"y": -0.5,"z": 0},
+	{"x": 0,"y": 0,"z": -0.5},
+	{"x": 1,"y": 0,"z": -0.5},
+	{"x": 0,"y": 0,"z": 1.5},
+	{"x": 1,"y": 0,"z": 1.5},
+	{"x": -0.5,"y": 0,"z": 1},
+	{"x": -0.5,"y": 0,"z": 0},
+	{"x": 1.5,"y": 0,"z": 1},
+	{"x": 1.5,"y": 0,"z": 0 }
+	
+  ],
+
+  "GamePrefabReference": "HE_Anchor_Fixed_212",
+	"ReferenceOffset": { "x": 0.5, "y": 0.0, "z": 0.5 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ 
+	{
+    "SubOverrideName":"m_HE_Anchor_Fixed_212",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "GC_Rail_Base.obj",
+	"ColliderMeshName": "GC_Rail_Base_Collider.obj",
+	"MeshMaterialName": "GC_Main",
+	"SubPosition":{"x":0,"y":0,"z":-31},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	},
+	{
+    "SubOverrideName":"HE_Anchor_22",
+	"DestroyExistingColliders": true,
+    "MeshName": "GC_Rail_Anchor.obj",
+	"MeshMaterialName": "GC_Main",
+	"MakeBoxCollider": true,
+    "SubPosition":{"x":0,"y":0,"z":-31},
+	"SubScale":{"x":0,"y":0,"z":0}
+	},
+	{
+    "MeshName": "GC_Rail_Pillar.obj",
+	"MakeBoxCollider": false,
+	"MeshMaterialName": "BF_Receiver_Forcefield",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+    "MeshName": "GC_Rail_Straight.obj",
+	"MeshMaterialName": "GC_Main",
+	"MakeBoxCollider": false,
+	"ColliderMeshName": "GC_Rail_Straight_Collider_E.obj",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+    "MakeBoxCollider": true,
+    "SubPosition": {"x": 0.5,"y": 8.5,"z": 0.5},
+    "SubScale": {"x": 1.2,"y": 1.2,"z": 64},
+	"layer": 20
+    },
+	{
+    "ColliderMeshName": "GC_Rail_Straight_Collider_A.obj",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+    "ColliderMeshName": "GC_Rail_Straight_Collider_B.obj",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+    "ColliderMeshName": "GC_Rail_Straight_Collider_C.obj",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+    "ColliderMeshName": "GC_Rail_Straight_Collider_D.obj",
+	"SubPosition":{"x":0,"y":0,"z": -31}
+	},
+	{
+      "SubOverrideName": "m_GSO_Hover_111_Jet",
+	  "DestroyExistingRenderer": true,
+	   "SubRotation": {
+        "x": -90,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+      "SubOverrideName": "m_GSO_Hover_111_Jet_copy",
+	  "DestroyExistingRenderer": true,
+	   "SubRotation": {
+        "x": 90,
+        "y": 0, 
+        "z": 0  
+      }
+	}
+	],
+	
+	"Deserializer":{
+	    "GameObject|CentreOfMass": {
+		    "UnityEngine.Transform": { 
+				"localPosition": { "x":0.5, "y":8.5, "z":0.5 } 
+		    }
+		},
+		"GameObject|_anchor":{
+		    "GameObject|HEAnchor22": {
+			  "BlockAnchor":{
+				   "m_GroundPoint":{
+						"localPosition": {
+						"x": 0.0,
+						"y": -3,
+						"z": 0.0,
+						"normalized": {
+						  "x": 0.0,
+						  "y": -1.0,
+						  "z": 0.0,
+						  "magnitude": 1.0,
+						  "sqrMagnitude": 1.0
+						},
+						"magnitude": 2.128,
+						"sqrMagnitude": 4.528384
+					   }
+				    },
+			    "m_SnapToleranceUp":3,
+			    "m_SnapToleranceDown":3
+			    }
+		    }
+		}, 
+		"ModuleAnchor":{
+			"m_APsBlockedByAnchor": [
+			    1, 2, 3, 4
+			]
+		},
+		"ModuleLight": {
+			"m_Lights": [],
+			"m_RotateSpeed": 0.0,
+			"DelayLightsOnAction": {},
+			"DelayLightsOffAction": {},
+			"m_TargetAimer": null,
+			"m_Target": null,
+			"m_DelayedOnOffEvent": {
+			  "node": null,
+			  "action": null,
+			  "IsSet": false,
+			  "TimeRemaining": 0.0
+			}
+		},
+		"ModuleTechController": {
+			"m_PlayerInput": true
+		},
+		
+		"Reference|GSO_HoverJet_111/m_GSO_Hover_111_Jet": {
+			"UnityEngine.Transform": {
+			"localPosition": { "x": 0.5, "y": 8.5, "z": 32.75 }
+			},
+			"GameObject|_hoverJet": {
+				"GameObject|ParticleSystem_GSO_HoverPad":{
+				     "UnityEngine.ParticleSystem": {
+						//"startSize": 0.8,
+						//"duration": 1.5,
+						//"maxParticles": 4,
+						//"startLifetime": 1.5,
+						//"emissionRate": 1,
+						//"startColor": { "r": 1.0, "g": 0.3, "b": 0.0, "a": 2.0 },
+						"loop": false,
+						"playOnAwake": false,
+						"isPlaying": false,
+						"isEmitting": false,
+						"isStopped": true,
+						"isPaused": false,
+						"maxParticles": 0
+					 }
+				},
+				"HoverJet": {
+				"forceMax": -5000.0,
+				"forceRangeMax": 5,
+				"m_DampingScale": 0.02,
+				"m_MaxClimbDistance": 5,
+				"m_VectoredThrustMaxAngle": 0,
+				"m_VectoredThrustMaxForceAngle": 0,
+				"m_HoverPowerMin": 1.0,
+				"m_HoverPowerMax": 1.0
+				}
+			}
+		},
+		"Duplicate|m_GSO_Hover_111_Jet": {
+			"UnityEngine.Transform": { 
+				"localPosition": { "x":0.5, "y":8.5, "z": -31.75 }
+			}
+	    },
+		"ModuleHover": {}
+  }
+
+
+}

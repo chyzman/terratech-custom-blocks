@@ -1,0 +1,618 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC CWIS <b>Pivelite</b> Auto Cannon",
+  "Description": "A common Point Defense Turret on TAC Battleships, the Pivelite fires dual 70mm Kinetic rounds that'll tear up small fighters. \n\nIt is currently set to KineticRounds and will make short work of pretty much anything, fast or slow, given enough time. \n\n\nDeveloped as a joint-weapons project between NotExactInd. and TAC, this weapon started out as an interception-based research program.  After much [REDACTED], eventually the project results developed a rapid-fire gun capable of intercepting fast objects.  It was named Pivelite by <b>NotExactlyHero</b>.", //You can make multiple lines with \n
+  "ID": 584222, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 34776, //11592x3=34776 - HE autocannon is 21798
+  "HP": 2750,// bonus 50 health
+  "Mass": 7.0,//Heavy
+
+  "IconName": "IWillBlotOutTheSky.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 45, 45, 51, 51, 55, 55, 57, 64, 64", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+     { "x": 0, "y": 0, "z": 1 },
+     { "x": 1, "y": 0, "z": 1 },
+     { "x": 0, "y": 1, "z": 0 },
+     { "x": 1, "y": 1, "z": 0 },
+     { "x": 0, "y": 1, "z": 1 },
+     { "x": 1, "y": 1, "z": 1 },
+     { "x": 0, "y": 1, "z": 2 },
+     { "x": 1, "y": 1, "z": 2 }
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     {
+       "x": 1,
+       "y": 0.5,
+       "z": 0
+     },
+     {
+       "x": 0,
+       "y": 0.5,
+       "z": 0
+     },
+     {
+       "x": 1,
+       "y": 0,
+       "z": 0.5
+     },
+     {
+       "x": 0,
+       "y": 0,
+       "z": 0.5
+     },
+     {
+       "x": 1,
+       "y": -0.5,
+       "z": 1
+     },
+     {
+       "x": 0,
+       "y": -0.5,
+       "z": 1
+     }
+  ],
+  /*  OR  */
+  // "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  // {
+  //   "x": 2,
+  //   "y": 1,
+  //   "z": 2 
+  // }, // A vector of (1, 1, 1) returns a one-celled block
+  // "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_MiniGun_Large(525)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0.5, "y": 1, "z": 0.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_HE_MiniGun_313_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBase.obj",
+      "ColliderMeshName": "TACAutocannonBase.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Base Detail
+      "SubOverrideName": "m_HE_MiniGun_313_Base_Detail",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBaseExtend.obj",
+      "ColliderMeshName": "TACAutocannonBaseExtend.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Azimuth
+      "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_A",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonRotatingPart.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Elevation R
+      "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_B",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonElevation.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Elevation L
+      "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_B_Alt",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonElevation.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Barrel L
+      "SubOverrideName": "m_HE_MiniGun_Barrel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBarrel.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Barrel L
+      "SubOverrideName": "m_HE_MiniGun_Barrel_Detail",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBarrelDetail.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Barrel R
+      "SubOverrideName": "_barrel_copy/_spindle/m_HE_MiniGun_Barrel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBarrel.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //Barrel L
+      "SubOverrideName": "_barrel_copy/_spindle/m_HE_MiniGun_Barrel_Detail",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonBarrelDetail.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+    { //ComputerGreeble
+      "SubOverrideName": "m_EyeAimer",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACAutocannonEyeAimer.obj",
+      "ColliderMeshName": "TACAutocannonEyeAimer.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+    },
+  //{ //Turret?
+  //  "SubOverrideName": "_energyGauge",
+ //    "DestroySubReferenceRenderer": true,
+ //    "MeshName": "m_GSO_BigBertha_548_Barrel_MOD_Instance.obj",
+ //    "ColliderMeshName": "m_GSO_BigBertha_548_Barrel_MOD_Instance.obj",
+ //    "MeshTextureName": null,
+ //    "MeshMaterialName": "GSO_Main",
+ //    "SubOffset": { "x": 4.5, "y": 0, "z": 4.5 },
+//    "SubScale":{"x":1,"y":1,"z":1}
+ //  }
+],
+	
+  //
+  // Deadly Gun
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":1.1, "z":0.5 }
+      }
+    },
+    "GameObject|m_HE_MiniGun_313_Base": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0.6, "z":0.5 }
+      },
+      "GameObject|m_HE_MiniGun_313_Base_Greeble": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.8, "y":0.8, "z":0.8 },
+          "localPosition": { "x":0, "y":-0.775, "z":0.275 },
+          "localEulerAngles": { "x":0, "y":180, "z":0 }
+        }
+      },
+      "GameObject|m_HE_MiniGun_313_Base_Greeble2": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          "localPosition": { "x":0, "y":0, "z":0.3 },
+          "localEulerAngles": { "x":90, "y":0, "z":180 }
+        }
+      },
+      "GameObject|m_HE_MiniGun_313_Base_Greeble3": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":-1.0, "y":1.0, "z":1.0 },
+          "localPosition": { "x":0, "y":0, "z":0.3 },
+          "localEulerAngles": { "x":90, "y":0, "z":180 }
+        }
+      },
+      "GameObject|m_HE_MiniGun_313_Base_Detail": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshCollider": { //
+          "gameObject": {
+            "layer": 8//Give it grabable collider
+          }
+        }
+      },
+      "GameObject|_gimbalBase": { //GameObject child
+        "GimbalAimer": {
+           "rotationLimits": [-180, 180],//Testing //[-65, 65] //Default
+        }, //For horizontal aim restrictions
+        "UnityEngine.Transform": { //Positioning Reset
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|b_EyeBone": { //GameObject child
+          "UnityEngine.Transform": { //Positioning Set
+            // "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0.675, "z":0.3 }
+          },
+        },
+        "GameObject|m_HE_MiniGun_313_RotatingPart_A": {
+          "GameObject|_gimbalElev": { //GameObject in child
+            "GimbalAimer": {
+              "rotationLimits": [-80, 25], //Vertical aim restrictions
+            },
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.65, "z":0 }
+            },
+            "GameObject|m_HE_MiniGun_313_RotatingPart_B": {
+              "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                "localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":-0.425, "y":0, "z":0 }
+              }
+            },
+            "GameObject|m_HE_MiniGun_313_RotatingPart_B_Alt": {
+              "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                "localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":0.425, "y":0, "z":0 }
+              }
+            },
+            "GameObject|m_EyeAimer": { //GameObject child
+              "UnityEngine.Transform": { //Positioning Reset
+                // "localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+              "FollowTransform": {//lock to assigned position
+                "m_TransformToFollow": "/m_HE_MiniGun_313_Base/_gimbalBase/b_EyeBone",
+                "m_FollowOrientation": false,
+              },
+              "GameObject|_redLight": {  
+                "UnityEngine.Transform": {
+                  "localScale": { "x":1, "y":1, "z":1 },
+                  "localEulerAngles": { "x":0, "y":0, "z":0 },
+                  "localPosition": { "x":0, "y":0.0, "z":0.42 }
+                },      
+                "UnityEngine.Light": {
+                  "color": {
+                    "r": 1.0,
+                    "g": 0.0,
+                    "b": 0.0,
+                    "a": 1.0
+                  },
+                  // "colorTemperature": 6570.0,
+                  "areaSize": 0.225,//2.0
+                  "intensity": 50.0,//2.0
+                  // "bounceIntensity": 1.0,
+                  // "shadowCustomResolution": -1,
+                  // "shadowBias": 0.5,
+                  // "shadowNormalBias": 1.0,
+                  // "shadowNearPlane": 0.2,
+                  "range": 0.225,
+                }, 
+              },
+            },
+            "GameObject|_barrel": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0.425, "y":0, "z":0.15 }
+              },
+              "UnityEngine.CapsuleCollider": {
+                "radius": 0.2,
+                "center": { "x": 0, "y": 0, "z": 0.65 },
+                "height": 1.75,
+                "direction": 2
+              },
+              "CannonBarrel": {
+                "muzzleFlash": {
+                  "m_SpeedFactor": 5,
+                  "anim": {
+                  },
+                },
+              },
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                  "localScale": { "x":0.75, "y":0.75, "z":1.0 },
+                  "localPosition": { "x":0, "y":0.07, "z":1.5 }
+                }
+              },
+              "GameObject|_spawnBullet": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  "localPosition": { "x":0, "y":0.07, "z":1.6 }
+                }
+              },
+              "GameObject|_spawnCasing": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  "localPosition": { "x":0.4, "y":0.35, "z":0 }
+                }
+              },
+              "GameObject|_spindle": {
+                "GameObject|m_HE_MiniGun_Barrel": {
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localPosition": { "x":0, "y":0, "z":0 }
+                  },
+                  "CapsuleCollider": {
+                    "center": {"x": 0, "y": 0, "z": -2.0 }
+                  }
+                },
+                "GameObject|m_HE_MiniGun_Barrel_Detail": {
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localPosition": { "x":0, "y":0, "z":0 }
+                  }
+                }
+              }
+            },
+            "Duplicate|_barrel": {
+              "UnityEngine.Transform": {
+                    "localEulerAngles": { "x":0, "y":0, "z":0 },
+                  //"localRotation": { "x":-180, "y":0, "z":0 },
+                "localPosition": { "x":-0.425, "y":0, "z":0.15 }
+              },
+              // "UnityEngine.CapsuleCollider": {
+              //   "radius": 0.2,
+              //   "center": { "x": 0, "y": 0, "z": 0.6 },
+              //   "height": 1.75,
+              //   "direction": 2
+              // },
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                  "localScale": { "x":0.75, "y":0.75, "z":1.0 },
+                  //"localRotation": { "x":180, "y":0, "z":0 },
+                  "localPosition": { "x":0, "y":0.07, "z":1.5 }
+                }
+              },
+              "GameObject|_spawnBullet": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  //"localRotation": { "x":180, "y":0, "z":0 },
+                  "localPosition": { "x":0, "y":0.07, "z":1.6 }
+                }
+              },
+              "GameObject|_spawnCasing": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  //"localRotation": { "x":180, "y":0, "z":0 },
+                  "localPosition": { "x":0.4, "y":0.35, "z":0 }
+                }
+              },
+              "GameObject|_spindle": {
+                "UnityEngine.Transform": {
+                    "localEulerAngles": { "x":-180, "y":0, "z":0 }
+                  //"localPosition": { "x":-0.5, "y":0.25, "z":0.5 }
+                },
+                "GameObject|m_HE_MiniGun_Barrel": {
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localEulerAngles": { "x":180, "y":0, "z":0 },
+                    "localPosition": { "x":0, "y":0, "z":0 }
+                  },
+                  "CapsuleCollider": {
+                    "center": {"x": 0, "y": 0, "z": -2.0 }
+                  }
+                },
+                "GameObject|m_HE_MiniGun_Barrel_Detail": {
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localEulerAngles": { "x":180, "y":0, "z":0 },
+                    "localPosition": { "x":0, "y":0, "z":0 }
+                  }
+                }
+              }
+            },
+            //From here on, duplicate bullets for extra Heavy Minigun effect - Actually scratch that
+            // "Duplicate|_barrel_copy": {
+            // },
+
+            // "Duplicate|_barrel_copy_copy": {
+            // },
+          }
+        }
+      }
+    }, //Back to GameObject
+
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns
+    },
+    "ModuleWeapon": { //Component
+      //"m_FireSFXType": "VENMachineGunFixedForward", //Firing noise
+      "m_LimitedShootAngle": 90,
+      "m_RotateSpeed" : 175.0, //SPEED of turret aiming, not homing
+      "m_TargetingType" : "RandomBlockOnVehicle", 
+      //   public enum TargetType
+      // {
+      //   CenterOfMass,
+      //   BestAimCabOrCentre,
+      //   RandomBlockOnVehicle
+      // }
+    },
+    "ModuleWeaponGun": { // Another component
+      //"UnityEngine.Transform": {"localScale": { "x":6, "y":6, "z":6 }}, //Bigger for placeholder - broken as it crashes the game
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      "m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      "m_ShotCooldown" : 0.0, //This is the cooldown between every burst shot.
+      //"m_ShotTimer" : -2.0,
+      "m_CooldownVariancePct" : 0.24, 
+      "m_BurstShotCount" : 2, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 0.05, //STUPIDLY FAST
+      "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      "m_HasCooldownAnim" : false, //Doesn't change anything
+      "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 500, //STUPIDLY FAST - Bullet speed - FASTER than the Zeus' approx. 200 MuzzleVelocity. Added bigger collision to collide better
+      "m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      "m_BulletSpin": 5, //Rotational inaccuraccy
+      "m_KickbackStrength": 60.0, // Would you like to become a plane
+      "m_BulletCasingPrefab": null,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0, "z":2 },
+        "localScale": { "x":0.3, "y":0.3, "z":0.5 },
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "radius": 0.15,
+          "center": { "x": 0, "y": 0, "z": 4.5 },
+          "height": 7.5 ,
+          "direction": 2
+        },
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Bullet", //What damage modifier the weapon does - To raid shielded Techs
+          "m_Damage": 40 //Damage for successful projectile contact hit
+          //was 15
+        },
+        "GameObject|_glow": {//Works
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0  }
+          },
+          "UnityEngine.Light": {
+            // "cookie": {
+            //   "mainTexture": "LED_BeamBlockB.png",
+            //   "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            //   "color": {
+            //     "r": 0.1,
+            //     "g": 0.2,
+            //     "b": 1.0,
+            //     "a": 0.2
+            //   },
+            // },
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            // "innerSpotAngle": 360.0,
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.3,
+              "a": 1.0
+            },
+            "colorTemperature": 6570.0,
+            "areaSize": 2.0,//2.0
+            "intensity": 4.0,//2.0
+            "bounceIntensity": 1.0,
+            "shadowCustomResolution": -1,
+            "shadowBias": 0.5,
+            "shadowNormalBias": 1.0,
+            "shadowNearPlane": 0.2,
+            "renderMode": "Auto",
+            //Auto, ForcePixel, ForceVertex
+            "type": "point",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 2.5,
+            "flare": null
+          },
+        },
+        "UnityEngine.LineRenderer": {
+          // "startWidth": 0.25,
+          // "endWidth": 0.25,
+          // "textureMode": 1,
+          // "numCapVertices": 8,
+          "startColor": { 
+            "r": 1.0,
+            "g": 1.0,
+            "b": 0.01,
+            "a": 0.6,
+          },
+          "endColor": { 
+            "r": 1.0,
+            "g": 1.0,
+            "b": 0.01,
+            "a": 0.0,
+          },
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          }
+        },
+        "SeekingProjectile": {
+          "m_LockOntoTarget": true, //Will this find and home in?
+          "m_ApplyRotationTowardsTarget": true, //Will it visually point at the target?
+          "m_SeekType" : "Vehicle", //What can this target?
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          "m_UpdateVisibleInterval" : 0.05, //idk
+          "m_ActivationDelay": 0.01, //How long before we aim at the target?
+          "m_VisionRange": 100, //How far can we see targets?
+          "m_VisionConeAngle": 360, //How wide can we see targets?
+          "m_TurnSpeed": 9 // How strong the turn is towards the enemy
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+             "m_LifeTime": 1.0, //Time before BOOM
+             //was 0.5 before, couldn't hit Sh*t
+            // "m_DeathDelay": 0.25,
+            // "m_ExplodeAfterLifetime": true,
+            // "m_ExplodeOnTerrain": true,
+            // "m_IgnoreCollisionWithBarrel" : true,
+            // "m_StickOnContact" : false,
+            // "m_ExplodeOnStick" : false,
+            // "m_HideProjectileOnStick": false,
+            "m_SingleImpact" : true, // The Bees are Relentless and will continuously deal damge while in the Enemy
+            //"m_CanHaveGravity" : false,
+            //"m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+            //"m_StickOnTerrain" : true,
+            // "m_ImpactSFXType" : "Hammer", //BAM
+            "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+            //"m_Trail" : {"startWidth": 3},
+            // "m_Explosion": null
+          // "SeekingProjectile": {
+          //   "m_TargetingType" : "RandomBlockOnVehicle", 
+          //   //   public enum TargetType
+          //   // {
+          //   //   CenterOfMass,
+          //   //   BestAimCabOrCentre,
+          //   //   RandomBlockOnVehicle
+          //   // }
+          //   "m_VisionRange" : 20,
+          //   "m_VisionConeAngle" : 45,
+          //   "m_TurnSpeed" : 1 // How strong the turn is towards the enemy
+          // },
+          // "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+          //   "Explosion": { //wOW a component
+          //   "m_DamageType" : "Explosion", //What damage modifier the explosion does - Setup to HEAL armor to prevent blockkill unless direct cab hit.
+          //   //"m_ExplosionSize": 0, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          //   //"m_ExplosionType": "Fuel", //What the explosion looks like
+          //   "m_EffectRadius": 1.5, //blop
+          //   "m_EffectRadiusMaxStrength": 1, 
+          //   "m_MaxDamageStrength": 10, //This affects splash damage
+          //   "m_MaxImpulseStrength": 10 //How hard to push things, explosion force -YEET
+         
+          //   }
+          // }
+        }
+      }
+    } 
+  }
+}

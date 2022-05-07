@@ -1,0 +1,167 @@
+{
+  "Name": "Old Star Heavy Iron Hammer Striker",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! The Hammer Striker uses rotational force to break almost anything from rocks, trees to bandits with its mighty hammer. With the torque from 2 motor hubs Old Star techs can guarantee that it won't jam! And don't mind its rough look, no point smoothing out its edges if it keeps making more from whatever it strikes be it rocks or would-be bandits!", //You can make multiple lines with \n
+  "ID": 300104,
+  "Faction": 4, 
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 19536,
+  "HP": 5000,
+  "Mass": 27,
+  "CenterofMass": {"x": 0.5,"y": 0.5,"z": 1.0},
+  "IconName": "OS_Hammer_Flail_Icon.png",
+  "MeshName": null, 
+  "Fragility": 0,
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 52, 52, 55, 55, 55, 55, 55, 55, ",	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "DamageableType": 1,
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "Cells": [
+    //motor 1
+    {"x": 0,"y": 1,"z":0},{"x": 1,"y": 1,"z":0},
+    {"x": 0,"y": 0,"z":0},{"x": 1,"y": 0,"z":0},
+    //motor 2
+    {"x": 0,"y": 1,"z":2},{"x": 1,"y": 1,"z":2},
+    {"x": 0,"y": 0,"z":2},{"x": 1,"y": 0,"z":2},
+    //weapon
+    {"x":-2,"y": 3,"z":1},{"x":-1,"y": 3,"z":1},{"x": 0,"y": 3,"z":1},{"x": 1,"y": 3,"z":1},{"x": 2,"y": 3,"z":1},{"x": 3,"y": 3,"z":1},
+    {"x":-2,"y": 2,"z":1},{"x":-1,"y": 2,"z":1},{"x": 0,"y": 2,"z":1},{"x": 1,"y": 2,"z":1},{"x": 2,"y": 2,"z":1},{"x": 3,"y": 2,"z":1},
+    {"x":-2,"y": 1,"z":1},{"x":-1,"y": 1,"z":1},{"x": 0,"y": 1,"z":1},{"x": 1,"y": 1,"z":1},{"x": 2,"y": 1,"z":1},{"x": 3,"y": 1,"z":1},
+    {"x":-2,"y": 0,"z":1},{"x":-1,"y": 0,"z":1},{"x": 0,"y": 0,"z":1},{"x": 1,"y": 0,"z":1},{"x": 2,"y": 0,"z":1},{"x": 3,"y": 0,"z":1},
+    {"x":-2,"y":-1,"z":1},{"x":-1,"y":-1,"z":1},{"x": 0,"y":-1,"z":1},{"x": 1,"y":-1,"z":1},{"x": 2,"y":-1,"z":1},{"x": 3,"y":-1,"z":1},
+    {"x":-2,"y":-2,"z":1},{"x":-1,"y":-2,"z":1},{"x": 0,"y":-2,"z":1},{"x": 1,"y":-2,"z":1},{"x": 2,"y":-2,"z":1},{"x": 3,"y": 3,"z":1}
+   ],
+
+  "APs": [
+    //Back
+    {"x": 0.0,"y": 0.0,"z":-0.5},{"x": 1.0,"y": 0.0,"z":-0.5},
+    {"x": 0.0,"y": 1.0,"z":-0.5},{"x": 1.0,"y": 1.0,"z":-0.5},
+    //Front
+    {"x": 0.0,"y": 0.0,"z": 2.5},{"x": 1.0,"y": 0.0,"z": 2.5},
+    {"x": 0.0,"y": 1.0,"z": 2.5},{"x": 1.0,"y": 1.0,"z": 2.5},
+    //side
+    {"x": 1.5,"y": 0.0,"z": 0.0},{"x": 1.5,"y": 1.0,"z":0.0},
+    {"x": 1.5,"y": 0.0,"z": 2.0},{"x": 1.5,"y": 1.0,"z":2.0}
+  ],
+
+  "GamePrefabReference": "GC_MiningFlail_663",
+  "KeepRenderers": false,
+  "KeepColliders": true,
+  "ReferenceOffset": {"x": 0.0,"y": 0.0,"z": 0.0},
+    
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_MiningFlail_663_Base",
+      "MakeBoxCollider": true,
+      "MeshName": "OS_HF_Base.obj",
+      "ColliderMeshName":"OS_HF_Base.obj",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GC_MiningFlail_663_Weapon_3",
+      "MeshName": "OS_HF_Hammer.obj",
+      "ColliderMeshName": "OS_HF_Hammer.obj"
+    },
+    {
+      "SubOverrideName": "m_GC_MiningFlail_663_Weapon_2",
+      "MeshName": "OS_HF_Weight.obj",
+      "ColliderMeshName": "OS_HF_Weight.obj",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "m_GC_MiningFlail_663_Weapon_1",
+      "MeshName": "OS_HF_Weight.obj",
+      "ColliderMeshName": "OS_HF_Weight.obj",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "m_GC_MiningFlail_663_RotatingPart",
+      "MakeBoxCollider": true,
+      "MeshName": "OS_HF_Spinner.obj",
+      "ColliderMeshName": "OS_HF_Spinner.obj",
+      "DestroyExistingRenderer": true
+    },
+    { "OverrideName": "_Spindle",
+        "SubRotation": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "SubPosition": {"x": 0.5,"y": 0.5,"z": 0.0}                
+    }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleDamage": {//Death Explosion editor
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+                                                      // Borrow a clean projectile explosion for this block's death
+                                                      // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+      "Instantiate|deathExplosion": {             // Instantiate after referencing to modify
+          "Explosion": {
+              "m_EffectRadius": 25,               // Outer radius, damage is 0 to max
+              "m_EffectRadiusMaxStrength": 15,    // Inner radius, damage is at max within here
+              "m_ExplosionSize": 2,               // 2: Large
+              "m_MaxDamageStrength": 1500,        // 
+              "m_MaxImpulseStrength": 200,        // 
+              "DoDamage": false
+          },
+          "GameObject|Sparks": {          // Flying sparks
+              "ParticleSystem": {
+                  "startSpeed": 20.0,
+                  "startSize": 5,
+                  "startLifetime": 4,
+                  "gravityModifier": 0.5,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|ExplosionSmoke": {  // Smog
+              "ParticleSystem": {
+                  "startDelay": 0.1,
+                  "startSpeed": 100,
+                  "startSize": 170,
+                  "startLifetime": 7,
+                  "gravityModifier": 0.0,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|ExplosionDark": {   // It looks like weird biscuits
+              "ParticleSystem": {
+                  "startDelay": 0.2,
+                  "startSpeed": 60,
+                  "startSize": 8,
+                  "startLifetime": 2,
+                  "gravityModifier": 0.05,
+                  "maxParticles": 1000
+              }
+          }, 
+          "GameObject|ExplosionBright": { // The glow
+              "ParticleSystem": {
+                  "startSpeed": 40,
+                  "startSize": 70,
+                  "startLifetime": 3,
+                  "gravityModifier": -0.2,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|Point light": {     // The light that catches all on fire
+              "UnityEngine.Light": {
+                  "intensity": 50.0,
+                  "range": 34.0
+              },
+              "FadeInOutLight": {
+                  "StartDelay": 0.0,
+                  "FadeInSpeed": 0.5,
+                  "FadeOutDelay": 0.0,
+                  "FadeOutSpeed": 1
+              }
+          } // The actual glow
+      }
+  },
+  "ModuleDrill": {
+    "impactDamageMultiplier": 5.0,
+    "damagePerSecond": 2800.0,
+    "m_SpinOnCollisionDuration": 1
+}
+  }
+}

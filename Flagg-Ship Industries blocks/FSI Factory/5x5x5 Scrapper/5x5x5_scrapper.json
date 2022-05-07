@@ -1,0 +1,334 @@
+
+// Would just like to use this space to thank Aceba1/WhitePaw2002 for the time and effort he put into this for me. Thank you <3
+
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+
+// Helpful site for https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+  "Name": "Better Future Cubic Scrapper",
+  "Description": "A massive scrapper for massive blocks. Also universal as well since FSI has branched out to more than just Better Future.", //You can make multiple lines with \n
+  "ID": 1700235, //A random ID that MUST be unique
+
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 0, //The desired grade minus one
+  "Price": 189870  , //The price is measured by sum of recipe value times 3
+  "HP": 10000, //A GSO one block has 250 health
+  "Mass": 25,
+  //"CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.0},
+
+  //"Fragility": 1.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  //"DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 2, // Common = 0, Uncommon = 1, Rare = 2
+
+  //"Recipe": "PlumbiaIngot, 5, plumbiteore", // Separate chunk names or IDs with a comma. Not case sensitive.
+  "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 63, 63, 63, 63, 63, 64, 64, 64, 64, 64, ", 	
+	
+	
+	
+	
+	
+	
+  
+
+  "IconName": "5x5x5_Scrapper_Icon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "Scrapper_Body.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+  "MeshColliderName": "Scrapper_Col.obj",
+
+  "MaterialName": "BF_Main",
+
+  //"MeshTextureName": "BF_1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  //"MeshGlossTextureName": "BF_2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  //"MeshEmissionTextureName": "BF_3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+  
+  "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },	
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		 { "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		 { "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },	
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },	
+        { "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+        { "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 3, "y": 4, "z": 1 },
+		{ "x": 3, "y": 4, "z": 2 },
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+	
+		
+		
+		
+		
+
+		
+    ],
+
+  /*  EITHER  */
+  //"APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+  /*  OR  */
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    //output
+	{ "x": 2, "y": 1, "z": -0.5},
+	
+	//bottom
+    { "x": 0, "y": -0.5, "z": 0},
+	{ "x": 0, "y": -0.5, "z": 4},
+	{ "x": 4, "y": -0.5, "z": 0},
+	{ "x": 4, "y": -0.5, "z": 4},
+	
+	//left
+	{ "x": -0.5, "y": 0, "z": 0},
+	{ "x": -0.5, "y": 0, "z": 4},
+	{ "x": -0.5, "y": 4, "z": 0},
+	
+	//right
+	{ "x": 4.5, "y": 0, "z": 0},
+	{ "x": 4.5, "y": 0, "z": 4},
+	{ "x": 4.5, "y": 4, "z": 0},
+	
+	//top
+	{ "x": 0, "y": 4.5, "z": 0},
+	{ "x": 4, "y": 4.5, "z": 0},
+	
+	//front
+	{ "x": 0, "y": 0, "z": 4.5},
+	{ "x": 4, "y": 0, "z": 4.5},
+	
+	//back
+	{ "x": 0, "y": 0, "z": -0.5},
+	{ "x": 0, "y": 4, "z": -0.5},
+	{ "x": 4, "y": 0, "z": -0.5},
+	{ "x": 4, "y": 4, "z": -0.5},
+	
+	
+  ],
+
+  // "EXP_Scrapper_322"
+  "GamePrefabReference": 1065, //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  "DeathExplosionReference": "HE_Exploder_211",//52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  
+  "ReferenceOffset": { // Move the animation right to the center, following the scale
+    "x": 2.0,
+    "y": 1.0,
+    "z": 2.3
+  }, //Shift the subobjects of the block prefab by x, y and z
+  "ReferenceRotationOffset": { // The block and animation are along the X axis, this fixes it to the Z axis
+    "x": 0, // Pitch
+    "y": -90, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  "ReferenceScale": { // Squish the side and top down to 'line up' the animation
+    "x": 1,
+    "y": 1,
+    "z": 0.01
+  }, //Scale all the subobjects of the block prefab by the origin
+  
+  "Deserializer": { // This will modify the block's hierarchy
+    "ModuleRecipeProvider": { // Access the ModuleRecipeProvider component
+      "m_RecipeListNames": [ // Modify this array to contain the scrapping recipes of every corp block table
+        {
+          "name": "gsofab", // The name of the recipe table
+          "inverted": true // Flip the recipe to scrap instead of craft
+        }, {
+          "name": "gcfab",
+          "inverted": true
+        }, {
+          "name": "venfab",
+          "inverted": true
+        }, {
+          "name": "hefab",
+          "inverted": true
+        }, {
+          "name": "bffab",
+          "inverted": true
+        }, {
+          "name": "rrfab",
+          "inverted": true
+        }
+      ]
+    },
+
+    "ModuleItemConsume": {
+      "m_Input": {
+        "localPos": { "x": 2, "y": 3, "z": 3 } // Input
+      },
+      "m_Consume": {
+        "localPos": { "x": 2, "y": 2, "z": 2.5 } // Consume
+      },
+      "m_Output": {
+        "localPos": { "x": 2, "y": 1.50, "z": 0.0 } // Output
+      }
+    },
+
+    "ModuleItemPickup": {
+      "m_PickupRange": 50.0, // 10.0
+      "m_VisionRefreshInterval": 1, // 1.0
+      "m_PrePickupPeriod": 5.0, // 5.0
+
+      "m_SpecificPickupStack": {
+        "localPos": { "x": 2, "y": 3, "z": 3.5 } // Pickup
+      },
+      "m_HandOffStack": {
+        "localPos": { "x": 2, "y": 3, "z": 3} // Input
+      }
+    },
+
+    "ModuleItemHolder": {
+      "m_OverrideBasePositons": [
+        { "x": 2, "y": 3, "z": 3 }, // Input
+        { "x": 2, "y": 1.50, "z": 0.0 }, // Output
+        { "x": 2, "y": 2, "z": 2.5 }, // Consume
+        { "x": 2, "y": 3, "z": 3.5 } // Pickup
+      ],
+      "m_OverrideAPConnections": [
+        {}, { "indices": [0] }, {}, {}
+      ],
+
+
+
+      //Not Part Of The Coords z = face forward
+      "m_StackUpDir": { "x": 0.0, "y": 1.0, "z": 0.0 } // Force stacks to face forward
+    },
+
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": 0.25, // Squish beams down
+      "m_HeightIncrementScale": 4 // Keep items separate though
+    },
+
+    "GameObject|theSpinner": { // The ball that processes the blocks
+      "Spinner": {
+        "m_Speed": 0.5,
+        "m_AutoSpin": true,
+        "m_RotationAxis": { "axis": 2 }
+      }
+    }, 
+    "GameObject|thePlatform": { // The ring that holds the output chunks
+      "Spinner": {
+        "m_Speed": -0.5,
+        "m_AutoSpin": true,
+        "m_RotationAxis": { "axis": 2 }
+      }
+    },
+    "ModuleAnchor": null // Destroy the anchor
+  }
+
+  //"SubObjects": [
+   // {
+    //  "ObjectName": "theSpinner", // Access the object created above
+   //   "MeshName": "TheEverythingScrapper_Spinner.obj", // This uses the material defined further above
+   //   "Position": {"x": 2, "y": 2.27, "z": 2.3}
+  //  }, {
+   //   "ObjectName": "thePlatform",
+  //    "MeshName": "TheEverythingScrapper_Platform.obj",
+  //    "Position": {"x": 2, "y": 2.22, "z": -0.2}
+    }
+  

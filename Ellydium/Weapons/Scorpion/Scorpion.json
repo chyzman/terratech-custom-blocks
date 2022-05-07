@@ -1,0 +1,551 @@
+{
+    "Name":                 "Scorpion",
+    "Description":          "Scorpion Particle accelerator is a highly accurate weapon with shield penertration abilities",
+
+    "ID": 620032,
+
+    "Faction": 5,        
+
+    "Category": 4,        
+    "Rarity": 2,
+    "Grade": 3,             
+    "Price": 61244,        
+  
+	
+    "IconName":                   "Scorpion.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "HP": 3500,                            
+    "Mass": 129,
+
+    "DamageableType": 0,    
+    "Fragility": 1,
+    
+   "CellMap": [             
+        [ // Z Layer 0
+			"xxx",
+            "   ",
+            "   ",
+
+        ],
+		[ // Z Layer 1
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 2
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 3
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 4
+			"xxx",
+            "   ",
+            "   ",
+
+        ],
+		[ // Z Layer 5
+			"xxx",
+            "   ",
+            "   ",
+
+        ],[ // Z Layer 6
+			"xxx",
+            "   ",
+            "   ",
+
+        ],[ // Z Layer 7
+			"xxx",
+            "   ",
+            "   ",
+
+        ],
+    ],	
+
+    "APs": [
+        {"x": 1, "y": -0.5, "z": 2 },
+		{"x": 0, "y": -0.5, "z": 1 },
+		{"x": 2, "y": -0.5, "z": 1 },
+		{"x": 0, "y": -0.5, "z": 3 },
+		{"x": 2, "y": -0.5, "z": 3 },
+    ],
+
+    "GamePrefabReference":    "HE_Cannon_Turret_Short_525",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 1, "y": 1, "z": 2 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Base", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Scorpion_Base.obj",
+        "MeshTextureName": 			"Ellydium 1.png", 
+        "MeshGlossTextureName": 	"Ellydium 2.png", 
+        "MeshEmissionTextureName": 	"Ellydium 3.png",
+		"ColliderMeshName":         "Scorpion_Base.obj",
+        "SubPosition":              { "x": 1, "y": -0.5, "z": 2 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Turret", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Scorpion_Gimbal.obj",
+        "MeshTextureName": 			"Ellydium 1.png", 
+        "MeshGlossTextureName": 	"Ellydium 2.png", 
+        "MeshEmissionTextureName": 	"Ellydium 3.png", 
+        "ColliderMeshName":         "Scorpion_Gimbal.obj",
+        "SubPosition":              { "x": 0, "y": -1, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_GunMantlet", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "null.obj",
+		"MeshTextureName": 			"Ellydium 1.png", 
+		"MeshGlossTextureName": 	"Ellydium 2.png", 
+		"MeshEmissionTextureName": 	"Ellydium 3.png", 
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -1.6, "z": -0.3 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Scorpion_Barrel.obj",
+		"MeshTextureName": 			"Ellydium 1.png", 
+		"MeshGlossTextureName": 	"Ellydium 2.png", 
+		"MeshEmissionTextureName": 	"Ellydium 3.png", 
+        "ColliderMeshName":         "Scorpion_Barrel.obj",
+        "SubPosition":              { "x": 0, "y": -1.6, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+     { 
+        "SubOverrideName":          "_bulletSpawn", 
+        "SubPosition":              { "x": 0, "y": 1, "z": 5},
+        "SubScale":                 { "x": 0.1, "y": 0.1, "z": 0.1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_muzzleFlash",
+        "SubPosition":              { "x": 0, "y": 1, "z": 5 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+      { 
+        "SubOverrideName":          "_smoke",
+        "SubPosition":              { "x": 0, "y": 1, "z": 5.3},
+        "SubScale":                 { "x": 2, "y": 2, "z": 2 }
+      },
+   ],
+
+    "Deserializer": {    
+      "GameObject|_gimbalBase":{
+        "GimbalAimer": { 
+            "rotationLimits": [-180, 180],
+            "rotationAxis": 2 
+          },
+        "GameObject|_gimbalElev":{
+          "GimbalAimer": { 
+          "rotationLimits": [-25, 25 	] 
+        },
+        }
+		
+      },
+		
+
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 3,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+		"m_RotateSpeed": 40.0, 
+        "m_ChangeTargetInteval": 0.5,
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 180.0,
+        "m_FireSFXType": 64,
+        "m_CooldownVariancePct": 0.01,          // Dictates how random the length of pause between shots.
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward targets
+       
+        },
+
+      "Reference|HE_Cannon_Battleship_216/FireData.": {
+                "m_MuzzleVelocity": 2000.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+                "m_KickbackStrength": 100.0,            // Dictates the strength of the recoil when firing the gun
+                "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+                "m_BulletSpin": 10.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+     "Instantiate|m_BulletCasingPrefab": null,
+                
+                /********** Bullet Prefab **********/
+                "Instantiate|m_BulletPrefab": {
+                    "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                        "ParticleSystem": {
+                            "startSize":    0.3,
+                            "duration":     10.0,
+                            "emissionRate": 20000.0,
+							"startLifetime": 10.5,
+//                            "main":{
+//                              "startDelayMultiplier": 0.0,
+//                              "prewarm": true
+//                            }
+                        }
+                    },
+    
+                    "Rigidbody":{
+                        "useGravity": false
+                    },
+    
+                    // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+                   "UnityEngine.CapsuleCollider": {
+                        "gameObject": {
+                            "layer": 1       // Shield - allows piercing 
+                        },
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0
+                        },
+                        "radius": 0.60,
+                        "height": 10,
+                        "direction": 2,
+                    },
+    
+                    // This is the bullet's white trail. 
+                    "Reference|GC_Battery_424.ModuleDamage.deathExplosion/FX_Lightning": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":2, "y":2, "z":2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 0.915
+                },
+				"shape": {
+                      "shapeType": 5,
+                      "randomDirectionAmount": 1000,
+                      "alignToDirection": true,
+                      "meshRenderer": null,
+                      "normalOffset": 0,
+                      "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "scale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+                    },
+                    "emission": {
+                      "rateOverTimeMultiplier": 1000.0
+                    },
+                "startSize": 0.5,
+                // "endSize": 15.0,
+                "startSpeed": 1.5, //How far you want the particles to spread
+                "emissionRate": 500.0,
+                "maxParticles": 50,
+                "emission": {
+                  "burstCount": 1,
+                  "rateMultiplier": 20.0,
+                  "rateOverTimeMultiplier": 30,
+                  "burst": {
+                    "count": 200,
+                    //"cycleCount": 1,
+                    "maxCount": 200,
+                    "minCount": 10,
+                    // "probability": 150,
+                    // "repeatInterval": 150,
+                    //"time": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+                  
+                    "Projectile":{
+                        "m_Damage": 50000,                  // The damage of the bullet when directly hitting a block
+                        "m_LifeTime": 10.0,                  // The duration of the bullet's existence before despawning
+                        "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                        "m_IgnoreCollisionWithBarrel": true,
+                                  "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": {
+                                "m_ExplosionType": 3,                    // Dictates the damage type of the explosion
+                                "m_EffectRadiusMaxStrength": 3.0,
+                                "m_EffectRadius": 1.5,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                                "m_MaxDamageStrength":      8000.0,        // The splash damage done
+                                "m_MaxImpulseStrength":     100.0
+            },
+            "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Shockwave": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 35.0,
+                    "startRotation": 5.0,
+                    "startSpeed": 0.0, //How far you want the particles to spread
+                    "startColor": {
+                      "r": 0.6,
+                      "g": 0.6,
+                      "b": 1.0,
+                      "a": 0.75
+                    },
+                    // "emissionRate": 25.0,
+                    "maxParticles": 1,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 1,
+                        "maxCount": 1,
+                        "minCount": 1,
+                      }
+                    },
+                    // "duration": 8.0,
+                    "playbackSpeed": 1.0,
+                    "shape": {
+                      // "meshScale": 1.0,
+                      "randomDirection": true,
+                      // "enabled": true,
+                      // "shapeType": 4,
+                      "randomDirectionAmount": 4.5,
+                      "sphericalDirectionAmount": 17.6,
+                      "randomPositionAmount": 0.0,
+                    },
+                    "rotationOverLifetime": {
+                      "enabled": true,
+                      "xMultiplier": 1.0,
+                      "yMultiplier": 0.0,
+                      "zMultiplier": 0.0,
+                      "separateAxes": false
+                    },
+                    // "randomizeRotationDirection": 90.0,
+                    "startRotationMultiplier": 1.0,
+                    "startRotationXMultiplier": 1.0,
+                    "startRotationYMultiplier": 1.0,
+                    "startRotationZMultiplier": 1.0,
+                    "flipRotation": 90.0,
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionBright": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.0,
+                    "startSpeed": 0, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 0,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 0,
+                        //"cycleCount": 1,
+                        "maxCount": 0, 
+                        "minCount": 0,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    },
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.0,
+                    "endSize": 0.0,
+                    "startSpeed": 0, //How far you want the particles to spread
+                    "emissionRate": 5.0,
+                    "maxParticles": 0,
+                    "emission": {
+                      "rateMultiplier": 1.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 0,
+                        //"cycleCount": 1,
+                        "maxCount": 0,
+                        "minCount": 0,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.0,
+                    "endSize": 0.0,
+                    "startSpeed": 0, //How far you want the particles to spread
+                    "emissionRate": 5.0,
+                    "maxParticles": 0,
+                    "emission": {
+                      "burstCount": 1,
+                      "rateMultiplier": 1.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 0,
+                        //"cycleCount": 1,
+                        "maxCount": 0,
+                        "minCount": 0,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|Point light": {
+              "UnityEngine.Light": {
+                // "spotAngle": 60.0,
+                "color": {
+                  "r": 0.6,
+                  "g": 0.6,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                // "colorTemperature": 6570.0,
+                "intensity": 7.5,//2.0
+                // "bounceIntensity": 1.0,
+                // "shadowCustomResolution": -1,
+                // "shadowBias": 0.5,
+                // "shadowNormalBias": 1.0,
+                // "shadowNearPlane": 0.2,
+                "range": 8.5,
+                // "flare": null
+              },
+              "FadeInOutLight": {
+                "StartDelay": 0.0,
+                "FadeInSpeed": 0.05,
+                "FadeOutDelay": 0.2,
+                "FadeOutSpeed": 0.05,
+                "FadeOutAfterCollision": true,
+                "UseHideStatus": true,
+                // "goLight": "TheLightSpecifiedAbove",
+                // "canStart": true,
+              }
+            },
+            "Reference|GC_Battery_424.ModuleDamage.deathExplosion/FX_Lightning": { 
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":1 },
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 1.0,
+                      "g": 1.0,
+                      "b": 1.0,
+                      "a": 0.915
+                    },
+                    "startSize": 3.5,
+                    // "endSize": 15.0,
+                    "startSpeed": 2.5, //How far you want the particles to spread
+                    "emissionRate": 250.0,
+                    "maxParticles": 250,
+                    "emission": {
+                      "burstCount": 1,
+                      "rateMultiplier": 100.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 150,
+                        //"cycleCount": 1,
+                        "maxCount": 150,
+                        "minCount": 150,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|Sparks": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.1,
+                      "g": 0.2,
+                      "b": 1.0,
+                      "a": 0.915
+                    },
+                    "startSize": 2.0,
+                    "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 20,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 20,
+                        //"cycleCount": 1,
+                        "maxCount": 20, 
+                        "minCount": 18,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            }
+		}
+		}
+		}
+		
+		},
+      
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        "m_RotateSpeed": 50, 
+        "m_ChangeTargetInteval": 0.5,
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 180.0,
+        "m_FireSFXType": 64,
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+		
+  },
+  }
+}

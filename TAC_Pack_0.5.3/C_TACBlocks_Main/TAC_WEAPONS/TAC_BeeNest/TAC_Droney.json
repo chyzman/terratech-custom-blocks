@@ -1,0 +1,884 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Repair Bee Commando",
+  "Description": "A cute little repair bee. Embrace the little fella! \n\nRepair Bee Commandos do what no other repair bee can do. They run in and distract the enemy with their radar signature and tear into the enemy's cab department.  They may not be strong enough to carry objects or survive direct fire, but when they do get to the enemy, you will know of it. \n\nThe most notible of all Repair Bee Commandos to date is Droney, a bee that managed to dismantle an ENTIRE defense force and still survive to this day.  \n\nTo Bee willing is to Bee determined, I think.", //You can make multiple lines with \n
+  "ID": 584266, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 47625, //Buzzz
+  "HP": 200,//Weaker than GSO One block
+  "Mass": 0.52,//It's a bee, malleo
+
+  "IconName": "BuilderBee.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "53, 53, 62, 63, 64, 65, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Repair_Bubble(111)",//(was VEN_FuelTank(212))VERY explosive. - Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_VEN_Regen_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "Droney_Bee_TAC.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Remove rings
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Remove rings
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Remove rings
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Remove rings
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Remove rings
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|FXGSORepairCharge(Clone)": { //The Bubble Charging effect
+      "GameObject|FXGSORepairChargeSphere": {
+      }
+    },
+    "GameObject|aCol": {
+      "UnityEngine.SphereCollider": {
+        "radius": 0.0,
+        "center": { "x": 0, "y": 0.25, "z": -2.5 },
+      }
+    },
+    "GameObject|_shield": { //The actual Shield
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          // "UnityEngine_SphereCollider": { //Cannot change directly, "ModuleShieldGenerator" overrules this
+          //   "radius": 0.5
+          // },
+        },
+        "GameObject|_bubbleBulletTrigger": {
+        },
+        "GameObject|_bubbleCollider": {
+        },
+        // "GameObject|ShieldSphereOuter": {
+        //   "GameObject|ShieldSphereInner": null,
+        //   "GameObject|ShieldSphereOuter": null,
+        // },
+        "GameObject|ShieldSphereOuter": null,
+        "Spinner": {
+          "m_Speed": 0.2,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.05,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+      "GameObject|_projector": {
+        "GameObject|_particles4": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles3": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles2": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles1": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        }
+      }
+    },
+    "GameObject|m_VEN_Regen_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":3.0, "y":3.0, "z":3.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-0.35, "z":0.0 } 
+      },
+    },
+    "GameObject|m_HB_Core": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":90, "y":0, "z":270 },
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "gameObject": {
+          "layer": 20, //ID 524288
+        },
+        //"contactOffset": 0.00,
+        "enabled": true,
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 0.24,
+        "height": 0.48,
+        "direction": 2,
+        // "isTrigger": false
+      }
+    },
+    "Reference|BF_Hover_Ring_Small_212/m_BF_Hover_Ring_Small_212_Hover": { //Top
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0.5, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          "forceMax": 100.0, //beee
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 0.10, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 10.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 45.0,
+          "m_AutoStabiliseStrength": 0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystem": {
+            // "startDelay": 0.0,
+            // "loop": true,
+            // "playOnAwake": true,
+            // "duration": 0.6,
+            // "playbackSpeed": 1.0,
+            // "enableEmission": true,
+            // "emissionRate": 5.0,
+            "startSpeed": 0.0,
+            "startSize": 0.0,
+            "maxParticles": 0,
+          },
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover": { //Bottom
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":-0.5, "z":0 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          "forceMax": 125.0, //beee
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 0.15, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 90.0,//was 30.0 //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 20.0,//was 45
+          "m_AutoStabiliseStrength": 0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleEngine": null,
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy": { //Right
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":-0.5, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleEngine": null,
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy": { //Left
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          // "UnityEngine.ParticleEngine": null,
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy": { //Hoverer
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":-0.5, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 10.0,
+          "forceMax": 125.0, //beee
+          "forceRangeMax": 10.0, //How far the hover reaches
+          "m_DampingScale": 0.05, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 20.0,
+          "m_VectoredThrustMaxAngle": 0.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 0.0,
+          "m_AutoStabiliseStrength": 0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 1.0,
+          "m_HoverPowerMax": 1.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleEngine": null,
+        }
+      }
+    },
+
+    //Gun
+    "Reference|BF_Cab_212/_gimbalBase_R": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":0, "y":-0.35, "z":-0.01 } //x:1.65
+      },
+      "GimbalAimer": { //Useful component
+        "rotationLimits": [-180, 180] //[-Left,+Right](Degrees)
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": { //Useful component
+          "rotationLimits": [-180, 180] //[-Up,+Down](Degrees)
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 } //x:1.65
+        },
+        "Reference|VEN_SteeringHoverSingle_111/boosterFront": {//forwards Turret motivation
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0.35, "z":0 },
+            "localEulerAngles": { "x":0, "y":90, "z":00 } 
+          },
+          "GameObject|m_BoosterRocketFlame_01": null,
+          "BoosterJet":{
+            "m_Force": 175.0,
+            "m_BurnRate": 0.0,
+            "m_FireRateFalloff": 16.0,
+            "m_DetachedForceFactor": 1.0,
+            "m_ConsumesFuel": false,
+            "m_AutoStabiliseStrength": 0.1,
+            // "m_TargetRigidBody": null,
+            "m_FireControl": false,
+          }
+        },
+        // "GameObject|_barrel": null,
+        // "Reference|BF_Laser_Turret_212/_gimbalBase/_gimbalElev/_barrel": { 
+        "GameObject|_barrel": {
+
+          // "Spinner": null,
+          // "Spinner": {
+          //   "m_Speed": 1.0,
+          //   // "m_RotationAxis": {
+          //   //   "axis": 2
+          //   // },
+          //   // "m_SteerAxis": {
+          //   //   "axis": 1
+          //   // },
+          //   "m_AutoSpin": false,
+          //   "m_SpinUpTime": 0.01,
+          // },
+          "UnityEngine.Transform": {
+            //"localScale": { "x":3, "y":3, "z":3 },
+            "localPosition": { "x":0, "y":0, "z":0 }, //x:1.65
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          // "Reference|BF_Laser_Turret_313/_gimbalBase/_gimbalElev/_barrel/_beam": { //Visual
+          // },
+
+          // "Reference|BF_Laser_Turret_212/_gimbalBase/_gimbalElev/_barrel/_beam": {
+          // "GameObject|_beam": {
+          //   "UnityEngine.Transform": {
+          //     "localPosition": { "x":0, "y":0, "z":0.2 }, //x:1.65
+          //     "localEulerAngles": { "x":0, "y":0, "z":0 }
+          //   },
+          //   "BeamWeapon": {
+          //     // "m_DamagePerSecond": 2500,
+          //     // "m_Range": 750,
+          //     // "m_DamageType": 2,
+          //     // "m_FadeOutTime": 0.075,
+          //     //
+          //     "m_Range": 2.75,
+          //     "m_DamagePerSecond": 250,
+          //     "m_DamageType": 2,
+          //     "m_FadeOutTime": 1.0,
+          //     "Instantiate|m_HitParticlesPrefab": {
+          //       "Reference|GSO_FixedDrill_112/_sparksLocator": {
+          //         "UnityEngine.Transform": { 
+          //           "localPosition": { "x":0, "y":0, "z":0 },
+          //           "localEulerAngles": { "x":0, "y":0, "z":0 },
+          //         },
+          //         "GameObject|SparksDrill": {
+          //           "UnityEngine.ParticleSystem": {
+          //             "maxParticles": 100,
+          //             "playOnAwake": true,
+          //           },
+          //           "UnityEngine.Transform": { 
+          //             "localPosition": { "x":0, "y":0, "z":0 },
+          //             "localEulerAngles": { "x":0, "y":0, "z":0 },
+          //           },
+          //         }
+          //       }
+          //     }
+          //   },
+
+          //   "UnityEngine.LineRenderer": {
+          //     "startWidth": 0.0,
+          //     "endWidth": 0.0,
+          //   },
+          // },
+
+          "CannonBarrel": {
+            "beamWeapon": "/_gimbalBase_R/_gimbalElev/_barrel/_beam/BeamWeapon.",
+            // "recoiling": false,
+            // "animState": null,
+            // "recoilAnim": null,
+            "m_CachedHasClearLineOfFire": true,
+            "m_CachedClearLineOfFireFrameIndex": 1,
+            "Range": 200,
+            "m_FireSpinner": null,
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0.0 }
+              },
+              "UnityEngine.Light": {
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.05,
+                  "a": 1.0
+                },
+              },
+            }
+          },
+        }, 
+      }
+    },
+
+    "GameObject|CentreOfMass": {// RECENTERING...
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+      },
+    },
+
+    "Reference|VEN_SteeringHoverSingle_111/boosterFront": {//forwards motivation
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":270, "z":00 } 
+      },
+      "GameObject|m_BoosterRocketFlame_01": null,
+      "BoosterJet":{
+        "m_Force": 175.0,
+        "m_BurnRate": 0.0,
+        "m_FireRateFalloff": 0.1,
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": false,
+        "m_AutoStabiliseStrength": 0.1,
+        // "m_TargetRigidBody": null,
+        "m_FireControl": false,
+      }
+    },
+
+
+    //--------------------------------------
+    //------------ BEGIN CODING ------------
+    //--------------------------------------
+
+    "Reference|VEN_SteeringHoverSingle_111/ModuleBooster.": {},
+    "Damageable": { //Modify the base stats
+      //"m_OrigMaxHealth": 300.0,
+      //"m_DamageableType": 3,
+      //"m_HealingOrigin": null,
+      "m_AoEDamageBlockPercent": 0.05,//hitting a bee with an explosive is hard
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false //Hmmmmmm...
+      // "m_HealthFixed": 1228800,
+      // "m_MaxHealthFixed": 1228800,
+    },
+    "ModuleVision": { //Temp Arty Tests
+      "visionRange": 150,//same as cab range
+      "visionConeAngle": 360,
+      "m_Range": 150
+    },
+    "ModuleEnergy": {
+      "m_Priority": -10,
+      "m_OutputPerSecond": 0.0,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 3,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 0.0,
+      "m_GeneratingSFXType": 0,
+      "m_AnimatorController": null,
+      "m_AudioProvider": null,
+      "m_ThermalGroundRadius": 0.0,
+      "m_ThermalSourceInRange": null,
+      "m_PowerUpRemaining": 0.0,
+      "m_SequenceNode": null,
+    },
+    "ModuleEnergyStore": {
+      "m_EnergyType": 0,
+      "m_Capacity": 300, //Bee Battery
+      "m_AcceptRemoteCharge": true,
+      "m_ShowWarningWhenLeft": 0.1,
+      "m_ShowWarning": true,
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 0.25, //dismal, smaller than VEN
+      // "m_MaxScale": 5.0,
+      "m_EnergyConsumptionPerSec": 1.0, //Very economical
+      "m_InitialChargeEnergy": 750.0,//You must kickstart it
+      "m_InterpTimeOn": 0.2, //How fast the shield inflates- SLOW, highly suggest only using on non-shielded techs.
+      "m_InterpTimeOff": 0.4,//How fast the shield deflates
+      "m_EnergyConsumedPerDamagePoint": 0.1,// less than VEN's 0.15
+      "m_Healing": true,
+      "m_HealingHeartbeatInterval": 0.50,//VEN is 0.75 - We want to keep those blocks alive
+      "m_MaxHealingPerHeartbeat": 250.0, //VEN is 100 - Setting this to negative DENIES repairs, not deal damage
+      "m_EnergyConsumedPerPointHealed": 0.15, //VEN is 0.1
+      "m_PowerUpDelay": 2.0,//Slow startup
+    },
+    "ModuleStabiliser": {},//Related to the BF Cab and the Stabilizer computer
+    "ModuleHover": {
+      "m_HoverPower": 1.0,
+      "m_HoverSize": 2,
+    },
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,//related to Trim Gyro - max allowed angle cone
+      "m_TrimAdjustSpeed": 0.0, //related to Trim Gyro
+      "m_UsePassive": 0, //Is this a passive gyro?
+      "m_UseActive": 1, //Is this an active gyro?
+      "m_ActiveSpeed": 10.0, //How forceful is the Gyro?
+      //Was 40
+      "m_ActiveStability": 0.1, //How much do we want to dampen the movement?
+      // "m_RotationAnimTransform": null, //idk
+      // "m_RotationAnimSpeed": 0.0, //How fast does the trippy gyro animation play?
+      // "m_RotationMinSpeed": 10.0, //Active Speed falloff point
+      // "m_RotationMaxSpeed": 60.0, //max speed for rotating back upright
+      "m_Trim": 0.0, //Starting trim
+      "m_HasTurnInput": false, //Is this a Reaction Wheel?
+      "m_HasDriveInput": false, //Will this do something if "W" is pressed?
+      "m_ControlTrim": 0.0, //idk - likely for Reaction Wheels/Controlled rotation
+      "m_ControlTrimTarget": 0.0 //idk - likely scrapped concept for enemy-based tech auto aiming for MTs
+    },
+    "ModuleTechController": { //Let's-a-Control!
+      "m_PlayerInput": false,
+      "HandlesPlayerInput": false
+    },
+    "ModuleAIBot": {
+      "m_AITypesEnabled": ["Harvest", "Idle", "Escort"]
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "FireworksLauncher",//32,
+      "m_AutoFire": true,
+      "m_ShotCooldown": 0.5,
+      "m_LimitedShootAngle": 170,
+      // "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+      "m_RotateSpeed" : 2500.0 //SPEED of turret aiming, not homing
+    },       
+    "ModuleWeaponGun": {
+      "m_FireControlMode": "AllAtOnce", //IMPORTANT: enables "BurstGun" mode
+      "m_ShotCooldown": 0.25,
+      "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+    },
+    //BF_Cab_212
+    "Reference|VEN_MicroMissile_112/FireData.": { //Component, with lazors
+      "m_MuzzleVelocity": 25, 
+      // "m_MuzzleVelocity": 80, //Bullet speed - Slower than the Zeus' approx. 200 MuzzleVelocity. Tested faster values than Zeus and clipping issues began
+      "m_BulletSprayVariance": 1,//was 0.01 //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 0, //2.5 - Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":0.5 }
+        },                                                                
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Energy", //What damage modifier the weapon does
+          "m_Damage": 9 //Damage for successful projectile contact hit
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Explosive",
+          "m_ExplodeAfterLifetime": true,
+          "m_LifeTime": 0.75, //Time before BOOM
+          "m_DeathDelay": 0.0, //Time before BOOM
+          "m_SeekingRounds" : true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel" : true, //Enabling this prevents it from being able to hit copies of itself
+          "m_Explosion": null
+          // "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+          //   "Explosion": null,             //wOW a component
+          //     //"m_DamageType" : "Explosive", //What damage modifier the explosion does
+          //   //   "m_Once": false, //This is an enum with values 0 1 and 2 for SFX
+          //   //   "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX
+          //   //   "m_EffectRadius": 1.0, //womp
+          //   //   "m_EffectRadiusMaxStrength": 0.5, //Max Radius before the effect deals less damage outwards
+          //   //   "m_MaxDamageStrength": 1, // boop
+          //   //   "m_MaxImpulseStrength": -25//-2000//1 //meh
+          //   // },
+          // },
+        },
+
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.5, "y":0.5, "z":0.5 }, 
+            "localPosition": { "x":0, "y":0.0, "z":0 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "BoosterJet": {
+            "m_Force": 0.05,
+            //"m_BurnRate": 60.0,
+            //"m_FireRateFalloff": 3.0,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1.5 }, 
+              "localPosition": { "x":0, "y":0, "z":0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0 }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              "ParticleSystem": {
+                "maxParticles": 0,
+              }
+            },
+          }
+        },
+        "SeekingProjectile": { //- Homing effect for resources
+          "m_LockOntoTarget": true, //Will this find and home in?
+          "m_ApplyRotationTowardsTarget": true, //Will it visually point at the target?
+          //ObjectTypes
+          // {
+          //   Null,
+          //   Vehicle,
+          //   Block,
+          //   Scenery,
+          //   Chunk,
+          //   Waypoint,
+          //   Crate
+          // }
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          // "m_UpdateVisibleInterval" : 0.1, //idk
+          "m_ActivationDelay": 0.0, //How long before we aim at the target?
+          // "m_VisionRange": 75, //How far can we see targets?
+          // "m_VisionConeAngle": 360, //How wide can we see targets?
+          "m_TurnSpeed": 360 // How strong the turn is towards the enemy
+        },
+        "SmokeTrail": null,
+
+        // "Reference|GSO_FixedDrill_112/_sparksLocator": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 },
+        //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //   },
+        //   "GameObject|SparksDrill": {
+        //     "UnityEngine.ParticleSystem": {
+        //       "maxParticles": 100,
+        //       "playOnAwake": true,
+        //     },
+        //     "UnityEngine.Transform": { 
+        //       "localPosition": { "x":0, "y":0, "z":0 },
+        //       "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //     },
+        //   }
+        // },
+
+        "UnityEngine.TrailRenderer": { //Paint them trails
+          //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTextureOffset": {"x":1, "y":1},
+            "mainTextureScale": {"x":1, "y":1},
+            "globalIlluminationFlags": 1,
+            "mainTexture": "LED_BeamBlockPG.png",
+          },
+          "receiveShadows": false,
+          "shadowCastingMode": "Off",
+          "rendererPriority": 1,
+          "realtimeLightmapIndex": -1,
+          "generateLightingData": false,
+          "time": 0.25,
+          "startWidth": 0.1,
+          "endWidth": 0.025,
+          "widthMultiplier": 1.25, //Uniform Width Multiplier
+          "autodestruct": false, // Having this true crashes the game
+          "emitting": true, //0.2
+          "numCornerVertices": 4,
+          "numCapVertices": 8,
+          "minVertexDistance": 0.25,
+          "startColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "endColor": {
+            "r": 0.8,
+            "g": 0.8,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "positionCount": 1,
+          "shadowBias": 0.0,
+          "generateLightingData": false,
+          "textureMode": 0,
+          "alignment": 0,
+        },
+
+        "GameObject|_particles": null,
+        "MissileProjectile": {
+          "m_UsesGravity" : true,
+          "m_ArmDelay" : 0.0,
+          "m_BoosterActivationDelay" : 0.10,
+          "m_DeathDelayNotArmed" : 0.15,
+          "m_MaxBoosterLifetime" : 0.5, // How long till the Bees run outta juice
+          "Instantiate|m_SmokeTrailPrefab": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1},
+              "localPosition": { "x":0, "y":0, "z":0 },
+            },
+            "GameObject|ParticleSystemVaporTrail": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":1},
+                "localPosition": { "x":0, "y":0, "z":0 },
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {// The smoke that follows the missile
+                  "m_ParticleSystem": {
+                    "startSize": 1.0,
+                    "maxParticles": 0,
+                  }
+                }
+              },
+            }
+          }
+        },
+        // "GameObject|Line": {                    
+        //   "UnityEngine.Transform": {
+        //     //"localPosition": { "x":0, "y":0, "z":0 },
+        //     "localScale": { "x":2, "y":2, "z":1, },
+        //     //"localEulerAngles": { "x":0, "y":0, "z":0  }
+        //   },            
+        //   "UnityEngine.LineRenderer": { //For some reason TerraTech's lasers are shot out of the gun in reverse
+        //     "startWidth": 0.01,
+        //     "endWidth": 0.45,
+        //     "numCapVertices": 4,
+        //     "startColor": {
+        //       "r": 0.75,
+        //       "g": 0.75,
+        //       "b": 0.0,
+        //       "a": 0.70,
+        //       "maxColorComponent": 1.0
+        //     },
+        //     "endColor": {
+        //       "r": 1.0,
+        //       "g": 1.0,
+        //       "b": 0.1,
+        //       "a": 0.75,
+        //       "maxColorComponent": 1.0
+        //     },
+        //   }
+        // },
+        // "Projectile": { //LaserProjectile has most of the stats
+        //   "m_ImpactSFXType" : "Bullet",
+        // },
+        // "LaserProjectile": { //Contains the stats
+        //   "m_VelocityScaleFactor": 0.05,
+        //   "m_LifeTime": 2.5, //Time before poof
+        //   //"m_ExplodeAfterLifetime": true,
+        //   "m_DamageType" : "Bullet", //What damage modifier the projectile hit does
+        //   "m_SeekingRounds" : true,
+        //   //"m_ExplodeOnTerrain": true,
+        //   //"m_IgnoreCollisionWithBarrel" : true, //Also causes it to be unable to hit other copies of itself
+        //   //"m_CanHaveGravity" : false,
+        //   //"m_GravityScale" : 1, //You can do a fraction of gravity to allow for dramatic effect
+        //   //"m_StickOnTerrain" : true,
+        //   "m_ImpactSFXType" : "Bullet",
+        //   // "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+        //   // "m_FlightSFXType" : "Missile", // Allows for homing effect
+        //   //"m_Trail" : {"startWidth": 3},
+        //   // "m_SeekingProjectile": true,
+        // },
+      }
+    },
+    
+    "ModuleDriveBot": {
+      "targetIdealRange": 12.5, //How far do we want to stay from the target? Zero to kamikaze rush
+      "turnToleranceOuter": 40.0, //How hard we steer when far from target
+      "turnToleranceInner": 10.0, //How hard we steer when close to target
+      "m_DefaultThrottle": 10.0, //How hard we press on the "W" key
+      //even slightly pressing it should count as full throttle
+      "poweredTurnInsideWheel": 0.2, //idk
+      "waypointDistanceFullThrottle": 5.0, //If we are running
+      "turnAngleFullThrottle": 30.0, //Max safe angle to turn while pressing "W"
+      "waypointReachedTolerance": 2.0, //The location error the Tech can have before assuming that it is "close enough" to the target location
+      "waypointPlayerAngularBias": 0.0, //How hard we should turn in relation to the player when trying to flank them -DIRECT RAM
+      "lookAroundAngleMin": 30.0, //idk
+      "lookAroundAngleMax": 60.0, //idk
+      // "m_DefaultPatrolDistMin": 5.0, //Idle movement distance before engaging player
+      // "m_DefaultPatrolDistMax": 15.0, //Idle movement distance before FREEEZE
+      "patrolThrottle": 0.8, //Idle movements
+      "lookAroundPauseMin": 1.0, //Minimum time before moving randomly while idle
+      "lookAroundPauseMax": 2.0, //Maximum time before moving randomly while idle
+      "lookAroundThrottle": 0.5, //How hard we press "W" when idle
+      "lostTargetMemoryTime": 2.0, //How long we attempt to reach a location from where someone attacked us
+      "holdTargetDuration": 0.5, //Max time before we update our pursued target to the closest target in agro range
+      "stopCirclingDelay": 2.0, //how long until we stop circling the target
+      "controlPriority": 50, //idk
+      "recoverTimeout": 3.0, //How long before we attempt to Build Beam(right self) again
+      "forceUnCapsizeTimeout": 5.0, //How longe before we give up on the Build Beam self-righting attempt
+      "capsizedMinSpeed": 1.0, //How slow we must be going in order to attempt Build Beam
+      "m_ThrottleD": 1.0, //Max Throttle Forwards/Backwards
+      "m_ThrottleT": 1.0, //Max Throttle Turning
+      "m_PatrolDistMin": 5.0, //Idle movement distance before engaging player
+      "m_PatrolDistMax": 15.0, //Idle movement distance before FREEEZE
+      "sumoBoostOn": true, //Will hold shift to KILL ENEMY
+      "attackTargetRadius": 500,//When the AI will attack when possible targets are within this range
+      // "OnSpawn": {
+      // "hostileTarget": true, //ATTACK ON SPAWN
+      // "friendlyTarget": false, //Is this an ally of Player
+      // }, //
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    // TAC Bee - Buzz
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.75,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+  }
+}

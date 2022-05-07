@@ -1,0 +1,49 @@
+{
+  "Name": "SiegeCorps Three Block",
+  "Description": "From a time long ago, TerraTech building styles were used, but under the name, \"Besiege\". A time where things were customizable, weapons were manually controlled, and techs were known only as war machines. This artifact is still in use as a three block, although old and wooden, it is still tough... \n\nCommemoration of the game Besiege having its full release. If you like TerraTech and want games similar to it, I would recommend it. It is only $8 on the Steam Store, and features are quite similar to TerraTech in terms of building.",
+  "ID": 5000503, 
+
+  "Faction": 0, 
+  "Category": 2, 
+  "Grade": 4, 
+  "Price": 1134, 
+  "HP": 1500, 
+  "Mass": 3,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1,1,1,1,1,5,5,5,1,1,1,1,1,5,5,5,1,1,1,1,1,5,5,5",   
+  "IconName": "startblock_thumbnail.png",                       
+    "MeshName":                   "triplewoodscaled.obj",         // Name of the block's mesh           
+	"ColliderMeshName":           "triplewoodscaled.obj",
+    "MeshTextureName":            "logtex_png.png",
+    "MeshGlossTextureName":       "Black.png",
+    "MeshEmissionTextureName":    "Black.png",
+	
+      "DestroyExistingRenderer": true,
+  "SupressBoxColliderFallback": false,
+ 
+ "Cells":[{"x": 0,"y": 0,"z": 0},{"x": 0,"y": 0,"z": -1},{"x": 0,"y": 0,"z": -2}],
+  "APs": [ 
+      {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0, "y": 0, "z": -2.5},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0, "y": -0.5, "z": -1},
+    {"x": 0, "y": 0.5, "z": -1},
+    {"x": -0.5, "y": 0, "z": -1},
+    {"x": 0.5, "y": 0, "z": -1},
+    {"x": 0, "y": -0.5, "z": -2},
+    {"x": 0, "y": 0.5, "z": -2},
+    {"x": -0.5, "y": 0, "z": -2},
+    {"x": 0.5, "y": 0, "z": -2}
+  ],
+  "GamePrefabReference": 118,
+  "KeepReferenceRenderer": false, 
+  "KeepReferenceColliders": false,
+  "ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+}

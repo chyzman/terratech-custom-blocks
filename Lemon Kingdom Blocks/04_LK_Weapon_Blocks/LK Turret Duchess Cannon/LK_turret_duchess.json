@@ -1,0 +1,683 @@
+/*
+Description: A 12-barreled, quad-rotary cannon. Over-the-top, ridiculous in design and looks cool
+
+Pros:       High volume of fire and absurd amounts of damage
+            Turns quite quickly for its turret size
+
+Cons:       Uses resources and energy to fire
+            Heavy & expensive
+            Has few APs
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Duchess Cannon",
+    "Description":          "This turreted, 12-barreled gun is Dr. Spirit's solution against defenders who can properly fight the Lemon Kingdom's scout forces. This weapon spews so much 3-pounder shells that it needs its own factory and power pack. Firing it requires both resources and battery power.\n\nIt can consume the following as ammunition:\n\nRefined Fibron, Carbius & Olastic Bricks, Blast Caps, Z4 Explosives and Dervish Gel",
+
+    "ID": 419058,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 444918,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*
+    The resources/components needed to make this block. For the full ID Resource/Component list, 
+    please refer to the Terratech Wiki.
+
+    Recipe:     Main Body:        208 Titanic Alloy, 6 Plubonic Alloy
+                Gun Assembly:     48 Blast Caps, 4 Thermo Jet
+                Factory Segment:  4 Seed AI, 10 Coffman Cell, 10 Gluon Beam 
+    */
+    "Recipe" : { 
+      // Main Body
+      "54": 208, "53": 6,
+      // Gun Assembly
+      "46": 48, "53": 4,
+      // Factory Segment
+      "65": 4, "62": 10, "64": 10 
+    },
+    
+    "IconName":                   "LK_turret_duchess_cannon_icon.png",           // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                          // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                          // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":                "LK_tex_1.png",
+    "GlossTextureName":           "LK_tex_2.png",
+    "EmissionTextureName":        "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 83200,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons (300/cell for Missile weapons)
+                            // 300/cell = Wheels, Generators & Electronics
+                            // 750/cell = Rotors (Exclude the propeller blades)  
+                            
+    "Mass": 832.0,          // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Cell Map    
+    "CellMap": [           
+      [ // Z Layer 0
+        "          ",
+        "          ",
+        "    XX    ",
+        "    XX    ",
+        "          ",
+        "          "
+      ],
+      [ // Z Layer 1
+        "    XX    ",
+        "    XX    ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "   XXXX   ",
+        "   XXXX   "
+
+      ],
+      [ // Z Layer 2
+        "   XXXX   ",
+        "   XXXX   ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "   XXXX   ",
+        "   XXXX   "
+      ],
+      [ // Z Layer 3
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "   XXXX   ",
+        "   XXXX   "     
+      ],
+      [ // Z Layer 4
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "XXXXXXXXXX",
+        "XXXXXXXXXX",
+        "   XXXX   ",
+        "   XXXX   "         
+      ],
+      [ // Z Layer 5
+        "   XXXX   ",
+        "   XXXX   ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "   XXXX   ",
+        "   XXXX   "
+
+      ],
+      [ // Z Layer 6
+        "    XX    ",
+        "    XX    ",
+        " XXXXXXXX ",
+        " XXXXXXXX ",
+        "          ",
+        "          "
+      ],
+      [ // Z Layer 7
+        "          ",
+        "          ",
+        "    XX    ",
+        "    XX    ",
+        "          ",
+        "          "
+    ],
+
+
+
+  ],
+  
+  "APs": [ 
+    // Bottom APs
+    { "x": 4, "y": 0, "z": 0.5 }, { "x": 5, "y": 0, "z": 0.5 },
+
+    { "x": 3, "y": -0.5, "z": 3 }, { "x": 3, "y": -0.5, "z": 4 },
+    { "x": 6, "y": -0.5, "z": 3 }, { "x": 6, "y": -0.5, "z": 4 },
+  ],
+
+  // Advanced Settings
+  "PrefabReference":  "418", // HE Auto Cannon Block ID
+  "KeepRenderers":    true,
+  "KeepColliders":    false,
+  "PrefabPosition":   { "x": 4, "y": 2  , "z": 3 },
+
+    
+  "SubObjects":[
+    // Add the turret motor
+    {
+      "ObjectName":                   "turret_motor",
+      "MeshName":                     "LK_turret_duchess_motor.obj",
+      "Position":                     { "x": 4.5, "y": 1, "z": 3.5},
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+
+    // Add the energy gauge
+    {
+      "ObjectName":                   "energyGauge",
+      "MeshName":                     "LK_turret_duchess_gauge_power.obj",
+      "Position":                     { "x":5.92, "y":0, "z":0.6 },
+      "Rotation":                     { "x":0, "y":0, "z":0 },
+    },
+    // Add the ammo gauge
+    {
+      "ObjectName":                   "ammo_gauge",
+      "MeshName":                     "LK_turret_duchess_gauge_ammo.obj",
+      "Position":                     { "x":3.09, "y":0, "z":0.6 },
+      "Rotation":                     { "x":0, "y":0, "z":0 },
+    },
+      // Replace the original meshes with new ones 
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base",
+      "MeshName":                     "LK_turret_duchess_base.obj",
+      "ColliderMeshName":             "LK_turret_duchess_base_col.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 4.5, "y": 1.5, "z": 3.5 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+      
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_RotatingPart_A",
+      "MeshName":                     "LK_turret_duchess_turret_body.obj",
+      "ColliderMeshName":             "LK_turret_duchess_turret_body_col.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_RotatingPart_B",
+      "MeshName":                     "LK_turret_duchess_barrel_base.obj",
+      "ColliderMeshName":             "LK_turret_duchess_barrel_base_col.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/m_HE_MiniGun_313_RotatingPart_B",
+      "MeshName":                     "LK_turret_duchess_barrel_base.obj",
+      "ColliderMeshName":             "LK_turret_duchess_barrel_base_col.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+
+    {
+      "ObjectName":                   "m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_spindle/m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 180 },
+    },
+
+    {
+      "ObjectName":                   "m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_spindle/m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 180 },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel/_spindle/m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy/_spindle/m_HE_MiniGun_Barrel",
+      "MeshName":                     "LK_turret_duchess_barrel_end.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true,
+      "Position":                     { "x": 0, "y": 0, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 180 },
+    },
+
+    // Move the components to their proper place
+    {
+      "ObjectName":                   "_gimbalElev",
+      "Position":                     { "x": -0.64, "y": 1, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "ObjectName":                   "_gimbalElev_copy",
+      "Position":                     { "x": 0.64, "y": 1, "z": 0 },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },
+    /////
+    {
+      "ObjectName":                   "_barrel",
+      "Position":                     { "x": 0, "y": 0.49, "z": 0.21  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },    
+    {
+      "ObjectName":                   "_barrel_copy",
+      "Position":                     { "x": 0, "y": -0.3, "z": 1  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },  
+    /////
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel",
+      "Position":                     { "x": 0, "y": 0.49, "z": 0.21  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },    
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy",
+      "Position":                     { "x": 0, "y": -0.3, "z": 1  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },  
+
+    // Move the projectile spawners to their proper place
+    {
+      "ObjectName":                   "_spawnBullet",
+      "Position":                     { "x": 0, "y": 0, "z": 3  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },  
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_spawnBullet",
+      "Position":                     { "x": 0, "y": 0, "z": 3  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    }, 
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel/_spawnBullet",
+      "Position":                     { "x": 0, "y": 0, "z": 3  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },   
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy/_spawnBullet",
+      "Position":                     { "x": 0, "y": 0, "z": 3  },
+      "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+    },  
+
+    // Move the Casing spawners to their proper place
+    {
+      "ObjectName":                   "_spawnCasing",
+      "Position":                     { "x": 0, "y": 0.5, "z": -0.7  },
+      "Rotation":                     { "x": -45, "y": -90,"z": 0 }
+    },  
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_spawnCasing",
+      "Position":                     { "x": 0, "y": 1.5, "z": -1.3  },
+      "Rotation":                     { "x": -45, "y": -90,"z": 0 }
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel/_spawnCasing",
+      "Position":                     { "x": 0, "y": 0.5, "z": -0.7  },
+      "Rotation":                     { "x": -45, "y": 90,"z": 0 }
+    },     
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy/_spawnCasing",
+      "Position":                     { "x": 0, "y": 1.5, "z": -1.3  },
+      "Rotation":                     { "x": -45, "y": 90,"z": 0 }
+    }, 
+
+    {
+      "ObjectName":                   "_muzzleFlash",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2  },
+      "Scale":                        { "x": 2, "y": 2, "z": 2  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_muzzleFlash",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2  },
+      "Scale":                        { "x": 2, "y": 2, "z": 2  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel/_muzzleFlash",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2  },
+      "Scale":                        { "x": 2, "y": 2, "z": 2  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy/_muzzleFlash",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2  },
+      "Scale":                        { "x": 2, "y": 2, "z": 2  },
+    },
+
+    {
+      "ObjectName":                   "_smoke",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2.05  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel_copy/_smoke",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2.05  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel/_smoke",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2.05  },
+    },
+    {
+      "ObjectName":                   "m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev_copy/_barrel_copy/_smoke",
+      "Position":                     { "x": 0, "y": 0.2, "z": 2.05  },
+    },
+  ],
+
+  "Deserializer":{
+    "GameObject|ammo_gauge":{},
+    "GameObject|energyGauge":{},
+    "GameObject|turret_motor":{
+      "Spinner": {
+        "m_Speed": 0.5,
+        "m_RotationAxis": { "axis": 1 },
+        "m_SpinUpTime": 2,
+        "m_AutoSpin": true,  
+      }
+    },
+
+    "GameObject|m_HE_MiniGun_313_Base": {
+      "GameObject|_gimbalBase": {
+        "GimbalAimer": {
+          "rotationLimits":     [0,0], 
+          "rotationAxis":       2   // Changes the axis of rotation for the gimbal component
+                                    // 1 = Y (Vertical)
+                                    // 2 = Z (Horizontal)
+        },
+        "GameObject|m_HE_MiniGun_313_RotatingPart_A": {
+          "GameObject|_gimbalElev": {
+            "GimbalAimer": {
+              "rotationLimits": [5, -50], 
+              "rotationAxis":   1   // Changes the axis of rotation for the gimbal component
+                                    // 1 = Y (Vertical)
+                                    // 2 = Z (Horizontal)
+            },
+
+            "GameObject|_barrel": {
+              "GameObject|_spindle":{
+                "Spinner": {
+                  "m_Speed":        25, 
+                  "m_SpinUpTime":   2,    // Dictates the amount of time required for the object to spin in full speed
+                  "m_CurrentAngle": 0.0,  // Dictates the starting angle of the object when spawned into the world
+                }
+              },
+              "GameObject|_smoke":{  
+                // Particles are similar to most DDCs. They use an emitter and some form of texture to work in-game.                          
+                "ParticleSystem": {
+                    "startSize":            2,       // The start size of the particle
+                    "startLifetime":        2.0,        // The duration of the particle's existence
+                    "emissionRate":         500,
+                    "duration":             1,
+                    
+                    // Self-explanatory; this dictates the size of the particle at different points of its life, all the way to the end
+                    "sizeOverLifetime": {
+                        "xMultiplier": 1.0,        // Dictates the multiplier on the X axis of the particle
+                        "yMultiplier": 1.0,         // Dictates the multiplier on the Y axis of the particle
+                        "zMultiplier": 1.0,         // Dictates the multiplier on the Z axis of the particle
+                    },
+
+                },
+            }
+            },
+            "Duplicate|_barrel": {
+              "GameObject|_spindle":{
+                "Spinner": {
+                  "m_Speed":        -25, 
+                  "m_SpinUpTime":   2,    // Dictates the amount of time required for the object to spin in full speed
+                  "m_CurrentAngle": 0.0,  // Dictates the starting angle of the object when spawned into the world
+                }
+              }
+            }
+          },
+          "Duplicate|_gimbalElev": {}
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 16,                        // Dictates the sound used when firing
+                                                  // 6  = GSO Megaton Cannon
+                                                  // 9  = VEN Oozee SMG
+                                                  // 11 = HE SMG
+                                                  // 16 = HE HG1 Cannon
+                                                  // 64 = GSO Gigaton Cannon
+                                                  // 75 = HE MK3 Battleship Cannon
+                                                  // 77 = GSO Big Bertha Cannon
+                                                  
+      "m_RotateSpeed": 50,                        // Dictates the speed of the gun's rotation whenever it aims at a target.
+
+
+    },
+    /********** ModuleWeaponGun **********/
+    "ModuleWeaponGun": {
+      "m_FireControlMode": 1,                   // Dictates how the guns will fire
+                                                //  0 =   The guns will fire one at a time
+                                                //  1 =   All guns will fire at the same time
+    },
+    "Reference|7/FireData.":{
+      "m_MuzzleVelocity":         200.0,        // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength":       250.0,        // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance":    0.03,         // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      "m_BulletSpin":             0.0,          // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+      
+      "m_CasingVelocity":         10.0,  
+      "m_CasingEjectVariance":    0.3,
+      "m_CasingEjectSpin":        50.0,
+      
+      /********** Bullet Prefab **********/
+      "Instantiate|m_BulletPrefab": {
+        "Projectile":{
+          "m_Damage": 400                   // The damage of the bullet when directly hitting a block
+        },
+        // This is the bullet's white trail. 
+        "SmokeTrail":{
+          "numberOfPoints":   15.0,         // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                            // Do not decrease this too much as it will begin to act strangely.
+
+          "spread":           2.0,          // Dictates how erratic the trail is.
+          "riseSpeed":        0.1,          // Dictates how fast the trail rises. This will make the trail act more like a smoke
+          "updateSpeed":      0.15,         // DIctates the speed of the trail.
+        },
+        // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+        "LineRenderer": {
+            "startWidth":       0.3,
+            "endWidth":         0.05,
+            "widthMultiplier":  1.0,
+            // The color at the start of the trail
+            "startColor": { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+            // The color at the end of the trail
+            "endColor":   { "r": 1.0, "g": 0.5, "b": 0.0, "a": 1.0 }
+        },
+
+      }
+
+    },
+
+    /********** ModuleConsumeResourceToShell: Requires this weapon to use resources as ammunition to fire **********/
+    "ModuleConsumeResourceToShell": {
+      "MaxValue":         1000,   // How many bullets this thing can store at a time 
+                                  // (For continuous weapons, how many seconds of fuel)
+      "HolderCapacity":   1,      // How many chunks each chunk holder can have at a time
+      
+      // Stacks are what hold the chunks, this defines that information
+      "InputStacks": [        
+        {                                   // Left stack
+            "Position":         {"x": 4, "y": 0, "z": 1},   // Position of the stack, where the chunks are held
+
+            "ConsumePosition":  {"x": 4, "y": -1, "z": 1.1}, // The exact position that the chunks will animate towards
+
+            "APIndices": [0]                                // The array of AP indexes that this stack can get chunks from. 
+                                                            // Can be null or removed to have it use the nearest APs
+        }, 
+        {                                   // Left stack
+          "Position":         {"x": 5, "y": 0, "z": 1},   // Position of the stack, where the chunks are held
+
+          "ConsumePosition":  {"x": 5, "y": -1, "z": 1.1}, // The exact position that the chunks will animate towards
+
+          "APIndices": [1]                                // The array of AP indexes that this stack can get chunks from. 
+                                                          // Can be null or removed to have it use the nearest APs
+        },        
+      ],
+
+      "AcceptedChunks": [     // The resource chunks (by ID) that this can consume
+        1, // Fibron Chunk
+        9, // Carbius Brick
+        11, // Olastic Brick
+
+        46, // Blast Caps
+        55, // Z4 Explosives
+        61  // Dervish Gel
+      ],
+
+      "ValuePerChunk": [      // The ammunition value of each chunk, in the order of "AcceptedChunks"
+        0.25,                 // Fibron Chunk (Requires 4 to shoot 1 bullet on each barrel)
+        40,                   // Carbite Brick (Gives 20 bullets per barrel) 
+        60,                   // Oleite Brick (Gives 60 bullets per barrel) 
+
+        100,                  // Blast Caps (Gives 100 bullets per barrel)
+        500,                  // Z4 Explosives (Gives 500 bullets per barrel)
+        1000                  // Dervish Gel (Fills the storage completely)
+      ],
+
+      "CustomGauges": [
+        {
+          "GaugeObject": "ammo_gauge",
+          "MinValue": 0.0,
+          "MaxValue": 1000,
+          "ScaleMin": {"x": 1, "y": 0, "z": 1},
+          "ScaleMax": {"x": 1, "y": 1, "z": 1},
+          "Dampen": 0.2
+        },      
+      ]
+
+    },
+    /********** ModuleConsumeEnergyToShell: Requires this weapon to use battery power to fire **********/
+    "ModuleConsumeEnergyToShell": {
+        "EnergyCost":           0.1,    // How much energy is needed to fire one round 
+                                        // (For continuous weapons, how much energy per second)
+        "EnergyCapacity":       500,    // How much energy this block can hold
+                                        
+        // The two below are intended for flamethrowers and beam weapons
+        "LowestPermittedEnergy": 50,    // The minimum amount of energy that can be left in a system 
+                                        // (Useful for continuous weapons: Don't drain all energy)
+        "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                        // (Useful for continuous weapons: Prevents studdering effect)
+        
+        "CustomGauges": [        // Optional animatable transform, not required for limiter to function
+            /*
+            "GaugeObject": "nameOrPathToSubobject",     // < This is specifically for weapon limiter serialization! It does not exist otherwise!
+            
+            // Very important, comment or delete animation properties not intended to be used!
+            
+            "PositionMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Y = 0,
+            "PositionMax": {"x": 0, "y": 1, "z": 0},    // 100%  :  Y = 1,
+
+            "ScaleMin": {"x": 1, "y": 1, "z": 0},       // 0%    :  Z = 0.0,
+            "ScaleMax": {"x": 1, "y": 1, "z": 1},       // 100%  :  Z = 1.0,
+
+            "RotationMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Roll = 0,
+            "RotationMax": {"x": 0, "y": 0, "z": 720},  // 100%  :  Roll = 720 (rolled twice),
+
+            "ColorMin": {"r": 1.0, "g": 0.0, "b": 0.0}, // 0%    :  Color = Red,
+            "ColorMax": {"r": 0.0, "g": 1.0, "b": 0.0}, // 100%  :  Color = Green,
+
+            "EnableAbove": 0.1,                         // 10%   :  Enable           (<10%   :  Disable),
+            "ParticlesAbove": 0.333,                    // 33.3% :  Play particles   (<33.3% :  Stop particles), 
+
+            "Dampen": 0.7,                              // Smoothen changes with a value between 0.0 and 1.0
+                                                        // 0%    :  Off              (100%   :  Cannot move),
+
+            // The values below are for converting the raw input to a value between 0.0 and 1.0 for the above
+
+            "MinValue": 0.5,                            // The lower end of the raw value to lerp by    (Alt: MinEnergy),
+            "MaxValue": 2.0,                            // The higher end of the raw value to lerp by   (Alt: MaxEnergy),
+            */
+            {
+                "GaugeObject": "energyGauge",
+                "MinValue": 1,
+                "MaxValue": 500,
+                "ScaleMin": {"x": 1, "y": 0, "z": 1},
+                "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                "Dampen": 0.2
+            },
+
+        ]
+    },
+
+    "ModuleDamage": {
+      
+      "deathExplosion": "Reference|51/ModuleDamage.deathExplosion",
+      "Instantiate|deathExplosion":{
+        // Add a projectile explosion as a workaround to give the block the ability to damage everything in its death radius
+        "Reference|56/FireData.m_BulletPrefab/Projectile.m_Explosion": {
+          "Explosion": {
+            "m_EffectRadius": 25.0,
+            "m_EffectRadiusMaxStrength": 20.0,
+            "m_MaxDamageStrength": 1000.0,
+            "m_MaxImpulseStrength": 1000.0,
+          },
+        }
+      },
+
+    }
+
+
+  
+
+
+
+  }
+
+
+
+
+
+}

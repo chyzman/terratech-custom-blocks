@@ -1,0 +1,227 @@
+
+{
+    "Name": "Reticule Research SMES Array",
+    "Description": "A huge battery with five combined SMES. Of course, it has the energy storage capacity of five SMES.",
+    "ID": 546323,
+  
+    "Faction": 3,
+    "Category": 6,
+    "Rarity": 1,
+    "Grade": 2,
+    "Price": 670050,
+    "HP": 155520, //270 hp per 1 block
+    "Mass": 2880, //5 SMES
+  
+    "Recipe": "61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62",
+  
+    "IconName": "RR_BigBatteryArray.png",
+    "MeshName": null,
+  
+    "MeshMaterialName": "RR_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": null,
+  
+    "BlockExtents":
+    {
+      "x": 16,
+      "y": 6,
+      "z": 6
+    },
+  
+   "APs": [
+    { "x": 1.0, "y":-0.5, "z": 1.0 },{ "x": 2.0, "y":-0.5, "z": 1.0 },
+    { "x": 1.0, "y":-0.5, "z": 2.0 },{ "x": 2.0, "y":-0.5, "z": 2.0 },
+    { "x": 1.0, "y":-0.5, "z": 3.0 },{ "x": 2.0, "y":-0.5, "z": 3.0 },
+    { "x": 1.0, "y":-0.5, "z": 4.0 },{ "x": 2.0, "y":-0.5, "z": 4.0 },
+
+    { "x": 4.0, "y":-0.5, "z": 1.0 },{ "x": 5.0, "y":-0.5, "z": 1.0 },
+    { "x": 4.0, "y":-0.5, "z": 2.0 },{ "x": 5.0, "y":-0.5, "z": 2.0 },
+    { "x": 4.0, "y":-0.5, "z": 3.0 },{ "x": 5.0, "y":-0.5, "z": 3.0 },
+    { "x": 4.0, "y":-0.5, "z": 4.0 },{ "x": 5.0, "y":-0.5, "z": 4.0 },
+
+    { "x": 7.0, "y":-0.5, "z": 1.0 },{ "x": 8.0, "y":-0.5, "z": 1.0 },
+    { "x": 7.0, "y":-0.5, "z": 2.0 },{ "x": 8.0, "y":-0.5, "z": 2.0 },
+    { "x": 7.0, "y":-0.5, "z": 3.0 },{ "x": 8.0, "y":-0.5, "z": 3.0 },
+    { "x": 7.0, "y":-0.5, "z": 4.0 },{ "x": 8.0, "y":-0.5, "z": 4.0 },
+
+    { "x": 10.0, "y":-0.5, "z": 1.0 },{ "x": 11.0, "y":-0.5, "z": 1.0 },
+    { "x": 10.0, "y":-0.5, "z": 2.0 },{ "x": 11.0, "y":-0.5, "z": 2.0 },
+    { "x": 10.0, "y":-0.5, "z": 3.0 },{ "x": 11.0, "y":-0.5, "z": 3.0 },
+    { "x": 10.0, "y":-0.5, "z": 4.0 },{ "x": 11.0, "y":-0.5, "z": 4.0 },
+
+    { "x": 13.0, "y":-0.5, "z": 1.0 },{ "x": 14.0, "y":-0.5, "z": 1.0 },
+    { "x": 13.0, "y":-0.5, "z": 2.0 },{ "x": 14.0, "y":-0.5, "z": 2.0 },
+    { "x": 13.0, "y":-0.5, "z": 3.0 },{ "x": 14.0, "y":-0.5, "z": 3.0 },
+    { "x": 13.0, "y":-0.5, "z": 4.0 },{ "x": 14.0, "y":-0.5, "z": 4.0 }
+  ],
+    
+    
+    
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GSO_Block_111",
+  
+  "SubObjects": [ 
+  {
+  "SubOverrideName": "GC_Battery_222",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_base.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_A1",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_A.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_A2",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_A.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 3, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_A3",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_A.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 6, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_A4",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_A.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 9, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_A5",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_A.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 12, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_B1",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_B.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_B2",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_B.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 3, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_B3",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_B.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 6, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_B4",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_B.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 9, "y": 0, "z": 0}
+  },
+  {
+  "SubOverrideName": "RR_BigBatteryArray_B5",
+  "DestroyExistingRenderer": true,
+  "MeshName": "RR_BigBatteryArray_B.obj",
+  "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 12, "y": 0, "z": 0}
+  },
+  {
+    "SubOverrideName": "RR_BigBatteryArray_cable1",
+    "DestroyExistingRenderer": true,
+    "MeshName": "RR_BigBatteryArray_cable.obj",
+    "MeshMaterialName": "EXP_Main",
+    "MeshTextureName": "EXP_1", 
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 3, "y": 0, "z": 0}
+  },
+  {
+    "SubOverrideName": "RR_BigBatteryArray_cable2",
+    "DestroyExistingRenderer": true,
+    "MeshName": "RR_BigBatteryArray_cable.obj",
+    "MeshMaterialName": "EXP_Main",
+    "MeshTextureName": "EXP_1", 
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 6, "y": 0, "z": 0}
+  },
+  {
+    "SubOverrideName": "RR_BigBatteryArray_cable3",
+    "DestroyExistingRenderer": true,
+    "MeshName": "RR_BigBatteryArray_cable.obj",
+    "MeshMaterialName": "EXP_Main",
+    "MeshTextureName": "EXP_1", 
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 9, "y": 0, "z": 0}
+  },
+  {
+    "SubOverrideName": "RR_BigBatteryArray_cable4",
+    "DestroyExistingRenderer": true,
+    "MeshName": "RR_BigBatteryArray_cable.obj",
+    "MeshMaterialName": "EXP_Main",
+    "MeshTextureName": "EXP_1", 
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 12, "y": 0, "z": 0}
+  },
+	{
+      "SubOverrideName": "_energyGauge",
+      "MeshName": "RR_BigBatteryArray_LED.obj",
+      "DestroyExistingRenderer":    false,
+      "DestroyExistingColliders":   true,
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+	}
+    ],
+
+  "JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 1386000}, //5 SMES
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWeaponTeslaCoil.m_TargetRadius"
+      ],
+      "m_Strength": [2.0],
+      "m_AddAfter": [0.0],
+      "m_NeedsToBeAnchored": [true]
+    }
+  }
+}

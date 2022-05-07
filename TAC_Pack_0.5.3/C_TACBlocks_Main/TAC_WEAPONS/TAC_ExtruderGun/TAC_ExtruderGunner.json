@@ -1,0 +1,630 @@
+{
+	"Name": "TAC Extruder EPMS Gun",
+	"Description": "A little gun that hides within a tiny 0.5 block, and when you least expect it pops out and strikes.  \n\nLike it's older sibling, the Extruder has little projectiles that bypass shields, but <b>unlike</b> it's older sibling, it's shots travel almost twice as fast! \n\n\n\n\n\nHowever, the Extruder only has one barrel and does not benefit at all from spamming the fire button.  In fact, that would be a hinderance in some scenarios...", //You can make multiple lines with \n
+
+	"ID": 584240, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 7404, //
+	"HP": 750, 
+
+	"Mass": 3.0, //Fairly heavy to compensate for increased health
+	
+
+	"IconName": "SnekSlab.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "44, 45, 46, 49, 53, 53, 55", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Bottom
+        { "x": 0, "y": -0.5, "z": 0 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "BF_Laser_Scatter_(121)",
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ 
+    //Model
+		{
+	    "SubOverrideName":"m_BF_Laser_Scatter_121_Base_copy",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "TACExtruderGunBase.obj",
+	    "MeshTextureName": null,
+		  "ColliderMeshName" : "TACExtruderGunBase.obj",
+      "MeshMaterialName": "HE_Main"
+		},
+    {
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "PeashooterBarrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "ElevationPart",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACExtruderGunRotPart.obj",
+      "ColliderMeshName": "TACExtruderGunRotPart.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_DoorLeft",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACExtruderGunDoor.obj",
+      "ColliderMeshName": "TACExtruderGunDoor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_DoorRight",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACExtruderGunDoor.obj",
+      "ColliderMeshName": "TACExtruderGunDoor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+
+    //DESTROY ALL UNWANTED
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Platform",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Mount",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Cover_R",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Cover_L",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+  ],
+	
+	"JSONBLOCK": {
+    "GameObject|b_AimOrgin": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0.25, "z":-0.25 }
+      },
+    },
+    "GameObject|BF_Laser_Scatter_121": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+        "localPosition": { "x":0.0, "y":-0.1, "z":0 }
+      },
+      "Duplicate|m_BF_Laser_Scatter_121_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0.2, "z":0.0 },
+          "localScale": { "x":2, "y":2, "z":2 },
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_R": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_L": null,
+      },
+      "GameObject|m_BF_Laser_Scatter_121_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":2, "y":2, "z":2 },
+            // "localPosition": { "x":0, "y":0, "z":0.5 }
+          },
+          "GameObject|m_BF_Laser_Scatter_121_Mount": {
+            "GimbalAimer": { //Useful component
+              "rotationLimits": [-20, 20] //[-Left,+Right](Degrees)
+            },
+
+            "GameObject|b_DoorsBone": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":-0.0, "z":0 }
+              },
+            }, 
+            "GameObject|m_BF_Laser_Scatter_121_Laser": null,
+            "Reference|GSO_Cannon_Turret_111/_gimbalBase": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0.0 } 
+              },
+              "GameObject|GSO_Cannon_111_Mount": null,
+              "GimbalAimer": null, //Useful component
+              // "GimbalAimer": { //Useful component
+              //   "rotationLimits": [-1, 1] //[-Left,+Right](Degrees)
+              // },
+              "GameObject|_gimbalElev": {
+                "GimbalAimer": { //Useful component
+                  "rotationLimits": [-45, 5] //[-Up,+Down](Degrees)
+                },
+                "GameObject|ElevationPart": {
+                  "UnityEngine.Transform": { //Placing the part
+                    "localScale": { "x":1, "y":1, "z":1 },
+                    "localPosition": { "x":0, "y":0.25, "z":0 },
+                    "localEulerAngles": { "x":0, "y":0, "z":0}
+                  }
+                },
+                "UnityEngine.Transform": {
+                  "localScale": { "x":1, "y":1, "z":1 },
+                  "localPosition": { "x":0, "y":0, "z":0.0 }
+                },
+                "GameObject|BarrelExtenderFlat": {
+                  "UnityEngine.Transform": { //Placing the part
+                    "localScale": { "x":0, "y":0, "z":1 },
+                    "localPosition": { "x":0, "y":0, "z":-0.5 },
+                    "localEulerAngles": { "x":0, "y":0, "z":0}
+                  },
+                  "GameObject|BarrelExtender": {
+                    "UnityEngine.Transform": { //Placing the part
+                      "localScale": { "x":1, "y":1, "z":1 },
+                      "localPosition": { "x":0, "y":0, "z":0 },
+                      "localEulerAngles": { "x":0, "y":0, "z":0}
+                    },
+                    "FollowSuspension": {//Follow the animation
+                      "m_TargetWheelTrans": "/b_AimOrgin",
+                      // "m_TargetUpTrans": "/AltSuspensionUp",
+                      "m_KeepOriginalRotationOffset": false,
+                      "m_ScaleToMatchDistance": false,
+                      // "m_OriginalDistance": 0.25,
+                    },
+                    "GameObject|b_BarrelExtenderBone": {
+                      "UnityEngine.Transform": { //Placing the part
+                        "localScale": { "x":1, "y":1, "z":1 },
+                        "localPosition": { "x":0, "y":0.5, "z":0 },
+                        "localEulerAngles": { "x":0, "y":0, "z":0}
+                      }
+                    }
+                  }
+                },
+                "GameObject|BarrelOffset": {
+                  "UnityEngine.Transform": { //Placing the part
+                    "localScale": { "x":1, "y":1, "z":1 },
+                    "localPosition": { "x":0, "y":0, "z":0 },
+                    "localEulerAngles": { "x":0, "y":0, "z":0}
+                  },
+                  "FollowTransform": {//follow the extending animator
+                    "m_TransformToFollow": "/BF_Laser_Scatter_121/m_BF_Laser_Scatter_121_Base/m_BF_Laser_Scatter_121_Platform/m_BF_Laser_Scatter_121_Mount/_gimbalBase/_gimbalElev/BarrelExtenderFlat/BarrelExtender/b_BarrelExtenderBone",
+                    "m_FollowOrientation": false,
+                  },
+                  "GameObject|b_BarrelOffsetBone": {
+                    "UnityEngine.Transform": { //Placing the part
+                      "localScale": { "x":1, "y":1, "z":1 },
+                      "localPosition": { "x":0, "y":0.0, "z":1.0 },
+                      "localEulerAngles": { "x":0, "y":0, "z":0}
+                    }
+                  }
+                },
+                "GameObject|_barrel": {
+                  "FollowTransform": {//follow the extending animator
+                    "m_TransformToFollow": "/BF_Laser_Scatter_121/m_BF_Laser_Scatter_121_Base/m_BF_Laser_Scatter_121_Platform/m_BF_Laser_Scatter_121_Mount/_gimbalBase/_gimbalElev/BarrelOffset/b_BarrelOffsetBone",
+                    "m_FollowOrientation": false,
+                  },
+                  "UnityEngine.Transform": { //Moving the barrel
+                    "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+                    "localPosition": { "x":0, "y":0.0, "z":0.25 }
+                  },
+                  "GameObject|_recoiler": {
+                    "UnityEngine.Transform": { //Moving the barrel
+                      "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+                      "localPosition": { "x":0, "y":0, "z":0 }
+                    },
+                    "GameObject|GSO_Cannon_111_Barrel": {
+                      "UnityEngine.Transform": { //Moving the barrel
+                        "localScale": { "x":0.45, "y":0.45, "z":0.2 },// Increasing scale of animation
+                        "localPosition": { "x":0, "y":0, "z":-0.4 }
+                      },
+                    }
+                  },
+                  "GameObject|_smoke": { 
+                    "UnityEngine.Transform": { //Offsetting the smoke effect so it looks neater
+                      "localScale": { "x":1, "y":1, "z":1 },
+                      "localPosition": { "x":0, "y":0.0, "z":0.0 }
+                    }
+                  },
+                  "GameObject|_muzzleFlash": {
+                    "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                      "localScale": { "x":1, "y":1, "z":1 },
+                      "localPosition": { "x":0, "y":0.0, "z":0.0 }
+                    }
+                  },
+                  "GameObject|_bulletSpawn": {
+                    "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                      "localScale": { "x":1, "y":1, "z":1 },
+                      "localPosition": { "x":0, "y":0.0, "z":0.2 }
+                    }
+                  }
+                }
+              }
+            },
+          }
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Cover_R": {
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Cover_L": {
+        }
+      }
+    },
+
+    //DOOR TARGET BONES
+    "GameObject|b_DoorLeftBone": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.4, "y":-0.0675, "z":0 }
+      }
+    },
+    "GameObject|b_DoorRightBone": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.4, "y":-0.0675, "z":0 }
+      }
+    },
+
+    "GameObject|DoorLeft": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.325, "y":0, "z":0 }
+      },
+      "FollowSuspension": {//Follow the animation
+        "m_TargetWheelTrans": "/BF_Laser_Scatter_121/m_BF_Laser_Scatter_121_Base/m_BF_Laser_Scatter_121_Platform/m_BF_Laser_Scatter_121_Mount/b_DoorsBone",
+        // "m_TargetUpTrans": "/AltSuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.25,
+      },
+
+      "GameObject|m_DoorLeft": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":-1, "y":1, "z":1 },
+        },
+        "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+          "gameObject": {
+            "layer": 8//2 //ID 524288Layers:
+          },
+        },
+
+        "Reference|HE_Block_Alt_01_111/m_HE_Block_111/UnityEngine.MeshCollider": {},//Give it proper collider
+      
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/b_DoorLeftBone",
+          "m_FollowOrientation": false,
+        },
+      },
+    },
+
+    "GameObject|DoorRight": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.325, "y":0, "z":0 }
+      },
+      "FollowSuspension": {//Follow the animation
+        "m_TargetWheelTrans": "/BF_Laser_Scatter_121/m_BF_Laser_Scatter_121_Base/m_BF_Laser_Scatter_121_Platform/m_BF_Laser_Scatter_121_Mount/b_DoorsBone",
+        // "m_TargetUpTrans": "/AltSuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.25,
+      },
+
+      "GameObject|m_DoorRight": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+        },
+        "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+          "gameObject": {
+            "layer": 8//2 //ID 524288Layers:
+          },
+        },
+        "Reference|HE_Block_Alt_01_111/m_HE_Block_111/UnityEngine.MeshCollider": {},//Give it proper collider
+        
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/b_DoorRightBone",
+          "m_FollowOrientation": false,
+        },
+      },
+    },
+
+
+    //--------------------------------------
+    //------------ BEGIN CODING ------------
+    //--------------------------------------
+
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns
+    },
+
+    "FireDataShotgun": null,
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for batteries
+    },
+    // TAC Side Plating - Redirector Armor Plates
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": false, // Should we switch the DamageableType of this block?
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.2,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": " VENShotgunCombat", //Firing noise
+      //Other Firing noise options include "VENCannonRapid"(The old fire sfx), "PoundCannon"(GSO 3-Pound Cannon), "MegatonLongBarrel"(GSO Gigaton Cannon)
+      "m_RotateSpeed" : 175, //SPEED
+      // "m_FireSFXType": 66
+    },
+
+    "ModuleWeaponGun": { // Another component
+      //Burst Shot setup begins - You can remove the '//'s to allow Sequencing for salvo
+      "m_FireControlMode": "Sequenced", 
+      "m_BurstShotCount" : 0, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 0.25, //Seconds between bursts.
+      "m_CooldownVariancePct": 0.2,
+      //was 0.5
+      //Burst Shot setup end
+      //
+      "m_ShotCooldown" : 1.5, //
+      //was 3.0
+      "m_FiringData": null, //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha but it doesn't for some reason - This is actually used for when the block deploys like the BF shotgun
+    },//comma
+
+    "Reference|GSO_Cannon_Turret_111/FireData.": { //Component, with lazors
+      "m_MuzzleVelocity": 115, //Bullet speed - Slower than the Zeus' approx. 200 MuzzleVelocity. Tested faster values than Zeus and clipping issues began
+      "m_BulletSprayVariance": 0.1, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 0, //2.5 - Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":1.0, "y":1.0, "z":1.25 }},  // Size of Bullet    
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Energy", //What damage modifier the weapon does
+          "m_Damage": 70 //Did 125 damage before, nerfed to 75
+          //Then nerfed to 35, then back at 75
+        },
+        "SmokeTrail": {
+          "numberOfPoints": 3,
+          "updateSpeed": 0.01,//how often it makes new "points"
+          "riseSpeed": 0.0,//How fast it floats up
+          "spread": 0.0,
+        },
+        "UnityEngine.TrailRenderer": { //Paint them trails
+          //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTextureOffset": {"x":1, "y":1},
+            "mainTextureScale": {"x":1, "y":1},
+            "globalIlluminationFlags": 1,
+            "mainTexture": "LED_BeamBlockPG.png",
+          },
+          "receiveShadows": false,
+          "shadowCastingMode": "Off",
+          "rendererPriority": 1,
+          "realtimeLightmapIndex": -1,
+          "generateLightingData": false,
+          "time": 0.25,
+          "startWidth": 0.2,
+          "endWidth": 0.025,
+          "widthMultiplier": 1.25, //Uniform Width Multiplier
+          "autodestruct": false, // Having this true crashes the game
+          "emitting": true, //0.2
+          "numCornerVertices": 4,
+          "numCapVertices": 8,
+          "minVertexDistance": 0.25,
+          "startColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "endColor": {
+            "r": 0.8,
+            "g": 0.8,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "positionCount": 1,
+          "shadowBias": 0.0,
+          "generateLightingData": false,
+          "textureMode": 0,
+          "alignment": 0,
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "gameObject": {
+            "layer": 2 //ID 524288Layers:
+          },
+          // "size": { "x": 0.4, "y": 0.4, "z": 1 },
+          // "center": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|_glow": {//Looks terrible on this kind of laser
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0  }
+          },
+          "UnityEngine.Light": {
+            // "cookie": {
+            //   "mainTexture": "LED_BeamBlockB.png",
+            //   "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            //   "color": {
+            //     "r": 0.1,
+            //     "g": 0.2,
+            //     "b": 1.0,
+            //     "a": 0.2
+            //   },
+            // },
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            // "innerSpotAngle": 360.0,
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.05,
+              "a": 1.0
+            },
+            "colorTemperature": 6570.0,
+            "areaSize": 3.0,//2.0
+            "intensity": 3.0,//2.0
+            "bounceIntensity": 1.0,
+            "shadowCustomResolution": -1,
+            "shadowBias": 0.5,
+            "shadowNormalBias": 1.0,
+            "shadowNearPlane": 0.2,
+            "renderMode": "Auto",
+            //Auto, ForcePixel, ForceVertex
+            "type": "point",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 4.0,
+            "flare": null
+          },
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Cannon", //WHAM
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              //"m_DamageType" : "Explosive", //What damage modifier the explosion does
+              "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX
+              "m_EffectRadius": 3.0, //Evil gun
+              "m_EffectRadiusMaxStrength": 2.0, //Max Radius before the effect deals less damage outwards
+              "m_MaxDamageStrength": 50, // deadly if it hits
+              //was 50, nerfed to 25, then back to 50
+              "m_MaxImpulseStrength": 50 //YEET
+            },
+            "GameObject|ExplosionBright": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 14,
+                    // "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 20.0,
+                    //   // "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 20,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 20,
+                    //     "minCount": 8,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // },
+                  }
+                }
+              }
+            },
+            "GameObject|Point light": {
+              "UnityEngine.Light": {
+                // "spotAngle": 60.0,
+                // "color": {
+                //   "r": 1.0,
+                //   "g": 1.0,
+                //   "b": 0.9,
+                //   "a": 1.0
+                // },
+                // "colorTemperature": 6570.0,
+                "intensity": 7.5,//2.0
+                // "bounceIntensity": 1.0,
+                // "shadowCustomResolution": -1,
+                // "shadowBias": 0.5,
+                // "shadowNormalBias": 1.0,
+                // "shadowNearPlane": 0.2,
+                "range": 7.5,
+                // "flare": null
+              }
+            },
+            "Reference|GC_Cab_221.ModuleDamage.deathExplosion/FX_Parts_A": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.125,
+                    "startRotation": 5.0,
+                    "startSpeed": 17.5, //How far you want the particles to spread
+                    "startColor": {
+                      "r": 0.3,
+                      "g": 0.3,
+                      "b": 1.0,
+                      "a": 0.75
+                    },
+                    // "emissionRate": 25.0,
+                    "maxParticles": 4,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                    },
+                    // "duration": 8.0,
+                    "playbackSpeed": 1.0,
+                  }
+                }
+              }
+            },
+            "GameObject|Sparks": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 1,
+                    // "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 100,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                    },
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+	}
+}
+
+
+
+

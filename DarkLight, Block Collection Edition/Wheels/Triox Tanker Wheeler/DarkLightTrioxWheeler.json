@@ -1,0 +1,201 @@
+{
+  "Name": "DarkLight Triox Tanker Wheeler",
+  "Description": "Now THIS is no basic wheel. The <color=purple>Triox</color> is a rather wide and armored wheel, allowing for larger versions of 'Duoc Caterpillars' that are far stronger. It also sports a small 'Mammoth' Armor Plating over the ventilation. Only issue is the massive amount of space it takes up.. and it being rubber, keep it safe from your own weaponry.\n\n\nYou may think this was also made by shoving wheels together with hydraulic presses. It was not, It's made of rubber, hydraulic presses, and <b>armor.</b>",
+                 //You can make multiple lines with \n
+  "ID": 2000062, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 3, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 3
+  "Price": 30290, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 8100, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+                   //Wheel: 300 per physical cell (may not match the actual cells), assumed more armored. 1.5 Mass per physical cell (16 physical cells btw)
+                   //Base: 500 per cell, 550 for Mammoth Armor Plate cells. 2 Mass per cell. 2.5 for Mammoth Armor Plate cells.
+  "Mass": 37,
+  "CenterOfMass": {"x": 3, "y": 0.7, "z": 0.5},
+
+  "Fragility": 0.6, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 2, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 1, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "43, 43, 44, 44, 44, 45, 45, 45, 47, 47, 47, 47, 52, 52, 52, 52, 52, 52, 53, 53, 53, 54, 54, 54, 57, 57, 57,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLTrioxTankerWheeler.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": "DLTrioxBase.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": "DLTrioxBaseCollider.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "Cells": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  [
+     //Base
+    { "x": 0, "y": 2, "z": 0 },
+    { "x": 0, "y": 2, "z": 1 },
+    { "x": 1, "y": 2, "z": 1 },
+    { "x": 1, "y": 2, "z": 0 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 0 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 0 },
+
+    //Wheel
+    { "x": 2, "y": 2, "z": 0 },
+    { "x": 2, "y": 2, "z": 1 },
+    { "x": 3, "y": 2, "z": 0 },
+    { "x": 3, "y": 2, "z": 1 },
+    { "x": 4, "y": 2, "z": 0 },
+    { "x": 4, "y": 2, "z": 1 },
+    { "x": 5, "y": 2, "z": 0 },
+    { "x": 5, "y": 2, "z": 1 },
+    { "x": 2, "y": 1, "z": 0 },
+    { "x": 2, "y": 1, "z": 1 },
+    { "x": 3, "y": 1, "z": 0 },
+    { "x": 3, "y": 1, "z": 1 },
+    { "x": 4, "y": 1, "z": 0 },
+    { "x": 4, "y": 1, "z": 1 },
+    { "x": 5, "y": 1, "z": 0 },
+    { "x": 5, "y": 1, "z": 1 },
+    { "x": 2, "y": 0, "z": 0 },
+    { "x": 2, "y": 0, "z": 1 },
+    { "x": 3, "y": 0, "z": 0 },
+    { "x": 3, "y": 0, "z": 1 },
+    { "x": 4, "y": 0, "z": 0 },
+    { "x": 4, "y": 0, "z": 1 },
+    { "x": 5, "y": 0, "z": 0 },
+    { "x": 5, "y": 0, "z": 1 }
+  ],
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": -0.5,    "y": 2,    "z": 0    },
+    { "x": -0.5,    "y": 2,    "z": 1    },
+    { "x": 0,       "y": 2,    "z": -0.5 },
+    { "x": 0,       "y": 2,    "z": 1.5  },
+    { "x": 0,       "y": 2.5,  "z": 0    },
+    { "x": 0,       "y": 2.5,  "z": 1    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_Wheel_222", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  */
+  /*
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Scale all the subobjects of the block prefab by the origin
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+  
+  "SubObjects": [ //What's (for this) loading up the wheel and physical suspension thing
+                   //This is also literally just a modification of the Duoc Wheeler lul-
+    {
+        "SubOverrideName": "m_GSO_Wheel_222_Tyre", //Referencing the Bumper Wheel's wheel
+        "Meshname": "DLTrioxWheel.obj", //The .obj its being replaced with
+        "MeshTextureName": "DarkLight1.png", 
+        "MeshGlossTextureName": "DarkLight2.png", 
+        "MeshEmissionTextureName": "DarkLight3.png",
+        "ColliderMeshName": "DLTrioxWheelCollider.obj",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "_wheel", //Rather specific on the code naming..
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 3.65,
+          "y": 1.35,
+          "z": 0.5
+        }
+      }
+  ],
+  
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+  
+  "Deserializer": {
+    "GameObject|_wheel": {}, 
+    "ModuleWheels":  {
+      "m_TorqueParams": {
+       "torqueCurveMaxTorque": 22750,
+         "torqueCurveMaxRpm": 360,
+        "passiveBrakeMaxTorque": 3000,
+         "reverseBrakeMaxRpm": 400,
+         "basicFrictionTorque": 2000,
+         "fullCompressFrictionTorque": 8000
+      },
+       "m_UseTireTracks": true,
+		   "m_WheelTrackType": 0,              
+       "m_AudioType": 0,
+
+       "m_WheelParams": {
+        "radius": 1.0,
+        "thicknessAngular": 240,
+        "suspensionSpring": 40000.0,
+        "suspensionDamper": 3000.0,
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.35,
+        "steerAngleMax": 5,
+        "steerSpeed": 4
+      },
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.1,
+      "m_DriveTurnDifferential": 0.8,
+      "m_TurnOnSpotPower": 1.0,
+      "m_DustMinimumRPM": 20.0
+      }
+    }
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

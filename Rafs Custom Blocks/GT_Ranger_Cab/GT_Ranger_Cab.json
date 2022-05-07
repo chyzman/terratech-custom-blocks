@@ -1,0 +1,241 @@
+{
+  "Name": "GreenTech Ranger Cab",
+  "Description": "The Ranger Cab is a self-sustainable cab with many functions that other cabs lack. Besides being a good off-road vehicle, it carries a portable battery and mobile solar panel, as well as a self-repairing system! However, this civilian oriented cab lacks weapons.",
+  "ID": 911027, 
+
+  "Faction": 0, 
+  "Category": 1, 
+  "Grade": 2, 
+  "Price": 2055, 
+  "HP": 1500, 
+  "Mass": 5,
+  "CenterOfMass": {"x": 0.5, "y": -0.4, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "3, 3, 5, 5, 7, 7, 9, 32, 43, 43, 48",   
+  "IconName": "GT_Ranger_Cab_Icon.png", 
+  
+  "SupressBoxColliderFallback": true,
+ 
+  "BlockExtents":{"x": 2,"y": 1, "z": 2},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 1, "y": 0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 1},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 0, "z": 0},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_Cab_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.5
+  },
+  "ReferenceScale": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  
+   "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Base",
+      "MeshName": "GT_Ranger_Cab.obj", 
+      "ColliderMeshName": "GT_Ranger_Cab_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 0.5, "y": 0.5, "z": 0.5},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": -0.25,
+        "y": -0.25,
+        "z": -0.25
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Gun_Rt",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Gun_Lf",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "_spotlight",
+      "DestroyExistingRenderer": false,
+      "SubScale": { "x": 0.5, "y": 0.5, "z": 0.5},
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 1.5
+      }
+    },
+     {
+   "SubOverrideName": "Wheel_1",
+		"MeshName": "GT_Ranger_Cab_Wheel_Origin_Centered.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Wheel_2",
+       "MeshName": "GT_Ranger_Cab_Wheel_Origin_Centered.obj",
+       "MeshTextureName": "GreenTech 1.png", 
+       "MeshGlossTextureName": "GreenTech 2.png", 
+       "MeshEmissionTextureName": "GreenTech 3.png"
+       },
+       {
+        "SubOverrideName": "Wheel_3",
+         "MeshName": "GT_Ranger_Cab_Wheel_Origin_Centered.obj",
+         "MeshTextureName": "GreenTech 1.png", 
+         "MeshGlossTextureName": "GreenTech 2.png", 
+         "MeshEmissionTextureName": "GreenTech 3.png"
+         },
+         {
+          "SubOverrideName": "Wheel_4",
+           "MeshName": "GT_Ranger_Cab_Wheel_Origin_Centered.obj",
+           "MeshTextureName": "GreenTech 1.png", 
+           "MeshGlossTextureName": "GreenTech 2.png", 
+           "MeshEmissionTextureName": "GreenTech 3.png"
+           },
+   {
+    "SubOverrideName": "m_GSO_Cab_111_Flap_1",
+     "MeshName": "GT_Ranger_Cab_Flap_1.obj",
+     "MeshTextureName": "GreenTech 1.png", 
+     "MeshGlossTextureName": "GreenTech 2.png", 
+     "MeshEmissionTextureName": "GreenTech 3.png"
+   },
+   {
+    "SubOverrideName": "m_GSO_Cab_111_Flap_2",
+     "MeshName": "GT_Ranger_Cab_Flap_2.obj",
+     "MeshTextureName": "GreenTech 1.png", 
+     "MeshGlossTextureName": "GreenTech 2.png", 
+     "MeshEmissionTextureName": "GreenTech 3.png"
+   },
+   {
+    "SubOverrideName": "m_GSO_Cab_111_Flap_3",
+     "MeshName": "GT_Ranger_Cab_Flap_3.obj",
+     "MeshTextureName": "GreenTech 1.png", 
+     "MeshGlossTextureName": "GreenTech 2.png", 
+     "MeshEmissionTextureName": "GreenTech 3.png"
+   },
+   {
+    "SubOverrideName": "m_GSO_Cab_111_Flap_4",
+     "MeshName": "GT_Ranger_Cab_Flap_4.obj",
+     "MeshTextureName": "GreenTech 1.png", 
+     "MeshGlossTextureName": "GreenTech 2.png", 
+     "MeshEmissionTextureName": "GreenTech 3.png"
+   },
+   {
+    "SubOverrideName": "_energyGauge",
+    "MeshName": "GT_Ranger_Cab_LED_Gauge.obj",
+    "SubScale": { "x": 2, "y": 2, "z": 2},
+    "SubPosition": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+   }
+   
+   ],
+  
+  "Deserializer": {
+    "Reference|GSO_Regen_111/_shield": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0, "z":0.5 }
+      }
+     },
+    "Reference|GSO_Regen_111/ModuleShieldGenerator.": {
+      "m_Radius": 1.0,
+      "m_EnergyConsumptionPerSec": 1,
+      "m_InitialChargeEnergy": 1.0,
+      "m_EnergyConsumedPerDamagePoint": 0.1,
+      "m_HealingHeartbeatInterval": 1.0,
+      "m_MaxHealingPerHeartbeat": 150.0, 
+      "m_EnergyConsumedPerPointHealed": 0.15,
+      "m_Healing": true,
+      "m_PowerUpDelay": 1.0,
+      "m_ChargingParticlesPrefab": null
+    },
+
+    "GameObject|_spotlight": {
+      "UnityEngine.Light":{
+        "color": {
+          "r": 0.6,
+          "g": 1.0,
+          "b": 0.3,
+          "a": 1.0
+        },
+        "intensity": 1.0,
+        "range": 80.0
+      }
+
+    },
+
+    "Reference|GCBattery(222)/_energyGauge": {},
+    
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 500.0,
+        "torqueCurveMaxRpm": 800.0,
+        "passiveBrakeMaxTorque": 100.0,
+        "reverseBrakeMaxRpm": 30.0,
+        "basicFrictionTorque": 30.0,
+        "fullCompressFrictionTorque": 100.0
+      },
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 0,              
+        "m_AudioType": 0,
+      "m_WheelParams": {
+        "radius": 0.3,
+        "thicknessAngular": 35,
+        "suspensionSpring": 200.0,
+        "suspensionDamper": 50.0,
+        "maxSuspensionAcceleration": 10.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.07,
+        "steerAngleMax": 10.0,
+        "steerSpeed": 3.0
+      },
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.5,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 1.0,
+      "m_DustMinimumRPM": 20.0,
+      "Capacity": 4
+    },
+    "ModuleWeaponGun": null,
+    "ModuleWeapon": null,
+    "FireData": null,
+    "ModuleEnergy": {
+      "m_OutputPerSecond": 5,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 2,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 0.0,
+      "m_GeneratingSFXType": 1
+        },
+    
+    "ModuleEnergyStore": {
+      "m_Capacity": 2000,
+      "m_AcceptRemoteCharge": true
+    }
+
+     }
+}

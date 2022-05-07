@@ -1,0 +1,40 @@
+/*
+This is a minor basic block meant for closing gaps and as a finish for most LK Techs. Decorative, but tough.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Long Battlement Block",
+    "Description":          "This is the longest block available for knights. This has enough room for creature comfort or more infantry.\n\n\"When defending a perimeter, always prepare in depth: patrols, makeshift defensive emplacements, area denial tactics among others are encouraged to repel and defeat the enemy.\"\n\n-- Infantry Field Manual",
+
+    "ID": 419018,
+    "Faction": 2,           
+    "Category": 2,          
+    "Grade": 3,         
+
+    "Price": 6144,       
+    "Recipe":  "54, 54, 54, 54, 53, 53, 53, 53, 7, 7, 7, 7", 	
+	
+    "IconName":                   "LK_long_battlement_block_icon.png",                       
+    "MeshName":                   "LK_long_battlement_block.obj",                                            
+    "ColliderMeshName":           "LK_long_battlement_block_col.obj", 
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    null,
+
+    // Basic Block HP Values
+    "HP": 2000,            
+    "Mass": 10,             
+
+    "DamageableType": 1,   
+    "Fragility": 0.0,       
+    
+    // Block Dimensions
+    "BlockExtents":     
+    { "x": 4,"y": 1, "z": 1 },
+
+    "APs":  [   {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 0.0 },
+                {"x": 2.0, "y": -0.5, "z": 0.0 }, {"x": 3.0, "y": -0.5, "z": 0.0 } 
+            ]
+}

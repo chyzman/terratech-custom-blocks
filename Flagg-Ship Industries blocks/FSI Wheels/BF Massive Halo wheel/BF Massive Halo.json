@@ -1,0 +1,468 @@
+
+{
+    // Basic Block Information
+    "Name":                 "BF Massive Halo Wheel",
+    "Description":          "One of the largest halo wheels made for Better Future, Bigger than the GeoCorp Behemoth, Venture's Titan, HawkEye Black Labs Ymir, or even GreenTech's Terra. It can move fairly quickly, and has pretty good grip. Despite this, it's the smaller size of the Cubic structures series. \n\nDue to it's size, it allows for blocks on the inside center, potentally armor too.\n\nNote: When placing blocks on the inside, do not place them in the direct wheel center or under the center, or the wheel will break.",
+
+    "ID": 1700071,           // This is the Block ID; it must be unique
+"IconName": "Massive V2.png",
+    "Faction": 7,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 3,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 0,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 11235,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    "CenterOfMass":{ "x": 0, "y": 5, "z": 5 },
+   
+    "Recipe":  "3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, " ,	
+	
+	
+	
+	
+	
+	  
+    
+  
+    "MeshName": null,                                       //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+    
+
+    // Basic Block HP Values
+    "HP": 5000,            // A GSO one block has 250 health
+                            
+    "Mass": 20,           
+
+    "DamageableType": 2,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "Cells": [ //The grid space to be occupied
+        
+		//Attachment
+		{ "x": 0, "y": 3, "z": 3 }, 
+		{ "x": 0, "y": 3, "z": 4 },
+		{ "x": 0, "y": 3, "z": 5 },
+		{ "x": 0, "y": 3, "z": 6 },
+		{ "x": 0, "y": 3, "z": 7 },
+		
+		{ "x": 0, "y": 4, "z": 3 }, 
+		{ "x": 0, "y": 4, "z": 4 },
+		{ "x": 0, "y": 4, "z": 5 },
+		{ "x": 0, "y": 4, "z": 6 },
+		{ "x": 0, "y": 4, "z": 7 },
+		
+		{ "x": 0, "y": 5, "z": 3 }, 
+		{ "x": 0, "y": 5, "z": 4 },
+		{ "x": 0, "y": 5, "z": 5 },
+		{ "x": 0, "y": 5, "z": 6 },
+		{ "x": 0, "y": 5, "z": 7 },
+		
+		{ "x": 0, "y": 6, "z": 3 }, 
+		{ "x": 0, "y": 6, "z": 4 },
+		{ "x": 0, "y": 6, "z": 5 },
+		{ "x": 0, "y": 6, "z": 6 },
+		{ "x": 0, "y": 6, "z": 7 },
+		
+		{ "x": 0, "y": 7, "z": 3 }, 
+		{ "x": 0, "y": 7, "z": 4 },
+		{ "x": 0, "y": 7, "z": 5 },
+		{ "x": 0, "y": 7, "z": 6 },
+		{ "x": 0, "y": 7, "z": 7 },
+		
+		//Wheel
+		{ "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 5 }, 
+		{ "x": 1, "y": 0, "z": 6 },
+		{ "x": 1, "y": 0, "z": 7 },
+		{ "x": 1, "y": 0, "z": 8 },
+		{ "x": 1, "y": 0, "z": 9 },
+		{ "x": 1, "y": 0, "z": 10 },
+		
+		{ "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+		{ "x": 1, "y": 1, "z": 5 }, 
+		{ "x": 1, "y": 1, "z": 6 },
+		{ "x": 1, "y": 1, "z": 7 },
+		{ "x": 1, "y": 1, "z": 8 },
+		{ "x": 1, "y": 1, "z": 9 },
+		{ "x": 1, "y": 1, "z": 10 },
+		
+		{ "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+		{ "x": 1, "y": 2, "z": 5 }, 
+		{ "x": 1, "y": 2, "z": 6 },
+		{ "x": 1, "y": 2, "z": 7 },
+		{ "x": 1, "y": 2, "z": 8 },
+		{ "x": 1, "y": 2, "z": 9 },
+		{ "x": 1, "y": 2, "z": 10 },
+		
+		{ "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 8 },
+		{ "x": 1, "y": 3, "z": 9 },
+		{ "x": 1, "y": 3, "z": 10 },
+		
+		{ "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+		{ "x": 1, "y": 4, "z": 8 },
+		{ "x": 1, "y": 4, "z": 9 },
+		{ "x": 1, "y": 4, "z": 10 },
+		
+		{ "x": 1, "y": 5, "z": 0 }, 
+		{ "x": 1, "y": 5, "z": 1 },
+		{ "x": 1, "y": 5, "z": 2 },
+		{ "x": 1, "y": 5, "z": 8 },
+		{ "x": 1, "y": 5, "z": 9 },
+		{ "x": 1, "y": 5, "z": 10 },
+		
+		{ "x": 1, "y": 6, "z": 0 }, 
+		{ "x": 1, "y": 6, "z": 1 },
+		{ "x": 1, "y": 6, "z": 2 },
+		{ "x": 1, "y": 6, "z": 8 },
+		{ "x": 1, "y": 6, "z": 9 },
+		{ "x": 1, "y": 6, "z": 10 },
+		
+		{ "x": 1, "y": 7, "z": 0 }, 
+		{ "x": 1, "y": 7, "z": 1 },
+		{ "x": 1, "y": 7, "z": 2 },
+		{ "x": 1, "y": 7, "z": 8 },
+		{ "x": 1, "y": 7, "z": 9 },
+		{ "x": 1, "y": 7, "z": 10 },
+		
+		{ "x": 1, "y": 8, "z": 0 }, 
+		{ "x": 1, "y": 8, "z": 1 },
+		{ "x": 1, "y": 8, "z": 2 },
+		{ "x": 1, "y": 8, "z": 3 },
+		{ "x": 1, "y": 8, "z": 4 },
+		{ "x": 1, "y": 8, "z": 5 }, 
+		{ "x": 1, "y": 8, "z": 6 },
+		{ "x": 1, "y": 8, "z": 7 },
+		{ "x": 1, "y": 8, "z": 8 },
+		{ "x": 1, "y": 8, "z": 9 },
+		{ "x": 1, "y": 8, "z": 10 },
+		
+		{ "x": 1, "y": 9, "z": 0 }, 
+		{ "x": 1, "y": 9, "z": 1 },
+		{ "x": 1, "y": 9, "z": 2 },
+		{ "x": 1, "y": 9, "z": 3 },
+		{ "x": 1, "y": 9, "z": 4 },
+		{ "x": 1, "y": 9, "z": 5 }, 
+		{ "x": 1, "y": 9, "z": 6 },
+		{ "x": 1, "y": 9, "z": 7 },
+		{ "x": 1, "y": 9, "z": 8 },
+		{ "x": 1, "y": 9, "z": 9 },
+		{ "x": 1, "y": 9, "z": 10 },
+		
+		{ "x": 1, "y": 10, "z": 0 }, 
+		{ "x": 1, "y": 10, "z": 1 },
+		{ "x": 1, "y": 10, "z": 2 },
+		{ "x": 1, "y": 10, "z": 3 },
+		{ "x": 1, "y": 10, "z": 4 },
+		{ "x": 1, "y": 10, "z": 5 }, 
+		{ "x": 1, "y": 10, "z": 6 },
+		{ "x": 1, "y": 10, "z": 7 },
+		{ "x": 1, "y": 10, "z": 8 },
+		{ "x": 1, "y": 10, "z": 9 },
+		{ "x": 1, "y": 10, "z": 10 },
+		
+		{ "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+		{ "x": 2, "y": 0, "z": 5 }, 
+		{ "x": 2, "y": 0, "z": 6 },
+		{ "x": 2, "y": 0, "z": 7 },
+		{ "x": 2, "y": 0, "z": 8 },
+		{ "x": 2, "y": 0, "z": 9 },
+		{ "x": 2, "y": 0, "z": 10 },
+		
+		{ "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+		{ "x": 2, "y": 1, "z": 5 }, 
+		{ "x": 2, "y": 1, "z": 6 },
+		{ "x": 2, "y": 1, "z": 7 },
+		{ "x": 2, "y": 1, "z": 8 },
+		{ "x": 2, "y": 1, "z": 9 },
+		{ "x": 2, "y": 1, "z": 10 },
+		
+		{ "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+		{ "x": 2, "y": 2, "z": 5 }, 
+		{ "x": 2, "y": 2, "z": 6 },
+		{ "x": 2, "y": 2, "z": 7 },
+		{ "x": 2, "y": 2, "z": 8 },
+		{ "x": 2, "y": 2, "z": 9 },
+		{ "x": 2, "y": 2, "z": 10 },
+	
+		{ "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 8 },
+		{ "x": 2, "y": 3, "z": 9 },
+		{ "x": 2, "y": 3, "z": 10 },
+	
+		{ "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+		{ "x": 2, "y": 4, "z": 8 },
+		{ "x": 2, "y": 4, "z": 9 },
+		{ "x": 2, "y": 4, "z": 10 },
+		
+		{ "x": 2, "y": 5, "z": 0 }, 
+		{ "x": 2, "y": 5, "z": 1 },
+		{ "x": 2, "y": 5, "z": 2 },
+		{ "x": 2, "y": 5, "z": 8 },
+		{ "x": 2, "y": 5, "z": 9 },
+		{ "x": 2, "y": 5, "z": 10 },
+		
+		{ "x": 2, "y": 6, "z": 0 }, 
+		{ "x": 2, "y": 6, "z": 1 },
+		{ "x": 2, "y": 6, "z": 2 },
+		{ "x": 2, "y": 6, "z": 8 },
+		{ "x": 2, "y": 6, "z": 9 },
+		{ "x": 2, "y": 6, "z": 10 },
+		
+		{ "x": 2, "y": 7, "z": 0 }, 
+		{ "x": 2, "y": 7, "z": 1 },
+		{ "x": 2, "y": 7, "z": 2 },
+		{ "x": 2, "y": 7, "z": 8 },
+		{ "x": 2, "y": 7, "z": 9 },
+		{ "x": 2, "y": 7, "z": 10 },
+	
+		{ "x": 2, "y": 8, "z": 0 }, 
+		{ "x": 2, "y": 8, "z": 1 },
+		{ "x": 2, "y": 8, "z": 2 },
+		{ "x": 2, "y": 8, "z": 3 },
+		{ "x": 2, "y": 8, "z": 4 },
+		{ "x": 2, "y": 8, "z": 5 }, 
+		{ "x": 2, "y": 8, "z": 6 },
+		{ "x": 2, "y": 8, "z": 7 },
+		{ "x": 2, "y": 8, "z": 8 },
+		{ "x": 2, "y": 8, "z": 9 },
+		{ "x": 2, "y": 8, "z": 10 },
+		
+		{ "x": 2, "y": 9, "z": 0 }, 
+		{ "x": 2, "y": 9, "z": 1 },
+		{ "x": 2, "y": 9, "z": 2 },
+		{ "x": 2, "y": 9, "z": 3 },
+		{ "x": 2, "y": 9, "z": 4 },
+		{ "x": 2, "y": 9, "z": 5 }, 
+		{ "x": 2, "y": 9, "z": 6 },
+		{ "x": 2, "y": 9, "z": 7 },
+		{ "x": 2, "y": 9, "z": 8 },
+		{ "x": 2, "y": 9, "z": 9 },
+		{ "x": 2, "y": 9, "z": 10 },
+		
+		{ "x": 2, "y": 10, "z": 0 }, 
+		{ "x": 2, "y": 10, "z": 1 },
+		{ "x": 2, "y": 10, "z": 2 },
+		{ "x": 2, "y": 10, "z": 3 },
+		{ "x": 2, "y": 10, "z": 4 },
+		{ "x": 2, "y": 10, "z": 5 }, 
+		{ "x": 2, "y": 10, "z": 6 },
+		{ "x": 2, "y": 10, "z": 7 },
+		{ "x": 2, "y": 10, "z": 8 },
+		{ "x": 2, "y": 10, "z": 9 },
+		{ "x": 2, "y": 10, "z": 10 },
+		
+		
+        ],
+
+    "APs": [{ "x": -0.5,"y": 3, "z": 3},
+			{ "x": -0.5,"y": 7, "z": 3},
+			{ "x": -0.5,"y": 3, "z": 7},
+			{ "x": -0.5,"y": 7, "z": 7},
+			{ "x": 0.5,"y": 3, "z": 3},
+			{ "x": 0.5,"y": 7, "z": 3},
+			{ "x": 0.5,"y": 3, "z": 7},
+			{ "x": 0.5,"y": 7, "z": 7}
+      
+    ],
+
+    // Advanced Settings
+     "GamePrefabReference": "BF_Wheel_Large_Side_244",
+  "KeepRenderers": false, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 1,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_BF_Wheel_Large_Side_244_Mount",
+		"MeshName": "BF_Massive_Halo_Mount.obj",
+		"MeshMaterialName":"BF_Main",
+		"MakeBoxCollider": true,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 5,
+			"z": 5
+		}
+	},
+	{
+		"SubOverrideName": "m_BF_Wheel_Large_Side_244_Motor",
+		"MeshName": "BF_Massive_Halo_Motor.obj",
+		"MeshMaterialName":"BF_Main",
+		"MakeBoxCollider": false,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_BF_Wheel_Large_Side_244_Link_Upper",
+		"MeshName": "BF_Massive_Halo_Link_Upper.obj",
+		"MeshMaterialName":"BF_Main",
+		"MakeBoxCollider": false,
+		"SubRotation": {
+			"x": 0,
+			"y": -90,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": -2,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_BF_Wheel_Large_Side_244_Link_Lower",
+		"MeshName": "BF_Massive_Halo_Link_Lower.obj",
+		"MeshMaterialName":"BF_Main",
+		"MakeBoxCollider": false,
+		"SubRotation": {
+			"x": 0,
+			"y": 90,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": -3.2,
+			"z": 1.35	
+		}
+	},
+	{
+      "OverrideName": "Suspension_1A",
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+	{
+      "OverrideName": "Suspension_2A",
+      "SubPosition": { "x":0, "y": 5, "z": 5 }
+    },
+	{
+		"SubOverrideName": "m_BF_Wheel_Large_Side_244_Tyre",
+		"MeshName": "BF_Massive_Halo_Tyre.obj",
+		"MeshMaterialName":"BF_Main",
+		"MakeBoxCollider": true,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+    
+    "JSONBLOCK":{
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":1.5, "y":5.25, "z":5 }
+        },
+      },
+      // Torque Parameters
+      "ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 20000,
+		   "torqueCurveMaxRpm": 200,
+		  "passiveBrakeMaxTorque": 1500,
+		   "reverseBrakeMaxRpm": 1500,
+		   "basicFrictionTorque": 1000.0,
+		   "fullCompressFrictionTorque": 1500
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 4.0,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 5.4,
+			"thicknessAngular": 5,
+			"suspensionSpring": 50000.0,
+			"suspensionDamper": 2000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.1,
+			"steerAngleMax": 5,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	},
+    }
+}

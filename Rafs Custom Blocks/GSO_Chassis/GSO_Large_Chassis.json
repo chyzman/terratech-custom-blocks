@@ -1,0 +1,75 @@
+
+{
+  "Name": "GSO Large Chassis Block",
+  "Description": "A weighted chassis for placement at the bottom of the tech, increasing stability and protecting against impacts. Comes with rubber bumpers.",
+  "ID": 910407, 
+
+  "Faction": 1,
+  "Category": 0, 
+  "Grade": 2, 
+  "Price": 387,
+  "HP": 800,
+  "Mass": 2,
+  "Fragility": 0,
+  "DamageableType": 2,
+  "Friction": 0,
+  
+
+  "IconName": "GSO_Large_Chassis_Icon.png", 
+  "MeshName": "GSO_Large_Chassis.obj",
+  
+  "Recipe": "3, 5, 5, 5, 7", 
+  
+  "MeshMaterialName": "GSO_Main", 
+  "ColliderMeshName": "GSO_Large_Chassis_Collider.obj",
+  "SupressBoxColliderFallback": true, 
+  
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 2
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 3
+    }
+  ],
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 2
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 3
+    }
+  ],
+  
+  "GamePrefabReference": "GSO_ArmourPlate_Medium_211",
+  "KeepReferenceRenderers": false,
+}

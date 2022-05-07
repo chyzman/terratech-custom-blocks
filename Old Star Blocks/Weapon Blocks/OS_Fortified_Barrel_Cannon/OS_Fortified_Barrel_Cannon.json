@@ -1,0 +1,196 @@
+{
+  "Name": "Old Star Fortified Barrel Cannon",
+  "Description": "Now this is how the Old Star do. This is a Variation of the Barrel Cannon. Fortified for any frontal assault as its traverse was sacrificed for a super accurate long range gun for pin point accuracy to deal with incoming raiders. Dispite looking liek it will have low health like most of Old Star it actualy boasts above average armor under all its fibron plateing.", //You can make multiple lines with \n
+  "ID": 300174,
+
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 7844,
+  "HP": 2600,
+  "Mass": 24.0,
+  "Fragility": 0.0,
+  "DamageableType": 4, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 46, 46, 46, 46, 46, 46, 46, 46, 55, 55, 55, 55, 55, 55, 55, 55, 61, 61, 61, 61, 65",
+  "IconName": "OS_Fortified_Barrel_Cannon_icon.png",
+  "SupressBoxColliderFallback": false, 
+  "EmissionMode": 2,
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 4
+  },
+  "APs": [
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 2, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },{ "x": 2, "y": -0.5, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 2 },{ "x": 2, "y": -0.5, "z": 2 }
+  ],
+
+  //OPTIONAL
+  "GamePrefabReference":            "HE_Cannon_Battleship(216)",
+  "KeepReferenceRenderers":          true,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "MeshName": "OS_FBC_Base.obj",
+      "ColliderMeshName": "OS_FBC_Base.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_FBC_Barrel.obj",
+      "ColliderMeshName": "OS_FBC_Barrel.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1.1
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "DestroyExistingRenderer": true,
+      "SubPosition": {
+        "x": 1.0,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_FBC_Turret.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0.1,
+        "z": 0.56
+      }
+    },
+    {
+      "SubOverrideName": "_muzzleFlash",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 2.0
+      },
+      "SubScale": {
+        "x": 1.5,
+        "y": 1.5,
+        "z": 2.5
+      }
+    },
+    {
+      "SubOverrideName":            "_casingSpawn",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName":             "_bulletSpawn",
+      "SubPosition": {
+        "x":0,
+        "y":0,
+        "z":4
+      }
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2.4
+    },
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": { //This is a component, and holds values
+        "rotationLimits": [-10, 10], //Modifications go here
+        "rotationAxis": 2 //Horizontal
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-91, 10], //Modifications go here
+          "rotationAxis": 1 //Verticle
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_RotateSpeed": 90, //Speed at which a weapon can aim at something
+      "m_FireSFXType": 66
+    },
+    "FireData": {
+      "m_BulletCasingPrefab": null,
+      "m_KickbackStrength": 300,
+      "m_MuzzleVelocity": 180.0,
+      "m_BulletSprayVariance": 0.01,
+      "m_BulletSpin": 350,
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "OS_FBC_Bullet.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "OST1.png"
+          }
+        },
+        "WeaponRound": {
+          "m_Damage": 500
+        },
+        "Projectile": {
+          "m_ExplodeOnTerrain": true,
+          "m_SingleImpact": true,
+          "m_RotateWithVelocity": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "m_ImpactSFXType": 2, //2
+          "m_FlightSFXType": 1,
+          "m_GravityScale": 0.1,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 20,
+              "m_MaxDamageStrength": 500,
+              "m_MaxImpulseStrength": 500
+            },
+            "GameObject|ExplosionSmoke": {
+              "UnityEngine.ParticleSystemRenderer": {
+                "startSize": 14
+              }
+            },
+            "GameObject|ExplosionDark": {
+              "UnityEngine.ParticleSystemRenderer": {
+                "startSize": 14
+              }
+            },
+            "GameObject|ExplosionLight": {
+              "UnityEngine.ParticleSystemRenderer": {
+                "startSize": 14
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

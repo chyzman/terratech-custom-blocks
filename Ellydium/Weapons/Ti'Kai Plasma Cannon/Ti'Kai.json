@@ -1,0 +1,456 @@
+{
+  "Name": "Ti'Kai Plasma Cannon",
+  "Description": "High end Plasma cannon that seems to be able to peirce into a tech then explode", //You can make multiple lines with \n
+  "ID": 620009,
+
+  "Faction": 5,
+  "Category": 4,
+  "Grade": 3,
+  "Price": 173494,
+  "HP": 4750,
+  "Mass": 60,
+
+  "IconName": "TiKai_Cannon.png",
+  "MeshName": null,
+
+
+  "MeshTextureName": null,
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 3,
+    "y": 2,
+    "z": 3
+  },
+
+  "APs": [
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 2
+    }
+  ],
+
+  "GamePrefabReference": "VEN_Cannon_Rapid_313", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel_L/_recoiler/m_VEN_CannonRapid_313_Barrel_L",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Ti'Kai_Barrel.obj",
+      "MeshTextureName": "Ellydium 1blue.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_R/_recoiler/m_VEN_CannonRapid_313_Barrel_R",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Ti'Kai_Barrel.obj",
+      "MeshTextureName": "Ellydium 1blue.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Ti'Kai_Base.obj",
+	  "ColliderMeshName": "Ti'Kai_Base.obj",
+      "MeshTextureName": "Ellydium 1blue.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 1,
+        "y": -0.5,
+        "z": 1
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Ti'Kai_RotatingPart.obj",
+      "MeshTextureName": "Ellydium 1blue.png",
+      "MeshGlossTextureName": "Ellydium 2.png",
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Ti'Kai_Elevation.obj",
+      "MeshTextureName": "Ellydium 1blue.png",
+      "MeshGlossTextureName": "Ellydium 2.png",
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": { 
+    "GameObject|_gimbalBase": { 
+      "UnityEngine.Transform": { 
+        "localPosition": { "x": 1, "y": -0.25, "z": 1 }
+      },
+      "GimbalAimer": {
+		    
+	    }, 
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x": -0.1, "y": 0.9, "z": 0 }
+        },
+        "GimbalAimer": { 
+          "rotationLimits": [-60, 10] 
+        },
+
+        "GameObject|_barrel_L": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": -0.175, "y": 0.3, "z": 0 }
+          },
+		  "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.001, "y":0.001, "z":0.001 }, //Animation rescaling
+              "localPosition": { "x":0, "y":-1000, "z":-0.25 }
+            },
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+			  "localScale": { "x":0.01, "y":0.01, "z":0.01 },			
+              "localPosition": { "x": -0.15, "y": 0.4 , "z": 3 }
+            }
+			
+          }
+        },
+
+        "GameObject|_barrel_R": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": -0.175, "y": 0, "z": 0 }
+          },
+		  "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.001, "y":0.001, "z":0.001 }, //Animation rescaling
+              "localPosition": { "x":0, "y":-1000, "z":-0.25 }
+            },
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { 
+			"localScale": { "x":0.01, "y":0.01, "z":0.01 },
+              "localPosition": { "x": -0.15, "y": 0.4, "z": 3 }
+            }
+          }
+        }
+      }
+      
+    }, 
+    "ModuleWeapon": { 
+      "m_FireSFXType": "HEHomingMissile", 
+      "m_RotateSpeed" : 50
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.5,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 515, 
+      "m_BulletSprayVariance": 0.01,
+      "m_KickbackStrength": 0,
+	  
+      "Instantiate|m_BulletPrefab": { 
+        "WeaponRound": { 
+          "m_Damage": 550
+        },
+		  "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "radius": 0.70,
+          "center": { "x": 0, "y": 0, "z": 4.5 },
+          "height": 5.5,
+          "direction": 2
+        },
+
+		"UnityEngine.TrailRenderer": { //Paint them trails
+          //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "mainTexture": "MAT_BF_LaserBeam",
+            // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTextureOffset": {"x":1, "y":1},
+            "mainTextureScale": {"x":1, "y":1},
+            "globalIlluminationFlags": 1
+          },
+          "receiveShadows": false,
+          "shadowCastingMode": "Off",
+          "rendererPriority": 1,
+          "realtimeLightmapIndex": -1,
+          "generateLightingData": false,
+          "time": 0.4,
+          "startWidth": 0.3,
+          "endWidth": 0.085,
+          "widthMultiplier": 1.25, //Uniform Width Multiplier
+          "autodestruct": false, // Having this true crashes the game
+          "emitting": true, //0.2
+          "numCornerVertices": 8,
+          "numCapVertices": 16,
+          "minVertexDistance": 0.25,
+          "startColor": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 1.0,
+            "a": 0.8 ,
+            "maxColorComponent": 3.0
+          },
+          "endColor": {
+            "r": 0.1,
+            "g": 0.1,
+            "b": 1.0,
+            "a": 0.8,
+            "maxColorComponent": 3.0
+          },
+          "positionCount": 1,
+          "shadowBias": 0.0,
+          "generateLightingData": true,
+          "textureMode": 2,
+          "alignment": 0,
+        },
+		"Rigidbody":{
+                        "useGravity": false
+                    },					
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.85, "y": 0.85, "z": 1 }
+        },
+        "Projectile": {
+          "m_ImpactSFXType" : "Cannon",
+          "UnityEngine.TrailRenderer": {
+            "widthMultiplier": 0.05,
+          },
+		  "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Explosive", //What damage modifier the explosion does - Setup to HEAL armor to prevent blockkill unless direct cab hit.
+              "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+              "m_ExplosionType": "Fuel", //What the explosion SOUNDS like
+              "m_EffectRadius": 1, //KA-BAM
+              //Was 20
+              "m_EffectRadiusMaxStrength": 25, 
+              //Was 12.5
+              "m_MaxDamageStrength": 25, //This affects splash damage
+              //Was 2000
+              //This will surely end MANY things
+              "m_MaxImpulseStrength": 0 //How hard to push things, explosion force -YEET
+            },
+			"Reference|8/ModuleDamage.deathExplosion/FX_Explosion_Shockwave": { 
+                            "UnityEngine.Transform": 
+							{ "localPosition": {"x":0, "y":1, "z":0}
+							}, 
+                            "UnityEngine.ParticleSystem": {
+				"main":{	 "m_ParticleSystem":{		
+                                "startDelay": 0,
+								"startColor": {
+							 	 "r": 1.0,
+							     "g": 1.0,
+								 "b": 1.0,
+								 "a": 1.0
+								},
+                               "playbackSpeed": 5,							
+                                "startSize": 2,      
+                                "startLifetime": 2 
+                            }}}
+                        },
+                        "GameObject|Point light": {     
+                            "UnityEngine.Light": {
+                                "intensity": 10.0,
+                                "range": 5.0,
+								"color": {
+					"r": 0.1,
+					"g": 0.1,
+					"b": 5.0,
+					"a": 1.0
+                }
+                            },
+                            "FadeInOutLight": {
+                                "StartDelay": 0.0,
+                                "FadeInSpeed": 0.5,
+                                "FadeOutDelay": 0.0,
+                                "FadeOutSpeed": 0.5
+                            }
+                        }, // The actual glow
+			
+            
+              
+          "GameObject|Sparks": { 
+              "Explosion": { //wOW a component -BONUS for more SOUND, plus friendly fire!
+                "m_DamageType" : "Plasma", //What damage modifier the explosion does
+                "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+                "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+                "m_EffectRadius": 1, //KA-BAM
+                "m_EffectRadiusMaxStrength": 25, 
+                "m_MaxDamageStrength": 25, //This affects splash damage
+                "m_MaxImpulseStrength": 0 //How hard to push things
+              },
+			  
+			  }, "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                       "r": 0.1,
+						"g": 0.1,
+						"b": 5.0,
+                      "a": 1.0,
+					  "maxColorComponent": 1.0
+                    },
+                    "startSize": 1,
+					"playbackSpeed": 5,
+                    "startSpeed": 2, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 50,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 50,
+                        //"cycleCount": 1,
+                        "maxCount": 50,
+                        "minCount": 30,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                   "startSize": 1,
+				   "startColor": {
+                      "r": 0.1,
+						"g": 0.1,
+						"b": 5.0,
+                      "a": 1.0,
+					  "maxColorComponent": 1.0
+                    },
+					"playbackSpeed": 10,
+                    "startSpeed": 2.2, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 50,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 50,
+                        //"cycleCount": 1,
+                        "maxCount": 50,
+                        "minCount": 30,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.1,
+                      "g": 0.1,
+                      "b": 5.0,
+                      "a": 0.85
+                    },
+                    "startSize": 1,
+					"playbackSpeed": 5,
+                    "startSpeed": 1, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 50,
+                    "duration": 0.5,
+                    "playbackSpeed": 0.75,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 50,
+                        "cycleCount": 1,
+                        "maxCount": 50,
+                        "minCount": 30,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                    // "shape": {
+                    //   "texture": {
+                    //     "mainTexture": "Sparks",
+                    //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    //   }
+                    // },
+                  }
+                }
+              }
+            }
+        }
+        }
+      }
+    }
+  }
+}

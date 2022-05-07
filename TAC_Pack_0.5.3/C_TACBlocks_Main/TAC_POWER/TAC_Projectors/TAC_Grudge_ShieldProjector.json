@@ -1,0 +1,504 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Grudge Shield Stereopticon",
+  "Description": "Deploys a shield some distance away from the block, projecting it to allow protection of an area far out of normal shield generator reach.  This one aggressively deploys quickly, and works wonders with the Quantumflux Rotary Generator. \n\nThis shield's most favorable operating condition is mounted to turrets, as a single solar panel is good enough to keep it going for a while during the day under heavy combat stress.  It also works wonders on speeding buggies with Dynamo Generators or Energy Precipitators on them. \nI don't know why we get so many complaints that the generator breaks when it is hit.  I mean the bubble is LITERALLY far away from the generator!  Bullets HIT the SHIELD, not the block!", //You can make multiple lines with \n
+  "ID": 584239, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 39834, //Pricey, WHY?
+  "HP": 4500,// High health lets the Grudge do it's job under pressure
+  "Mass": 12.0,//Heavy, 3 mass per block consumed
+
+  "IconName": "OhNoYouDont.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 49, 49, 49, 49, 51, 52, 52, 53, 53, 53, 54, 54, 54, 56, 57, 57, 57, 57, 57, 57, 60", //Separate chunk names or IDs with a comma. Not case sensitive.
+  //All them cyclone jets to propel the extensive cooling system are responible for letting the shield boot up quickly under extreme conditions.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1.5
+    }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 2,
+    "z": 2 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Shield_Bubble(111)",//(was VEN_FuelTank(212))VERY explosive. - Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 0, "y": 0.5, "z": 8.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_CoreM",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBase.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Outer Shield Texture
+      "SubOverrideName": "ShieldSphereEdge",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleMediumOuter.obj",
+    },
+    { //Outer Shield Texture2
+      "SubOverrideName": "ShieldSphereEdge/ShieldSphereOuter",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleMediumOuter.obj",
+    },
+    { //Inner Shield Texture
+      "SubOverrideName": "ShieldSphereInner",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleMediumInner.obj",
+    },
+    { //Barrel
+      "SubOverrideName": "m_VEN_Shield_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseBarrel.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Metal
+      "SubOverrideName": "m_VEN_Shield_111_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseSteel.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Sphere Part
+      "SubOverrideName": "m_Core",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "ShieldBallBlueGlow.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "BF_Main"
+    },
+    { //Plus Part
+      "SubOverrideName": "m_Plus",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBasePlus.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Truss
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseTruss.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Truss
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseTruss.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Shield_111_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Broadcasting Glow Part
+      "SubOverrideName": "ShieldMesh_Beam",
+      "MeshName": "TAC_Steriopticon_Glow.obj",
+      "MakeBoxCollider": false,
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|FXGSOShieldCharge": { //The Bubble Charging effect
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.75 } 
+      },
+      "GameObject|FXGSOShieldCharge 1": {
+      }
+    },
+    "GameObject|aCol": {
+      "UnityEngine.SphereCollider": {
+        "radius": 0.0,
+        "center": { "x": 0, "y": 0.5, "z": 0.5 },
+      }
+    },
+    "GameObject|b_Glow": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.65 } 
+      },
+    },
+    "GameObject|_shield": { //The actual Shield
+      "GameObject|_bubble": {
+        "GameObject|_Glow": {//Broadcasting effect
+          "FollowTransform": {//snap to the broadcasting lens
+            "m_TransformToFollow": "/b_Glow",
+            "m_FollowOrientation": true,
+          },
+          "Reference|VEN_Shield_Targeting_111/_gimbalBase/_gimbalElev/_shield/_bubble/ShieldMesh_Edge/ShieldMesh_Beam": { //Broadcasting effect
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.26, "y":0.26, "z":0.08 },
+              "localPosition": { "x":0, "y":0, "z":0.09 } 
+            },          
+          },
+        },
+        "GameObject|_bubbleTechTrigger": {
+          // "UnityEngine_SphereCollider": { //Cannot change directly, "ModuleShieldGenerator" overrules this
+          //   "radius": 0.5
+          // },
+        },
+        "GameObject|_bubbleBulletTrigger": {
+        },
+        "GameObject|_bubbleCollider": {
+        },
+        "GameObject|ShieldSphereOuter": {
+          "GameObject|ShieldSphereInner": {
+          },
+          "GameObject|ShieldSphereOuter": {
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.0,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.00,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+      "GameObject|_projector": {
+        "GameObject|_particles4": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles3": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles2": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles1": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        }
+      }
+    },
+    // "GameObject|m_ClusterBody": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+    //   },
+    // },
+    "GameObject|m_VEN_Shield_111": {//Barrel
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "GameObject|m_CoreM": {//Base
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.75, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111": {//Metal ring
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":0.9, "z":0.9 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.5,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    },
+    // "GameObject|m_Barrel": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":0, "z":0 } 
+    //   },
+    // },
+    "GameObject|m_Core": {//Sphere
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.225, "y":0.225, "z":0.225 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.65 } 
+      },
+    },
+    "GameObject|m_Plus": {//Plus
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy_copy_copy_copy_copy": {//Truss 2
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Shield_111_copy_copy_copy_copy_copy_copy": {//Truss 1
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+
+
+    "Damageable": 
+    { //Modify the base stats
+      //"m_OrigMaxHealth": 300.0,
+      //"m_DamageableType": 3,
+      //"m_HealingOrigin": null,
+      //"m_AoEDamageBlockPercent": 3.0, //the DAMAGE caused by the explosion based on block health. 4000x3.0=12000
+      //IF THIS THING GOES OFF, 12000 POINTS OF DAMAGE. NOTHING VANILLA CAN SURVIVE THAT
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false //Hmmmmmm...
+      // "m_HealthFixed": 1228800,
+      // "m_MaxHealthFixed": 1228800,
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 12.5,//was 7.0
+      "m_MaxScale": 12.5,//was 7.0
+      "m_EnergyConsumptionPerSec": 3.25, //Costs a lot to operate
+      "m_InitialChargeEnergy": 0.5,//was 0.5 //You must kickstart it
+      "m_InterpTimeOn": 0.4, //How fast the shield inflates
+      "m_InterpTimeOff": 1.0,//How fast the shield deflates - The Grudge refuses to back down
+      // "m_ParticleLife": 1.0,
+      // "m_ParticleSpeed": 10.0,
+      // "m_Repulsion": true,
+      // "m_RepelKick": 5.0,
+      // "m_RepelKickAngular": 5.0,
+      "m_EnergyConsumedPerDamagePoint": 0.35,// More than VEN's 0.25
+      "m_Healing": false,
+      "m_HealingHeartbeatInterval": 0.75,
+      "m_MaxHealingPerHeartbeat": 100.0,
+      "m_EnergyConsumedPerPointHealed": 0.1,
+      "m_PowerUpDelay": 0.1,//The Grudge refuses to back down, was 0.075 but it recovered too well when under fire
+      "m_MinTechForce": 50.0,
+      "m_MaxTechForce": 100.0,
+      // "m_Shield": {
+      //   "m_Speed": 0.05,
+      //   "m_RotationAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_SteerAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_AutoSpin": false,
+      //   "m_SpinUpTime": 1.0,
+      //   "m_CurrentAngle": 0.0,
+      //   "m_CurrentAutoSpeed": 0.0,
+      //   "m_CurrentSpeedFraction": 0.0,
+      //   "m_SpinnerSound": null,
+      //   "m_SpinnerSoundOriginalPitch": 0.0,
+      //   "Speed": 0.05,
+      //   "SpeedFraction": 0.0,
+      //   "AtFullSpeed": false
+      // },
+      // "m_Projector": null,
+      // "m_RepulsorBulletTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_RepulsorTechTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_TargetScale": 0.0,
+      // "m_CurrentInterpCurve": null,
+      // "m_InterpStartTime": 0.0,
+      // "m_InterpDuration": 0.0,
+      // "m_InterpStartScale": 0.0,
+      // "m_InterpScaleMin": 0.0,
+      // "IsScaling": false,
+      // "CurrentScale": 0.0,
+      // "ShieldRadius": 3.0,
+      // "m_EnergyDeficit": 800.0,
+      // "m_EnergyDrain": 0.0,
+      // "m_HealingHeartbeatNextTime": 322.266449,
+      // "m_TimeWithoutEnergy": 2.3562026,
+      // "m_EnoughPower": false,
+      // "m_ChargingEffect": false,
+      // "m_State": 0,
+      // "m_PowerUpTimer": 5.0,
+      // "m_CachedCollisionFixedFrameCount": 0
+    },
+    "ModuleEnergy": {//Handles power
+      // "m_Priority": -100,
+      // "m_OutputPerSecond": 0,//
+      // "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      // "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      // "m_GeneratingSFXType": 0,//no noise.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      // "m_PowerUpDelay": 0.0,
+    },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+  }
+}

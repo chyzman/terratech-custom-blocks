@@ -1,0 +1,55 @@
+//Anything with two slashes before it is a COMMENT. Comments DO NOT count as code, and can be used as an easy way to void code without deleting it.
+{
+  "Name": "Aerion Large Block",//This is the name of your block
+  "Description": "A large Aerion block, meant for the basic structure of larger vehicles.", //This is the description
+  "ID": 101001, //This is your block ID, this HAS TO BE UNIQUE!!! you can make an ID claim on the ID claiming forum post. for now, you can use 100026
+
+  "Faction": 7, //1=GSO, 2=GC, 3=RR, 4=HE, 5=VEN, 6=Special, 7=BF DISCLAIMER: I am unsure about this particular one, but this should be correct
+  "Category": 0, // 0=Standard, 1=Control, i forgot the rest
+  "Grade": 1, //The desired grade minus one. For example, grade 0 in JSON is grade 1 in-game.
+  "Price": 180, //This should be 3x the price of the recipie value.
+
+  "HP": 1000, //A GSO one block has 250 health.
+  "Mass": 8.0, //Overall mass of the block. Usually cauculated by mass per cell, so if a 2-block has 0.5 mass per cell, the overall mass (this value) would be 1.0.
+
+  "Fragility": 0, //how likely a block is to fall off a tech, 0=will never fall off
+  "DamageableType": 0, //ignore this for now
+  "Rarity": 1, //0=common, 1=uncommon, 2=rare
+
+  "Recipe": "7, 7", //in one of the modding channels, a Recipie Cauculation Chart is pinned, use that for Price and Recipie
+  "IconName": "Aerion Large Block.png", //name of the icon image to use, MUST END IN .PNG!!!
+  "MeshName": "Aerion_Large_Block.obj", //name of your block mesh, MUST END IN .OBJ!!!
+  "MeshColliderName": "Aerion_Large_Block_c.obj",
+
+  "MeshTextureName": "Aerion-Default.png", //the name of the textures to use, MUST END IN .PNG!!!
+  
+  "BlockExtents": { //This is a vector of 1,1,1, this will result in a one-celled block
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+
+  "APs": [ 
+    { "x": 0,    "y": 0,    "z": -0.5 }, { "x": 0,    "y": -0.5, "z": 0    }, { "x": -0.5, "y": 0,    "z": 0    },
+    { "x": 1,    "y": 0,    "z": -0.5 }, { "x": 1,    "y": -0.5, "z": 0    }, { "x": -0.5, "y": 0,    "z": 1    },
+    { "x": 0,    "y": 1,    "z": -0.5 }, { "x": 0,    "y": -0.5, "z": 1    }, { "x": -0.5, "y": 1,    "z": 0    },
+    { "x": 1,    "y": 1,    "z": -0.5 }, { "x": 1,    "y": -0.5, "z": 1    }, { "x": -0.5, "y": 1,    "z": 1    },
+    { "x": 0,    "y": 0,    "z": 1.5  }, { "x": 0,    "y": 1.5,  "z": 0    }, { "x": 1.5,  "y": 0,    "z": 0    },
+    { "x": 1,    "y": 0,    "z": 1.5  }, { "x": 1,    "y": 1.5,  "z": 0    }, { "x": 1.5,  "y": 0,    "z": 1    },
+    { "x": 0,    "y": 1,    "z": 1.5  }, { "x": 0,    "y": 1.5,  "z": 1    }, { "x": 1.5,  "y": 1,    "z": 0    },
+    { "x": 1,    "y": 1,    "z": 1.5  }, { "x": 1,    "y": 1.5,  "z": 1    }, { "x": 1.5,  "y": 1,    "z": 1    }
+  ],
+
+  "APsOnlyAtBottom": false, //use this OR "APs", this puts AP's on the bottom of EVERY cell.
+ 
+
+  "Deserializer": {
+    "ModuleHealOverTime": {
+      "HealAmount": 20, // Health per pulse,
+      "HealDelay": 1.0, // Seconds per pulse,
+      "EnergyDrain": 20, // Energy consumed each healing pulse,
+      "EnergyMinLimit": 50, // How much energy must be present to heal,
+      "Capacity": 100, // A small battery inside the block, because, uh...
+    }
+  }
+}    

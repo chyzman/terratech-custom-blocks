@@ -1,0 +1,552 @@
+{
+  "Name": "Old Star Rocket Barrel Silo",
+  "Description": "Now this is how the Old Star do. The Rocket Barrel Silo is large platform holding 4 barrel rockets that are ejected from the platform first before rocketing off to whatever poor soul that is lock onto.\n Each barrel rocket is capable of tracking the location of an enemy IF you are able to lock on to them first. \n \n Better Future reprisentitives are sending even more bounty hunters our way attempting to 'reclaim stolen property' by either disrupting our supply routes or raiding our Heavy Iron Mine sites. In the light of this we made a deal with certain weapon enthusiast from a corparation that favors Black color schemes for assistance is missile technology and boy do we like causing more explosions.", //You can make multiple lines with \n
+  "ID": 300175,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 8250,
+  "HP": 2500,
+  "Mass": 20,
+  "CenterofMass": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 1.5
+  },
+  "IconName": "OS_Rocket_Barrel_Silo.png",
+  "MeshName": null,
+  "Recipe": "0, 0, 0, 0, 0, 43, 43, 45, 45, 45, 45, 45, 45, 46, 46, 52, 52, 55, 55, ",
+  "EmissionMode": 2,
+
+  "Cells": [
+    //1
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    //2
+    {
+      "x": -1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 1
+    },
+    //3
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2
+    },
+    //4
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3
+    },
+    //layer 2
+    //1
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0
+    },
+    //2
+    {
+      "x": -1,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 1
+    },
+    //3
+    {
+      "x": -1,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 2
+    },
+    //4
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3
+    }
+  ],
+  // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [
+    //1
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    //2
+    {
+      "x": -1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 1
+    },
+    //3
+    {
+      "x": -1,
+      "y": -0.5,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 2
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 2
+    },
+    //4
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 3
+    },
+    //Side APs
+    //row 1
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    //row 2
+    {
+      "x": -1.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 2.5,
+      "y": 0,
+      "z": 1
+    },
+    //row 3
+    //row 2
+    {
+      "x": -1.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 2.5,
+      "y": 0,
+      "z": 2
+    },
+    //row 4
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "z": 2.5
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "z": 2.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3.5
+    }
+  ],
+
+  "GamePrefabReference": "GSO_MiniMissile_222",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "PrefabPosition": {
+    "x": 0.0,
+    "y": -0.5,
+    "z": 1
+  },
+  "SubObjects": [
+    //dummy missles
+    {
+      "SubOverrideName": "m_GSO_MiniMissile_222_Barrel",
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Large_Rocket_Silo.obj",
+      "ColliderMeshName": "OS_Large_Rocket_Silo.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_1/_recoiler/m_GSO_MiniMissile_222_Dummy",
+      "MeshName": "OS_Barrel_Rocket.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_2/_recoiler/m_GSO_MiniMissile_222_Dummy",
+      "MeshName": "OS_Barrel_Rocket.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_3/_recoiler/m_GSO_MiniMissile_222_Dummy",
+      "MeshName": "OS_Barrel_Rocket.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_4/_recoiler/m_GSO_MiniMissile_222_Dummy",
+      "MeshName": "OS_Barrel_Rocket.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    // Missle locations
+    {
+      "ObjectName": "_barrel_1",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_barrel_2",
+      "Position": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_barrel_3",
+      "Position": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_barrel_4",
+      "Position": {
+        "x": -1,
+        "y": 1,
+        "z": 0
+      }
+    },
+    // missile spawn locations
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_1/_spawnBullet",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_2/_spawnBullet",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_3/_spawnBullet",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_4/_spawnBullet",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.47,
+          "z": 3.63
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+    //////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////
+
+    "ModuleWeapon": {
+      "m_AimType": 1,
+      "m_RotateSpeed": 0.0,
+      "m_ChangeTargetInteval": 0.0,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_DontFireIfNotAimingAtTarget": false,
+      "m_ShotCooldown": 0.75,
+      "m_FireSFXType": 79,
+      "m_RemoteShotFiredPending": 0,
+      "m_HasTargetInFiringCone": false,
+      "m_ModuleType": 0,
+      "FireControl": false,
+      "AimControl": 0,
+      "RotateSpeed": 0.0,
+      "SFXType": 79,
+      "ShotCooldown": 0.75
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2.0,
+      "m_CooldownVariancePct": 0.00, // Dictates how random the length of pause between shots.
+
+      "m_BurstShotCount": 4,
+
+      "m_BurstCooldown": 3.0,
+
+      "m_ResetBurstOnInterrupt": false,
+
+      "m_FireControlMode": 0, // Dictates how the guns will fire
+      //  0 =   The guns will fire one at a time
+      //  1 =   All guns will fire at the same time
+      "m_SeekingRounds": true,
+      "m_NumCannonBarrels": 4
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 10.0, // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength": 2.0, // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance": 0.00, // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+
+      //*******************************//
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|m_GSO_MiniMissile": {
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "OS_Barrel_Rocket.obj"
+          },
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "mainTexture": "OST1.png"
+            }
+          }
+        },
+        "GameObject|_boostJet": {
+          "BoosterJet": {
+            "m_Force": 0.05 // Dictates the speed of the missile. The higher the value, the faster it becomes.
+          }
+        },
+
+        "Projectile": {
+          "m_Damage": 800, // The damage of the bullet when directly hitting a block
+          "m_LifeTime": 5.7, // The duration of the bullet's existence before despawning
+          "m_ExplodeAfterLifetime": true, // If set to true, the bullet will explode when despawning
+          "m_IgnoreCollisionWithBarrel": true, // If set to true, the bullet will ignore any collisions for a set period. Useful for complex-shaped barrels
+
+          "m_DeathDelay": 1.0, // Dictates the amount of time the bullet lives after it hits a target before it despawns. 
+          // Default is 0.0: the bullet will despawn after hitting an object.
+
+          "m_ExplodeOnTerrain": true, // If set to true, the bullet will explode when it hits terrain 
+
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_EffectRadiusMaxStrength": 4.0, // Dictates the damage type of the explosion
+              "m_EffectRadius": 8.0, // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+              "m_MaxDamageStrength": 175.0, // The splash damage done
+              "m_MaxImpulseStrength": 175.0, // The strength of the knockback done by the explosion
+              "m_DamageType": 3 // The type of damage the explosion will inflict
+            },
+            // Copy the settings of the HE Cruise Missile smoke. Due to the difference in the smoke's spritesheet, it will look different but will have roughly the same size.
+            "GameObject|ExplosionSmoke": {
+              "ParticleSystem": {
+                "startSpeed": 14.0,
+                "startSize": 10.0,
+                "radius": 2.0
+              }
+            }
+          }
+        },
+        //********** SeekingProjectile: Used mainly by missiles; this is where the missile propulsion behaviors are. **********/ /
+        "MissileProjectile": {
+          "m_MaxBoosterLifetime": 3.7, // This parameter is related to "BoosterJet" m_force: This dictates the amount of time the missile will propel itself before it falls to the ground.
+          // This is disabled if set to 0
+          "m_BoosterActivationDelay": 0.7, // Dictates the delay before "BoosterJet" m_force is activated. 
+          "m_ArmDelay": 1.7 // Dicates the time it takes for the missile to arm itself.
+        },
+        //********** SeekingProjectile: Used mainly by missiles; this is where the main missile AI behaviors are. **********//
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 50.0, // Dictates how wide the missile will search a target in front of it. A higher value allows it to home onto targets regardless of the angle it's fired  
+          "m_VisionRange": 130.0, // Dictates how far the target is before the missile can start homing into it. 
+          "m_TurnSpeed": 60.0 // Dictates how fast the missile turns in midair. The higher the value, the faster it will turn.
+        },
+        // Shorten the missile collider so it doesn't destroy itself when firing
+        "CapsuleCollider": {
+          "height": 1.0
+        }
+      }
+    }
+  }
+}

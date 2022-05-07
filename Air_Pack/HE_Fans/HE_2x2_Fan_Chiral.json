@@ -1,0 +1,110 @@
+
+{
+    "Name": "Hawkeye Falcon F-420 Prop (Chiral-Reversed)",
+    "Description": "A reverse-chirality cariant of the original Falcon prop, it's identical in every way except for the way the blades spin.",
+    "ID": 10032,
+
+    "Faction": 5,
+    "Category": 8,
+    "Rarity": 2,
+    "Grade": 0,
+    "Price": 13215,
+    "HP": 250,
+    "Mass": 3.0,
+
+    "Recipe":  "47, 49, 51, 52, 57, 59",
+
+    "IconName": "Hawkeye_2x2_Fan.png",
+    "MeshName": null,
+
+    "MeshMaterialName": "HE_Main",
+    "ColliderMeshName": "HE_2x2_Fan_Collider.obj",
+
+    "BlockExtents":{ "x": 2,"y": 2, "z": 1 },
+
+    "APs": [ 
+        { "x": 0,     "y": -0.5,    "z": 0  },
+        { "x": 1,     "y": -0.5,    "z": 0  },
+        { "x": -0.5,     "y": 0,    "z": 0  },
+        { "x": 1.5,     "y": 0,    "z": 0  }
+    ],
+
+    "GamePrefabReference": "HE_Gyroprop_313",
+    "KeepRenderers": true,
+
+    "SubObjects":[
+        {
+            "SubOverrideName": "m_HE_GyroProp_331",
+            "MeshName": "HE_2x2_Fan_Body_Textured.obj",
+            "MakeBoxCollider": false
+        },
+        {
+            "SubOverrideName": "_spinner_copy/m_HE_GyroProp_rotors",
+            // This is a reskinned (slightly) version of the rotor Saelem Black made for his Cascade prop
+            "MeshName": "HE_3x3_Fan.obj",
+            "MakeBoxCollider": false
+        },
+        {
+            "SubOverrideName": "_spinner/m_HE_GyroProp_rotors",
+            // This is a reskinned (slightly), and chiral-flipped version of the rotor Saelem Black made for his Cascade prop
+            "MeshName": "HE_3x3_Fan_Chiral_Reverse.obj",
+            "MakeBoxCollider": false
+        }
+    ],
+
+    "Deserializer": {
+        "GameObject|m_HE_GyroProp_331": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0.0 }
+            }
+        },
+        "GameObject|_spinner": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 0.5, "z": 0.2 },
+                "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_GyroProp_rotors": {
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localScale": { "x": 0.75, "y": 0.75, "z": 1.0 }
+                }
+            }
+        },
+        "GameObject|_fanJet": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 0.5, "z": 0.2 },
+                "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+            },
+            "FanJet": {
+                "force": 420.0,
+                "backForce": 280.0,
+                "spinSpeed": 500.0
+            }
+        },
+        "Duplicate|_spinner": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 0.5, "z": -0.2 },
+                "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_GyroProp_rotors": {
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localEulerAngles": { "x": 180.0, "y": 0.0, "z": 0.0 },
+                    "localScale": { "x": 0.75, "y": 0.75, "z": 1.0 }
+                }
+            }
+        },
+        "Duplicate|_fanJet": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 0.5, "z": -0.2 },
+                "localEulerAngles": { "x": 0.0, "y": 180.0, "z": 0.0 }
+            },
+            "FanJet": {
+                "m_FanSpinner": "/_spinner_copy/Spinner.",
+                "spinSpeed": 500.0
+            }
+        }
+    }
+}

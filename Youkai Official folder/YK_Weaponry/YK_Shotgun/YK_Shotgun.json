@@ -1,0 +1,378 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Youkai Type 11 CULL Heavy Shotgun",
+  "Description": "This heavy shotgun has immense range and damage compared to other shotguns, but fires very slowly as a consequence. \r\n\r\nThis type of tech is not native to Youkai, it was clearly imported from America or possibly even Hawkeye itself.",
+
+  "ID": 19039, //A random ID that MUST be unique
+  //Original Creator: Saiko-Sama
+  //Tweaked by: Legionite | Thank you so much Legionite~!
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 9258,
+  "HP": 750,
+  "Mass": 6.5,
+  "Rarity": 2,
+  "Fragility": 0.20,
+  "DamageableType": 1,
+
+  "IconName": "YK_Shotgun.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //Moved it to SubObjects so that it can be aligned- FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "45, 45, 45, 45, 46, 46, 46, 46, 54. 54", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+ "Cells": [
+    { "x": -1, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": -1, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 1 }
+  ],
+
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": -1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": -1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+  //
+  // Changed this to an existing weapon with one barrel so that the firing animation can work properly
+  //
+  "GamePrefabReference": "HE_Shotgun_Rotating_212", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0.5
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_Shotgun_Rotating_212_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+	  "ColliderMeshName": "YK_Shotgun_Barrel.obj",
+      "MeshName": "YK_Shotgun_Barrel.obj",
+	  "MeshTextureName": "YK_Texture 1.png", 
+	  "MeshGlossTextureName": "YK_Texture 2.png", 
+	  "MeshEmissionTextureName": "YK_Texture 3.png",
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0,
+      //   "z": 0
+      // }
+    },
+    {
+      "SubOverrideName": "m_HE_Shotgun_Rotating_212_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+	  "ColliderMeshName": "YK_Shotgun_Base.obj",
+      "MeshName": "YK_Shotgun_Base.obj",
+	  "MeshTextureName": "YK_Texture 1.png", 
+	  "MeshGlossTextureName": "YK_Texture 2.png", 
+	  "MeshEmissionTextureName": "YK_Texture 3.png",
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0,
+      //   "z": 0
+      // }
+    },
+    {
+      "SubOverrideName": "m_HE_Shotgun_Rotating_212_Body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+	  "ColliderMeshName": "YK_Shotgun_Body.obj",
+      "MeshName": "YK_Shotgun_Body.obj",
+	  "MeshTextureName": "YK_Texture 1.png", 
+	  "MeshGlossTextureName": "YK_Texture 2.png", 
+	  "MeshEmissionTextureName": "YK_Texture 3.png",
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0,
+      //   "z": 0.0
+      // }
+    },
+    {
+      "SubOverrideName": "m_HE_Shotgun_Rotating_212_Mount",
+      "MakeBoxCollider": false,
+      "MeshName": "YK_Shotgun_Gimbal.obj",
+	  "ColliderMeshName": "YK_Shotgun_Gimbal.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0,
+      //   "z": 0
+      // }
+    },
+    // {
+    //   "SubOverrideName": "_gimbalBase",
+    //   "SubPosition": {
+    //     "x": 0,
+    //     "y": 0,
+    //     "z": 0
+    //   }
+    // },
+    // {
+    //   "SubOverrideName": "_gimbalElev",
+    //   "SubPosition": {
+    //     "x": 0,
+    //     "y": 0,
+    //     "z": 0
+    //   }
+    // },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_HE_Shotgun_Rotating_212_Base": {
+      "UnityEngine.Transform": { //Moving the part
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":1 }
+      },
+    },
+    "GameObject|_gimbalBase": { //GameObject child
+      "GimbalAimer": { //Useful component - Horizontal Aiming
+        "rotationLimits": [-180, 180] //[-Left,+Right](Degrees) - VERY focused cone
+      },
+      "UnityEngine.Transform": { //Moving the part
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":-0.5, "y":0, "z":0.5 }
+      },
+      "GameObject|_gimbalElev": { //GameObject in child
+        "GimbalAimer": { //Useful component - Vertical Aiming
+          "rotationLimits": [-25, 25] //[-Up,+Down](Degrees) - VERY focused cone
+        },
+        "UnityEngine.Transform": { //Moving the part
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|m_HE_Shotgun_Rotating_212_Body": {
+          "UnityEngine.Transform": { //Placing the part
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.5, "y":0, "z":0.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 }
+          }
+        },
+        "GameObject|_barrel": {//- This is the part we should aim in placement first, make sure a visual cue like the muzzle flash is centered to make placement easier
+          "UnityEngine.Transform": { //Moving the barrel
+            "localScale": { "x":1, "y":1, "z":1.75 },// Increasing scale of animation
+            "localPosition": { "x":0.0, "y":0.275, "z":0.85 }//- Changed this so that the barrel which fires the projectiles is now aligned 
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": { //Moving the barrel
+              "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            "GameObject|m_HE_Shotgun_Rotating_212_Barrel": {
+              "UnityEngine.Transform": { //Moving the barrel
+                "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+                "localPosition": { "x":0.5, "y":-0.275, "z":-0.31 }//- and the visual of the barrel is aligned 
+              },
+            }
+          },
+          "GameObject|_blast": {// This is the visual effects of the attack. For some reason shotguns have it in the base rather than the FireData.
+            "UnityEngine.Transform": {
+              "localScale": { "x":45, "y":5, "z":10 },
+              "localPosition": { "x":-0.245, "y":0, "z":1.25 }
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startSize": 0.65,
+                  "startSpeed": 375, //How far you want the particles to spread
+                  "startColor": {
+                    "r": 1.0,
+                    "g": 0.1,
+                    "b": 0.2,
+                    "a": 1.0
+                  },
+                  "shape": {
+                    // "sphericalDirectionAmount": 0.025,
+                  },
+                  // "duration": 2.0,
+                  "playbackSpeed": 1.0,
+                  "emissionRate": 0.0,
+                  "maxParticles": 1500,
+                  "emission": {
+                    "type": 0,
+                    "rateMultiplier": 1.0,
+                    "burst": {
+                      "count": 50,
+                      //"cycleCount": 1,
+                      "maxCount": 50,
+                      "minCount": 50,
+                      // "probability": 150,
+                      // "repeatInterval": 150,
+                      "time": 0
+                    }
+                  },
+                }
+              }
+            },
+            "GameObject|FX_Impact_Smoke": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":1 },
+                // "localEulerAngles": { "x":0, "y":0, "z":0},
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+            },
+            "GameObject|FX_Impact_Sparks": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":1, "y":1, "z":1 },
+                // "localEulerAngles": { "x":0, "y":0, "z":0},
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+            },
+          },
+          "GameObject|_smoke2": { 
+            "UnityEngine.Transform": { //Offsetting the smoke effect so it looks neater
+              "localScale": { "x":0.2, "y":0.2, "z":0.2 },
+              "localPosition": { "x":-0.15, "y":0.0, "z":0.0 }
+            }
+          },
+          "GameObject|_smoke1": { 
+            "UnityEngine.Transform": { //Offsetting the smoke effect so it looks neater
+              "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+              "localPosition": { "x":0.15, "y":0.0, "z":0.0 }
+            }
+          },
+          "GameObject|_spawnCasing": {
+            "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+              "localScale": { "x":1, "y":3, "z":1 },
+              "localPosition": { "x": 0, "y":0.075, "z":-0.8 }
+            }
+          },
+          "GameObject|_muzzleFlash": { 
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.1, "y":0.1, "z":0.1 },//Downscaling to remove unwanted extra flash
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":-0.1 }
+            },
+            "MuzzleFlash": {
+              "m_SpeedFactor": 1.0,
+            },
+            "GameObject|_light": {
+            },
+            "GameObject|_muzzleFlashAnim": null,//This is going to be confusing, but there is a duplicate effect in the original that is not editable in JSON.
+            //To get around this issue, we trash what exists, then reference the reference block AGAIN, but ONLY the specific part we need to have.
+            "Reference|VEN_Shotgun_Rotating_112/_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x":17.5, "y":15, "z":17.5 },//scaling back up to size
+                  // "localEulerAngles": { "x":0, "y":0, "z":0},
+                  "localPosition": { "x":0, "y":0, "z":0 }
+                },
+                "UnityEngine.MeshRenderer": {
+                  "material": {
+                    // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    // "shaderKeywords": [
+                    //   "_ALBEDO",
+                    //   "_EMISSION",
+                    //   "_NORMALMAP"
+                    // ],
+                    // "mainTexture": "LED_BeamBlockG.png",
+                    "color": {
+                      "r": 1.1,
+                      "g": 0.1,
+                      "b": 0.0,
+                      "a": 1.0,
+                      "maxColorComponent": 3.0
+                    }
+                  }
+                }
+              }
+            },
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            }
+          }
+        }
+      }
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "69", //Firing noise
+      //Other Firing noise options include "VENCannonRapid"(The old fire sfx), "PoundCannon"(GSO 3-Pound Cannon), "MegatonLongBarrel"(GSO Gigaton Cannon)
+      "m_RotateSpeed" : 50, //SPEED
+    },
+  "ModuleWeaponGun": {
+    "m_ShotCooldown": 2,
+    "m_CooldownVariancePct": 0.1,
+    "m_FireControlMode": 1,
+    "m_ResetBurstOnInterrupt": true,
+    "m_RegisterWarningAfter": 1.0,
+    "m_ResetFiringTAfterNotFiredFor": 1.0,
+  },
+    "FireDataShotgun": {
+    "m_ShotMinRange": 0.0,
+    "m_ShotMaxRange": 55.0,
+    "m_ShotFullDamageRange": 5.0,
+    "m_ShotArc": 25.0,
+    "m_MinDamagePercent": 0.25,
+    "m_MaxDamagePercent": 1.0,
+    "m_TargetKickbackStrength": 6.0,
+    "m_TargetKickbackDuration": 0.0,
+    "m_MuzzleVelocity": 10.0,
+    "m_CasingVelocity": 15.0,
+    "m_BulletSprayVariance": 0.2,
+    "m_BulletSpin": 0.0,
+    "m_CasingEjectVariance": 0.5,
+    "m_CasingEjectSpin": 50.0,
+    "m_KickbackStrength": 75.0,
+  },
+  "FireData": {
+    "m_MuzzleVelocity": 20.0,
+    "m_CasingVelocity": 15.0,
+    "m_BulletSprayVariance": 0.2,
+    "m_BulletSpin": 0.0,
+    "m_CasingEjectVariance": 0.5,
+    "m_CasingEjectSpin": 50.0,
+    "m_KickbackStrength": 75.0,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":1.5, "y":1.5, "z":1.8 }},  // Size of Bullet    
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : 3, //What damage modifier the weapon does
+          "m_Damage": 150
+        },
+        // Enable "UnityEngine.CapsuleCollider" for "m_MuzzleVelocity" above 200 to prevent buggy clipping
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+                    "gameObject": {
+                        "layer": 12       // Shield - allows piercing 
+        },
+      }
+	  }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "Name": "BF Inline Wing stake",
+  "Description": "A simple piece of wing made to be inline with the hollow wings, either at the wing tips, or between wing ends to cover up that nasty drag spot.",
+  "ID": 1700229, 
+
+  "Faction": 7,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 2694, 
+  "HP": 400, 
+  "Mass": 0.8,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 1, 1, 9, 9, 43, 43, 44, 44, 45, 45, 52, 52",
+  "IconName": "Stake.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+  	"MeshMaterialName": "BF_Main",
+  "CenterOfMass":{ "x":  0, "y": 0, "z": 0},
+   "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0.5, "y": 0, "z": 0},
+	
+	{"x": 0, "y": 0, "z": -0.5},
+	
+	
+	
+  ],
+  
+  "GamePrefabReference": "GSO_Block_Half_Long_211",
+  "KeepReferenceRenderers": false,
+  
+  "SubObjects": [
+  	{"SubOverrideName":"Modifier",
+    	"MeshName": "BF_Wing_Stake.obj",
+		"MeshTextureName": "Infinitode Colors.png",
+      "ColliderMeshName": "BF_Wing_Stake.obj",
+	  
+	"SubPosition":{"x":0.1625,"y":0,"z":-0.1625},
+	"SubRotation":{"x":0.0,"y":0,"z":0}
+    }
+    
+  ],
+
+  
+}

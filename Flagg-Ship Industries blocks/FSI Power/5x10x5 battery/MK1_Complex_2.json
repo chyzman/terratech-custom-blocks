@@ -1,0 +1,521 @@
+{
+	"Name": "Better Future Singularity Power Complex MK1",
+	"Description": "The Pinnical of power storage. Holds over 1800 times more power than the dinky GSO Battery. It is very heavy as a result, and weak in health terms. \n\nBased off of Existing SCU Technology, the Better Future Singularity Power Complex Super-Saturates an SCU Singularity with energy instead of whatever the SCUs are powered by. Nicknamed Project 'Superradiant Scattering,' this is the only model that remains stable even when damaged. Tests show that the explosion of the complex is pretty weak, which makes it great for bases.", //You can make multiple lines with \n
+	"ID": 1700011, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+"DropFromCrates": false,
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 1, //The grade minus one
+	"Price": 935424,
+	"HP": 1250,
+	"Mass": 750,
+	"Rarity":3,
+
+	"IconName": "MK1_Complex_2_Icon.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, " 	
+	
+	
+	
+	
+	
+	, // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": "BF_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"BlockExtents":{"x": 5,"y": 10, "z": 5},
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 9.5, "z": 4 },
+		{ "x": 0, "y": 9.5, "z": 0 }, 
+		{ "x": 0, "y": 9.5, "z": 4 },
+		{ "x": 4, "y": 9.5, "z": 0 }, 
+		
+		{ "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 9, "z": 4 },
+		{ "x": -0.5, "y": 9, "z": 0 }, 
+		{ "x": -0.5, "y": 9, "z": 4 },
+		{ "x": 4.5, "y": 9, "z": 0 }, 
+		
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 9, "z": 4.5 },
+		{ "x": 0, "y": 9, "z": -0.5 }, 
+		{ "x": 0, "y": 9, "z": 4.5 },
+		{ "x": 4, "y": 9, "z": -0.5 }, 
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "HEBattery(211)",
+	"KeepReferenceRenderers": true,
+	"DeathExplosionReference":"HE_Block_111",//Non lethal
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_HE_Battery_211_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "MK1_Complex_2_Base.obj",
+			"ColliderMeshName" : "MK1_Complex_2_Base.obj",
+	    "MeshTextureName": null,
+      "MeshMaterialName": "BF_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "MK1_Complex_2_LEDs.obj",
+	    // "MeshTextureName": "m_TAC_Battery_SevenSeg_Power2.png",
+	    "MeshTextureName": "LED_Complex.png",
+	    // "MeshTextureName": "CirculatedBattery.png",
+      // "MeshMaterialName": "HE_Main",
+		},
+		{
+    "SubOverrideName":"Ring_Plane_CW",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "MK1_Complex_2_Spinner_1.obj",
+	"MeshMaterialName": "Mat_Pickup_Resource_RodiusCapsule",
+	"ColliderMeshName" : "MK1_Complex_2_Spinner_1.obj",
+	"SubPosition": {"x":2, "y":4.5, "z":2},"SubRotation": {"x": 0,"y": 0,"z": 0}
+	},
+	{
+    "SubOverrideName":"Ring_NS_CW",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "MK1_Complex_2_Spinner_1.obj",
+	"MeshMaterialName": "Mat_Pickup_Resource_RodiusCapsule",
+	"ColliderMeshName" : "MK1_Complex_2_Spinner_1.obj",
+	"SubPosition": {"x":0, "y":0, "z":0},"SubRotation": {"x": 0,"y": 90,"z": 90}
+	},
+	{
+    "SubOverrideName":"Ring_EW_CW",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "MK1_Complex_2_Spinner_1.obj",
+	"MeshMaterialName": "Mat_Pickup_Resource_RodiusCapsule",
+	"ColliderMeshName" : "MK1_Complex_2_Spinner_1.obj",
+	"SubPosition": {"x":0, "y":0, "z":0},"SubRotation": {"x": 0,"y": 0,"z": 90}
+	},
+		
+		
+  ],
+	
+	"JSONBLOCK": {
+	"GameObject|Ring_Plane_CW": {
+	"Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 },
+"localScale": { "x": 2, "y": 2, "z": 2 }			},
+            // Slow down the effect
+            "ParticleSystem": {	
+        
+		"startDelay": 1,
+		
+        
+      },
+
+            "GameObject|Charging_Static": {
+		"ParticleSystem": {	
+        "startColor": {
+          "r": 0,
+          "g": 0.5,
+          "b": 1,
+          "a": 1
+        },
+        
+        "playbackSpeed": 0.01,
+		"startDelay": 0.01,
+        "enableEmission": true,
+        "emissionRate": 1000,
+        "startSize": 4,
+        "startLifetime": 0.001,
+		"startSpeed":0,
+        "maxParticles": 2000,
+      },
+	  "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 90, "z": 0 }			}},
+			"Duplicate1|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 30, "y": 90, "z": 0 }			}},
+			"Duplicate2|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 60, "y": 90, "z": 0 }			}},
+			"Duplicate3|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 90, "y": 90, "z": 0 }			}},
+			"Duplicate4|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 120, "y": 90, "z": 0 }			}},
+			"Duplicate5|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 150, "y": 90, "z": 0 }			}},
+			"Duplicate6|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 180, "y": 90, "z": 0 }			}},
+			"Duplicate7|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 210, "y": 90, "z": 0 }			}},
+			"Duplicate8|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 240, "y": 90, "z": 0 }			}},
+			"Duplicate9|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 270, "y": 90, "z": 0 }			}},
+			"Duplicate10|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 300, "y": 90, "z": 0 }			}},
+			"Duplicate11|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 330, "y": 90, "z": 0 }			}},
+            "GameObject|Ray_02": null,
+            "GameObject|Ray_03": null,
+            "GameObject|Ray_04": null,
+			
+        },
+	 "Spinner":{
+	  "m_Speed": 0.25,
+      "Speed": 0.25, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        },
+		"GameObject|Ring_NS_CW": {
+		"UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 90, "z": 0 }			},
+	"Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 },
+"localScale": { "x": 2, "y": 2, "z": 2 }			},
+            // Slow down the effect
+            "ParticleSystem": {	
+        
+		"startDelay": 1,
+		
+        "enableEmission": false,
+        
+      },
+
+            "GameObject|Charging_Static": {
+		"ParticleSystem": {	
+        "startColor": {
+          "r": 0,
+          "g": 0.5,
+          "b": 1,
+          "a": 1
+        },
+        
+        "playbackSpeed": 1,
+		"startDelay": 0,
+        "enableEmission": false,
+        "emissionRate": 1000,
+        "startSize": 4,
+        "startLifetime": 0.001,
+		"startSpeed":0,
+        "maxParticles": 2000,
+      },
+	  "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 90, "z": 0 }			}},
+			"Duplicate1|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 30, "y": 90, "z": 0 }			}},
+			"Duplicate2|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 60, "y": 90, "z": 0 }			}},
+			"Duplicate3|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 90, "y": 90, "z": 0 }			}},
+			"Duplicate4|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 120, "y": 90, "z": 0 }			}},
+			"Duplicate5|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 150, "y": 90, "z": 0 }			}},
+			"Duplicate6|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 180, "y": 90, "z": 0 }			}},
+			"Duplicate7|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 210, "y": 90, "z": 0 }			}},
+			"Duplicate8|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 240, "y": 90, "z": 0 }			}},
+			"Duplicate9|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 270, "y": 90, "z": 0 }			}},
+			"Duplicate10|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 300, "y": 90, "z": 0 }			}},
+			"Duplicate11|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 330, "y": 90, "z": 0 }			}},
+            "GameObject|Ray_02": null,
+            "GameObject|Ray_03": null,
+            "GameObject|Ray_04": null,
+			
+        },
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Ring_EW_CW": {
+	"Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 },
+"localScale": { "x": 2, "y": 2, "z": 2 }			},
+            // Slow down the effect
+            "ParticleSystem": {	
+        
+		"startDelay": 1,
+		
+        "enableEmission": false,
+        
+      },
+
+            "GameObject|Charging_Static": {
+		"ParticleSystem": {	
+        "startColor": {
+          "r": 0,
+          "g": 0.5,
+          "b": 1,
+          "a": 1
+        },
+        
+        "playbackSpeed": 1,
+		"startDelay": 0,
+        "enableEmission": false,
+        "emissionRate": 1000,
+        "startSize": 4,
+        "startLifetime": 0.001,
+		"startSpeed":0,
+        "maxParticles": 2000,
+      },
+	  "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 90, "z": 0 }			}},
+			"Duplicate1|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 30, "y": 90, "z": 0 }			}},
+			"Duplicate2|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 60, "y": 90, "z": 0 }			}},
+			"Duplicate3|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 90, "y": 90, "z": 0 }			}},
+			"Duplicate4|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 120, "y": 90, "z": 0 }			}},
+			"Duplicate5|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 150, "y": 90, "z": 0 }			}},
+			"Duplicate6|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 180, "y": 90, "z": 0 }			}},
+			"Duplicate7|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 210, "y": 90, "z": 0 }			}},
+			"Duplicate8|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 240, "y": 90, "z": 0 }			}},
+			"Duplicate9|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 270, "y": 90, "z": 0 }			}},
+			"Duplicate10|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 300, "y": 90, "z": 0 }			}},
+			"Duplicate11|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 330, "y": 90, "z": 0 }			}},
+            "GameObject|Ray_02": null,
+            "GameObject|Ray_03": null,
+            "GameObject|Ray_04": null,
+			
+        },
+	 "Spinner":{
+	  "m_Speed": 0.75,
+      "Speed": 0.75, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }}},
+		
+		
+	"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 2,
+                "y": 4.5,
+                "z": 2
+               },
+               "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+             },
+             "UnityEngine.ParticleSystem": {
+              "rotationOverLifetime": {
+                "enabled": true,
+                "SeparateAxis":false,
+                "z": { "constantMin": -3, "constantMax": 3 }
+              },
+            "startDelay": 1,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 4.0,
+            "startSpeed": 0,
+            "startSize": 2,
+            "startLifetime": 4.0,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000,
+            "simulationSpace": 0,
+            "scalingMode": 1,
+            "randomSeed": 0
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "alignment": 0,
+              "renderMode": 0,
+              "sortMode": 0,
+              "lengthScale": 2.0,
+              "velocityScale": 0.0,
+              "cameraVelocityScale": 0.0,
+              "normalDirection": 1.0,
+              "shadowBias": 0.0,
+              "sortingFudge": 0.0,
+              "minParticleSize": 0.0,
+              "maxParticleSize": 1.0,
+              "material": "FX_Teleporter_Spiral"
+            }
+          },
+		"GameObject|m_HE_Battery_211_Base":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2, "y":4.5, "z":2 } 
+      },
+	   
+		},
+		"GameObject|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2, "y":4.5, "z":2 }, 
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90 }
+      },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          "doubleSidedGI": false,
+          "mainTexture": {
+          	"filterMode": "Point", // Point, Bilinear
+	          "texelSize": {
+	            "x": 0.025,
+	            "y": 0.025,
+	          },
+          },
+          "mainTexture": "LED_Complex",//THIS MUST BE DIRECTLY BELOW  "mainTexture": {"filterMode": "Point"} OR IT WILL NOT WORK!
+          // },
+        }
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 7,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.025,
+	      //       "y": 0.025,
+	      //     }
+	      //   }
+	      // },
+	    },
+		},
+		"Duplicate|m_HE_Battery_211_LEDs":{//Reset the LEDs to Vanilla
+      "UnityEngine.Transform": {
+	        "localScale": { "x":0.01, "y":0.01, "z":0.01 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":1.5, "y":0.9875, "z":0.5 },
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90 }
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 7,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.125,
+	      //       "y": 0.125,
+	      //     }
+	      //   }
+	      // },
+	    },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          // "anisoLevel": 9,
+          // "enableInstancing": true,
+          "doubleSidedGI": false,
+          // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          // "mainTextureOffset": {"x":0.0, "y":0.0},
+          // "mainTextureScale": {"x":1, "y":1},
+          // "mipMapBias": 5.0,
+          // "wrapMode": false,
+          // "wrapModeU": false,
+          // "wrapModeV": false,
+          // "wrapModeW": false,
+          // "globalIlluminationFlags": 1,
+          // "mainTexture": "m_DefaultPower_1.png",
+          // "mainTexture": "m_TAC_Battery_LED_Power_2.png",
+          "mainTexture": {
+	          "filterMode": "Point",
+	          // "filterMode": "Bilinear",
+	        },
+          // "shaderKeywords": [
+          //   "_ALBEDO",
+          //   "_EMISSION",
+          //   "_NORMALMAP"
+          // ],
+        }
+      },
+
+		},
+
+		//Coding
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical 
+      // "m_DamageableType": 6, //What damage multiplier this runs by
+      //Rock because ROCK HARD
+      // "m_HealingOrigin": null,
+      //"m_AoEDamageBlockPercent": 0.15,//Explosions are not as powerful against this - doesn't work, quoted out...
+      //
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false,
+    },
+    "ModuleEnergyStore": {"m_Capacity": 3000000}
+	}
+}

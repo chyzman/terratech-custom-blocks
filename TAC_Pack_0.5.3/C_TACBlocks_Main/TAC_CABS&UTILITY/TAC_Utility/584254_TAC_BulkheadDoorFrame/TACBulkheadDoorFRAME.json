@@ -1,0 +1,469 @@
+{
+  "Name": "TAC Armored Reinforced Alloy Bulkhead Door",
+  "Description": "This door is a masterpiece of TAC engineering.  With \"More Hitpoints Than God\", the TAC Bulkhead Door is able to hold off an onslaught of attacks and keep your precious cabs safe and sound from the raging invaders. \n\nBulkhead Door Alloy is known to TACkind as the most durable substance a being can ever aquire.  It's nano-engineered down to the atomic level, wait no, it's mostly tampering with string theory to get the quarks in the perfect spots to make it damn near indestructable. \n\nThe alloy used within TAC Bulkhead doors is so strong and so compact that it sells on the black market for billions of build bucks. \n\n\n<b>Prophecy(F)</b>: \"Did the door break their morale?\" \n<b>Rasande</b>: \"What?\" \n<b>Prophecy(F)</b>: \"What?\" \n<b>Jeffry</b>: \"CORRECT\"  \n\nTo this date, the door survived countless waves of deadly attacks, oftentimes the enemy would throw nukes and fire car-sized railgun slugs at it in vain, then give up... \n\n\n\nand then go around the door instead.", 
+  //This whole block is FREAKING MEME from TerraTech Discord Kingdoms RP
+
+  "ID": 584254,     
+
+  "Faction": 5,   
+  "Category": 5,  
+  "Grade": 3,     
+  "Price": 606660,//
+  "HP": 750000, //Huff and puff until ded - Well over the max allowed block health lol
+  "Mass": 256,//was 64 //Heavy - Don't expect to even bother using this as armor
+
+  //"Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 60, 60",//
+
+    "Recipe" : {
+      "44": 80,
+      "45": 80,
+      "46": 40,
+      "53": 240,
+      "54": 350,
+      "60": 20,
+    }, //It takes all of THIS to make TAC Bulkhead Door Alloy
+    //It's either this or one round for the True Praetorian.
+    // Your call.
+
+
+  "IconName": "IndestructablusMaximus.png", 
+  // "MeshName": null, 
+  // "MeshMaterialName": null, 
+  // "ColliderMeshName": null, 
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    // "x": 7,
+    // "y": 5,
+    // "z": 3 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+    "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                        // Any character placement that is not a space will be filled as a cell
+    [ // Z Layer 0
+      "XXXXXXXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+    ],
+    [ // Z Layer 1
+      "XXXXXXXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+    ],
+    [ // Z Layer 2
+      "XXXXXXXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+      "XXXDDDXXX",
+    ],
+  ],
+
+  "APs": [
+    //Bottom
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 2 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 2 },
+    { "x": 2, "y": -0.5, "z": 1 },
+    { "x": 3, "y": -0.5, "z": 1 },
+    { "x": 4, "y": -0.5, "z": 1 },
+    { "x": 5, "y": -0.5, "z": 1 },
+    { "x": 6, "y": -0.5, "z": 1 },
+    { "x": 7, "y": -0.5, "z": 0 },
+    { "x": 7, "y": -0.5, "z": 1 },
+    { "x": 7, "y": -0.5, "z": 2 },
+    { "x": 8, "y": -0.5, "z": 0 },
+    { "x": 8, "y": -0.5, "z": 1 },
+    { "x": 8, "y": -0.5, "z": 2 },
+    //Top
+    { "x": 0, "y": 4.5, "z": 0 },
+    { "x": 0, "y": 4.5, "z": 1 },
+    { "x": 0, "y": 4.5, "z": 2 },
+    { "x": 1, "y": 4.5, "z": 0 },
+    { "x": 1, "y": 4.5, "z": 1 },
+    { "x": 1, "y": 4.5, "z": 2 },
+    { "x": 2, "y": 4.5, "z": 1 },
+    { "x": 3, "y": 4.5, "z": 1 },
+    { "x": 4, "y": 4.5, "z": 1 },
+    { "x": 5, "y": 4.5, "z": 1 },
+    { "x": 6, "y": 4.5, "z": 1 },
+    { "x": 7, "y": 4.5, "z": 0 },
+    { "x": 7, "y": 4.5, "z": 1 },
+    { "x": 7, "y": 4.5, "z": 2 },
+    { "x": 8, "y": 4.5, "z": 0 },
+    { "x": 8, "y": 4.5, "z": 1 },
+    { "x": 8, "y": 4.5, "z": 2 },
+    //Sides
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 1, "z": 0 },
+    { "x": -0.5, "y": 2, "z": 0 },
+    { "x": -0.5, "y": 3, "z": 0 },
+    { "x": -0.5, "y": 4, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 2 },
+    { "x": -0.5, "y": 1, "z": 2 },
+    { "x": -0.5, "y": 2, "z": 2 },
+    { "x": -0.5, "y": 3, "z": 2 },
+    { "x": -0.5, "y": 4, "z": 2 },
+    { "x": 8.5, "y": 0, "z": 0 },
+    { "x": 8.5, "y": 1, "z": 0 },
+    { "x": 8.5, "y": 2, "z": 0 },
+    { "x": 8.5, "y": 3, "z": 0 },
+    { "x": 8.5, "y": 4, "z": 0 },
+    { "x": 8.5, "y": 0, "z": 2 },
+    { "x": 8.5, "y": 1, "z": 2 },
+    { "x": 8.5, "y": 2, "z": 2 },
+    { "x": 8.5, "y": 3, "z": 2 },
+    { "x": 8.5, "y": 4, "z": 2 },
+    
+  ],
+
+  // "GamePrefabReference": "HE_Block_Alt_01_(111)", 
+  "GamePrefabReference": "BF_Laser_Scatter(121)", 
+  "KeepReferenceColliders": true,
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": { "x": 3, "y": 2, "z": 1 },
+
+  "SubObjects": [
+    { //Base
+      "SubOverrideName": "m_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACBulkHeadDoor2.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_DoorMain",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACBulkHeadDoorDoor.obj",
+      "ColliderMeshName": "TACBulkHeadDoorDoor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {
+      "SubOverrideName": "m_HE_Block_Alt2_121",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACBulkHeadDoorDoor.obj",
+      "ColliderMeshName": "TACBulkHeadDoorDoor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+
+    //Checkers
+    // { //Making that hatch that disappears when firing
+    //  "SubOverrideName": "AimTransform",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // { //Making that hatch that disappears when firing
+    //  "SubOverrideName": "DoorHandler",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+
+    //Cleanup
+    { 
+      "SubOverrideName": "m_HE_Block_111",
+      "DestroyExistingRenderer": true,
+    }, 
+    { 
+      "SubOverrideName": "m_HE_Block_111_copy",
+      "DestroyExistingRenderer": true,
+    }, 
+    { 
+      "SubOverrideName": "m_HE_Block_111_copy_copy",
+      "DestroyExistingRenderer": true,
+    }, 
+    { 
+      "SubOverrideName": "m_HE_Block_111_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+    }, 
+  ],
+
+  "JSONBLOCK": {
+
+    //ANIMATION
+    "GameObject|BF_Laser_Scatter_121": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":2.5, "y":2.5, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x": 2.875, "y": 2, "z": 1 }
+      },
+      "GameObject|m_BF_Laser_Scatter_121_Base": {
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.BoxCollider": {
+          "center": {
+            "x": 0.0,
+            "y": -1.20,
+            "z": 0.0
+          },
+          "extents": {
+            "x": 1.0,
+            "y": 0.2,
+            "z": 0.6
+          }
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.4, "y":0.4, "z":0.4 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          },
+          "GameObject|m_DoorMain": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":90 },
+              "localPosition": { "x": 0, "y": 0, "z": 0 }
+            },
+          },
+          "GameObject|AimTransform": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x": 0, "y": 0, "z": 5 }
+            },
+          },
+          "GameObject|m_BF_Laser_Scatter_121_Mount": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x": 0, "y": 0, "z": -2 }
+            },
+            "GimbalAimer": {
+              "rotationAxis": 2,
+              "rotationLimits": [
+                -45.0,
+                45.0
+              ],
+              "aimClampMaxPercent": 1.0,
+            },
+            "GameObject|m_BF_Laser_Scatter_121_Laser": {
+              "GimbalAimer": {
+                "rotationAxis": 1,
+                "rotationLimits": [
+                  -45.0,
+                  45.0
+                ],
+                "aimClampMaxPercent": 1.0,
+              },
+              "GameObject|_barrel": {
+                "GameObject|_blast": {
+                  "UnityEngine.ParticleSystem": {
+                    "main": {
+                      "m_ParticleSystem": {
+                        // "startDelay": 0.0,
+                        // "loop": false,
+                        // "playOnAwake": false,
+                        // "duration": 0.5,
+                        // "playbackSpeed": 1.0,
+                        // "enableEmission": true,
+                        // "emissionRate": 0.0,
+                        "startSpeed": 50.0,
+                        "startSize": 0.1,
+                        "startRotation": 0.0,
+                        "startLifetime": 0.1,
+                        "gravityModifier": 0.0,
+                        "maxParticles": 50,
+                        "simulationSpace": 1,
+                        "scalingMode": 2,
+                        "automaticCullingEnabled": false,
+                        "isPlaying": false,
+                        "isEmitting": false,
+                        "isStopped": true,
+                        "isPaused": false,
+                        "particleCount": 0,
+                        "time": 0.5,
+                        "randomSeed": 3709566478,
+                        "useAutoRandomSeed": false,
+                        "proceduralSimulationSupported": false,
+                      }
+                    }
+                  },
+                  "ParticleSystemRenderer": {
+                    "alignment": 0,
+                    "renderMode": 1,
+                    "sortMode": 0,
+                    "lengthScale": 0.1,
+                    "velocityScale": 0.0,
+                    "cameraVelocityScale": 0.0,
+                    "normalDirection": 1.0,
+                    "shadowBias": 0.0,
+                    "sortingFudge": 0.0,
+                    "minParticleSize": 0.0,
+                    "maxParticleSize": 0.1,
+                    "maskInteraction": 0,
+                    "trailMaterial": null,
+                    "enableGPUInstancing": false,
+                    "allowRoll": true,
+                    "mesh": null,
+                    "meshCount": 0,
+                    "activeVertexStreamsCount": 5
+                  },
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+
+    //Animated Door Transform
+    "GameObject|DoorHandler": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":0.0000 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 4, "y": 2, "z": 1 }
+      },
+      "GameObject|AimRotator": {
+        "FollowSuspension": {//This is new, will note for later use.
+          //This is like a game of catch and throw, there MUST be another GameObject at the other side or the game will crash.
+          "m_TargetWheelTrans": "/BF_Laser_Scatter_121/m_BF_Laser_Scatter_121_Base/m_BF_Laser_Scatter_121_Platform/AimTransform",
+          // "m_TargetUpTrans": "/SuspensionUp",
+          "m_KeepOriginalRotationOffset": true,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|2ndDoorAimPoint": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x": 0, "y": 0, "z": -5.4 }
+          },
+        },
+      },
+    },
+
+    "GameObject|2ndDoorAttach": {
+      "FollowTransform": {//This is new, will note for later use.
+        "m_TransformToFollow": "DoorHandler/AimRotator/2ndDoorAimPoint",
+        "m_FollowOrientation": false,
+      },
+      "Reference|HE_Block_112/m_HE_Block_Alt2_121": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":180, "z":0 },
+          "localPosition": { "x": 1.25, "y": 0, "z": 0 }
+        },
+      },
+    },
+
+
+    //Begin Physical Door Frame
+    "GameObject|m_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 4, "y": 2, "z": 1 }
+      },
+    },
+    "Reference|HE_Block_111/m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.5, "y":5.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 1.25, "y": 2, "z": 1 }
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+      },
+    },
+    "Duplicate|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.5, "y":5.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 6.75, "y": 2, "z": 1 }
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+      },
+    },
+    "Duplicate|m_HE_Block_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":7.0, "y":0.5, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 4, "y": 4.25, "z": 1 }
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+      },
+    },
+    "Duplicate|m_HE_Block_111_copy_copy": { //Ramp collider
+      "UnityEngine.Transform": {
+        "localScale": { "x":7.0, "y":0.15, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x": 4, "y": -0.425, "z": 1 }
+      },
+      "UnityEngine.BoxCollider": {
+        "gameObject": {
+          "layer": 8//give it a drivable collider
+        },
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        // "extents": {
+        //   "x": 3.5,
+        //   "y": 0.075,
+        //   "z": 1.25
+        // }
+      },
+    },
+
+
+    //Modules Begin Below
+    "Damageable": {
+      "m_DamageableType": 1,
+      //Rock hard armoring. Impact weapons are your only chance of forcing it open.
+      "m_AoEDamageBlockPercent": 10000.0,//0.175, //No shotgun gets through
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Popping off in the middle of a fight will really ruin your day
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+    // "ModuleDetachableLink": {
+    //   "m_DetachQueued": false,
+    //   //"m_TechNamer": null
+    // },
+  }
+}

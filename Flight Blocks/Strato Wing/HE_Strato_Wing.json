@@ -1,0 +1,67 @@
+{
+  "Name": "Hawkeye Strato Wing",
+  "Description": "The Strato Wing is a Black Labs issue Spread Wing with hidden ailerons and an alternate attachment point layout.",
+  "ID": 117030, 
+
+  "Faction": 5,
+  "Category": 8, 
+  "Grade": 1, 
+  "Price": 966, 
+  "HP": 750, 
+  "Mass": 3,
+  
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "7, 7, 7, 11, 43, 52",
+  "IconName": "HE_Strato_Wing.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+ 
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 1, "y": 0, "z": 0},
+    {"x": 2, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": -1},
+    {"x": 1, "y": 0, "z": -1},
+    {"x": 2, "y": 0, "z": -1}
+  ],
+  
+  "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": -1},
+
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 2.5, "y": 0, "z": -1},
+
+    {"x": 1, "y": 0, "z": 0.5},
+    {"x": 1, "y": 0, "z": -1.5},
+
+    {"x": 1, "y": -0.5, "z": 0},
+
+  ],
+  
+  "GamePrefabReference":   "HE_Wing_Middle_312",
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+  "SubObjects": [
+    {
+    "SubOverrideName":     "m_HE_Wing_Middle_312",
+    "MeshName":            "HE_Strato_Wing.obj",
+    "ColliderMeshName": "HE_Strato_Wing_Collider.obj",
+    "MeshMaterialName":    "HE_Main",
+    },  
+    {
+    "SubOverrideName":     "m_HE_Wing_Middle_312_Flap",
+    "MeshName":            null,
+    },
+  ],
+
+  "Deserializer": {
+    "GameObject|SmokeTrail_2": null,
+    "GameObject|SmokeTrail_1": null,
+  }
+}

@@ -1,0 +1,408 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Gigalord Flight Engine Bell",
+  "Description": "This is a powerful engine commonly seen on the TAC Valhalla, a huge rocket nozzle capable of pushing out five hundred-thousand tons of force for its moderate size! \nThis is a fairly large booster that can force Techs to speeds above 200 if used nicely, beyond the safe speed that many other corps try to enforce. \nIn fact, it's soo powerful that anything at the other end of the nozzle is yeeted to <b>kingdom come</b>, so only point towards enemy, not face. \n\nBUT, it has the worst responsiveness of any booster in existance and can also completely disintegrate your tech in seconds if you hit the terrain at the wrong angle.  Also, always keep this booster at the back end as the thrust loses huge effectiveness while inside the Tech. \n\n\nThe TAC Valhalla is incredibly fast, thanks to an array of these boosters at the back, more than capable of reaching speeds over 300 MPH. \n\n\nThe Gigalord Flight Engine secretly works much better in space, where all that awful drag is non-existant.", //You can make multiple lines with \n
+  "ID": 584219, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 66738,// What, you thought this would be CHEEAP???
+  "HP": 4250,//Stronk booster bell
+  "Mass": 18,//12
+
+  "IconName": "ChromeCruiser.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 47, 47, 49, 49, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 62, 63, 63, 63, 63", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Front
+    { "x": 0, "y": 0, "z": 2.5 },
+    { "x": 1, "y": 0, "z": 2.5 },
+    { "x": 0, "y": 1, "z": 2.5 },
+    { "x": 1, "y": 1, "z": 2.5 }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 3
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "VEN_Booster_Double_(211)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0.5, "y": 0.5, "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_Venture_BoosterDouble_211",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGigalordEngineBell.obj",
+      "ColliderMeshName": "TACGigalordEngineBell.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Base Detail
+     "SubOverrideName": "m_BaseDetail",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BoosterBase.obj",
+      "ColliderMeshName": "BoosterBase.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_boostJet/m_BoosterRocketFlame_R/ParticleSystemBoosterRocketFlame",
+      "MeshTextureName": "ExhaustParticles.png",
+      "MakeBoxCollider": false,
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0.0,
+      //   "z": 1.5
+      // }
+    },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.5
+        }
+      }
+    },
+    "GameObject|m_Venture_BoosterDouble_211": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":-1 } 
+      }
+    },
+    "GameObject|m_BaseDetail": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":3, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.9 } 
+      }
+    },
+    "GameObject|_boostJet": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.5, "y":1.5, "z":7.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.2 } 
+      },
+      "GameObject|m_BoosterRocketFlame_R": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":2.45, "z":2.45 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "JetTrail": {
+          "initParticleSize": 0,
+          "randomScaleFactor" : 0.05
+        },
+        // "Reference|VEN_Flamethrower_121/_gimbalHorizontal/_gimbalVertical/FirePoint": {//Where particles happen from
+        //   "UnityEngine.Transform": { //Moving the GameObject
+        //     "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+        //     "localPosition": { "x":0, "y":0, "z":-0.25 },
+        //     // "localEulerAngles": { "x":0, "y":0, "z":0}
+        //   },
+        // },
+        //"Reference|VEN_Flamethrower_121/_gimbalHorizontal/_gimbalVertical/FXFlameThrower": {},
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":1.0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0, //0 means direct at camera, 1 means locked y-axis
+            // "sortMode": 0,
+            "lengthScale": 1.0,
+            // "velocityScale": 0.0,
+            // "cameraVelocityScale": 0.0,
+            // "normalDirection": 1.0,
+            // "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.05,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0,
+            "allowRoll": false,
+            "activeVertexStreamsCount": 5
+          },
+          "UnityEngine.ParticleSystem": {//kinetic one to launch things
+            "startColor": {         //Determine the color of the projectile
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 0.2,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 175.0,
+            "startSpeed": 25.0,
+            "startSize": 2.5,
+            "startRotation": 1.6,
+            "startLifetime": 0.2,
+            "gravityModifier": 0.0,
+            "maxParticles": 450,
+            "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+            "scalingMode": 0,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            // "time": 0.08266406,
+            // "randomSeed": 2994554321,
+            "useAutoRandomSeed": false,
+            "proceduralSimulationSupported": false,
+            "shape": {
+              "radius": 0.0,// how far out on a flat circle particles spawn
+              "randomDirectionAmount": 0.0,
+              "radiusSpread": 0.0,
+              "angle": 0.0,
+              "sphericalDirectionAmount": 0.0, //Rotational Inaccuraccy of Particle Weapon
+              "radiusSpeedMultiplier": 0.0,
+            },
+            "collision": {
+              //"enabled": true, 
+              "enabled": false, 
+              "type": 1, //Planes or World 
+              "mode": 0, //3D or 2D 
+              "colliderForce": 5000.0,//YEEET
+              "collidesWith": 
+              {
+                "m_Mask": -1,
+                "value": -1//512
+              },
+              "radiusScale": 0.2,
+              "maxCollisionShapes": 250,
+              "enableDynamicColliders": true,
+              "multiplyColliderForceByCollisionAngle": 1.0,
+              "multiplyColliderForceByParticleSize": 1.0,
+              "multiplyColliderForceByParticleSpeed": 1.0,
+              // "enabled": false,                              //Setting this to false will break the Particle Weapon
+              "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+              "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+              "lifetimeLossMultiplier": 0.5,                     //How fast it will dissappear after contact
+              "minKillSpeed": 0.0,
+              "maxKillSpeed": 10000.0,
+            },
+            "emission": {
+              "rateOverTimeMultiplier": 250
+            },
+          },
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_L": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":4.5, "y":3.5, "z":3.5 },
+          // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":-0.125 } 
+        },
+        "JetTrail": {
+          "initParticleSize": 0,
+          "randomScaleFactor" : 0.75
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            // "renderMode": 0,
+            // "sortMode": 0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.15,
+            // "motionVectorGenerationMode": 1,
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 0.2,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 20.0,
+            "startSize": 3.0,
+            "startRotation": 1.7,
+            "startLifetime": 0.3,
+            "gravityModifier": 0.0,
+            "maxParticles": 100,
+            "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            // "time": 0.2,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false,
+          },
+        }
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 500000.0,//14000.0 -POWAAAAAAAAA!!
+        "m_BurnRate": 75, //Eats fuel
+        "m_FireRateFalloff": 1.25,//Super unresponsive
+        "m_DetachedForceFactor": 0.01,
+        "m_ConsumesFuel": true,
+        "m_AutoStabiliseStrength": 0.1,
+        "m_TargetRigidBody": null,
+        "m_Trails": [],
+        "m_FireControl": false,
+        "m_FireStrengthCurrent": 0.0,
+        "m_LocalBoostDirection": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "IsFiring": false,
+        "BurnRate": 15.0,
+        "ConsumesFuel": true,
+        "FireRateCurrent": 0.0
+      },
+      "RandomAdditions.BurnerJet": {// Burns
+        "UseDamage": true,              // Enable damage dealing - note that enemies being affected still turn red with this off
+        "DamagePerSecond": 300,         // Damage dealt per second
+        "Radius": 2,                    // Width/Height Radius of the spheroid
+        "RadiusFalloff": 1,             // the damage will falloff beyond this
+        "RadiusStretchMultiplier": 14,  // Length Radius of the Spheroid
+        "DamageType": "Fire",           // DamageType to deal against target
+        "FriendlyFire": false,          // Can deal damage against allied Techs
+        // ---------------------------------------------------------------------
+        "UseRecoil": true,             // Enable enemy yeet
+        "Backforce": 30,                // the force applied on each enemy block affected
+      }
+    },
+
+
+    // "Reference|VEN_Flamethrower_121/ModuleWeapon.": { //Component
+    //   "m_FireSFXType": "VENLaserMG",//"CoilLaserSmall", //Firing noise GSOCab, CoilLaserSmall, VENLaserMG
+    //   "m_ShotCooldown" : 1.0,        //Cooldown between noises, vital to prevent sound overload
+    //   // "m_AutoFire" : true,//1.0,        //Will this fire automatically?
+    //   "m_LimitedShootAngle": 120,    //The maximum degree the enemy fires slightly off-target
+    //   "m_RotateSpeed" : 100.0        //SPEED of turret aiming, not homing
+    // },
+
+    // "Reference|VEN_Flamethrower_121/ModuleWeaponFlamethrower.": {
+    //   "m_FirePos": "/_boostJet/m_BoosterRocketFlame_R/FirePoint",
+    //   //Basics
+    //   "m_MaxFlameLength": 125.0,//Max range before the particles vanish
+    //   "m_DPS": 750.0,//MUCH higher because of reduced contact time          //Damage on particle target contact per second
+    //   "m_DamageType": 2,       //Damage Typing (Standard, Bullet, Laser, etc.)
+    //   "m_ExtendTime": 0.5,     //How long to fully extend the "flames"
+    //   "m_RetractTime": 0.5,    //How long to fully retract the "flames"
+
+    //   //
+    //   //Variable VFX Parameters
+    //   //
+    //   "m_TipLightVariance": 1.5,
+    //   "m_TipLightIntensity": 2.0,
+    //   "m_JetLightVariance": 1.5,
+    //   "m_JetLightIntensity": 2.0,
+
+    //   //Experimentals
+    //   "m_ModuleType": 0,//Yet to mess with this 
+    // },
+
+
+
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        "m_BoosterAudioType": 3,
+        // BoosterType
+        // {
+        //   GSOMegaBooster,
+        //   GSOBoosterJet,
+        //   VENBooster,
+        //   HERocketJet,
+        //   BFBooster
+        // }
+
+    },
+    "ModuleEnergy": {},
+    "RandomAdditions.ModuleFuelEnergyGenerator":{ // Burn fuel, get power
+      "GenerateCondition": "Manual",   // Manual for shift to generate,  Automatic to generate when full
+      "FuelConsumeRate": 100,          // Rate to consume if no booster is also present in this block
+      "FuelToEnergyRate": 5.0,        // Rate to convert fuel to energy
+      // fuel burning * FuelToEnergyRate = generated energy
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.1,//Barely stops shotgun rounds
+    },
+  }
+}

@@ -1,0 +1,153 @@
+{
+    "Name": "Aerion Nebula Cab",
+    "Description": "The smaller Aerion cab, designed for planetside harvesting and cushy short-range transport.",
+    "ID": 101002, 
+  
+    "Faction": 7, 
+    "Category": 1, 
+    "Grade": 2, 
+    "Price": 2055, 
+    "HP": 3000, 
+    "Mass": 5,
+    "CenterOfMass": {"x": 0.0, "y": 1, "z": 0.5},
+    
+    "Fragility": 0,
+    "Rarity": 0,
+    "EmissionMode": 2,
+    "IconName": "Aerion Nebula Cab.png", 
+    "MeshName": "Aerion_Nebula_Cab.obj",
+    "ColliderMeshName": "Aerion_Nebula_Cab.obj",
+    "MeshTextureName": "Aerion-Default.png", 
+    
+    "SupressBoxColliderFallback": true,
+   
+    "BlockExtents": {
+      "x": 1,
+      "y": 1,
+      "z": 2
+    },
+    "APs": [ 
+      {"x": 0, "y": -0.5, "z": 0},
+      {"x": 0, "y": -0.5, "z": 1},
+      {"x": 0, "y": 0, "z": -0.5},
+
+      {"x": 0.5, "y": 0, "z": 0},
+      {"x": -0.5, "y": 0, "z": 0}
+    
+    ],
+
+    "GamePrefabReference": "GSO_Cab_111",
+    "KeepRenderers": false, 
+    "KeepColliders": false,
+    "ReferenceOffset": { "x": 0, "y": 0, "z": 1 },
+
+    "SubObjects" : [
+      {
+        "SubOverrideName": "m_GSO_Cab_111_Tyre_1",
+        "MeshName": "Aerion_Nebula_Cab_Wheel.obj",
+        "MeshTextureName": "Aerion-Default.png",
+        "Scale": { "x": 1.0, "y": 0.8, "z": 0.8 }
+      },
+      {
+        "SubOverrideName": "m_GSO_Cab_111_Tyre_2",
+        "MeshName": "Aerion_Nebula_Cab_Wheel.obj",
+        "MeshTextureName": "Aerion-Default.png",
+        "Scale": { "x": 1.0, "y": 0.8, "z": 0.8 }
+      },
+      {
+        "SubOverrideName": "m_GSO_Cab_111_Tyre_3",
+        "MeshName": "Aerion_Nebula_Cab_Wheel.obj",
+        "MeshTextureName": "Aerion-Default.png",
+        "Scale": { "x": 1.0, "y": 0.8, "z": 0.8 }
+      },
+      {
+        "SubOverrideName": "m_GSO_Cab_111_Tyre_4",
+        "MeshName": "Aerion_Nebula_Cab_Wheel.obj",
+        "MeshTextureName": "Aerion-Default.png",
+        "Scale": { "x": 1.0, "y": 0.8, "z": 0.8 }
+      },
+
+      {
+        "SubOverrideName": "Geometry",  
+        "Position":{"x": 0, "y": 0.5, "z": 0.4},
+        "Scale": { "x": 1.0, "y": 2.0, "z": 2.0 }
+      },
+
+      {
+        "SubOverrideName": "_gimbalBase_R",
+        "Position":{"x": 0.5, "y": -0.1, "z": 1.5}
+      },
+      {
+        "SubOverrideName": "_gimbalBase_L",
+        "Position":{"x": -0.5, "y": -0.1, "z": 1.5}
+      },
+      
+    ],
+
+    "Deserializer": {
+          "ModuleGyro": {"m_UseActive": 1,"m_ActiveSpeed": 50.0},
+          "ModuleEnergy": {
+            "m_OutputPerSecond": 5,
+            "m_OutputEnergyType": 0,
+            "m_OutputConditions": 0,
+            "m_SequentialPowerUp": false,
+            "m_PowerUpDelay": 0.0,
+            "m_GeneratingSFXType": 1
+              },
+          
+          "ModuleEnergyStore": {"m_Capacity": 1000},
+
+          "ModuleHealOverTime": {
+            "HealAmount": 10, // Health per pulse,
+            "HealDelay": 1.0, // Seconds per pulse,
+            "EnergyDrain": 10, // Energy consumed each healing pulse,
+            "EnergyMinLimit": 10, // How much energy must be present to heal,
+            "Capacity": 100 // A small battery inside the block, because, uh...
+          },
+          "ModuleWeaponGun": {
+              "m_ShotCooldown": 0.15,
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                "localPosition": { "x": 0.5, "y": 1.3, "z": 0.6}
+              },  
+              "ModuleWheels": {
+                "m_TorqueParams": {
+                  "torqueCurveMaxTorque": 500.0,
+                  "torqueCurveMaxRpm": 800.0,
+                  "passiveBrakeMaxTorque": 100.0,
+                  "reverseBrakeMaxRpm": 30.0,
+                  "basicFrictionTorque": 30.0,
+                  "fullCompressFrictionTorque": 100.0
+                },
+                "m_UseTireTracks": true,
+                "m_WheelTrackType": 0,              
+                  "m_AudioType": 0,
+                "m_WheelParams": {
+                  "tireProperties":{
+                    "props":{
+                      "frictionScaleLong": 1.0,           
+                      "frictionScaleLat": 1.0,             
+                      "gripFactorLong": 5.0,              
+                      "gripFactorLat": 2.25           
+                    }
+                    },
+                  "radius": 0.3,
+                  "thicknessAngular": 35,
+                  "suspensionSpring": 200.0,
+                  "suspensionDamper": 50.0,
+                  "maxSuspensionAcceleration": 10.0,
+                  "suspensionQuadratic": true,
+                  "suspensionTravel": 0.07,
+                  "steerAngleMax": 10.0,
+                  "steerSpeed": 3.0
+                },
+                "m_DriveTurnPower": 1.0,
+                "m_DriveTurnBrake": 0.5,
+                "m_DriveTurnDifferential": 1.0,
+                "m_TurnOnSpotPower": 1.0,
+                "m_DustMinimumRPM": 20.0,
+                "Capacity": 4
+              }
+          }
+    }
+}   

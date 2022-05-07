@@ -1,0 +1,132 @@
+{
+  "Name": "Old Star Large Carraige Wheel",
+  "Description": "This here is how the Old Star do. Now THIS is a wheel! Sure it's thin but the amount of Fibron that composes it has caused it's durability to skyrocket! its size makes it a great offroad wheel too and it doesnt even need AIR! but again it's still wood but A LOT of wood",
+  "ID": 300016, 
+  "Faction": 4, 
+  "Category": 3, 
+  "Grade": 1, 
+  "Price": 1278, 
+  "HP": 500, 
+  "Mass": 5.5,
+  "IconName":"Old_Star_Large_Carrage_Wheel_icon.png",
+  "EmissionMode": 2,
+  
+  "Recipe": { // "ID": Count
+    "0": 15,
+    "3": 15,
+    "43": 15
+  },
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  
+ // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [ 
+    {"x": 0,"y": 0.5,"z": 1},
+    {"x": 0,"y": 0.5,"z": 0},
+    {"x": 0,"y": 0.5,"z": -1}
+  ],
+  "Cells": [
+    {"x":0,"y":0,"z":1},  
+    {"x":0,"y":0,"z":0},  
+    {"x":0,"y":0,"z":-1}, 
+
+    {"x":1,"y":0,"z":1},  {"x":1,"y":-1,"z":1},   {"x":1,"y":-1,"z":1}, 
+    {"x":1,"y":0,"z":0},  {"x":1,"y":-1,"z":0},   {"x":1,"y":-1,"z":0}, 
+    {"x":1,"y":0,"z":-1}, {"x":1,"y":-1,"z":-1},  {"x":1,"y":-1,"z":-1},
+    
+    {"x":2,"y":1,"z":2},  {"x":2,"y":0,"z":2},  {"x":2,"y":-1,"z":2},   {"x":2,"y":-2,"z":2},   {"x":2,"y":-3,"z":2},
+    {"x":2,"y":1,"z":1},  {"x":2,"y":0,"z":1},  {"x":2,"y":-1,"z":1},   {"x":2,"y":-2,"z":1},   {"x":2,"y":-3,"z":2},
+    {"x":2,"y":1,"z":0},  {"x":2,"y":0,"z":0},  {"x":2,"y":-1,"z":0},   {"x":2,"y":-2,"z":0},   {"x":2,"y":-3,"z":2},
+    {"x":2,"y":1,"z":-1}, {"x":2,"y":0,"z":-1}, {"x":2,"y":-1,"z":-1},  {"x":2,"y":-2,"z":-1},  {"x":2,"y":-3,"z":2},
+    {"x":2,"y":1,"z":-2}, {"x":2,"y":0,"z":-2}, {"x":2,"y":-1,"z":-2},  {"x":2,"y":-2,"z":-2},  {"x":2,"y":-3,"z":2}
+  ],
+
+  "PrefabReference": "GSO_Wheel_222",
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "SubObjects": [ 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_B", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                      
+      "MakeBoxCollider": true, 
+      "MeshName": "Old_Star_Carrage_Wheel_Large_Upper_Spring.obj"
+  
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_A", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,                      
+      "MeshName": "Old_Star_Carrage_Wheel_Large_Lower_Spring.obj"
+      //"SubPosition": { "x":-0.7, "y": 0, "z": 0 }, 
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Tyre", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,                       
+      "ColliderMeshName": "Old_Star_Carrage_Wheel_Large_Collider.mtl",
+      "MeshName": "Old_Star_Carrage_Wheel_Large.obj"
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Base", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+      "MeshName": "Old_Star_Carrage_Wheel_Large_Block.obj",
+       "MakeBoxCollider": true
+    }, {
+      "OverrideName": "Suspension_B",
+      "SubPosition": { "x":1.0625, "y": 0, "z": 0 }
+    }, {
+      "OverrideName": "Suspension_A",
+      "SubPosition": { "x":-1.0625, "y": 0.0, "z": 0 }
+    }, {
+      "OverrideName": "_wheel",
+      "SubPosition": { "x":2.125, "y": -1.2, "z": 0 }
+    }, 
+    {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 1.5, "y": -2, "z": 0 }
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+  //   // Torque Parameters
+  "ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 5000,
+		   "torqueCurveMaxRpm": 1000,
+		  "passiveBrakeMaxTorque": 800,
+		   "reverseBrakeMaxRpm": 600,
+		   "basicFrictionTorque": 100.0,
+		   "fullCompressFrictionTorque": 200
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.5,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 2.45,
+			"thicknessAngular": 15,
+			"suspensionSpring": 10000.0,
+			"suspensionDamper": 300.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 1,
+			"steerSpeed": 1
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.0,
+		"m_DriveTurnDifferential": 0.5,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

@@ -1,0 +1,44 @@
+{
+  "Name": "HawkEye to Old Star Transition Block",
+  "Description": "A transition block to blend Old Star and HawkEye together",
+  "ID": 300136,
+  "Faction": 5,
+  "Category": 2,
+  "Grade": 1,
+  "Rarity": 0,
+  "Price": 753,
+  "HP": 550,
+  "Mass": 2.25,
+  "IconName": "OS_HE_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 32, 45",
+  "EmissionMode": 2,
+  "GamePrefabReference": "HE_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 2,
+    "y": 1,
+    "z": 1
+  },
+  "APsOnlyAtBottom": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_Block_112",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HE_2.obj",
+      "ColliderMeshName": "OS_HE_2.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "ObjectName": "OS_Half",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HE_1.obj",
+      "ColliderMeshName": "OS_HE_1.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+// A small sloped armor block similar to GeoCorp, albeit much tougher and heavier.
+{
+    // Basic Block Information
+    "Name":                 "LK Inverted Corner Sloped Armor",
+    "Description":          "An inverted corner block from the Zesty Realm. This block will not break off when hit and is extremely durable. \n\n \"After the ordeal, we spray the metal with different materials multiple times; the final layer will be given a jolt of electricity. Once done, it will give off that distinct yellow sheen commonly seen on our equipment.\" --Caesar Auroch, Chief Forgemaster, Excerpt 3",
+
+    "ID": 419007,           // This is the Block ID; it must be unique 
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 2,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 15180,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+
+    // Recipe: 10 Titanic Alloy, 5 Rugged Fiblar, 9 Plubonic Alloy 
+    "Recipe":  "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 53",
+	
+    "IconName":                   "LK_Inverted_Corner_Sloped_Armor_icon.png",    // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_Inverted_Corner_Sloped_Armor.obj",         // Name of the block's mesh                                        
+    "ColliderMeshName":           "LK_Inverted_Corner_Sloped_Armor_col.obj",     // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",  
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    "LK_tex_3.png",   
+    
+    // Basic Block HP Values
+    "HP": 7000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and double the HP for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 35,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs & Armor blocks have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "Cells": [
+        //Lower Half
+        { "x": 0, "y": 0, "z": 0 },
+        { "x": 0, "y": 0, "z": 1 },
+        { "x": 1, "y": 0, "z": 1 },
+        { "x": 1, "y": 0, "z": 0 },   
+        // Upper Half
+        { "x": 0, "y": 1, "z": 0 },
+        { "x": 1, "y": 1, "z": 0 },
+        { "x": 0, "y": 1, "z": 1 }
+      ],
+
+    "APs": [
+        //Bottom APs
+        {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 0.0 }, {"x": 0.0, "y": -0.5, "z": 1.0 },
+        // Left APs
+        {"x": 0.0, "y": 0.0, "z": -0.5 }, {"x": 1.0, "y": 0.0, "z": -0.5 }, {"x": 1.5, "y": 0.0,  "z": 0.0 },
+        // Right APs
+        {"x": -0.5, "y": 0.0, "z": 0.0 }, {"x": -0.5, "y": 0.0, "z": 1.0 }, {"x": 0.0, "y": 0.0,  "z": 1.5 }
+    ],
+}

@@ -1,0 +1,312 @@
+{
+  "Name": "DarkLight Hejo \"Lunatic Spammer\" Autocannon",
+  "Description": "An older yet very powerful gun with the following original description:\n\"An experimental back-hinge weapon made by putting a modified tank engine designed to be able to passively generate enough fuel to keep this weapon firing, onto a dual autocannon chassis. This weapon is also a <color=purple>Danmaku</color> weapon, which means it is a very high fire of rate bullet launcher that ignores gravity, the projectiles can aim slightly. However this gun comes at a severe cost of accuracy and turning, even with the homing. The Anti-Gravity also broke on this particular weapon.\"\n\nLike any other DarkLight block, bizarre origins are bound to occure. For the Hejo, it was relatively normal.. somehow. Though someone marked somewhere in the development of the weapon that a \"CATastrophic accident\" occurred. They lived for about 5 minutes after we identified who put that in there.\n\nWe also had once given one of these sentiency alongside other weapons, it argued with the Arcis alot.",
+                 //You can make multiple lines with \n
+  "ID": 2000066, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 4, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 4
+  "Price": 47990, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 7500, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 49.0,
+  "CenterOfMass": {"x": 1.5, "y": 0.6, "z": 1.8},
+
+  "Fragility": 0.7, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 1, // Common = 0, Uncommon = 1, Rare = 2
+
+         // Main Chassis - 52, 53, 54, 54, about 8.5 Mass and 2250 HP //This is to simplify the amount of types of components in this recipe
+         // Side Tanks - 52, 53, 54, 57, about 4.5 mass and 650 HP each
+         // Fuel Injector - 53, 54, 54, 54, 55, 55, about 12 mass and 2500 HP
+         // Back Thing:tm: - 52, 53, 54, 54, 57, 57, about 6 mass and 750 HP
+         // Barrels - 54, 51, 51, 55, 55, about 2.5 mass and 750 HP each //Light Smart Barrels, the last step in forcing out the "fuel" as full on Danmaku
+         //Then balance happened
+         //and then things got worse
+  "Recipe": "51, 51, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 55, 55, 55, 55, 57, 57, 57,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+
+  "IconName": "DLHejo.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "CellMap": [
+    //CellMap is a way to be able to slap down letters and spaces to make you cell stuff.
+    // ! Each "" is a Y layer. each space or letter is an X layer. each [] is a Z layer !
+
+    [ //Z0
+      "    ",
+      "DLDL"
+    ],
+    [ //Z1
+      " DL ",
+      "DLDL"
+    ],
+    [ //Z2
+      " DL ",
+      "DLDL"
+    ],
+    [ //Z3
+      " DL ",
+      "DLDL"
+    ],
+    [ //Z4
+      "    ",
+      " DL "
+    ],
+    [ //Z5
+      "    ",
+      " DL "
+    ]
+  ],
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": 2,    "y": -0.5, "z": 0    },
+    { "x": 1,    "y": -0.5, "z": 0    },
+    { "x": 2,    "y": -0.5, "z": 1    },
+    { "x": 1,    "y": -0.5, "z": 1    },
+    { "x": 2,    "y": -0.5, "z": 2    },
+    { "x": 1,    "y": -0.5, "z": 2    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_MiniGun_Large_525", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+
+  "SubObjects": [
+     { //Base
+       "SubOverrideName": "m_HE_MiniGun_313_Base",
+       "MeshName": "DLHejoBase.obj",
+       "ColliderMeshName": "DLHejoBaseCollider.obj",
+       "MeshTextureName": "DarkLight1.png", 
+       "MeshGlossTextureName": "DarkLight2.png", 
+       "MeshEmissionTextureName": "DarkLight3.png",
+       //"Position": { "x": 1, "y": 0, "z": 0 },
+       "DestroyExistingRenderer": true
+     },
+
+     { //Horizontal Spinner
+       "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_A",
+       "MeshName": "DLHejoCarEngine.obj",
+       "ColliderMeshName": "DLHejoCarEngineCollider.obj",
+       "MeshTextureName": "DarkLight1.png", 
+       "MeshGlossTextureName": "DarkLight2.png", 
+       "MeshEmissionTextureName": "DarkLight3.png",
+       //"Position": { "x": 0.5, "y": 0.265, "z": 1 },
+       "DestroyExistingRenderer": true
+     },
+
+     //Clearly this forgot a proper verticle thing and left it to the guns
+     {
+       "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_B",
+//       "Position": { "x": 0.5, "y": 0.29, "z": 0.325 },
+       "DestroyExistingRenderer": true
+     },
+
+     { //BARREL
+       "SubOverrideName": "m_HE_MiniGun_Barrel",
+       "MeshName": "DLHejoSmallerThanDanmaku.obj",
+       "ColliderMeshName": "DLHejoSmallerThanDanmakuCollider.obj",
+       "MeshTextureName": "DarkLight1.png", 
+       "MeshGlossTextureName": "DarkLight2.png", 
+       "MeshEmissionTextureName": "DarkLight3.png",
+       //"Position": { "x": -0.02, "y": 0.29, "z": 1 },
+       "DestroyExistingRenderer": true
+     },
+
+     { //BARREL 2: ELECTRIC DANMAKU
+       "SubOverrideName": "_barrel_copy/_spindle/m_HE_MiniGun_Barrel",
+       "MeshName": "DLHejoSmallerThanDanmaku.obj",
+       "ColliderMeshName": "DLHejoSmallerThanDanmakuCollider.obj",
+       "MeshTextureName": "DarkLight1.png", 
+       "MeshGlossTextureName": "DarkLight2.png", 
+       "MeshEmissionTextureName": "DarkLight3.png",
+       //"Position": { "x": 1.02, "y": 0.29, "z": 1 },
+       "DestroyExistingRenderer": true
+     }
+  ],
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+
+  "Deserializer": {
+    //Welcome to gun. Featuring Legionite (thanks for the help!)
+
+    "GameObject|m_HE_MiniGun_313_Base": {//the base model. Center this to it's intended position first. This appears to be put in by the devs unconventionally though.
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":0, "z":0 }
+      },
+      "GameObject|_gimbalBase": {//This is the part you re-center second, the horizontal Center Of Rotation
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0.0, "z":0.5 }
+        },
+        "GimbalAimer": {
+          "rotationLimits": [-30, 30] //left, right
+        },
+        "GameObject|m_HE_MiniGun_313_RotatingPart_A": {//This is the model's position. This appears to be put in by the devs unconventionally though.
+          //in this case, leave the localPosition at 0 for all values
+          "UnityEngine.Transform": {
+            //"localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+             "localPosition": { "x": 0.5, "y": 0.265, "z": 1 }
+          },
+          "GameObject|_gimbalElev": {//This is the part you re-center second, the vertical Center Of Rotation
+            "UnityEngine.Transform": {
+             "localPosition": { "x":0, "y":-0.235, "z":0 }
+            },
+            "GimbalAimer": { 
+              "rotationLimits": [-45, 10] //up, down
+            },
+            "GameObject|m_HE_MiniGun_313_RotatingPart_B": {//unused
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.0, "y": 0, "z": 0.0 }
+              }
+            },
+            "GameObject|_barrel": {//This moves the center of the barrel rotations
+              "UnityEngine.Transform": {
+                "localPosition": { "x": -0.52, "y": 0.285, "z": 0 }
+              },
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":0, "z":3.5 }
+                }
+              },
+              "GameObject|_spawnBullet": {
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":0, "z":3.85 }
+                }
+              },
+              "GameObject|_spindle": {
+                "GameObject|m_HE_MiniGun_Barrel": { //This is the barrel visuals, the part that spins
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localPosition": { "x":0, "y":0, "z":0 } //only the "z" value can be edited safely. "x" and "y" must remain at 0 to deny offset spin error.
+                  }
+                }
+              }
+            },
+            "Duplicate|_barrel": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.52, "y": 0.285, "z": 0 }
+              },
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":0, "z":3.5 }
+                }
+              },
+              "GameObject|_spawnBullet": {
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":0, "z":3.85 }
+                }
+              },
+              "GameObject|_spindle": {
+                "GameObject|m_HE_MiniGun_Barrel": {
+                  "UnityEngine.Transform": { //Moving the barrel visuals
+                    "localPosition": { "x":0, "y":0, "z":0 } //only the "z" value can be edited safely. "x" and "y" must remain at 0 to deny offset spin error.
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "ModuleWeapon": {
+      "m_RotateSpeed" : 20
+    },
+
+    "ModuleWeaponGun": {
+      //According to the TAC AA Battery, some guns don't use m_NumCannonBarrels
+
+      "m_FireControlMode": "1",
+          // 0: Sequence Fire, one cannon fires at a time
+      // 1: Burst Fire, all cannons fire at once
+      "m_ShotCooldown" : 0.1,
+      "m_CooldownVariancePct" : 0,
+      "m_BurstShotCount" : 2,
+      "m_BurstCooldown" : 0.05,
+      "m_SeekingRounds" : true
+      //So basically fast firing seeking bois
+    },
+
+    "FireData": { //HIGH POWER INNACURATE
+      "m_MuzzleVelocity": 100,
+      "m_BulletSprayVariance": 0.5,
+      "m_BulletSpin": 90,
+      "m_KickbackStrength": 20.0,
+      
+      "Instantiate|m_BulletPrefab": {
+         //Hey do you like d a n m a k u ?
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "DLHejoBullet.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "DarkLight1.png"
+          }
+        },
+        //They don't hit hard alone but good lord do they hit hard in clusters
+        "WeaponRound": {
+          "m_DamageType" : "Bullet",
+          "m_Damage": 140 //GOOD LORD
+        },
+
+        "SeekingProjectile": {
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_SeekType" : "Vehicle",
+          "m_TargetingType" : "RandomBlockOnVehicle",
+          //   CenterOfMass
+          //   BestAimCabOrCentre
+          //   RandomBlockOnVehicle
+          "m_ActivationDelay": 0.01, //How long before we aim at the target?
+          "m_VisionRange": 500, //How far can we see targets?
+          "m_VisionConeAngle": 180, //How wide can we see targets?
+          "m_TurnSpeed": 10 // How strong the turn is towards the enemy
+        },
+
+        "Projectile": {
+          "m_LifeTime": 3.0,
+          "m_SingleImpact" : true
+        }
+
+        //"Rigidbody": {
+        //  "useGravity": false
+        //}
+        //Most Danmaku weapons don't have gravity, Hejo is a rather faulty one.
+      }
+    }
+  }
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

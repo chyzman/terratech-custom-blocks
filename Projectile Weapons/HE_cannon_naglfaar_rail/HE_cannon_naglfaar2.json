@@ -1,0 +1,390 @@
+/*
+Description: A large railgun for Saelem Black. 
+
+Pros:   High damage with shield-piercing capability
+
+Cons:   Heavy and expensive
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "Hawkeye Naglfaar 120 MJ Railcannon",
+    "Description":          "A block created from a technology exchange between Hawkeye Black Labs and Lemon Kingdom. This hybridization of technology, expertise, and raw manic energy produced two of the mightiest blocks ever developed, as well as some notibly good coffee. The Naglfaar Railcannon can completely puncture any shield and crater the tech beneath. However, the energy demand is so intense it must draw considerable power from the host tech.",
+
+    "ID": 419035,           // This is the Block ID; it must be unique
+
+    "Faction": 5,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 74334,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*  
+    The resources/components needed to make this block. For the full ID Resource/Component list, 
+    please refer to the Terratech Wiki.
+
+    Main Body:      8 Titanic Alloy, 8 Plubonic Alloy
+    Gun Assembly:   2 Gluon Beam, 4 Dervish Gel
+    Capacitors:     6 Coffman Cells, 4 Ion Pulse Cells
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 8, "53": 8, 
+        // Gun Assembly 
+        "64": 2, "61": 4, 
+        // Capacitors
+        "62":2, "56": 4,
+    },
+      
+    "IconName":                   "HE_cannon_naglfaar_icon.png",            // Name of the block's icon. This will be used in the UI screen                            
+   // "MeshName":                   "HE_cannon_naglfaar_body2.obj",                                     // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                     // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    //"MeshMaterialName":           "HE_Main",
+  
+    // Basic Block Values
+    "HP": 15000,             // A GSO one block has 250 health       
+    "Mass": 66.0,           
+    "DamageableType": 0,    
+    "DetachFragility": 0.25, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 2,"z": 12 },
+
+    "APs": [ 
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 3 }, 
+        { "x": 1, "y": -0.5, "z": 3 },
+        { "x": 0, "y": -0.5, "z": 2 }, 
+        { "x": 1, "y": -0.5, "z": 2 },
+
+        // Side APs
+        { "x": -0.5, "y": 0, "z": 3 }, 
+        { "x": -0.5, "y": 1, "z": 3 },
+        { "x": 1.5, "y": 0, "z": 3 }, 
+        { "x": 1.5, "y": 1, "z": 3 }
+    ],
+
+    // Advanced Settings
+    "PrefabReference":                  "HE_Cannon_Battleship_216",
+    "KeepReferenceRenderers":           true,                       // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "PrefabPosition":                   { "x": 0, "y": 0, "z": 0 },
+
+    "SubObjects":[
+        // Replace the original meshes with new ones
+        {
+            "ObjectName":                 "m_HE_CannonBattleship_216_body",
+            "MeshName":                   "HE_cannon_naglfaar_body2.obj",
+            "ColliderMeshName":           "HE_cannon_naglfaar_body_col.obj",
+            "MeshMaterialName":           "HE_Main",
+            "DestroyExistingRenderer":    false,
+            "DestroyExistingColliders":   true,
+            "Position":                   { "x": 0.5, "y": 0.5, "z": -0.5 },        
+        },
+        {
+            "ObjectName":                 "m_HE_CannonBattleship_216_barrel",
+            "MeshName":                   "HE_cannon_naglfaar_barrel2.obj",
+            "ColliderMeshName":           "HE_cannon_naglfaar_barrel_col.obj",
+            "MeshMaterialName":           "HE_Main",
+            "DestroyExistingRenderer":    false,
+            "DestroyExistingColliders":   true,
+            "Position":                   { "x": 0, "y": 0, "z": 0 },
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },  
+        {
+            "ObjectName":                   "_gimbalBase",
+            "MeshName":                     null,
+            "DestroyExistingRenderer":      true,
+            "Position":                     { "x": 0.5, "y": 0.5, "z": 3 }
+        },
+
+        // Change the other component's positions
+        {
+            "ObjectName":                   "_smoke",
+            "Position":                     { "x": 0, "y": 0, "z": 16.0 },
+        },   
+        {
+            "ObjectName":                   "_muzzleFlash",
+            "Position":                     { "x": 0, "y": 0, "z": 2.0 },
+            "Scale":                        { "x": 4, "y": 4, "z": 10 },
+        },           
+        {
+            "ObjectName":                   "_casingSpawn",
+            "Position":                     { "x": 0, "y": 0.7, "z": -1.5 },
+        },  
+        {
+            "ObjectName":                   "_bulletSpawn",
+            "Position":                     { "x": 0, "y": 0, "z": 17.0 },
+            "Scale":{ "x": 2.0, "y": 2.0, "z": 2.0 },         
+        },
+    ],
+    "Deserializer":{
+        "GameObject|_gimbalBase": {
+            // Change the aiming limits
+            "GimbalAimer": { 
+                "rotationLimits": [-2.5, 2.5],
+                "rotationAxis": 1           // Changes the axis of rotation for the gimbal component
+                                            // 1 = Y (Vertical)
+                                            // 2 = Z (Horizontal)
+              },
+            "UnityEngine.Transform": { "localPosition": { "x": 0.5, "y": 0.5, "z": 3.2 } },
+            "GameObject|_gimbalElev": {
+                "GimbalAimer": {
+                    "rotationLimits": [-2.5, 2.5], 
+                    "rotationAxis":     2   // Changes the axis of rotation for the gimbal component
+                                            // 1 = Y (Vertical)
+                                            // 2 = Z (Horizontal)
+                  },
+                "GameObject|_barrel": {
+                    "UnityEngine.Transform": { "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 } },
+                    
+                    // Increase the size and rate of the smoke
+                    "GameObject|_smoke":{
+                        // Particles are similar to most DDCs. They use an emitter and some form of texture to work in-game.                          
+                        "ParticleSystem": {
+                            "startSize":            0.5,       // The start size of the particle
+                            "startLifetime":        1.0,        // The duration of the particle's existence
+                            "emissionRate":         300,
+                            "duration":             5.0,
+                            
+                            // Self-explanatory; this dictates the size of the particle at different points of its life, all the way to the end
+                            "sizeOverLifetime": {
+                                "xMultiplier": 10.0,        // Dictates the multiplier on the X axis of the particle
+                                "yMultiplier": 1.0,         // Dictates the multiplier on the Y axis of the particle
+                                "zMultiplier": 1.0,         // Dictates the multiplier on the Z axis of the particle
+                            },
+
+                        },
+                    },
+
+                }
+            }
+        },
+
+        "ModuleVision": {
+          "visionConeAngle": 360.0,
+          "visionRange": 600,
+          "m_Range": 700
+        },
+
+        "ModuleWeapon": {
+            "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+            "m_RotateSpeed": 1,                     // Dictates the speed of the gun's rotation whenever it aims at a target.
+            "m_ChangeTargetInteval": 0.5,
+        
+            "m_PreventShootingTowardsFloor": false,
+            "m_DeployOnHasTarget": false,
+            "m_LimitedShootAngle": 90.0,
+        
+            "m_FireSFXType": 77,                      // Dictates the sound used when firing
+                                                        // 6  = GSO Megaton Cannon
+                                                        // 64 = GSO Gigaton Cannon
+                                                        // 75 = HE MK3 Battleship Cannon
+                                                        // 77 = GSO Big Bertha Cannon
+        },
+        //************************************//
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 6.0,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+            "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+
+            "m_BurstShotCount": 0,                  // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                    // A non-zero, integer value will dictate the number of shots fired.
+                                                    // The pause uses the value in m_BurstCooldown
+
+            "m_BurstCooldown": 0,                   // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                    // This is automatically disabled when m_BurstShotCount is set to 0
+
+            "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                    // Only applies when m_BurstShotCount is NOT set to 0
+
+            "m_FireControlMode": 0,                 // Dictates how the guns will fire
+                                                    //  0 =   The guns will fire one at a time
+                                                    //  1 =   All guns will fire at the same time
+
+
+            "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward target
+        },
+        //************************************//
+        "FireData": {
+            "m_MuzzleVelocity": 1200.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+            "m_KickbackStrength": 700.0,            // Dictates the strength of the recoil when firing the gun
+            "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+            "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+
+            
+            /********** Bullet Prefab **********/
+            "Instantiate|m_BulletPrefab": {
+                // Insert a Railgun Semi-circle effect in the bullet prefab
+                "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                    "ParticleSystem": {
+                        "startSize":    3.0,
+                        "duration":     5.0,
+                        "emissionRate": 2000.0,
+                    }
+                },
+
+                // Then disable bullet drop
+                "Rigidbody":{
+                    "useGravity": false
+                },
+
+                // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+               "UnityEngine.CapsuleCollider": {
+                  "height": 10.0,
+                  "radius": 0.5,
+                  "direction": 2,
+                  "center": { "x": 0.0, "y": 0.0, "z": 5 },
+                  "gameObject": {
+                        "layer": 29     
+                  },
+                },
+
+                // This is the bullet's white trail. 
+                "SmokeTrail":{
+                    "numberOfPoints":   20.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                                // Do not decrease this too much as it will begin to act strangely.
+
+                    "spread":           0.0,   // Dictates how erratic the trail is.
+                    "riseSpeed":        0.0,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+                    "updateSpeed":      300,  // Dictates the speed of the trail.
+                },
+
+                // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+                "LineRenderer": {
+                    "startWidth": 1,
+                    "endWidth": 0.4,
+                    "widthMultiplier": 1.0,
+                    
+                    // The color at the start and end of the trail
+                    "startColor":   { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 },
+                    "endColor":     { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 }
+                },
+              
+                "Projectile":{
+                    "m_Damage": 0,                  // The damage of the bullet when directly hitting a block
+                    "m_LifeTime": 3.0,                  // The duration of the bullet's existence before despawning
+                    "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                    "m_IgnoreCollisionWithBarrel": true,
+                    "Instantiate|m_Explosion": {
+                        "Explosion": {
+                            "m_ExplosionType": 3,
+                            "m_EffectRadiusMaxStrength": 6,                    // Dictates the damage type of the explosion
+                            "m_EffectRadius": 8,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_MaxDamageStrength":      8000.0,        // The splash damage done
+                            "m_MaxImpulseStrength":     300.0       // The strength of the knockback done by the explosion
+                        },
+                        "GameObject|Sparks": { 
+                            "UnityEngine.ParticleSystem": {
+                              "shape": {
+                                "shapeType": "Sphere",
+                              },
+                              "main": {
+                                "m_ParticleSystem": {
+                                  "startColor":{
+                                    "r": 0.1,
+                                    "g": 0.2,
+                                    "b": 1,
+                                    "a": 1.0
+                                  },
+                                  "startSize": 7,
+                                  "startSpeed": 10.0,
+                                  "emissionRate": 100.0,
+                                  "maxParticles": 750,
+                                  "emission": {
+                                    "rateMultiplier": 2450.0,
+                                    "rateOverTimeMultiplier": 0.2,
+                                    "burst": {
+                                      "count": 750,
+                                      "maxCount": 650,
+                                      "minCount": 400
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "GameObject|ExplosionBright": { 
+                            "UnityEngine.ParticleSystem": {
+                              "shape": {
+                                "shapeType": "Sphere",
+                              },
+                              "main": {
+                                "m_ParticleSystem": {
+                                  "startColor":{
+                                    "r": 0.1,
+                                    "g": 0.2,
+                                    "b": 1,
+                                    "a": 1.0
+                                  },
+                                }
+                              }
+                            }
+                          },
+                          "GameObject|ExplosionDark": { 
+                            "UnityEngine.ParticleSystem": {
+                              "shape": {
+                                "shapeType": "Sphere",
+                              },
+                              "main": {
+                                "m_ParticleSystem": {
+                                  "startColor":{
+                                    "r": 0.1,
+                                    "g": 0.2,
+                                    "b": 1,
+                                    "a": 0.5
+                                  },
+                                }
+                              }
+                            }
+                          },
+                          "GameObject|ExplosionSmoke": {
+                            "UnityEngine.ParticleSystem": {
+                              "shape": {
+                                "shapeType": "Sphere",
+                              },
+                            }
+                          } 
+                    }
+                },
+            },
+
+            /********** Bullet Casing Prefab **********/
+            "Instantiate|m_BulletCasingPrefab": null
+
+        },
+        "ModuleConsumeEnergyToShell": {
+          "EnergyCost":           4000,   // How much energy is needed to fire one round 
+                                          // (For continuous weapons, how much energy per second)
+          "EnergyCapacity":       4000,   // How much energy this block can hold
+                                          
+          // The two below are intended for flamethrowers and beam weapons
+          "LowestPermittedEnergy": 0,    // The minimum amount of energy that can be left in a system 
+                                          // (Useful for continuous weapons: Don't drain all energy)
+          "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                          // (Useful for continuous weapons: Prevents studdering effect)
+      },
+    }
+}

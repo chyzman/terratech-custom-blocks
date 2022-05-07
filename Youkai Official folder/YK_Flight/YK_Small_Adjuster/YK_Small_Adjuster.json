@@ -1,0 +1,157 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+{
+  "Name": "Youkai Otsu Adjustment Thruster",
+  "Description": "4-Way movement on one axis, place it sideways for different results. This little adjustment thruster is quite strong for its size.",
+  "ID": 19052,
+
+  "Faction": 1, 
+  "Category": 8, 
+  "Grade": 2,
+  "Price": 5043,
+  "HP": 400, 
+  "Mass": 1.5,
+
+  "Recipe":  "43, 45, 45, 45, 57, 57", 
+  "IconName": "YK_Small_Adjuster.png", 
+  "MeshName": "YK_Small_Adjuster.obj",
+  "MeshTextureName":            "YK_Texture 1.png",
+  "MeshGlossTextureName":       "YK_Texture 2.png",
+ 
+  "BlockExtents": 
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    }
+  ],
+  "GamePrefabReference": "BF_Hover_Steering_212",
+    "KeepRenderers": false,
+    "KeepColliders": false, 
+
+    //"GameObject|FX_HoverForce": {
+    //  "UnityEngine.ParticleSystem": {
+    //    "startSize": 0.3,
+    //    "scalingMode": 2,
+    //    "duration": 0.18,
+    //    "maxParticles": 12,
+    //    "startLifetime": 0.6,
+    //    "emissionRate": 0,
+    //    "startColor": { "r": 1.0, "g": 0.025, "b": 0.07, "a": 4.0 }
+    //    }
+ "JSONBLOCK": {
+  "GameObject|boosterFront": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.5
+       }
+     },
+    "GameObject|m_BoosterRocketFlame": {
+    "GameObject|FX_HoverForce": {
+      "UnityEngine.ParticleSystem": {
+        "startSize": 0.3,
+        "scalingMode": 2,
+        "duration": 0.18,
+        "maxParticles": 12,
+        "startLifetime": 0.6,
+        "emissionRate": 0,
+        "startColor": { "r": 1.0, "g": 0.025, "b": 0.07, "a": 4.0 }
+        }
+    }
+  },
+    "BoosterJet": {
+      "m_Force": 475.0
+    }
+  },
+  "GameObject|boosterBack": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -0.5
+       }
+     },
+    "GameObject|m_BoosterRocketFlame": {
+    "GameObject|FX_HoverForce": {
+      "UnityEngine.ParticleSystem": {
+        "startSize": 0.3,
+        "scalingMode": 2,
+        "duration": 0.18,
+        "maxParticles": 12,
+        "startLifetime": 0.6,
+        "emissionRate": 0,
+        "startColor": { "r": 1.0, "g": 0.025, "b": 0.07, "a": 4.0 }
+        }
+    }
+  },
+    "BoosterJet": {
+      "m_Force": 475.0
+    }
+  },
+  "GameObject|boosterLeft": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": -0.5,
+        "y": 0.0,
+        "z": 0.0
+       }
+     },
+    "GameObject|m_BoosterRocketFlame": {
+    "GameObject|FX_HoverForce": {
+      "UnityEngine.ParticleSystem": {
+        "startSize": 0.3,
+        "scalingMode": 2,
+        "duration": 0.18,
+        "maxParticles": 12,
+        "startLifetime": 0.6,
+        "emissionRate": 0,
+        "startColor": { "r": 1.0, "g": 0.025, "b": 0.07, "a": 4.0 }
+        }
+    }
+  },
+    "BoosterJet": {
+      "m_Force": 475.0
+    }
+  },
+  "GameObject|boosterRight": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.5,
+        "y": 0.0,
+        "z": 0.0
+       }
+     },
+    "GameObject|m_BoosterRocketFlame": {
+    "GameObject|FX_HoverForce": {
+      "UnityEngine.ParticleSystem": {
+        "startSize": 0.3,
+        "scalingMode": 2,
+        "duration": 0.18,
+        "maxParticles": 12,
+        "startLifetime": 0.6,
+        "emissionRate": 0,
+        "startColor": { "r": 1.0, "g": 0.025, "b": 0.07, "a": 4.0 }
+        }
+    }
+  },
+    "BoosterJet": {
+      "m_Force": 475.0
+    }
+  }
+}
+}

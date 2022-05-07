@@ -1,0 +1,102 @@
+{
+	"Name": "GeoCorp 'Mammoth' Intake",
+	"Description": "A beast of an intake. Takes in the air of the planet to fuel up a fuel tank faster. Holds a large amount of internal fuel as well.", 
+	"ID": 1700027, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Intake GC.png",
+	"Faction": 2,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 23009,
+	"HP": 795,
+	"Mass": 5,
+	"Recipe": "zeropointsplitter,blastcaps,blastcaps,fuelinjector,olasticbrick,olasticbrick",
+
+	"MeshName": null, 
+	"MeshMaterialName": "GC_Main", 
+	"ColliderMeshName": null, 
+
+	"Cells": [ 
+		
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 2, "y": 1, "z": 0 },
+		{ "x": 1, "y": 2, "z": 0 },
+		{ "x": 2, "y": 2, "z": 0 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 2 },
+
+		
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 1 },
+		
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 3 },
+		
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 2 },
+	],
+	"APs": [ 
+		{ "x": 1, "y": 1, "z": -0.5 },
+		{ "x": 2, "y": 1, "z": -0.5 },
+		{ "x": 1, "y": 2, "z": -0.5 },
+		{ "x": 2, "y": 2, "z": -0.5 },
+		
+		{ "x": 1, "y": 0.5, "z": 1 },
+		{ "x": 2, "y": 0.5, "z": 1 },
+		{ "x": 1, "y": 0.5, "z": 0 },
+		{ "x": 2, "y": 0.5, "z": 0 },
+		
+		{ "x": 1, "y": 2.5, "z": 1 },
+		{ "x": 2, "y": 2.5, "z": 1 },
+		{ "x": 1, "y": 2.5, "z": 0 },
+		{ "x": 2, "y": 2.5, "z": 0 },
+		
+		{ "x": 0.5, "y": 1, "z": 0 },
+		{ "x": 0.5, "y": 1, "z": 1 },
+		{ "x": 0.5, "y": 2, "z": 1 },
+		{ "x": 0.5, "y": 2, "z": 0 },
+		
+		{ "x": 2.5, "y": 1, "z": 0 },
+		{ "x": 2.5, "y": 1, "z": 1 },
+		{ "x": 2.5, "y": 2, "z": 1 },
+		{ "x": 2.5, "y": 2, "z": 0 },
+		
+	],
+	"GamePrefabReference": "VENFuelPod(111)", 
+	"SubObjects": [ {
+		"SubOverrideName":"Intake",
+		"DestroyExistingColliders": true,
+		"MeshName": "GeoCorp_Intake.obj",
+		"ColliderMeshName": "GeoCorp_Intake.obj",
+		"MeshMaterialName": "GC_Main",
+		"SubPosition":{"x":1,"y":1,"z":0},
+		"SubScale":{"x":1,"y":1,"z":1}
+	
+	}],
+	"JSONBLOCK":{"ModuleFuelTank":{
+				 "m_Capacity":125,"m_RefillRate":50}}
+}

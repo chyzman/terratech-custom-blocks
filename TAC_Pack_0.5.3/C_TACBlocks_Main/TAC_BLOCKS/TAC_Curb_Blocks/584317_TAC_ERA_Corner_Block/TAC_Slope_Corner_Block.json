@@ -1,0 +1,403 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Reactive Armor Corner Block",
+  "Description": "Armor that has a passive chance to completely deny an explosive attack from completely destroying your Tech, but pops off if hit too hard. \n\nIt has earned the nickname \"Gambler's Armor\" due to just how unreliable but just how powerful it's existance can have in the outcome of a fight.  \n\n\nSo basically it's unreliable, contradicting TAC design. It's a <b>tactical</b> gamble.", //You can make multiple lines with \n
+  "ID": 584317, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 1848, //103+103+111+111 =206+222 =428    //HE block cost is 573 with times 3 multiplier. BF block cost is 768 with times 3 multiplier. This block is a whopping 1284!
+  "HP": 750, //Normal HE Block is 400 - armor density is 750 compared to HE's 1000
+  "Mass": 1.0, //Normal HE Block is 1.5
+
+  "IconName": "angleCurb.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  // "MeshName": "TACSlopeBlock.o;bj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "44, 44, 45, 45, 52, 52", // Separate chunk names or IDs with a comma. Not case sensitive.
+        // {
+        //   "name": "Hardened Titanic",
+        //   "id": 45,
+        //   "count": 1
+        // }
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  // /*  OPTIONAL  */ "ColliderMeshName": "TACOneBlock.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    // {
+    //   "x": 0,
+    //   "y": 0.5,
+    //   "z": 0
+    // },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    // {
+    //   "x": 0,
+    //   "y": 0,
+    //   "z": 0.5
+    // },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    // {
+    //   "x": 0.5,
+    //   "y": 0,
+    //   "z": 0
+    // },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_Block_Alt_01_(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,  
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, //Shift the subobjects of the block prefab by x, y and z 
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base Model
+     "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": false,
+      "MeshName": "ReactiveArmorCorner.obj",
+      "ColliderMeshName": "ReactiveArmorCorner.obj",
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    // { //Collider Model
+    //  "SubOverrideName": "m_HE_Block_111_copy",
+    //   "DestroyExistingColliders": false,
+    //   "MakeBoxCollider": true,
+    //   "MeshMaterialName": "HE_Main",
+    //   "layer": 8
+    // },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "ParticlesOffset/p_ChargeParticles",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_HE_Block_111": {//Model
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0.0, "z":0.0 } 
+        // "localPosition": { "x":0.0, "y":0.05, "z":0.05 } 
+      },
+      // "UnityEngine.BoxCollider": {
+      //   "extents": {
+      //     "x": 0.25,
+      //     "y": 0.25,
+      //     "z": 0.25
+      //   },
+      // }
+    },
+    // "Duplicate|m_HE_Block_111": {//Normal layer for grabbing
+    //   "UnityEngine.Transform": {
+    //     // "localScale": { "x":1, "y":1, "z":1 },
+    //     // "localScale": { "x":1.0, "y":1.1, "z":1.1 },
+    //     "localScale": { "x":1, "y":0.8, "z":0.8 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":-0.1, "z":-0.1 } 
+    //   },
+    //   "UnityEngine.BoxCollider": {
+    //     "gameObject": {
+    //       "layer": 8 //ID 524288
+    //         // Layers:
+    //         // (0) Default//Collides with normal things
+    //         // (1) TransparentFX //Bypasses Shields, hits self
+    //         // (2) Ignore Raycast//Raycasts cannot detect, hits self
+    //         // (3) 
+    //         // (4) Water//
+    //         // (5) UI//No collision
+    //         // (6) 
+    //         // (7) 
+    //         // (8) Tank //Bypasses shields, collides with self
+    //         // (9) Cosmetic//Collides with nothing.
+    //         // (10) Bullet //normal projectile
+    //         // (11) Container //Crates, Collides with nothing.
+    //         // (12) Shield //Clips through shields, collides with self
+    //         // (13) Terrain //
+    //         // (14) TankIgnoreTerrain //Ignores terrain, hits self
+    //         // (15) Scenery //normal
+    //         // (16) Pickup //normal
+    //         // (17) Trigger //No collision
+    //         // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+    //         // (19) 3D UI //No collision
+    //         // (20) WheelSuspension // normal
+    //         // (21) ShieldBulletFilter //collides with bullets and shields
+    //         // (22) TerrainCollidingParticles
+    //         // (23) ShieldTechFilter //collides with Techs
+    //         // (24) TerrainOnly //idk
+    //         // (25) RenderImageForPrefab
+    //         // (26) SceneryCoarse
+    //         // (27) Landmarks
+    //         // (28) 
+    //         // (29) 
+    //         // (30) 
+    //         // (31) 
+    //     },
+    //     "extents": {
+    //       "x": 0.5,
+    //       "y": 0.5,
+    //       "z": 0.5
+    //     }
+    //   }
+    // },
+
+    //Active collider
+
+    "GameObject|ParticlesOffset": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        "localEulerAngles": { "x":325, "y":45, "z":0},
+        "localPosition": { "x":0.25, "y":0.25, "z":0.25 }
+      },
+      "GameObject|p_ChargeParticles": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTexture": "EPMCEnergyBall.png",
+            "globalIlluminationFlags": 1,
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          // "alignment": 0,
+          "renderMode": 0,
+          // "sortMode": 0,
+          // "minParticleSize": 0.05,
+          "maxParticleSize": 0.15,
+          "motionVectorGenerationMode": 1,
+        },
+        "UnityEngine.ParticleSystem": {
+          // "startSpeed": {
+          //   "curveMin": -2,
+          //   "curveMax": -2,
+          // }, //How far you want the particles to spread
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 0.9,
+                "g": 0.8,
+                "b": 1.0,
+                "a": 0.0
+              },
+              "playOnAwake": true,//Prevents it from activating without Sozin's mod
+              "startDelay": 0.0,//Delay
+              "startLifetime": 0.1,
+              "startRotation": 0.0,
+              "playbackSpeed": 1.0,
+              //
+              "prewarm": false,
+              // "startRotation": 0.0,
+              // "playbackSpeed": 0.5,
+              //
+              "gravityModifier": 0.0,//No gravity
+              "loop": true, //Charging the beam
+              "startSize": 1.0,
+              "startSpeed": 0.25, //How far you want the particles to spread
+              "emissionRate": 4.0,
+              "emitterVelocityMode": 1,
+              "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+              "maxParticles": 100,
+              "useAutoRandomSeed": false,
+              "collision": {
+                "enabled": true, 
+                "type": 1, //Planes or World 
+                "mode": 0, //3D or 2D 
+                "colliderForce": 40.0,
+                "collidesWith": 
+                {
+                  "m_Mask": 1024,
+                  "value": 1024//512
+                  // "value": -1//512
+                },
+                "radiusScale": 1.5,
+                "maxCollisionShapes": 250,
+                "enableDynamicColliders": true,
+                "multiplyColliderForceByCollisionAngle": 1,
+                "multiplyColliderForceByParticleSize": 3,
+                "multiplyColliderForceByParticleSpeed": 1,
+                // "enabled": false,                              //Setting this to false will break the Particle Weapon
+                "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                "bounce": 0.0,//1.0 is default                     //How hard it bounces on contact with something
+                "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+                "lifetimeLoss": 0.0,                     //How fast it will dissappear after contact
+                "lifetimeLossMultiplier": 0.0,                     //How fast it will dissappear after contact
+                "quality": "High",                     //High, Medium, Low //How accurrate is this?
+                "minKillSpeed": 0.0,
+                "maxKillSpeed": 10000.0,
+              },
+              "subEmitters": {
+                "enabled": false,
+              },
+              "sizeBySpeed": {
+                "enabled": true,
+                "size": {
+                  "m_Mode": 1,
+                  "m_CurveMultiplier": 1.0,
+                  "m_CurveMin": null,
+                  "m_CurveMax": null,
+                  "m_ConstantMin": 1.0,
+                  "m_ConstantMax": 1.0,
+                  "mode": 1,
+                  "curveMultiplier": 1.0,
+                  "curveMin": null,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "constant": 0.0
+                },
+                "sizeMultiplier": 2.0,
+                "xMultiplier": 2.0,
+                "yMultiplier": 2.0,
+                "zMultiplier": 2.0,
+                "separateAxes": false
+              },
+              "customData": {
+                "enabled": false
+              },
+              "velocityOverLifetime": {
+                "enabled": true,
+                "xMultiplier": 0.0,
+                "yMultiplier": 0.0,
+                "zMultiplier": 0.0,
+                "orbitalXMultiplier": 0.0,
+                "orbitalYMultiplier": 0.0,
+                "orbitalZMultiplier": 0.0,
+                "orbitalOffsetXMultiplier": 0.0,
+                "orbitalOffsetYMultiplier": 0.0,
+                "orbitalOffsetZMultiplier": 0.0,
+                "radialMultiplier": 0.0,
+                "speedModifierMultiplier": 1.0,
+                "space": 0
+              },
+              "forceOverLifetime": {
+                "enabled": false,
+              },
+              "externalForces": {
+                "enabled": false,
+              },
+              "noise": {
+                "enabled": false,
+              },
+              "emission": {
+                "type": 0,
+                "rateMultiplier": 100.0,
+                "enabled": true,
+                "rateOverTimeMultiplier": 100.0,
+                "rateOverDistanceMultiplier": 0.0,
+                "burstCount": 0
+              },
+              "shape": {
+                "enabled": true,
+                "shapeType": "ConeVolume",
+                // "Sphere", "Hemisphere", "Cone", "Box", "ConeVolume", "Circle", "SingleSidedEdge", "MeshRenderer", "SkinnedMeshRenderer", "BoxShell", "BoxEdge", "Donut", "Rectangle", "Sprite", "SpriteRenderer"
+                // "meshShapeType": "Cone",
+                // "meshScale": 1.0,
+                "radius": 0.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "angle": 0.1,
+                "length": 1.0,
+                "arcMode": 0,
+                "randomDirectionAmount": 0.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "randomDirection": false,
+                "randomDirectionAmount": 0.0,
+              }
+            }
+          }
+        }
+      },
+    },
+
+
+
+
+    // CODING
+    "Damageable": {
+      "m_DamageableType": 1, //What damage multiplier this runs by
+      // "m_HealingOrigin": null,
+      "m_AoEDamageBlockPercent": 1.0,//
+      //
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": 3000.0,
+      // "m_Invulnerable": true,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.5, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": true, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 100.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+  }
+}
+
+
+
+
+
+
+

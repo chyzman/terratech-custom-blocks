@@ -1,0 +1,126 @@
+{
+  "Name": "Old Star Fuel Tank",
+  "Description": "Now this is how the Old Star do. A barrel sandwiched between 2 slabs as armor as this barrel contains even more fuel. DO NOT LET IT RUPTURE",
+  "ID": 300178,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 2,
+  "Price": 3324,
+  "HP": 1400,
+  "Mass": 8,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 11, 47, 47, 52, 52, ",
+  "IconName": "OS_Med_Fuel_Icon.png",
+  "BlockExtents": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 0.0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1.5,
+      "z": 0.0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 1.5,
+      "z": 1.0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1.0
+    }
+  ],
+
+  "GamePrefabReference": "VEN_FuelPod_111",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "DeathExplosionReference": "VEN_FuelPod_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_FuelPod_111",
+      "MeshName": "OS_Med_Fuel.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "LED0",
+      "MeshName": "OS_Med_Fuel_LED1.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "LED1",
+      "MeshName": "OS_Med_Fuel_LED2.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "LED2",
+      "MeshName": "OS_Med_Fuel_LED3.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleFuelTank": {
+      "m_Capacity": 140.0,
+      "m_RefillRate": 6.5
+    }
+  }
+}

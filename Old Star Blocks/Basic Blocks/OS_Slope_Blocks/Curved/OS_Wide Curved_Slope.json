@@ -1,0 +1,33 @@
+{
+  "Name": "Old Star Wide Curved Slope Block",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails. Just like the single width curved slope block but wider.",
+  "ID": 300061,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 300,
+  "Mass": 1,
+  "IconName": "OS_Wide Curved_Slope_icon.png",
+  "MeshName": "OS_Wide Curved_Slope.obj",
+  "EmissionMode": 2,
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ", 	
+  "ColliderMeshName": "OS_Wide Curved_SlopeC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 2},   
+  "APs": [ 
+  //Bottom 
+  {"x": 0, "y": -0.5, "z": 0},{"x": 0, "y": -0.5, "z": 1},
+  //Back
+  {"x": 0.5, "y": 0, "z": 0},{"x": 0.5, "y": 0, "z": 1},
+  //Side
+  {"x": 0, "y": 0, "z": -0.5},{"x": 0, "y": 0, "z":  1.5}
+  ]
+}

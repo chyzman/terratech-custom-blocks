@@ -1,0 +1,29 @@
+{
+  "Name": "Old Star 2 by 1",
+  "Description": "This here is how the Old Star do. Just 2 planks of nicely cut Fibron Wood held together with a few metal bands and nails.     Here at Old Star, We don't use a 1 by 1. Why you may ask? The wood cutter doesn't want to waste his metal by wrapping 2 tiny chuncks of wood and calling it a block!",
+
+  "ID": 300000,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 0,
+  "Price": 350,
+  "HP": 100,
+  "Mass": 0.5,
+  "IconName": "2_by_1_icon.png",
+  "MeshName": "Old_Star_Two Block.obj",
+  "ColliderMeshName": "Old_Star_Two BlockC.obj",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+  "APsOnlyAtBottom": false
+}

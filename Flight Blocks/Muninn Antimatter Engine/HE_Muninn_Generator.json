@@ -1,0 +1,112 @@
+
+{
+  "Name": "Hawkeye Muninn Heavy Antimatter Engine",
+  "Description": "The Muninn Antimatter Engine is an upscaled version of Huginn. It sports a slight improvement in power density at the expense of it's larger, bulkier frame. Use Black Labs antimatter engines to hover at a constant altitude, using your throttle to ascend and descend without ever losing power.",
+  "ID": 117064,
+
+  "Faction": 5,
+  "Category": 8,
+  "Rarity": 2,
+  "Grade": 2,
+  "Price": 61884,
+  "HP": 3000,
+  "Mass": 24,
+  "Recipe":  {"54": 6, "58": 4, "59": 4, "62": 4},
+
+  "IconName": "HE_Muninn_Generator.png",
+  "MeshName": null,
+
+  "MeshMaterialName": null,
+  "SupressBoxColliderFallback": true, 
+
+  "Cells": [
+  { "x": 0, "y": 0, "z": 0 },  
+  { "x": 0, "y": 0, "z": -1 },  
+
+  { "x": 0, "y": 1, "z": 0 },  
+  { "x": 0, "y": 1, "z": -1 }, 
+
+  { "x": 1, "y": 0, "z": 0 },  
+  { "x": 1, "y": 0, "z": -1 }, 
+
+  { "x": 1, "y": 1, "z": 0 },  
+  { "x": 1, "y": 1, "z": -1 }, 
+  ],
+
+ "APs": [ 
+    { "x": 0,     "y": 0,    "z": 0.5  },
+    { "x": 1,     "y": 0,    "z": 0.5  },
+    { "x": 0,     "y": 1,    "z": 0.5  },
+    { "x": 1,     "y": 1,    "z": 0.5  },
+
+    { "x": 0,     "y": 0,    "z": -1.5  },
+    { "x": 1,     "y": 0,    "z": -1.5  },
+    { "x": 0,     "y": 1,    "z": -1.5  },
+    { "x": 1,     "y": 1,    "z": -1.5  },
+
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": 1,     "y": -0.5,    "z": 0  },
+    { "x": 0,     "y": -0.5,    "z": -1  },
+    { "x": 1,     "y": -0.5,    "z": -1  },
+
+    { "x": 0,     "y": 1.5,    "z": 0  },
+    { "x": 1,     "y": 1.5,    "z": 0  },
+    { "x": 0,     "y": 1.5,    "z": -1  },
+    { "x": 1,     "y": 1.5,    "z": -1  },
+
+    { "x": -0.5,     "y": 0,    "z": 0  },
+    { "x": -0.5,     "y": 0,    "z": -1  },
+    { "x": -0.5,     "y": 1,    "z": 0  },
+    { "x": -0.5,     "y": 1,    "z": -1  },
+
+    { "x": 1.5,     "y": 0,    "z": 0  },
+    { "x": 1.5,     "y": 0,    "z": -1  },
+    { "x": 1.5,     "y": 1,    "z": 0  },
+    { "x": 1.5,     "y": 1,    "z": -1  },
+
+  ],
+
+   "GamePrefabReference": "BF_MotionEngine_Linear_112",
+   "ReferenceOffset":        { "x": 0, "y": 0, "z": 0 },
+   "EmissionMode": 1,
+
+   "SubObjects":[
+    {
+        "SubOverrideName": "m_BF_MotionEngine_Linear_112_Base",
+            "MeshName": "HE_Muninn_Generator.obj",
+            "MeshMaterialName": "HE_Main",
+            "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+            "SubRotation": { "x": -90, "y": 0, "z": 0 },
+            "ColliderMeshName": "HE_Muninn_Generator_Collider.obj",
+      },
+  ],
+   
+ "JSONBLOCK": { 
+    "ModuleLinearMotionEngine": {
+        "m_ForcePerEffector": 4500,      
+      //   "m_ForcePerEffector": 9000,      
+      },
+
+    "GameObject|_Effector2": {
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 0.5, "y": 0.5, "z": 0 },
+        },
+    },
+    "GameObject|_Effector1": {
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 0.5, "y": 0.5, "z": 0 },
+        },
+    },
+
+    //   "MotionBlocks.ModuleFloater": {
+    //    "MaxHeight": -150,
+    //    "MaxStrength": -45,
+    //    "VelocityDampen": 0.2
+   // }
+   "MotionBlocks.ModuleFloater": {
+        "MaxHeight": 300,
+        "MaxStrength": 90,
+        "VelocityDampen": 0.2
+    }
+  }
+}

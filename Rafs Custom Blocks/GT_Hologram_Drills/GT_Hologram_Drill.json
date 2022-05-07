@@ -1,0 +1,265 @@
+{
+  "Name": "GreenTech Hologram Drill",
+  "Description": "A smart drill made of reactive hard light which will solidify when in contact with harvestable natural resources and synthetic materials, while ignoring ordinary terrain.",
+  "ID": 911244, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 4428, 
+  "HP": 1800, 
+  "Mass": 6,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "1, 1, 5, 5, 19, 19, 50",
+  "IconName": "GT_Hologram_Drill_Icon.png",
+  "MeshName": "GT_Hologram_Drill_Base.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 2, "z": 5},
+  
+  "APs": [
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 0, "y": 1.5, "z": 0},
+    {"x": 1, "y": 1.5, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 1, "z": 0},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 1.5, "y": 1, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 1, "y": 1, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "GSO_FixedDrill_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  //"DeathExplosionReference": "GSO_BigBertha_845",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Drill_112_DrillBit",
+      "MeshName": "GT_Hologram_Drill_Drill.obj",
+      "ColliderMeshName": "GT_Hologram_Drill_Drill_Collider.obj",
+      "MeshMaterialName": "BF_Receiver_Forcefield",
+      "layer": 14
+      // "HE_Shield_Edge" "BF_Receiver_Forcefield" "Gauntlet_Ring_FX_Edge" "ObjectHighlightAttach"
+    },
+    {
+      "SubOverrideName": "Extra_Mesh",
+      "MeshName": "GT_Hologram_Drill_Drill.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "SubOverrideName": "Extra_Mesh_2",
+      "MeshName": "GT_Hologram_Drill_Coil.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "SubOverrideName": "Extra_Mesh_3",
+      "MeshName": "GT_Hologram_Drill_Drill.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "SubOverrideName": "Extra_Mesh_4",
+      "MeshName": "GT_Hologram_Drill_Drill.obj",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "Rotor",
+      "MeshName": "GT_Hologram_Drill_Rotor.obj",
+      "MeshTextureName": "GreenTech 1.png",
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|m_GSO_Drill_112_Base": {
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0.5, "y": 0.5, "z": 0 },
+        "size": { "x": 2, "y": 2, "z": 1 }
+      }
+    },
+    "GameObject|_sparksLocator": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 2.5
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 1,
+          "y": 1,
+          "z": 1
+         }
+       }
+    },
+    "GameObject|_spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 1,
+          "y": 1,
+          "z": 1
+         }
+       },
+       "GameObject|m_GSO_Drill_112_DrillBit": {
+        "UnityEngine.MeshCollider":{},
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 1.4
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+           }
+         },
+         "GameObject|Extra_Mesh": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale":{
+              "x": 1,
+              "y": 1,
+              "z": 1
+             }
+           }
+         },
+         "GameObject|Extra_Mesh_2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale":{
+              "x": 1,
+              "y": 1,
+              "z": 1
+             }
+           }
+         },
+         "GameObject|Extra_Mesh_3": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale":{
+              "x": 1,
+              "y": 1,
+              "z": 1
+             }
+           }
+         },
+         "GameObject|Extra_Mesh_4": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale":{
+              "x": 1,
+              "y": 1,
+              "z": 1
+             }
+           }
+         }
+       },
+       "GameObject|Rotor": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0.54
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+           }
+         }
+       },
+       "Spinner": {
+        "m_Speed": 5.0,
+        "m_SpinUpTime": 0.2
+       }
+    },
+    "ModuleDrill": {
+      "activeColliders": ["_spindle/m_GSO_Drill_112_DrillBit/MeshCollider."],
+      "impactDamageMultiplier": 3.0,
+      "damagePerSecond": 1000.0,
+      //"m_SpinOnCollisionDuration": 1,
+      //"m_DamageType": 7,
+      "m_SFXType": 27
+    }
+  }
+}

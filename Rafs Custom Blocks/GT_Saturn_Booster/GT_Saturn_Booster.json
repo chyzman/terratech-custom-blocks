@@ -1,0 +1,173 @@
+{
+  "Name": "GreenTech Saturn Booster",
+  "Description": "A mini rocket engine with vectored thrust along one axis, for better maneuvering during boosts.",
+  "ID": 911087, 
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 6195, 
+  "HP": 400, 
+  "Mass": 2.5,
+  "CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.8},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 5, 5, 7, 7, 9, 11, 15, 15, 43, 47, 51",  
+  "IconName": "GT_Saturn_Booster_Icon.png", 
+  "MeshName": "GT_Saturn_Booster.obj",
+  "ColliderMeshName": "GT_Saturn_Booster_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 1,"y": 1, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": 0.0, "z": 1.5}
+  ],
+  
+  "GamePrefabReference": "BF_Wing_Medium_Outside_413",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "BF_Booster_112",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 90  // Roll
+  },
+
+  "SubObjects": [
+    
+  {
+    "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Wing",
+    "MeshName": "GT_Saturn_Booster_Jet.obj",
+    "ColliderMeshName": "GT_Saturn_Booster_Jet_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0.0, "y": 0.0, "z": -0.395},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": -90
+    }
+},
+{
+  "SubOverrideName": "_Pivot",
+  "DestroyExistingRenderer": true,
+  "SubPosition": { "x":  0.0, "y": 0.0, "z": 0.395}
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Base",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Arm_1",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Medium_Outside_413_Arm_2",
+  "DestroyExistingRenderer": true
+}
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot": {
+      "GameObject|m_BF_Wing_Medium_Outside_413_Wing": {
+        "Reference|BF_Booster_112/_boostJet": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -0.18
+            }
+          },
+          "BoosterJet": {
+            "m_Force": 7500.0,
+            "m_BurnRate": 3.0
+          },
+          "GameObject|Effector": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localScale": {
+                "x": 1.3,
+                "y": 1.3,
+                "z": 1.3
+              }
+            }
+            /*"GameObject|FX_Flame": {
+              "UnityEngine.ParticleSystem": {
+                "colorOverLifetime": { "enabled": false },
+                "colorBySpeed": { "enabled": false },
+                "main": {
+                  "startColor": {
+                    "r": 0.7,
+                    "g": 1.0,
+                    "b": 0.0,
+                    "a": 1.0
+                  },
+                  "emissionRate": 30.0,
+                  "startSpeed": 10.0,
+                  "startSize": 1.1
+                }
+              },
+              "UnityEngine.MeshRenderer": {
+                "material": {
+                  "color": {
+                    "r": 0.7,
+                    "g": 1.0,
+                    "b": 0.0,
+                    "a": 1.0
+                  },
+                  "mainTexture": "yellowflame.png"
+                }
+              }
+            }*/
+          }
+        }
+      }
+    },
+    "Reference|BF_Booster_112/ModuleBooster.": {
+      "m_BoosterAudioType": 0,
+      //"RocketBoosterType": 0,
+      "BoosterEngineType": 0
+    },
+    "ModuleWing": {
+      "m_Aerofoils": [{
+        "flapAngleRangeActual": 45, //How far the flap turns in terms of forces
+        "flapAngleRangeVisual": 45, //How far flap turns visually
+        "flapTurnSpeed": 5
+      }],
+      "m_AttackAngleDamping": 0,
+      "m_TrailMinVelocity": 0,
+      "m_TrailAlphaStrength": 0,
+      "m_TrailFadeSpeed": 0,
+      "m_WingTrails": null,
+      "m_AverageLiftCoeff": 0.0
+    }
+  }
+}

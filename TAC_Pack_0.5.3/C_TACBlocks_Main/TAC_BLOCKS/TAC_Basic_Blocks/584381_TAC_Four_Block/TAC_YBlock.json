@@ -1,0 +1,223 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Four Block \"Vertice\"",
+  "Description": "Moderate mass, high health, INSANE cost. \n\n\nThe Vertice block is slightly stronger than the likes of 4 TAC One Blocks. \n\nYara And Yozare, two TAC science assistants, and two anime girls.  Venture-Reticule and their SCU-fooling shenanigans resulted in the two girls, and they they didn't know what to do with them afterwards.  They phoned TAC for no reason whatsoever and Rodrigo took them in, unaware of what disaster he'd brought upon himself.  \n\nOh, and this grey thing flew out of the portal as well, without the outer shell.  \nLeave it to Anjaro to adopt that entity LOL.", //You can make multiple lines with \n
+  "ID": 584228, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 5136, //103+103+111+111 =206+222 =428    //HE block cost is 573 with times 3 multiplier. BF block cost is 768 with times 3 multiplier. This block is a whopping 1284 per volume!
+  "HP": 1900, //+100 - Normal TAC Block is 450
+  "Mass": 4.0, //Normal TAC Block is 1
+
+  "IconName": "VergeOfVenus.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  //"MeshName": "TACPutARingOnItBlock.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "44, 44, 45, 45, 44, 44, 45, 45, 44, 44, 45, 45, 44, 44, 45, 45", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+        // {
+        //   "name": "Hardened Titanic",
+        //   "id": 45,
+        //   "count": 1
+        // }
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "TACPutARingOnItBlock.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+  //Begin Inner Part
+    //Begin Outer Faces
+    { "x": -0.5, "y": 0, "z": 0},
+    { "x": -0.5, "y": 0, "z": 1},
+    { "x": -0.5, "y": 1, "z": 0},
+    { "x": 0, "y": 0, "z": -0.5},
+    { "x": 1, "y": 0, "z": -0.5},
+    { "x": 0, "y": 1, "z": -0.5},
+    { "x": 0, "y": -0.5, "z": 0},
+    { "x": 1, "y": -0.5, "z": 0},
+    { "x": 0, "y": -0.5, "z": 1},
+    //Begin Inner Faces
+    { "x": 0.5, "y": 1, "z": 0},
+    { "x": 0.5, "y": 0, "z": 1},
+    { "x": 1, "y": 0.5, "z": 0},
+    { "x": 0, "y": 0.5, "z": 1},
+    { "x": 1, "y": 0, "z": 0.5},
+    { "x": 0, "y": 1, "z": 0.5},
+    //Begin Outer Edges
+    { "x": 1.5, "y": 0, "z": 0},
+    { "x": 0, "y": 1.5, "z": 0},
+    { "x": 0, "y": 0, "z": 1.5},
+
+  ],
+  /*  OR  */
+  //Cannot use BlockExtents here, hollow center block.
+  // "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  // {
+  //   "x": 1,
+  //   "y": 1,
+  //   "z": 1
+  // }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_Block_Alt_01_(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,  
+	"ReferenceOffset": { "x":1, "y":0, "z":1 }, //Shift the subobjects of the block prefab by x, y and z 
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "MakeBoxCollider": true
+    },
+    { //Base
+      "SubOverrideName": "m_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACFourBlock.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0.5 } 
+      },
+    },
+    "GameObject|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 1.0,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+    },
+    "Duplicate|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1.0
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 1.0,
+          "z": 0.5
+        }
+      }
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.9,//Critical shotgun stopping power
+    },
+    // TAC Standard - Shockwave Dissipation Armor
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.6,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+  }
+}
+
+
+
+
+
+
+

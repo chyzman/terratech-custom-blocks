@@ -1,0 +1,370 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC S.P.A.M.A.T. Repair Bubble Stereopticon",
+  "Description": "Deploys a Repair Bubble some distance away from the block, projecting it to allow healing of an area far out of ordinary Repair Bubble reach. \n\nThis one aggressively heals, making it useful for retaining blocks.  The deploy time is terrible, which makes this hard to use in mass amounts. \nIt is suggested that at least one is prescribed per Tech, aligned at the main cab for maximum effectiveness and insurance. \n\nPlease remember that unlike normal regen bubbles, <b>Stereopticons</b> cannot heal themselves on their own. \n\n\nI don't know why we get so many complaints that the generator breaks when it is hit.  I mean the bubble is LITERALLY far away from the generator!", //You can make multiple lines with \n
+  "ID": 584241, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 47313, //You can't really kill things guarded by this
+  "HP": 1500,//Weak, lots of bonus health awarded
+  "Mass": 4.0,//Heavy, 2 mass per block consumed
+
+  "IconName": "DontYouDieOnMe.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 45, 45, 45, 49, 49, 49, 49, 51, 51, 51, 51, 51, 51, 52, 52, 53, 53, 54, 54, 56, 57, 57, 57, 57, 59", // Cannot Craft - Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom APs
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": 0, "z": -0.5 },
+    //additions
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": 0.5, "y": 0, "z": 0 },
+    //Top APs
+    { "x": 0, "y": 1.5, "z": 0 },
+    { "x": 0, "y": 1, "z": 0.5 },
+    //additions
+    { "x": -0.5, "y": 1, "z": 0 },
+    { "x": 0.5, "y": 1, "z": 0 }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 2,
+    "z": 1 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Repair_Bubble(111)",//(was VEN_FuelTank(212))VERY explosive. - Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 0, "y": 0.5, "z": 3.0 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBase.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    //Disabled because all repair bubbles are normal spheres
+    // { //Outer Shield Texture
+    //   "SubOverrideName": "ShieldSphereOuter",
+    //   "DestroySubReferenceRenderer": true,
+    //   "MeshName": "TAC_IsoBubbleMediumOuter.obj",
+    // },
+    // { //Outer Shield Texture2
+    //   "SubOverrideName": "ShieldSphereOuter/ShieldSphereOuter",
+    //   "DestroySubReferenceRenderer": true,
+    //   "MeshName": "TAC_IsoBubbleMediumOuter.obj",
+    // },
+    // { //Inner Shield Texture
+    //   "SubOverrideName": "ShieldSphereInner",
+    //   "DestroySubReferenceRenderer": true,
+    //   "MeshName": "TAC_IsoBubbleMediumInner.obj",
+    // },
+    { //Barrel
+      "SubOverrideName": "m_VEN_Regen_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseBarrel.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Metal
+      "SubOverrideName": "m_VEN_Regen_111_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseSteel.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Sphere Part
+      "SubOverrideName": "m_Sphere",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "ShieldBallGreenGlow.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Plus Part
+      "SubOverrideName": "m_Plus",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBasePlus.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Truss
+      "SubOverrideName": "m_Truss_1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACProjectorBaseTruss.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Regen_111_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_ProjectorRepairEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Leg
+      "SubOverrideName": "m_VEN_Regen_111_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_ProjectorRepairEdge.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|FXGSORepairCharge(Clone)": { //The Bubble Charging effect
+      "GameObject|FXGSORepairChargeSphere": {
+      }
+    },
+    "GameObject|aCol": {
+      "UnityEngine.SphereCollider": {
+        "radius": 0.0,
+        "center": { "x": 0, "y": 0.5, "z": -3 },
+      }
+    },
+    "GameObject|_shield": { //The actual Shield
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          // "UnityEngine_SphereCollider": { //Cannot change directly, "ModuleShieldGenerator" overrules this
+          //   "radius": 0.5
+          // },
+        },
+        "GameObject|_bubbleBulletTrigger": {
+        },
+        "GameObject|_bubbleCollider": {
+        },
+        "GameObject|ShieldSphereEdge": {
+          "GameObject|ShieldSphereInner": {
+          },
+          "GameObject|ShieldSphereOuter": {
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.0,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.00,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+      "GameObject|_projector": {
+        "GameObject|_particles4": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles3": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles2": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles1": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        }
+      }
+    },
+    "GameObject|m_VEN_Regen_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+    },
+    "GameObject|m_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.75, "y":0.75, "z":0.65 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+    },
+    "Duplicate|m_VEN_Regen_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.75, "y":0.75, "z":0.65 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+    },
+    // "GameObject|m_Barrel": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":0, "z":0 } 
+    //   },
+    // },
+    "GameObject|m_Sphere": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.15, "y":0.15, "z":0.15 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.05 } 
+      },
+    },
+    "GameObject|m_Plus": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+    },
+    "GameObject|m_Truss_1": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":2.0, "y":1, "z":0.4 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+    },
+    "Duplicate|m_VEN_Regen_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":-0.5 } 
+      },
+    },
+    "Duplicate|m_VEN_Regen_111_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0.5 } 
+      },
+    },
+
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": true, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.25, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.25,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 5.0, //dismal, smaller than VEN
+      "m_MaxScale": 5.0,
+      "m_EnergyConsumptionPerSec": 1.0, //Very economical
+      "m_InitialChargeEnergy": 750.0,//You must kickstart it
+      "m_InterpTimeOn": 4.0, //How fast the shield inflates- SLOW, highly suggest only using on non-shielded techs.
+      "m_InterpTimeOff": 1.0,//How fast the shield deflates
+      // "m_ParticleLife": 1.0,
+      // "m_ParticleSpeed": 10.0,
+      // "m_Repulsion": false,
+      // "m_RepelKick": 5.0,
+      // "m_RepelKickAngular": 5.0,
+      "m_EnergyConsumedPerDamagePoint": 0.125,// less than VEN's 0.15
+      "m_Healing": true,
+      "m_HealingHeartbeatInterval": 0.025,//VEN is 0.75 - We want to keep those blocks alive
+      "m_MaxHealingPerHeartbeat": 250.0, //VEN is 100 - Setting this to negative DENIES repairs, not deal damage
+      "m_EnergyConsumedPerPointHealed": 0.15, //VEN is 0.1
+      "m_PowerUpDelay": 2.0,//Slow startup
+      // "m_MinTechForce": 50.0,
+      // "m_MaxTechForce": 100.0,
+      // "m_Shield": {
+      //   "m_Speed": 0.05,
+      //   "m_RotationAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_SteerAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_AutoSpin": false,
+      //   "m_SpinUpTime": 1.0,
+      //   "m_CurrentAngle": 0.0,
+      //   "m_CurrentAutoSpeed": 0.0,
+      //   "m_CurrentSpeedFraction": 0.0,
+      //   "m_SpinnerSound": null,
+      //   "m_SpinnerSoundOriginalPitch": 0.0,
+      //   "Speed": 0.05,
+      //   "SpeedFraction": 0.0,
+      //   "AtFullSpeed": false
+      // },
+      // "m_Projector": null,
+      // "m_RepulsorBulletTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_RepulsorTechTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_TargetScale": 0.0,
+      // "m_CurrentInterpCurve": null,
+      // "m_InterpStartTime": 0.0,
+      // "m_InterpDuration": 0.0,
+      // "m_InterpStartScale": 0.0,
+      // "m_InterpScaleMin": 0.0,
+      // "IsScaling": false,
+      // "CurrentScale": 0.0,
+      // "ShieldRadius": 3.0,
+      // "m_EnergyDeficit": 800.0,
+      // "m_EnergyDrain": 0.0,
+      // "m_HealingHeartbeatNextTime": 322.266449,
+      // "m_TimeWithoutEnergy": 2.3562026,
+      // "m_EnoughPower": false,
+      // "m_ChargingEffect": false,
+      // "m_State": 0,
+      // "m_PowerUpTimer": 5.0,
+      // "m_CachedCollisionFixedFrameCount": 0
+    }
+  }
+}

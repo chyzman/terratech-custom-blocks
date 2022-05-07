@@ -1,0 +1,67 @@
+{
+  "Name": "GreenTech Round Recycled Block Corner Two",
+  "Description": "A larger round corner version of the Recycled Block, great for making domes.",
+  "ID": 911145, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4,
+  "Price": 2133, 
+  "HP": 3800,
+  "Mass": 12,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 9, 9, 9, 32, 32, 32, 43, 43, 43, 45", 
+  "IconName": "GT_Round_Recycled_Block_Corner_2_Icon.png", 
+  "MeshName": "GT_Round_Recycled_Block_Corner_2.obj", 
+  "ColliderMeshName": "GT_Round_Recycled_Block_Corner_2_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "xxx",
+    " xx",
+    "  x"
+  ],
+  [
+    "xx ",
+    "xxx",
+    " xx"
+  ],
+  [
+    "x  ",
+    "xx ",
+    "xxx"
+  ]
+],    
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 2},	
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": -0.5},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 0.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 0.5},
+    {"x": 1, "y": 0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 1},
+    {"x": 0, "y": 1.5, "z": 0},
+    {"x": -0.5, "y": 1, "z": 1},
+    {"x": -0.5, "y": 2, "z": 0},
+    {"x": 1, "y": 1, "z": -0.5},
+    {"x": 0, "y": 2, "z": -0.5},
+    {"x": 0, "y": 1, "z": 0.5},
+    {"x": 0.5, "y": 1, "z": 0}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

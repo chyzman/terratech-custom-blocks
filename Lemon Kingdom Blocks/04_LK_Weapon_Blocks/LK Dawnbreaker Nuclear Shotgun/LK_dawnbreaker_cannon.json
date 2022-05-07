@@ -1,0 +1,520 @@
+/*
+This is what LK uses to breach fortified areas - a nuclear shotgun. Credits to Shido for the idea. 
+Pros:     Extremely high DPS with large spread
+          Very tough
+          
+Cons:     Very large, extremely expensive
+          Relatively slow reload time
+          Short ranged
+          Should violently explode (Unfortunately doesn't work yet)
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Dawnbreaker Nuclear Shotgun",
+    "Description":          "This oversized shotgun is designed to crack open thick walls and Techs alike using a Shielded Drum Ordnance (ShiDO) shell that creates a localized nuclear shockwave at short range.\n\nIt also has a pair of bayonets to stab other Techs.",
+
+    "ID": 419015,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 660528,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body:    266 Titanic Alloy, 14 Plubonic Alloy
+              Shell:        24 Dervish Gel, 24 Z4 Explosives, 12 Gluon Beam, 6 Seed AI
+              Barrel:       72 Blast Caps 
+              Autoloaders:  4 Cyclone Jet
+    */
+    "Recipe" : {
+      // Main Body
+      "54": 266,
+      "53": 14,
+      // Nuclear Shells
+      "55": 24,
+      "61": 24,
+      "64": 12,
+      "65": 6,
+      // Barrel & Autoloaders
+      "46": 72,
+      "57": 4
+    },
+    
+    "IconName":                   "LK_dawnbreaker_cannon_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                     // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                     // Name of the block's collider.
+    "NoBoxCollider":              true,                                    // When set to false, this enables the block to create a box collider when no custom mesh collider is assigned.
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+
+    // Basic Block Values
+    "HP": 106400,           // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 1064,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+    "DeathExplosionReference": 51,
+
+    // Block Dimensions
+    "Cells":  
+    [ 
+      // Y Layer 0
+      { "x": 1, "y": 0, "z": 1 }, { "x": 2, "y": 0, "z": 1 }, { "x": 3, "y": 0, "z": 1 }, { "x": 4, "y": 0, "z": 1 },
+      { "x": 0, "y": 0, "z": 2 }, { "x": 1, "y": 0, "z": 2 }, { "x": 2, "y": 0, "z": 2 }, { "x": 3, "y": 0, "z": 2 }, { "x": 4, "y": 0, "z": 2 }, { "x": 5, "y": 0, "z": 2 },
+      { "x": 0, "y": 0, "z": 3 }, { "x": 1, "y": 0, "z": 3 }, { "x": 2, "y": 0, "z": 3 }, { "x": 3, "y": 0, "z": 3 }, { "x": 4, "y": 0, "z": 3 }, { "x": 5, "y": 0, "z": 3 },
+      { "x": 0, "y": 0, "z": 4 }, { "x": 1, "y": 0, "z": 4 }, { "x": 2, "y": 0, "z": 4 }, { "x": 3, "y": 0, "z": 4 }, { "x": 4, "y": 0, "z": 4 }, { "x": 5, "y": 0, "z": 4 },
+      { "x": 0, "y": 0, "z": 5 }, { "x": 1, "y": 0, "z": 5 }, { "x": 2, "y": 0, "z": 5 }, { "x": 3, "y": 0, "z": 5 }, { "x": 4, "y": 0, "z": 5 }, { "x": 5, "y": 0, "z": 5 },
+      { "x": 0, "y": 0, "z": 6 }, { "x": 1, "y": 0, "z": 6 }, { "x": 2, "y": 0, "z": 6 }, { "x": 3, "y": 0, "z": 6 }, { "x": 4, "y": 0, "z": 6 }, { "x": 5, "y": 0, "z": 6 },
+      { "x": 0, "y": 0, "z": 7 }, { "x": 1, "y": 0, "z": 7 }, { "x": 2, "y": 0, "z": 7 }, { "x": 3, "y": 0, "z": 7 }, { "x": 4, "y": 0, "z": 7 }, { "x": 5, "y": 0, "z": 7 },
+      { "x": 0, "y": 0, "z": 8 }, { "x": 1, "y": 0, "z": 8 }, { "x": 2, "y": 0, "z": 8 }, { "x": 3, "y": 0, "z": 8 }, { "x": 4, "y": 0, "z": 8 }, { "x": 5, "y": 0, "z": 8 },
+      { "x": 1, "y": 0, "z": 9 }, { "x": 2, "y": 0, "z": 9 }, { "x": 3, "y": 0, "z": 9 }, { "x": 4, "y": 0, "z": 9 },
+      { "x": 1, "y": 0, "z": 10 }, { "x": 2, "y": 0, "z": 10 }, { "x": 3, "y": 0, "z": 10 }, { "x": 4, "y": 0, "z": 10 },
+      { "x": 1, "y": 0, "z": 11 }, { "x": 2, "y": 0, "z": 11 }, { "x": 3, "y": 0, "z": 11 }, { "x": 4, "y": 0, "z": 11 },
+      { "x": 1, "y": 0, "z": 12 }, { "x": 2, "y": 0, "z": 12 }, { "x": 3, "y": 0, "z": 12 }, { "x": 4, "y": 0, "z": 12 },
+      { "x": 1, "y": 0, "z": 13 }, { "x": 2, "y": 0, "z": 13 }, { "x": 3, "y": 0, "z": 13 }, { "x": 4, "y": 0, "z": 13 },
+      { "x": 1, "y": 0, "z": 14 }, { "x": 2, "y": 0, "z": 14 }, { "x": 3, "y": 0, "z": 14 }, { "x": 4, "y": 0, "z": 14 },
+      { "x": 1, "y": 0, "z": 15 }, { "x": 2, "y": 0, "z": 15 }, { "x": 3, "y": 0, "z": 15 }, { "x": 4, "y": 0, "z": 15 },
+      
+      // Y Layer 1
+      { "x": 0, "y": 1, "z": 0 }, { "x": 1, "y": 1, "z": 0 }, { "x": 2, "y": 1, "z": 0 }, { "x": 3, "y": 1, "z": 0 }, { "x": 4, "y": 1, "z": 0 }, { "x": 5, "y": 1, "z": 0 },
+      { "x": 0, "y": 1, "z": 1 }, { "x": 1, "y": 1, "z": 1 }, { "x": 2, "y": 1, "z": 1 }, { "x": 3, "y": 1, "z": 1 }, { "x": 4, "y": 1, "z": 1 }, { "x": 5, "y": 1, "z": 1 },
+      { "x": 0, "y": 1, "z": 2 }, { "x": 1, "y": 1, "z": 2 }, { "x": 2, "y": 1, "z": 2 }, { "x": 3, "y": 1, "z": 2 }, { "x": 4, "y": 1, "z": 2 }, { "x": 5, "y": 1, "z": 2 },
+      { "x": 0, "y": 1, "z": 3 }, { "x": 1, "y": 1, "z": 3 }, { "x": 2, "y": 1, "z": 3 }, { "x": 3, "y": 1, "z": 3 }, { "x": 4, "y": 1, "z": 3 }, { "x": 5, "y": 1, "z": 3 },
+      { "x": 0, "y": 1, "z": 4 }, { "x": 1, "y": 1, "z": 4 }, { "x": 2, "y": 1, "z": 4 }, { "x": 3, "y": 1, "z": 4 }, { "x": 4, "y": 1, "z": 4 }, { "x": 5, "y": 1, "z": 4 },
+      { "x": 0, "y": 1, "z": 5 }, { "x": 1, "y": 1, "z": 5 }, { "x": 2, "y": 1, "z": 5 }, { "x": 3, "y": 1, "z": 5 }, { "x": 4, "y": 1, "z": 5 }, { "x": 5, "y": 1, "z": 5 },
+      { "x": 0, "y": 1, "z": 6 }, { "x": 1, "y": 1, "z": 6 }, { "x": 2, "y": 1, "z": 6 }, { "x": 3, "y": 1, "z": 6 }, { "x": 4, "y": 1, "z": 6 }, { "x": 5, "y": 1, "z": 6 },
+      { "x": 0, "y": 1, "z": 7 }, { "x": 1, "y": 1, "z": 7 }, { "x": 2, "y": 1, "z": 7 }, { "x": 3, "y": 1, "z": 7 }, { "x": 4, "y": 1, "z": 7 }, { "x": 5, "y": 1, "z": 7 },
+      { "x": 0, "y": 1, "z": 8 }, { "x": 1, "y": 1, "z": 8 }, { "x": 2, "y": 1, "z": 8 }, { "x": 3, "y": 1, "z": 8 }, { "x": 4, "y": 1, "z": 8 }, { "x": 5, "y": 1, "z": 8 },
+      { "x": 1, "y": 1, "z": 10 }, { "x": 2, "y": 1, "z": 10 }, { "x": 3, "y": 1, "z": 10 }, { "x": 4, "y": 1, "z": 10 },
+      { "x": 1, "y": 1, "z": 11 }, { "x": 2, "y": 1, "z": 11 }, { "x": 3, "y": 1, "z": 11 }, { "x": 4, "y": 1, "z": 11 },
+      { "x": 1, "y": 1, "z": 12 }, { "x": 2, "y": 1, "z": 12 }, { "x": 3, "y": 1, "z": 12 }, { "x": 4, "y": 1, "z": 12 },
+      { "x": 1, "y": 1, "z": 13 }, { "x": 2, "y": 1, "z": 13 }, { "x": 3, "y": 1, "z": 13 }, { "x": 4, "y": 1, "z": 13 },
+      { "x": 1, "y": 1, "z": 14 }, { "x": 2, "y": 1, "z": 14 }, { "x": 3, "y": 1, "z": 14 }, { "x": 4, "y": 1, "z": 14 },
+      { "x": 1, "y": 1, "z": 15 }, { "x": 2, "y": 1, "z": 15 }, { "x": 3, "y": 1, "z": 15 }, { "x": 4, "y": 1, "z": 15 },    
+
+      // Y Layer 2
+      { "x": 0, "y": 2, "z": 0 }, { "x": 1, "y": 2, "z": 0 }, { "x": 2, "y": 2, "z": 0 }, { "x": 3, "y": 2, "z": 0 }, { "x": 4, "y": 2, "z": 0 }, { "x": 5, "y": 2, "z": 0 },
+      { "x": 0, "y": 2, "z": 1 }, { "x": 1, "y": 2, "z": 1 }, { "x": 2, "y": 2, "z": 1 }, { "x": 3, "y": 2, "z": 1 }, { "x": 4, "y": 2, "z": 1 }, { "x": 5, "y": 2, "z": 1 },
+      { "x": 0, "y": 2, "z": 2 }, { "x": 1, "y": 2, "z": 2 }, { "x": 2, "y": 2, "z": 2 }, { "x": 3, "y": 2, "z": 2 }, { "x": 4, "y": 2, "z": 2 }, { "x": 5, "y": 2, "z": 2 },
+      { "x": 0, "y": 2, "z": 3 }, { "x": 1, "y": 2, "z": 3 }, { "x": 2, "y": 2, "z": 3 }, { "x": 3, "y": 2, "z": 3 }, { "x": 4, "y": 2, "z": 3 }, { "x": 5, "y": 2, "z": 3 },
+      { "x": 0, "y": 2, "z": 4 }, { "x": 1, "y": 2, "z": 4 }, { "x": 2, "y": 2, "z": 4 }, { "x": 3, "y": 2, "z": 4 }, { "x": 4, "y": 2, "z": 4 }, { "x": 5, "y": 2, "z": 4 },
+      { "x": 0, "y": 2, "z": 5 }, { "x": 1, "y": 2, "z": 5 }, { "x": 2, "y": 2, "z": 5 }, { "x": 3, "y": 2, "z": 5 }, { "x": 4, "y": 2, "z": 5 }, { "x": 5, "y": 2, "z": 5 },
+      { "x": 0, "y": 2, "z": 6 }, { "x": 1, "y": 2, "z": 6 }, { "x": 2, "y": 2, "z": 6 }, { "x": 3, "y": 2, "z": 6 }, { "x": 4, "y": 2, "z": 6 }, { "x": 5, "y": 2, "z": 6 },
+      { "x": 0, "y": 2, "z": 7 }, { "x": 1, "y": 2, "z": 7 }, { "x": 2, "y": 2, "z": 7 }, { "x": 3, "y": 2, "z": 7 }, { "x": 4, "y": 2, "z": 7 }, { "x": 5, "y": 2, "z": 7 },
+      { "x": 1, "y": 2, "z": 8 }, { "x": 2, "y": 2, "z": 8 }, { "x": 3, "y": 2, "z": 8 }, { "x": 4, "y": 2, "z": 8 },
+      { "x": 1, "y": 2, "z": 9 }, { "x": 2, "y": 2, "z": 9 }, { "x": 3, "y": 2, "z": 9 }, { "x": 4, "y": 2, "z": 9 },
+      { "x": 1, "y": 2, "z": 10 }, { "x": 2, "y": 2, "z": 10 }, { "x": 3, "y": 2, "z": 10 }, { "x": 4, "y": 2, "z": 10 },
+      { "x": 1, "y": 2, "z": 11 }, { "x": 2, "y": 2, "z": 11 }, { "x": 3, "y": 2, "z": 11 }, { "x": 4, "y": 2, "z": 11 },      
+   
+      // Y Layer 3
+      { "x": 1, "y": 3, "z": 1 }, { "x": 2, "y": 3, "z": 1 }, { "x": 3, "y": 3, "z": 1 }, { "x": 4, "y": 3, "z": 1 },
+      { "x": 0, "y": 3, "z": 2 }, { "x": 1, "y": 3, "z": 2 }, { "x": 2, "y": 3, "z": 2 }, { "x": 3, "y": 3, "z": 2 }, { "x": 4, "y": 3, "z": 2 }, { "x": 5, "y": 3, "z": 2 },
+      { "x": 0, "y": 3, "z": 3 }, { "x": 1, "y": 3, "z": 3 }, { "x": 2, "y": 3, "z": 3 }, { "x": 3, "y": 3, "z": 3 }, { "x": 4, "y": 3, "z": 3 }, { "x": 5, "y": 3, "z": 3 },
+      { "x": 0, "y": 3, "z": 4 }, { "x": 1, "y": 3, "z": 4 }, { "x": 2, "y": 3, "z": 4 }, { "x": 3, "y": 3, "z": 4 }, { "x": 4, "y": 3, "z": 4 }, { "x": 5, "y": 3, "z": 4 },
+      { "x": 0, "y": 3, "z": 5 }, { "x": 1, "y": 3, "z": 5 }, { "x": 2, "y": 3, "z": 5 }, { "x": 3, "y": 3, "z": 5 }, { "x": 4, "y": 3, "z": 5 }, { "x": 5, "y": 3, "z": 5 },
+      { "x": 0, "y": 3, "z": 6 }, { "x": 1, "y": 3, "z": 6 }, { "x": 2, "y": 3, "z": 6 }, { "x": 3, "y": 3, "z": 6 }, { "x": 4, "y": 3, "z": 6 }, { "x": 5, "y": 3, "z": 6 },
+      { "x": 1, "y": 3, "z": 7 }, { "x": 2, "y": 3, "z": 7 }, { "x": 3, "y": 3, "z": 7 }, { "x": 4, "y": 3, "z": 7 },
+      { "x": 1, "y": 3, "z": 8 }, { "x": 2, "y": 3, "z": 8 }, { "x": 3, "y": 3, "z": 8 }, { "x": 4, "y": 3, "z": 8 },
+      { "x": 1, "y": 3, "z": 9 }, { "x": 2, "y": 3, "z": 9 }, { "x": 3, "y": 3, "z": 9 }, { "x": 4, "y": 3, "z": 9 },
+      { "x": 1, "y": 3, "z": 10 }, { "x": 2, "y": 3, "z": 10 }, { "x": 3, "y": 3, "z": 10 }, { "x": 4, "y": 3, "z": 10 },
+      { "x": 1, "y": 3, "z": 11 }, { "x": 2, "y": 3, "z": 11 }, { "x": 3, "y": 3, "z": 11 }, { "x": 4, "y": 3, "z": 11 },
+    ],
+
+    "APs": [
+      // Bottom APs
+      {"x": 2.0, "y": -0.5, "z": 5.0}, {"x": 3.0, "y": -0.5, "z": 5.0},  
+      {"x": 2.0, "y": -0.5, "z": 6.0}, {"x": 3.0, "y": -0.5, "z": 6.0},  
+      {"x": 2.0, "y": -0.5, "z": 7.0}, {"x": 3.0, "y": -0.5, "z": 7.0},  
+
+      // Back APs
+      {"x": 1.0, "y": 1.0, "z": -0.5}, {"x": 4.0, "y": 1.0, "z": -0.5},
+      {"x": 1.0, "y": 2.0, "z": -0.5}, {"x": 4.0, "y": 2.0, "z": -0.5},
+
+      // Left APs
+      {"x": -0.5, "y": 2.0, "z": 4.0}, {"x": -0.5, "y": 2.0, "z": 5.0},
+
+      // Right APs
+      {"x": 5.5, "y": 2.0, "z": 4.0}, {"x": 5.5, "y": 2.0, "z": 5.0},
+    ],
+
+    // Advanced Settings
+    "PrefabReference": "HE_Shotgun_Rotating_212",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "PrefabPosition": { "x": 1.5, "y": 2, "z": 5 },
+
+    //Edit the block's meshes here
+    "SubObjects":[
+      {
+        "ObjectName":                 "body",
+        "MeshName":                   "LK_dawnbreaker_cannon_body.obj",
+        "ColliderMeshName":           "LK_dawnbreaker_cannon_col_body.obj",
+        "Position":                   { "x": 2.5, "y": -0.5, "z": -0.5 },
+      },
+
+      {
+        "ObjectName":                 "bayonet",
+        "MeshName":                   "LK_dawnbreaker_cannon_bayonet.obj",
+        "ColliderMeshName":           "LK_dawnbreaker_cannon_col_bayonet.obj"
+      }, 
+
+      {
+        "ObjectName":                 "bayonet_copy",
+        "MeshName":                   "LK_dawnbreaker_cannon_bayonet.obj",
+        "ColliderMeshName":           "LK_dawnbreaker_cannon_col_bayonet.obj"
+      },
+
+      {
+        "ObjectName":                 "loader",
+        "MeshName":                   "LK_dawnbreaker_cannon_loader.obj",
+      },
+
+      {
+        "ObjectName":                 "loader_copy",
+        "MeshName":                   "LK_dawnbreaker_cannon_loader.obj",
+      },
+
+      // Remove the mount objects
+      {
+        "ObjectName":                 "m_HE_Shotgun_Rotating_212_Mount",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      },
+      {
+        "ObjectName":                 "m_HE_Shotgun_Rotating_212_Base",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      }, 
+      // Replace the objects with new ones
+      {
+        "ObjectName":                 "m_HE_Shotgun_Rotating_212_Body",
+        "MakeBoxCollider":            true,
+        "MeshName":                   "LK_dawnbreaker_cannon_barrel_base.obj",
+        "MeshColliderName":           "LK_dawnbreaker_cannon_col_barrel.obj",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      },
+      {
+        "ObjectName":                 "m_HE_Shotgun_Rotating_212_Barrel",
+        "MakeBoxCollider":            true,
+        "MeshName":                   "LK_dawnbreaker_cannon_barrel_end.obj",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      },
+      // Replace the projectile casings with a new one
+      {
+        "ObjectName":                 "FireData.m_BulletCasingPrefab",
+        "DestroyExistingRenderer":    true,
+        "MeshName":                   "LK_ship_propellant_case_dawnbreaker.obj",
+        "MeshTextureName" :           "LK_tex_1.png"
+      },
+
+      // Same goes for the duplicated objects
+      {
+        "ObjectName":                 "_gimbalBase_copy/_gimbalElev/m_HE_Shotgun_Rotating_212_Body",
+        "MakeBoxCollider":            true,
+        "MeshName":                   "LK_dawnbreaker_cannon_barrel_base.obj",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      },
+      {
+        "ObjectName":                 "_gimbalBase_copy/_gimbalElev/_barrel/_recoiler/m_HE_Shotgun_Rotating_212_Barrel",
+        "MakeBoxCollider":            true,
+        "MeshName":                   "LK_dawnbreaker_cannon_barrel_end.obj",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true
+      },
+      //
+      {        
+        "ObjectName":            "_spawnBullet",
+        "Position":                { "x": 0, "y": 0, "z": 3.5 },
+      },
+      {        
+        "ObjectName":            "_blast",
+        "Position":                { "x": 0, "y": 0, "z": 3.7 },
+      },
+      {        
+        "ObjectName":            "_muzzleFlash",
+        "Position":                { "x": 0, "y": 0, "z": 3.7 },               
+      },
+      {        
+        "ObjectName":            "_smoke1",
+        "Position":                { "x": 0.6, "y": 0, "z": 2.2 },
+      },
+      {        
+        "ObjectName":            "_smoke2",
+        "Position":                { "x": -0.6, "y": 0, "z": 2.2 },
+      },
+      // Change the Duplicate's position
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_spawnBullet",
+        "Position":                { "x": 0, "y": 0, "z": 3.5 },
+      },
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_blast",
+        "Position":                { "x": 0, "y": 0, "z": 3.7 },
+      },
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_muzzleFlash",
+        "Position":                { "x": 0, "y": 0, "z": 3.7 },               
+      },
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_smoke1",
+        "Position":                { "x": 0.6, "y": 0, "z": 2.2 },
+      },
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_smoke2",
+        "Position":                { "x": -0.6, "y": 0, "z": 2.2 },
+      },
+      {        
+        "ObjectName":            "_spawnCasing",
+        "Position":              { "x": 0.0, "y": 1.7, "z": -2.7 },
+        "Rotation":              { "x": -60.0, "y": 180, "z": -90.0  },
+      },
+      {        
+        "ObjectName":            "_gimbalBase_copy/_gimbalElev/_barrel/_spawnCasing",
+        "Position":              { "x": 0.0, "y": 1.7, "z": -2.7 },
+        "Rotation":              { "x": -60.0, "y": 180, "z": -90.0  },
+      },
+    ],
+
+    "Deserializer":{
+      // Change the gun placements
+      "GameObject|_gimbalBase":{
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 1.45, "y": 1.35, "z": 5.7 }
+        },
+        "GimbalAimer": {
+          "rotationLimits": [4, -2], 
+          "rotationAxis": 1          
+        },
+
+        "GameObject|_gimbalElev": {
+          "GimbalAimer": {
+            "rotationLimits": [0, 0], 
+            "rotationAxis": 1          
+          },
+          "GameObject|_barrel":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 2.05 }
+            },
+            "GameObject|_smoke1":{},
+            "GameObject|_muzzleFlash":{
+              "UnityEngine.Transform": {
+                "localScale": { "x": 5, "y": 5, "z": 5 }
+                }
+              },
+            "GameObject|_blast":{
+              "UnityEngine.Transform": {
+                "localScale": { "x": 20, "y": 20, "z": 10 }
+                }
+              },
+          }
+
+        }
+
+      },
+
+    "Duplicate|_gimbalBase":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 3.55, "y": 1.35, "z": 5.7 }
+      }
+    },
+  
+    // Add the Bayonets
+    "GameObject|bayonet": {
+      "UnityEngine.MeshCollider": { },
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 1.5, "y": 0.13, "z": 9.5}
+      }
+    },
+
+    "Duplicate|bayonet": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 3.5, "y": 0.13, "z": 9.5}
+      }
+    },
+
+    // Add the autoloaders
+  "GameObject|loader":{
+    "UnityEngine.Transform": {
+      "localPosition": { "x": 1.45, "y": 1.6, "z": 2.5}
+    },
+    "Spinner": {
+      "m_Speed": -0.2,
+      "m_RotationAxis": { "axis": 2 },
+      "m_SpinUpTime": 1.0
+    }
+  },
+  "Duplicate|loader":{
+    "UnityEngine.Transform": {
+      "localPosition": { "x": 3.55, "y": 1.6, "z": 2.5}
+    },  
+    "Spinner": {
+      "m_Speed": 0.2,
+      "m_RotationAxis": { "axis": 2 },
+      "m_SpinUpTime": 1.0
+    }
+  },
+
+    "ModuleDrill":{
+      "activeColliders": [                    // The list of colliders the weapon will use. This is required for the melee weapon to function
+        "bayonet/MeshCollider.",              // Use the collider from above
+        "bayonet_copy/MeshCollider."          // The copy also has a collider
+      ], 
+      "impactDamageMultiplier": 10.0,         // Dictates the damage the weapon deals when hitting an enemy.
+      "damagePerSecond": 0.0,                 // Dictates the damage this weapon deals per second.
+      "m_DamageType": 6,                      // Dictates the damage type that the weapon will deal
+
+      "scaleHitParticles": 1.0                // Dictates the size of the particles emitted when the weapon hits something. (Somehow doesn't work)
+    },
+
+    "ModuleWeapon": {
+      "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+      "m_AimType": 0,
+      "m_RotateSpeed": 1.0,                     // Dictates the speed of the gun's rotation whenever it aims at a target.
+      "m_ChangeTargetInteval": 10.0,
+
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+
+      "m_FireSFXType": 77,                      // Dictates the sound used when firing
+                                                // 6  = GSO Megaton Cannon
+                                                // 64 = GSO Gigaton Cannon
+                                                // 77 = GSO Big Bertha Cannon
+      "m_TargetAimer": {
+        "m_ChangeTargetTimeout": 0.0,
+        "m_ChangeTargetInteval": 0.5,
+      },
+
+      "m_RemoteShotFiredPending": 0,
+      "m_HasTargetInFiringCone": false,
+      "FireControl": false,
+      "AimControl": 0,
+
+      "DisableTargetAimer": false,
+    },
+
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2.0,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+      "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+
+      "m_BurstShotCount": 6,                  // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                              // A non-zero, integer value will dictate the number of shots fired.
+                                              // The pause uses the value in m_BurstCooldown
+
+      "m_BurstCooldown": 6.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                              // This is automatically disabled when m_BurstShotCount is set to 0
+
+      "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                              // Only applies when m_BurstShotCount is NOT set to 0
+
+      "m_FireControlMode": 1,                 // Dictates how the guns will fire
+                                              //  0 =   The guns will fire one at a time
+                                              //  1 =   All guns will fire at the same time
+
+
+      "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward target
+    
+    },
+
+    // FireDataShotgun has additional attributes compared to FireData; it has the ability to create a gradient and cone of damage, and a knockback effect.
+    // 
+    "FireDataShotgun": {
+      "m_ShotMinRange":                 0.0,      // The minimum range of the shotgun's effect. Effects include damage and knockback
+      "m_ShotMaxRange":                 20.0,     // The maximum range of the shotgun's effect. Effects include damage and knockback
+      "m_ShotFullDamageRange":          1.0,
+      "m_ShotArc":                      60.0,     // Dictates how wide or how narrow the shots are fired. 
+      "m_MinDamagePercent":             1.0,        
+      "m_MaxDamagePercent":             1.0,
+      "m_TargetKickbackStrength": 200,
+
+      // Projectile Attibutes
+      "m_BulletSprayVariance": 0.25,            // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      "m_BulletSpin": 0.0,                      // Dictates the amount of spin the projectile makes while travelling
+      "m_MuzzleVelocity": 200.0,                // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength": 30000,              // Dictates the strength of the recoil when firing the gun
+      
+      // Casing Attributes
+      "m_CasingVelocity": 25.0,                 // Dictates the speed of the casing ejected. 
+      "m_CasingEjectVariance": 0.5,             // Dictates the amount of random movement applied onto the casing's movement. Add some for a more beautiful ejection
+      "m_CasingEjectSpin": 20.0,                // Dictates how much the casing spins when ejected
+
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": { // Reenters target
+          "m_DamageType": 3,                    // The type of damage the bullet will inflict on the target
+          "m_Damage": 10000                     // Self-explanatory; dictates the amount of damage
+        } 
+
+      },
+      "Instantiate|m_BulletCasingPrefab": {}
+    },
+
+    "ModuleDamage": {
+      "Instantiate|deathExplosion": {
+        /* This bit of code sadly doesn't work yet
+        "Explosion": { 
+          "m_EffectRadius": 100, 
+          "m_EffectRadiusMaxStrength": 100,
+          "m_MaxDamageStrength": 300,
+          "m_MaxImpulseStrength": 500, 
+          "DoDamage": true
+        },
+        */
+        "UnityEngine.Transform": {
+          "localScale":     { "x": 3, "y": 3, "z": 3 },
+        }
+      }
+    }
+
+
+
+  }
+
+}

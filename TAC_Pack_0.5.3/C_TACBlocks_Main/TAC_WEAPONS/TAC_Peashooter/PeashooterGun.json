@@ -1,0 +1,510 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Spark EPMS Gun",//Blaster Battery
+  "Description": "A very small, but VERY powerful gun that lobs potent explosives through shields. \n\nIt certainly comes at a price however... \n\nThe EPMS (Electric Pulse Modulator System) installed allows fine-grained control over many types of energy in the universe, some of which allows us to redirect shield energy around the shells this fires. \nThis and the retroburner go best hand-in-hand for small techs. \n\nThis gun also has an infamous nickname from the projectile it fires. \n\n\n\n\n\nStudies show that if you spam spacebar with this gun, happiness increases by 25%.", //You can make multiple lines with \n
+  "ID": 584261, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 14808, //What did you expect? This thing literally hurls Z1 explosives through shields lol
+  "HP": 550,//Can take quite the abuse for a 1-size block. Bonus +100
+//"HP": 1500, //-Was this
+  "Mass": 6,//DENSE AS F^BRON
+  "Rarity": 2,
+
+  "IconName": "PhaseCannon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //Moved it to SubObjects so that it can be aligned- FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 45, 45, 46, 46, 49, 49, 53, 53, 53, 53, 55, 55", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+ "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+  ],
+
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "GSO_Cannon_Turret(111)", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "PeashooterBarrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "PeashooterBarrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Base",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "PeashooterBase.obj",
+      "MeshColliderName": "PeashooterBase.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "ElevationPart",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "PeashooterElevation3.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACPeashooterRotatingPartAlt.obj",
+      "MeshMaterialName": "HE_Main"
+    }
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|GSO_Cannon_111_Base": {
+      "UnityEngine.Transform": { //Moving the part
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":-0.5, "z":0 }
+      },
+    },
+    "GameObject|_gimbalBase": { //GameObject child
+      "GimbalAimer": { //Useful component - Horizontal Aiming
+        "rotationLimits": [-180, 180] //[-Left,+Right](Degrees)
+      },
+      "GameObject|GSO_Cannon_111_Mount": {
+        "UnityEngine.Transform": { //Placing the part
+          // "localScale": { "x":1.4, "y":1.25, "z":1.1 },
+          "localScale": { "x":1.35, "y":1.25, "z":1.25 },
+          "localPosition": { "x":0, "y":-0.5475, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "UnityEngine.Transform": { //Moving the part
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|_gimbalElev": { //GameObject in child
+        "GimbalAimer": { //Useful component - Vertical Aiming
+          "rotationLimits": [-90, 18] //[-Up,+Down](Degrees) - VERY focused cone
+        },
+        "UnityEngine.Transform": { //Moving the part
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.2, "z":-0.25 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|ElevationPart": {
+          "UnityEngine.Transform": { //Placing the part
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": { //Moving the barrel
+            "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+            "localPosition": { "x":0, "y":0.075, "z":0.7 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": { //Moving the barrel
+              "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            "GameObject|GSO_Cannon_111_Barrel": {
+              "UnityEngine.Transform": { //Moving the barrel
+                "localScale": { "x":0.35, "y":0.35, "z":0.2 },// Increasing scale of animation
+                "localPosition": { "x":0, "y":0, "z":-0.5 }
+              },
+            }
+          },
+          "GameObject|_smoke": { 
+            "UnityEngine.Transform": { //Offsetting the smoke effect so it looks neater
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.0 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.0 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":0, "y":0.0, "z":0.1 }
+            }
+          }
+        },
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": { //Moving the barrel
+            "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+            "localPosition": { "x":0, "y":-0.075, "z":0.7 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+        },
+      }
+    }, //Back to GameObject
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Even the littlest of TAC guns put up a fight
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": " VENShotgunCombat", //Firing noise
+      //Other Firing noise options include "VENCannonRapid"(The old fire sfx), "PoundCannon"(GSO 3-Pound Cannon), "MegatonLongBarrel"(GSO Gigaton Cannon)
+      "m_RotateSpeed" : 400, //SPEED
+      // "m_FireSFXType": 66
+    },
+    "ModuleWeaponGun": { // Another component
+      //Burst Shot setup begins - You can remove the '//'s to allow Sequencing for salvo
+      "m_FireControlMode": "Sequenced", 
+      "m_BurstShotCount" : 2, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 0.05, //Seconds between bursts.
+      "m_CooldownVariancePct": 0.1,
+      //was 0.5
+      //Burst Shot setup end
+      //
+      "m_ShotCooldown" : 3.0, //
+      //was 3.0
+      "m_FiringData": null, //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha but it doesn't for some reason - This is actually used for when the block deploys like the BF shotgun
+    },//comma
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 50, //Bullet speed
+      //then buffed up to 80 with nerfed damage, then nerfed to 50
+      //was 45, then nerfed to 40
+      "m_BulletSprayVariance": 0.2, //Bullet inverse-accuracy
+      //was 0.0, nerfed to 0.2
+      "m_KickbackStrength": 100, // Would you like to become a plane
+      //was 50, then nerfed to 100
+      "m_BulletCasingPrefab": null,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":1.25, "y":1.25, "z":1.5 }},  // Size of Bullet    
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Energy", //What damage modifier the weapon does
+          "m_Damage": 75 //Did 125 damage before, nerfed to 75
+          //Then nerfed to 35, then back at 75
+        },
+        // Enable "UnityEngine.CapsuleCollider" for "m_MuzzleVelocity" above 200 to prevent buggy clipping
+        // "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+        //   "radius": 0.10,
+        //   "center": { "x": 0, "y": 0, "z": 5.5 },
+        //   "height": 8.5,
+        //   "direction": 2
+        // },
+        "SmokeTrail": {
+          "numberOfPoints": 3,
+          "updateSpeed": 0.01,//how often it makes new "points"
+          "riseSpeed": 0.0,//How fast it floats up
+          "spread": 0.0,
+          // "line":,//private LineRenderer line;
+          // "trans":,//private Transform trans;
+          // private Vector3[] positions;
+          // private Vector3[] directions;
+          // "directions": { "x":0.0, "y":0.0, "z":-0.25 },
+
+          //"alphaCache": 5,//private float[] alphaCache;
+          //"lineSegment": ,// private float lineSegment;
+          //"currentNumberOfPoints": 2,// private int currentNumberOfPoints = 2;
+          //"numberOfPoints": true/false,// private bool allPointsAdded;
+          // "baseColour": {// private Color baseColour;
+          //   "r": 0.5,
+          //   "g": 1.0,
+          //   "b": 0.5,
+          //   "a": 0.75,
+          //   // "maxColorComponent": 1.0
+          // },
+          //"lineHidden": true/false,// private bool lineHidden;
+          // private float timeSinceUpdate;
+          // "lineMaterial": { // private Material lineMaterial;
+          //   "mainTexture": "LED_BeamBlockG.png"
+          // },
+        },
+        "UnityEngine.TrailRenderer": { //Paint them trails
+          //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTextureOffset": {"x":1, "y":1},
+            "mainTextureScale": {"x":1, "y":1},
+            "globalIlluminationFlags": 1,
+            "mainTexture": "LED_BeamBlockPG.png",
+          },
+          "receiveShadows": false,
+          "shadowCastingMode": "Off",
+          "rendererPriority": 1,
+          "realtimeLightmapIndex": -1,
+          "generateLightingData": false,
+          "time": 0.25,
+          "startWidth": 0.2,
+          "endWidth": 0.025,
+          "widthMultiplier": 1.25, //Uniform Width Multiplier
+          "autodestruct": false, // Having this true crashes the game
+          "emitting": true, //0.2
+          "numCornerVertices": 4,
+          "numCapVertices": 8,
+          "minVertexDistance": 0.25,
+          "startColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "endColor": {
+            "r": 0.8,
+            "g": 0.8,
+            "b": 1.0,
+            "a": 0.875,
+            "maxColorComponent": 1.0
+          },
+          "positionCount": 1,
+          "shadowBias": 0.0,
+          "generateLightingData": false,
+          "textureMode": 0,
+          "alignment": 0,
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "gameObject": {
+            "layer": 2 //ID 524288Layers:
+              // (0) Default//Collides with normal things
+              // (1) TransparentFX //Bypasses Shields, hits self
+              // (2) Ignore Raycast//Raycasts cannot detect, hits self
+              // (3) 
+              // (4) Water//
+              // (5) UI//No collision
+              // (6) 
+              // (7) 
+              // (8) Tank //Bypasses shields, collides with self
+              // (9) Cosmetic//Collides with nothing.
+              // (10) Bullet //normal projectile
+              // (11) Container //Crates, Collides with nothing.
+              // (12) Shield //Clips through shields, collides with self
+              // (13) Terrain //
+              // (14) TankIgnoreTerrain //Ignores terrain, hits self
+              // (15) Scenery //normal
+              // (16) Pickup //normal
+              // (17) Trigger //No collision
+              // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+              // (19) 3D UI //No collision
+              // (20) WheelSuspension // normal
+              // (21) ShieldBulletFilter //collides with bullets and shields
+              // (22) TerrainCollidingParticles
+              // (23) ShieldTechFilter //collides with Techs
+              // (24) TerrainOnly //idk
+              // (25) RenderImageForPrefab
+              // (26) SceneryCoarse
+              // (27) Landmarks
+              // (28) 
+              // (29) 
+              // (30) 
+              // (31) 
+          },
+          // "size": { "x": 0.4, "y": 0.4, "z": 1 },
+          // "center": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|_glow": {//Looks terrible on this kind of laser
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0  }
+          },
+          "UnityEngine.Light": {
+            // "cookie": {
+            //   "mainTexture": "LED_BeamBlockB.png",
+            //   "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            //   "color": {
+            //     "r": 0.1,
+            //     "g": 0.2,
+            //     "b": 1.0,
+            //     "a": 0.2
+            //   },
+            // },
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            // "innerSpotAngle": 360.0,
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.05,
+              "a": 1.0
+            },
+            "colorTemperature": 6570.0,
+            "areaSize": 3.0,//2.0
+            "intensity": 3.0,//2.0
+            "bounceIntensity": 1.0,
+            "shadowCustomResolution": -1,
+            "shadowBias": 0.5,
+            "shadowNormalBias": 1.0,
+            "shadowNearPlane": 0.2,
+            "renderMode": "Auto",
+            //Auto, ForcePixel, ForceVertex
+            "type": "point",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 4.0,
+            "flare": null
+          },
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Cannon", //WHAM
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              //"m_DamageType" : "Explosive", //What damage modifier the explosion does
+              "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX
+              "m_EffectRadius": 3.0, //Evil gun
+              "m_EffectRadiusMaxStrength": 2.0, //Max Radius before the effect deals less damage outwards
+              "m_MaxDamageStrength": 50, // deadly if it hits
+              //was 50, nerfed to 25, then back to 50
+              "m_MaxImpulseStrength": 50, //YEET
+            },
+            "GameObject|ExplosionBright": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 14,
+                    // "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 20.0,
+                    //   // "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 20,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 20,
+                    //     "minCount": 8,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // },
+                  }
+                }
+              }
+            },
+            "GameObject|Point light": {
+              "UnityEngine.Light": {
+                // "spotAngle": 60.0,
+                // "color": {
+                //   "r": 1.0,
+                //   "g": 1.0,
+                //   "b": 0.9,
+                //   "a": 1.0
+                // },
+                // "colorTemperature": 6570.0,
+                "intensity": 7.5,//2.0
+                // "bounceIntensity": 1.0,
+                // "shadowCustomResolution": -1,
+                // "shadowBias": 0.5,
+                // "shadowNormalBias": 1.0,
+                // "shadowNearPlane": 0.2,
+                "range": 7.5,
+                // "flare": null
+              }
+            },
+            "Reference|GC_Cab_221.ModuleDamage.deathExplosion/FX_Parts_A": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.125,
+                    "startRotation": 5.0,
+                    "startSpeed": 17.5, //How far you want the particles to spread
+                    "startColor": {
+                      "r": 0.3,
+                      "g": 0.3,
+                      "b": 1.0,
+                      "a": 0.75
+                    },
+                    // "emissionRate": 25.0,
+                    "maxParticles": 4,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 4,
+                        //"cycleCount": 1,
+                        "maxCount": 4,
+                        "minCount": 4,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    },
+                    // "duration": 8.0,
+                    "playbackSpeed": 1.0,
+                  }
+                }
+              }
+            },
+            "GameObject|Sparks": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 1,
+                    // "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 100,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 50,
+                        //"cycleCount": 1,
+                        "maxCount": 50, 
+                        "minCount": 30,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    },
+                  }
+                }
+              }
+			      }
+          }
+        }
+      }
+    }
+  }
+}

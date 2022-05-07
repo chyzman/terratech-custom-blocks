@@ -1,0 +1,424 @@
+
+{
+    "Name": "Hawkeye Bastion Module",
+    "Description": "This module turns the anchor into a siege module. \nWhen anchored, this module turns your tech into a stationary super turret, making the tech a long ranged, high damage output and extremely resilient platform to stand alone versus army. \nHowever, while the module is running, it will always consume a lot of power and any generator will not work. \nThis means that you will need a generator that does not require an anchor, or a remote charger tech.",
+    "ID": 546347,
+  
+    "Faction": 5,
+    "Category": 5,
+    "Rarity": 1,
+    "Grade": 2,
+    "Price": 108936,
+    "HP": 2000,
+    "Mass": 12,
+  
+    "Recipe": "49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 59, 59, 61, 61, 64, 64, 64, 64, 65, ",
+  
+    "IconName": "HE_bastion.png",
+    "MeshName": "HE_bastion.obj",
+  
+    "MeshMaterialName": "HE_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": "HE_bastion_c.obj",
+  
+    "BlockExtents":
+    {
+      "x": 3,
+      "y": 1,
+      "z": 3
+    },
+  
+    "APs": [ 
+      {"x": 0,"y": -0.5,"z": 1},
+      {"x": 1,"y": -0.5,"z": 0},
+      {"x": 1,"y": -0.5,"z": 1},
+      {"x": 1,"y": -0.5,"z": 2},
+      {"x": 2,"y": -0.5,"z": 1}
+
+    ],
+    
+     "GamePrefabReference": null,
+
+     "SubObjects": [
+      {
+        "SubOverrideName": "HE_bastion_spinner",
+        "MeshName": "HE_bastion_spinner.obj",
+        "SubPosition": {
+          "x": 1,
+          "y": 0.07,
+          "z": 1
+        },
+        "MakeBoxCollider": true
+      }
+    ],
+      
+  "JSONBLOCK": {
+  "Reference|GC_Battery_424/GC_Battery_424/fx_Plasma": {
+    "UnityEngine.Transform": {
+      "localScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "localPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "UnityEngine.MeshCollider": null,
+    "UnityEngine.MeshRenderer": null,
+    "UnityEngine.ParticleSystem": {
+      "main": {
+        "m_ParticleSystem": {
+          "startColor": {
+            "r": 1.00,
+            "g": 0.10,
+            "b": 0.20,
+            "a": 0.65
+          },
+          "startSize": 0.0,
+          "endSize": 0.0,
+         "maxParticles": 0  //remove
+        }
+      }
+    },
+    "GameObject|fx_Lightning": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "localPosition": {
+          "x": -1,
+          "y": 1  ,
+          "z": 0
+        }
+      },
+      "UnityEngine.ParticleSystem": {
+        "main": {
+          "m_ParticleSystem": {
+            "startColor": {
+              "r": 1.00,
+              "g": 0.40,
+              "b": 0.50,
+              "a": 0.65
+            },
+            "startSize": 0.3
+          }
+        }
+      }
+    },
+    "GameObject|fx_Particles": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "localPosition": {
+          "x": -1,
+          "y": 1,
+          "z": 0
+        }
+      },
+      "UnityEngine.ParticleSystem": {
+        "main": {
+          "m_ParticleSystem": {
+            "startColor": {
+              "r": 0.00,
+              "g": 0.40,
+              "b": 1.60,
+              "a": 0.65
+            },
+            "startSize": 0.25,
+            "startSpeed": -0.15
+          }
+        }
+      }
+    }
+  },
+  "Reference|GC_SamSite_Charger_444/fx_Lightning": {
+    "GameObject|Light_Point": null,
+    "UnityEngine.Transform": {
+      "localEulerAngles": {
+        "x": 180,
+        "y": 0,
+        "z": 0
+      },
+      "localPosition": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "localScale": {
+        "x": 0.25,
+        "y": 0.25,
+        "z": 0.25
+      }
+    },
+    "ParticleSystem": {
+      "main": {
+        "startColor": {
+          "mode": 2,
+          // 0: Use a single color for the MinMaxGradient
+          // 1: Use a single color gradient for the MinMaxGradient.
+          // 2: Use a random value between 2 colors for the MinMaxGradient.
+          // 3: Use a random value between 2 color gradients for the MinMaxGradient.
+          // 4: Define a list of colors in the MinMaxGradient, to be chosen from at random.
+          "color": {"r": 1.0,"g": 0,"b": 0,"a": 1.0},
+          "colorMin": {"r": 1.0,"g": 0,"b": 0,"a": 1.0},
+          "colorMax": {"r": 1.0,"g": 0.0,"b": 0.0, "a": 1.0},
+          "gradient": {
+            "mode": 0,
+            "alphaKeys": [
+              {"alpha": 1.0,"time": 0.0},
+              {"alpha": 0.5,"time": 0.7},
+              {"alpha": 0.3,"time": 1.0}
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 1.0,"g": 0.8,"b": 0.4},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 1.0,"g": 0.8,"b": 0.4},
+                "time": 0.7
+              },
+              {
+                "color": {"r": 1.0,"g": 0.8,"b": 0.4},
+                "time": 1.0
+              }
+            ]
+          },
+          "gradientMin": null,
+          "gradientMax": null
+        },
+        "startSize": {
+          "mode": 3,
+          // 0: Use a single constant for the MinMaxCurve.
+          // 1: Use a single curve for the MinMaxCurve.
+          // 2: Use a random value between 2 curves for the MinMaxCurve.
+          // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+          "curveMultiplier": 0.0,
+          "curveMax": null,
+          "curveMin": null,
+          "curve": null,
+          "constantMax": 1.0,
+          "constantMin": 0.3,
+          "constant": 0.2
+        },
+        "simulationSpace": 0,
+        // Local
+        // World
+        // Custom: use whatever is specified in ParticleSystem.MainModule.customSimulationSpace.
+        "playOnAwake": true
+      },
+      "shape": {
+        "shapeType": 6,
+        //0: Sphere
+        //1: Hemisphere
+        //2: Cone
+        "angle": 20,
+        "length": 2,
+        //3: Box
+        "box": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        //4: Mesh
+        //5: ConeVolume
+        //6: Circle
+        //7: SingleSidedEdge
+        //8: MeshRenderer
+        "meshRenderer": null,
+        //9: SkinnedMeshRenderer
+        "skinnedMeshRenderer": null,
+        //10: BoxShell
+        //11: BoxEdge
+        //12: Donut
+        "sphericalDirectionAmount": 0,
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.95,
+        "alignToDirection": false
+      },
+      "emission": {
+        "rateOverTimeMultiplier": 50
+      },
+      "velocityOverLifetime": {
+        "enabled": false
+      },
+      "startSpeed": 20,
+      "startLifetime": 0.4,
+      "noise": {
+        "enabled": true,
+        "frequency": 500,
+        "strength": {
+          "mode": 0,
+          "constant": 1.0,
+          "constantMin": 0.0,
+          "constantMax": 1.0,
+          "curve": null,
+          "curveMin": null,
+          "curveMax": null
+        },
+        "strengthMultiplier": 10.0,
+        "scrollSpeed": {
+          "mode": 0,
+          "constant": 1.0,
+          "constantMin": 0.0,
+          "constantMax": 1.0,
+          "curve": null,
+          "curveMin": null,
+          "curveMax": null
+        },
+        "scrollSpeedMultiplier": 1.0,
+        "damping": true,
+        "quality": 2,
+        "octaveCount": 2,
+        "octaveMultiplier": 0.5,
+        "octaveScale": 2,
+        "remapenabled": false,
+        "positionAmount": {
+          "mode": 0,
+          "constant": 10.0,
+          "constantMin": 0.0,
+          "constantMax": 1.0,
+          "curve": null,
+          "curveMin": null,
+          "curveMax": null
+        }
+      },
+      "trails": {
+        "enabled": true,
+        "inheritParticleColor": true,
+        "lifetime": {
+          "mode": 0,
+          "constant": 1.0,
+          "constantMin": 0.0,
+          "constantMax": 1.0,
+          "curve": null,
+          "curveMax": null,
+          "curveMin": null
+        },
+        "lifetimeMultiplier": 1.0,
+        "sizeAffectsLifetime": false,
+        "minVertexDistance": 0.01,
+        "widthOverTrail": {
+          "mode": 0,
+          "constant": 1.0,
+          "constantMin": 0.0,
+          "constantMax": 1.0,
+          "curve": null,
+          "curveMax": null,
+          "curveMin": null
+        },
+        "widthOverTrailMultiplier": 0.3,
+        "sizeAffectsWidth": false,
+        "ribbonCount": 1,
+        "worldSpace": false,
+        "textureMode": 0,
+        "mode": 0,
+        "dieWithParticles": true,
+        "colorOverLifetime": {
+          "mode": 0,
+          "color": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 1.0},
+          "colorMin": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 1.0},
+          "colorMax": {"r": 1.0,"g": 1.0,"b": 1.0,"a": 1.0},
+          "gradient": null,
+          "gradientMin": null,
+          "gradientMax": null
+        }
+      }
+    },
+    "ParticleSystemRenderer": {
+      "trailMaterial": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material.",
+      "alignment": 2,
+      "renderMode": 5
+    }
+  },
+  "GameObject|HE_bastion_spinner": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "Spinner": {
+      "m_AutoSpin": true,
+      "m_SpinUpTime": 2,
+      "Speed": 3.0,
+      "m_Speed": 2.0,
+      "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      }
+    }
+  },
+  "ParticleManager.ModuleParticleManager": {
+    "Input": [
+      {
+        "m_system": "/fx_Plasma/ParticleSystem.",
+        "type": "Attach"
+      },
+      {
+        "m_system": "/fx_Lightning/ParticleSystem.",
+        "type": "Anchor"
+      },
+
+    ]
+  },
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWeaponGun.m_ShotCooldown",
+        "ModuleWeaponGun.m_WeaponModule.m_ShotCooldown",
+        "ModuleWeaponGun.m_BurstCooldown",
+        "ModuleWeaponGun.m_WeaponModule.m_RotateSpeed",
+        "FireData.m_MuzzleVelocity",
+        "FireData.m_BulletSprayVariance",
+        "ModuleShieldGenerator.m_EnergyConsumptionPerSec",
+        "ModuleShieldGenerator.m_EnergyConsumedPerDamagePoint",
+        "ModuleShieldGenerator.m_HealingHeartbeatInterval",
+        "ModuleShieldGenerator.m_EnergyConsumedPerPointHealed",
+        "ModuleEnergy.m_OutputPerSecond",
+        "ModuleDamage.m_DamageDetachFragility"
+      ],
+      "m_Strength": [
+        0.5,
+        0.5,
+        0.5,
+        1.25,
+        1.25,
+        0.5,
+        20,
+        0.2,
+        0.5,
+        0.5,
+        0.0,
+        0.0
+      ],
+      "m_AddAfter": [
+        0,0,0,0,0,0,0,0,0,0,0,0
+      ],
+      "m_NeedsToBeAnchored": [
+        true,true,true,true,true,true,true,true,true,true,true,true
+      ]
+    }
+  }
+ 
+}

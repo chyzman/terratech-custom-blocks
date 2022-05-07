@@ -1,0 +1,430 @@
+{
+	"Name": "TAC Energy Precipitator",
+	"Description": "<b>Use with caution.</b> \n\nA small battery and charger for all your tiny fighter-related woes.  As an added bonus somehow it can be charged with the outlet. \n\nIt's a very dense power generator relying on vast compressed amounts of QuantumFlux Particles fused DIRECTLY with unstable Ionic Wrap Foil and highly corrosive Rodius fluids to create a VERY powerful battery that self-recharges from a self-repairing, self repeating oxidation reaction fueled by the atmosphere, resulting in an unstable and conflictive compound that is excessively dangerously volitile in nature that not even an implosion could save it from destroying everything within 4 blocks around it.", //You can make multiple lines with \n
+  //The pointy things are vaguely like the sticks seen at the bottom of the R-13A Cerberus fighter.
+	"ID": 584323, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 113571, //not really worth it compared to the cumbersome Quantumflux Generator.  Only use if you want small power generation.
+	//was 2910x3=8730 before nerf
+	"HP": 1350, //TAC Battery is 450 in 1 block volume - VERY bulky, but is it worth the cost?
+  //The answer is no because the Quantumflux Generator has more health AND is cheaper.  But this is more spammable.  hMMMM...
+	//BF Battery is 250 in 1 block volume
+	//HE Battery is 400 in 1 block volume
+	//GC Battery is 162 in a 1 block volume
+	//GC Battery is 1296 in a 8 block volume
+	//LK Battery is 1000 in a 1 block volume
+	//LK Battery is 2000 in a 2 block volume
+
+  //ALL TAC Fighter parts weigh around 9.0 per physical space consumed.
+  //This reduces spam and the fighter core is perfectly fine with dealing with this weight.
+	"Mass": 18.0, //18 in 3 block volume - fighter parts are  D E N S E
+  //TAC Battery (Waffle) IS 3 in 1 block volume
+	//BF Battery is 2.7 in 1 block volume
+	//HE Battery is 4 in 1 block volume
+	//LK Battery is 10 in 1 block volume
+	
+
+	"IconName": "PowerEngines.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 43, 44, 45, 48, 48, 49, 50, 50, 50, 50, 54, 54, 56, 56, 56, 56, 58, 58, 58, 58, 59, 61, 63, 63, 63, 63, 65, 66, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //"That's an awful lot of rodius you have there"
+  //no this isn't a nuclear bomb now go away
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Bottom
+        { "x": 1, "y": -0.5, "z": 0 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "HEBattery(211)",
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_HE_Battery_211_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "FighterGeneratorBase.obj",
+	    "MeshTextureName": null,
+		  "ColliderMeshName" : "FighterGeneratorBase.obj",
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "m_TAC_LED_5.obj",
+	    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	    // "MeshTextureName": "CirculatedBattery.png",
+      // "MeshMaterialName": "HE_Main"
+		},
+    //Cylinders
+    {
+      "SubOverrideName":"Cylinder_1/CylinderRotatorBase/CylinderRotatorHead/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterGeneratorPiston.obj",
+      "MeshTextureName": null,
+      "ColliderMeshName" : "FighterGeneratorPiston.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName":"Cylinder_2/CylinderRotatorBase/CylinderRotatorHead/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterGeneratorPiston.obj",
+      "MeshTextureName": null,
+      "ColliderMeshName" : "FighterGeneratorPiston.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName":"Cylinder_3/CylinderRotatorBase/CylinderRotatorHead/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterGeneratorPiston.obj",
+      "MeshTextureName": null,
+      "ColliderMeshName" : "FighterGeneratorPiston.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName":"Cylinder_4/CylinderRotatorBase/CylinderRotatorHead/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterGeneratorPiston.obj",
+      "MeshTextureName": null,
+      "ColliderMeshName" : "FighterGeneratorPiston.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    //Gear greeble
+    {
+      "SubOverrideName":"m_GearGreeble",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGreebleGear.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+
+  ],
+	
+	"JSONBLOCK": {
+		"GameObject|m_HE_Battery_211_Base":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":1, "y":-0.5, "z":0 } 
+      },
+    },
+		"GameObject|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.01, "y":0.01, "z":0.01 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":5, "y":0, "z":0 } 
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90, "w":1 }
+      },
+		},
+    "GameObject|Cylinder_1":{//the cylinder that goes up and down
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":0.0001 },//constrain side-to-side movement
+        "localEulerAngles": { "x":0, "y":0, "z":60 },
+        "localPosition": { "x":0.75, "y":-0.225, "z":-0.25 } 
+      },
+      "GameObject|CylinderRotatorBase":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {//Moving part
+          "m_Speed": 0.25,
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 1.0,//
+          "m_CurrentAngle": 0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSoundOriginalPitch": 1.0,
+        },
+        "GameObject|CylinderRotatorHead":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":10000 },//rescaling to normal size
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0.12, "z":0 } 
+          },
+          "Spinner": {//Moving part
+            "m_Speed": -0.25,
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,//
+            "m_CurrentAngle": 0,
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSoundOriginalPitch": 1.0,
+          },
+          "Reference|GSO_Block_111/GSO_Block_111": {//GSO Block selection collider
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-0.04, "z":0 } 
+            },
+          },
+        }
+      }
+    },
+    "GameObject|Cylinder_2":{//the cylinder that goes up and down
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":0.0001 },//constrain side-to-side movement
+        "localEulerAngles": { "x":0, "y":0, "z":300 },
+        "localPosition": { "x":1.25, "y":-0.225, "z":-0.25 } 
+      },
+      "GameObject|CylinderRotatorBase":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {//Moving part
+          "m_Speed": 0.25,
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 1.0,//
+          "m_CurrentAngle": 0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSoundOriginalPitch": 1.0,
+        },
+        "GameObject|CylinderRotatorHead":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":10000 },//rescaling to normal size
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-0.12, "z":0 } 
+          },
+          "Spinner": {//Moving part
+            "m_Speed": -0.25,
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,//
+            "m_CurrentAngle": 0,
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSoundOriginalPitch": 1.0,
+          },
+          "Reference|GSO_Block_111/GSO_Block_111": {//GSO Block selection collider
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-0.04, "z":0 } 
+            },
+          },
+        }
+      }
+    },
+
+    "GameObject|Cylinder_3":{//the cylinder that goes up and down
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":0.0001 },//constrain side-to-side movement
+        "localEulerAngles": { "x":0, "y":0, "z":60 },
+        "localPosition": { "x":0.75, "y":-0.225, "z":0.25 } 
+      },
+      "GameObject|CylinderRotatorBase":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {//Moving part
+          "m_Speed": 0.25,
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 1.0,//
+          "m_CurrentAngle": 0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSoundOriginalPitch": 1.0,
+        },
+        "GameObject|CylinderRotatorHead":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":10000 },//rescaling to normal size
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-0.12, "z":0 } 
+          },
+          "Spinner": {//Moving part
+            "m_Speed": -0.25,
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,//
+            "m_CurrentAngle": 0,
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSoundOriginalPitch": 1.0,
+          },
+          "Reference|GSO_Block_111/GSO_Block_111": {//GSO Block selection collider
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-0.04, "z":0 } 
+            },
+          },
+        }
+      }
+    },
+    "GameObject|Cylinder_4":{//the cylinder that goes up and down
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":0.0001 },//constrain side-to-side movement
+        "localEulerAngles": { "x":0, "y":0, "z":300 },
+        "localPosition": { "x":1.25, "y":-0.225, "z":0.25 } 
+      },
+      "GameObject|CylinderRotatorBase":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {//Moving part
+          "m_Speed": 0.25,
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 1.0,//
+          "m_CurrentAngle": 0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSoundOriginalPitch": 1.0,
+        },
+        "GameObject|CylinderRotatorHead":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":10000 },//rescaling to normal size
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0.12, "z":0 } 
+          },
+          "Spinner": {//Moving part
+            "m_Speed": -0.25,
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,//
+            "m_CurrentAngle": 0,
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSoundOriginalPitch": 1.0,
+          },
+          "Reference|GSO_Block_111/GSO_Block_111": {//GSO Block selection collider
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-0.04, "z":0 } 
+            },
+          },
+        }
+      }
+    },
+
+    //Gear greeble
+
+    "GameObject|GearGreebleSpinner":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+        "localPosition": { "x":1, "y":-0.24, "z":0.4 } 
+      },
+      "Spinner": {//Moving part
+        "m_Speed": 1.5,
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 1.0,//
+        "m_CurrentAngle": 0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSoundOriginalPitch": 1.0,
+        "m_RotationAxis": {
+          "axis": 2
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+      },
+      "GameObject|m_GearGreeble":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.4, "y":0.4, "z":0.35 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+      },
+    },
+
+
+		//Coding
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical 
+      // "m_DamageableType": 6, //What damage multiplier this runs by
+      //Rock because ROCK HARD
+      // "m_HealingOrigin": null,
+      //"m_AoEDamageBlockPercent": 0.15,//Explosions are not as powerful against this - doesn't work, quoted out...
+      //
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false,
+    },
+    "ModuleEnergyStore": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+    	"m_Capacity": 1775 //TAC batteries have 1775 m_Capacity in a volume of 1 block-This one is bad becaus it's a compac generator
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+
+    //Bonus generation:
+    "ModuleEnergy": {//Infinity Generator
+      // "m_OutputEnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+      "m_Priority": -100,
+      "m_OutputPerSecond": 75,//125- generation of Quantumflux, INSANELY powerful for it's size
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": 0,//no noise.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 0.0,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : 0, //What damage modifier the explosion does
+          "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius": 5.0, //PWAWOOOSH!
+          "m_EffectRadiusMaxStrength": 4.0, 
+          "m_MaxDamageStrength": 219001, //yes, instant death
+          "m_MaxImpulseStrength": 1000 //How hard to push things, explosion force
+        },
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : " IntroExplosionHuge",
+        },
+        "GameObject|NoiseStacker1": {
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " IntroExplosionHuge",
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.0, "z":0.0 } 
+          },
+        },
+      },
+    },
+	}
+}
+
+
+
+

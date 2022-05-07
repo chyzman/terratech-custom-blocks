@@ -1,0 +1,334 @@
+{
+  "Name": "DarkLight Arcis Dual Cannon",
+  "Description": "Being one of the few guns that wasn't directly from borrowed technology, this cannon fires plasma shells that explode in a small but still dangerous area, making them quite powerful for its size and refuses harder from coming off, but has a long reload and nearly cannot turn horizontally. It's also in a slope, so use that as you please.\n\n\nThe original version of the Arcis Dual Cannon was a tri-barreled Explosive gun. However, after initial testing of Plasma weapons, they were found to be better in every case except for against the energy barriers they call 'Shields'. <b>But don't worry, we've made ways of raining down bullets to shatter those.</b>\n\n<color=#c8c8c8ff>Also, it looks like its making toxic fumes.</color>\n<color=purple>That is just the explosion.</color>",
+                 //You can make multiple lines with \n
+  "ID": 2000060, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 4, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 1
+  "Price": 10965, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 1300, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 6.0,
+  "CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.4},
+
+  "Fragility": 0.8, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "43, 43, 44, 44, 45, 45, 45, 46, 46, 50,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLArcis.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "Cells": [ //Units in the grid space to be occupied
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 }
+  ],
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": 0,    "y": 0,    "z": -0.5 },
+    { "x": 0,    "y": -0.5, "z": 1    },
+    { "x": -0.5, "y": 0,    "z": 0    },
+    { "x": 0.5,  "y": 0,    "z": 0    },
+    { "x": 0,    "y": -0.5, "z": 0    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_Cannon_Turret_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  */
+  /*
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Scale all the subobjects of the block prefab by the origin
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+
+  "SubObjects": [
+    //Like the main bit of BLOCK
+    {
+     "SubOverrideName": "GSO_Cannon_111_Base", //The base of the block itself, because of course doing things the simple way is not possible
+     "Meshname": "DLArcisBase.obj", //The .obj its being replaced with, in this case being like most of the block
+     "MeshTextureName": "DarkLight1.png", 
+     "MeshGlossTextureName": "DarkLight2.png", 
+     "MeshEmissionTextureName": "DarkLight3.png",
+     "ColliderMeshName": "DLArcisBaseCollider.obj", //The collider, yes you can slap on these in subobjects
+   /*  "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }, */ //Free up this section by removing the /* and */, goes for the other sections with these as well, they act odd sometimes tho.
+      "SubPosition": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+     }
+   },
+  //The base of the cannon, but sorta functional
+   {
+    "SubOverrideName": "GSO_Cannon_111_Mount", //The part of the cannon that doesn't try to launch back into NaNLand
+   /*  "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }, */ //Free up this section by removing the /* and */, goes for the other sections with these as well, they act odd sometimes tho.
+     "SubPosition": {
+      "x": 0,
+      "y": 0.46,
+      "z": 0.55
+    }
+  },
+  //Top Barrel
+  {
+    "SubOverrideName": "GSO_Cannon_111_Barrel", //The part of the cannon that does try to launch back into NaNLand
+    "Meshname": "DLArcisCannon.obj", //The .obj its being replaced with
+    "MeshTextureName": "DarkLight1.png", 
+    "MeshGlossTextureName": "DarkLight2.png", 
+    "MeshEmissionTextureName": "DarkLight3.png",
+    "ColliderMeshName": "DLArcisCannonCollider.obj", //The collider, yes you can slap on these in subobjects
+   /*  "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }, */ //Free up this section by removing the /* and */, goes for the other sections with these as well, they act odd sometimes tho.
+     "SubPosition": {
+      "x": 0,
+      "y": -0.05,
+      "z": 0.9
+    }
+  },
+  {"SubOverrideName": "_gimbalBase",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  //The base for the dual cannons
+  {"SubOverrideName": "_gimbalElev",
+    "Meshname": "DLArcisCannonBase.obj", //The .obj its being replaced with
+    "MeshTextureName": "DarkLight1.png", 
+    "MeshGlossTextureName": "DarkLight2.png", 
+    "MeshEmissionTextureName": "DarkLight3.png",
+    "ColliderMeshName": "DLArcisCannonBaseCollider.obj", //The collider, yes you can slap on these in subobjects
+    "SubPosition": {
+      "x": 0,
+      "y": 0.46,
+      "z": 0.55
+    }
+  },
+  {"SubOverrideName": "_barrel",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  //Bottom Barrel
+  {"SubOverrideName": "_barrel_copy/_recoiler/GSO_Cannon_111_Barrel",
+    "Meshname": "DLArcisCannon.obj", //Not having this here makes the dupe cannon uh not work
+    "MeshTextureName": "DarkLight1.png", 
+    "MeshGlossTextureName": "DarkLight2.png", 
+    "MeshEmissionTextureName": "DarkLight3.png",
+    "ColliderMeshName": "DLArcisCannonCollider.obj", //The collider, yes you can slap on these in subobjects
+    "SubPosition": {
+      "x": 0,
+      "y": -0.47,
+      "z": 0.9
+    }
+  }
+  ],
+
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+  //Alot of the comments down here are thanks to stuff being copy-pasted from the 5 Pound Cannon
+
+  "JSONBLOCK": { //h e  l   p
+    "GameObject|_gimbalBase": { //GameObject child, a reason for the above to vibe there
+      "GimbalAimer": { //Horizontal Aiming, it does NOT move the entire block if you specify it correctly.
+      	"rotationLimits": [-7, 7] //[-Left,+Right](Degrees) (most of this section was probably directly taken right from the 5-pounder's .json), The Arcis cannot move horizontally at all
+      },
+      "GameObject|_gimbalElev": { //GameObject in child, childception
+        "GimbalAimer": { //Vertical Aiming
+	        "rotationLimits": [-45, 0] //[-Up,+Down](Degrees)
+	      },
+        "GameObject|_barrel": { //Positions were done in SubObjects
+	        // "GameObject|_recoiler": {
+	        //   "GameObject|GSO_Cannon_111_Barrel": {
+	        //   }
+	        // },
+	        "GameObject|_smoke": { 
+	          "UnityEngine.Transform": { //Offsetting the smoke effect, the part where the black smonk comes from the barrel
+	            "localPosition": { "x":0.0225, "y":0.0, "z":1.25 }
+	          }
+	        },
+	        "GameObject|_muzzleFlash": {
+	          "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger
+	            "localScale": { "x":0.75, "y":0.75, "z":1.0 },
+	            "localPosition": { "x":0.0225, "y":0.0, "z":1.2 }
+	          }
+	        },
+	        "GameObject|_bulletSpawn": {
+	          "UnityEngine.Transform": { //Offsetting the bullet spawn
+	            "localPosition": { "x":0.0225, "y":0.0, "z":1.3 }
+	          }
+	        }
+	      },
+	      "Duplicate|_barrel": {
+	        "UnityEngine.Transform": { //
+            "localPosition": { "x":0, "y":0.12, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },
+          "GameObject|_smoke": { 
+	          "UnityEngine.Transform": { //Offsetting the smoke effect, the part where the black smonk comes from the barrel
+	            "localPosition": { "x":0.0225, "y":-0.3, "z":1.25 }
+	          }
+	        },
+	        "GameObject|_muzzleFlash": {
+	          "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger
+	            "localScale": { "x":0.75, "y":0.75, "z":1.0 },
+	            "localPosition": { "x":0.0225, "y":-0.3, "z":1.2 }
+	          }
+	        },
+	        "GameObject|_bulletSpawn": {
+	          "UnityEngine.Transform": { //Offsetting the bullet spawn
+	            "localPosition": { "x":0.0225, "y":-0.3, "z":1.3 }
+	          }
+	        }
+	      }
+	    }
+	  }, //GameObject|_gimbalBase
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "HECannonTurret", //Firing noise
+      //Other Firing noise options include "VENCannonRapid"(The old fire sfx), "PoundCannon"(GSO 3-Pound Cannon), "MegatonLongBarrel"(GSO Gigaton Cannon), Got it.
+      "m_RotateSpeed" : 5 //Speedn't
+    },
+    "ModuleWeaponGun": { // Another component
+      "m_FireControlMode": "0", 
+      "m_CooldownVariancePct": 0,
+      // 0: Sequence Fire, one cannon fires at a time
+        // 1: Burst Fire, all cannons fire at once
+      //"m_BurstShotCount" : 1, //Number of shots before the gun "overheats"
+      //"m_BurstCooldown" : 1.0, //Seconds between bursts.
+       //Burst Shot setup end
+      
+      "m_ShotCooldown" : 4.0, //1 second, 60 shots per minute
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": { //Component, but with a deadly catch i guess
+      "m_MuzzleVelocity": 35, //Bullet speed, fast or FAST, or it can be extremely sluggish
+      "m_BulletSprayVariance": 0.05, //Bullet inverse-accuracy
+      "m_KickbackStrength": 45, // Would you like to become a plane? How hard the gun yeets you back
+      "m_BulletCasingPrefab": null,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":1.5, "y":1.5, "z":1.8 }},  // Size of Bullet    
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Plasma",
+          "m_Damage": 500
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Cannon", //Makes for more intense hit noises
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Plasma", //What damage modifier the explosion does
+              "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX
+              "m_EffectRadius": 3, //Yes let us clear the entire amazon forest
+              "m_EffectRadiusMaxStrength": 1.5, //Max Radius before the effect deals less damage outwards
+              "m_MaxDamageStrength": 400, //
+              "m_MaxImpulseStrength": 10 //How hard to push things, explosion force
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "lengthScale": 3
+            },
+            "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.4,
+                      "g": 0.1,
+                      "b": 0.8,
+                      "a": 0.75
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            }, //Explosion Bright
+            "GameObject|ExplosionFlash": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.4,
+                      "g": 0.1,
+                      "b": 0.8,
+                      "a": 1.0
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            }, //Explosion Flash
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.7,
+                      "g": 0.0,
+                      "b": 0.8,
+                      "a": 1.0
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            } //Explosion Smonk
+          } //Explosion
+        } //Projectile
+      } //m_Bullet Prefab
+    } //FireData
+  } //The entire JSONBLOCK
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

@@ -1,0 +1,91 @@
+{
+  "Name": "Old Star Spherical Gyro",
+  "Description": "Now this is how the Old Star do. Using some spare metal framing the design team put multiple gyros inside to help top heavy Old Star Techs from toppling over. Can even help with help any tech that catches air to ensure they land upright.",
+  "ID": 300098,
+  "Faction": 4,
+  "Grade": 2,
+  "Price": 2319, //GSO's is 4326
+  "HP": 1500,
+  "Mass": 8,
+  "Category": 5,
+  "IconName": "OS_Gyro_Icon.png",
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 53, 53, 53, 53, 54, 54, 57, 57, 57, 57, 60",
+  "BlockExtents": 
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  "APsOnlyAtBottom": false,
+  "Fragility": 0,
+  "DamageableType": 0,
+  "EmissionMode": 2,
+  "GamePrefabReference": "GC_Gyro_AllAxis_Active_222",
+  "KeepReferenceRenderers": true, 
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, 
+
+  "SubObjects": [ 
+    {
+     "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_Gyro_Base.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName":"OST2.png",
+      "MeshEmissionTextureName":"OST3.png"
+    },
+    {
+     "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Ring_A",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_Gyro_1.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName":"OST2.png",
+      "MeshEmissionTextureName":"OST3.png",
+      "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+    },
+    {
+      "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Ring_B",
+      "MeshName": "OS_Gyro_2.obj", 
+      "ColliderMeshName": "OS_Gyro_2.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName":"OST2.png",
+      "MeshEmissionTextureName":"OST3.png",
+      "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+     },
+     {
+      "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Sphere",
+      "MeshName": "OS_Gyro_4.obj", 
+      "ColliderMeshName": "OS_Gyro_4.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName":"OST2.png",
+      "MeshEmissionTextureName":"OST3.png",
+      "SubPosition": { "x": -0.5, "y": 0.5, "z": 0.5}
+     }
+  ],
+  "JSONBLOCK": {
+    "GameObject|CentreOfMass": {
+         "UnityEngine.Transform": { 
+           "localPosition": { "x":0.5, "y":0.5, "z":0.5 } 
+         }
+       },
+  "ModuleGyro": {
+    "m_TrimPitchMax": 0.0,
+    "m_TrimAdjustSpeed": 0.0,
+    "m_UseActive": 1,
+    "m_ActiveSpeed": 365.0,
+    "m_ActiveStability": 0.01,
+    "m_RotationAnimSpeed": 4.0,
+    "m_RotationMinSpeed": 15.0,
+    "m_RotationMaxSpeed": 350.0,
+    "m_Trim": 0.0,
+    "m_HasTurnInput": false,
+    "m_HasDriveInput": false,
+    "m_ControlTrim": 0.0,
+    "m_ControlTrimTarget": 0.0,
+    "Trim": 0.0
+   }
+  }
+}

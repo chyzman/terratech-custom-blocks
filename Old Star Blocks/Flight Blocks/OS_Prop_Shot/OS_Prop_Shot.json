@@ -1,0 +1,363 @@
+{
+  "Name": "Old Star 'DandeLion' Engine",
+  "Description": "Now this is new to Old Star.The DandeLion Engine is a battle ready propeller with a rapid fire rifle mounted dead center in the nose of it. besideds having a gun, the DandeLion can boast supperior thrust to both the Horizon and Dawnstar by having equal forward and reverse thrust in both directions. As for its rifle its can fire long range shots at a very limmited fire spread  so you will need to point it in thier general location for it to hit.",
+  "ID": 300129,
+
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 3,
+  "Price": 28143,
+  "HP": 1500,
+  "Mass": 9,
+  "Recipe": "47, 52, 52, 57, 62, 66, 66",
+  "IconName": "OS_DandeLion_Icon.png",
+  "MeshName": null,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "EmissionMode": 2,
+  "ColliderMeshName": null,
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "CellMap": [
+    [
+      "    ",
+      " TT ",
+      " TT ",
+      "    "
+    ],
+
+    [
+      "TTTT",
+      "TTTT",
+      "TTTT",
+      "TTTT"
+    ]
+  ],
+   
+  "APs": [
+    {
+      "x": 2,
+      "y": 2,
+      "z": -0.5
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    }
+  ],
+
+  "GamePrefabReference": "VEN_MGun_Forward_113",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "PrefabPosition": {
+    "x": 1.5,
+    "y": 1.5,
+    "z": 0.88
+  },
+
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_Mgun_Forward_113_Base",
+      "MeshName": "OS_PS_Base.obj",
+      "ColliderMeshName": "OS_PS_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_OS_PS_Prop",
+      "MeshName": "OS_PS_Prop.obj",
+      "ColliderMeshName": "OS_PS_Prop.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_Mgun_Forward_113_Barrel",
+      "MeshName": "OS_PS_Barrel.obj",
+      "ColliderMeshName": "OS_PS_Barrel.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_barrel"
+    },
+    {
+      "SubOverrideName": "_spinner",
+      "SubPosition": {
+        "x": 1.5,
+        "y": 1.5,
+        "z": 0.89
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 100.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.1,
+      "m_FireSFXType": 66
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.1,
+      "m_CooldownVariancePct": 0.05,
+      "m_FireControlMode": 0
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 160.0,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.01,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.3,
+      "m_CasingEjectSpin": 50.0,
+      "m_KickbackStrength": 5.0
+    },
+    "Reference|HE_GyroProp_313/ModuleBooster.": {
+      "m_ModuleControlled": 4,
+      "m_ModuleType": 0,
+      "m_UseBoostControls": true,
+      "m_UseDriveControls": true,
+      "m_IsRocketBooster": false,
+      "m_EnablesThrottleControl": false,
+      "m_ConsumesFuel": false,
+      "m_IsFiringBoost": false,
+      "m_IsFiringSteer": false
+    },
+    "Reference|HE_GyroProp_313/_fanJet": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 1.0
+        }
+      },
+      "FanJet": {
+        "force": 5550.0,
+        "backForce": 5550.0,
+        "spinDelta": 2.4,
+        "spinSpeed": 900.0,
+        "detachedForceFactor": 0.4
+      }
+    },
+    "GameObject|_spinner": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 80.5,
+          "m_AutoSpin": false,
+
+          "m_SpinUpTime": 1.5,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0,
+          "m_CurrentSpeedFraction": 0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": null,
+          "AtFullSpeed": false
+
+        },
+        "GameObject|m_OS_PS_Prop": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+      }
+    },
+    "GameObject|_barrel": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 0.7
+        }
+      },
+      "GameObject|_smoke": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|_recoiler": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GameObject|m_VEN_Mgun_Forward_113_Barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 0.0
+            }
+          }
+        }
+      },
+      "GameObject|_muzzleFlash": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GameObject|_light": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.3
+            }
+          }
+        },
+        "GameObject|_muzzleFlashAnim": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.3
+            }
+          },
+          "GameObject|m_MuzzleFlash_01": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            }
+          }
+        }
+      },
+      "GameObject|_casingSpawn": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    },
+    "GameObject|m_VEN_Mgun_Forward_113_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 0.0
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GameObject|_bulletSpawn": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.7
+            }
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            10.0,
+            -10.0
+          ]
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          10.0,
+          -10.0
+        ]
+      }
+    }
+  }
+}

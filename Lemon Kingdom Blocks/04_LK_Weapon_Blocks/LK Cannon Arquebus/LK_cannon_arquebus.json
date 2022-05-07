@@ -1,0 +1,272 @@
+/*
+Description 
+
+Pros:   
+
+Cons:   
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Arquebus R8 Cannon",
+    "Description":          "An aircraft cannon that shoots high-velocity 3-pounder shells in 8 round bursts. Very accurate, but its rounds disintegrate quickly, limiting its range.\n\n\"Iron Peel, Golden Knight; brothers forged in war. Bicker not in my presence - complete this weapon, or you two will nourish the Sacred Groves. Do not waste my time and our people's wealth again.\n - 8th King, Crusade meeting\"",
+
+    "ID": 419097,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 12831,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body:    4 Rugged Fiblar, 1 Plubonic Alloy 
+              Rotor:        1 Cyclone Jet
+              Gun Assembly: 4 Blast Caps, 1 Z4 Explosives
+    */
+    "Recipe" : { "52": 4, "53": 1, "57": 1, "46": 4, "61": 1 },
+      
+    "IconName":            "LK_cannon_arquebus_icon.png",  // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":             null,                           // Name of the block's mesh                                        
+    "MeshColliderName":     null,                           // Name of the block's collider.
+    "NoBoxCollider":        false,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 800,              // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons & Accessory blocks
+                            // 300/cell = Wheels & Prop/Aerial Engines & Electronics
+                            // 100/cell = Fragile Objects (Floor tiles, etc.)
+                            // 750/cell = Rotors (Exclude the propeller blades)
+                            
+    "Mass": 8.0,            // LK Standard Blocks & Prop/Aerial Engines have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons & Batteries have 4 mass per cell
+                            // LK Wheels & Electronics have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock (Floor Tiles must be Rock)
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 1, "y": 1,"z": 4 },
+    "APs": [ { "x": 0, "y": 0.5, "z": 0 } ],
+
+
+    // Advanced Settings
+    "PrefabReference":  "427",                        // 427 HE Repeater Rifle Block ID
+    "KeepRenderers":    true,
+    "KeepColliders":    true,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+
+    
+    "SubObjects":[
+      // Replace the original meshes with new ones
+      {
+          "ObjectName":                   "m_HE_50Cal_112_Base",
+          "MeshName":                     "LK_cannon_arquebus_body.obj",    
+          "ColliderMeshName":             "LK_cannon_arquebus_body_col.obj",
+          "DestroyExistingRenderer":      true,
+          "DestroyExistingColliders":     true,
+          "Position":                     { "x": 0, "y": -0.5, "z": -0.5 },
+          "Rotation":                     { "x": 0, "y": 0, "z": 0 }
+      },
+      {
+          "ObjectName":                   "m_HE_50Cal_112_Barrel",
+          "MeshName":                     "LK_cannon_arquebus_barrel.obj",
+          "ColliderMeshName":             "LK_cannon_arquebus_barrel_col.obj",
+          "DestroyExistingRenderer":      true,
+          "DestroyExistingColliders":     true,
+          "Position":                     { "x": 0, "y": 0, "z": 0 },
+      },
+
+      // Then add the revolver cylinder
+      {
+        "ObjectName":                     "cylinder",
+        "MeshName":                       "LK_cannon_arquebus_cylinder.obj",
+      },
+
+      // Delete the unnecessary objects
+      {
+        "ObjectName":                 "m_HE_50Cal_112_RotatingArm",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+        "ObjectName":                 "m_HE_50Cal_112_Gun",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+
+      // Change the other component's positions
+      {
+        "ObjectName":                 "_spawnBullet",
+        "Position":                   { "x": 0, "y": 0, "z": 2 },
+      }, 
+      {
+        "ObjectName":                 "_muzzleFlash",
+        "Position":                   { "x": 0, "y": 0, "z": 1.8 },
+        "Scale":                      { "x": 2, "y": 2, "z": 2 },
+      }, 
+      {
+        "ObjectName":                 "_spawnCasing",
+        "Position":                   { "x": 0.2, "y": 0.0, "z": -2 },
+        "Rotation":                   { "x": 0, "y": 180, "z": 180 },
+      },  
+      {
+        "ObjectName":                 "_smoke",
+        "Position":                   { "x": 0, "y": 0, "z": 0 },
+      }, 
+  ],
+
+    "Deserializer":{
+      "GameObject|m_HE_50Cal_112_Base": {
+        "GameObject|_gimbalBase": {
+          "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 } },
+
+          "GameObject|_gimbalElev": { 
+            "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.69, "z": 2.1 } },
+            "GameObject|_barrel":{
+              "GameObject|_smoke": {
+                "ParticleSystem": {
+                  "startSize": 0.6,
+                  "duration": 3,
+                  "emissionRate": 200,
+                }
+                },
+                // Duplicate the smoke object that moduleDrill will "take" so the smoke doesn't disappear, then attach the duplicate to CannonBarrel
+                "Duplicate|_smoke":{
+                  "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.2, "z": 1.8 } }
+                },
+                "CannonBarrel": { "particles": [ "_smoke_copy/ParticleSystem." ], }
+
+            }
+          },
+        },
+      },
+
+      "GameObject|cylinder":{ "UnityEngine.Transform": { "localPosition": { "x": 0, "y": -0.1, "z": -0.225 } },
+        "Spinner": {
+          "m_AutoSpin": false,
+          "m_Speed": 1.0,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SpinUpTime": 0.5
+        }
+      },
+      "ModuleDrill":{},   // Add a ModuleDrill to let the cylinder move as the gun is being fired
+
+      //********** Weapon Modules **********//
+      "ModuleWeapon": {
+          "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+          "m_AimType": 0,
+          "m_RotateSpeed": 0.0,                     // Dictates the speed of the gun's rotation whenever it aims at a target.
+          "m_ChangeTargetInteval": 0.5,
+    
+          "m_PreventShootingTowardsFloor": false,
+          "m_DeployOnHasTarget": false,
+          "m_LimitedShootAngle": 90.0,
+    
+          "m_FireSFXType": 62,                      // Dictates the sound used when firing
+                                                    // 62 = HE Monster Mortar
+      },
+
+      //************************************//
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 0.02,                 // The length of pause between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+  
+        "m_BurstShotCount": 8,                  // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                // A non-zero, integer value will dictate the number of shots fired.
+                                                // The pause uses the value in m_BurstCooldown
+  
+        "m_BurstCooldown": 4.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                // This is automatically disabled when m_BurstShotCount is set to 0
+  
+        "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                // Only applies when m_BurstShotCount is NOT set to 0
+  
+        "m_FireControlMode": 0,                 // Dictates how the guns will fire
+                                                //  0 =   The guns will fire one at a time
+                                                //  1 =   All guns will fire at the same time
+  
+  
+        "m_SeekingRounds": false                // Dictates whether the projectiles fired by this weapon will home toward target
+    },
+
+    // Use the GSO 3-Pounder Cannon FireData
+    "Reference|7/FireData.":{
+      "m_MuzzleVelocity":       220.0,        // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength":     400.0,         // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance":  0.00,         // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      
+      "Instantiate|m_BulletPrefab": {
+        "Projectile": {
+          "m_LifeTime": 0.7,                   // The amount of time the bullet/shell exists before it despawns.
+        },
+        
+        "WeaponRound": { 
+          "m_Damage":           350,           // Self-explanatory; dictates the amount of damage
+          
+        },
+        // Then disable bullet drop
+        "Rigidbody":{ "useGravity": false },
+
+        // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+        "LineRenderer": {
+          // The color at the start of the trail
+          "startColor": { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+
+          // The color at the end of the trail
+          "endColor":   { "r": 1.0, "g": 0.5, "b": 0.0, "a": 1.0 }
+        },
+      }
+    },
+
+
+  }
+
+
+
+
+
+}

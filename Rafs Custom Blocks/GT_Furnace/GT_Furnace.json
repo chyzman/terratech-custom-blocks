@@ -1,0 +1,206 @@
+{
+    "Name": "GreenTech Mobile Electro-Furnace",
+    "Description": "A mobile electric furnace with a series of complex fuel processing systems which gets the most out of a single chunk, even if the whole cycle takes a little longer. Comes with a built-in small battery.\nIt exhausts pristine clean fumes, so clean in fact they would be invisible if not for customer complaints about 'not seeing a single puff of cool furnace smoke'; so a black smoke hologram was added to go alongside the fumes.",
+    "ID": 911216, 
+  
+    "Faction": 1, 
+    "Category": 6, 
+    "Grade": 4,
+    "Price": 21930,
+    "HP": 10000,
+    "Mass": 30,
+    "CenterOfMass": {"x": 1.5, "y": 0.5, "z": 0.5},
+  
+    "Fragility": 0,
+    "DamageableType": 0,
+    "Rarity": 0,
+    "EmissionMode": 1,
+    
+    "Recipe": "52, 52, 53, 54, 56, 56, 58, 66",
+      
+    "IconName":"GT_Furnace_Icon.png",
+
+    "BlockExtents":
+    {
+      "x": 4,
+      "y": 2,
+      "z": 2
+    },
+    "APs": [ 
+      { "x": 1, "y": 0.0, "z":  -0.5 },
+      { "x": -0.5, "y": 0, "z": 0 },
+      { "x": 0, "y": 0, "z": -0.5 },
+      { "x": -0.5, "y": 0, "z": 1 },
+      { "x": 0, "y": 0.0, "z":  1.5 },
+      { "x": 1, "y": 0.0, "z":  1.5 },
+      { "x": 2, "y": 0.0, "z":  1.5 },
+      { "x": 2, "y": 0.0, "z":  -0.5 },
+      { "x": 0, "y": -0.5, "z":  0 },
+      { "x": 1, "y": -0.5, "z":  0 },
+      { "x": 0, "y": -0.5, "z":  1 },
+      { "x": 1, "y": -0.5, "z":  1 },
+      { "x": 2, "y": -0.5, "z":  0 },
+      { "x": 3, "y": -0.5, "z":  0 },
+      { "x": 2, "y": -0.5, "z":  1 },
+      { "x": 3, "y": -0.5, "z":  1 }
+    ],
+
+    "GamePrefabReference": "HE_Generator_Mobile_322",
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+  
+    
+    "SubObjects":[
+        {
+            "MeshName":                   "GT_Furnace_Base.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png"
+        },
+        {
+          "MeshName":                   "GT_Furnace_Tubes.obj",
+          "MeshTextureName": "GreenTech 1.png", 
+          "MeshGlossTextureName": "GreenTech 2.png", 
+          "MeshEmissionTextureName": "GreenTech 3.png"
+        },
+        {
+          "SubOverrideName": "Rotor",
+          "MeshName":                   "GT_Furnace_Rotor.obj",
+          "MeshTextureName": "GreenTech 1.png",
+          "MeshGlossTextureName": "GreenTech 2.png", 
+          "MeshEmissionTextureName": "GreenTech 3.png"
+        },
+        {
+          "MeshName": "GT_Furnace_Glass.obj",
+          "MeshMaterialName": "HE_Shield_Edge"
+        },
+        {
+          "MeshName": "GT_Furnace_Glass.obj",
+          "MeshMaterialName": "ObjectHighlight"
+        },
+        {
+          "MeshName": "GT_Furnace_Glass.obj",
+          "MeshMaterialName": "ObjectHighlight"
+        },
+        {
+            "SubOverrideName": "_energyGauge",
+            "MeshName": "GT_Furnace_LEDs.obj"
+        },
+        {
+          "SubOverrideName": "Collider1",
+          "layer": 8
+        },
+        {
+          "SubOverrideName": "Collider2",
+          "layer": 8
+        }
+    ],
+
+    "JSONBLOCK":{
+        "GameObject|HE_MobileGenerator_322": {
+          "GameObject|m_HE_MobileGenerator_322_SpinningPart": {
+            "GameObject|Rotor": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "GameObject|Collider1": {
+          "UnityEngine.BoxCollider": {
+            "center": {
+              "x": 1.35,
+              "y": 0,
+              "z": 0.5
+            },
+            "size": {
+              "x": 3.7,
+              "y": 1,
+              "z": 2
+            }
+          }
+        },
+        "GameObject|Collider2": {
+          "UnityEngine.BoxCollider": {
+            "center": {
+              "x": 1.95,
+              "y": 0.75,
+              "z": 0.5
+            },
+            "size": {
+              "x": 3.1,
+              "y": 1.5,
+              "z": 1.75
+            }
+          }
+        },
+        //Generator
+        "ModuleItemConsume": {   
+          "m_UseRecipeBuildTime": true,
+          "m_DurationMultiplier": 1,
+          "m_EnergyMultiplier": 2.5,
+          "m_NeedsToBeAnchored": false
+        },
+        "ModuleRecipeProvider": {
+          "m_RecipeListNames": [
+            {
+              "name": "gcgeneratorstatic",
+              "inverted": false
+            }
+            /* {
+              "name": "hegeneratorstatic",
+              "inverted": false
+            }, 
+            {
+              "name": "gsogeneratorstatic",
+              "inverted": false
+            },
+           
+            {
+              "name": "gsogeneratormobile",
+              "inverted": false
+            } */
+          ]
+        },
+        "ModuleItemHolderBeam": {
+          "m_BeamBaseHeight": 0.5,
+          "m_HeightIncrementScale": 0.3,
+          "m_BeamStrength": 300
+        },
+        //Battery
+        "Reference|GCBattery(222)/_energyGauge":{
+            "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+            }
+        },
+        
+        "Reference|GCBattery(222)/ModuleEnergyStore.": {
+            "m_EnergyType": 0,
+            "m_Capacity": 2500.0,
+            "m_AcceptRemoteCharge": false
+        }
+    }
+}

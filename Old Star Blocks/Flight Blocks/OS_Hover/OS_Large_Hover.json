@@ -1,0 +1,420 @@
+{
+  "Name": "Old Star Grand Fan",
+  "Description": "Now this is new to Old Star. The design team was curious to see if they could create one of those fancy 'Hovers' that everyone has by strapping a prop to a motor and pointing it downwwards. And somehow IT WORKED!",
+  "ID": 300099, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 3, 
+  "Price": 15948, 
+  "HP": 4800, 
+  "Mass": 30,
+
+  "Recipe":  "45, 45, 45, 52, 54, 57", 
+  "IconName": "OS_Big_Hover_Icon.png", 
+  "EmissionMode": 2,
+  "BlockExtents": 
+  {
+    "x": 4,
+    "y": 2,
+    "z": 4
+  },   
+  "APs": [ 
+    //Top
+    {"x": 0.0,"y": 1.5,"z": 0.0}, {"x": 1.0,"y": 1.5,"z": 0.0}, {"x": 2.0,"y": 1.5,"z": 0.0}, {"x": 3.0,"y": 1.5,"z": 0.0},
+    {"x": 0.0,"y": 1.5,"z": 1.0}, {"x": 1.0,"y": 1.5,"z": 1.0}, {"x": 2.0,"y": 1.5,"z": 1.0}, {"x": 3.0,"y": 1.5,"z": 1.0},
+    {"x": 0.0,"y": 1.5,"z": 2.0}, {"x": 1.0,"y": 1.5,"z": 2.0}, {"x": 2.0,"y": 1.5,"z": 2.0}, {"x": 3.0,"y": 1.5,"z": 2.0},
+    {"x": 0.0,"y": 1.5,"z": 3.0}, {"x": 1.0,"y": 1.5,"z": 3.0}, {"x": 2.0,"y": 1.5,"z": 3.0}, {"x": 3.0,"y": 1.5,"z": 3.0},
+    //Front
+    {"x": 0.0,"y": 1.0,"z": 3.5}, {"x": 1.0,"y": 1.0,"z": 3.5}, {"x": 2.0,"y": 1.0,"z": 3.5}, {"x": 3.0,"y": 1.0,"z": 3.5},
+    //Back
+    {"x": 0.0,"y": 1.0,"z":-0.5}, {"x": 1.0,"y": 1.0,"z":-0.5}, {"x": 2.0,"y": 1.0,"z":-0.5}, {"x": 3.0,"y": 1.0,"z":-0.5},
+    //Left
+    {"x": 3.5,"y": 1.0,"z": 0.0}, {"x": 3.5,"y": 1.0,"z": 1.0}, {"x": 3.5,"y": 1.0,"z": 2.0}, {"x": 3.5,"y": 1.0,"z": 3.0},
+    //Right
+    {"x":-0.5,"y": 1.0,"z": 0.0}, {"x":-0.5,"y": 1.0,"z": 1.0}, {"x":-0.5,"y": 1.0,"z": 2.0}, {"x":-0.5,"y": 1.0,"z": 3.0}
+
+  ],
+  "GamePrefabReference": "HE_Hover_424",
+  "KeepReferenceRenderers": true,
+  
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "SubObjects": [
+      {
+        "SubOverrideName":"m_HE_Hover_424_RotatingPart",
+        "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+      },
+    {
+      "SubOverrideName": "m_HE_Hover_424_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,
+      "MeshName": "OS_Big_Hover_Base.obj",
+	    "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+	  },
+
+    {
+        "SubOverrideName": "m_HE_Hover_424_Jet_A",
+        "DestroyExistingColliders": true,
+        "DestroyExistingRenderer": true,
+        "MakeBoxCollider": false,
+        "MeshName": "OS_Big_Hover_Swivel.obj",
+        "ColliderMeshName": null,
+          "SubPosition": { "x": 0.5, "y": 0.5, "z": 0.5}
+      },
+
+      {
+        "SubOverrideName": "m_HE_Hover_424_Jet_B",
+        "DestroyExistingColliders": true,
+        "DestroyExistingRenderer": true,
+        "MakeBoxCollider": false,
+        "MeshName": "OS_Big_Hover_Swivel.obj",
+        "ColliderMeshName": null,
+          "SubPosition": { "x": 2.5, "y": 0.5, "z": 0.5}
+      },
+
+      {
+        "SubOverrideName": "m_HE_Hover_424_Jet_C",
+        "DestroyExistingColliders": true,
+        "DestroyExistingRenderer": true,
+        "MakeBoxCollider": false,
+        "MeshName": "OS_Big_Hover_Swivel.obj",
+        "ColliderMeshName": null,
+          "SubPosition": { "x": 0.5, "y": 0.5, "z": 2.5}
+      },
+      
+      {
+        "SubOverrideName": "m_HE_Hover_424_Jet_D",
+        "DestroyExistingColliders": true,
+        "DestroyExistingRenderer": true,
+        "MakeBoxCollider": false,
+        "MeshName": "OS_Big_Hover_Swivel.obj",
+        "ColliderMeshName": null,
+          "SubPosition": { "x": 2.5, "y": 0.5, "z": 2.5}
+      },
+
+    {
+     "SubOverrideName": "Hover_Propeller_A",
+     "MeshName": "HoverProp_A.obj",
+     "SubPosition": { "x": 0.0, "y":-0.2, "z": 0.0}
+    },
+    
+    {
+        "SubOverrideName": "Hover_Propeller_B",
+        "MeshName": "HoverProp_B.obj", 
+        "SubPosition": { "x": 0.0, "y":-0.2, "z": 0.0}
+       },
+
+       {
+        "SubOverrideName": "Hover_Propeller_C",
+        "MeshName": "HoverProp_C.obj", 
+        "SubPosition": { "x": 0.0, "y":-0.2, "z": 0.0}
+       },
+
+       {
+        "SubOverrideName": "Hover_Propeller_D",
+        "MeshName": "HoverProp_D.obj", 
+        "SubPosition": { "x": 0.0, "y":-0.2, "z": 0.0}
+       },
+
+       //Prop Spinners
+      
+      {
+       "ObjectName":"_spindle_A",
+        "MeshName" : null,
+        "Position" :{ "x": 0.0, "y":-0.2, "z": 0.0}
+      },
+      {
+        "ObjectName":"_spindle_B",
+         "MeshName" : null,
+         "Position" :{ "x": 0.0, "y":-0.2, "z": 0.0}
+       },
+       {
+        "ObjectName":"_spindle_C",
+         "MeshName" : null,
+         "Position" :{ "x": 0.0, "y":-0.2, "z": 0.0}
+       },
+       {
+        "ObjectName":"_spindle_D",
+         "MeshName" : null,
+         "Position" :{ "x": 0.0, "y":-0.2, "z": 0.0}
+       }
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.5, "y":1.5, "z":1.5 } 
+      }
+    },
+ "GameObject|m_HE_Hover_424_Jet_A": {
+    "GameObject|_spindle_A":{
+        "GameObject|Hover_Propeller_A":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           },
+           "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           }
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+      "GameObject|_hoverJet": {
+        "GameObject|ParticleSystem_Hover": {
+            "UnityEngine.Transform": { 
+                "localPosition": {"x": 0.0, "y":-1.0, "z": 0.0}
+    },
+        "startSize": 0.5,
+        "duration": 1,
+        "maxParticles": 5,
+        "startLifetime": 1.5,
+        "emissionRate": 2.0
+        
+    },
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+    } 
+   }  
+  },
+"GameObject|m_HE_Hover_424_Jet_B": {
+    "GameObject|_spindle_B":{
+        "GameObject|Hover_Propeller_B":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           },
+           "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           }
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+    "GameObject|_hoverJet": {
+        "GameObject|ParticleSystem_Hover": {
+            "UnityEngine.Transform": { 
+                "localPosition": {"x": 0.0, "y":-1.0, "z": 0.0}
+    },
+        "startSize": 0.5,
+        "duration": 1,
+        "maxParticles": 5,
+        "startLifetime": 1.5,
+        "emissionRate": 2.0
+        
+    },
+    
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+    }
+   }
+ },
+
+"GameObject|m_HE_Hover_424_Jet_C": {
+    "GameObject|_spindle_C":{
+        "GameObject|Hover_Propeller_C":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           },
+           "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           }
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+      "GameObject|_hoverJet": {
+        "GameObject|ParticleSystem_Hover": {
+            "UnityEngine.Transform": { 
+                "localPosition": {"x": 0.0, "y":-1.0, "z": 0.0}
+    },
+        "startSize": 0.5,
+        "duration": 1,
+        "maxParticles": 5,
+        "startLifetime": 1.5,
+        "emissionRate": 2.0
+        
+    },
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+}
+}
+},
+"GameObject|m_HE_Hover_424_Jet_D": {
+    "GameObject|_spindle_D":{
+        "GameObject|Hover_Propeller_D":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           },
+           "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           }
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+      "GameObject|_hoverJet": {
+        "GameObject|ParticleSystem_Hover": {
+            "UnityEngine.Transform": { 
+                "localPosition": {"x": 0.0, "y":-1.0, "z": 0.0}
+    },
+        "startSize": 0.5,
+        "duration": 1,
+        "maxParticles": 5,
+        "startLifetime": 1.5,
+        "emissionRate": 2.0
+        
+    },
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+} 
+}  
+}
+}
+}

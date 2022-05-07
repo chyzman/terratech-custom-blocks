@@ -1,0 +1,526 @@
+
+{
+  "Name": "TAC Linear Vacuum Receiver",//Was a collector, changed to receiver to restrict handoff time
+  "Description": "This is a receiver that collects <b>ONLY</b> in the general direction of the nozzle.  Point this in the direction you want to grab things from! \n\n+ Gets a speed boost when paired with a shunter. \n\nThere is no explainable reason why this thing needed this much range.  You can grab a totally random chunk from a mile away, and it'd take a minute to get here.  I guess it's great in conjunction with the chunk tossers, but it's pretty niche when the other collectors do their job all the better. \n\nThe job of converting an obsolete shell of a Bunsen Hover into something actually useful was given to Gorvan, who went further beyond the intended goal.  He took it a bit too seriously though.",
+  
+  //--- Credit to Rafs for the Box Collector findings ----
+  "ID": 584405, 
+
+  "Faction": 5,//
+  "Category": 7,//Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3,
+  "Price": 23631,//9558x3=28674 Fairly expensive
+  "Rarity": 2,
+  "HP": 2750,//Slightly more HP than TAC One Block
+  "Mass": 1.0,//light
+
+  "IconName": "MaxiumSucc.png",
+  "MeshName": null,
+
+  "Recipe":  "53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 60",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 2,
+    "z": 3
+  },
+
+  "APs": [
+    //Main Output APs
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": 1.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 1, "z": 0 },
+    { "x": 1.5, "y": 1, "z": 0 },
+    //Top APs
+    { "x":0, "y":1.5, "z":1 },
+    { "x":1, "y":1.5, "z":1 },
+    //Bottom APs
+    { "x":0, "y":-0.5, "z":1 },
+    { "x":1, "y":-0.5, "z":1 },
+  ],
+
+
+  "GamePrefabReference": "GSO_Tractor_111", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_TractorPad_Mini_B_111",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACCollectorBase.obj",
+      // "ColliderMeshName": "TACCollectorBase.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_Nozzle",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACCollectorNozzle.obj",
+      // "ColliderMeshName": "TACCollectorNozzle.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "p_ChargeParticles",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+
+    // {
+    //   "SubOverrideName": "m_GSO_Refinery_222_Hatch",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingRenderer": true,
+    // }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|m_GSO_TractorPad_Mini_B_111": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1 }
+      },
+    },
+    //Animated Transform bone
+
+    "GameObject|rotFlattener": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":1 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0.9 }
+      },
+      "GameObject|rotator": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "Spinner": {
+          "m_Speed": 2.25,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 0
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 2.0,
+          "m_CurrentAngle": 0,
+          "m_CurrentAutoSpeed": 0,
+          "m_CurrentSpeedFraction": 1.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+        },
+        "GameObject|b_AimBone": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0.05 }
+          },
+        },
+      },
+    },
+
+
+    //Suction Particles
+    "GameObject|p_ChargeParticlesOffset": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0.5, "y":0.5, "z":2.8 }
+      },
+      "GameObject|p_ChargeParticles": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTexture": "EPMCEnergyBall.png",
+            "globalIlluminationFlags": 1,
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          // "alignment": 0,
+          "renderMode": 0,
+          // "sortMode": 0,
+          // "minParticleSize": 0.05,
+          "maxParticleSize": 0.15,
+          "motionVectorGenerationMode": 1,
+        },
+        "UnityEngine.ParticleSystem": {
+          "startSpeed": {
+            "curveMin": -2,
+            "curveMax": -2,
+          }, //How far you want the particles to spread
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 0.05
+              },
+              "playOnAwake": true,
+              "startDelay": 0.0,//Delay
+              "startLifetime": 1.00,
+              "startRotation": 0.0,
+              "playbackSpeed": 1.0,
+              //
+              "ringBufferMode": null,
+              "scalingMode": null,
+              "useUnscaledTime": false,
+              "prewarm": false,
+              // "startRotation": 0.0,
+              // "playbackSpeed": 0.5,
+              //
+              "gravityModifier": 0.0,//No gravity
+              "loop": true, //Charging the beam
+              "startSize": 1.0,
+              "startSpeed": 2.0, //How far you want the particles to spread
+              "emissionRate": 125.0,
+              "emitterVelocityMode": 1,
+              "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+              "maxParticles": 500,
+              // "maxParticles": 0,
+              "useAutoRandomSeed": false,
+              "textureSheetAnimation": null,
+              "subEmitters": {
+                "enabled": false,
+              },
+              "proceduralSimulationSupported": false,
+              "sizeBySpeed": {
+                "enabled": true,
+                "size": {
+                  "m_Mode": 1,
+                  "m_CurveMultiplier": 1.0,
+                  "m_CurveMin": null,
+                  "m_CurveMax": null,
+                  "m_ConstantMin": 1.0,
+                  "m_ConstantMax": 1.0,
+                  "mode": 1,
+                  "curveMultiplier": 1.0,
+                  "curveMin": null,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "constant": 0.0
+                },
+                "sizeMultiplier": 2.0,
+                "xMultiplier": 2.0,
+                "yMultiplier": 2.0,
+                "zMultiplier": 2.0,
+                "separateAxes": false
+              },
+              "customData": {
+                "enabled": false
+              },
+              "velocityOverLifetime": {
+                "enabled": true,
+                "xMultiplier": 0.0,
+                "yMultiplier": 0.0,
+                "zMultiplier": 0.0,
+                "orbitalXMultiplier": 0.0,
+                "orbitalYMultiplier": 0.0,
+                "orbitalZMultiplier": 0.0,
+                "orbitalOffsetXMultiplier": 0.0,
+                "orbitalOffsetYMultiplier": 0.0,
+                "orbitalOffsetZMultiplier": 0.0,
+                "radialMultiplier": 1.0,
+                "speedModifierMultiplier": -2.5,
+                "space": 0
+              },
+              "forceOverLifetime": {
+                "enabled": false,
+              },
+              "externalForces": {
+                "enabled": false,
+              },
+              "noise": {
+                "enabled": false,
+              },
+              "emission": {
+                "type": 0,
+                "rateMultiplier": 100.0,
+                "enabled": true,
+                "rateOverTimeMultiplier": 100.0,
+                "rateOverDistanceMultiplier": 0.0,
+                "burstCount": 0
+              },
+              "shape": {
+                "enabled": true,
+                "shapeType": "ConeVolume",
+                // "meshShapeType": 0,
+                // "meshScale": 1.0,
+                "radius": 1.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "angle": 12.5,
+                "length": 7.5,
+                "arcMode": 0,
+                "randomDirectionAmount": 0.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "randomDirection": false,
+                "randomDirectionAmount": 0.0,
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "GameObject|m_Nozzle": {
+      "FollowTransform": {//follow the extending animator
+        "m_TransformToFollow": "/rotFlattener/rotator/b_AimBone",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1 }
+      },
+    },
+
+    //COLLIDERS
+    "GameObject|c_LoCol": {//Collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":-0.35, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":2, "y":0.3, "z":3 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    "GameObject|c_HiCol": {//Collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":1.35, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":2, "y":0.3, "z":3 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    "GameObject|c_LCol": {//Collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.35, "y":0.5, "z":2 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.3, "y":2, "z":1 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    "GameObject|c_RCol": {//Collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1.35, "y":0.5, "z":2 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.3, "y":2, "z":1 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    "GameObject|c_BacCol": {//Collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.5, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":2, "y":2, "z":1 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+
+
+
+    //Controls the input direction grabber
+    "GameObject|PickUpRadiusForward": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "right": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "up": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+         "forward": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "name": "PickUpRadiusForward"
+       }
+    },
+
+
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.5,//Moderate at handling shotguns
+    },
+    "ModuleItemHolderBeam": { //The beams used for holding the item
+      "m_BeamBaseHeight": 1.5,
+      "m_BeamColumnRadius": 1.0,
+      "m_BeamStrength": 2500.0,
+      "m_HeightIncrementScale": 1.0,
+      // "m_ShowParticlesWhenHeld": true,
+      // "Instantiate|m_BeamQuadPrefab": {
+      //   "UnityEngine.LineRenderer": null,
+      //   // "UnityEngine.Transform": {
+      //   //   "localEulerAngles": {
+      //   //     "x": 0.0,
+      //   //     "y": 90.0,
+      //   //     "z": 0.0
+      //   //   },
+      //   // },
+      // },
+      // "m_IsOmniDirectionalStack": true,
+      "m_SFXGrabbed": 49,
+      // "m_SFXGrabbed": "SCUItemConsumed",
+      "m_UsePhysicsForHeldItems": false,
+      "m_Pickup": null,
+      "m_OverrideDropAfterMinTime": -1.0,
+      "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      // "m_ScaleChanged": false,
+      // "NumStacks": 3
+    },
+    "ModuleItemHolder": { //This is the input port location
+      "m_OverrideBasePositons": [
+        {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.0
+        },
+        // {
+        //   "x": 0.5,
+        //   "y": 0.5,
+        //   "z": 1
+        // }
+      ],
+      "m_OverrideAPConnections": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3,
+          ]
+        }
+      ],
+      "m_StackUpDir": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      },
+      "m_CapacityPerStack": 1,
+      // "m_Flags": 0,
+      // "m_AcceptFlags": 2,
+      // "m_HorizontalBoundsRadius": 1.80277562,
+      // "m_ContentsModificationIndex": 3,
+      // "m_AnonItemTimeStamp": 0,
+      // "NumContents": 0,
+      // "NumStacks": 3,
+      // "IsEmpty": true,
+      // "IsFull": false,
+      // "TotalCapacityForLimiter": 30,
+      // "Acceptance": 2,
+    },
+    // "Reference|GSO_Reciver_111/ModuleItemPickup.": {
+    "ModuleItemPickup": {
+      // "m_SpecificPickupStack": {
+      //   "localPos": {
+      //     "x": 0.5,
+      //     "y": 0.5,
+      //     "z": 1
+      //   },
+      //   "IsValidPos": true
+      // },
+      // "m_HandOffStack": {
+      //   "localPos": {
+      //     "x": 0.5,
+      //     "y": 0.5,
+      //     "z": 0
+      //   },
+      //   "IsValidPos": true
+      // },
+      "m_PushStackIndex": 0,
+      "m_PickupRange": 120.0,// MAXIMUM RANGED
+      "m_PrePickupPeriod": 0.0,//how long before we try to grab another one
+      "m_PickupAfterMinInterval": 5.0,
+      "m_HandoverAfterMinInterval": 10.0,
+      "m_SFXContentionLoop": "BlockMagnetLoop",
+      // "m_SFXPickupItem": 51, // Original
+      "m_SFXPickupItem": "ItemResourceConsumed", // Mute it
+      "m_VisionRefreshInterval": 2.0,//scannnn\
+      "m_PickUpRadiusFwd": "PickUpRadiusForward",
+      "m_PickUpRadiusAngle": 32.5,//Smol
+      // "Instantiate|m_RangeIndicatorPrefab":{}
+    },
+
+    "ModuleEnergy": {//- This does nothing but make noise.
+      "m_Priority": -100,
+      "m_OutputPerSecond": 0,//None.
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": 41,//Same SFX as the Dynamos, the GEOthermal Generator noise. Very fitting.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 3.0,//you can't just expect to start generating power instantly. It has to sync with the Tech first!
+    },
+  }
+}

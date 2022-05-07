@@ -1,0 +1,775 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Speedomatic Tank Track",
+  "Description": "Expensive, high-speed tracks with decent carrying capacity and a large pool of health. \n\nWhen exploring the world, speed is key to get there and back fast, but also armor as well to survive the threats that do manage to successfully hit. \nIt is this that the Speedomatic Treads offer effective traverse speed for their size. \n\nThese treads do not feature favorable carrying capacities for huge vehicles, or make for significant bullet sponges, but do make for great treads for use with smaller, more conventional main battle tanks. \n\n\nDeveloped with the old combat philosophy from the ancients, tanks that are fast and responsive can dodge deadly, potential One-Hit Knock-Out attacks easier. \n\nBecause TAC blocks are lightweight, strong, but expensive, It makes perfect sense to use these with TAC blocks. \n\n\nAfter all, your little AI companions must be able to keep up with you, right?", //You can make multiple lines with \n
+  "ID": 584146, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 73788,//was 42756 //GEO XL treads are 18834
+  "HP": 12500, // Note that the Hawkeye TT12 Big Track has 15000 HP, 2500 more than this-
+  "Mass": 50.0,
+  //was 30.0, nerfed to 50 to better reflect TAC block weights
+  //Volume of 60, this should have been 60 mass but made lighter due to the fact that is is optimised for SPEED
+
+  "IconName": "trolltreads.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  //"Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 49, 49, 49, 49, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57", // Separate chunk names or IDs with a comma. Not case sensitive.
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 47, 47, 49, 49, 49, 49, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 63, 63, 63, 63",
+ //See all them Cyclone Jets? all of them for SPEEDUS on WHEELIUS
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top APs
+    { "x": 0, "y": 2.5, "z": 3 },
+    { "x": 1, "y": 2.5, "z": 3 },
+    { "x": 0, "y": 2.5, "z": 4 },
+    { "x": 1, "y": 2.5, "z": 4 },
+    { "x": 0, "y": 2.5, "z": 5 },
+    { "x": 1, "y": 2.5, "z": 5 },
+    { "x": 0, "y": 2.5, "z": 6 },
+    { "x": 1, "y": 2.5, "z": 6 },
+    //Left APs
+    { "x": -0.5, "y": 1, "z": 3 },
+    { "x": -0.5, "y": 2, "z": 3 },
+    { "x": -0.5, "y": 1, "z": 4 },
+    { "x": -0.5, "y": 2, "z": 4 },
+    { "x": -0.5, "y": 1, "z": 5 },
+    { "x": -0.5, "y": 2, "z": 5 },
+    { "x": -0.5, "y": 1, "z": 6 },
+    { "x": -0.5, "y": 2, "z": 6 },
+    //Right APs
+    { "x": 1.5, "y": 1, "z": 3 },
+    { "x": 1.5, "y": 2, "z": 3 },
+    { "x": 1.5, "y": 1, "z": 4 },
+    { "x": 1.5, "y": 2, "z": 4 },
+    { "x": 1.5, "y": 1, "z": 5 },
+    { "x": 1.5, "y": 2, "z": 5 },
+    { "x": 1.5, "y": 1, "z": 6 },
+    { "x": 1.5, "y": 2, "z": 6 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 3,
+    "z": 10
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "GC_Tracks(238)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,  
+  // "KeepReferenceColliders": true,
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+  "ReferenceOffset": { "x":1.0, "y":2.0, "z":8.0 }, //Shift the subobjects of the block prefab by x, y and z 
+	// "ReferenceOffset": { "x":1.0, "y":2.0, "z":8 }, //Shift the subobjects of the block prefab by x, y and z 
+  "ReferenceScale": { "x": 1.0, "y": 1.0, "z": 1.0 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Collider
+     "SubOverrideName": "aCol",
+     // "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTank.obj",
+      "ColliderMeshName": "TACTorqueTank.obj",
+      // "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Base
+     "SubOverrideName": "m_GC_Tracks_238_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "MakeBoxCollider": false,
+
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Set the TAC Tracks textures
+      "SubOverrideName": "m_GC_Tracks_238_Tracks",         
+      "MeshTextureName": "TAC_TreadTextures.png",
+      // "MeshEmissionTextureName": "TAC_TreadTextures.png", //This DOES line up properly  
+      // "MeshGlossextureName": "TAC_TrackSteel3.png",   //This does not line up properly
+    },
+
+    //Wheel Models
+    { //Wheel 05
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_05",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel 04
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_04",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel 03
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_03",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel 02
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_02",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel 01
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_01",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    //Suspension Models
+    { //Suspension 05
+     "SubOverrideName": "m_Suspension_05",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Suspension 04
+     "SubOverrideName": "m_Suspension_04",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Suspension 03
+     "SubOverrideName": "m_Suspension_03",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Suspension 02
+     "SubOverrideName": "m_Suspension_02",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Suspension 01
+     "SubOverrideName": "m_Suspension_01",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    // Auxillary wheels (side wheels)
+    { //AuxWheels 02
+     "SubOverrideName": "m_TAC_AuxWheel_02",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //AuxWheels 01
+     "SubOverrideName": "m_TAC_AuxWheel_01",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    //Suspensions for Aux Wheels
+    { //AuxWheels 02
+     "SubOverrideName": "m_AuxWheel_Suspension_02",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      // "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //AuxWheels 01
+     "SubOverrideName": "m_AuxWheel_Suspension_01",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTorqueTankTrackSuspension.obj",
+      // "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    //REMOVAL
+    // { //Odd collisions
+    //  "SubOverrideName": "aCol",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Odd collisions
+    //  "SubOverrideName": "_wheel_05/_tireFrame",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Odd collisions
+    //  "SubOverrideName": "_wheel_04/_tireFrame",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Odd collisions
+    //  "SubOverrideName": "_wheel_03/_tireFrame",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Odd collisions
+    //  "SubOverrideName": "_wheel_02/_tireFrame",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Odd collisions
+    //  "SubOverrideName": "_wheel_01/_tireFrame",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MakeBoxCollider": false, 
+    // },
+    // { //Tracks Model
+    //  "SubOverrideName": " m_GC_Tracks_238_Tracks",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TAC_MegaTank_Track_Treads.obj",
+    //   "ColliderMeshName": null,
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main", 
+    // },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    // "GameObject|aCol": null,
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":1.0, "z":4.5 }
+      },
+      // "UnityEngine.BoxCollider": {
+      //   // "enabled": false,
+      //   "center": {
+      //     "x": 0,
+      //     "y": 0,
+      //     "z": 0
+      //   },
+      //   "extents": {
+      //     "x": 1.0,
+      //     "y": 1.0,
+      //     "z": 4.5
+      //   }
+      // }
+    },
+
+    //Target bones for the Aux wheels
+    "GameObject|b_Aux_02": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":1, "z":8.8 }
+      },
+    },
+    "GameObject|b_Aux_01": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":1, "z":0.2 }
+      },
+    },
+    //SUSPENSIONS FOR the auxwheels
+    "GameObject|m_AuxWheel_Suspension_02": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":300 },
+        "localScale": { "x":0.4, "y":0.4, "z":1 }, 
+        "localPosition": { "x":0.5, "y":1, "z":8.8 }
+      },
+    },
+    "GameObject|m_AuxWheel_Suspension_01": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":60 },
+        "localScale": { "x":0.4, "y":0.4, "z":1 }, 
+        "localPosition": { "x":0.5, "y":1, "z":0.2 }
+      },
+    },
+
+
+    //ACTUAL, GENUINE WHEEEEEEELS
+    "GameObject|_wheel_05": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":0, "z":7.5 }
+      },
+      "GameObject|_tireFrame": {
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            "radius": 0.435 //0.29 
+          }
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_05": { //model of wheel
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":0.9, "z":0.9 }
+        },
+        // "CapsuleCollider": {
+        //   "radius": 0.25,
+        //   "height": 0.25,
+        //   "direction": 0
+        // }
+      }
+    },
+    "GameObject|_wheel_04": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":0, "z":6.0 }
+      },
+      "GameObject|_tireFrame": {
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            "radius": 0.435 //0.29
+          }
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_04": { //model of wheel
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":0.9, "z":0.9 }
+        },
+        // "CapsuleCollider": {
+        //   "radius": 0.25,
+        //   "height": 0.25,
+        //   "direction": 0
+        // }
+      }
+    },
+    "GameObject|_wheel_03": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":0, "z":4.5 }
+      },
+      "GameObject|_tireFrame": {
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            "radius": 0.435 //0.29
+          }
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_03": { //model of wheel
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":0.9, "z":0.9 }
+        },
+        // "CapsuleCollider": {
+        //   "radius": 0.25,
+        //   "height": 0.25,
+        //   "direction": 0
+        // }
+      }
+    },
+    "GameObject|_wheel_02": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":0, "z":3.0 }
+      },
+      "GameObject|_tireFrame": {
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            "radius": 0.435 //0.29
+          }
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_02": { //model of wheel
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":0.9, "z":0.9 }
+        },
+        // "CapsuleCollider": {
+        //   "radius": 0.25,
+        //   "height": 0.25,
+        //   "direction": 0
+        // }
+      }
+    },
+    "GameObject|_wheel_01": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.5, "y":0, "z":1.5 }
+      },
+      "GameObject|_tireFrame": {
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            "radius": 0.435 //0.29
+          }
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_01": { //model of wheel
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":0.9, "z":0.9 }
+        },
+        // "CapsuleCollider": {
+        //   "radius": 0.25,
+        //   "height": 0.25,
+        //   "direction": 0
+        // }
+
+        //We house the other aux wheels in here because this one also controls the track's belt animation
+        "GameObject|m_TAC_AuxWheel_02": { //model of wheel
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":0.5, "z":0.5 }
+          },
+          "FollowTransform": {//snap to the b_Aux bones
+            "m_TransformToFollow": "/b_Aux_02",
+            "m_FollowOrientation": false,
+          },
+        },
+        "GameObject|m_TAC_AuxWheel_01": { //model of wheel
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":0.5, "z":0.5 }
+          },
+          "FollowTransform": {//snap to the b_Aux bones
+            "m_TransformToFollow": "/b_Aux_01",
+            "m_FollowOrientation": false,
+          },
+        },
+      }
+    },
+    "GameObject|m_GC_Tracks_238_Body": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.9, "y":2, "z":9 }
+      },
+      "GameObject|m_GC_Tracks_238_Tracks": { //Tracks- how it is formed
+        "UnityEngine.Transform": {
+          //"localEulerAngles": { "x":0, "y":270, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }, 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "TankTrack": {
+          // "trackSpeed": 0.005,
+          // "wheelsModule": {},//Literal copy of ModuleWheel below is in here
+          // "wheelRotation": 73552.87,
+          // "trackOffset": 367.7643
+        }
+      },
+      "GameObject|b_Wheel_00": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.8, "y":1, "z":1.25 }, 
+          "localPosition": { "x":0, "y":0, "z":-0.125 }
+        },
+        "GameObject|b_Wheel_05": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.25, "z":1.0 }, 
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_Suspension_05": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localScale": { "x":0.8, "y":0.8, "z":1.25 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+        },
+        "GameObject|b_Wheel_04": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.25, "z":1.0 }, 
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_Suspension_04": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localScale": { "x":0.8, "y":0.8, "z":1.25 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+        },
+        "GameObject|b_Wheel_03": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.25, "z":1.0 }, 
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_Suspension_03": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localScale": { "x":0.8, "y":0.8, "z":1.25 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+        },
+        "GameObject|b_Wheel_02": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.25, "z":1.0 }, 
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_Suspension_02": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localScale": { "x":0.8, "y":0.8, "z":1.25 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+        },
+        "GameObject|b_Wheel_01": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.25, "z":1.0 }, 
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_Suspension_01": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localScale": { "x":0.8, "y":0.8, "z":1.25 },
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+        }
+      }
+    },// Back to main layer
+      //The madness starts here
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        // "torqueCurveMaxTorque": 57500.0,//57500.0      was 70000.0 - Weak but FAST
+        "torqueCurveMaxTorque": 150000.0,//57500.0      was 70000.0 - Weak but FAST
+        // "torqueCurveMaxRpm": 500.0, //GC speed 340.0
+        "torqueCurveMaxRpm": 475.0, //GC speed 340.0
+        // "torqueCurveDrive": {
+        //   // "m_Ptr": {
+        //   //   "m_value": {}
+        //   // },
+        //   //"keys": [],
+        //   "length": 3,
+        //   "preWrapMode": 8,
+        //   "postWrapMode": 8
+        // },
+        "passiveBrakeMaxTorque": 15000.0, //30000.0
+        "reverseBrakeMaxRpm": 250.0, //65.0
+        "basicFrictionTorque": 1000.0, //200.0
+        // "fullCompressFrictionTorque": 850.0 //450.0
+        "fullCompressFrictionTorque": 45000.0, //450.0
+      },
+      "m_WheelParams": {
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            // "frictionLong": {
+            //   "m_Ptr": "Depth exceeded!",
+            //   "keys": [],
+            //   "length": 5,
+            //   "preWrapMode": 8,
+            //   "postWrapMode": 8
+            // },
+            // "frictionLat": {
+            //   "m_Ptr": "Depth exceeded!",
+            //   "keys": [],
+            //   "length": 6,
+            //   "preWrapMode": 8,
+            //   "postWrapMode": 8
+            // },
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 5.0,
+            "gripFactorLat": 2.25
+          }
+        },
+        "radius": 0.87, //0.58
+        "thicknessAngular": 33.0, //41.1
+        // "suspensionSpring": 50000.0, //70000.0
+        "suspensionSpring": 17500.0, //70000.0
+        // "suspensionDamper": 1750.0, //500.0
+        "suspensionDamper": 500.0, //500.0
+        "maxSuspensionAcceleration": 12.5,//3.5,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.5, //0.35
+        "steerAngleMax": 0.0,
+        "steerSpeed": 2.0
+      },
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.3,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 1.0,
+      "m_DustMinimumRPM": 20.0,
+      "m_SuspensionWarningWaitTime": 5.0,
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 3,
+      // WheelType
+      // {
+      //   SmoothWheels,
+      //   StandardTreads,
+      //   DeepTreads,
+      //   TankTreads
+      // }
+      "m_AudioType": 4,
+      // WheelTypes
+      // {
+      //   RubberWheel,
+      //   LargeRubberWheel,
+      //   SmallWheel,
+      //   MetalWheel,
+      //   TankTrack,
+      //   VentureWheel,
+      //   HawkeyeWheel
+      // }
+      "m_Enabled": true,
+      "m_Animated": false,
+      // "m_WarningWaitTimer": 0.0171020031,
+      "m_TireTrackWidth": 1.01193237,
+      "m_PrevTrackType": 0,
+      "m_TracksSkidSpeed": 0.1,
+      "m_TracksMaxSkidSpeed": 1.0,
+      "m_TracksMinSpeed": 5.0,
+      "m_TracksMaxSpeed": 20.0,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Built in armor protects from shotguns
+    },
+    // TAC Standard - Shockwave Dissipation Armor (Reinforced)
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.5,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+  }
+}
+
+
+
+
+
+
+

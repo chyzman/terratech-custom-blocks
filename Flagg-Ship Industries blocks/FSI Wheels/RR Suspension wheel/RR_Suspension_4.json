@@ -1,0 +1,284 @@
+{
+  "Name": "Redicule Research Catcher Wheel (Large)",
+  "Description": "Combining holographic technobabble from the boys in the lab with some scrap hover concepts from Better Future, This ''wheel'' is perfect for any explorer on very rough terrain who doesn't want to risk tyre popping. \nThe wheel is hardly powered, has no breaks to speak of, nor can it move very fast. It is capable of handling masses of at least 8 kilotons. \nThis is the Large one, with a max height of 12 blocks.",
+  "ID": 1700243, 
+
+  "Faction": 3,
+  "Category": 3, 
+  "Grade": 1, 
+  "Price": 86193, 
+  "Recipe":  "45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,56, 56, 56, 56, 56, 56, 56, 56, 56, 57, 57, 57, 57" 	
+	
+	
+	
+	
+	
+	,
+  "HP": 3050, 
+  "Mass": 12.5,
+  "CenterOfMass": {"x": 0.5, "y": 1.5, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "IconName": "RR_Suspension_Wheel_Icon4.png", 
+
+  "BlockExtents":{"x": 2,"y": 3, "z": 2}, 
+  
+  "APs": [ 
+    {"x": -0.5, "y": 2, "z": 1},
+	{"x": -0.5, "y": 2, "z": 0},
+	{"x": 1.5, "y": 2, "z": 1},
+	{"x": 1.5, "y": 2, "z": 0},
+	
+	{"x": 0, "y": 2, "z": 1.5},
+	{"x": 0, "y": 2, "z": -0.5},
+	{"x": 1, "y": 2, "z": 1.5},
+	{"x": 1, "y": 2, "z": -0.5},
+	
+	{"x": 0, "y": 2.5, "z": 1},
+	{"x": 0, "y": 2.5, "z": 0},
+	{"x": 1, "y": 2.5, "z": 1},
+	{"x": 1, "y": 2.5, "z": 0},
+  ],
+  
+ "PrefabReference": "GSO_Wheel_222",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": { "x": 1, "y": 5.0, "z": 0.5 },
+  "SubObjects": [ 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_B", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,   
+	  
+	  "SubPosition": { "x":0, "y": -0.275, "z": 2.5 }, 	
+	  "SubRotation": { "x":0, "y": 0, "z": 0 },
+	  
+			"MeshMaterialName": "MAT_BF_SkyAnchor_Beam",
+    },
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_A", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+
+	  "SubPosition": { "x":0, "y": -0.275, "z": 2 }, 	
+	  "SubRotation": { "x":0, "y": 0, "z": 0 },   
+      
+
+			"MeshMaterialName": "MAT_BF_SkyAnchor_Beam",	  
+    }, 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Tyre", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 	
+	  "MeshMaterialName": "MAT_BF_SkyAnchor_Beam",
+                     
+
+      "ColliderMeshName": "RR_Suspension_Wheel.obj",
+      "MeshName": "RR_Suspension_Wheel.obj"
+    },
+    {
+      "OverrideName": "m_GSO_Wheel_222_Base", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,        
+	"MeshMaterialName": "RR_Main",	                 
+      "MeshName": "RR_Suspension_Base.obj",
+      "MakeBoxCollider": true,
+      "SubRotation": { "x":0, "y": 0, "z": 0 },   
+      "SubPosition": { "x":0.5, "y": 1.5, "z": 0.5 }     
+    }, 
+    {
+      "OverrideName": "Suspension_B",
+      "SubPosition": { "x":0.5, "y": 3.5, "z": 1 },
+	  "SubRotation": { "x":0, "y": 0, "z": 0 }, 
+    },
+    {
+      "OverrideName": "Suspension_A",
+      "SubPosition": { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+      "OverrideName": "_wheel",
+      "SubPosition": { "x": 0.5, "y": 1, "z":  0.5}
+    }, 
+    {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 0, "y": -0.1, "z": 0}
+    }
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+  "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 2,
+          "z": 0.5
+         },
+		 "localEulerAngles":{
+		  "x": 90,
+          "y": 0,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 8,
+        "startSpeed": 5.5,
+        "startSize": 1.0,
+        "startLifetime": 2,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0,
+                "value": 0.5,
+              },
+              {
+                "time": 2,
+                "value": 0
+              }
+			 
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 1
+              },
+              {
+                "time": 1.0,
+                "alpha": 0
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 0.0,"g": 0.5,"b": 1.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 0.0,"g": 0,"b": 0.5,},
+                "time": 1
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+	"GameObject|_wheel": {
+		"GameObject|_tireFrame": {
+			"GameObject|_suspensionColliderLower": {
+			  "UnityEngine.Transform": {
+				"localPosition": { "x":0, "y":0, "z":0 },
+				"localScale": { "x":1, "y":-3, "z":1 }
+			  },
+			  /*"UnityEngine.SphereCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.05
+			  }*/
+			}
+		  },
+		  "UnityEngine.SphereCollider": {
+			"center": {
+			  "x": 0.0,
+			  "y": 0.001,
+			  "z": 1.0
+			},
+			"radius": 1.12
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 10,
+		   "torqueCurveMaxRpm": 1,
+		  "passiveBrakeMaxTorque": 1,
+		   "reverseBrakeMaxRpm": 1,
+		   "basicFrictionTorque": 1.0,
+		   "fullCompressFrictionTorque": 1
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 1.0,
+					"gripFactorLat": 1.0
+				}
+			  },
+			"radius": 1.5,
+			"thicknessAngular": 20,
+			"suspensionSpring": 1200000.0,
+			"suspensionDamper": 300.0,
+			"maxSuspensionAcceleration": 50.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 11,
+			"steerAngleMax": 10,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 2.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 2.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

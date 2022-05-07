@@ -1,0 +1,322 @@
+{
+  "Name": "Old Star Wild Tread Right",
+  "Description": "This here is how the Old Star do. The Wild Treads are a solid, tracked unit with good torque and traction to haul what you need. They are not as fast as nor as strong as Heavy Iron's 'Rollers' but they can easly out maneuver them on all surfaces . Best used when both Left and Right units are attached.", //You can make multiple lines with \n
+  "ID": 300074, //A random ID that MUST be unique
+  "Faction": 4, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 9788,
+  "HP": 4500, 
+  "Mass": 35.0,
+  "IconName": "OS_Wild_Tread_R.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 47, 47, 49, 49, 49, 49, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 63, 63, 63, 63",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top APs
+    { "x": 0, "y": 1.5, "z": 1 }, { "x": 0, "y": 1.5, "z": 2 },{ "x": 0, "y": 1.5, "z": 3 },{ "x": 0, "y": 1.5, "z": 4 },
+    { "x": 1, "y": 1.5, "z": 1 }, { "x": 1, "y": 1.5, "z": 2 },{ "x": 1, "y": 1.5, "z": 3 },{ "x": 1, "y": 1.5, "z": 4 },
+    //side
+    { "x":-0.5, "y": 1, "z": 1 },{ "x":-0.5, "y": 1, "z": 2 },{ "x":-0.5, "y": 1, "z": 3 },{ "x":-0.5, "y": 1, "z": 4 }
+  ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 2,
+    "z": 7
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+ // Advanced Settings
+ "PrefabReference":                  "GC_Track_A_422",
+ "KeepRenderers": true,
+ "KeepColliders": false,                    
+ "PrefabPosition":                   { "x": 1, "y": 1, "z": 1 },
+
+ "SubObjects":[
+   // Replace the original meshes with new ones
+   {
+    "ObjectName":                 "m_GC_Tracks_422_Base",
+    "MeshName":                   "OS_Wild_Base.obj",
+    "ColliderMeshName":           "OS_Wild_Base.obj",
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 1, "y": 0, "z": 1 }    
+   },
+   {
+    "ObjectName":                 "m_GC_Tracks_422_Treads",
+    "DestroyExistingRenderer":    false,
+    "DestroyExistingColliders":   false,
+    "Position":                   { "x": 0, "y": 0, "z": 0 },  
+    "Scale":                      {"x": 3, "y": 3, "z": 3}   
+   },
+   {
+     "ObjectName":                 "m_GC_Tracks_422_Wheel_1",
+     "MeshName":                   "OS_Wild_RWheel.obj",
+     "ColliderMeshName":           "OS_Wild_RWheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}        
+   },
+   
+   {
+     "ObjectName":                 "m_GC_Tracks_422_Wheel_2",
+     "MeshName":                   "OS_Wild_RWheel.obj",
+     "ColliderMeshName":           "OS_Wild_RWheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}          
+   },
+
+   {
+     "ObjectName":                 "m_GC_Tracks_422_Wheel_3",
+     "MeshName":                   "OS_Wild_RWheel.obj",
+     "ColliderMeshName":           "OS_Wild_RWheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },   
+     "Scale":                      {"x": 1, "y": 1, "z": 1}       
+   },    
+
+   {
+     "ObjectName":                 "m_GC_Tracks_422_Wheel_4",
+     "MeshName":                   "OS_Wild_DWheel.obj",
+     "ColliderMeshName":           "OS_Wild_DWheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },   
+     "Scale":                      {"x": 1, "y": 1, "z": 1}
+   },
+
+   // Move these objects to their proper positions. Note that the track's bones are constrained to the wheel objects
+   {
+     "ObjectName":                 "b_Static_1",
+     "Position":                   { "x": 1.3, "y": 0.7 , "z": 1.3 },  
+     "Scale":                      { "x": 1.7, "y": 1.7, "z": 1.7 }       
+   },
+   {
+     "ObjectName":                 "_wheel_4",
+     "Position":                   { "x": 1.3, "y": 0, "z": 5.5 }     
+   },
+   {
+     "ObjectName":                 "_wheel_3",
+     "Position":                   { "x": 1.3, "y": 0, "z": 3.9 }        
+   },    
+   {
+     "ObjectName":                 "_wheel_2",
+     "Position":                   { "x": 1.3, "y": 0, "z":  2.3 }        
+   },  
+   {
+     "ObjectName":                 "_wheel_1",
+     "Position":                   { "x": 1.3, "y": 0, "z": 0.7 }        
+   },    
+   {
+     "ObjectName":                 "b_Wheel_4",
+     "MeshName":                   "OS_Wild_Lower.obj",
+     "Position":                   { "x": 3.5, "y": 0.2, "z": 5.5 },  
+     "Scale":                      { "x": 1.7, "y": 1.7, "z": 1.7 }         
+   },  
+   {
+     "ObjectName":                 "b_Wheel_3",
+     "MeshName":                   "OS_Wild_Lower2.obj",
+     "Position":                   { "x": 3.5, "y": 0.2, "z": 4 },
+     "Scale":                      { "x": 1.7, "y": 1.7, "z": 1.7 }        
+   },  
+   {
+     "ObjectName":                 "b_Wheel_2",
+     "MeshName":                   "OS_Wild_Lower2.obj",
+     "Position":                   { "x": 3.5, "y": 0.2, "z": 2.5 },
+     "Scale":                      { "x": 1.7, "y": 1.7, "z": 1.7 }        
+   },  
+   {
+     "ObjectName":                 "b_Wheel_1",
+     "MeshName":                   "OS_Wild_Lower2.obj",
+     "Position":                   { "x": 3.5, "y": 0.2, "z": 1 },       
+     "Scale":                      { "x": 1.7, "y": 1.7, "z": 1.7 }       
+   },
+   {
+    "OverrideName":                "_sparksLocator",
+    "SubPosition":                 { "x": 1.5, "y": 1, "z": 5.3},
+    "SubRotation":                 { "x":  0,  "y": 90,"z": 0}
+  }
+
+ ],
+"Deserializer":{
+    "GameObject|b_Wheel_1": {
+        "UnityEngine.Transform": {
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 3,
+            "y": 3,
+            "z": 3
+           }
+         }
+      },
+      "GameObject|b_Wheel_2": {
+        "UnityEngine.Transform": {
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 3,
+            "y": 3,
+            "z": 3
+           }
+         }
+      },
+      "GameObject|b_Wheel_3": {
+        "UnityEngine.Transform": {
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 3,
+            "y": 3,
+            "z": 3
+           }
+         }
+      },
+      "GameObject|b_Wheel_4": {
+        "UnityEngine.Transform": {
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 3,
+            "y": 3,
+            "z": 3
+           }
+         }
+      },
+//smoke
+"Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+    "UnityEngine.Transform": {
+        "localPosition": {
+            "x": 1.5,
+            "y": 2,
+            "z": 0.0
+        },
+        "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        }
+    },
+    "ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 1.0,
+        "enableEmission": true,
+        "emissionRate": 25.0,
+        "startSpeed": 0.0,
+        "startSize": 0.6,
+        "startColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.5
+        },
+        "startLifetime": 3.8,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 2
+    },
+    "ParticleSystemRenderer": {
+        "material": "Mat_FX_Smoke_Dark"
+    }
+},
+"Duplicate|FX_Smoker_Steam": {
+    "UnityEngine.Transform": {
+        "localPosition": {
+            "x": 1.5,
+            "y": 1.8,
+            "z": 0.0
+        }
+    }
+},
+"Duplicate|FX_Smoker_Steam_copy": {
+    "UnityEngine.Transform": {
+        "localPosition": {
+            "x": 1.5,
+            "y": 1.8,
+            "z": 0.0
+        }
+    }
+},
+
+
+ // Torque Parameters
+ "ModuleWheels": {
+   "m_TorqueParams": {
+     "torqueCurveMaxTorque":       10000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                               // A high torque value is good for offroad wheels.
+
+     "torqueCurveMaxRpm":          300.0,      //  Dictates the speed of the wheel. A higher number is faster. 
+                                               // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+     "passiveBrakeMaxTorque":      15000.0,     // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+     "reverseBrakeMaxRpm":         150.0,       // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+     "basicFrictionTorque":        200.0,      // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+     "fullCompressFrictionTorque": 200.0       // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+   },
+   
+   // Aesthetic parameters
+   "m_UseTireTracks":              true,       // Enables the wheel to leave tire tracks
+   "m_WheelTrackType":             3,          // Changes the tracks the wheel leaves behind
+   "m_AudioType":                  4,          // Changes the sound of the wheels when running
+                                               // 1 = Heavy GeoCorp wheels
+   "m_TireTrackWidth":             10,         // Does not work; supposedly, it should be able to change the width of the tire tracks.
+   
+   
+   "m_DustMinimumRPM":             5.0,       // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+                                               // This is related to "torqueCurveMaxRpm"
+   "m_DriveTurnPower": 11.0,
+   "m_DriveTurnBrake": 0.3,
+   "m_DriveTurnDifferential": 1.0,
+   "m_TurnOnSpotPower": 20.0,
+
+   "m_WheelParams":{
+     // Basic Wheel parameters
+     "radius":                     0.80,     // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+     "steerAngleMax":              0.0,      // Dictates how much the wheel is able to turn.
+     "steerSpeed":                 2.0,        // Dictates the time it takes for the wheel to fully go into turning position.
+     "thicknessAngular":           41.1,       // Dictates the width of the tire tracks
+     // Tire Parameters
+     "Instantiate|tireProperties":{
+       "Instantiate|props":{
+         "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+         "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+         "gripFactorLong": 5.5,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+         "gripFactorLat": 1.5                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+       }
+     },
+
+     // Suspension parameters
+     "suspensionSpring":           9000.0,  // Dictates the amount of bounciness of the suspension's spring. 
+                                               // It also affects the wheel's ability to carry weight.
+     "suspensionDamper":           2000.0,     // This tells the suspension how much the springiness will be dampened. 
+                                               // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+     "maxSuspensionAcceleration":  15.0,
+     "suspensionQuadratic":        true,
+     "suspensionTravel":           0.6       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   }
+  }
+ }
+}

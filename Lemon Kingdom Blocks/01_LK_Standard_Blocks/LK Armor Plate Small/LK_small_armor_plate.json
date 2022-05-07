@@ -1,0 +1,50 @@
+/*
+Description: The smallest flat armor plate available for LK
+Pros:   High HP with lots of APs
+Cons:   Heavy and expensive
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Small Armor Plate",
+    "Description":          "A small flat armor plate. This will not break off when hit and is very durable. \n\n\"Many outsiders ask our goals, our motives. It is simple: Order.\"",
+
+    "ID":                   419029,           
+    "Faction":              2,           
+    "Category":             2,
+    "Rarity":               2,         
+    "Grade":                3,            
+    "Price":                5244,     
+    "Recipe" :              { "54": 2, "52": 1, "53": 5 },
+      
+    "IconName":             "LK_small_armor_plate_icon.png",                                        
+    "MeshName":             "LK_small_armor_plate_body.obj",                                         
+    "MeshColliderName":     "LK_small_armor_plate_body_col.obj",                 
+    "NoBoxCollider":        true,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                   750,             
+    "Mass":                 5.0,        
+    "DamageableType":       1,    
+    "DetachFragility":      0.0, 
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 1, "y": 1,"z": 1 },
+
+    "APs": [ 
+        { "x": 0, "y": 0, "z": -0.5 },
+        { "x": 0, "y": 0.5, "z": 0 },
+        { "x": 0, "y": -0.5, "z": 0 },
+        { "x": 0.5, "y": 0, "z": 0 },
+        { "x": -0.5, "y": 0, "z": 0 },
+    ],
+
+
+
+
+
+
+}

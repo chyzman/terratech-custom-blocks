@@ -1,0 +1,363 @@
+{
+  "Name": "GreenTech Tumbleweed Track Middle",
+  "Description": "The Tumbleweed Tracks comes in left, right and middle pieces.\nWith these you can seamlessly build long and strong land vehicles, or even mobile operation bases for extensive expeditions.",
+  "ID": 911137, 
+  "PairedBlock": 911137,
+
+  "Faction": 1, 
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 21486,
+  "HP": 13500,
+  "Mass": 38.0,
+  "CenterOfMass": {"x": 1, "y": 0.5, "z": 3.5},
+
+  "IconName": "GT_Tumbleweed_Track_Middle_Icon.png",
+  
+  "Recipe": "3, 3, 3, 3, 3, 3, 52, 52, 52, 52, 53, 53, 54, 54, 56, 56, 56, 63, 63",
+  
+  "EmissionMode": 0,
+  "DamageableType": 1,
+
+  "CellMap":
+	[
+		[
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ],
+    [
+			"xxx",
+			"xxx",
+			"xxx",
+			" xx"
+    ]
+  ],
+
+  "APs": [
+    {"x": 0, "y": 3.5,"z": 0},
+    {"x": 0, "y": 3.5,"z": 1},
+    {"x": 0, "y": 3.5,"z": 2},
+    {"x": 0, "y": 3.5,"z": 3},
+    {"x": 0, "y": 3.5,"z": 4},
+    {"x": 0, "y": 3.5,"z": 5},
+    {"x": 0, "y": 3.5,"z": 6},
+    {"x": 0, "y": 3.5,"z": 7},
+    {"x": 0, "y": 2,"z": -0.5},
+    {"x": 0, "y": 3,"z": -0.5},
+    {"x": 0, "y": 2,"z": 7.5},
+    {"x": 0, "y": 3,"z": 7.5},
+    {"x": -0.5, "y": 2,"z": 0},
+    {"x": -0.5, "y": 2,"z": 1},
+    {"x": -0.5, "y": 2,"z": 2},
+    {"x": -0.5, "y": 2,"z": 5},
+    {"x": -0.5, "y": 2,"z": 6},
+    {"x": -0.5, "y": 2,"z": 7},
+    {"x": -0.5, "y": 3,"z": 0},
+    {"x": -0.5, "y": 3,"z": 1},
+    {"x": -0.5, "y": 3,"z": 2},
+    {"x": -0.5, "y": 3,"z": 5},
+    {"x": -0.5, "y": 3,"z": 6},
+    {"x": -0.5, "y": 3,"z": 7}
+  ],
+
+  "GamePrefabReference": "GC_Track_B_422",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  //"DeathExplosionReference": "GSO_Track_112", 
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422_Treads",
+      "MeshTextureName": "GT_Tank_Track_Texture_1.png",
+      "MeshGlossTextureName": "GT_Tank_Track_Texture_2.png"
+    },
+    {
+      "MeshName": "GT_Tumbleweed_Track_Middle.obj",
+      "ColliderMeshName": "GT_Tumbleweed_Track_Middle_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+      {
+        "SubOverrideName": "m_GC_Tracks_B_422_Wheel_1",
+        "MeshName": "GT_Tumbleweed_Track_Wheel.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "m_GC_Tracks_B_422_Wheel_2",
+        "MeshName": "GT_Tumbleweed_Track_Wheel.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "m_GC_Tracks_B_422_Wheel_3",
+        "MeshName": "GT_Tumbleweed_Track_Wheel.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "_wheel_1",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 1.38,
+          "y": 1.75,
+          "z": 1.05
+        }
+      },
+      {
+        "SubOverrideName": "_wheel_2",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 1.38,
+          "y": 1.75,
+          "z": 3.5
+        }
+      },
+      {
+        "SubOverrideName": "_wheel_3",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 1.38,
+          "y": 1.75,
+          "z": 5.95
+        }
+      }
+  ],
+  "JSONBLOCK": {
+    "GameObject|b_Wheel_1": {
+      "UnityEngine.Transform": {
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 1,
+          "y": 2,
+          "z": 2
+         }
+       }
+    },
+    "GameObject|b_Wheel_2": {
+      "UnityEngine.Transform": {
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 1,
+          "y": 2,
+          "z": 2
+         }
+       }
+    },
+    "GameObject|b_Wheel_3": {
+      "UnityEngine.Transform": {
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 1,
+          "y": 2,
+          "z": 2
+         }
+       }
+    },
+    "GameObject|_wheel_1": {
+      /* "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            "center": {
+            "x": 0.0,
+            "y": 0.25,
+            "z": 0.0
+            },
+            "radius": 0.01
+          }
+        }
+      }, */
+      "GameObject|m_GC_Tracks_B_422_Wheel_1": {
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "radius": 1,
+          "height": 0.5,
+          "direction": 0
+        }
+      }
+    },
+    "GameObject|_wheel_2": {
+      "GameObject|m_GC_Tracks_B_422_Wheel_2": {
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "radius": 1,
+          "height": 0.5,
+          "direction": 0
+        }
+      }
+    },
+    "GameObject|_wheel_3": {
+      "GameObject|m_GC_Tracks_B_422_Wheel_3": {
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "radius": 1,
+          "height": 0.5,
+          "direction": 0
+        }
+      }
+    },
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 40000.0,
+        "torqueCurveMaxRpm": 220,
+        "passiveBrakeMaxTorque": 15000.0,
+        "reverseBrakeMaxRpm": 100.0,
+        "basicFrictionTorque":200.0,
+        "fullCompressFrictionTorque": 600.0
+      },
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 3,
+      "m_AudioType": 4,
+      "m_WheelParams": {
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 5,
+            "gripFactorLat": 1.5
+            
+          }
+          },
+        "radius": 1.5,
+        "thicknessAngular": 30,
+        "suspensionSpring": 50000.0,
+        "suspensionDamper": 400.0,
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.6,
+        "steerAngleMax": 0.0,
+        "steerSpeed": 2.0
+      },
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.3,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 1.0,
+      "m_DustMinimumRPM": 20.0
+    }    
+  }
+}

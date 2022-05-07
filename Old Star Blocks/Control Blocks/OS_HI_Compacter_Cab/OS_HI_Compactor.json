@@ -1,0 +1,676 @@
+{
+  "Name": "Old Star Heavy Iron Compacter Cab",
+  "Description": "This here is how the Heavy Iron of Old Star do. The Compactor Cab is also capable of moving around even if something is still attached to it the cost being much larger as well. Just like the 'High Noon' Cab the Compactor is a very sturdy cab and it even comes with a set of crusher wheels for when not being used to move itself around act as grinders for any rock, tree or poor soul that ends up in front of it.",
+
+  "ID": 300080,
+  "Faction": 4,
+  "Category": 1,
+  "Grade": 2,
+  "Price": 18055,
+  "HP": 2550,
+  "Mass": 18,
+  "CenterOfMass": {
+    "x": 1,
+    "y": 1.0,
+    "z": 3.5
+  },
+  "IconName": "HI_Cab_icon.png",
+  "MeshName": "Compact_Cab_Base.obj",
+  "ColliderMeshName": "Compact_Cab_Base.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "DamageableType": 1,
+  "GamePrefabReference": "GC_Tracks_238",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_BigBertha_845",
+  "EmissionMode": 2,
+  "Recipe": { // "ID": Count
+    "0": 20,
+    "3": 20,
+    "43": 15
+  },
+  "CellMap": [
+    [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      " E ",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      " E ",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      "EEE",
+      "EEE",
+      "EEE"
+    ],
+
+    [
+      "EEE",
+      "EEE",
+      "EEE"
+    ]
+
+  ],
+  "APs": [
+
+    // Top Face
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 3
+    },
+    {
+      "x": 2,
+      "y": 1.5,
+      "z": 4
+    },
+    {
+      "x": 2,
+      "y": 1.5,
+      "z": 3
+    },
+    // Bottom Face
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 4
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 4
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 3
+    },
+    //sides
+    {
+      "x": -0.5,
+      "y": 1.0,
+      "z": 5
+    },
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 5
+    },
+    {
+      "x": 2.5,
+      "y": 1.0,
+      "z": 5
+    },
+    {
+      "x": 2.5,
+      "y": 0.0,
+      "z": 5
+    },
+    {
+      "x": -0.5,
+      "y": 1.0,
+      "z": 6
+    },
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 6
+    },
+    {
+      "x": 2.5,
+      "y": 1.0,
+      "z": 6
+    },
+    {
+      "x": 2.5,
+      "y": 0.0,
+      "z": 6
+    }
+  ],
+  // X is right and left, Y is up and down, and Z is forward and backward
+  "CenterofMass": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 3.5
+  },
+  "APsOnlyAtBottom": false,
+  "SubObjects": [
+    // Replace the original meshes with new ones
+    {
+      "ObjectName": "m_GC_Tracks_238_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 1,
+        "z": 1.5
+      }
+    },
+
+    {
+      "ObjectName": "m_GC_Tracks_238_Wheel_01",
+      "MeshName": "Compact_Cab_Standard.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+
+    {
+      "ObjectName": "m_GC_Tracks_238_Wheel_02",
+      "MeshName": "Compact_Cab_Standard.obj",
+      "ColliderMeshName": "Compact_Cab_Standard.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+
+    {
+      "ObjectName": "m_GC_Tracks_238_Wheel_03",
+      "MeshName": "Compact_Cab_Metal.obj",
+      "ColliderMeshName": "Compact_Cab_Metal.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+
+    {
+      "ObjectName": "m_GC_Tracks_238_Wheel_04",
+      "MeshName": "Compact_Cab_Metal.obj",
+      "ColliderMeshName": "Compact_Cab_Metal.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+
+    {
+      "ObjectName": "m_GC_Tracks_238_Wheel_05",
+      "MeshName": "Compact_Cab_Metal.obj",
+      "ColliderMeshName": "Compact_Cab_Metal.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "Compact_Cab_Glass",
+      "MeshName": "Compact_Cab_Glass.obj",
+      "MeshMaterialName": "GSO_Main",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    // X is right and left, Y is up and down, and Z is forward and backward
+    // Move these objects to their proper positions. Note that the track's bones are constrained to the wheel objects
+    {
+      "ObjectName": "b_Static",
+      "Position": {
+        "x": 0.2,
+        "y": 2,
+        "z": 0.5
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "_wheel_01",
+      "Position": {
+        "x": -0.05,
+        "y": 0.5,
+        "z": 1.5
+      }
+    },
+    {
+      "ObjectName": "_wheel_02",
+      "Position": {
+        "x": 2.05,
+        "y": 0.5,
+        "z": 1.5
+      }
+    },
+    {
+      "ObjectName": "_wheel_03",
+      "Position": {
+        "x": 0.09,
+        "y": 0.5,
+        "z": 5.7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_wheel_04",
+      "Position": {
+        "x": 1.9,
+        "y": 0.5,
+        "z": 5.7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_wheel_05",
+      "Position": {
+        "x": 1,
+        "y": 0.5,
+        "z": 5.7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "b_Wheel_01",
+      "Rotation": {
+        "x": -20,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "b_Wheel_02",
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "b_Wheel_03",
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "b_Wheel_04",
+      "Rotation": {
+        "x": 20,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+    {
+      "ObjectName": "b_Wheel_05",
+      "Rotation": {
+        "x": 20,
+        "y": 0,
+        "z": 0
+      },
+      "Scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    },
+
+    {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": {
+        "x": 1,
+        "y": 0.7,
+        "z": 0
+      }
+    },
+    //box collider
+    {
+      "MakeBoxCollider": true,
+      "SubScale": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5
+      },
+      "Layer": 8
+    },
+    {
+      "SubOverrideName": "Box_1",
+      "Layer": 14
+    },
+    {
+      "SubOverrideName": "Box_2",
+      "Layer": 14
+    },
+    {
+      "SubOverrideName": "Box_3",
+      "Layer": 14
+    },
+    {
+      "SubOverrideName": "Box_4",
+      "Layer": 14
+    },
+    {
+      "SubOverrideName": "Box_5",
+      "Layer": 14
+    },
+    {
+      "SubOverrideName": "Box_6",
+      "Layer": 14
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Box_1": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "GameObject|Box_2": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 1.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "GameObject|Box_3": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "GameObject|Box_4": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "GameObject|Box_5": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "GameObject|Box_6": {
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 6.0
+        },
+        "size": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        }
+      }
+    },
+    "ModuleDrill": {
+      "activeColliders": [
+        "Box_1/BoxCollider.",
+        "Box_2/BoxCollider.",
+        "Box_3/BoxCollider.",
+        "Box_4/BoxCollider.",
+        "Box_5/BoxCollider.",
+        "Box_6/BoxCollider."
+      ],
+      "impactDamageMultiplier": 5.0,
+      "damagePerSecond": 700.0,
+      "m_SpinOnCollisionDuration": 1,
+      "scaleHitParticles": 2.0,
+      "m_DamageType": 4
+    },
+    "ModuleTechController": { // When this is added to a block, it will behave as a Cab. 
+      "m_PlayerInput": true // Dictates whether the player can take control of the cab
+    },
+    "ModuleRadar": {
+      "m_Priority": 1, // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+      "m_MiniMapType": 1, // Dictates the minimap provided by the block. Only accepts 0 or 1.
+      // 0 = Small, blank Radar minimap
+      // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+
+      "m_Range": 200.0, // Dictates how far the radar detects objects in the world.
+
+
+      "m_Dish": null,
+      "m_MiniMap": null,
+      "MiniMapType": 0, // This does not work; use "m_MiniMapType" instead.
+      "Range": 150.0, // This does not work; use "m_Range" instead.
+      "m_RadarOnSfxEvent": {
+        "m_EventPath": "event:/OldAssets/RadarAttach",
+        "EventPath": "event:/OldAssets/RadarAttach"
+      }
+    },
+    "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.0,
+          "y": 1.3,
+          "z": 1.1
+        },
+        "localScale": {
+          "x": 0.06,
+          "y": 0.06,
+          "z": 0.06
+        }
+      },
+      "ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 1.0,
+        "enableEmission": true,
+        "emissionRate": 25.0,
+        "startSpeed": 0.0,
+        "startSize": 0.6,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        },
+        "startLifetime": 1.8,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "material": "Mat_FX_Smoke_Dark"
+      }
+    },
+    "Duplicate|FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.0,
+          "y": 1.3,
+          "z": 1.1
+        }
+      }
+    },
+    // Torque Parameters
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 25000,
+        "torqueCurveMaxRpm": 150,
+        "passiveBrakeMaxTorque": 1200,
+        "reverseBrakeMaxRpm": 300,
+        "basicFrictionTorque": 200,
+        "fullCompressFrictionTorque": 1000
+      },
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 0,
+      "m_AudioType": 0,
+      "m_WheelParams": {
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 3.0,
+            "gripFactorLat": 2.25
+          }
+        },
+        "radius": 1.3,
+        "thicknessAngular": 30,
+        "suspensionSpring": 30000.0,
+        "suspensionDamper": 200.0,
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.2,
+        "steerAngleMax": 8,
+        "steerSpeed": 3
+      },
+      "m_DriveTurnPower": 10.0,
+      "m_DriveTurnBrake": 0.0,
+      "m_DriveTurnDifferential": 0.5,
+      "m_TurnOnSpotPower": 10.0,
+      "m_DustMinimumRPM": 50.0
+    }
+  }
+}
+

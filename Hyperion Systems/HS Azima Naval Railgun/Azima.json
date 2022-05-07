@@ -1,0 +1,275 @@
+
+{
+    "Name":                 "Hyperion Systems Azima Naval Railgun",
+    "Description":          "A powerful dual railgun mounted in a neat naval-style chassis. But this isn't just any regular railgun. The internal charging system charges slugs with a very high amount of energy, which discharges on impact, causing an explosion.",
+
+    "ID": 100056,
+
+    "Faction": 7,        
+
+    "Category": 4,        
+    "Rarity": 2,
+    "Grade": 2,             
+    "Price": 48546,        
+  
+    "Recipe":"5, 5, 5, 5, 5, 32, 32, 32, 32, 32, 43, 43, 43, 43, 43, 49, 49, 54, 56, 56, 56, 63, 63, 66, 66" 	
+    ,	
+	
+    "IconName":                   "AzimaIcon.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "HP": 2500,                            
+    "Mass": 12,
+
+    "DamageableType": 0,    
+    "Fragility": 1,
+    
+    "BlockExtents":
+    { "x": 7,"y": 2, "z": 7 },
+
+    "APs": [
+        {"x": 3, "y": -0.5, "z": 2 },
+        {"x": 4, "y": -0.5, "z": 2 },
+        {"x": 2, "y": -0.5, "z": 2 },
+        {"x": 3, "y": -0.5, "z": 3 },
+        {"x": 3, "y": -0.5, "z": 1 }
+    ],
+
+    "GamePrefabReference":    "HE_Cannon_Turret_Short_525",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 3.0, "y": 0.0, "z": 2.0 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Base", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Azima Base.obj",
+        "MeshTextureName":         "HS textures.png",
+        "SubPosition":              { "x": 3, "y": -0.35, "z": 2 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Turret", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Azima Body.obj",
+        "MeshTextureName":         "HS textures.png",
+        "MakeBoxCollider": true,
+        "SubPosition":              { "x": 0, "y": 0.8, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 180, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_GunMantlet", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 null,
+        "MeshTextureName":         null,
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.6, "z": -0.3 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Azima Barrel.obj",
+        "MeshTextureName":         "HS textures.png",
+        "MakeBoxCollider": true,
+        "SubPosition":              { "x": 0.45, "y": 0.1, "z": -0.1 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 180, "z": 0 }
+      },
+     { 
+        "SubOverrideName":          "_bulletSpawn", 
+        "SubPosition":              { "x": 0.45, "y": 0.1, "z": 3.5},
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_muzzleFlash",
+        "SubPosition":              { "x": 0.45, "y": 0.1, "z": 1},
+        "SubScale":                 { "x": 0.001, "y": 0.001, "z": 0.001 }
+      },
+      { 
+        "SubOverrideName":          "_smoke",
+        "SubPosition":              { "x": 0, "y": 0.2, "z": 1 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+      { 
+        "SubOverrideName":          "_barrel_copy/_recoiler/m_HE_CannonTurret_Short_Barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Azima Barrel.obj",
+        "MeshTextureName":         "HS textures.png",
+        "MakeBoxCollider": true,
+        "SubPosition":              { "x": 2.55, "y": 0.25, "z": 2.15 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 180, "z": 0 }
+      },
+   ],
+
+    "Deserializer": {    
+      "GameObject|_gimbalBase":{
+        "GimbalAimer": { 
+            "rotationLimits": [-90, 90],
+            "rotationAxis": 2 
+          },
+        "GameObject|_gimbalElev":{
+          "GimbalAimer": { 
+            "rotationLimits": [-70, 0],
+            "rotationAxis": 1
+          },
+          "GameObject|_barrel": {},
+          "Duplicate|_barrel":{
+            "GameObject|_muzzleFlash": {
+              "UnityEngine.Transform": { 
+                "localScale": { "x": 0.001, "y": 0.001, "z": 0.001 },
+                "localPosition": { "x": 2.45, "y": 0.1, "z": 3.5}
+              }
+            },
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": { 
+                "localPosition": { "x": 2.45, "y": 0.1, "z": 3.5},
+               
+              }
+            }
+          }
+          
+        }
+      },
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        "m_RotateSpeed": 20.0, 
+        "m_ChangeTargetInteval": 0.5,
+
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 90.0,
+
+        "m_FireSFXType": 64,
+
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+
+      },
+      "ModuleWeaponGun": {
+        "m_FireControlMode": 0,
+        "m_ShotCooldown": 2,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0,          // Dictates how random the length of pause between shots.
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward targets
+        "m_NumCannonBarrels": 2,
+        "m_BurstShotCount": 2,
+        "m_BurstCooldown": 1,
+       
+        },
+
+      "Reference|HE_Cannon_Battleship_216/FireData.": {
+        "Instantiate|m_BulletCasingPrefab": null,
+                "m_MuzzleVelocity": 1000.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+                "m_KickbackStrength": 200.0,            // Dictates the strength of the recoil when firing the gun
+                "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+                "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+    
+                
+                /********** Bullet Prefab **********/
+                "Instantiate|m_BulletPrefab": {
+                 
+                    "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                        "ParticleSystem": {
+                            "startSize":    1,
+                            "duration":     5.0,
+                            "emissionRate": 2000.0,
+                            "startColor":   { "r": 1, "g": 0.0, "b": 0, "a": 1.0 },
+//                            "main":{
+//                              "startDelayMultiplier": 0.0,
+//                              "prewarm": true
+//                            }
+                        }
+                    },
+    
+                    "Rigidbody":{
+                        "useGravity": false
+                    },
+    
+                   "UnityEngine.CapsuleCollider": {
+                        "radius": 0.15,
+                        "height": 0.15,
+                        "direction": 2,
+                    },
+    
+                    // This is the bullet's white trail. 
+                    "SmokeTrail":{
+                        "numberOfPoints":   20.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                                    // Do not decrease this too much as it will begin to act strangely.
+    
+                        "spread":           0.0,   // Dictates how erratic the trail is.
+                        "riseSpeed":        0.0,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+                        "updateSpeed":      300,  // Dictates the speed of the trail.
+                    },
+    
+                    // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+                    "LineRenderer": {
+                        "startWidth": 1,
+                        "endWidth": 0.4,
+                        "widthMultiplier": 1.0,
+                        
+                        // The color at the start and end of the trail
+                        "startColor":   { "r": 1, "g": 0.0, "b": 0, "a": 1.0 },
+                        "endColor":     { "r": 1, "g": 0, "b": 0, "a": 1.0 }
+                    },
+                  
+                    "Projectile":{
+                      "m_Damage": 2500,                  // The damage of the bullet when directly hitting a block
+                      "m_LifeTime": 5.0,                  // The duration of the bullet's existence before despawning
+                      "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                      "m_IgnoreCollisionWithBarrel": true,
+                      "Instantiate|m_Explosion": {
+                        "GameObject|Sparks": null,
+                        "GameObject|ExplosionBright": null,
+                        "GameObject|ExplosionDark": null,
+                        "GameObject|ExplosionSmoke": null, 
+                         "Explosion": {
+                            "m_ExplosionType": 3,                    // Dictates the damage type of the explosion
+                            "m_EffectRadiusMaxStrength": 3.0,
+                            "m_EffectRadius": 5,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_MaxDamageStrength":      2000,        // The splash damage done
+                            "m_MaxImpulseStrength":     100.0,       // The strength of the knockback done by the explosion
+                         },
+                        "Reference|1050/ModuleDamage.deathExplosion": { //References the GC MegaReactor Battery's death explosion as the projectile's death explosion
+                          "GameObject|FX_Parts_A": null,
+                          "UnityEngine.Transform":{
+                            "localPosition":{
+                              "x":0,
+                              "y":0,
+                              "z":0
+                            },
+                            "localScale":{
+                              "x":15,
+                              "y":15,
+                              "z":15
+                            },
+                          },
+                        }
+                      }
+                    },
+                       
+          
+        },
+
+      
+  }   
+}
+}

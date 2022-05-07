@@ -1,0 +1,492 @@
+/*
+Description:    The LK's counterpart for the HE Naglfaar 120MJ Railcannon
+Pros:           High damage with shield-piercing capability
+Cons:           Heavy and expensive
+
+Comparisons to the HE Naglfaar 120MJ Railcannon:
+- Has more damage, but has more recoil
+- Has a faster reload time, but uses up more energy
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Ballista Gauss Cannon",
+    "Description":          "This heavy coilgun punches through vehicles and shields at terrifying speeds. While it uses up a lot of energy, it more than compensates for its high rate of fire.\n\n\"The Lemon Kingdom's \"Iron Peel\" Special Forces are veteran Knights trained to outmaneuver, sabotage and sow chaos at the enemy using high-tech equipment.\"",
+
+    "ID": 419036,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 246894,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*  
+    The resources/components needed to make this block. For the full ID Resource/Component list, 
+    please refer to the Terratech Wiki.
+
+    Main Body:      48 Titanic Alloy, 8 Plubonic Alloy
+    Gun Assembly:   6 Gluon Beam, 4 Seed AI
+    Capacitors:     16 Coffman Cells
+    48 Cells
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 48, "53": 8, 
+        // Gun Assembly 
+        "64": 6, "65": 4, 
+        // Capacitors
+        "62": 16 
+    },
+      
+    "IconName":                   "LK_cannon_ballista_gauss_icon.png",  // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                 // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                 // Name of the block's collider.
+    "NoBoxCollider":              false,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 19200,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons (300/cell for Missile weapons)
+                            // 300/cell = Wheels, Generators & Electronics
+                            // 750/cell = Rotors (Exclude the propeller blades)  
+
+    "Mass": 192,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 0,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 2,"z": 12 },
+
+    "APs": [ 
+        // Left APs
+        { "x": -0.5, "y": 0.0, "z": 3.0 }, { "x": -0.5, "y": 1.0, "z": 3.0 },           
+
+        // Right APs
+        { "x": 1.5, "y": 0.0, "z": 3.0 }, { "x": 1.5, "y": 1.0, "z": 3.0 },         
+
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 3.0 }, { "x": 1, "y": -0.5, "z": 3.0 },
+
+        // Top APs
+        { "x": 0, "y": 1.5, "z": 3 }, { "x": 1, "y": 1.5, "z": 3 },
+
+    ],
+
+    // Advanced Settings
+    "PrefabReference":      "684",                          // HE MK3 Battleship Cannon Block ID
+    "KeepRenderers":        true,
+    "KeepColliders":        false,
+    "PrefabPosition":       { "x": 0, "y": 0, "z": 0 },
+
+    "SubObjects":[
+        // Replace the original meshes with new ones
+        {
+            "ObjectName":                 "m_HE_CannonBattleship_216_body",
+            "MeshName":                   "LK_cannon_ballista_gauss_body.obj",
+            "ColliderMeshName":           "LK_cannon_ballista_gauss_body_col.obj",
+            
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true,
+            "Position":                   { "x": 0.5, "y": 0.5, "z": -0.5 },        
+        },
+        {
+            "ObjectName":                 "m_HE_CannonBattleship_216_barrel",
+            "MeshName":                   "LK_cannon_ballista_gauss_barrel_end.obj",
+            "ColliderMeshName":           "LK_cannon_ballista_gauss_barrel_end_col.obj",
+
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true,
+
+            "Position":                   { "x": 0, "y": 0, "z": 2.1 },
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },  
+
+        {
+            "ObjectName":                   "_gimbalElev",
+            "MeshName":                     "LK_cannon_ballista_gauss_barrel_base.obj",
+            "ColliderMeshName":             "LK_cannon_ballista_gauss_barrel_base_col.obj",
+        },
+
+        {
+            "ObjectName":                   "_gimbalBase",
+            "Position":                     { "x": 0.5, "y": 0.5, "z": 3.7 }
+        },
+
+        // Change the other component's positions
+        {
+            "ObjectName":                   "_smoke",
+            "Position":                     { "x": 0, "y": 0, "z": 16.0 },
+        },   
+        {
+            "ObjectName":                   "_muzzleFlash",
+            "Position":                     { "x": 0, "y": 0, "z": 16.0 },
+            "Scale":                        { "x": 4, "y": 4, "z": 10 },
+        },           
+        {
+            "ObjectName":                   "_casingSpawn",
+            "Position":                     { "x": 0, "y": 0.7, "z": -1.5 },
+        },  
+        {
+            "ObjectName":                   "_bulletSpawn",
+            "Position":                     { "x": 0, "y": 0, "z": 20.0 },
+            "Scale":                        { "x": 2.0, "y": 2.0, "z": 2.0 },         
+        },
+
+        // Add the energy gauge
+        {
+            "ObjectName": "energyGauge",
+            "MeshName":"LK_cannon_ballista_gauss_gauge.obj",
+            "Position":{ "x":0, "y":0.5, "z":-0.4},
+            "Rotation":{ "x":0, "y":0, "z":180},
+        },
+
+
+        // Add the spinning coils
+        {
+            "ObjectName":                 "coil_1",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+        {
+            "ObjectName":                 "coil_2",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+        {
+            "ObjectName":                 "coil_3",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+        {
+            "ObjectName":                 "coil_4",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+        {
+            "ObjectName":                 "coil_5",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+        {
+            "ObjectName":                 "coil_6",
+            "MeshName":                   "LK_cannon_ballista_gauss_coil.obj",
+            "Scale":                      { "x": 2.0, "y": 2.0, "z": 2.0 },
+        },
+    ],
+
+
+    "Deserializer":{
+        "GameObject|energyGauge":{},
+
+        "GameObject|_gimbalBase": {
+            // Change the aiming limits
+            "GimbalAimer": { 
+                "rotationLimits": [-2.5, 2.5],
+                "rotationAxis": 1           // Changes the axis of rotation for the gimbal component
+                                            // 1 = Y (Vertical)
+                                            // 2 = Z (Horizontal)
+              },
+            "UnityEngine.Transform": { "localPosition": { "x": 0.5, "y": 0.5, "z": 3.2 } },
+            "GameObject|_gimbalElev": {
+                "GimbalAimer": {
+                    "rotationLimits": [-2.5, 2.5], 
+                    "rotationAxis":     2   // Changes the axis of rotation for the gimbal component
+                                            // 1 = Y (Vertical)
+                                            // 2 = Z (Horizontal)
+                  },
+                "GameObject|_barrel": {
+                    "UnityEngine.Transform": { "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 } },
+            
+                    "GameObject|_recoiler":{
+                        "GameObject|coil_1":{ 
+                            "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 6.02 } },
+                            "Spinner": {
+                                "m_Speed": 0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            }
+                        },
+                        "GameObject|coil_2":{ 
+                            "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 7.00 } },
+                            "Spinner": {
+                                "m_Speed": -0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            }
+                        },
+                        "GameObject|coil_3":{ 
+                            "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 7.9 } },
+                            "Spinner": {
+                                "m_Speed": 0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            } 
+                        },
+                        "GameObject|coil_4":{ "UnityEngine.Transform": { 
+                            "localPosition": { "x": 0.0, "y": 0.0, "z": 8.8 } },
+                            "Spinner": {
+                                "m_Speed": -0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            } 
+                        },
+                        "GameObject|coil_5":{ "UnityEngine.Transform": { 
+                            "localPosition": { "x": 0.0, "y": 0.0, "z": 10.75 } },
+                            "Spinner": {
+                                "m_Speed": -0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            } 
+                        },
+                        "GameObject|coil_6":{ "UnityEngine.Transform": { 
+                            "localPosition": { "x": 0.0, "y": 0.0, "z": 11.68} },
+                            "Spinner": {
+                                "m_Speed": 0.5,
+                                "m_RotationAxis": { "axis": 2 },
+                                "m_SpinUpTime": 0.5
+                            } 
+                        },
+                    },
+
+
+                    // Increase the size and rate of the smoke
+                    "GameObject|_smoke":{
+                        // Particles are similar to most DDCs. They use an emitter and some form of texture to work in-game.                          
+                        "ParticleSystem": {
+                            "startSize":            0.5,       // The start size of the particle
+                            "startLifetime":        1.0,        // The duration of the particle's existence
+                            "emissionRate":         300,
+                            "duration":             5.0,
+                            
+                            // Self-explanatory; this dictates the size of the particle at different points of its life, all the way to the end
+                            "sizeOverLifetime": {
+                                "xMultiplier": 10.0,        // Dictates the multiplier on the X axis of the particle
+                                "yMultiplier": 1.0,         // Dictates the multiplier on the Y axis of the particle
+                                "zMultiplier": 1.0,         // Dictates the multiplier on the Z axis of the particle
+                            },
+
+                        },
+                    },
+
+                }
+            }
+        },
+        "ModuleDrill":{},
+
+        //********** Weapon Modules **********//
+        "ModuleWeapon": {
+            "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+            //"m_AimType": 1,
+            "m_RotateSpeed": 1,                     // Dictates the speed of the gun's rotation whenever it aims at a target.
+            "m_ChangeTargetInteval": 0.5,
+        
+            "m_PreventShootingTowardsFloor": false,
+            "m_DeployOnHasTarget": false,
+            "m_LimitedShootAngle": 90.0,
+        
+            "m_FireSFXType": 75,                      // Dictates the sound used when firing
+                                                        // 6  = GSO Megaton Cannon
+                                                        // 64 = GSO Gigaton Cannon
+                                                        // 75 = HE MK3 Battleship Cannon
+                                                        // 77 = GSO Big Bertha Cannon
+        },
+        //************************************//
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 4.0,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+            "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+
+            "m_BurstShotCount": 0,                  // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                    // A non-zero, integer value will dictate the number of shots fired.
+                                                    // The pause uses the value in m_BurstCooldown
+
+            "m_BurstCooldown": 0,                   // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                    // This is automatically disabled when m_BurstShotCount is set to 0
+
+            "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                    // Only applies when m_BurstShotCount is NOT set to 0
+
+            "m_FireControlMode": 0,                 // Dictates how the guns will fire
+                                                    //  0 =   The guns will fire one at a time
+                                                    //  1 =   All guns will fire at the same time
+
+
+            "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward target
+        },
+        //************************************//
+        "FireData": {
+            "m_MuzzleVelocity": 1200.0,             // Dictates the projectile's speed. The higher the value, the faster it will travel.
+            "m_KickbackStrength": 7000.0,           // Dictates the strength of the recoil when firing the gun
+            "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+            "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+
+            
+            /********** Bullet Prefab **********/
+            "Instantiate|m_BulletPrefab": {
+                // Insert a Railgun Semi-circle effect in the bullet prefab
+                "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                    "ParticleSystem": {
+                        "startSize":    3.0,
+                        "duration":     5.0,
+                        // The color at the start and end of the trail
+                        "startColor":   { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+                        "endColor":     { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 }
+                    }
+                },
+
+                // Then disable bullet drop
+                "Rigidbody":{
+                    "useGravity": false
+                },
+
+                // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+               "UnityEngine.CapsuleCollider": {
+                  "gameObject": {
+                        "layer": 12       // Shield - allows piercing 
+                    },
+                },
+
+                // This is the bullet's white trail. 
+                "SmokeTrail":{
+                    "numberOfPoints":   20.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                                // Do not decrease this too much as it will begin to act strangely.
+
+                    "spread":           0.0,   // Dictates how erratic the trail is.
+                    "riseSpeed":        0.0,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+                    "updateSpeed":      300,  // Dictates the speed of the trail.
+                },
+
+                // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+                "LineRenderer": {
+                    "startWidth": 1,
+                    "endWidth": 0.4,
+                    "widthMultiplier": 1.0,
+                    
+                    // The color at the start and end of the trail
+                    "startColor":   { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+                    "endColor":     { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 }
+                },
+              
+                "Projectile":{
+                    "m_Damage": 9000,                   // The damage of the bullet when directly hitting a block
+                    "m_LifeTime": 3.0,                  // The duration of the bullet's existence before despawning
+                    "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                    "m_IgnoreCollisionWithBarrel": true,
+                    "Instantiate|m_Explosion": {
+                        "Explosion": {
+                            "m_ExplosionType": 3,
+                            "m_EffectRadiusMaxStrength": 4.0,       // Dictates the damage type of the explosion
+                            "m_EffectRadius": 12,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_MaxDamageStrength":      3000.0,     // The splash damage done
+                            "m_MaxImpulseStrength":     400.0       // The strength of the knockback done by the explosion
+                        },
+                    }
+                },
+
+
+            },
+
+            /********** Bullet Casing Prefab **********/
+            "Instantiate|m_BulletCasingPrefab": null
+
+        },
+
+        "ModuleConsumeEnergyToShell": {
+            "EnergyCost":           8000,   // How much energy is needed to fire one round 
+                                            // (For continuous weapons, how much energy per second)
+            "EnergyCapacity":       8000,   // How much energy this block can hold
+                                            
+            // The two below are intended for flamethrowers and beam weapons
+            "LowestPermittedEnergy": 50,    // The minimum amount of energy that can be left in a system 
+                                            // (Useful for continuous weapons: Don't drain all energy)
+            "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                            // (Useful for continuous weapons: Prevents studdering effect)
+            
+            "CustomGauges": [        // Optional animatable transform, not required for limiter to function
+                /*
+                "GaugeObject": "nameOrPathToSubobject",     // < This is specifically for weapon limiter serialization! It does not exist otherwise!
+                
+                // Very important, comment or delete animation properties not intended to be used!
+                
+                "PositionMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Y = 0,
+                "PositionMax": {"x": 0, "y": 1, "z": 0},    // 100%  :  Y = 1,
+    
+                "ScaleMin": {"x": 1, "y": 1, "z": 0},       // 0%    :  Z = 0.0,
+                "ScaleMax": {"x": 1, "y": 1, "z": 1},       // 100%  :  Z = 1.0,
+    
+                "RotationMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Roll = 0,
+                "RotationMax": {"x": 0, "y": 0, "z": 720},  // 100%  :  Roll = 720 (rolled twice),
+    
+                "ColorMin": {"r": 1.0, "g": 0.0, "b": 0.0}, // 0%    :  Color = Red,
+                "ColorMax": {"r": 0.0, "g": 1.0, "b": 0.0}, // 100%  :  Color = Green,
+    
+                "EnableAbove": 0.1,                         // 10%   :  Enable           (<10%   :  Disable),
+                "ParticlesAbove": 0.333,                    // 33.3% :  Play particles   (<33.3% :  Stop particles), 
+    
+                "Dampen": 0.7,                              // Smoothen changes with a value between 0.0 and 1.0
+                                                            // 0%    :  Off              (100%   :  Cannot move),
+    
+                // The values below are for converting the raw input to a value between 0.0 and 1.0 for the above
+    
+                "MinValue": 0.5,                            // The lower end of the raw value to lerp by    (Alt: MinEnergy),
+                "MaxValue": 2.0,                            // The higher end of the raw value to lerp by   (Alt: MaxEnergy),
+                */
+    
+                {
+                    "GaugeObject": "energyGauge",
+                    "MinValue": 0,
+                    "MaxValue": 8000,
+                    "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                },
+    
+            ]
+        },
+
+        
+    }
+
+
+}

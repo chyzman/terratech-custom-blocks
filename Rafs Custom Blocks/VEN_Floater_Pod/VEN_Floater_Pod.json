@@ -1,0 +1,55 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+
+
+// half small floater strength, 0.75x altitude
+{
+  "Name": "Venture Floater Pod",
+  "Description": "When attached to a Tech, this tank pumps out all air inside to create vacuum, which decreases the block density and makes it float.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.",
+  "ID": 910604, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 1473,
+  "HP": 150,
+  "Mass": 0.1,
+
+  "IconName": "VEN_Floater_Pod_Icon.png",
+  "MeshName": "VEN_Floater_Pod.obj", 
+  
+  "Recipe": "1, 43, 47, 52",
+  
+  "MeshMaterialName": "VEN_Main", 
+  "SupressBoxColliderFallback": true,
+  "ColliderMeshName": "VEN_Floater_Pod.obj",  
+
+  "BlockExtents": 
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "VEN_Block_111",
+  "KeepReferenceRenderers": false, 
+  
+  "JSONBLOCK": {
+  "MotionBlocks.ModuleFloater": {
+//  "MinHeight": -85,
+    "MaxHeight": 350,
+    "MaxStrength": 7,
+    "VelocityDampen": 0.05
+}
+    
+  }
+}

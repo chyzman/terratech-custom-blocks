@@ -1,0 +1,335 @@
+{
+  "Name": "GSO Fritz Bomb",
+  "Description": "The bomb like a missile, or a missile like a bomb.\nIt is a little big, so be careful not to hit the ground when landing.", //You can make multiple lines with \n
+  "ID": 546402, //A random ID that MUST be unique
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 4, //The desired grade minus one
+  "Price": 22227,
+  "HP": 600,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 6,
+  "CenterOfMass": {"x": 0, "y": -0.272285, "z": 0.160062},
+
+  "Recipe": "43, 43, 46, 47, 51, 55, 55, 57, 65, ",
+  "DamageableType": 3, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+
+  "IconName": "GSO_FritzX.png", 
+  "MeshName": null, 
+  "MeshMaterialName": null,
+  "EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  "SupressBoxColliderFallback": false, 
+  "Cells": [
+    {"x": 0,"y": 0,"z": 2},
+    {"x": 0,"y": 0,"z": 1},
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": -1},
+    {"x": 0,"y": 0,"z": -2},
+
+    {"x": 1,"y": 0,"z": 1},
+    {"x": 1,"y": 0,"z": 0},
+    {"x": 1,"y": 0,"z": -1},
+    {"x": 1,"y": 0,"z": -2},
+
+    {"x": -1,"y": 0,"z": 1},
+    {"x": -1,"y": 0,"z": 0},
+    {"x": -1,"y": 0,"z": -1},
+    {"x": -1,"y": 0,"z": -2},
+
+
+    {"x": 0,"y": -1,"z": 2},
+    {"x": 0,"y": -1,"z": 1},
+    {"x": 0,"y": -1,"z": 0},
+    {"x": 0,"y": -1,"z": -1},
+    {"x": 0,"y": -1,"z": -2},
+
+    {"x": 1,"y": -1,"z": 1},
+    {"x": 1,"y": -1,"z": 0},
+    {"x": 1,"y": -1,"z": -1},
+    {"x": 1,"y": -1,"z": -2},
+    
+    {"x": -1,"y": -1,"z": 1},
+    {"x": -1,"y": -1,"z": 0},
+    {"x": -1,"y": -1,"z": -1},
+    {"x": -1,"y": -1,"z": -2},
+  ],
+  "APs": [
+      {"x": 0,"y": 0.5,"z": 0},
+      {"x": 0,"y": 0.5,"z": -1},
+  ],
+
+  "GamePrefabReference": "HE_CruiseMissile_121",
+  "KeepRenderers": false,
+  "KeepColliders": true,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_CruiseMissile_113_Base",
+      "DestroyExistingColliders": true,
+      "MeshName": "GSO_FritzX_base.obj",
+      "ColliderMeshName": "GSO_FritzX_base.obj",
+      "MeshMaterialName": "GSO_Main"
+    },
+    { //dummy missile
+      "SubOverrideName": "m_HE_CruiseMissile_113_Missile",
+      "MeshName": "GSO_FritzX_bomb_customUV.obj",
+      "MakeCapsuleCollider": true,
+      //"MeshMaterialName": "GSO_Main",
+      "MeshTextureName": "GSO_FritzX_a.png",
+      "MeshGlossTextureName": "GSO_FritzX_g.png",
+      "MeshEmissionTextureName": null,
+    },
+    /*{ //ugh which is better?
+      "SubOverrideName": "GSO_FritzX_bomb_MatMissiles",
+      "MeshName": "GSO_FritzX_bomb_MatMissiles.obj",
+      "MakeCapsuleCollider": true,
+      //"MeshMaterialName": "GSO_Main",
+      "MeshMaterialName": "Missiles", //
+    },*/
+    { //missile mesh collider 1
+      "SubOverrideName": "GSO_FritzX_mCol1",
+      //"MeshName": "GSO_FritzX_mCol1.obj",
+      "ColliderMeshName": "GSO_FritzX_mCol1.obj",
+    },
+    { //mesh collider 2
+      "SubOverrideName": "GSO_FritzX_mCol2",
+      "ColliderMeshName": "GSO_FritzX_mCol2.obj",
+    },
+
+    { // Missile
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "MeshName": "GSO_FritzX_bomb_customUV.obj",
+      "MeshTextureName": "GSO_FritzX_a.png",
+      "MeshGlossTextureName": "GSO_FritzX_g.png",
+      "MeshEmissionTextureName": null,
+    },
+  ],
+
+  "Deserializer": {
+    "GameObject|m_HE_CruiseMissile_113_Base":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.0, "y":0, "z":0 }
+      },
+    },
+    "GameObject|_barrel":{
+      "GameObject|_recoiler": {
+        "GameObject|_spawnBullet":{
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":90, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":-0.272285, "z":0 }
+          },
+        },
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.CapsuleCollider": {
+            "height": 4.46029, // how long
+            "radius": 0.35,
+            "direction": 2, // 0=x 1=y 2=z
+            "center": {"x": 0.0,"y": 0.0,"z": -0.07056},
+            "gameObject": {"layer": 8},
+          },
+          "UnityEngine.Transform": {
+            //"localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":-0.272285, "z":0 }
+          },
+          "GameObject|GSO_FritzX_mCol1":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.0, "y":-0.0, "z":0 }
+            },
+            "UnityEngine.MeshCollider": {
+              "gameObject": {"layer": 8},
+            },
+          },
+          "GameObject|GSO_FritzX_mCol2":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.0, "y":-0.0, "z":0 }
+            },
+            "UnityEngine.MeshCollider": {
+              "gameObject": {"layer": 8},
+            },
+          },
+        },
+      },
+    },
+    
+
+    "ModuleDamage": { // death explosion FX
+      // NuterraSteam doesn't seem to be able to load deathExplosion... for now
+      //"deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //reference bigbertha
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          "m_EffectRadius": 8.0,
+          "m_EffectRadiusMaxStrength": 4.0,
+          "m_MaxDamageStrength": 250,
+          //"m_MaxImpulseStrength": 500,
+        },
+      }
+    },
+
+
+
+    "ModuleWeapon": {
+      "m_ShotCooldown": 5,
+    },
+    "ModuleWeaponGun":{
+      "m_ShotCooldown": 5,
+      "m_BurstShotCount": 1,
+      "m_BurstCooldown": 5,
+    },
+    "Reference|GSO_MiniMissile_222/FireData.": {
+      "m_MuzzleVelocity": 3.0,
+      "m_KickbackStrength": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": { 
+            "localScale": {"x": 2.0,"y": 2.0,"z": 2.0},
+            "localPosition": { "x":0, "y":0, "z":0 },
+            //"localEulerAngles": { "x":0, "y":0, "z":0, }
+          },
+          "BoosterJet": { // missiles booster power
+            "m_Force": 0.20 //0.01
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              "localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+              "localPosition": { "x":0, "y":0.0, "z":-1.076195 }, //-2.15239
+              //"localEulerAngles": { "x":0, "y":0, "z":0, }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              //"UnityEngine.ParticleSystem":{
+                //"startSize": 1,
+              //},
+              "UnityEngine.ParticleSystemRenderer": {
+                //"lengthScale": 10.0,
+                "isVisible": true,
+                //"material": "FX_Teleporter_Distortion",
+                "shadowCastingMode": 0
+              }
+            },
+          },
+        },
+        "Rigidbody":{
+          //"freezeRotation": true,
+          "useGravity": true,
+          //"mass": -1.0,
+          "drag": 0.3,
+          "angularDrag": 10,
+        },
+        "Projectile": {
+          "m_LifeTime": 6.0, // 3.3
+          "m_ImpactSFXType": 2,
+          "m_ExplodeOnTerrain": true,
+          "m_ExplodeAfterLifetime": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "m_RotateWithVelocity": true,
+          "m_Damage": 2000,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 8.0, //8
+              "m_EffectRadiusMaxStrength": 4.0, //4
+              "m_MaxDamageStrength": 200, //175
+              "m_MaxImpulseStrength": 50,
+              //"m_DamageType": 7
+            },
+            //"GameObject|Sparks":{},
+            "GameObject|ExplosionBright":{
+              "UnityEngine.ParticleSystem": {
+                "startSpeed": 2.2,
+                "startSize": 16.0,
+                "startLifetime": 1.5,
+                "main": {
+                  "m_ParticleSystem": {
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": {
+              "UnityEngine.ParticleSystem": {
+                "startSpeed": 10.0,
+                "startSize": 18.0,
+                "startLifetime": 1.5,
+                "main": {
+                  "m_ParticleSystem": {
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": {
+              "UnityEngine.ParticleSystem": {
+                "startSpeed": 12.0,
+                "startSize": 13.0,
+                "startLifetime": 1.6,
+                "main": {
+                  "m_ParticleSystem": {
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|Point light": {
+              "UnityEngine.Light": {
+                "intensity": 5.0,
+                "range": 10.0,
+              }
+            },
+            "Reference|8/ModuleDamage.deathExplosion/FX_Explosion_Shockwave": { 
+              "UnityEngine.Transform": {
+                "localPosition": {"x":0, "y":0.2, "z":0}
+              }, 
+              "ParticleSystem": {         
+                "startDelay": 0,       
+                "startSize": 100,      
+                "startLifetime": 0.75 
+              }
+            },
+          },
+        },
+        //"MissileProjectile": null,
+        "MissileProjectile": {
+          "m_MaxBoosterLifetime": 5.0,
+          "m_BoosterActivationDelay": 1.8, // 0.4
+          "m_ArmDelay": 0.4, //0.4
+          "m_DeathDelayNotArmed": 1, //1
+          "Instantiate|m_SmokeTrailPrefab": { // white smoke
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0.0, "z":-1.076195 }, //-2.15239
+            },
+            "GameObject|ParticleSystemVaporTrail": null
+          }
+        },
+        "SeekingProjectile":{
+          "m_VisionConeAngle": 60.0, //145
+          "m_VisionRange": 300.0, //150
+          "m_TurnSpeed": 40.0, //60
+          //"m_SeekType": 1,
+          //"m_UpdateVisibleInterval": 0.3,
+          "m_ActivationDelay": 1.4, //0.1
+          //"m_ApplyRotationTowardsTarget": false,
+        },
+        //"SmokeTrail": null,
+        "UnityEngine.CapsuleCollider": {// looooooong collider
+          "height": 3.0, // how long
+          "radius": 0.2,
+          "direction": 2, // 0=x 1=y 2=z
+          "center": { "x": 0.0, "y": 0.0, "z": 1.5 },
+        },
+      },
+    },
+  }
+}
+

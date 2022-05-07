@@ -1,0 +1,435 @@
+{
+  "Name": "GreenTech Snowball Auto Cannon",
+  "Description": "This strange weapon quickly condenses moistures from air, packing into dense spheres of ice, and firing them in a barrage with high velocity and knockback on target.",
+  
+  "ID": 911062,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 4,  
+  "Price": 26232,
+  "HP": 3000,
+  "Mass": 8,
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  
+  "Recipe": "1, 1, 1, 1, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 45, 47, 47, 47, 47, 49, 49, 49, 49, 56, 56, 57, 57",
+  
+  "IconName": "GT_Snowball_Autocannon_Icon.png",
+  "EmissionMode": 1, 
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+
+  "GamePrefabReference": "GSO_Cannon_Megaton_LongBarrel_424",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0.0,
+    "z": 0.5
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel/_recoiler/m_GSO_Megaton_Long_424_Barrel_B",
+      "MeshName": "GT_Snowball_Autocannon_Barrel_1.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Barrel_1_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "localScale": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 2.0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": -0.69,
+        "z": -0.4
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/m_GSO_Megaton_Long_424_Barrel_B",
+      "MeshName": "GT_Snowball_Autocannon_Barrel_2.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Barrel_2_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "localScale": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 2.0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": -0.085,
+        "z": -1.54
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy/_recoiler/m_GSO_Megaton_Long_424_Barrel_B",
+      "MeshName": "GT_Snowball_Autocannon_Barrel_3.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Barrel_3_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "localScale": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 2.0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0.515,
+        "z": -2.68
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/m_GSO_Megaton_Long_424_Barrel_B",
+      "MeshName": "GT_Snowball_Autocannon_Barrel_4.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Barrel_4_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "localScale": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 2.0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 1.12,
+        "z": -3.82
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Base",
+      "MeshName": "GT_Snowball_Autocannon_Base.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Base_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Turret",
+      "MeshName": "GT_Snowball_Autocannon_Gimbal.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_Gimbal_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": -0.5,
+        "y": 0,
+        "z": -0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Barrel_A",
+      "MeshName": "GT_Snowball_Autocannon_Turret.obj",
+      "ColliderMeshName": "GT_Snowball_Autocannon_GimbalTurret_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": -0.55,
+        "z": -0.5
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "SubPosition": {
+        "x": -0.5,
+        "y":  0.55,
+        "z": -0.0
+      }
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "MeshName": "Snowball.obj",
+      "MeshMaterialName": "Terrain_Snow_01",
+      "SubScale": { "x": 1.5, "y": 1.5, "z": 1.5},
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0.3,
+            "z": 0.1
+           },
+           "localScale": {
+            "x": 0.6,
+            "y": 0.6,
+            "z": 0.6
+          }
+         },
+        "ParticleSystem": {
+          "startDelay": 0.0,
+          "loop": true,
+          "playOnAwake": true,
+          "playbackSpeed": 1.0,
+          "enableEmission": true,
+          "emissionRate": 50.0,
+          "startSpeed": 0.0,
+          "startSize": 0.1,
+          "startColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.2
+          },
+          "startLifetime": 1.5,
+          "gravityModifier": 0.08,
+          "maxParticles": 1000,
+          "simulationSpace": 0,
+          "scalingMode": 2
+        }
+      },
+      "GimbalAimer": { 
+        "enabled": true, 
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -180.0,
+          180.0
+        ]
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-90, 60]
+        },
+        "GameObject|_barrel": {
+          "GameObject|_smoke": null, // Remove the smoke
+          "GameObject|_muzzleFlash": null, // Remove the flash
+          "CannonBarrel": {
+            "particles": null // Make sure the game doesn't crash
+          },
+          "GameObject|_recoiler": {
+            "localScale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0.1355, "y": 0.06, "z": 1.2 }
+            }
+          }
+        },
+        "Duplicate|_barrel": {
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0.135, "y": 0.28, "z": 0.06 }
+            }
+          }
+        },
+        "Duplicate|_barrel_copy": {
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0.86, "y": 1.27, "z": -1.1 }
+            }
+          }
+        },
+        "Duplicate|_barrel_copy_copy": {
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0.86, "y": 1.48, "z": -2.23 }
+            }
+          }
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 5, //72
+      "m_RotateSpeed" : 800
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.05,
+	    "m_CooldownVariancePct": 0.0,
+      "m_NumCannonBarrels": 4,
+      "m_SeekingRounds": true
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.052,
+      "m_MuzzleVelocity": 150.0,
+      "m_KickbackStrength": 200.0,
+      "m_BulletCasingPrefab": null, // Don't need that
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": { 
+          "m_DamageType" : 1, 
+          "m_Damage": 80
+        },
+        "Rigidbody": {
+          "useGravity": false
+        },
+        "Projectile": {
+          "m_LifeTime": 1.0,
+          "m_ExplodeAfterLifetime": false,
+          "m_DeathDelay": 0.0,
+          "m_ExplodeOnTerrain": true,
+          "m_SingleImpact": true,
+          "m_RotateWithVelocity": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "m_StickOnContact": false,
+          "m_StickOnTerrain": false,
+          "m_ExplodeOnStick": false,
+          "m_HideProjectileOnStick": false,
+          "m_ProjectileToHide": null,
+          "m_ImpactSFXType": 8,
+          "m_FlightSFXType": 0,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_EffectRadius": 3.0,
+              "m_EffectRadiusMaxStrength": 3.0,
+              "m_MaxDamageStrength": 0.0,
+              "m_MaxImpulseStrength": 1500,
+              "m_DamageType": 3,
+              "m_ExplosionType": 0
+          },
+          "GameObject|Sparks": { 
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startSize": 0,
+              "maxParticles": 0
+                }
+              }
+            }
+          },
+          "GameObject|ExplosionBright": { 
+            "UnityEngine.Transform": {
+              "localScale": { "x": 0.0001, "y": 0.0001, "z": 0.0001 }
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor":{
+                    "r": 0.12,
+                    "g": 0.3,
+                    "b": 1.0,
+                    "a": 0.3
+                  },
+                  "startSize": 0.00001,
+                  "startSpeed": 0,
+                  "emissionRate": 1.0,
+                  "maxParticles": 2,
+                  "emission": {
+                    "rateMultiplier": 2.0,
+                    "rateOverTimeMultiplier": 0.2
+                    /*"burst": {
+                      "count": 3,
+                      "maxCount": 2,
+                      "minCount": 1
+                    }*/
+                  }
+                }
+              }
+            }
+          },
+          "GameObject|ExplosionDark": { 
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startSize": 0,
+              "maxParticles": 0
+                }
+              }
+            }
+          },
+          "GameObject|ExplosionSmoke": { 
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startSize": 0,
+              "maxParticles": 0
+                }
+              }
+            }
+          },
+          "GameObject|Point light": null,
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0,
+            "maxParticles": 0
+              }
+            }
+          }
+         }
+        },
+        "CapsuleCollider": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 0.1,
+          "height": 0.5,
+          "direction": 2  
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 150.0,
+          "m_VisionRange": 30.0,
+          "m_TurnSpeed": 50.0,
+          "m_SeekType": 1,
+          "enabled": true
+        },
+        "LineRenderer": {
+          "startWidth": 0.35,
+          "endWidth": 0.1,
+          "widthMultiplier": 1.0,
+          "startColor":{
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.2
+          },
+          "endColor":{
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 0.0
+          }
+        }
+      }
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "type": "WeaponFiring"
+        }
+      ]
+    }
+  }			
+}

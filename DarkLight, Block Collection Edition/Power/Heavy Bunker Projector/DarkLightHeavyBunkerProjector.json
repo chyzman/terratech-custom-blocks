@@ -1,0 +1,219 @@
+{
+  "Name": "DarkLight Heavy Bunker Projector",
+                //It's very long...
+  "Description": "Considered as one of the most powerful projectors out there, this SCU infused combined shield/repair projector is capable of taking very hard hits and still standing. Thanks to the SCU parts, it's able to slow the shut down sequence considerably at the cost of boot up speed.. and it being VERY costly.\nDo note the heal pulses are also extremely slow but powerful, so your healing will take a bit.\n\n\nThe origins of this projector lies within an 'accident' while reverse engineering a GSO SCU and an undisclosed projector in the attempts to replicate the infamous \"SamSite Barrier\". It was found that it was possible to abuse the SCU to lengthen the time the barrier could hold up while running out of power, <b>and so we did</b>.\nWe still can't figure out why there were bird feathers near the projector and SCU..\n\nMore recently, people have been confusing this with a shrine (especially when near lemon projectors), so some of these have inscriptions unique to each one.",
+                 //You can make multiple lines with \n
+  "ID": 2000064, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 6, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 5
+  "Price": 143020, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 8950, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+                 //This is actually slightly lower than having 18 Brudger blocks in the same space
+  "Mass": 54.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.8, "z": 1.0},
+                 //Heavy as HECK to hold up all the functionality stuff
+
+  "Fragility": 0.5, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 2, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "52, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 62, 62, 62, 63, 63, 66, 66, 66, 66,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLHeavyBunkerProjector.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": "DLHeavyBunkerProjector.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": "DLHeavyBunkerProjectorCollider.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 2,
+    "y": 3,
+    "z": 3
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": 0,    "y": 0,    "z": -0.5 },
+    { "x": 1,    "y": 0,    "z": -0.5 },
+    { "x": 0,    "y": 0,    "z": 2.5  },
+    { "x": 1,    "y": 0,    "z": 2.5  },
+    { "x": -0.5, "y": 0,    "z": 0    },
+    { "x": 1.5,  "y": 0,    "z": 0    },
+    { "x": -0.5, "y": 0,    "z": 2    },
+    { "x": 1.5,  "y": 0,    "z": 2    },
+    { "x": 0,    "y": -0.5, "z": 0    },
+    { "x": 0,    "y": -0.5, "z": 1    },
+    { "x": 0,    "y": -0.5, "z": 2    },
+    { "x": 1,    "y": -0.5, "z": 0    },
+    { "x": 1,    "y": -0.5, "z": 1    },
+    { "x": 1,    "y": -0.5, "z": 2    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_Shield_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true, //If not true, prefab renderers will be removed
+  "KeepColliders": true, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 1.2,
+    "z": 1
+  }, //Shift the subobjects of the block prefab by x, y and z
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  */
+  /*
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Scale all the subobjects of the block prefab by the origin
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_Shield_111_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+    "SubOverrideName": "m_BF_Radar_111_Sensor",
+    "MeshName": "DLHeavyBunkerProjectorBall.obj", 
+    "MeshTextureName": "DarkLight1.png", 
+    "MeshGlossTextureName": "DarkLight2.png", 
+    "MeshEmissionTextureName": "DarkLight3.png"
+    //"Position": { "x": 0.5, "y": 1.2, "z": 1 }
+    }
+  ],
+
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+
+  "JSONBLOCK": {
+    //CAN YOU PLEASE SPIN-
+    "Reference|BF_Radar_111/_spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.5, "y": 1.2, "z": 1 }
+       },
+      "Spinner": {
+        "m_Speed": 0.01,
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 10.0,
+        "m_CurrentAngle": 0.0, 
+        "m_RotationAxis": { "axis": 1 }
+      }
+    },
+
+    //Stronk Shield thing, i guess
+    //Contains large bubble with decent efficiency
+    //The repair part has a *long* but very powerful pulse
+
+    "ModuleShieldGenerator": {
+      //Basic Parts
+      "m_Radius": 25.0,  //The radius of the bubble
+      "m_EnergyConsumptionPerSec": 45, //How much battery this thing is going to consume per second
+      "m_InitialChargeEnergy": 4000.0, //How much it murders your batteries when booting up
+      "m_PowerUpDelay": 10.0, //How much time it takes to START booting up
+      "m_EnergyConsumedPerDamagePoint": 0.5, //How much your battery's capacity gets murdered when it gets hit by a Solaris
+
+      //Switches
+      "m_Healing": true, //Enables the Repair part
+      "m_Repulsion": true, //Enables the Shield part
+
+      //Repair
+      "m_HealingHeartbeatInterval": 10.0, //How long it takes for a Repair Pulse to activate
+      "m_MaxHealingPerHeartbeat": 10000, //How much health gets healed per pulse
+      "m_EnergyConsumedPerPointHealed": 0.5, //How much your battery's capacity gets murdered after getting hit by a Solaris trying to recover
+      
+      //Delay 1000
+      "m_InterpTimeOn": 10.0,
+      "m_InterpTimeOff": 15.0
+    },
+
+    //It's High Noon- priority
+    "ModuleEnergy": {
+      "m_Priority": 18
+    },
+
+    //SCU time:tm:
+    "Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon/Charging_Static": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x": 0.5, "y": 1.2, "z": 1 }
+      },
+
+      "ParticleSystem": {
+        "playbackSpeed": 0.1
+     },
+
+     "GameObject|Ray_01": null,
+     "GameObject|Ray_02": null,
+     "GameObject|Ray_03": null,
+     "GameObject|Ray_04": null
+    },
+
+    //Hey look, PURPLE
+   "GameObject|_shield": {
+     "GameObject|_bubble": {
+      "GameObject|m_HE_Shield_111_Sphere_Edge": {
+        "GameObject|m_HE_Shield_111_Sphere_Outer": {
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "color": {
+              "r": 1.0,
+              "g": 0.0,
+              "b": 1.0,
+              "a": 0.5
+             }
+            }
+          }
+        },
+        "GameObject|m_HE_Shield_111_Sphere_Inner": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 1.0,
+                "a": 0.2
+               }
+              }
+            }
+          }
+      }
+     }
+   }
+  }
+
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

@@ -1,0 +1,113 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Better Future Vector Engine",
+  "Description": "The Vector Engine uses self-contained hovering technology to introduce eternal motion in the direction it is facing at, while also improving movement in other directions through complex gravitational distortion mechanisms.", //You can make multiple lines with \n
+  "ID": 910951, //A random ID that MUST be unique
+
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 11925,
+  "HP": 600,
+  "Mass": 1,
+
+  "IconName": "BF_Vector_Engine_Icon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "BF_Vector_Engine.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "17, 17, 52, 52, 59, 63", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "BF_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything!
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if SubObjects is being used for it
+
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //Units in the grid space to be occupied
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 1,
+      "z": 0
+    }
+  ],
+  /*  OR  */
+
+  /*  EITHER  */
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+  /*  OR  */
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "BlockExtents": and "APsOnlyAtBottom":
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_HoverJet_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+  
+  "SubObjects": [{
+    "SubOverrideName": "m_HoverTrigger",
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "SubScale": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    }
+  }, {
+    "SubOverrideName": "m_GSO_Hover_111_Jet",
+    "SubPosition": {
+      "x": 0,
+      "y": 0.45,
+      "z": 0
+    },
+    "SubRotation": {
+      "x": 0, // Pitch
+      "y": 0, // Yaw
+      "z": 0 // Roll
+    }
+  }],
+
+  "JSONBLOCK": {
+    "GameObject|m_HoverTrigger": {
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 // Layer Wheel
+        }
+      }
+    },
+    "GameObject|m_GSO_Hover_111_Jet": {
+      "UnityEngine.Transform": { "localPosition": { "x":0, "y":0, "z":0 } } },
+  }
+}

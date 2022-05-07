@@ -1,0 +1,70 @@
+{
+  "Name": "Old Star Iron Train Plow Right",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! The Plow is one of the most robust items in the Old Star catalog with a solid frame and reinforced bars you can be sure to force your way though trees and/or would be blockades!",
+  "ID": 300078,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 6264,
+  "HP": 9000,
+  "Mass": 30,
+  "IconName": "OS_Train_Plow_Right_Icon.png",
+  "MeshName": null,
+  "ColliderMeshName":null,
+  "Recipe":  [
+      {"44": "3"},
+      {"45": "3"},
+      {"53": "3"},
+      {"54": "3"}
+], 	
+"DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+// 0    = Standard
+// 1    = Armor
+// 2    = Rubber
+// 3    = Volatile
+// 4    = Shield
+// 5    = Wood
+// 6    = Rock
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "CellMap": [
+    ["TTT",
+     "TTT",
+     "TTT"],
+    ["TTT",
+     "TTT",
+     "TTT"],
+    ["TT ",
+     "TT ",
+     "TT "],
+    ["   ",
+     "TT ",
+     "TT "]
+    ],
+  "APsOnlyAtBottom": false,
+  "SubObjects":[
+    {
+    "ObjectName":                "GSO_Block_112",               
+    "MeshName":                  "OS_HI_Left_Plow.obj",
+    "ColliderMeshName":          "OS_HI_Left_PlowC.obj",      
+    "DestroyExistingRenderer":   true,
+    "DestroyExistingColliders":  true,
+    "Position":                  { "x": 2, "y": 0, "z": 0 },
+    "Scale":                     {"x":-1, "y": 1, "z": 1}
+    }  
+],
+  "APs":[
+    //Back
+    { "x": 0.0,"y": 2.0,"z":-0.5 },{ "x": 1.0,"y": 2.0,"z":-0.5 },{ "x": 2.0,"y": 2.0,"z":-0.5 },
+    //top
+    { "x": 0.0,"y": 2.5,"z": 0.0 },{ "x": 1.0,"y": 2.5,"z": 0.0 },{ "x": 2.0,"y": 2.5,"z": 0.0 },
+    //Side
+    { "x": 2.5,"y": 2.0,"z": 0.0 },{ "x":-0.5,"y": 2.0,"z": 0.0 }
+  ]
+}

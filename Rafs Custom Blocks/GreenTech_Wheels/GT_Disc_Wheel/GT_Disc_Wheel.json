@@ -1,0 +1,198 @@
+{
+  "Name": "GreenTech Disc Wheel",
+  "Description": "Although not very maneuverable or fast, the Disc Wheel is a small powerhouse of GreenTech, also durable and easily stackable to make long rollers.",
+  "ID": 911129,
+  "PairedBlock": 911129,
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 1131, 
+  "HP": 800, 
+  "Mass": 4,
+  "CenterOfMass": {"x": 0.0, "y": 1.5, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 3, 3, 3, 5, 5, 7, 7, 11, 13",
+  "IconName": "GT_Disc_Wheel_Icon.png",
+ 
+   "Cells": [ 
+	{ "x": 0, "y": 0, "z": 1 },
+	{ "x": 0, "y": 0, "z": 2 },
+	{ "x": 0, "y": 1, "z": 0 },
+	{ "x": 0, "y": 1, "z": 1 },
+	{ "x": 0, "y": 1, "z": 2 },
+	{ "x": 0, "y": 1, "z": 3 },
+	{ "x": 0, "y": 2, "z": 0 },
+	{ "x": 0, "y": 2, "z": 1 },
+	{ "x": 0, "y": 2, "z": 2 },
+	{ "x": 0, "y": 2, "z": 3 },
+	{ "x": 0, "y": 3, "z": 1 },
+	{ "x": 0, "y": 3, "z": 2 }
+  ], 
+  
+  "APs": [ 
+    {"x": 0.5, "y": 1, "z": 1},
+	{"x": 0.5, "y": 1, "z": 2},
+	{"x": 0.5, "y": 2, "z": 1},
+	{"x": 0.5, "y": 2, "z": 2},
+	{"x": -0.5, "y": 1, "z": 1},
+	{"x": -0.5, "y": 1, "z": 2},
+	{"x": -0.5, "y": 2, "z": 1},
+	{"x": -0.5, "y": 2, "z": 2}
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Armoured_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	  {
+		"MakeBoxCollider": true,
+		"SubScale": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.5
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 1.5,
+			"z": 1.5
+		},
+		"Layer": 8
+	  },
+	  {
+	"MeshName": "GT_Disc_Wheel.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+	"SubRotation": {
+		"x": 0,
+		"y": 0,
+		"z": 0
+	},
+	"SubPosition": {
+		"x": 0,
+		"y": 0,
+		"z": 0
+	}
+    },
+	{
+		"SubOverrideName": "m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "GT_Disc_Wheel_Tire.obj",
+		"ColliderMeshName": "GT_Disc_Wheel_Collider.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"Layer": 8
+	},
+	/* {
+		"SubOverrideName": "_wheel_copy/m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "GT_Disc_Wheel_Tire.obj",
+		"ColliderMeshName": "GT_Disc_Wheel_Collider.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"Layer": 8
+	}, */
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 1.65,
+			"z": 1.5
+		}
+	},
+	/* {
+		"SubOverrideName": "_wheel_copy",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 1,
+			"y": 1.65,
+			"z": 1.5
+		}
+	} */
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	//   "Duplicate|_wheel":{},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 7000,
+		   "torqueCurveMaxRpm": 190,
+		  "passiveBrakeMaxTorque": 5000,
+		   "reverseBrakeMaxRpm": 110,
+		   "basicFrictionTorque": 100.0,
+		   "fullCompressFrictionTorque": 500
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 2.0
+				}
+			  },
+			"radius": 1.5,
+			"thicknessAngular": 20,
+			"suspensionSpring": 8000.0,
+			"suspensionDamper": 300.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.3,
+			"steerAngleMax": 10,
+			"steerSpeed": 3
+			//"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0,
+		// "m_WheelGeometry": ["_wheel/Transform.", "_wheel_copy/Transform."]
+	}
+     }
+}

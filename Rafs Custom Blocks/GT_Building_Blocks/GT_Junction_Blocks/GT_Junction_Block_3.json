@@ -1,0 +1,110 @@
+{
+  "Name": "GreenTech Junction Block Three",
+  "Description": "A special curved block section with a wooden bridge to another section.",
+  "ID": 911185, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2775, 
+  "HP": 8000,
+  "Mass": 16,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 9, 9, 9, 9, 32, 32, 32, 32, 45, 52, 52" ,
+  "IconName": "GT_Junction_Block_3_Icon.png", 
+  "MeshName": "GT_Junction_Block_3.obj", 
+  "ColliderMeshName": "GT_Junction_Block_3_Collider_A.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "   x   "
+  ],
+  [
+    "  xxx  "
+  ],
+  [
+    " xxxxxx"
+  ],
+  [
+    "xxx  xx"
+  ],
+  [
+    " xx    "
+  ],
+  [
+    "  xx   "
+  ],
+  [
+    "  xx   "
+  ]
+],  
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 0, "y": 0.5,"z": 3},
+    {"x": 3, "y": -0.5, "z": 0},	
+    {"x": 3, "y": 0.5,"z": 0},
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 2, "y": 0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 1, "y": 0.5,"z": 2},
+    {"x": 2, "y": -0.5, "z": 1},	
+    {"x": 2, "y": 0.5,"z": 1},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": 3, "y": 0, "z": -0.5}, 
+    {"x": 0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": 0.5}, 
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 1.5}, 
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 2.5},
+
+    {"x": 2,"y": 0.5,"z": 5},
+    {"x": 2,"y": 0.5,"z": 6},
+    {"x": 3,"y": 0.5,"z": 5},
+    {"x": 3,"y": 0.5,"z": 6},
+    {"x": 2,"y": -0.5,"z": 5},
+    {"x": 2,"y": -0.5,"z": 6},
+    {"x": 3,"y": -0.5,"z": 5},
+    {"x": 3,"y": -0.5,"z": 6},
+
+    {"x": 5,"y": 0.5,"z": 2},
+    {"x": 5,"y": 0.5,"z": 3},
+    {"x": 6,"y": 0.5,"z": 2},
+    {"x": 6,"y": 0.5,"z": 3},
+    {"x": 5,"y": -0.5,"z": 2},
+    {"x": 5,"y": -0.5,"z": 3},
+    {"x": 6,"y": -0.5,"z": 2},
+    {"x": 6,"y": -0.5,"z": 3}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "ColliderMeshName": "GT_Junction_Block_3_Collider_B.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_3_Collider_C.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_3_Collider_D.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_3_Collider_E.obj",
+      "Layer": 8
+    }
+  ]
+}

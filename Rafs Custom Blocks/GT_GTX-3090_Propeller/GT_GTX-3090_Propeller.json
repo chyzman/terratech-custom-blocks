@@ -1,0 +1,129 @@
+{
+  "Name": "GreenTech GTX-3090 Propeller",
+  "Description": "Bi-directional propeller initially designed for large hovercrafts but proved quite versatile and easy to stack.",
+  "ID": 911235, 
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 28098, 
+  "HP": 8000, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 1.5, "y": 1.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "52, 52, 54, 54, 57, 57, 61, 61, 63, 63" ,
+  "IconName": "GT_Hovercraft_Fan_Icon.png", 
+  "MeshName": "GT_Hovercraft_Fan.obj",
+  "ColliderMeshName": "GT_Hovercraft_Fan_Collider.obj",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 4,"y": 4, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 3, "y": 0, "z": 0.5},
+    {"x": 3, "y": 0, "z": -0.5},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 3, "y": -0.5, "z": 0}
+  ],
+  
+  "GamePrefabReference": "GSO_Fan_221",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Fan_Blades_212",
+     "MeshName": "GT_Hovercraft_Fan_Rotor.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png"
+  }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_spinner": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.5,
+          "z": 0
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GameObject|m_GSO_Fan_Blades_212": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": -1
+          }
+        }
+      },
+      "Spinner": {
+        "m_Speed": 3.0,
+        "m_SpinUpTime": 1.0
+      }
+    },
+  "GameObject|_fanJet": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "FanJet": {
+            "force": 10000.0,
+            "backForce": 10000.0,
+            "spinDelta": 1.0,
+            "spinSpeed": 300.0,
+            "m_FanSpinner": "_spinner/Spinner."
+          }
+        },
+		 "ModuleBooster": {
+      "m_BoosterAudioType": 3
+    }
+  }
+}

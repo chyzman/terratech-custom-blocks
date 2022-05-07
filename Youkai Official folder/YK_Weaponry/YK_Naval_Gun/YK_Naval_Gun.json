@@ -1,0 +1,226 @@
+{
+  // Basic Block Information
+  "Name":                 "Youkai Katori Naval Gun",
+  "Description":          "This deadly double barrelled naval cannon, which was originally conceived by Dr. Spirit, fires volleys devastating of rounds in rapid succession, obliterating smaller foes with just the first shot.",
+  
+  "ID": 19036,            // This is the Block ID; it must be unique
+
+  "Faction": 1,           // Tells TT what Corporation this block belongs to.
+  "Category": 4,
+  "Rarity": 2,
+  "Grade": 4,
+  "Price": 35667,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+
+  "Recipe":  "54, 54, 54, 54, 54, 55, 55, 55, 55, 46, 46, 53, 53, 63, 61, 61, 61",
+
+  "IconName":                   "YK_Naval_Gun.png",                         // Name of the block's icon. This will be used in the UI screen                            
+  "MeshName":                   null,                                       // Name of the block's mesh                                        
+  "MeshColliderName":           null,                                       // Name of the block's collider.
+  "NoBoxCollider":              false,
+
+  "TextureName":              "YK_Texture 1.png",
+  "GlossTextureName":         null,
+  "EmissionTextureName":      null,
+
+  // Basic Block Values
+  "HP":       3000,       // A GSO one block has 250 health
+  "Mass":     35,
+
+  "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                          // 0    = Standard
+                          // 1    = Armor
+                          // 2    = Rubber
+                          // 3    = Volatile
+                          // 4    = Shield
+                          // 5    = Wood
+                          // 6    = Rock
+
+  "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+  // Block Dimensions
+  "BlockExtents": { "x": 5, "y": 2,"z": 5 },
+
+  "APs": [
+    { "x": 2, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 2 }, { "x": 2, "y": -0.5, "z": 2 }, { "x": 3, "y": -0.5, "z": 2 },
+    { "x": 2, "y": -0.5, "z": 3 }
+  ],
+
+  // Advanced Settings
+  "PrefabReference": "VEN_Cannon_Rapid_313",
+  "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "PrefabPosition": { "x": 0, "y": 0, "z": 0 },
+
+
+  "SubObjects": [
+    // Replace the original meshes with new ones 
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+      "MeshName": "YK_Bullet.obj", 
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png", 
+    "SubScale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "SubPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    }
+  },
+    {
+      "ObjectName":                 "m_VEN_CannonRapid_313_Barrel_L",
+      "MeshName":                   "YK_Naval_Gun_Barrel.obj",
+      "MeshTextureName":            "YK_Texture 1.png",
+      "MeshGlossTextureName":       "YK_Texture 2.png", 
+      "Position":                   { "x": 0, "y": 0, "z": 0 }
+    },
+    
+    {
+      "ObjectName":                 "m_VEN_CannonRapid_313_Barrel_R",
+      "MeshName":                   "YK_Naval_Gun_Barrel.obj",
+      "MeshTextureName":            "YK_Texture 1.png",
+      "MeshGlossTextureName":       "YK_Texture 2.png", 
+      "Position":                   { "x": 0, "y": 0, "z": 0 }
+    },
+
+    {
+      "ObjectName":                 "m_VEN_CannonRapid_313_Base",
+      "MeshName":                   "YK_Naval_Gun_Base.obj",
+      "MeshTextureName":            "YK_Texture 1.png",
+      "MeshGlossTextureName":       "YK_Texture 2.png", 
+      "Position":                   { "x": 2, "y": -0.3, "z": 2 }
+    },
+    {
+      "ObjectName":                 "m_VEN_CannonRapid_313_Mount",
+      "MeshName":                   "YK_Naval_Gun_Mount.obj",
+      "MeshTextureName":            "YK_Texture 1.png",
+      "MeshGlossTextureName":       "YK_Texture 2.png", 
+      "Position":                   { "x": 0, "y": 0.285, "z": 0 }
+    },
+    {
+      "ObjectName":                 "m_VEN_CannonRapid_313_Body",
+      "MeshName":                   "YK_Naval_Gun_Body.obj",
+      "MeshTextureName":            "YK_Texture 1.png",
+      "MeshGlossTextureName":       "YK_Texture 2.png", 
+      "Position":                   { "x": 0, "y": 0.0, "z": 0 }
+    },
+    // Move the other components to their proper places
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_L/_smoke",
+      "Position":                   { "x": 0, "y": 0, "z": 0.8 }
+    },
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_R/_smoke",
+      "Position":                   { "x": 0, "y": 0, "z": 0.8 }
+    },   
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_L/_muzzleFlash",
+      "Position":                   { "x": 0, "y": 0, "z": 0.25 },
+      "Scale":                      { "x": 1.5, "y": 1.5, "z": 1.5 }
+    },
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_R/_muzzleFlash",
+      "Position":                   { "x": 0, "y": 0, "z": 0.25 },
+      "Scale":                      { "x": 1.5, "y": 1.5, "z": 1.5 }
+    },
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_L/_casingSpawn",
+      "Position":                   { "x": 0.2, "y": 1.25, "z": -2.5 }
+    },
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_R/_casingSpawn",
+      "Position":                   { "x": -0.2, "y": 1.25, "z": -2.5 }
+    },
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_L/_bulletSpawn",
+      "Position":                   { "x": 0.0, "y": 0.0, "z": 2.5 }
+    },    
+    {
+      "ObjectName":                 "_gimbalBase/_gimbalElev/_barrel_R/_bulletSpawn",
+      "Position":                   { "x": 0.0, "y": 0.0, "z": 2.5 }
+    }  
+  ],
+  "Deserializer":{
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform":    { "localPosition":  { "x": 2, "y": -0.05, "z": 2 } },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform":  { "localPosition": { "x": 0, "y": 0.2, "z": -0.2 } },
+        "GimbalAimer":            { "rotationLimits": [-15, 40 ] },
+        "GameObject|_barrel_L": {
+          "UnityEngine.Transform": { "localPosition": { "x": -0.50, "y": 0, "z": 0 } }},
+        "GameObject|_barrel_R": {
+          "UnityEngine.Transform": { "localPosition": { "x": 0.50, "y": 0, "z": 0 } }}       
+      }
+    },
+    //********** Module Weapon **********//
+    "ModuleWeapon": { 
+      "m_FireSFXType": 64, 
+      "m_RotateSpeed": 45.0 
+    },
+    "ModuleWeaponGun": {
+      "m_FireControlMode": 0,
+      "m_ShotCooldown" : 0.85, 
+	    "m_CooldownVariancePct": 0.0,
+      //"m_BurstShotCount": 4,
+      //"m_BurstCooldown": 2.90,
+      "m_ResetBurstOnInterrupt": false,
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": {
+      "m_MuzzleVelocity":         95,        // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength":       650,        // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance":    0.05,      // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      "m_CasingVelocity": 10.0,                // Dictates the speed in which the casing ejects
+      "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+      "m_CasingEjectVariance": 0.3,           // Dictates the randomness of the casing's ejection. A bit of of value here will make the casing ejection more visually interesting
+      "m_CasingEjectSpin": 50.0,              // Dictates the amount of spin done by the casing when ejected. A bit of of value here will make the casing ejection more visually interesting
+      "Instantiate|m_BulletPrefab": { 
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1.5, "y":1.5, "z":1.5 }
+        },
+        "Projectile": {
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+                "m_ExplosionType": 3,                   // Dictates the damage type of the explosion
+                "m_EffectRadius": 4,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                "m_MaxDamageStrength":      750.0,      // The splash damage done
+                "m_MaxImpulseStrength":     700.0,      // The strength of the knockback done by the explosion
+                "m_EffectRadiusMaxStrength": 1.5, 
+                "m_DamageType": 3
+            }
+          }
+        },
+        "WeaponRound": { 
+          "m_Damage": 1250
+        },
+        "SmokeTrail":{
+          "numberOfPoints":   10.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+          "spread":           0.0,   // Dictates how erratic the trail is.
+          "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+          "updateSpeed":      0.15,   // DIctates the speed of the trail.
+      },
+      "LineRenderer": {
+        "startWidth": 0.5,
+        "endWidth": 0.1,
+        "widthMultiplier": 1.0,
+        "startColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 0.3,
+            "a": 1.0
+        },
+        "endColor":{
+            "r": 1.0,
+            "g": 0.1,
+            "b": 0.2,
+            "a": 1.0
+        }
+      }
+    }
+  }
+}
+}

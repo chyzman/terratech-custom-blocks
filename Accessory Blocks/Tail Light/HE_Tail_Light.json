@@ -1,0 +1,66 @@
+{
+  "Name": "Hawkeye Combat Vehicle Cage Light",
+  "Description": "An armored red light for night time convoys.",
+  "ID": 117074,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 0,
+  "Grade": 0,
+  "Price": 1146,
+  "HP": 1600,
+  "Mass": 1,
+  "EmissionMode": 2,
+
+  "Recipe": "5, 5, 7, 7, 32, 32, 45, 45",
+
+  "IconName": "HE_Tail_Light.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "Fragility": 0,
+
+  "Cells": [
+    { "x": 0,     "y": 0,    "z": 0  },
+    { "x": -1,     "y": 0,    "z": 0  },
+  ], 
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": -0.5  },
+    { "x": -1,     "y": 0,    "z": -0.5  },
+  ],
+
+  "SubObjects": [
+    {
+        "SubOverrideName": "m_GC_fixedlight",
+        "MeshName": "HE_Tail_Light.obj",
+        "ColliderMeshName": "HE_Tail_Light_Collider.obj",
+        "Subposition": {  "x": 0,     "y": 0,    "z": 0  },
+        "Subrotation": {  "x": 0,     "y": 0,    "z": 0  },
+        "MeshMaterialName": "HE_Main",
+    },
+],
+
+"GamePrefabReference": "GC_Light_Fixed_111",
+
+"JSONBLOCK": {
+    "GameObject|Lights": {
+        "UnityEngine.Transform": {
+            "localPosition": { "x": -0.5, "y": 0, "z": 0 },
+           },
+        "GameObject|GC_Fixedlight": {
+          "UnityEngine.Light":{
+            "color": {
+                "r": 1,
+                "g": 0,
+                "b": 0,
+                "a": 1.0
+              },
+            "intensity": 1.0,
+            "range": 30.0,
+            "spotAngle": 160.0
+          }
+        },
+    }
+  }
+
+}

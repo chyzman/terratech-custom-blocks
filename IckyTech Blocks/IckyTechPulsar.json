@@ -1,0 +1,245 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "IckyTech Pulsar",
+  "Description": "The Pulsar is a relatively small pulsed plasma launcher developed by IckyTech. It is primarily intended for use on small defense platforms, however this version has the ability to aim slightly. Not everyone has a two-axis weapons platform, after all.", //You can make multiple lines with \n
+  "ID": 404006, //A random ID that MUST be unique
+  
+  //This should no longer be necessary
+  //"IDNetHex": "4ff30da9fd33fff4", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 1, //The desired grade minus one
+  "Price": 60798,
+  "HP": 5000,
+  "Mass": 64,
+
+  "IconName": null, //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "IckyTechPulsar.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "49, 49, 57, 57, 58, 58, 58, 58, 62, 62, 62, 62, 65,", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": "IckyTech.png",
+  "GlossTextureName": "IckyTechShine.png",
+  /*  OR  */
+ 
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+ "Cells": [
+ {"x":0,"y":0,"z":0},{"x":0,"y":0,"z":1}, {"x":0,"y":0,"z":2},{"x":0,"y":0,"z":3},{"x":0,"y":0,"z":4},{"x":0,"y":0,"z":5},{"x":0,"y":0,"z":6},{"x":0,"y":0,"z":7},
+ {"x":1,"y":0,"z":0},{"x":1,"y":0,"z":1}, {"x":1,"y":0,"z":2},{"x":1,"y":0,"z":3},{"x":1,"y":0,"z":4},{"x":1,"y":0,"z":5},{"x":1,"y":0,"z":6},{"x":1,"y":0,"z":7},
+ {"x":0,"y":1,"z":0},{"x":0,"y":1,"z":1}, {"x":0,"y":1,"z":2},{"x":0,"y":1,"z":3},{"x":0,"y":1,"z":4},{"x":0,"y":1,"z":5},{"x":0,"y":1,"z":6},{"x":0,"y":1,"z":7},
+ {"x":1,"y":1,"z":0},{"x":1,"y":1,"z":0}, {"x":1,"y":1,"z":2},{"x":1,"y":1,"z":3},{"x":1,"y":1,"z":4},{"x":1,"y":1,"z":5},{"x":1,"y":1,"z":6},{"x":1,"y":1,"z":7}
+
+ ],
+  "APs":[
+    {"x":0,"y":-0.5,"z":0},{"x":0,"y":-0.5,"z":1}, {"x":0,"y":-0.5,"z":2},{"x":0,"y":-0.5,"z":3},
+    {"x":1,"y":-0.5,"z":0},{"x":1,"y":-0.5,"z":1}, {"x":1,"y":-0.5,"z":2},{"x":1,"y":-0.5,"z":3},
+    {"x":0,"y":1.5,"z":0},{"x":0,"y":1.5,"z":1}, {"x":0,"y":1.5,"z":2},{"x":0,"y":1.5,"z":3},
+    {"x":1,"y":1.5,"z":0},{"x":1,"y":1.5,"z":0}, {"x":1,"y":1.5,"z":2},{"x":1,"y":1.5,"z":3},
+    {"x":-0.5,"y":0,"z":0},{"x":-0.5,"y":0,"z":1}, {"x":-0.5,"y":0,"z":2},{"x":-0.5,"y":0,"z":3},
+    {"x":1.5,"y":0,"z":0},{"x":1.5,"y":0,"z":1}, {"x":1.5,"y":0,"z":2},{"x":1.5,"y":0,"z":3},
+    {"x":-0.5,"y":1,"z":0},{"x":-0.5,"y":1,"z":1}, {"x":-0.5,"y":1,"z":2},{"x":-0.5,"y":1,"z":3},
+    {"x":1.5,"y":1,"z":0},{"x":1.5,"y":1,"z":0}, {"x":1.5,"y":1,"z":2},{"x":1.5,"y":1,"z":3},],
+
+    "GamePrefabReference": "GC_PlasmaCutter_Auto_434",
+	"KeepRenderers": false, // Keep the block's renderers
+	"KeepColliders": false, // Keep the block's colliders
+
+	"SubObjects": [{
+			"SubOverrideName": "m_GC_PlasmCutter_Auto_434_Base",
+            "DestroyExistingRenderer": true
+            	}, {
+			"SubOverrideName": "m_GC_PlasmCutter_Auto_434_Body",
+            "DestroyExistingRenderer": true
+	
+		}, {
+			"SubOverrideName": "_gimbalBase",
+			"DestroyExistingRenderer": true
+		}, {
+			"SubOverrideName": "_gimbalElev",
+            "DestroyExistingRenderer": true
+		}, {
+			"SubOverrideName": "_barrel",
+            "DestroyExistingRenderer": true
+			},
+		 {
+			"SubOverrideName": "_beam",
+			"SubPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 7
+			}
+		},
+		{
+			"SubOverrideName": "_muzzleFlash",
+			"SubPosition": {
+				"x": 0,
+				"y": -0.5,
+				"z": 5
+			},
+			"SubScale": {
+				"x": 2,
+				"y": 2,
+				"z": 3,
+			}
+
+		},
+		{
+			"SubOverrideName": "m_GC_PlasmCutter_Auto_434_Nozzle",
+			"DestroyExistingRenderer": true
+		},
+		{
+			"SubOverrideName": "FX_GC_PlasmaCutter_Beam",
+			"DestroyExistingRenderer": true
+		},
+		{
+			"SubOverrideName": "m_GC_PlasmCutter_Auto_434_Mount",
+			"DestroyExistingColliders": true,
+	
+		}
+	],
+	"JSONBLOCK": {
+
+		"ModuleWeapon": {},
+		"ModuleWeaponGun": {
+			"m_FiringData": {
+				"m_KickbackStrength": 0.0
+			}
+		},
+		"FireData": {
+			"m_KickbackStrength": 0.0
+		},
+
+		"GameObject|_gimbalBase": {
+			"GimbalAimer": { //Useful component - Horizontal Aiming
+				"rotationLimits": [-2.5, 2.5] //[-Left,+Right](Degrees)
+			},
+			"GameObject|_gimbalElev": {
+				"GimbalAimer": { //Useful component - Vertical Aiming
+					"rotationLimits": [-2.5, 2.5] //[-Up,+Down](Degrees)
+				},
+				"GameObject|_barrel": {
+					"GameObject|_muzzleFlash": {
+						"GameObject|_light": {
+							"UnityEngine.Light": {
+								"color": {
+									"r": 1.0,
+									"g": 0.6,
+									"b": 0.0,
+									"a": 0.5
+								},
+								"range": 5,
+								"intensity": 4
+							}
+						}
+					},
+					"GameObject|_beam": {
+						"BeamWeapon": {
+							"m_Range": 60,
+							"m_DamagePerSecond": 0,
+							"m_DamageType": 7,
+							"Range": 60.0
+						}
+					},
+					"CannonBarrel": {
+						"m_Range": 60,
+						"Range": 60,
+						"beamWeapon": {
+							"m_Range": 60,
+							"m_DamagePerSecond": 2500,
+							"m_DamageType": 7,
+							"Range": 60.0,
+							"Instantiate|m_BeamParticlesPrefab": {
+								"UnityEngine.Transform": {
+									"gameObject": {
+										"active": true
+									}
+								},
+								"GameObject|FX_Sparkles": {
+									"UnityEngine.Transform": {
+										"gameObject": {
+											"active": true
+										},
+										"localScale": {
+										  "x": 2,
+										  "y": 2,
+										  "z": 3
+										},
+									},
+									"UnityEngine.ParticleSystem": {
+										"startDelay": 0.0,
+										"loop": true,
+										"playOnAwake": false,
+										//"maxParticles": 1000,
+										//"startLifetime": 1.0,
+										//"duration": 1.0,
+								        //"playbackSpeed": 1.0,
+										//"emissionRate": 20,
+										//"startSpeed": 0.5,
+										"startSize": 1.5,
+										"startColor": {
+											"r": 1.0,
+											"g": 0.6,
+											"b": 0.0,
+											"a": 0.5
+										},
+										
+									},
+									"UnityEngine.ParticleSystemRenderer": {
+									 "lengthScale": 2,
+									 //"normalDirection": 0.5,
+									}
+								},
+								"UnityEngine.ParticleSystem": {
+									"startDelay": 0.0,
+									"loop": true,
+									"playOnAwake": false,
+									"duration": 1,
+									"playbackSpeed": 1.0,
+									"enableEmission": true,
+									"emissionRate": 5.0,
+									"startSpeed": 50.0,
+									"startSize": 2,
+									"startColor": {
+										"r": 1.0,
+										"g": 0.4,
+										"b": 0,
+										"a": 0.5
+									},
+									"startRotation": 15.0,
+									"startLifetime": 1,
+									"gravityModifier": 0.0,
+									"maxParticles": 50
+								}
+							},
+							"m_HitParticlesPrefab": {
+								//""startDelay": 0.0,
+								//""loop": true,
+								//""playOnAwake": true,
+								//""duration": 1.0,
+								//""playbackSpeed": 1.0,
+								//""enableEmission": true,
+								//""emissionRate": 100.0,
+								//""startSpeed": 10.0,
+								//"startSize": 0.1,
+								"startColor": {
+									"r": 1.0,
+									"g": 0.6,
+									"b": 0,
+									"a": 1.0
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

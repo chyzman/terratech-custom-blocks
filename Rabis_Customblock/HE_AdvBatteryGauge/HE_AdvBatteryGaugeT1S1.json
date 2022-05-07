@@ -1,0 +1,321 @@
+{ // reference  gameobject  moduleweapon  firedata
+    "Name": "Hawkeye Tier1-Seg1 Adv.Battery Gauge",
+    "Description": "Make your tech and base cool with this holographic battery gauge! This gauge covers the range of 0 to 120,000", //You can make multiple lines with \n
+    "ID": 546365, //A random ID that MUST be unique
+
+    "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 2, //The desired grade minus one
+    "Price": 525, //The price is measured by sum of recipe value times 3
+    "HP": 400, //A GSO one block has 250 health
+    "Mass": 1,
+    //"CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.0},
+
+    "Fragility": 0.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+    "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+    "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+    "Recipe": "1, 13, 13 "  ,
+
+    //"DropFromCrates": false, // No change = true
+    //"PairedBlock": 534968, // ID of paired block (Can be used to drop 2 wheels)
+
+
+    "IconName": "HE_AdvBatteryGauge.png",
+    "MeshName": "HE_AdvBatteryGauge.obj",
+    "MeshTextureName": null,
+    "MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything! (You can use this in combination with the above)
+    "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+    "ColliderMeshName": "HE_AdvBatteryGauge_c.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+    "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+    "BlockExtents":
+    {"x": 1,"y": 1,"z": 1},
+    "APsOnlyAtBottom": false,
+    "APs": [
+        {"x": 0,"y": -0.5,"z": 0},
+        {"x": -0.5,"y": 0,"z": 0},{"x": 0.5,"y": 0,"z": 0},
+        {"x": 0,"y": 0,"z": 0.5},
+    ],
+
+    //OPTIONAL
+    "GamePrefabReference": "HE_ChainGun_112",
+    "KeepRenderers": false,
+    "KeepColliders": false,
+    //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+    "ReferenceOffset": {"x": 0,"y": 0,"z": 0},
+    "SubObjects": [
+      { // cosmetic glass "MeshMaterialName": "ObjectHighlight"
+          "ObjectName": "HE_AdvBatteryGauge_glass",
+          "MeshName": "HE_AdvBatteryGauge_glass.obj",
+          "MeshMaterialName": "ObjectHighlight",
+        },
+        /*{ // cosmetic projector beam "MeshMaterialName": "FX_Shield_Beam",
+          "ObjectName": "HE_AdvBatteryGauge_beam",
+          "MeshName": "HE_AdvBatteryGauge_beam.obj",
+          "MeshMaterialName": "FX_Shield_Beam",
+        },*/
+        {
+          "SubOverrideName": "HE_AdvBatteryGauge_panel",
+          "DestroyExistingRenderer": false,
+          "DestroyExistingColliders": true,
+          "MeshName": "HE_AdvBatteryGauge_panel.obj",
+          "MakeBoxCollider": false,
+          "MakeSphereCollider": false,
+          "ColliderMeshName": null,
+          "MeshMaterialName": "ExplosionLaser",
+
+          // ------------------------------!!! master transform !!!-------------------------------
+          "SubPosition": { "x": 0, "y": 3, "z": -1.5 },
+          "SubScale": { "x": 2, "y": 2, "z": 2 },
+          "SubRotation": {
+            "x": 90, // Pitch
+            "y": 180, // Yaw
+            "z": 0  // Roll
+          }
+          // ------------------------------!!! master transform !!!-------------------------------
+
+        },
+        {
+          "ObjectName": "HE_AdvBatteryGauge_num",
+          "MeshName": "HE_AdvBatteryGauge_num1.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0, "y": 0, "z": 0 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+
+        // ---------- Energy Gauge Bar 1
+        {
+          "ObjectName": "energyGauge1",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": -0.562628 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge2",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          
+          "SubPosition": { "x": 0.02058, "y": 0, "z": -0.432628 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge3",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": -0.302628 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge4",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": -0.172628 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        // ---------- Energy Gauge Bar 2
+        {
+          "ObjectName": "energyGauge5",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": 0.437372 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge6",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": 0.567372 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge7",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": 0.697372 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        {
+          "ObjectName": "energyGauge8",
+          "MeshName": "HE_AdvBatteryGauge_bar.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.02058, "y": 0, "z": 0.827372 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+
+        // ---------- hex LED sigh
+        { // 1
+          "ObjectName": "hexLED1",
+          "MeshName": "HE_AdvBatteryGauge_hexLED.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.47305, "y": 0, "z": -0.281867 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+        { // 2
+          "ObjectName": "hexLED2",
+          "MeshName": "HE_AdvBatteryGauge_hexLED.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0.47305, "y": 0, "z": 0.718133 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+
+        // ---------- large "CHARGED" sign
+        {
+          "ObjectName": "energyGaugeCharged",
+          "MeshName": "HE_AdvBatteryGauge_charged.obj",
+          "MeshMaterialName": "ExplosionLaser",
+          "SubPosition": { "x": 0, "y": 0, "z": 0 },
+          "SubScale": { "x": 1, "y": 1, "z": 1 },
+        },
+
+
+      ],
+    "Deserializer": {
+      // HE Chain gun's GameObject ------------------------
+      "GameObject|m_HE_50Cal_112_Base":{
+        "GameObject|_gimbalBase":{
+          "GameObject|_gimbalElev":{
+            "GameObject|_barrel":{
+              "UnityEngine.Transform": {
+                //"localEulerAngles": { "x":0, "y":0, "z":0 },
+                //"localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":0, "y":0, "z":10000 }
+              },
+            }
+          }
+        }
+      },
+
+      "GameObject|HE_AdvBatteryGauge_panel":{
+        "GameObject|HE_AdvBatteryGauge_num": {},
+        "GameObject|energyGauge1": {},
+        "GameObject|energyGauge2": {},
+        "GameObject|energyGauge3": {},
+        "GameObject|energyGauge4": {},
+        "GameObject|energyGauge5": {},
+        "GameObject|energyGauge6": {},
+        "GameObject|energyGauge7": {},
+        "GameObject|energyGauge8": {},
+        "GameObject|hexLED1": {},
+        "GameObject|hexLED2": {},
+        "GameObject|energyGaugeCharged": {},
+      },
+
+
+      "ModuleWeapon": {
+        "m_FireSFXType": 0,
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 999,
+      },
+      "FireData": {
+        //"m_MuzzleVelocity": 135,
+        "m_KickbackStrength": 0,
+        "Instantiate|m_BulletPrefab":{
+          "Projectile":{
+            "m_LifeTime": 0.001,
+          }
+        }
+      },
+      "ModuleConsumeEnergyToShell": {
+            "EnergyCost":           0,   // How much energy is needed to fire one round 
+                                            // (For continuous weapons, how much energy per second)
+            "EnergyCapacity":       0,   // How much energy this block can hold
+                                            
+            // The two below are intended for flamethrowers and beam weapons
+            "LowestPermittedEnergy": 0,    // The minimum amount of energy that can be left in a system 
+                                            // (Useful for continuous weapons: Don't drain all energy)
+            "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                            // (Useful for continuous weapons: Prevents studdering effect)
+
+            "CustomGauges": [                // Optional animatable transform
+              {
+                  "GaugeObject": "energyGauge1",
+                  "MinValue": 0,
+                  "MaxValue": 15000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge2",
+                  "MinValue": 15000,
+                  "MaxValue": 30000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge3",
+                  "MinValue": 30000,
+                  "MaxValue": 45000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge4",
+                  "MinValue": 45000,
+                  "MaxValue": 60000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge5",
+                  "MinValue": 60000,
+                  "MaxValue": 75000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge6",
+                  "MinValue": 75000,
+                  "MaxValue": 90000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge7",
+                  "MinValue": 90000,
+                  "MaxValue": 105000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+              {
+                  "GaugeObject": "energyGauge8",
+                  "MinValue": 105000,
+                  "MaxValue": 120000,
+                  "ScaleMin": {"x": 0, "y": 1, "z": 1},
+                  "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                  "Dampen": 0.2
+              },
+
+              // ------------ charged sign
+              {
+                "GaugeObject": "hexLED1",
+                "MinValue": 0,
+                "MaxValue": 120000,
+                "EnableAt": 0.5 // Ratio of Min & Max, 0 to 1
+              },
+              {
+                "GaugeObject": "hexLED2",
+                "MinValue": 0,
+                "MaxValue": 120000,
+                "EnableAt": 1 // Ratio of Min & Max, 0 to 1
+              },
+              {
+                "GaugeObject": "energyGaugeCharged",
+                "MinValue": 0,
+                "MaxValue": 120000,
+                "EnableAt": 1 // Ratio of Min & Max, 0 to 1
+              },
+            ]
+      },
+      "ModulePowerGauge": {},
+    }
+}

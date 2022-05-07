@@ -1,0 +1,155 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC SatNav Radar", //
+  "Description": "The SatNav is a radar with a long target scanning range in front of it, which can aid in sniping enemies. \n\nSatNav appreciates scouting the enemy from the safety of being afar, as closer events often end up in fatal outcomes.", //You can make multiple lines with \n
+  "ID": 584232, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one - HE Grade 4
+  "Price": 11520,//Radar Range Bonus
+  "HP": 1250, //Stronk
+  "Mass": 1.25,//
+
+  "IconName": "OHNOSatNav.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 45, 45, 53, 54, 60, 60", // Separate chunk names or IDs with a comma. Not case sensitive.
+      // "name": "Rugged Fiblar",
+      // "id": 52,
+      // "price": 94,
+      // "name": "Blast Caps",
+      // "id": 46,
+      // "price": 310,
+      // "name": "Cyclone Jet",
+      // "id": 57,
+      // "price": 650,
+      // "name": "Mother Brain",
+      // "id": 60,
+      // "price": 1465,
+      // "name": "Coffman Cell",
+      // "id": 62,
+      // "price": 1888,
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     {
+       "x": 0,
+       "y": 0,
+       "z": -0.5
+     },
+     {
+       "x": 0,
+       "y": 1,
+       "z": -0.5
+     }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 2,
+    "z": 1 //
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "GSO_Radar(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+  { // Base
+    "SubOverrideName": "m_GSO_Radar_111_Base",
+    // "DestroySubReferenceRenderer": true,
+    "DestroyExistingRenderer": true,
+    "DestroyExistingColliders": true,
+    "MeshName": "TACSatNavRadar.obj",
+    "MeshTextureName": null,
+    "MeshMaterialName": "HE_Main",
+    "MakeBoxCollider": false
+  },
+],
+	
+  //
+  // Deadly Laser
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_GSO_Radar_111_Base": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": -0.25
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 1.0,
+          "z": 0.25
+        }
+      },
+    },
+    //Now we begin MADNESS
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleVision": { //Temp Arty Tests
+      "visionRange": 400,
+      "visionConeAngle": 45, //Long ranged, in specific direction
+      "m_Range": 400
+    },
+    "ModuleRadar": {
+      // "m_Priority": 10, //How good is this radar compared to others?
+      // "m_MiniMapType": 1, //Small or Normal?
+      // "m_RadarOnSfxEvent": { //Radar noise when you put it on your Tech
+      //   "m_EventPath": "event:/OldAssets/RadarAttach"
+      // },
+      "m_Range": 300.0, //How far it lets us see on the minimap
+      // "MiniMapType": 1, //What the Minimap looks like: 0 for small, 1 for normal
+      //"m_MiniMap": null //What kind of minimap?
+    },
+  }
+}

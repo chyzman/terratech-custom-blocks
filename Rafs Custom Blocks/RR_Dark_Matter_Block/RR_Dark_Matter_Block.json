@@ -1,0 +1,80 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Reticule Research Dark Matter Block",
+  "Description": "A block that contains some Dark Matter, enough to greatly reduce its own mass and inertial effects.\n However, damage to the containment system may result in a moderate explosion, keep it safe.",
+  "ID": 910701,
+
+  "Faction": 3,
+  "Category": 0, 
+  "Grade": 0, 
+  "Price": 2076,
+  "HP": 250,
+  "Mass": 0.001,
+
+  "Recipe":  "17, 45, 48", 
+
+  "IconName": "RR_Dark_Matter_Block_Icon.png",
+  "MeshName": "RR_Dark_Matter_Block.obj", 
+  "MeshMaterialName": "RR_Main",
+  "SupressBoxColliderFallback": false,
+
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": -0.5, "y": 0, "z": 0},
+	{"x": 0.5, "y": 0, "z": 0}
+  ],
+
+  "GamePrefabReference": "BF_AntiGravityEngine_111", 
+  "KeepRenderers": false,
+  "Keepcolliders": false,
+  "DeathExplosionReference":"GSO_FuelTank_121",
+
+  "SubObjects": [
+      {
+        "MeshName": "RR_Dark_Matter_Block_Container.obj",
+        "MeshMaterialName": "Mat_BoosterRocketFlame"
+      },
+      {
+        "MeshName": "RR_Dark_Matter_Block_Container.obj",
+        "MeshMaterialName": "HE_Shield_Edge"
+      }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleEnergyStore": {
+      "m_EnergyType": 0,
+      "m_Capacity": 0.1
+    },
+    "ModuleEnergy": {
+      "m_OutputPerSecond": 0.01,
+      "m_OutputConditions": 0
+    },
+    "ModuleAntiGravityEngine": {
+      "m_Radius": 0.1,
+      "m_StrengthAsGravityScale": 1.0,
+      "m_SubtractGravity": true,
+      "m_EnergyUsedPerFilledCellPerSecond": 0.0,
+      "m_SwitchedOn": true,
+      "m_HasPower": true
+    },
+    "ModulePlacementZoneEffect": {
+      "m_Radius": 0.0
+    }
+    /*"ModuleTechController": {
+      "m_PlayerInput": true,
+      "useGUILayout": true,
+      "enabled": true
+    },
+    "ModuleVision": {
+      "visionConeAngle": 360.0,
+      "visionRange": 150.0
+    }*/
+  }
+}

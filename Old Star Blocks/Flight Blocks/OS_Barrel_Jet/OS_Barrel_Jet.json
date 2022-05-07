@@ -1,0 +1,180 @@
+{
+  "Name": "Old Star Barrel Jet",
+  "Description": "Now this is how the Old Star do. With the creation of the Barrel Rockets we were bound to also create a barrel that could carry a tech though the sky. with slight modifications to its propulsion the Barrel Jet can now quickly send a tech whichever direction it points to.",
+  "ID": 300179,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 2,
+  "Price": 33783,
+  "HP": 2400,
+  "Mass": 10,
+  "CenterOfMass": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 43, 43, 47, 47, 57, 63, ",
+  "IconName": "OS_Barrel_Jet_Icon.png",
+
+  "Cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -1
+    }
+  ],
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "GSO_Booster_112",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0 // Roll
+  },
+  "ReferenceScale": {
+    "x": 1.0,
+    "y": 1.0,
+    "z": 1.0
+  },
+  "DeathExplosionReference": "GSO_Booster_112",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Booster_112",
+      "MeshName": "OS_Barrel_Jet_Base.obj",
+      "ColliderMeshName": "OS_Barrel_Jet_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroyExistingRenderer": true,
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "OS_Barrel_Jet_Fan",
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Barrel_Jet_Fan.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|m_GSO_Booster_112": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 1.0,
+          "m_RotationAxis": {
+            "axis": 2
+          },
+          "m_SteerAxis": {
+            "axis": 2
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false
+        },
+        "GameObject|OS_Barrel_Jet_Fan": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    },
+    "GameObject|_boostJet": {
+      "BoosterJet": {
+        "m_Force": 5555.0,
+        "m_BurnRate": 11.0
+      }
+    },
+    "ModuleBooster.": {
+      "m_BoosterAudioType": 1,
+      "RocketBoosterType": 1,
+      "BoosterEngineType": 1
+    }
+  }
+}

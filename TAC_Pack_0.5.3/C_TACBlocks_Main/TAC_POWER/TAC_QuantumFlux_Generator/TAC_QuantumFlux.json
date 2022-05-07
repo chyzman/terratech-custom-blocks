@@ -1,0 +1,327 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC QuantumFlux Kinetic Generator",
+  "Description": "Using QuantumFlux Particles created from <b>Proxima Darks</b> thrown in the washing machine, we can harness the power of perpetual motion! \n\nEven though it's kind of weak in practice. \n\n\nLook at the bright side!  It's 100% safe for you, me, and the environment! \n\n\nSome of you out there have seen the rotary generator “windmills”.  This is exactly that without the MT mess, and as such, performs not as efficiently as the real thing.", //You can make multiple lines with \n
+  "ID": 584236, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 89940, //752+5860+7552+15816=29980 // 29980x3=89940 - Dat's pricey, if not, double the Proximas
+  "HP": 9500, //Battleship Cannon has 5500 health. For that area this consumes, you must protect it.
+  //Was 6500, but buffed because it was simply too inconceivable to defend
+  //Knowing how big this is AND HOW LITTLE HEALTH IT HAS, really makes defending it a serious priority
+  "Mass": 105.0, //147 area consumed, 150 due to mass of electrical components. This is fairly light.
+  //Was 150.0, changed to 147.0 to help make building easier, now weighs 105 because of empty space accounting
+
+  "IconName": "ShouldHaveBeenAGyro.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "52, 52, 52, 52, 52, 52, 52, 52, 60, 60, 60, 60, 62, 62, 62, 62, 66, 66, 66, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+      // "name": "Rugged Fiblar",
+      // "id": 52,
+      // "price": 94,
+      // "name": "Mother Brain",
+      // "id": 60,
+      // "price": 1465,
+      // "name": "Coffman Cell",
+      // "id": 62,
+      // "price": 1888,
+      // "name": "Proxima Dark",
+      // "id": 66,
+      // "price": 3954,
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom APs
+    { "x":2, "y":-0.5, "z":1 },
+    { "x":3, "y":-0.5, "z":1 },
+    { "x":4, "y":-0.5, "z":1 },
+    //Top APs
+    { "x":3, "y":6.5, "z":1 },
+    { "x":4, "y":6.5, "z":1 },
+    { "x":2, "y":6.5, "z":1 },
+    //Left APs
+    { "x":-0.5, "y":3, "z":1 },
+    { "x":-0.5, "y":4, "z":1 },
+    { "x":-0.5, "y":2, "z":1 },
+    //Right APs
+    { "x":6.5, "y":3, "z":1 },
+    { "x":6.5, "y":4, "z":1 },
+    { "x":6.5, "y":2, "z":1 },
+    //Front APs
+    { "x":3, "y":3, "z":2.5 },
+    //Back APs
+    { "x":3, "y":3, "z":-0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 7,
+    "y": 7,
+    "z": 3
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_Block_Alt_01(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, 
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, //Shift the subobjects of the block prefab by x, y and z 
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACQFluxRotGen.obj",
+      // "ColliderMeshName": "TACQFluxRotGenSpinFront.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Rotator
+     "SubOverrideName": "m_SpinPart",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACQFluxRotGenSpinner.obj",
+      // "ColliderMeshName": "TACQFluxRotGenSpinner.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    //GREEEEEBLES
+    { 
+     "SubOverrideName": "m_GreebResistor1",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor2",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor3",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor4",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor5",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor6",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor7",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    { 
+     "SubOverrideName": "m_GreebResistor8",
+      "MeshName": "TACGreebleResistor.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_HE_Block_111":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.7, "y":0.7, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":3, "y":3, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "extents": {
+          "x": 3.5,
+          "y": 3.5,
+          "z": 1.5
+        }
+      },
+    },
+    //GREEEEEBLEEES
+
+    "GameObject|GreebleCenter":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":3, "y":3, "z":1 } 
+      },
+      "GameObject|m_GreebResistor1":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":45, "y":90, "z":0 },
+          "localPosition": { "x":2.65, "y":2.65, "z":-1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor2":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":135, "y":90, "z":0 },
+          "localPosition": { "x":-2.65, "y":2.65, "z":-1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor3":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":45, "y":90, "z":0 },
+          "localPosition": { "x":-2.65, "y":-2.65, "z":-1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor4":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":135, "y":90, "z":0 },
+          "localPosition": { "x":2.65, "y":-2.65, "z":-1.3 } 
+        },
+      },
+      //Other side
+
+      "GameObject|m_GreebResistor5":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":45, "y":90, "z":0 },
+          "localPosition": { "x":2.65, "y":2.65, "z":1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor6":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":135, "y":90, "z":0 },
+          "localPosition": { "x":-2.65, "y":2.65, "z":1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor7":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":45, "y":90, "z":0 },
+          "localPosition": { "x":-2.65, "y":-2.65, "z":1.3 } 
+        },
+      },
+      "GameObject|m_GreebResistor8":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.1, "y":1.1, "z":1.5 },
+          "localEulerAngles": { "x":135, "y":90, "z":0 },
+          "localPosition": { "x":2.65, "y":-2.65, "z":1.35 } 
+        },
+      },
+    },
+    "GameObject|_spindle": {
+      "Spinner": { //We want this to be always rotating, similar to the MT construct that this is supposed to represent.
+        "m_Speed": 1.25,
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 0.75,
+        "m_CurrentAngle": 0.0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        "Speed": 1.25,
+        "SpeedFraction": 0.0,
+        "AtFullSpeed": false
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+        "localPosition": { "x":3, "y":3, "z":1 } 
+      },
+      "GameObject|m_SpinPart": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.725, "y":0.725, "z":1 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+      }
+    },// Back to main layer
+    //---------------------------------
+      //The madness starts here
+
+      //--- ANALYSIS OF BALANCE COMPARED TO EXISTING GENERATORS ---
+
+      //This was obviously based off of the existance of a similar MT build in Vanilla that produces energy anywhere, anytime.
+      //It uses that rotating "windmill" dynamo setup as a benchmarker for a balanced energy generator.
+      //It quickly fails under combat stress, and spamming it is obviously an improbable option.
+      //It is hard to abuse like the dynamos, but still really handy for airships.
+
+      //Compared to jujuteux {80,000-81,999}'s small RTG, which produces 15 per second in an volume of 2.
+      //It only costs 8500 and is flexible in placement, but suffers in the health department with 250 and 
+      //is quite dense with a mass of 2.5 per block. 5 mass in total
+      //Excellent for early-game Techs.
+      //The TAC QuantumFlux Rotary Generator produces 125 per second in a volume of 147.
+      //Is lightly dense with 1.020408163265306 mass per block taken and has 9500 health for an overall robust generator.
+      //Health per block taken is 64.625850340136054, but that is not as impactful as explosions are the main threat.
+      //Weighs 150, better suited for late-game Techs.
+      //small RTGs filling this area would be 1102.5
+
+      //LK Ion Generator is expensive for FAR more power generation in a smaller volume
+      //5x5x5 reactor has to be anchored to function
+
+      //This generator is STUPIDLY MASSIVE, with decent generation, light frame at a somewhat low price. 
+      //This makes it ideal for late-game hoverships, one of TAC's specialty blocks cover for this.
+  
+    "ModuleEnergy": {//Infinity Generator
+      "m_Priority": -100,
+      "m_OutputPerSecond": 125,// Slow, like a series of Dynamos.
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": 41,//Same SFX as the Dynamos, the GEOthermal Generator noise. Very fitting.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 3.0,//you can't just expect to start generating power instantly. It has to sync with the Tech first!
+    },
+    //There is no integrated battery with this generator.
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.1, //was 0.25 //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+  }
+}
+
+
+
+
+
+
+

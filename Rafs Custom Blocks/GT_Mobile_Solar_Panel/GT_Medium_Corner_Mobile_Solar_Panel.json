@@ -1,0 +1,162 @@
+{
+  "Name": "GreenTech Medium Corner Mobile Solar Panel",
+  "Description": "Four mobile solar panels mounted on a big recycled block corner.",
+  "ID": 911256, 
+
+  "Faction": 0, 
+  "Category": 6,
+  "Grade": 4,
+  "Price": 11253,
+  "HP": 5000,
+  "Mass": 10,
+  "CenterOfMass": {"x": 1.5, "y": 0, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "15, 15, 15, 15, 15, 15, 15, 15, 32, 32, 32, 32, 43, 43, 43, 43, 43, 43, 43, 43, 45, 48, 48, 48, 48",  
+  "IconName": "GT_Medium_Corner_Mobile_Solar_Panel_Icon.png", 
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+    [
+      "  xxxx"
+    ],
+    [
+      " xxxxx"
+    ],
+    [
+      "xxxxx "
+    ],
+    [
+      "xxxxx "
+    ],
+    [
+      "xxxx  "
+    ],
+    [
+      "xx    "
+    ]
+  ],    
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 2},	
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0.5,"z": 2},
+    {"x": 2, "y": 0.5,"z": 0},
+    {"x": 1, "y": 0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": -0.5},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 0.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 0.5}
+    ],
+  "GamePrefabReference": "BF_Fin_116",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "Collider_1",
+      "MeshName": "GT_Medium_Corner_Mobile_Solar_Panel.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Medium_Corner_Mobile_Solar_Panel_Collider_1.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_2",
+      "ColliderMeshName": "GT_Mobile_Solar_Panel_Collider.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_3",
+      "ColliderMeshName": "GT_Mobile_Solar_Panel_Collider.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_4",
+      "ColliderMeshName": "GT_Mobile_Solar_Panel_Collider.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_5",
+      "ColliderMeshName": "GT_Mobile_Solar_Panel_Collider.obj",
+      "layer": 8
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|Collider_1": {},
+    "GameObject|Collider_2": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.93,
+          "y": 0,
+          "z": 0.18
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": -101,
+          "z": 0
+        }
+      }
+    },
+    "GameObject|Collider_3": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.41,
+          "y": 0,
+          "z": 1.44
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": -124,
+          "z": 0.0
+        }
+      }
+    },
+    "GameObject|Collider_4": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.44,
+          "y": 0,
+          "z": 2.41
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": -146,
+          "z": 0
+        }
+      }
+    },
+    "GameObject|Collider_5": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.18,
+          "y": 0,
+          "z": 2.93
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": -169,
+          "z": 0
+        }
+      }
+    },
+	"ModuleEnergy": {
+    "m_OutputPerSecond": 32,
+    "m_OutputEnergyType": 0,
+    "m_OutputConditions": 2,
+    "m_SequentialPowerUp": false,
+    "m_PowerUpDelay": 0.0,
+    "m_GeneratingSFXType": 1
+      }
+     }
+}

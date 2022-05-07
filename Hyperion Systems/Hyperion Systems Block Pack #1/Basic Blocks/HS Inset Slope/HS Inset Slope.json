@@ -1,0 +1,38 @@
+
+{
+  "Name": "Hyperion Systems Inset Slope",
+  "Description": "A handy slope block with an inset face. Counts as armor.",
+  "ID": 100003,
+
+  "Faction": 7,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 325, 
+
+  "HP": 1250, 
+  "Mass": 1.0,
+
+  "Fragility": 0, 
+  "DamageableType": 1, 
+  "Rarity": 0, 
+
+  "Recipe": "7,7,43", 
+  "IconName": "HSInsetSlopeIcon.png",
+  "MeshName": "HS Inset Slope.obj",
+  
+  "MeshTextureName": "HS textures.png",     
+  
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5}
+  ]       
+}

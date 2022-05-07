@@ -1,0 +1,226 @@
+{
+	"Name": "TAC Phase Outlet",
+	"Description": "The mighty outlet that goes with the equally mighty Phase Plug to provide absolutely humongous charge bursts in a short stretch of time in exchange for mandating almost direct contact to charge from it.  \n\nWell in reality, as lame as it may be, this plug is a perfectly normal plug derived from Memphis Corporation's Archeotech Schematic Prints.  It's still insanely effective at directing charge however, and it's a wonder it become obsolete to begin with.  \n\nMemphis has the technology perfected, this one sacrfices most of the charging speed to keep it nice and small. \n\n\nBelieve it or not, TAC still uses normal plugs to this day.  \nThat stubborn wall socket doesn't know when to quit!", //You can make multiple lines with \n
+	"ID": 584283, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 21387, //Powerful mini-charger
+	"HP": 1250, //Very strong outlet health pool as requested by Fireflywater
+
+	"Mass": 2.0, //TAC Battery IS 3 in 1 block volume
+	//TAC Battery WAS 3.25 in 1 block volume, roughly between the BF and HE batteries
+	//BF Battery is 2.7 in 1 block volume
+	//HE Battery is 4 in 1 block volume
+	//LK Battery is 10 in 1 block volume
+	
+
+	"IconName": "ALLTHEPOWER.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "13, 13, 13, 13, 44, 45, 48, 48, 49, 49, 50, 50, 51, 56, 56", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+        // {
+        //   "name": "Titanic Alloy",
+        //   "id": 54
+        // },
+        // {
+        //   "name": "Rugged Fiblar",
+        //   "id": 52
+        // },
+        // {
+        //   "name": "Ion Pulse Cell",
+        //   "id": 56
+        // }
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Back
+        { "x": 0, "y": 0.0, "z": -0.5 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "GSO_RemoteCharger_(111)",
+	"KeepReferenceRenderers": true,
+	"DeathExplosionReference":"HE_Block_111",//Non lethal
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_Experimental_Base_RemotCharger_111",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "OutletBase.obj",
+      "MakeBoxCollider": true,
+	    "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "OutletLEDs.obj",
+		},
+		// {
+	 //    "SubOverrideName":"m_HE_Battery_211_LEDs_copy",
+	 //    // "DestroySubReferenceRenderer": true,
+	 //    // "DestroyExistingColliders": true,
+	 //    "MeshName": "m_TAC_LED_5.obj",
+	 //    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    // "MeshTextureName": "CirculatedBattery.png",
+  //     "MeshMaterialName": "HE_Main"
+		// },
+		{
+	    "SubOverrideName":"m_Experimental_Base_RemotCharger_Pipes_111",
+	    "MeshName": "GlowOctagon.obj",
+	    "MeshTextureName": null,
+      // "MeshMaterialName": "Mat_Pickup_Resource_RodiusCapsule",
+		},
+  ],
+	
+	"JSONBLOCK": {
+		"GameObject|m_Experimental_Base_RemotCharger_111":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0, "z":-0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": -0.25
+        },
+        "extents": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.25
+        }
+      },
+	    "GameObject|m_Experimental_Base_RemotCharger_Pipes_111": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":1, "y":1, "z":1 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":0 } 
+	      }
+	    },
+		},
+		"Reference|HE_Battery_211/m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":-0.5 } 
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 3,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	    },
+		},
+		"Duplicate|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.0, "y":0.0, "z":0.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":-0.25 } 
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": true, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	    },
+		},
+
+		//Coding
+    "Damageable": {
+      "m_DamageableType": 1,//Armor because outside
+    },
+    "Reference|HE_Battery_211/ModuleEnergyStore.": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+	    "m_AcceptRemoteCharge": false,
+    	"m_Capacity": 225, //TAC batteries have 1775 m_Capacity in a volume of 1 block
+	    "SpareCapacity": 0.0,
+    	//dismal, but gets the job done.
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+
+	  "ModuleEnergy": {
+	    "m_Priority": 20,
+	    "m_OutputPerSecond": 0.0,
+	    "m_OutputEnergyType": 0,
+	    "m_OutputConditions": 3,
+	    "m_EnergyStore": null,
+	    "m_AnimatorController": null,
+	    "m_AudioProvider": null,
+	    "m_ThermalGroundRadius": 0.0,
+	    "m_ThermalSourceInRange": null,
+	    "m_PowerUpRemaining": 0.0,
+	    "m_SequenceNode": null,
+	    "m_ModuleType": 0,
+	  },
+
+    //Charger Stats
+    "ModuleRemoteCharger": {
+	    "m_EnergyType": 0,
+      "m_ChargingRadius": 0.75,//tiny, melee requirement
+      "m_PowerTransferPerArc": 60.0,//OVERKILL - How much energy per pulse of the ArcFiringInterval
+    	"m_ArcFiringInterval": 0.01,//OVERKILL - How much energy per pulse of the ArcFiringInterval
+	    // "m_CurrentTarget": null,
+	    "m_AccumulatedCharge": 5.0,
+	    "m_ArcTimer": 0.0,
+	    "m_ArcEffectIndex": 0,
+	    "m_ArcEffectVariant": 0,
+	    // "m_ModuleType": 0,
+    },
+    "ModulePlacementZoneEffect": {//You will probably never see this lol
+      "m_Radius": 0.75,   //How big will the AOE circle appear on the ground? - try to keep this the same as the m_ChargingRadius.
+    },
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for outlets since it is MANDATORY for them to exist outside the Tech.
+    },
+	}
+}
+
+
+
+

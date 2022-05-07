@@ -1,0 +1,150 @@
+{
+  "Name": "Old Star Mid Wing Spacer",
+  "Description": "This here is how the Old Star do. The wing Spacers are made to string together wings to whatever you need them attached to in a more streamlined fasion. provides a slight amount of lift as well.",
+  "ID": 300153,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 650,
+  "Mass": 0.75,
+  "IconName": "OS_Mid_Winger_Spacer_icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Wing_Mini_311",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceScale": {
+    "x": 0.3,
+    "y": 0.1,
+    "z": 0.3
+  },
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 3
+  },
+  "APsOnlyAtBottom": false,
+  "APs": [
+    //top
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 2
+    },
+    //sides
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+    //front
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 2
+    }
+
+  ],
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSOMiniWing311",
+      "MeshName": "OS_Mid_Wing_Spacer.obj",
+      "ColliderMeshName": "OS_Mid_Wing_Spacer.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1.0,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleWing": {
+      "m_AttackAngleDamping": 10000.0,
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1,
+      "m_Aerofoils": [
+        {
+          "trans": [],
+          "liftCurve": {
+            "keys": [
+              {
+                "time": -60.0,
+                "value": 0.0
+              },
+              {
+                "time": -30.0,
+                "value": -0.5
+              },
+              {
+                "time": 30.0,
+                "value": 1.0
+              },
+              {
+                "time": 60.0,
+                "value": 0.0
+              }
+            ],
+            "length": 4,
+            "preWrapMode": 8,
+            "postWrapMode": 8
+          },
+          "liftStrength": 0.5,
+          "flap": null,
+          "flapAngleRangeActual": 20.0,
+          "flapAngleRangeVisual": 30.0,
+          "flapTurnSpeed": 1.0
+        }
+      ],
+      "m_WingTrails": null,
+      "m_FoilState": null,
+      "m_AverageLiftCoeff": 0.0,
+      "m_ModuleType": 0,
+      "LiftStrength": 0.5
+    }
+  }
+}

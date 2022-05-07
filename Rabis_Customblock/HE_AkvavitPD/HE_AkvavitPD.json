@@ -1,0 +1,737 @@
+{
+  "Name": "Hawkeye Akvavit Defense System",
+  "Description": "Akvavit missile interception system intercepts enemy missiles with airburst rounds.\n\n<color=red>Requires:</color>\n<color=red>RandomAdditions (TTMM mod)</color> to intercept enemy missiles.\n<color=red>WeaponAimMod (TTMM mod)</color> to enable flak module.", //You can make multiple lines with \n
+  "ID": 546394, //A random ID that MUST be unique
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Stan  dard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 20979,
+  "HP": 1950,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 8,
+  "CenterOfMass": {"x": 1, "y": 0.0, "z": 1},
+
+  "Recipe": "46, 46, 46, 46, 51, 52, 52, 53, 55, 55, 60, 61, ",
+  "DamageableType": 1,
+
+  "IconName": "HE_AkvavitPD.png", 
+  "MeshName": null, 
+  "MeshTextureName": null, 
+  "MeshMaterialName": null,
+  "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "BlockExtents": {
+    "x": 3,
+    "y": 2,
+    "z": 3
+  },
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+      {"x": 1,"y": -0.5,"z": 1}
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_Cannon_Battleship_216", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "SubObjects": [
+    {
+      "SubOverrideName": "aCol",
+      "DestroyExistingColliders": true,
+      "MeshName": null,
+      "ColliderMeshName": null,
+    },
+    // ----------- mesh replace
+    { // base
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": null,
+      "ColliderMeshName": null,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+    },
+    { // turret Horizon
+      "SubOverrideName": "HE_AkvavitPD_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_AkvavitPD.obj",
+      "ColliderMeshName": "HE_AkvavitPD_c.obj", //I'll make a proper collider when I feel like it...
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+    },
+    { // turret Vertical
+      "SubOverrideName": "HE_AkvavitPD_turret_V",
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_AkvavitPD_turret_V.obj",
+      "ColliderMeshName": "HE_AkvavitPD_turret_V.obj",
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+    },
+    { // barrel
+      "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      //"MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_AkvavitPD_barrel.obj",
+      "ColliderMeshName": "HE_AkvavitPD_barrel_c.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_AkvavitPD_barrel.obj",
+      "ColliderMeshName": "HE_AkvavitPD_barrel_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_AkvavitPD_barrel.obj",
+      "ColliderMeshName": "HE_AkvavitPD_barrel_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_AkvavitPD_barrel.obj",
+      "ColliderMeshName": "HE_AkvavitPD_barrel_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    { // grenade shell
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "MeshName": "HE_AkvavitPD_shell.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    
+
+    // ------------------ move game object position
+    { // gimbal H
+      "ObjectName": "_gimbalBase",
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    { // gimbal V
+      "ObjectName": "_gimbalElev",
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0.047724,
+        "z": -0.466068
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+
+  { // barrel - vertical gimbal center  
+    "ObjectName": "_barrel",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": -0.502598,
+      "y": 0.152201, // up down
+      "z": -0.035713 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": 0.502598,
+      "y": 0.152201, // up down
+      "z": -0.035713 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": -0.502598,
+      "y": -0.152201, // up down
+      "z": 0.20691 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy_copy_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": 0.502598,
+      "y": -0.152201, // up down
+      "z": 0.20691 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+
+    // casing spawn point
+    {
+      "ObjectName": "_casingSpawn",
+      "Position": {
+        "x": -0.091387,
+        "y": 0.159384,
+        "z": -0.1977
+      },
+      "Rotation": {
+        "x": -45,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_casingSpawn",
+      "Position": {
+        "x": 0.091387,
+        "y": 0.159384,
+        "z": -0.1977
+      },
+      "Rotation": {
+        "x": -135,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_casingSpawn",
+      "Position": {
+        "x": -0.091387,
+        "y": -0.159384,
+        "z": -0.1977
+      },
+      "Rotation": {
+        "x": -45,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_casingSpawn",
+      "Position": {
+        "x": 0.091387,
+        "y": -0.159384,
+        "z": -0.1977
+      },
+      "Rotation": {
+        "x": -135,
+        "y": -90,
+        "z": 0
+      }
+    },
+
+    // bullet spawn point - same value for all
+    {
+      "ObjectName": "_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.7
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.7
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+
+    // muzzle flash - same value for all
+    {
+      "ObjectName": "_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.1
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.1
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.1
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.1
+      },
+    },
+
+    // smoke - Same position as muzzle flash  - same value for all
+    {
+      "ObjectName": "_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.4
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.4
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.4
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 2.4
+      },
+    },
+
+    // ------------------ replace texture
+    // muzzle flash custom texture
+    {
+      "ObjectName": "_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_AkvavitPD_MuzzleFlash3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_AkvavitPD_MuzzleFlash3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_AkvavitPD_MuzzleFlash3.png"
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_AkvavitPD_MuzzleFlash3.png"
+    },
+
+  ],
+
+  "Deserializer": {
+    "GameObject|aCol":{
+      "UnityEngine.BoxCollider":null
+    },
+    "GameObject|_gimbalBase": {
+      "GameObject|HE_AkvavitPD_Base":{
+        "UnityEngine.MeshCollider": {
+          "gameObject": {"layer": 8,},
+        },
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8,
+        },
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          180.0,
+          -180.0
+        ],
+      },
+          "GameObject|_gimbalElev": {
+            "GameObject|HE_AkvavitPD_turret_V": {
+              "UnityEngine.MeshCollider": {
+                "gameObject": {"layer": 8,},
+              },
+            },
+            "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+              "gameObject": {
+                "layer": 8,
+              },
+            },
+            "GimbalAimer": { // gimbal vertical
+              "rotationLimits": [
+                10,
+                -85
+              ],
+              "rotationAxis": 1
+            },
+            "GameObject|_barrel": {
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": {
+                  "localScale": {
+                    "x": 0.7,
+                    "y": 0.7,
+                    "z": 0.7
+                  },
+                },
+                "GameObject|_muzzleFlashAnim":{
+                  "GameObject|m_MuzzleFlash_01":{
+                    "UnityEngine.Transform": {
+                      "localScale": {
+                        "x": 1.8,
+                        "y": 1.8,
+                        "z": 1.8
+                      },
+                    },
+                    // This doesn't work on NuterraSteam
+                    // Try to use SubObject to specify the texture
+                    /*"UnityEngine.MeshRenderer": {
+                      "material": {
+                        "mainTexture": "HE_AkvavitPD_MuzzleFlash3.png"
+                      }
+                    },*/
+                  },
+                  "Light":{
+                    "spotAngle": 120.0,
+                    //"colorTemperature": 6570.0,
+                    "range": 6.0,
+                    "color": {
+                      "r": 0.7,
+                      "g": 0.9,
+                      "b": 1.0,
+                      "a": 1.0
+                    }
+                  },
+                  // NuterraSteam does not seem to be able to reference deathExplosion
+                  // Instead, it uses the Tesla Coil FX
+                  /*"Reference|1050/ModuleDamage.deathExplosion": {
+                    "UnityEngine.Transform": {
+                      "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                      },
+                      "localScale": {
+                        "x": 0.3,
+                        "y": 0.3,
+                        "z": 0.3
+                      }
+                    },
+                    "GameObject|FX_Lightning":{
+                      "UnityEngine.ParticleSystem":{
+                        "startSize": 0.5,
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.7,
+                              "g": 0.9,
+                              "b": 1.0,
+                              "a": 0.2
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "GameObject|FX_Shockwave":null,
+                    "GameObject|FX_Sparks":null,
+                    "GameObject|FX_Parts_A": null
+                  },*/
+                  "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity":{
+                    "UnityEngine.ParticleSystem": {
+                      "startSize": 0.1,
+                      "main": {
+                        "m_ParticleSystem": {
+                          "startColor": {
+                            "r": 0.7,
+                            "g": 0.9,
+                            "b": 1.0,
+                            "a": 0.4
+                          },
+                          "emission": {
+                            "rateMultiplier": 2650.0,
+                            "rateOverTimeMultiplier": 0.2
+                          }
+                        }
+                      }
+                    },
+                    "UnityEngine.ParticleSystemRenderer":{
+                      "lengthScale": 1.5,
+                      "activeVertexStreamsCount": 5,
+                    }
+                  }
+                }
+              },
+              "GameObject|_recoiler":{
+                "UnityEngine.Animation":{
+                  "clip":{
+                    "m_SpeedFactor": 5.3,
+                  }
+                }
+              }
+            },
+            "Duplicate|_barrel": {},
+            "Duplicate|_barrel_copy": {},
+            "Duplicate|_barrel_copy_copy": {},
+            },
+        
+      
+    },
+  // ----------------- fire data
+  "ModuleWeapon": {
+    //"m_FireSFXType": "GSORepuslor",
+    "m_FireSFXType": "GSOShotgunCombat",
+    "m_PreventShootingTowardsFloor": false,
+    "m_ShotCooldown": 0.0,
+    "m_RotateSpeed": 200.0
+  },
+  "ModuleWeaponGun": {
+    //"m_FireControlMode": "AllAtOnce",
+    "m_ShotCooldown": 1.2,
+    "m_CooldownVariancePct": 0.08,
+    "m_FiringData": null,
+    "m_DeploySFXType": 77,
+  },
+  "FireData": {
+    "m_BulletSprayVariance": 0.03,
+    "m_KickbackStrength": 500,
+    "m_MuzzleVelocity": 300,
+    "WeaponRound": {
+      "m_DamageType": 1, // standard
+    },
+    "Instantiate|m_BulletPrefab": {
+      /*"UnityEngine.MeshFilter": {
+        "sharedMesh": "HE_AkvavitPD_shell.obj"
+      },
+      "UnityEngine.MeshRenderer": {
+        "material": "HE_Main"
+      },*/
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "Projectile": {
+        "m_LifeTime": 3,
+        "m_ExplodeAfterLifetime": true,
+        "Instantiate|m_Explosion": {
+          "Explosion": {
+            "m_ExplosionSize": 0.5,
+            "m_EffectRadius": 5, //10
+            "m_EffectRadiusMaxStrength": 0.1, //5
+            "m_MaxDamageStrength": 80, //250
+            "m_MaxImpulseStrength": 100 //250
+          },
+          "GameObject|Sparks":null,
+          "GameObject|ExplosionBright": {
+            "UnityEngine.ParticleSystem": {
+              "startSpeed": 0.6,
+              "startSize": 3.0,
+              "startLifetime": 0.2,
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.2,
+                    "g": 0.4,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "emission": {
+                    "rateMultiplier": 2650.0,
+                    "rateOverTimeMultiplier": 0.2
+                  }
+                }
+              }
+            }
+          },
+          "GameObject|ExplosionDark": null,
+          "GameObject|ExplosionSmoke": null,
+          "GameObject|Point light":null,
+          "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+            "ParticleSystem": {
+              "sizeOverLifetime": {
+                "sizeMultiplier": 0.17 
+              },
+              "startColor": {
+                "r": 0.2,
+                "g": 0.4,
+                "b": 1.0,
+                "a": 1.0
+              }
+            }
+          },
+        },
+        "m_ImpactSFXType": 4,
+      },
+      "WeaponRound": {
+        "m_Damage": 90
+      },
+      "SmokeTrail": {
+        "numberOfPoints": 15.0, // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+        // Do not decrease this too much as it will begin to act strangely.
+        "spread": 2.25, // Dictates how erratic the trail is.
+        "riseSpeed": 0.1, // Dictates how fast the trail rises. This will make the trail act more like a smoke
+        "updateSpeed": 0.15, // DIctates the speed of the trail.
+      },
+      // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+      "LineRenderer": {
+        "startWidth": 0.4,
+        "endWidth": 0.1,
+        "widthMultiplier": 0.6,
+        // The color at the start of the trail
+        "startColor": {
+          "r": 0.8,
+          "g": 0.9,
+          "b": 1.0,
+          "a": 1.0
+        },
+        // The color at the end of the trail
+        "endColor": {
+          "r": 0.8,
+          "g": 0.9,
+          "b": 1.0,
+          "a": 1.0
+        }
+      },
+      "UnityEngine.CapsuleCollider": { 
+          "radius": 0.01,
+          "center": { "x": 0, "y": 0, "z": 0 },
+      },
+
+      // RandomAdditions ----------------------------------------------
+      "RandomAdditions.InterceptProjectile": {
+        "InterceptRange": 8, // The range when this projectile applies it's damage
+        "StartDelay": 3,
+        "InterceptedExplode": true, // Any projectile intercepted by this will explode (no damage)
+        "PointDefDamage": 450, // How much damage to apply when target projectile is hit 
+        // - leave at zero to use the WeaponRound damage
+      },
+    },
+    "Instantiate|m_BulletCasingPrefab": {
+      "GameObject|m_HE_Shell_Large": null,
+      "Reference|HE_ChainGun_112/Firedata.m_BulletCasingPrefab/m_HE_Shell_Medium": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localScale": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1
+          }
+        }
+      }
+    }
+  },
+
+  // WeaponAimMod ----------------------------------------------
+  "WeaponAimMod.TimedFuseData": {},
+  // RandomAdditions ----------------------------------------------
+  "RandomAdditions.ModulePointDefense": {
+    "DefendOnly": false, // Do not fire on spacebar
+    "CanInterceptFast": true, // Can this also shoot fast projectiles?
+    "ForcePulse": false, // Force the hitscan pulse effect
+    "SpoolOnEnemy": false, // Spin the barrels when an enemy is in range
+    "LockOnDelay": 8, // Frames this will not track for - Set to 0 to maximize scanning rate. WARNING - May negatively impact performance under 8!
+    "LockOnStrength": 15, // Will to keep lock on a projectile that's fast and/or far. WARNING - May negatively impact performance under 10!
+    "DefenseCooldown": 0.3, // How long until it fires the next intercept
+    "DefenseEnergyCost": 0, // How much it takes to maintain passive defense
+    "DefendRange": 130, // The range of which this can find and track projectiles
+    "RotateRate": 200, // How fast we should rotate the turret when dealing with a projectile
+    "FireSFXType": "GSOShotgunCombat", // Same as ModuleWeapon but for Pulse
+    "ExplodeOnHit": 1, // Make the target projectile explode on death (without dealing damage)
+    "OverrideEnemyAiming": true // Will this prioritize projectiles over the enemy? - Also allow firing when spacebar is pressed
+  },
+  }
+}
+

@@ -1,0 +1,1161 @@
+// Mobile Scrapper
+{
+  "Name": "TAC <color=#f23d3dff>Scrapper</color>",
+  "Description": "It's a mobile scrapper. \n\nThis uses only the very best in hydraulic presses to recompress your resources back into their components, as well as add back in the missing low-quality imperfectious matters from your SCU.  \n\nIt's not advised that you throw anything in there other than TAC blocks-- anything that goes in when it bites will be completely and utterly destroyed by over 500,000 tons of compressive force powered by an array of Cyclone Jets, which is the ideal environment to deconstruct allied TAC blocks, but not really anything else. \n\n\n\nOur engineers suggest using this with the TAC Manager Pacemaker on turbo as it takes a REAL LONG TIME to make ANYTHING without a hefty operation optimising computer.",
+  "ID": 584410, 
+
+  "Faction": 5,//GSO, because that determines that you can get it in GSO Grade 3 or 4
+  //Changed to hawkeye to allow the mobility to be used
+  "Category": 7,
+  "Grade": 3,
+  "Price": 93834,
+  "Rarity": 2,
+  "HP": 15000,// Durable, can handle ENEMY abuse as you sparta kick them to their death
+  "Mass": 45,//HEAVY
+
+  "IconName": "it'sABuildingLetsGoInside.png",
+  "MeshName": null,
+
+  "Recipe":  "48, 48, 48, 48, 48, 48, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 65, 65",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    // "x": 3,
+    // "y": 5,
+    // "z": 3
+  },
+
+  "Cells": [ //The grid space to be occupied
+    //Resource Entry area
+    { "x":1, "y":0, "z":0 },
+    { "x":1, "y":1, "z":0 },
+    { "x":1, "y":2, "z":0 },
+    //Main Area
+    { "x":0, "y":0, "z":1 },
+    { "x":0, "y":1, "z":1 },
+    { "x":0, "y":2, "z":1 },
+    { "x":1, "y":0, "z":1 },
+    { "x":1, "y":1, "z":1 },
+    { "x":1, "y":2, "z":1 },
+    { "x":2, "y":0, "z":1 },
+    { "x":2, "y":1, "z":1 },
+    { "x":2, "y":2, "z":1 },
+    { "x":0, "y":0, "z":2 },
+    { "x":0, "y":1, "z":2 },
+    { "x":0, "y":2, "z":2 },
+    { "x":1, "y":0, "z":2 },
+    { "x":1, "y":1, "z":2 },
+    { "x":1, "y":2, "z":2 },
+    { "x":2, "y":0, "z":2 },
+    { "x":2, "y":1, "z":2 },
+    { "x":2, "y":2, "z":2 },
+    //Top Area
+    { "x":0, "y":3, "z":1 },
+    { "x":1, "y":3, "z":1 },
+    { "x":2, "y":3, "z":1 },
+    { "x":0, "y":3, "z":2 },
+    { "x":1, "y":3, "z":2 },
+    { "x":2, "y":3, "z":2 },
+
+  ],
+
+  "APs": [
+    //Feed APs
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    //Forwards APs
+    { "x":0, "y":0, "z":0.5 },
+    { "x":2, "y":0, "z":0.5 },
+    //Back APs
+    { "x":0, "y":0, "z":2.5 },
+    { "x":1, "y":0, "z":2.5 },
+    { "x":2, "y":0, "z":2.5 },
+    //Side APs
+    { "x":-0.5, "y":0, "z":1 },
+    { "x":-0.5, "y":0, "z":2 },
+    { "x":2.5, "y":0, "z":1 },
+    { "x":2.5, "y":0, "z":2 },
+    //Bottom APs
+    { "x":1, "y":-0.5, "z":0 },
+    { "x":0, "y":-0.5, "z":1 },
+    { "x":2, "y":-0.5, "z":1 },
+    { "x":0, "y":-0.5, "z":2 },
+    { "x":1, "y":-0.5, "z":2 },
+    { "x":2, "y":-0.5, "z":2 },
+  ],
+
+
+  "GamePrefabReference": "GSO_Scrapper(322)", 
+  "KeepReferenceRenderers": true,
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Base",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACScrapperBase2.obj",
+      // "ColliderMeshName": "TACScrapperBase2.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_Crusher1A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACScrapperJawMinor.obj",
+      // "ColliderMeshName": "TACScrapperJawMinor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_Crusher2A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACScrapperJawMinor.obj",
+      // "ColliderMeshName": "TACScrapperJawMinor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_Crusher1B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACScrapperJawMajor.obj",
+      // "ColliderMeshName": "TACScrapperJawMinor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_Crusher2B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACScrapperJawMajor.obj",
+      // "ColliderMeshName": "TACScrapperJawMinor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_DoorShutterTop",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACResourceOutputShutter.obj",
+      // "ColliderMeshName": "TACTabulaFactory.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_DoorShutterBottom",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACResourceOutputShutter.obj",
+      // "ColliderMeshName": "TACTabulaFactory.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_WinL",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_WinR",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_WinF",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_Screen",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "DecoyBlockScreen.obj",
+      // "ColliderMeshName": "DecoyBlockScreen.obj",
+      "MeshMaterialName": "HE_Main",
+      "MeshEmissionTextureName": "TAC_EngineColors.png",
+    },
+    //Greebletesters
+    // {
+    //   "SubOverrideName": "b_OGTargetRot",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   // "ColliderMeshName": "TACGreebleGear.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // {
+    //   "SubOverrideName": "b_TargetRot",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   // "ColliderMeshName": "TACGreebleGear.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // {
+    //   "SubOverrideName": "m_TargetPist1",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   // "ColliderMeshName": "TACGreebleGear.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // {
+    //   "SubOverrideName": "m_TargetPist2",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   // "ColliderMeshName": "TACGreebleGear.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // {
+    //   "SubOverrideName": "_bulletSpawn",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   // "ColliderMeshName": "TACGreebleGear.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Input_Frame",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Hatch",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Grinder_A",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Grinder_B",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Grinder_C",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_ShakingPart",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_GSO_Scrapper_322_Input_Concertina",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+  ],
+
+  "JSONBLOCK": {
+
+    //WINDOW MODELS
+    "GameObject|m_WinF": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":1.5, "z":0.6 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":2.25, "y":1, "z":0.2 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },   
+    },
+    "GameObject|m_WinL": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.3, "y":2, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.2, "y":1, "z":1.5 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },
+    },
+    "GameObject|m_WinR": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.3, "y":2, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.2, "y":1, "z":1.5 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },
+    },
+
+
+    "GameObject|b_GeometryOverrideBase": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":0 }
+      },
+    },
+    "GameObject|b_GeometryOverrideHatch": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1.5, "z":0 }
+      },
+    },
+    "GameObject|b_GeometryOverrideInput": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":3.0, "z":1.5},
+      },
+    },
+    "GameObject|b_GeometryOverrideOutput": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1.5, "z":0 }
+      },
+    },
+    "GameObject|b_GeometryOverrideDriveSpinner": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":-1 }
+      },
+    },
+    "GameObject|b_GeometryOverrideLED": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":3, "z":1 }
+      },
+    },
+
+    "GameObject|Geometry": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":1, "y":0.0, "z":0},
+      },
+      "GameObject|GSO_Scrapper_322": {
+        "GameObject|GSO_Scrapper_322": {//tf
+          "GameObject|m_GSO_Scrapper_322_ShakingPart": {
+            "GameObject|m_GSO_Scrapper_322_Hatch": {
+              "FollowTransform": {//follow the extending animator
+                "m_TransformToFollow": "/b_GeometryOverrideHatch",
+                "m_FollowOrientation": false,
+              },
+            }
+          },
+          "GameObject|m_GSO_Scrapper_322_Input_Concertina": {
+            "FollowTransform": {//follow the extending animator
+              "m_TransformToFollow": "/b_GeometryOverrideInput",
+              "m_FollowOrientation": true,
+            },
+          },
+          "GameObject|m_GSO_Scrapper_322_Grinder_C": {
+          },
+          "GameObject|m_GSO_Scrapper_322_Grinder_B": {
+          },
+          "GameObject|m_GSO_Scrapper_322_Grinder_A": {
+            "FollowTransform": {//OVERRIDE POSITION
+              "m_TransformToFollow": "/b_GeometryOverrideDriveSpinner",
+              "m_FollowOrientation": false,
+            },
+          },
+          "GameObject|m_GSO_Scrapper_322_Base": {
+            "FollowTransform": {//OVERRIDE POSITION
+              "m_TransformToFollow": "/b_GeometryOverrideBase",
+              "m_FollowOrientation": true,
+            },
+          },
+          "GameObject|m_GSO_Scrapper_322_Anchor": null,
+          // "GameObject|m_GSO_Scrapper_322_Anchor": {
+          // },
+          "GameObject|BeamHolderDummyOutput": {
+            "FollowTransform": {//OVERRIDE POSITION
+              "m_TransformToFollow": "/b_GeometryOverrideOutput",
+              "m_FollowOrientation": false,
+            },
+          },
+          "GameObject|BeamHolderDummyInput": {
+            "FollowTransform": {//OVERRIDE POSITION
+              "m_TransformToFollow": "/b_GeometryOverrideInput",
+              "m_FollowOrientation": true,
+            },
+            "UnityEngine.Transform": {
+              "localScale": { "x":2, "y":1, "z":0.6},
+            },
+          },
+          "GameObject|b_GSO_Scrapper_322_Concertina_A": {
+            "FollowTransform": {//OVERRIDE POSITION (animation)
+              "m_TransformToFollow": "/b_GeometryOverrideLED",
+              "m_FollowOrientation": true,
+            },
+            "GameObject|b_GSO_Scrapper_322_Concertina_B": {
+              "GameObject|m_Screen": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x":0.75, "y":0.75, "z":0.75 },
+                  "localEulerAngles": { "x":90, "y":0, "z":0 },
+                  "localPosition": { "x":0.0, "y":0.55, "z":0.5 }
+                },
+              },
+              "GameObject|b_GSO_Scrapper_322_Concertina_C": {
+                "GameObject|b_GSO_Scrapper_322_Concertina_D": {
+                  "GameObject|m_GSO_Scrapper_322_Input_Frame": {
+                    // "FollowTransform": {//follow the extending animator
+                    //   "m_TransformToFollow": "/b_GeometryOverrideInput",
+                    //   "m_FollowOrientation": true,
+                    // },
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // BEGIN ANIMATORS
+    "GameObject|b_JawDriverAnchor": {//NEW GameObject
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":-2 }
+      },
+    },
+    "GameObject|b_OverrideBulletSpawn": {//Force BulletSpawn somehwere where it can detect enemy
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":2.0, "z":1.5 }
+      },
+    },
+
+
+    "GameObject|JawDriverFlat": {//NEW GameObject
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":-2 }
+      },
+      "GameObject|JawDriverFetch": {//NEW GameObject
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "FollowTransform": {//OVERRIDE
+          "m_TransformToFollow": "/Geometry/GSO_Scrapper_322/GSO_Scrapper_322/m_GSO_Scrapper_322_Grinder_A",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|JawDriverMain": {//NEW GameObject
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "FollowTransform": {//OVERRIDE
+            "m_TransformToFollow": "/b_JawDriverAnchor",
+            "m_FollowOrientation": false,
+          },
+          "GameObject|b_OGTargetRot": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0.25, "y":0.0, "z":0.25},
+            }
+          },
+          "Reference|GSO_Cannon_Turret_111/_gimbalBase/_gimbalElev/_barrel":{
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":5 },
+              "localEulerAngles": { "x":0, "y":90, "z":0 },
+              "localPosition": { "x":0, "y":0, "z":0.25 }
+            },
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                "localScale": { "x":1, "y":1, "z":1 },
+                // "localPosition": { "x":0, "y":-10000.0, "z":0 }//BEGONE THOUGHT!
+              },
+              "FollowTransform": {//Shove it IN the scrapper
+                "m_TransformToFollow": "/b_OverrideBulletSpawn",
+                "m_FollowOrientation": true,
+              },
+            },
+            "GameObject|_muzzleFlash": {
+              "GameObject|_muzzleFlashAnim": {
+                "GameObject|m_MuzzleFlash_01": {
+                  "UnityEngine.MeshRenderer": null,
+                }
+              }
+            },
+            "GameObject|_recoiler": {
+              "UnityEngine.Transform": { //Moving the barrel
+                "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+              "GameObject|GSO_Cannon_111_Barrel": {
+                "UnityEngine.Transform": { //Moving the barrel
+                  "localScale": { "x":1, "y":1, "z":1 },// Increasing scale of animation
+                  "localPosition": { "x":0, "y":0, "z":0 }
+                },
+                "UnityEngine.MeshRenderer": null,
+                "GameObject|b_TargetRot": {
+                  "UnityEngine.Transform": {
+                    "localScale": { "x":1, "y":2, "z":0.2 },// Increasing scale of animation
+                    "localEulerAngles": { "x":0, "y":0, "z":0 },
+                    "localPosition": { "x":0, "y":0.0, "z":0.05},
+                  }
+                }
+              }
+            },
+          }
+        }
+      }
+    },
+
+    "GameObject|JawPistonFlat": {//NEW GameObject
+      "UnityEngine.Transform": {
+        "localScale": { "x":0, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2, "y":0, "z":-2 }
+      },
+      "GameObject|JawPistonFetch": {//NEW GameObject
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "FollowSuspension": {//Follow the animation
+          "m_TargetWheelTrans": "/JawDriverFlat/JawDriverFetch/JawDriverMain/_barrel/_recoiler/GSO_Cannon_111_Barrel/b_TargetRot",
+          // "m_TargetWheelTrans": "/JawDriverFlat/JawDriverFetch/JawDriverMain/b_OGTargetRot",
+          "m_TargetUpTrans": "/SuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.25,
+        },
+        "GameObject|b_TargetPist1": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":1, "y":0.0, "z":1},
+          }
+        },
+        "GameObject|b_TargetPist2": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":-1, "y":0.0, "z":-1},
+          }
+        }
+      },
+    },
+
+    "GameObject|_TargetPist1": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.0, "z":0},
+      },
+      "FollowTransform": {//OVERRIDE
+        "m_TransformToFollow": "/JawPistonFlat/JawPistonFetch/b_TargetPist1",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|m_TargetPist1": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0.0, "z":-1.6},
+        },
+        "GameObject|m_Crusher1A": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":180, "z":0 },
+            "localScale": { "x":1, "y":1.5, "z":1 },
+            "localPosition": { "x":-1, "y":2.5, "z":3.45},
+          },
+        },
+      },
+    },
+    "GameObject|_TargetPist2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.0, "z":0},
+      },
+      "FollowTransform": {//
+        "m_TransformToFollow": "/JawPistonFlat/JawPistonFetch/b_TargetPist2",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|m_TargetPist2": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.0, "z":1.6},
+        },
+        "GameObject|m_Crusher2A": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.5, "z":1 },
+            "localPosition": { "x":-1, "y":2.5, "z":3.45},
+          },
+        },
+      },
+    },
+    "GameObject|_AuxDoorTrans1": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":2.5, "z":0.5},
+      },
+      "FollowSuspension": {//Follow the animation
+        "m_TargetWheelTrans": "/_TargetPist1/m_TargetPist1/m_Crusher1A",
+        // "m_TargetWheelTrans": "/JawDriverFlat/JawDriverFetch/JawDriverMain/b_OGTargetRot",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": true,
+        "m_OriginalDistance": 0.2,
+      },
+      "GameObject|b_Crusher1B": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0.0, "z":-1.4},
+        },
+      },
+    },
+    "GameObject|_AuxDoorTrans2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":2.5, "z":2.5},
+      },
+      "FollowSuspension": {//Follow the animation
+        "m_TargetWheelTrans": "/_TargetPist2/m_TargetPist2/m_Crusher2A",
+        // "m_TargetWheelTrans": "/JawDriverFlat/JawDriverFetch/JawDriverMain/b_OGTargetRot",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": true,
+        "m_OriginalDistance": 0.2,
+      },
+      "GameObject|b_Crusher2B": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0.0, "z":-1.7},
+        },
+      },
+    },
+
+    "GameObject|_Crusher1B": {
+      "FollowTransform": {//
+        "m_TransformToFollow": "/_AuxDoorTrans1/b_Crusher1B",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        "localPosition": { "x":0, "y":0.0, "z":0},
+      },
+      "GameObject|m_Crusher1B": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.5, "z":1.1 },
+          "localPosition": { "x":0, "y":0.0, "z":-1.6},
+        },
+      }
+    },
+
+
+    "GameObject|_Crusher2B": {
+      "FollowTransform": {//
+        "m_TransformToFollow": "/_AuxDoorTrans2/b_Crusher2B",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.0, "z":0},
+      },
+      "GameObject|m_Crusher2B": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.5, "z":1.1 },
+          "localPosition": { "x":0, "y":0.0, "z":-1.75},
+        },
+      }
+    },
+
+
+
+
+    //Animated Door Transforms
+    "GameObject|DualHatches": {//NEW GameObject
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1.5, "z":0 }
+      },
+      "GameObject|b_ReAim": {//NEW GameObject
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "GameObject|MoveGuideFlat": {//Attach this to rotating target gameobject
+        "UnityEngine.Transform": {
+          "localScale": { "x":0, "y":1, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|MoveGuide": {//Attach this to rotating target gameobject
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":2, "y":0, "z":0 }
+          },
+          "FollowTransform": {//follow the extending animator
+            "m_TransformToFollow": "/Geometry/GSO_Scrapper_322/GSO_Scrapper_322/m_GSO_Scrapper_322_ShakingPart/m_GSO_Scrapper_322_Hatch",
+            "m_FollowOrientation": true,
+          },
+          "GameObject|MoveGuideRecenter": {//Reattaches itself
+            "FollowTransform": {//follow the extending animator
+              "m_TransformToFollow": "/DualHatches/b_ReAim",
+              "m_FollowOrientation": false,
+            },
+            "GameObject|b_DoorUpperBone": {//Guides for doors
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localPosition": { "x":0, "y":0.3, "z":0 }
+              },
+            },
+            "GameObject|b_DoorLowerBone": {//Guides for doors
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localPosition": { "x":0, "y":-0.3, "z":0 }
+              },
+            }
+          }
+        },
+      },
+
+      "GameObject|DoorShutterTop": {//Door
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/DualHatches/MoveGuideFlat/MoveGuide/MoveGuideRecenter/b_DoorUpperBone",
+          "m_FollowOrientation": false,
+        },
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|m_DoorShutterTop": {//Door
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0.175, "z":0 },
+            "localScale": { "x":0.95, "y":1, "z":0.95 }
+          },
+        }
+      },
+      "GameObject|DoorShutterBottom": {//Door
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/DualHatches/MoveGuideFlat/MoveGuide/MoveGuideRecenter/b_DoorLowerBone",
+          "m_FollowOrientation": false,
+        },
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|m_DoorShutterBottom": {//Door
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-0.175, "z":0 },
+            "localScale": { "x":0.95, "y":-1, "z":0.95 }
+          },
+        }
+      }
+    },
+
+
+
+    "GameObject|_anchor": null,
+
+
+    //COLLIDERRRRS
+    "GameObject|c_BasePlat": {//Platform collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":0.0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 1 },//Give it drivable surface
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    "GameObject|c_BasePlatMain": {//Platform collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":0.0, "z":1.5},
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":3, "y":1, "z":2 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 1 },//Give it drivable surface
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+    //Output Colliders
+    "GameObject|OverhangCol": {//Top collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1.0, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "GameObject|c_TopX": {//Top collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":2.75, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":0.5, "z":1 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForLeft": {//Forwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.475, "y":1.5, "z":0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForRight": {//Forwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.475, "y":1.5, "z":0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacLeft": {//Backwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.475, "y":1.5, "z":-0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacRight": {//Backwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.475, "y":1.5, "z":-0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+    },
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25,
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleAnchor": null,
+    "ModuleItemHolderBeam": { //The beams used for holding the item
+      "m_BeamBaseHeight": 1.0,
+      // "m_BeamColumnRadius": 1.0,
+      // "m_BeamStrength": 750.0,
+      "m_HeightIncrementScale": 5.0,
+      // "m_BeamQuadPrefab": {
+      //   "transform": {
+      //     "eulerAngles": {
+      //       "x": 0.0,
+      //       "y": 90.0,
+      //       "z": 0.0
+      //     },
+      //   },
+      // },
+      // "m_StackDummySets": [//These seem like the manage the specfics of each beam, but cannot modify for now
+      //   {
+      //     "m_ItemDummies": []
+      //   },
+      //   {
+      //     "m_ItemDummies": [
+      //       []
+      //     ]
+      //   },
+      //   {
+      //     "m_ItemDummies": [
+      //       []
+      //     ]
+      //   }
+      // ],
+      // "m_ShowParticlesWhenHeld": true,
+      // "m_IsOmniDirectionalStack": false,
+      // "m_SFXGrabbed": 49,
+      // "m_UsePhysicsForHeldItems": false,
+      // "m_Pickup": null,
+      // "m_OverrideDropAfterMinTime": -1.0,
+      // "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      // "m_ScaleChanged": false,
+      // "NumStacks": 3
+    },
+    "ModuleItemHolder": { //This is the input port location
+      // "m_OverrideAPConnections": [],
+      "m_CapacityPerStack": 2,
+      "m_Flags": 259,
+      // "m_AcceptFlags": 2,
+      // "m_DefaultDropStack": {
+      //   "localPos": {
+      //     "x": 2.5,
+      //     "y": 0.5,
+      //     "z": 1.5
+      //   },
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_DefaultDropStack": { //Original
+      //   "localPos": {
+      //     "x": -1000.0,
+      //     "y": -1000.0,
+      //     "z": -1000.0,
+      //     // "normalized": {
+      //     //   "x": -0.577350259,
+      //     //   "y": -0.577350259,
+      //     //   "z": -0.577350259
+      //     // },
+      //   },
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_HorizontalBoundsRadius": 1.80277562,
+      // "m_ContentsModificationIndex": 3,
+      // "m_AnonItemTimeStamp": 0,
+      // "NumContents": 0,
+      // "NumStacks": 3,
+      // "IsEmpty": true,
+      // "IsFull": false,
+      // "TotalCapacityForLimiter": 30,
+      // "Acceptance": 2,
+      // "m_OverrideBasePositons": [//Original
+      //   { "x": -1.73, "y": 0.46, "z": -0.32 },
+      //   { "x": 0.0, "y": 0.37, "z": 0.0 },
+      //   { "x": -0.94, "y": 0.0, "z": -0.9 },
+      //   { "x": -2.24, "y": 0.0, "z": -0.32 }
+      // ],
+      "m_OverrideBasePositons": [//Modified
+        { "x": 1.0, "y": 3.5, "z": 1.5 },  // Input
+        { "x": 1.0, "y": 0.0, "z": 0.0 },  // Output
+        { "x": 1.0, "y": 3.0, "z": 1.5 },  // InputConsume anim
+        { "x": 1.0, "y": 4.5, "z": 1.5 }   // InputFetchGrabber
+      ],
+    },
+    "ModuleItemPickup": {
+      "m_SpecificPickupStack": {
+        "localPos": { "x": 1.0, "y": 4.5, "z": 1.5 },//Higher than the normal ones to insure safe grab
+        "IsValidPos": true
+      },
+      "m_HandOffStack": {
+        "localPos": { "x": 1.0, "y":3.5, "z": 1.5 },
+        "IsValidPos": true
+      },
+      "m_PickupRange": 12.5,
+      "m_PickupSortBuckets": 4,
+      "m_VisionRefreshInterval": 1.0,
+      "m_AcceptNeutral": false,
+      "m_PrePickupPeriod": 7.5,
+      "m_PickupAfterMinInterval": 0.0,
+      "m_HandoverAfterMinInterval": 2.0,
+    },
+    "ModuleItemConsume": {
+      "m_Input": {//Main
+        "localPos": { "x": 1.0, "y":3.5, "z": 1.5 },
+        "IsValidPos": true
+      },
+      "m_Output": {
+        "localPos": { "x": 1.0, "y": 0.0, "z": 0.0 },
+        "IsValidPos": true
+      },
+      "m_Consume": {
+        "localPos": { "x": 1.0, "y": 3.0, "z": 1.5 },
+        "IsValidPos": true
+      },
+      // "m_Input": {//OG
+      //   "localPos": { "x": -1.73, "y": 0.46, "z": -0.32 },
+      //   "IsValidPos": true
+      // },
+      // "m_Output": {
+      //   "localPos": { "x": 0.0, "y": 0.37, "z": 0.0 },
+      //   "IsValidPos": true
+      // },
+      // "m_Consume": {
+      //   "localPos": { "x": -0.94, "y": 0.0, "z": -0.9 },
+      //   "IsValidPos": true
+      // },
+      //  //OTHERS
+      // "m_Input2": {
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_Input3": {
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_Input4": { //supports up to 4 inputs for resources, likely for the GSO Static Deli Cannon
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      "m_NeedsToBeAnchored": false, //Disable this for MOBILE FABS
+      "m_DurationMultiplier": 25,//5.0, //How long it takes to make block - TAC takes time and effort to DESTROY
+      // "m_EnergyMultiplier": 1.0, //How much energy it takes - idk
+      // "m_ManualControl": true, //Can you open up a UI by Right-Clicking?
+      //"m_MenuType": 41, //What the UI looks like (background)
+      "m_CraftingFaction": 5, //Uh-oh - 5 for Hawkeye Corp
+      ////GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+      // "m_KickOutItem": true, //Is the final item NOT held on a Tractorbeam
+      // "m_KickLocator": {
+      //   // "localPosition": {
+      //   //   "x": -2.5,
+      //   //   "y": 1.95,
+      //   //   "z": -0.325
+      //   // },
+      //   "localEulerAngles": {
+      //     "x": 315.0,
+      //     "y": 90.0,
+      //     "z": 0.0
+      //   },
+      // },
+      // "m_KickSpeed": 10.0, //How much YEET a block has when ejected
+      "m_UseRecipeBuildTime": true, //If you want to have blocks take time to build based off their own settings
+      // "m_ActivityBlocksInput": false, //Can this grab blocks
+      // "m_OperationBlocksConsume": false, //Is this a Scrapper?
+      // "m_AllowMultItemsOnInput": false, //Can this accept more than one thing at once on the input
+      // "m_AcceptsRecipeDonges": false, //Component fabs
+      // "m_OperatingSFXType": 39, //Running SFX
+      // "m_ConsumeSFXType": 44, //The Thunk noise
+      // "m_ProduceSFXType": 47, //Eject noise
+      // "m_ProduceSFXDelay": 0.6, //delay before Eject noise is played
+      // "m_AddSoldBlocksToShop": false, //idk, prob SCU
+      // "m_HolderBeam": {}, //How the block holds items - obtained automatically
+      // "m_ModuleEnergy": null,// Energy impact this has
+      // "m_RecipeOutputs": null, //where it outputs Chunks
+    },
+
+    "ModuleRecipeProvider": { //Can't quite touch this just yet... - wait now I can thanks to Aceba1 and Tidgem
+
+      "m_RecipeListNames": [
+        {
+          "name": "hefab",
+          "inverted": true
+        }
+      ],
+      // "m_RecipeLists": [],
+      // "RecipeLists": []
+    },
+
+    //----------------------------
+    //   WEAPONISED NOM MODULES
+    //----------------------------
+    //ADDING ATTACK CRAB
+    "Reference|BF_Cab_212/ModuleWeapon.": { //
+      "m_FireSFXType": " GCJackHammer", //Firing noise
+      // "OnAudioTickUpdate": null,
+      "m_LimitedShootAngle": 25,
+      "m_ShotCooldown": 0.0,
+      "m_RotateSpeed" : 1.0, //SPEED of turret aiming, not homing
+    },
+    "Reference|BF_Cab_212/ModuleWeaponGun.": { //
+      // "m_FireControlMode": "AllAtOnce", //IMPORTANT: enables "BurstGun" mode
+      "m_ShotCooldown": 0.4,
+      "m_SeekingRounds" : false, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+    },
+
+    "Reference|BF_Cab_212/FireData.": { //
+      "m_MuzzleVelocity": 10, 
+      "m_BulletSprayVariance": 0.01, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0.0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 0, //2.5 - Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"  
+        "UnityEngine.Transform": {
+          // "localPosition": { "x":0, "y":0, "z":2 },
+          "localScale": { "x":1, "y":1, "z":10 } //{ "x":1.5, "y":1.5, "z":4 }
+        },
+        "Projectile": { //killitBEFOREITLAYSEGGS ASAP
+          "m_LifeTime": 0.0001, //Time before BOOM
+          "m_ImpactSFXType" : "Hammer"//WHAAAM!11
+        },
+        "GameObject|Line": {
+          "UnityEngine.LineRenderer": {//Remove line
+            "startWidth": 0.00,
+            "endWidth": 0.00,
+          }
+        },
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Impact", //What damage modifier the weapon does - To raid shielded Techs
+          "m_Damage": 999999 //Damage for successful projectile contact hit
+        },
+        "LaserProjectile": { //killitBEFOREITLAYSEGGS ASAP
+          "m_LifeTime": 0.0001, //Time before BOOM
+          //what? did it even EXIST!?!?
+          // "m_DamageType" : "Explosive", //What damage modifier the projectile hit does
+          // "m_SeekingRounds" : true,
+          // "m_ImpactSFXType" : "Laser",
+        },
+      }
+    },
+  }
+}

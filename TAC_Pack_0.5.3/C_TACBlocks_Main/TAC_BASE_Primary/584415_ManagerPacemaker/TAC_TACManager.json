@@ -1,0 +1,323 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Manager Pacemaker", //
+  "Description": "A durable pacemaker to survive the rigors of mobilius.  \nQuad-CPU processing makes even the most performance demanding of tasks a desirable breeze.  You can look forwards to slight optimizations in all of your other Tech utilities as well, slightly pushing some parts over their safe operating limits. \n\nThis pacemaker is waterproof, drop-proof, and foolproof - HE-135 certified by various Hawkeye testing labs, despite the massive screen that makes it look otherwise. \n\n\n\n<b>Fine Print:</b> None of the above is actually a \"proof\", it's more like a test within reasonable limits.", //You can make multiple lines with \n
+  "ID": 584415, //A random ID that MUST be unique
+  //"IDNetHex": "ffffffffffffffff", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one - HE Grade 4
+  "Price": 58656,//
+  "HP": 5000, //no easy die but DO NOT PUSH IT
+  //TAC blocks are normally 450, this has HUGE bonus health.
+  "Mass": 1.5,
+
+  "IconName": "TaskManagerButIt'sTAC.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 65, 65, 65, 65",
+      // "name": "Rugged Fiblar",
+      // "id": 52,
+      // "price": 94,
+      // "name": "Mother Brain",
+      // "id": 60,
+      // "price": 1465,
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     { "x": 0, "y": -0.5, "z": 0 },
+     { "x": 1, "y": -0.5, "z": 0 },
+     { "x": 0, "y": 1.5, "z": 0 },
+     { "x": 1, "y": 1.5, "z": 0 },
+     { "x": -0.5, "y": 0, "z": 0 },
+     { "x": -0.5, "y": 1, "z": 0 },
+     { "x": 1.5, "y": 0, "z": 0 },
+     { "x": 1.5, "y": 1, "z": 0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 1 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_Receiver_515",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+	"ReferenceOffset": { "x": 0, "y": 0.5, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { // Base
+      "SubOverrideName": "m_BF_Receiver_515_Base",
+      // "DestroySubReferenceRenderer": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACManagerBase.obj",
+      "ColliderMeshName": "TACManagerBase.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { // ScreenOn
+      "SubOverrideName": "m_ScreenOn",
+      // "DestroySubReferenceRenderer": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACManagerWindowOn.obj",
+      // "ColliderMeshName": "TACManagerWindowOn.obj",
+      "MeshTextureName": "TACManager.png",
+      "MeshGlossTextureName": "TACManager.png", 
+      "MeshEmissionTextureName": "TACManager.png",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { // ScreenDefault
+      "SubOverrideName": "m_ScreenOff",
+      // "DestroySubReferenceRenderer": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACManagerWindowOff.obj",
+      "ColliderMeshName": "TACManagerWindowOff.obj",
+      "MeshTextureName": "TACManager.png",
+      // "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    {
+      "SubOverrideName": "m_BF_Receiver_515_Forcefield",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0 }
+      },
+    },
+    "GameObject|BF_Receiver_515_Forcefield": {
+      "UnityEngine.ParticleSystem": {
+        "maxParticles": 0,
+      },
+    },
+    "GameObject|m_ScreenOff": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1.06, "y":1.06, "z":1.06 },
+        "localPosition": { "x":0.5, "y":0.5, "z":-0.05 }
+      },
+    },
+    "GameObject|b_OverrideBase": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0 }
+      },
+    },
+    "GameObject|b_OverrideForcefield": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0.3 }
+      },
+    },
+    "GameObject|Blocker": null,
+    "GameObject|BF_Receiver_515": {
+      "GameObject|m_BF_Receiver_515_Base": {
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/b_OverrideBase",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|m_BF_Receiver_515_Lights": {
+        },
+        "GameObject|m_BF_Receiver_515_Forcefield": {
+          "FollowTransform": {//follow the extending animator
+            "m_TransformToFollow": "/b_OverrideForcefield",
+            "m_FollowOrientation": true,
+          },
+          "GameObject|m_ScreenOn": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localScale": { "x":-1.06, "y":1.06, "z":1.06 },
+              "localPosition": { "x":0, "y":0, "z":-0.325 }
+            },
+          },
+        },
+        "GameObject|m_BF_Receiver_515_Lights": {
+        },
+        "GameObject|m_BF_Receiver_515_Arm_R_A": {
+          "GameObject|m_BF_Receiver_515_Arm_R_B": {
+            "GameObject|m_BF_Receiver_515_Arm_R_C": {
+            }
+          }
+        },
+        "GameObject|m_BF_Receiver_515_Arm_L_A": {
+          "GameObject|m_BF_Receiver_515_Arm_L_B": {
+            "GameObject|m_BF_Receiver_515_Arm_L_C": {
+            }
+          }
+        }
+      }
+    },
+
+    //Now we begin MADNESS
+    // We only want the placement animation thing
+    "ModuleItemPickup": null,
+    "ModuleItemHolderBeam": null,
+    "ModuleItemHolder": null,
+    //
+    "ModuleEnergy": {},
+    "RandomAdditions.ModuleLudicrousSpeedButton": {// it's like a pacemaker but only fastest
+      "Rate" : 0.15,// must be below 0.2, above 0.01
+      //Rate" : 0.05,// must be below 0.2, above 0.01
+    },// it's like a pacemaker but only fastest
+
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {//Buff nearly everything by itty-bitty
+      "m_BuffPath": [
+        //GUN BUFFS
+        "ModuleWeapon.m_RotateSpeed", 
+        "ModuleWeaponGun.m_ShotCooldown", 
+        "ModuleWeaponGun.m_WeaponModule.m_ShotCooldown", 
+        "ModuleWeaponGun.m_BurstCooldown",
+        "ModuleWeaponGun.m_FiringData.m_BulletSprayVariance",
+        //DRILL BUFFS
+        "ModuleDrill.damagePerSecond",
+        //SHIELD BUFFS
+        "ModuleShieldGenerator.m_InterpTimeOn",
+        "ModuleShieldGenerator.m_PowerUpDelay",
+        "ModuleShieldGenerator.m_EnergyConsumptionPerSec",
+        "ModuleShieldGenerator.m_Radius",
+        "ModuleShieldGenerator.m_InitialChargeEnergy",
+        //WHEEL BUFFS
+        "ModuleWheels.m_WheelParams.steerSpeed",
+        "ModuleWheels.m_TorqueParams.fullCompressFrictionTorque",
+        "ModuleWheels.m_TorqueParams.torqueCurveMaxTorque",
+        "ModuleWheels.m_WheelParams.tireProperties.props.frictionScaleLat",
+        //POWER BUFFS
+        "ModuleEnergy.m_OutputPerSecond",
+        "ModuleEnergy.m_PowerUpDelay",
+        //HEAL BUFFS
+        "ModuleShieldGenerator.m_HealingHeartbeatInterval",
+        //PROP BUFFS - Doesn't work yet
+        "FanJet.force",
+        "BoosterJet.force",
+        //BLOCK NERFS
+        "ModuleDamage.m_DamageDetachFragility",
+        //EXPERIMENTAL
+        "MaterialSwapper.m_IsAntiGrav"
+      ],
+      "m_Strength": [
+        //GUN BUFFS
+        1.1,0.9,0.9,0.9,0.9,
+        //DRILL BUFFS
+        1.2,
+        //SHIELD BUFFS
+        0.70,0.70,0.8,1,0.9,
+        //WHEEL BUFFS
+        1.1,0.8,1,0.8,
+        //POWER BUFFS
+        1.05,0.70,
+        //HEAL BUFFS
+        0.9,
+        //PROP BUFFS
+        1,1,
+        //BLOCK NERFS
+        1,
+        //EXPERIMENTAL
+        0,
+      ],
+      "m_AddAfter": [
+        //GUN BUFFS
+        0, 0, 0, 0, 0,
+        //DRILL BUFFS
+        0,
+        //SHIELD BUFFS
+        0,0,0,0,0,
+        //WHEEL BUFFS
+        0,0,500,0,
+        //POWER BUFFS
+        5,0,
+        //HEAL BUFFS
+        0,
+        //PROP BUFFS
+        0,0,
+        //BLOCK NERFS
+        0.15,
+        //EXPERIMENTAL
+        0,
+      ],
+      "m_NeedsToBeAnchored": [
+        //GUN BUFFS
+        false ,false, false, false, false,        
+        //DRILL BUFFS
+        false, 
+        //SHIELD BUFFS
+        false,false,false,true,true,
+        //WHEEL BUFFS
+        false,false,false,false,
+        //POWER BUFFS
+        false,false,
+        //HEAL BUFFS
+        false,
+        //PROP BUFFS
+        false,false,
+        //BLOCK NERFS
+        false,
+        //EXPERIMENTAL
+        false,
+      ]
+    },
+    /*"FFW_TT_BuffBlock.ModuleBuff": {
+      "m_BuffType": ["WeaponCooldown","WeaponSpread"],
+      //"WeaponCooldown", "WeaponRotation", "WeaponSpread", "WeaponVelocity", "DrillDps"
+      //"WheelsRpm", "WheelsBrake", "WheelsTorque", "WheelsGrip", "WheelsSuspension"
+      //"HoverForce", "HoverRange", "HoverDamping", "BoosterBurnRate"
+      //"ItemPickupRange", "ItemProSpeed"
+      "m_Strength": [0.5, 1.6],
+      "m_AddAfter": [0, 0.25],
+      "m_NeedsToBeAnchored": [false, false]
+    },*/
+    "Reference|GSO_Pacemaker_111/ModulePacemaker.": {},//Get the pacemaker thing
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Popping off in the middle of a fight will really ruin your day
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+    "Damageable": {
+      "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//shotguns go through this
+    },
+  }
+}

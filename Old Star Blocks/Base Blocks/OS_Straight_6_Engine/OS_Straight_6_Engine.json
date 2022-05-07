@@ -1,0 +1,172 @@
+{
+  "Name": "Old Star Straight Six Engine",
+  "Description": "This here is how the Old Star do. The Straight 6 is a powerful engine by Old Star and will improve the torque your wheels can give which also increases you acceleration and top speed. The main drawback with all this power is you will need to ease off the gas if you want to turn or you will start to slide.                                                                      *Buff Block Mod is needed for it to give the required effects or its just a very large and heavy accesory block*",
+  "ID": 300167,
+  "Faction": 4,
+  "Category": 5,
+  "Grade": 2,
+  "Price": 30846,
+  "HP": 6669,
+  "Mass": 20,
+  "IconName": "OS_S6_icon.png",
+  "MeshName": "OS_S6_Engine.obj",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 47, 47, 47, 47, 47, 47, 52, 52, 57, 60, 61, 66, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "CenterOfMass": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 2.0
+  },
+  "BlockExtents": {
+    "x": 2,
+    "y": 2,
+    "z": 5
+  },
+  "APsOnlyAtBottom": false,
+  "APs": [
+    //bottom
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 2
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 4
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 4
+    },
+
+    //Left sides
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 1.5,
+      "y": 1,
+      "z": 4
+    },
+    //right side
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 4
+    },
+    //back
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWheels.m_TorqueParams.torqueCurveMaxRpm",
+        "ModuleWheels.m_TorqueParams.torqueCurveMaxTorque",
+        "ModuleWheels.m_TorqueParams.basicFrictionTorque",
+        "ModuleWheels.m_WheelParams.tireProperties.props.gripFactorLat"
+      ],
+      "m_Strength": [ 1.7, 1.5, 1.5, 0.3 ],
+      "m_AddAfter": [ 0, 0, 0, 0 ],
+      "m_NeedsToBeAnchored": [ false, false, false, false ]
+    }
+  }
+}

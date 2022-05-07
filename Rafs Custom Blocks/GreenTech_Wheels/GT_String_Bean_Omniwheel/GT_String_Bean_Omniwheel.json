@@ -1,0 +1,251 @@
+{
+  "Name": "GreenTech String Bean Omniwheel",
+  "Description": "Three omniwheels mounted on a base, capable of strafing and turning fast.",
+  "ID": 911032,
+  "PairedBlock": 911032, 
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 17466, 
+  "HP": 8000, 
+  "Mass": 20,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 2.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "3, 3, 3, 3, 3, 3, 3, 3, 3, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 63, 63", 
+  "IconName": "GT_Peapod_Omniwheels_Icon.png",
+  "MeshName": "GT_Peapod_Omniwheels.obj",
+  "ColliderMeshName": "GT_Peapod_Omniwheels_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 2, "z": 6},   
+  "APs": [
+	{"x": 0, "y": 1.5,"z": 1},
+	{"x": 1, "y": 1.5, "z": 1},
+	{"x": 0, "y": 1.5,"z": 2},
+	{"x": 1, "y": 1.5, "z": 2},
+	{"x": 0, "y": 1.5,"z": 3},
+	{"x": 1, "y": 1.5, "z": 3},
+	{"x": 0, "y": 1.5,"z": 4},
+	{"x": 1, "y": 1.5, "z": 4},
+	{"x": -0.5, "y": 1,"z": 1},
+	{"x": 1.5, "y": 1, "z": 1},
+	{"x": -0.5, "y": 1,"z": 2},
+	{"x": 1.5, "y": 1, "z": 2},
+	{"x": -0.5, "y": 1,"z": 3},
+	{"x": 1.5, "y": 1, "z": 3},
+	{"x": -0.5, "y": 1,"z": 4},
+	{"x": 1.5, "y": 1, "z": 4},
+  ],
+  
+  "GamePrefabReference": "HE_Tracks_142",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_HE_Tracks_142_Wheel_01",
+		"MeshName": "OmniTireMedium.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Peapod_Omniwheels_Wheel_Centered_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_HE_Tracks_142_Wheel_02",
+		"MeshName": "OmniTireMedium.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Peapod_Omniwheels_Wheel_Centered_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_HE_Tracks_142_Wheel_03",
+		"MeshName": "OmniTireMedium.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Peapod_Omniwheels_Wheel_Centered_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_01",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.58
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_02",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 4.42
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_03",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 2.5
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel_1": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":0, "y":0, "z":0 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 1.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			}
+		  }
+		}
+		},
+	"GameObject|_wheel_2": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":0, "y":0, "z":0 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 1.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			},
+		  }
+		}
+	},
+	"GameObject|_wheel_3": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":0, "y":0, "z":0 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 1.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			},
+		  }
+		}
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 40000.0,
+			"torqueCurveMaxRpm": 400.0,
+			"passiveBrakeMaxTorque": 20000.0,
+			"reverseBrakeMaxRpm": 50.0,
+			"basicFrictionTorque": 100.0,
+			"fullCompressFrictionTorque": 500.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 2.5
+					
+				}
+			  },
+			"radius": 0.9,
+			"thicknessAngular": 40,
+			"suspensionSpring": 20000.0,
+			"suspensionDamper": 800.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 45.0,
+			"steerSpeed": 10.0,
+			"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.5,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

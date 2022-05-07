@@ -1,0 +1,207 @@
+{
+  "Name": "GreenTech Fast Tube Conveyor",
+  "Description": "A long tube conveyor section that safely carries resources inside at two times the current speed.",
+
+  "ID": 911093,
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 150,
+  "HP": 500,
+  "Mass": 1.6,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 32",  
+  "IconName": "GT_Fast_Tube_Conveyor_Belt_Icon.png",
+  
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+  
+   "APs": [
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 1.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 }
+  ],
+
+  "GamePrefabReference": "GSO_Conveyor_111", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_Fast_Tube_Conveyor_Belt_Base.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "MeshName": "GT_Fast_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Fast_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Fast_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.5, "z": 0.5 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 1.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0.5, "z": 0.5 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 1.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 0.5 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 1.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": -0.5, "y": 0, "z": 0.5 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 1.8}
+    }
+  ],
+
+ "JSONBLOCK": {
+   "GamObject|Forward":{
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "forward": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      }
+     }
+   },
+   "GamObject|Backward":{
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "forward": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      }
+     }
+   },
+   "GamObject|LeftTurn":{
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "forward": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      }
+     }
+   },
+   "GamObject|RightTurn":{
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "forward": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      }
+     }
+   },
+   "GamObject|None":{
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "forward": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+     }
+   },
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0, "y": -0.51, "z": 0.5 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.01,
+    "m_BeamStrength": 500.0
+  },
+  "ModuleItemConveyor": {
+    "m_RotationGeometry": [ "Forward" ,"LeftTurn", "RightTurn", "None" ],
+    "m_OppositeDirections": [
+      {
+        "m_Direction": "PosZ", //Refer to below,
+        "m_Opposite":  "NegZ" //Refer to below,
+      },
+      {
+        "m_Direction": "NegZ", //Refer to below,
+        "m_Opposite":  "PosZ" //Refer to below,
+      }
+    ]
+  }
+  }			
+}

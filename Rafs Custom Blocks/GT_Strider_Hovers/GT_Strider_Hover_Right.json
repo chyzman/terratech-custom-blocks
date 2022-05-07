@@ -1,0 +1,568 @@
+{
+  "Name": "GreenTech Strider Hover Right",
+  "Description": "The Strider Hover has an unique leg-like design which raises the Tech and provides ground clearance, despite the hovering height being quite low. Also comes with impact bumpers around the hovers to protect it from eventual terrain collision.",
+  "ID": 911238,
+  "PairedBlock": 911238,  
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 9234, 
+  "HP": 4000, 
+  "Mass": 15,
+  "CenterOfMass": {"x": 2.5, "y": 3, "z": 2},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe": "3, 3, 3, 3, 32, 32, 32, 32, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 63", 
+  "IconName": "GT_Strider_Hover_Right_Icon.png", 
+
+  "CellMap":
+  [
+	[
+		"xxx   ",
+		"xxx   ",
+		"      ",
+		"      ",
+		"      ",
+		"      ",
+		"      "
+	],
+	[
+		"xxx   ",
+		"xxx   ",
+		"      ",
+		"      ",
+		"      ",
+		"      ",
+		"      "
+	],
+	[
+		"  xx  ",
+		"  xxx ",
+		"  xxx ",
+		"   xx ",
+		"   xxx",
+		"   xxx",
+		"   xxx"
+	],
+	[
+		"  xx  ",
+		"  xxx ",
+		"  xxx ",
+		"   xx ",
+		"   xxx",
+		"   xxx",
+		"   xxx"
+	],
+	[
+		"      ",
+		"      ",
+		"      ",
+		"      ",
+		"   xxx",
+		"   xxx",
+		"   xxx"
+	]
+  ],
+  
+  "APs": [ 
+    {"x": -0.5, "y": 5, "z": 0},
+	{"x": -0.5, "y": 6, "z": 0},
+	{"x": -0.5, "y": 5, "z": 1},
+	{"x": -0.5, "y": 6, "z": 1},
+
+	{"x": 0, "y": 6.5, "z": 0},
+	{"x": 1, "y": 6.5, "z": 0},
+	{"x": 0, "y": 6.5, "z": 1},
+	{"x": 1, "y": 6.5, "z": 1},
+
+	{"x": 0, "y": 5, "z": -0.5},
+	{"x": 0, "y": 6, "z": -0.5},
+	{"x": 1, "y": 6, "z": -0.5},
+
+    {"x": 0, "y": 5, "z": 1.5},
+	{"x": 0, "y": 6, "z": 1.5},
+	{"x": 1, "y": 6, "z": 1.5}
+  ],
+  
+  "GamePrefabReference": "VEN_Wheel_211",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Base",
+		"MeshName": "GT_Strider_Hover_Base.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Strider_Hover_Base_Collider.obj",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}, 
+	{
+		"SubOverrideName": "Leg",
+		"MeshName": "GT_Strider_Hover_Leg.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}, 
+	{
+		"SubOverrideName": "Hover",
+		"MeshName": "GT_Strider_Hover_Hover.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 1,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Suspension",
+		"MeshName": "GT_Strider_Hover_Suspension.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": -90,
+			"z": 45
+		}
+	},
+	{
+		"SubOverrideName": "Suspension",
+		"SubPosition": {
+			"x": 1.15,
+			"y": 5.47,
+			"z": 0.5
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 4,
+			"y": 1.63,
+			"z": 2.2
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": -50,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Up",
+		
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Leg_Collider",
+		"layer": 14
+	},
+	{
+		"SubOverrideName": "Leg_Collider_2",
+		"layer": 8
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|Suspension_Tyre": {
+		
+		"GameObject|m_VEN_Wheel_211_Tyre_Base": {
+			"GameObject|Leg": {
+				"GameObject|Leg_Collider": {
+					"UnityEngine.Transform": {
+						"localPosition": {
+							"x": 0.85,
+							"y": -1.85,
+							"z": 0
+							},
+							"localEulerAngles": {
+							"x": 0,
+							"y": 0,
+							"z": 20
+							},
+							"localScale": {
+							"x": 1,
+							"y": 1,
+							"z": 1
+							}
+						},
+				"CapsuleCollider": {
+					"center": {
+					  "x": 0.0,
+					  "y": 0.0,
+					  "z": 0.0
+					},
+					"radius": 0.4,
+					"height": 5,
+					"direction": 1
+				}
+			},
+			"GameObject|Leg_Collider_2": {
+				"UnityEngine.Transform": {
+					"localPosition": {
+						"x": 0.68,
+						"y": -1.4,
+						"z": 0
+						},
+						"localEulerAngles": {
+						"x": 0,
+						"y": 0,
+						"z": 20
+						},
+						"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						}
+					},
+				"CapsuleCollider": {
+					"center": {
+					  "x": 0.0,
+					  "y": 0.0,
+					  "z": 0.0
+					},
+					"radius": 0.2,
+					"height": 3,
+					"direction": 1
+				}
+			}
+			},
+			"UnityEngine.Transform": {
+				"localPosition": {
+					"x": -1.5,
+					"y": 3.6,
+					"z": 0
+					},
+					"localEulerAngles": {
+					"x": 0,
+					"y": -50,
+					"z": 0
+					},
+					"localScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+					}
+				},
+			
+			"Reference|GSO_HoverJet_111/m_GSO_Hover_111_Jet/_hoverJet": {
+				"UnityEngine.Transform": {
+					"localPosition": {
+						"x": 1.5,
+						"y": -4.6,
+						"z": 0
+						},
+						"localEulerAngles": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+						},
+						"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+						}
+					},
+				"HoverJet": {
+					"jetRadius": 1.0,
+					"forceMax": 20000,
+					"forceRangeMax": 2,
+					"m_DampingScale": 0.2,
+					"m_MaxClimbDistance": 4,
+					"m_VectoredThrustMaxAngle":15,
+					"m_VectoredThrustMaxForceAngle": 15,
+					"m_AutoStabiliseStrength": 0.8,
+					"m_GroundMaxSlopeAngle": 90.0
+				},
+				"GameObject|Hover": {},
+				"GameObject|ParticleSystem_GSO_HoverPad": {
+					"UnityEngine.Transform": {
+						"localPosition": {
+						  "x": 0,
+						  "y": 0,
+						  "z": 0
+						 },
+						 "localScale": {
+						  "x": 1,
+						  "y": 1,
+						  "z": 1
+						}
+					   },
+				"ParticleSystem": {
+					/* "startColor":{
+						"r": 0.1,
+						"g": 0.5,
+						"b": 1.0,
+						//"a": 1.0
+					}, */
+					"startDelay": 0,
+					"loop": true,
+					"playOnAwake": true,
+					"duration": 1,
+					"playbackSpeed": 1,
+					"enableEmission": true,
+					"emissionRate": 1.2,
+					"startSpeed": 0,
+					"startSize": 2.4,
+					"startLifetime": 2,
+					"gravityModifier": 0.0,
+					"maxParticles": 1000,
+					"simulationSpace": 0,
+					//"scalingMode": 2,
+					"sizeOverLifetime": { //Annoying module that manages size
+						"enabled": true,
+						"size": {
+						  "mode": 1,
+						  "curveMultiplier": 2.5,
+						  "curveMax": {
+							"keys": [
+								{
+									"time": 0.0,
+									"value": 0.3
+								  },
+								  {
+									"time": 1.0,
+									"value": 1.0
+								  }
+							],
+							"length": 2,
+							"preWrapMode": 8,
+							"postWrapMode": 8
+						  },
+						  "curveMin": null,
+						  "constantMax": 0.0,
+						  "constantMin": 0.0,
+						  "constant": 0.0,
+						  "curve": {
+							"keys": [
+								{
+									"time": 0.0,
+									"value": 0.3
+								  },
+								  {
+									"time": 1.0,
+									"value": 1.0
+								  }
+							],
+							"length": 2,
+							"preWrapMode": 8,
+							"postWrapMode": 8
+						  }
+						},
+						"sizeMultiplier": 2.5,
+						"x": {
+						  "mode": 1,
+						  "curveMultiplier": 2.5,
+						  "curveMax": {
+							"keys": [
+							  {
+								"time": 0.0,
+								"value": 0.3
+							  },
+							  {
+								"time": 1.0,
+								"value": 1.0
+							  }
+							],
+							"length": 2,
+							"preWrapMode": 8,
+							"postWrapMode": 8
+						  },
+						  "curveMin": null,
+						  "constantMax": 0.0,
+						  "constantMin": 0.0,
+						  "constant": 0.0,
+						  "curve": {
+							"keys": [
+							  {
+								"time": 0.0,
+								"value": 0.3
+							  },
+							  {
+								"time": 1.0,
+								"value": 1.0
+							  }
+							],
+							"length": 2,
+							"preWrapMode": 8,
+							"postWrapMode": 8
+						  }
+						},
+						"xMultiplier": 2.5
+					}
+					/* "rotationOverLifetime": {
+					  "enabled": true,
+					  "y": { "constantMin": -90, "constantMax": 90 }
+					},*/
+					/* "colorOverLifetime": {
+					  "enabled": true,
+					  "color": {
+						"mode": "TwoColors",
+						"colorMin": {
+						"r": 0.5,
+						"g": 0.5,
+						"b": 1.0,
+						"a": 0.1
+						},
+						"colorMax": {
+						"r": 0.1,
+						"g": 0.5,
+						"b": 1.0,
+						"a": 0.4
+						},
+						"gradient": null,
+						"gradientMin": null,
+						"gradientMax": null
+						}
+					}  */
+				  },
+				  "ParticleSystemRenderer": {
+					//"alignment": 0,
+					//"renderMode": 0,
+					"sortMode": 0,
+					"lengthScale": 2.0,
+					"velocityScale": 0.0,
+					"cameraVelocityScale": 0.0,
+					"normalDirection": 1.0,
+					"shadowBias": 0.0,
+					"sortingFudge": 0.0,
+					"minParticleSize": 0.0,
+					"maxParticleSize": 0.5,
+					"maskInteraction": 0,
+					"trailMaterial": null,
+					"enableGPUInstancing": false,
+					"allowRoll": true,
+					"mesh": {}
+				  }
+				}
+			}
+		}
+	},
+	"GameObject|_wheel": {
+		"GameObject|_tireFrame": {	
+			"GameObject|_suspensionColliderLower": {
+			  "UnityEngine.Transform": {
+				"localPosition": { "x":0, "y":0, "z":0 },
+				"localScale": { "x":1, "y":1, "z":1 }
+			  }
+			  /* "UnityEngine.SphereCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.05
+			  } */
+			}
+		  }		 
+	},
+	"Reference|GSO_HoverJet_111/ModuleHover.": {}, 
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 0,
+		   "torqueCurveMaxRpm": 100,
+		  "passiveBrakeMaxTorque": 0,
+		   "reverseBrakeMaxRpm": 0,
+		   "basicFrictionTorque": 50.0,
+		   "fullCompressFrictionTorque": 0
+		},
+		"m_UseTireTracks": false,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 2.0,
+					"gripFactorLat": 2.0
+				}
+			  },
+			"radius": 1.2,
+			"thicknessAngular": 55,
+			"suspensionSpring": 10000.0,
+			"suspensionDamper": 500.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.8,
+			"steerAngleMax": 0,
+			"steerSpeed": 1
+			//"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

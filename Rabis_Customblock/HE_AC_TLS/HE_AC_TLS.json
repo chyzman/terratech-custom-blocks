@@ -1,0 +1,288 @@
+{
+  "Name": "Hawkeye & Grunder I.G Tactical Laser System",
+  "Description": "Fixed chemical laser cannon unit. It is very powerful, but it consumes tons of power while it is being activated.\n\n\n\nCum historia\nMutat valde Razgriz\nRevelat ipsum\nPrimum daemon scelestus est",
+  "ID": 546351,
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2,
+  "Price": 169398,
+  "HP": 1500,
+  "Mass": 8,
+  "CenterOfMass": {
+    "x": 1.0,
+    "y": 0.0,
+    "z": 2.0
+  },
+  "Fragility": 0.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 1, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+  "EmissionMode": 1,
+  "Recipe": "48, 48, 48, 48, 53, 53, 53, 53, 54, 54, 56, 56, 56, 56, 56, 56, 58, 58, 58, 58, 58, 58, 59, 59, 59, 59, 59, 59, 59, 59, 61, 61, 61, 61, 64, 64, 64, 64, 64, 64, ",
+  "IconName": "HE_AC_TLS.png",
+  "MeshName": "HE_AC_TLS.obj",
+  "ColliderMeshName": "HE_AC_TLS_c.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": false,
+  "MeshTextureName": null,
+  "MeshMaterialName": "HE_Main",
+  "CellMap": [ // Slices of the block's cell occupancy, from back to front
+    // Any character placement that is not a space will be filled as a cell
+    [
+      "000",
+    ],
+    [
+      "000",
+    ],
+    [
+      " 0 ",
+    ],
+    [
+      " 0 ",
+    ],
+    [
+      " 0 ",
+    ],
+  ],
+  "APs": [
+    {"x": 1,"y": -0.5,"z": 0},{"x": 1,"y": -0.5,"z": 1},
+  ],
+  "GamePrefabReference": "BF_Laser_Melee_212",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "DeathExplosionReference": "BF_Laser_Melee_212",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0 // Roll
+  },
+  "SubObjects": [ 
+    {
+      "SubOverrideName": "m_BF_Laser_Melee_212_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": null,
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0.0
+      }
+    },
+    { // remove turret model
+      "SubOverrideName": "m_BF_Laser_Melee_212_Laser",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    { // remove turret model
+      "SubOverrideName": "grunderIGlogo",
+      "MeshName": "HE_AC_TLS_GrunderIGlogo.obj",
+      "MeshMaterialName": "HE_Main",
+      "MakeBoxCollider": false,
+    },
+  ],
+
+
+  "Deserializer": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": null,
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": null,
+        "GameObject|particles": {
+          "UnityEngine.Transform": {
+            "localPosition": {"x": 0,"y": 0,"z": 0}
+          },
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.5,
+              "y": -0.5,
+              "z": 4.13
+            },
+          },
+          "GameObject|_beam": null,
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          "CannonBarrel": {
+            "particles": []
+          },
+          "GameObject|_muzzleFlash": null,
+        },
+        "Reference|EXP_LaserGun_323/RR_LaserGun_323/_gimbalBase/_gimbalElev/_barrel": { // So... why am I using the BF laser as a reference?
+          "UnityEngine.Transform": {
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localPosition": {
+              "x": 1.5,
+              "y": -0.5,
+              "z": 4.13
+            },
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "GameObject|_light": {
+              "Light": {
+                "color": {
+                  "r": 0.2,
+                  "g": 0.2,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "type": "Point",
+                "range": 5,
+                "intensity": 10,
+                //"colorTemperature": 1000.0
+              }
+            },
+          },
+          "GameObject|_beam": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "BeamWeapon": {
+              "m_DamageType": 0,
+              "m_DamagePerSecond": 15000,
+              "m_Range": 1000,
+              //"m_HitParticlesPrefab": null,
+
+
+              /*"Instantiate|m_HitParticlesPrefab": {   /// ?????????????
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 0.0, "g": 0.0, "b": 1.0, "a": 1.0 },
+									"startSize": 10,
+								}
+							},*/
+
+
+
+              "m_BeamParticlesPrefab": null
+            },
+            "LineRenderer": {
+              "colorGradient": {
+                "alphaKeys": [
+                  {
+                    "alpha": 1,
+                    "time": 0.0
+                  },
+                  {
+                    "alpha": 1,
+                    "time": 1.0
+                  },
+                ],
+                "colorKeys": [
+                  {
+                    "color": {
+                      "r": 0.2,
+                      "g": 0.2,
+                      "b": 1
+                    },
+                    "time": 0.0
+                  },
+                  {
+                    "color": {
+                      "r": 0.2,
+                      "g": 0.2,
+                      "b": 1
+                    },
+                    "time": 1.0
+                  }
+                ]
+              },
+              "startColor": {
+                "r": 0.2,
+                "g": 0.2,
+                "b": 1,
+                "a": 1
+              },
+              "endColor": {
+                "r": 0.2,
+                "g": 0.2,
+                "b": 1,
+                "a": 1
+              },
+            },
+          },
+        },
+      },
+    },
+
+
+  "ModuleConsumeEnergyToShell": {
+                                    //The Odin laser is...
+                                    // 2000 DPS
+                                    // 500 cost
+
+      "EnergyCost":           3750,   // How much energy is needed to fire one round 
+                                      // (For continuous weapons, how much energy per second)
+      "EnergyCapacity":       25000,   // How much energy this block can hold
+                                      // more buffer energy
+
+      // The two below are intended for flamethrowers and beam weapons
+      "LowestPermittedEnergy": 15000,    // The minimum amount of energy that can be left in a system 
+                                      // (Useful for continuous weapons: Don't drain all energy)
+      "TimeBeforeRetry":      2,      // How many seconds to wait after failing to fire 
+                                      // (Useful for continuous weapons: Prevents studdering effect)
+    },
+
+
+  }
+}

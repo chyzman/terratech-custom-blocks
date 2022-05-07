@@ -1,0 +1,316 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Hawkeye Mk XII Avenger",
+  "Description": "A truly massive gatling autocannon", //You can make multiple lines with \n
+  "ID": 10007, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 36291,
+  "HP": 5000,
+  "Mass": 20,
+
+  "Fragility": 0.25,
+
+  "IconName": "Avenger.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "46, 46, 46, 46, 46, 46, 46, 47, 53, 54, 55, 55, 57, 61, 61, 64",
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "GSO_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 13
+  },
+
+  "APs": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 6
+    }
+  ],
+
+  // Advanced Settings
+  "GamePrefabReference": "HE_MiniGun_Large_525",
+  "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects":[
+    // Remove the original components
+    {
+        "ObjectName":                   "m_HE_MiniGun_313_Base",
+        "DestroyExistingRenderer":      true,       
+        "DestroyExistingColliders":     true,   
+        "Position":                     { "x": 0.0, "y": 0.0, "z": 0.0 }    
+    },
+    {
+        "ObjectName":                   "m_HE_MiniGun_313_RotatingPart_A",
+        "DestroyExistingRenderer":      true,       
+        "DestroyExistingColliders":     true,            
+    },
+    {
+        "ObjectName":                   "m_HE_MiniGun_313_RotatingPart_B",
+        "DestroyExistingRenderer":      true,       
+        "DestroyExistingColliders":     true,            
+    },
+
+    {
+      "SubOverrideName": "body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "avenger_base.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": -0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_HE_MiniGun_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "avenger_barrel.obj",
+      "MeshMaterialName": "HE_Main",
+      "layer": 8, // set it so it's part of hover hitbox
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": -0.3
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "SubPosition": {
+        "x": 0,
+        "y": -0.25,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    
+    "GameObject|m_HE_MiniGun_313_Base":{
+      "GameObject|_gimbalBase":{
+          "GimbalAimer": {
+              "rotationLimits": [0.0001, -0.0001], 
+              "rotationAxis": 1          
+            },
+
+          "GameObject|m_HE_MiniGun_313_RotatingPart_A":{
+              "UnityEngine.Transform": {
+                  "localPosition": { "x": 0, "y": 0, "z": 0 }
+              },
+              "GameObject|_gimbalElev":{
+                  "GimbalAimer": {
+                      "rotationLimits": [0.0001, -0.0001], 
+                      "rotationAxis": 1          
+                    },
+                    "GameObject|_barrel": {
+                      "UnityEngine.Transform": {
+                        "localPosition": { "x": 0, "y": 0.25, "z": 0 }
+                      },
+                      "GameObject|_spawnBullet": {
+                        "UnityEngine.Transform": {
+                          "localPosition": { "x": 0, "y": 0.23, "z": 13.0 }
+                        }
+                      },
+                      "GameObject|_muzzleFlash": {
+                        "UnityEngine.Transform": {
+                          "localPosition": { "x": 0, "y": 0.23, "z": 12.75 },
+                          "localScale": { "x": 2.0, "y": 2.0, "z": 1.5 }
+                        }
+                      },
+                      "GameObject|_spindle":{
+                          "Spinner": {
+                              "m_Speed": 1.143,                         // Dictates the speed of the rotation
+                              "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+          
+                                                                      // Mileage varies between blocks, but in general, any block that has a spinning component 
+                                                                      // will have this module and will work.
+          
+                              "m_SpinUpTime": 0.75,                    // Dictates the amount of time required for the object to spin in full speed
+                              "m_CurrentAngle": 0.0,                  // Dictates the starting angle of the object when spawned into the world
+                              "m_CurrentAutoSpeed": 0.0,
+                              "m_CurrentSpeedFraction": 0.0,
+                              "m_SpinnerSound": null,
+                              "m_SpinnerSoundOriginalPitch": 0.0,
+                              "AtFullSpeed": false            
+                          }
+
+                      },
+                      "GameObject|_smoke":{  
+                        "UnityEngine.Transform": {
+                          "localPosition": { "x": 0, "y": 0, "z": 12.75 }
+                        },
+                          // Particles are similar to most DDCs. They use an emitter and some form of texture to work in-game.                          
+                          "ParticleSystem": {
+                              "startSize":            0.5,        // The start size of the particle
+                              "startLifetime":        3.0,        // The duration of the particle's existence
+                              "emissionRate":         100,
+                              "duration":             0.3,
+                              
+                              // Self-explanatory; this dictates the size of the particle at different points of its life, all the way to the end
+                              "sizeOverLifetime": {
+                                  "xMultiplier": 10.0,        // Dictates the multiplier on the X axis of the particle
+                                  "yMultiplier": 1.0,         // Dictates the multiplier on the Y axis of the particle
+                                  "zMultiplier": 1.0,         // Dictates the multiplier on the Z axis of the particle
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "GameObject|body": {}
+  },
+
+  "Reference|GSO_Cannon_Turret(111)/FireData.": {
+    "m_MuzzleVelocity": 200,
+    "m_BulletSprayVariance": 0.01,
+    "m_KickbackStrength": 150,
+
+    "m_CasingVelocity": 10.0,
+    "m_BulletSpin": 9.0,
+    "m_CasingEjectVariance": 0.3,
+    "m_CasingEjectSpin": 50.0,
+
+    "Instantiate|m_BulletPrefab": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x":2.0,
+          "y":2.0,
+          "z":3.0
+          }},
+        "WeaponRound": {
+          "m_Damage": 125
+        },
+        "UnityEngine.CapsuleCollider": {
+          "radius": 0.15,
+          "height": 0.4,
+          "center": { "x": 0, "y": 0, "z": 0 }
+        },
+        "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+          "useGravity": false
+        },  
+        // This is the bullet's white trail. 
+        "SmokeTrail":{
+            "numberOfPoints":   10.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                        // Do not decrease this too much as it will begin to act strangely.
+
+            "spread":           2.0,   // Dictates how erratic the trail is.
+            "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+            "updateSpeed":      0.15,   // DIctates the speed of the trail.
+        },
+        // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+        "LineRenderer": {
+            "startWidth": 0.2,
+            "endWidth": 0.05,
+            "widthMultiplier": 1.0,
+
+            // The color at the start of the trail
+            "startColor": {
+                "r": 0.0,
+                "g": 0.3,
+                "b": 1.0,
+                "a": 1.0                
+            },
+
+            // The color at the end of the trail
+            "endColor":{
+                "r": 0.0,
+                "g": 0.8,
+                "b": 1.0,
+                "a": 1.0                
+            }
+        },
+        "Projectile": {
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "m_LifeTime": 5.0,
+          "m_ExplodeAfterLifetime": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 1.0,
+              "m_EffectRadius": 1.5,
+              "m_EffectRadiusMaxStrength": 0.25,
+              "m_MaxDamageStrength": 50,
+              "m_MaxImpulseStrength": 25
+            }
+          }
+        }
+    },
+
+    "Instantiate|m_BulletCasingPrefab": {
+      "m_LifeTime": 0.25,
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x":0.5,
+          "y":0.5,
+          "z":0.5
+        }
+      }
+    }
+},
+
+    "ModuleWeapon": {
+      "m_FireSFXType": "HECannonTurret",
+      "m_AimType": 1,                         // If set to 0, the gun will aim at targets. If set to 1, it will not.
+      "m_RotateSpeed" : 50
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.125,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 1,
+      "m_BurstCooldown": 0,
+      "m_ResetBurstOnInterrupt": true,
+      "m_NumCannonBarrels": 1
+    }
+  }
+}

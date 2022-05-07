@@ -1,0 +1,250 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+{
+  "Name": "Venture SG Hover Pad",
+  "Description": "The Supergravity Hover Pad was created for driving in extreme terrain and low gravity environments, where it uses gravitational waves to attract itself to almost any surface. The gravitational pull may get a little unstable if the Tech is flipped or has no surface to cling to, Build Beam is advised for correction.",
+  "ID": 910954, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 5286, 
+  "HP": 250, 
+  "Mass": 0.5,
+
+  "Recipe":  "43, 48, 48, 50, 52", 
+  "IconName": "VEN_SG_Hover_Pad_Icon.png",
+  "SupressBoxColliderFallback": true,
+  
+  "EmissionMode": 1,
+ 
+  "BlockExtents": 
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },   
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    }
+  ],
+  "GamePrefabReference": "GSO_HoverJet_111",
+  "KeepReferenceRenderers": true,
+  
+  "SubObjects": [
+     {
+	 "SubOverrideName":"_spindle",
+	 "DestroyExistingColliders": true,
+	 "DestroyExistingRenderer": true,
+	 "MakeBoxCollider": false,
+     "MeshName": "VEN_SG_Hover_Pad_Rotor.obj",
+     "MeshMaterialName": "VEN_Main",
+	 },
+     {
+      "SubOverrideName": "m_GSO_Hover_111_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "VEN_SG_Hover_Pad_Base.obj",
+      "MeshMaterialName": "VEN_Main",
+      "ColliderMeshName": "VEN_SG_Hover_Pad_Collider.obj",
+	  "SubPosition": { "x": 0, "y": 0, "z": 0},
+	  "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0  
+      }
+	  },
+	  {
+      "SubOverrideName": "m_GSO_Hover_111_Jet",
+	  "DestroyExistingRenderer": true,
+	   "SubPosition": { "x": 0, "y": -0.18, "z": 0},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0  
+      }
+	  },
+	  {
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": -0.2, "z": 0},
+	   "SubRotation": {
+        "x": 180,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": -0.2, "z": -0.5},
+	   "SubRotation": {
+        "x": 45,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": -0.2, "z": 0.5},
+	   "SubRotation": {
+        "x": -45,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0.5, "y": -0.2, "z": 0},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 45  
+      }
+	},
+	{
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": -0.5, "y": -0.2, "z": 0},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": -45  
+      }
+	},
+	{
+	"MakeBoxCollider": true,
+	"SubPosition": { "x": 0, "y": 0.4, "z": 0},
+    "SubScale": {
+      "x": 1,
+      "y": 0.05,
+      "z": 1
+    },
+	"layer": 20,
+	}
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":-0.2, "z":0 } 
+      },
+    },
+ "GameObject|m_GSO_Hover_111_Jet": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 } 		
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad": {
+	 "UnityEngine.ParticleSystem": {
+	 "startSize": 0.9,
+	 "duration": 0.8,
+	 "maxParticles": 4,
+	 "startLifetime": 0.8,
+	 "emissionRate": 3,
+	 "startColor": { "r": 0.0, "g": 1.0, "b": 0.0, "a": 1.0 },
+	 },
+	},
+	"HoverJet": {
+	"forceMax": 25000.0,
+	"forceRangeMax": 10,
+	"m_DampingScale": 0.02,
+	"m_MaxClimbDistance": 10,
+	"m_VectoredThrustMaxAngle": 0,
+    "m_VectoredThrustMaxForceAngle": 0,
+	
+	
+} 
+}  
+},
+"Duplicate|m_GSO_Hover_111_Jet": {
+"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad": {
+	 "UnityEngine.ParticleSystem": {
+	 "loop": false,
+     "playOnAwake": false,
+	 "isPlaying": false,
+     "isEmitting": false,
+     "isStopped": true,
+     "isPaused": false,
+     "maxParticles": 0,  
+	 }
+	},
+	"HoverJet": {
+	"forceMax": 20000.0,
+	"forceRangeMax": 0.7,
+	"m_DampingScale": 0.005,
+	"m_MaxClimbDistance": 0.7,
+	"m_VectoredThrustMaxAngle": 1,
+    "m_VectoredThrustMaxForceAngle": 1,
+	}  
+    }
+	},
+ "Duplicate|m_GSO_Hover_111_Jet_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      },
+    "GameObject|_hoverJet": {
+	
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 10,
+	"m_DampingScale": 0.02,
+	"m_MaxClimbDistance": 10,
+	"m_VectoredThrustMaxAngle": 0,
+    "m_VectoredThrustMaxForceAngle": 0,
+	} 
+}  
+},
+"Duplicate|m_GSO_Hover_111_Jet_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      }  
+},
+"Duplicate|m_GSO_Hover_111_Jet_copy_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 } 
+      }  
+},
+"Duplicate|m_GSO_Hover_111_Jet_copy_copy_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      }  
+},
+"GameObject|_spindle": {"Spinner": {
+        "m_Speed": 1,
+      "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+        "Speed": 1,
+      "m_SpinUpTime":8
+      }
+	  },
+    "ModuleRadar":{
+     "m_Dish":{
+      "m_Speed":1,
+      "m_AutoSpin":false,
+      "m_SpinUpTime":1,
+      "m_CurrentAutoSpeed":1,
+      "Speed":1,},
+	  },
+}
+}

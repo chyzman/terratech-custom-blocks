@@ -1,0 +1,494 @@
+{
+  "Name": "GreenTech Terra Wheel",
+  "Description": "The gargantuan Terra Wheel is one of the largest wheel models ever built. A light but highly sophisticated wooden structure holds it together while strong built-in engines work to rotate the giant tire.\nIt was born from a collaboration between scientists and environmental organizations in efforts to provide a green alternative to the highly popular Behemoth Wheel, which creates miles and miles of new tire dumps every year.",
+  "ID": 911090, 
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 24204, 
+  "HP": 20000, 
+  "Mass": 60,
+  "CenterOfMass": {"x": 0.5, "y": 4.49, "z": 4.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 54, 54, 54, 54, 56, 56, 56, 56, 57, 57, 57, 57",
+  "IconName": "GT_Terra_Wheel_Icon.png", 
+  "MeshName": "GT_Terra_Wheel.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"  ",
+		"  "
+	],
+	[
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"  ",
+		"  "
+	],
+	[
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"xx",
+		"xx",
+		"  ",
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"xx",
+		"xx",
+		"  ",
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"xx",
+		"xx",
+		"  ",
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"xx",
+		"xx",
+		"  ",
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx"
+	],
+	[
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"  ",
+		"  "
+	],
+	[
+		"  ",
+		"  ",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"xx",
+		"  ",
+		"  "
+	]
+  ],
+  
+  "APs": [ 
+	{"x": -0.5, "y": 4, "z": 1},
+	{"x": -0.5, "y": 5, "z": 1},
+	{"x": 1.5, "y": 4, "z": 1},
+	{"x": 1.5, "y": 5, "z": 1},
+	{"x": -0.5, "y": 4, "z": 8},
+	{"x": -0.5, "y": 5, "z": 8},
+	{"x": 1.5, "y": 4, "z": 8},
+	{"x": 1.5, "y": 5, "z": 8},
+	{"x": -0.5, "y": 3, "z": 2},
+	{"x": -0.5, "y": 4, "z": 2},
+	{"x": -0.5, "y": 5, "z": 2},
+	{"x": -0.5, "y": 6, "z": 2},
+	{"x": 1.5, "y": 3, "z": 2},
+	{"x": 1.5, "y": 4, "z": 2},
+	{"x": 1.5, "y": 5, "z": 2},
+	{"x": 1.5, "y": 6, "z": 2},
+	{"x": -0.5, "y": 3, "z": 7},
+	{"x": -0.5, "y": 4, "z": 7},
+	{"x": -0.5, "y": 5, "z": 7},
+	{"x": -0.5, "y": 6, "z": 7},
+	{"x": 1.5, "y": 3, "z": 7},
+	{"x": 1.5, "y": 4, "z": 7},
+	{"x": 1.5, "y": 5, "z": 7},
+	{"x": 1.5, "y": 6, "z": 7},
+	{"x": -0.5, "y": 2, "z": 3},
+	{"x": -0.5, "y": 3, "z": 3},
+	{"x": -0.5, "y": 4, "z": 3},
+	{"x": 1.5, "y": 2, "z": 3},
+	{"x": 1.5, "y": 3, "z": 3},
+	{"x": 1.5, "y": 4, "z": 3},
+	{"x": -0.5, "y": 2, "z": 6},
+	{"x": -0.5, "y": 3, "z": 6},
+	{"x": -0.5, "y": 4, "z": 6},
+	{"x": 1.5, "y": 2, "z": 6},
+	{"x": 1.5, "y": 3, "z": 6},
+	{"x": 1.5, "y": 4, "z": 6},
+	{"x": -0.5, "y": 1, "z": 4},
+	{"x": -0.5, "y": 2, "z": 4},
+	{"x": -0.5, "y": 3, "z": 4},
+	{"x": -0.5, "y": 4, "z": 4},
+	{"x": -0.5, "y": 8, "z": 4},
+	{"x": 1.5, "y": 1, "z": 4},
+	{"x": 1.5, "y": 2, "z": 4},
+	{"x": 1.5, "y": 3, "z": 4},
+	{"x": 1.5, "y": 4, "z": 4},
+	{"x": 1.5, "y": 8, "z": 4},
+	{"x": -0.5, "y": 1, "z": 5},
+	{"x": -0.5, "y": 2, "z": 5},
+	{"x": -0.5, "y": 3, "z": 5},
+	{"x": -0.5, "y": 4, "z": 5},
+	{"x": -0.5, "y": 8, "z": 5},
+	{"x": 1.5, "y": 1, "z": 5},
+	{"x": 1.5, "y": 2, "z": 5},
+	{"x": 1.5, "y": 3, "z": 5},
+	{"x": 1.5, "y": 4, "z": 5},
+	{"x": 1.5, "y": 8, "z": 5},
+	{"x": 0, "y": 5, "z": 2.5},
+	{"x": 0, "y": 6, "z": 2.5},
+	{"x": 0, "y": 7, "z": 2.5},
+	{"x": 1, "y": 5, "z": 2.5},
+	{"x": 1, "y": 6, "z": 2.5},
+	{"x": 1, "y": 7, "z": 2.5},
+	{"x": 0, "y": 5, "z": 6.5},
+	{"x": 0, "y": 6, "z": 6.5},
+	{"x": 0, "y": 7, "z": 6.5},
+	{"x": 1, "y": 5, "z": 6.5},
+	{"x": 1, "y": 6, "z": 6.5},
+	{"x": 1, "y": 7, "z": 6.5},
+	{"x": 0, "y": 4.5, "z": 3},
+	{"x": 0, "y": 4.5, "z": 4},
+	{"x": 0, "y": 4.5, "z": 5},
+	{"x": 0, "y": 4.5, "z": 6},
+	{"x": 1, "y": 4.5, "z": 3},
+	{"x": 1, "y": 4.5, "z": 4},
+	{"x": 1, "y": 4.5, "z": 5},
+	{"x": 1, "y": 4.5, "z": 6},
+	{"x": 0, "y": 7.5, "z": 3},
+	{"x": 0, "y": 7.5, "z": 4},
+	{"x": 0, "y": 7.5, "z": 5},
+	{"x": 0, "y": 7.5, "z": 6},
+	{"x": 1, "y": 7.5, "z": 3},
+	{"x": 1, "y": 7.5, "z": 4},
+	{"x": 1, "y": 7.5, "z": 5},
+	{"x": 1, "y": 7.5, "z": 6}
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Armoured_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"MakeBoxCollider": true,
+		"SubScale": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.5
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 6,
+			"z": 4.5
+		},
+		"Layer": 8
+	  },
+	{
+		"SubOverrideName": "m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "GT_Terra_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"ColliderMeshName": "GT_Terra_Wheel_Collider_1.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Terra_Wheel_Collider_2.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Terra_Wheel_Collider_3.obj",
+		"Layer": 14
+	},
+	{
+		"ColliderMeshName": "GT_Terra_Wheel_Collider_4.obj",
+		"Layer": 14
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 4.49,
+			"z": 4.5
+		}
+	},
+	{
+		"SubOverrideName": "Tire_Collider_A",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_B",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_C",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_D",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_E",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	},
+	{
+		"SubOverrideName": "Tire_Collider_F",
+		"ColliderMeshName": "GT_Terra_Wheel_Tire_Collider.obj",
+		"Layer": 8
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|m_HE_EnclosedWheel_Wheel_122": {
+			"GameObject|Tire_Collider_A": {
+				"UnityEngine.Transform": {
+					"localScale": {
+					"x": 0.9,
+					"y": 1,
+					"z": 1
+					},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+			    }
+			},
+			"GameObject|Tire_Collider_B": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 0.9,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 60.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_C": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 0.9,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 120.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_D": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 0.9,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": -60.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_E": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 0.9,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": -120.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			},
+			"GameObject|Tire_Collider_F": {
+				"UnityEngine.Transform": {
+					"localScale": {
+						"x": 0.9,
+						"y": 1,
+						"z": 1
+						},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localEulerAngles": {
+					  "x": 180.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+				}
+			}
+		}
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 180000.0,
+			"torqueCurveMaxRpm": 80.0,
+			"passiveBrakeMaxTorque": 360000.0,
+			"reverseBrakeMaxRpm": 180.0,
+			"basicFrictionTorque": 300.0,
+			"fullCompressFrictionTorque": 10000.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 6.0,
+					"gripFactorLat": 3.0
+				}
+			  },
+			"radius": 5.3,
+			"thicknessAngular": 10,
+			"suspensionSpring": 80000.0,
+			"suspensionDamper": 2000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.53,
+			"steerAngleMax": 6,
+			"steerSpeed": 3
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

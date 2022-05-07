@@ -1,0 +1,105 @@
+{
+  "Name": "GreenTech Hybrid Conveyor",
+  "Description": "A large conveyor block that can hold up to four chunks or blocks at once. It cannot display directions.",
+
+  "ID": 911056,
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 702,
+  "HP": 800,
+  "Mass": 4,
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "5, 7, 13, 32, 32, 43",  
+  "IconName": "GT_Conveyor_Hub_Icon.png",
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  
+   "APs": [
+    { "x": -0.5, "y": 0, "z": 1 },
+    { "x": 1.5, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 1.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 }
+  ],
+
+  
+  "GamePrefabReference": "GSO_Conveyor_111", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0.5
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+  "SubObjects": [
+    {
+    "SubOverrideName":"m_GSO_Conveyer_111_Base",
+	  "MeshName": "GT_Conveyor_Hub.obj", 
+    "MakeBoxCollider": true,
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+    "MeshName": "GT_Conveyor_Hub_Arrows.obj",
+    "MeshMaterialName": "GSO_ConveyorBelt_Main"
+    },
+    {
+    "MeshName": "GT_Conveyor_Hub_Glass.obj",
+    "MeshMaterialName": "ObjectHighlightAttach",
+    "MeshTextureName": "Green_Square.png",
+    "MeshEmissionTextureName": "Green_Square.png"
+    },
+    {
+      "MeshName": "GT_Conveyor_Hub_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "MeshTextureName": "Green_Square.png",
+      "MeshEmissionTextureName": "Green_Square.png"
+    },
+    {
+      "SubOverrideName":"m_GSO_Conveyer_111_Belt_RTurn",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName":"m_GSO_Conveyer_111_Belt_LTurn",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName":"m_GSO_Conveyer_111_Belt",
+      "DestroyExistingRenderer": true
+    }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_AcceptFlags": 3,
+      "m_CapacityPerStack": 4,
+      "m_OverrideBasePositons": [{ "x": 0.5, "y": 0.5, "z":0.5 }],
+      "m_OverrideAPConnections": [{"indices": [0,1,2,3] }]
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": 2,
+      "m_BeamStrength": 800.0,
+      "m_HeightIncrementScale": 2
+    }
+  }			
+}

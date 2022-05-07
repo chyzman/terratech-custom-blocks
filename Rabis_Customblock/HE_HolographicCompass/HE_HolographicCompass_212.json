@@ -1,0 +1,131 @@
+{
+  "Name": "Hawkeye Holographic Compass Projector V212",
+  "Description": "Holographic compass projector. \nUse it in pair with a swivel pointing north.\nThis model has a modified base mount to accommodate the larger swivel.", //You can make multiple lines with \n
+  "ID": 546338, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 552, //The price is measured by sum of recipe value times 3
+  "HP": 250, //A GSO one block has 250 health
+  "Mass": 0.5,
+  //"CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.0},
+
+  "Fragility": 0.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "1, 1, 13, 13 "  ,
+
+  //"DropFromCrates": false, // No change = true
+  //"PairedBlock": 534968, // ID of paired block (Can be used to drop 2 wheels)
+
+
+  "IconName": "HE_HolographicCompass_212.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "HE_HolographicCompass_212.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshMaterialName": "HE_Main",
+
+  "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": "HE_HolographicCompass_212.obj",
+  "SupressBoxColliderFallback": false,
+  "BlockExtents":
+  {
+      "x": 2,
+      "y": 1,
+      "z": 2
+  },
+  "APs": [
+      {"x": 0,"y": -0.5,"z": 0},{"x": 1,"y": -0.5,"z": 0},
+      {"x": 0,"y": -0.5,"z": 1},{"x": 1,"y": -0.5,"z": 1},
+  ],
+
+  "GamePrefabReference": "HE_Block_Alt_01_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "HE_HolographicCompass_212_spinner",
+      "DestroyExistingRenderer": false,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_HolographicCompass_212_spinner.obj",
+      "MakeBoxCollider": false,
+      "MakeSphereCollider": false,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 0.5 },
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": 0, // Yaw
+        "z": 0  // Roll
+      }
+    },
+    {
+      "SubOverrideName": "HE_HolographicCompass_holo",
+      "DestroyExistingRenderer": false,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_HolographicCompass_holo.obj",
+      "MeshMaterialName": "ExplosionLaser",
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|HE_HolographicCompass_212_spinner":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0, "z": 0 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+      },
+      "Spinner": {
+        "m_AutoSpin":true,
+        "m_SpinUpTime": 2,
+        "Speed": 0.1,
+        "m_Speed": -0.1,
+        "m_RotationAxis": {
+          "axis": 1
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        }
+      }
+    },
+    "GameObject|NorthPointer":{
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0, "z":0.5 }
+      },
+      "MoveGimbal": { // Put this in the GameObject you want to rotate
+        "Axis": "Free",
+        // Free - Use BOTH axi!
+        // X - Rotate on Y-axis (Left or Right)
+        // Y - Rotate on X-axis (Up and Down)
+        // Z - Rotate on Z-axis (Clockwise and Counter-Clockwise)
+      },
+      "GameObject|HE_HolographicCompass_holo": {
+        "UnityEngine.Transform": {
+          //"localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":3, "y":3, "z":3 },
+          "localPosition": { "x":0.0, "y":10, "z":0.0 }
+        },
+      },
+    },
+    "ModuleMoveGimbal": {// Rotate your parts in style.  Controls MoveGimbal(s)
+      "DriveControlStrength": 0.0,  // Follow player drive controls percent (0 <-> 1.0)
+      "IdlePointing": "NorthFacing",  // Aim this way while controls are not active
+      // BlockFacing - Return to starting position
+      // CabFacing - Turn to face the cab's forwards facing
+      // GravityFacing - Face downwards towards gravity
+      // NorthFacing - Face towards World north
+      "ForwardsAndBackwards": false, // Can this part drive backwards as effectively as forwards?
+      "RotateZAxis": true,         // If there is a "Free" or "Z" MoveGimbal, this will rotate it upright based on IdlePointing
+      "UseBoostAndProps": false,    // Should this update the aiming of all BoosterJets and FanJets in hierarchy?
+      "RotateRate": 1000,             // How fast we should turn every second
+    },
+  }
+}

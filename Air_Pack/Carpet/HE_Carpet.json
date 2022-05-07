@@ -1,0 +1,126 @@
+
+
+
+{
+  "Name": "Hawkeye Freyr Bomb Bay",
+  "Description": "Somehow, this block manages to drop an absurd amount of bombs in a small timeframe, allowing you to fulfill your carpet-bombing fantasies.",
+  "ID": 10014,
+
+  "Faction": 5,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 49260,
+  "HP": 500,
+  "Mass": 3,
+
+  "Fragility": 0.25,
+
+  "IconName": "HE_Carpet.png",
+
+  "MeshName": null,
+
+  "Recipe":  "43, 54, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 60, 61, 61, 61, 61, 61",
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 3
+  },
+
+  "APs": [
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 2
+    }
+  ],
+
+
+  "GamePrefabReference": "HE_BombBay_113", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 2
+  },
+
+  "SubObjects": [
+  ],
+
+  "Deserializer": {
+    "GameObject|_barrel_1": null,
+    "GameObject|modelCopy": {},
+    "Reference|HE_BombBay_113/_barrel_1/_recoiler/m_HE_BombBay_113_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0, "z": 2 },
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": {"x": -90, "y": 0, "z": 180}
+      },
+      "GameObject|m_HE_BombBay_113_Door_R": null,
+      "GameObject|m_HE_BombBay_113_Door_L": null
+    },
+    "Reference|BF_Laser_Streamlined_112/_gimbalBase/_gimbalElev/_barrel": {
+      "GameObject|_muzzleFlash": null,
+      "GameObject|_bulletSpawn": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": -1, "z": 1 },
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": {"x": 90, "y": 0, "z": 0}
+        }
+      }
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.05,
+      "m_FiringData": null,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_NumCannonBarrels": 1
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.5,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_Damage": 400
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+        },
+        "SeekingProjectile": {
+          "m_TargetingType" : "RandomBlockOnVehicle",
+          "m_ActivationDelay" : 0,
+          "m_VisionRange" : 450,
+          "m_VisionConeAngle" : 360,
+          "m_TurnSpeed" : 20
+        },
+        "Projectile": {
+          "m_IgnoreCollisionWithBarrel": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_MaxDamageStrength": 80,
+              "m_EffectRadius": 4.0,
+              "m_EffectRadiusMaxStrength": 2.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

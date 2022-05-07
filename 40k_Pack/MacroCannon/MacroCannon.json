@@ -1,0 +1,404 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Adaranth-Pattern Macrocannon",
+  "Description": "A scaled-down Macrocannon on a broadside mount optimized for use in atmospheric combat.", //You can make multiple lines with \n
+  "ID": 10017, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 224487,
+  "HP": 50000,
+  "Mass": 300,
+
+  "Fragility": 0.0,
+
+  "IconName": "Broadside_Macrocannon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 60, 60, 60, 61, 61, 61, 61, 61, 61, 61, 61, 62, 62, 62, 62, 65" ,
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "HE_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 4,
+    "z": 7
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+  "APs": [
+    {
+      "x":0.0,
+      "y":0.0,
+      "z":-0.5
+    },
+    {
+      "x":3.0,
+      "y":0.0,
+      "z":-0.5
+    },
+    {
+      "x":0.0,
+      "y":3.0,
+      "z":-0.5
+    },
+    {
+      "x":3.0,
+      "y":3.0,
+      "z":-0.5
+    },
+
+    {
+      "x":-0.5,
+      "y":0.0,
+      "z":0
+    },
+    {
+      "x":-0.5,
+      "y":0.0,
+      "z":2
+    },
+    {
+      "x":-0.5,
+      "y":3,
+      "z":0
+    },
+    {
+      "x":-0.5,
+      "y":3,
+      "z":2
+    },
+
+    {
+      "x":3.5,
+      "y":0.0,
+      "z":0
+    },
+    {
+      "x":3.5,
+      "y":0.0,
+      "z":2
+    },
+    {
+      "x":3.5,
+      "y":3,
+      "z":0
+    },
+    {
+      "x":3.5,
+      "y":3,
+      "z":2
+    }
+
+  ],
+
+  "GamePrefabReference": "HE_Cannon_Battleship(216)",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_40k_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Turret_Mount.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_40k_Barrel_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Barrel_Mount.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Aquila_Barrel_Left",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Aquila.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": -0.85,
+        "y": 0,
+        "z": 3.05
+      }
+    },
+    {
+      "SubOverrideName": "Aquila_Barrel_Right",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Aquila.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0.85,
+        "y": 0,
+        "z": 3.05
+      }
+    },
+    {
+      "SubOverrideName": "Aquila_Base_Left",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Aquila.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Aquila_Base_Right",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Aquila.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Aquila_Base_Back",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Aquila.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Broadside_Base.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 1.5,
+        "y": 1.5,
+        "z": 1.5
+      }
+    },
+    {
+      "SubOverrideName": "m_40k_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Barrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_Muzzle.obj",
+      "MeshMaterialName": "HE_Main"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationLimits": [-38, 38]
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 },
+        "localPosition": { "x": 1.5, "y": 0, "z": 1.5 }
+      },
+      "GameObject|m_40k_Mount": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localPosition": { "x": 0, "y": 3, "z": 0 }
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-65, 65]
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": 3, "z": 0 }
+        },
+        "GameObject|m_40k_Barrel_Mount": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          }
+        },
+        "GameObject|Aquila_Barrel_Left": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 0.1, "y": 0.1, "z": 0.1 },
+            "localEulerAngles": { "x": 0, "y": 90, "z": 0 }
+          }
+        },
+        "GameObject|Aquila_Barrel_Right": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 0.1, "y": 0.1, "z": 0.1 },
+            "localEulerAngles": { "x": 0, "y": -90, "z": 0 }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 4 }
+          },
+          "GameObject|m_40k_Barrel": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localPosition": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "GameObject|_recoiler": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 10, "y": 10, "z": 10 },
+              "localPosition": { "x": 0, "y": 0, "z": 4.75 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2.5, "y": 2.5, "z": 3.5 },
+              "localPosition": { "x": 0, "y": 0, "z": 4.5 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 4.25 }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|m_HE_CannonBattleship_216_body": {
+      "UnityEngine.Transform": {
+        "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+      }
+    },
+    "GameObject_Aquilas": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 1.5, "y": 1.5, "z": 1.5 }
+      },
+      "GameObject|Aquila_Base_Left": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.2, "y": 0.2, "z": 0.2 },
+          "localPosition": { "x": -1.9, "y": -0.2, "z": -0.165 },
+          "localEulerAngles": { "x": 0, "y": 90, "z": 0 }
+        }
+      },
+      "GameObject|Aquila_Base_Right": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.2, "y": 0.2, "z": 0.2 },
+          "localPosition": { "x": 1.9, "y": -0.2, "z": -0.165 },
+          "localEulerAngles": { "x": 0, "y": -90, "z": 0 }
+        }
+      },
+      "GameObject|Aquila_Base_Back": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.2, "y": 0.2, "z": 0.2 },
+          "localPosition": { "x": 0, "y": -0.2, "z": -1.9 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 77,
+      "m_RotateSpeed" : 10
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 7,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_ResetBurstOnInterrupt": false,
+      "m_NumCannonBarrels": 1
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 255,
+      "m_BulletSprayVariance": 0,
+      "m_KickbackStrength": 3000,
+      "Instantiate|m_BulletCasingPrefab": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.15, "y": 0.15, "z": 0.15 }
+        }
+      },
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_Damage": 10000
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 3.5, "y": 3.5, "z": 3.5 }
+        },
+        "SmokeTrail":{
+          "numberOfPoints":   15.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                      // Do not decrease this too much as it will begin to act strangely.
+
+          "spread":           1.5,   // Dictates how erratic the trail is.
+          "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+          "updateSpeed":      0.15,   // DIctates the speed of the trail.
+        },
+        // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+        "LineRenderer": {
+            "startWidth": 0.75,
+            "endWidth": 0.5,
+            "widthMultiplier": 1.0,
+
+            // The color at the start of the trail
+            "startColor": {
+                "r": 1.0,
+                "g": 0.15,
+                "b": 0.0,
+                "a": 1.0                
+            },
+
+            // The color at the end of the trail
+            "endColor":{
+                "r": 1.0,
+                "g": 0.1,
+                "b": 0.0,
+                "a": 1.0                
+            }
+        },
+        "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": {  
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.25,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 2.0
+              }
+            }
+          }
+        },
+        "Duplicate|FX_SemiCircle": {  
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.5,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 1.0
+              }
+            }
+          }
+        },
+        "Projectile": {
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 1,
+              "m_EffectRadius": 16,
+              "m_EffectRadiusMaxStrength": 5,
+              "m_MaxDamageStrength": 6000,
+              "m_MaxImpulseStrength": 150
+            }
+          }
+        }
+      }
+    }
+  }
+}

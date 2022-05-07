@@ -1,0 +1,321 @@
+
+
+
+{
+  "Name": "Better Future 'Sentinel' AeroFlak Cannon",
+  "Description": "A Rapid-fire anti-air cannon that fires shells that explode when nearby an enemy. Ineffective v.s grounded techs, as the shells mistake the ground as a target.",
+  "ID": 1700115,
+
+  "Faction": 7,
+  "Category": 4,
+  "Grade": 1,
+  "Price": 51231,
+  "HP": 1000,
+  "Mass": 2,
+"IconName": "Sentinel.png",
+
+  "MeshName": null,
+
+  "Recipe": "43, 43, 43, 46, 46, 46, 47, 47, 47",
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": null,
+
+  "Cells":[
+		{ "x": 2, "y": 0, "z": 2 },
+		
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 4 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 4 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 4 },	
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		],
+
+  "APs": [
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 2
+    },{
+      "x": 2,
+      "y": 0,
+      "z": 1.5
+    },{
+      "x": 2,
+      "y": 0,
+      "z": 2.5
+    },{
+      "x": 1.5,
+      "y": 0,
+      "z": 2
+    },{
+      "x": 2.5,
+      "y": 0,
+      "z": 2
+    }
+  ],
+
+
+  "GamePrefabReference": "GSO_Cannon_Turret_111",
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Flak_Barrel.obj",
+      "MeshMaterialName": "BF_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },{
+      "SubOverrideName": "_casingSpawn",
+      "SubPosition": {
+        "x": 1,
+        "y": 0.5,
+        "z": -3.25
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      }
+    },
+    
+    
+    {
+      "SubOverrideName": "GSO_Cannon_111_Base",
+      "ColliderMeshName":"BF_Flak_Base.obj",
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Flak_Base.obj",
+      "MeshMaterialName": "BF_Main",
+      "SubPosition": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      }
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Mount",
+      "ColliderMeshName":"BF_Flak_Aimer.obj",
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Flak_Aimer.obj",
+      "MeshMaterialName": "BF_Main","SubPosition": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },"SubScale": {
+        "x": 0.8,
+        "y": 0.8,
+        "z": 0.8
+      }
+    },
+    
+    {
+      "SubOverrideName": "_gimbalBase",
+      "MeshName": "BF_Flak_Foot.obj",
+      "MeshMaterialName": "BF_Main","SubPosition": {
+        "x": 2,
+        "y": 0.5,
+        "z": 2
+      },"SubScale": {
+        "x": 0.8,
+        "y": 0.8,
+        "z": 0.8
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "MeshName": "BF_Flak_Body.obj","ColliderMeshName":"BF_Flak_Body.obj",
+      "MeshMaterialName": "BF_Main","SubPosition": {
+        "x": 0,
+        "y": 1.5,
+        "z": 0.55
+      },"SubScale": {
+        "x": 0.8,
+        "y": 0.8,
+        "z": 0.8
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+			    },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-90, 6]
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": -0.4, "z": 2.5 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0}
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1.1 },
+              "localPosition": { "x": 0, "y": 1, "z": 1 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 2 },
+              "localPosition": { "x": 0, "y": 1, "z": 1 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 1, "z": 5.3 }
+            }
+          }
+        }
+        
+      },
+      "GameObject|m_VEN_CannonRapid_313_Mount": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": -0.5, "z": -0.2 }
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": "HECannonTurret",
+      "m_RotateSpeed" : 200
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 0.395,
+      "m_FiringData": null,"m_FireControlMode": 1,
+      
+      "m_NumCannonBarrels": 1,
+      "m_WeaponModule": {
+        "m_PreventShootingTowardsFloor": true
+      }
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 150,
+      "m_BulletSprayVariance": 0.0,
+      "m_KickbackStrength": 20,
+      "Instantiate|m_BulletPrefab": {"UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+        },"UnityEngine.MeshFilter": {
+          "sharedMesh": "BF_FlakShell.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "BF_textures.png"
+          }
+        },
+        "WeaponRound": {
+          "m_Damage": 101.1
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.5, "y": 0.5, "z": 0.5 }
+        },
+        "UnityEngine.SphereCollider": {
+          "radius": 8,
+          "center": { "x": 0, "y": 0, "z": 8 }
+        },
+        "Projectile": {
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 15,
+              "m_MaxDamageStrength": 101.1,
+              "m_MaxImpulseStrength": 500
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "lengthScale": 250,
+              "maxParticleSize": 30
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "Name": "Old Star Curved Slope Block",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails.   Now I know what you're thinking. Sure I said Hard wood, but its still wood. DO NOT think that this is some armor block but since its made of harder wood it can take a beating a wee bit more than our usual blocks but it's also heavier.",
+  
+  "ID": 300023,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 300,
+  "Mass": 1,
+  "IconName": "OS_Curved_Slope_Block_icon.png",
+  "MeshName": "OS_Curved_Slope.obj",
+  "Recipe": { // "ID": Count
+    "0": 10,
+    "1": 10,
+    "5": 2
+  },
+  "EmissionMode": 2,
+  "ColliderMeshName": "OS_Curved_SlopeC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+   // X is right and left, Y is up and down, and Z is forward and backward
+  "BlockExtents":{"x": 1,"y": 1, "z": 2},   
+  "APs": [ 
+ 
+    //Top
+    { "x": 0, "y": 0.5, "z": 0 },
+    // Right Face
+    { "x": -0.5, "y": 0, "z": 0 },{ "x": -0.5, "y": 0, "z": 1 },
+    // left Face
+    { "x": 0.5, "y": 0, "z": 0 },{ "x": 0.5, "y": 0, "z": 1 },
+    // Bottom Face
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 0, "y": -0.5, "z": 1 },
+       //Back
+    { "x": 0, "y": 0, "z": -0.5 }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "Name": "Hawkeye Fenrir VLS Canister Missile",
+  "Description": "A mid-range missile from Hawkeye Black Labs. While it cannot match the cruise missile for power, the missile is housed in a high-strength titanic alloy canister, preventing it from detonating if destroyed. Black Labs also developed the Fenrir missile for this weapon, with tracking strong enough to strike an adversary from virtually any launch angle.",
+  
+  "ID": 117018,
+  "Faction": 5,
+  "Category": 4,
+  "Grade": 2,  
+  "Price": 24948,
+  "HP": 1000,
+  "Mass": 4,
+  "CenterOfMass": {"x": 0, "y": 1, "z": 0},
+
+  "Rarity": 1,
+  "DamageableType": 0,
+
+  "Recipe": {"54": 6, "47": 1, "56": 1, "63": 1, "65":1},
+  "IconName": "HE_VLS_Canister_Missile.png", 
+
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 0, "y": 1, "z": 0},
+    {"x": 0, "y": 2, "z": 0}
+  ],
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+
+    {"x": 0, "y": 1, "z": 0.5},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 0.5, "y": 1, "z": 0},
+    {"x": -0.5, "y": 1, "z": 0},
+
+    {"x": 0, "y": 2, "z": 0.5},
+    {"x": 0, "y": 2, "z": -0.5},
+    {"x": 0.5, "y": 2, "z": 0},
+    {"x": -0.5, "y": 2, "z": 0}
+
+  ],
+
+  "GamePrefabReference":       "HE_BombBay_113",
+  "DeathExplosionReference":   "HE_Block_112",
+  "KeepRenderers": false,
+  "Keepcolliders": false,
+  
+  "SubObjects": [
+    {
+      "SubOverrideName":        "m_HE_BombBay_113_Base",
+      "MeshName":               "HE_VLS_Canister.obj", 
+      "MeshMaterialName":       "HE_Main",
+      "MakeBoxCollider":        true,
+      "SubPosition":            { "x": 0, "y": 0, "z": 0 },
+      "SubRotation":            { "x": 180, "y": 0, "z": 0 },
+    },
+    {
+      "SubOverrideName":        "m_HE_BombBay_113_Bomb",
+      "MeshName":               "HE_VLS_Fenrir_Missile.obj",
+      "MeshMaterialName":       "HE_Main",
+      "SubPosition":            { "x": 0, "y": 0, "z": 1 },
+      "SubRotation":            { "x": 180, "y": 0, "z": 0 },
+    },
+    {
+      "SubOverrideName":        "FireData.m_BulletPrefab/m_HE_Bomb",
+      "MeshName":               "HE_VLS_Fenrir_Missile.obj", 
+      "MeshMaterialName":       "HE_Main",
+      "SubPosition":            { "x": 0, "y": 0.0, "z": 0.0 },
+      "SubRotation":            { "x": 0, "y": 0, "z": -90 }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.0, "y": 2.0, "z": 0.0 },
+        "localEulerAngles": { "x": -90.0, "y": 0.0, "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.2 },
+          "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        }
+      },
+      "GameObject|_recoiler": {
+        "Animation": {
+           "clip": {
+              "length": 0.01
+            }
+          },
+        }     
+    },
+
+    "ModuleWeapon": { 
+      "m_FireSFXType": 18
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2,
+    "m_CooldownVariancePct": 0.1
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 80,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.0,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 0.0,
+      "m_KickbackStrength": 10.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|CentreOfMass": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+            "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+          "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        "WeaponRound": { 
+          "m_DamageType" : 3, 
+          "m_Damage": 100
+        },
+        "Rigidbody": {
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+          "mass": 0.0001
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 150.0,
+          "m_TurnSpeed": 150,
+          "m_UpdateVisibleInterval": 0.01,
+          "m_ActivationDelay": 0.1,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType" : "RandomBlockOnVehicle"
+          },
+        "Projectile": {
+            "m_LifeTime": 2,
+            "m_ImpactSFXType" : 2,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_EffectRadius": 6.0,
+                "m_EffectRadiusMaxStrength": 3.0,
+                "m_MaxDamageStrength": 500,
+                "m_MaxImpulseStrength": 50,
+                "m_DamageType": 3,
+              },
+              "GameObject|Sparks": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 0.000001, "y": 0.000001, "z": 0.000001 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor":{
+                        "r": 0.3,
+                        "g": 0.5,
+                        "b": 1.0,
+                        "a": 1.0
+                      },
+                      "startSize": 1,
+                      "startSpeed": 5,               
+                      "maxParticles": 10,
+                    }
+                  } 
+                 }
+              },
+              },
+               "GameObject|_particles": {
+                 "UnityEngine.Transform": {
+                     "localScale": {"x": 0.1, "y": 0.1, "z": 0.1 },
+                     "localPosition": { "x": 0.0, "y": 0, "z": 0.0 },
+                     "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0 }
+                    },
+                          
+                  }
+             },
+            "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "radius": 0.4,
+          "height": 2.5,
+          "direction": 2,
+             },
+            "MissileProjectile": {
+          "m_MaxBoosterLifetime": 0.0,
+          "m_BoosterActivationDelay": 0.0,
+          "m_ArmDelay": 0.25,
+          "m_DeathDelayNotArmed": 0.25
+             }
+          }   
+      }
+    }	
+  	
+}

@@ -1,0 +1,200 @@
+{
+  "Name": "Venture Dragster Engine",
+  "Description": "The Dragster Engine provides more traction and strength for wheels, while also increasing fuel efficiency on boosters.",
+  "ID": 910693, 
+
+  "Faction": 4, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 27372,
+  "HP": 600,
+  "Mass": 1.5,
+  "CenterOfMass": {"x": 1, "y": 0, "z": 0},
+
+  "IconName": "VEN_Dragster_Engine_Icon.png",
+  
+  "Recipe": "49, 49, 49, 49, 52, 52, 52, 52, 57, 57, 63, 63",
+  
+  "EmissionMode": 2,
+
+  "CellMap":
+	[
+		[
+      "xxx",
+      "xxx"
+    ],
+    [
+      "   ",
+      " x "
+    ]
+  ],
+
+  "APs": [
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 1, "y": -0.5,"z": 1},
+    {"x": 1, "y": 0,"z": -0.5}
+  ],
+
+  "GamePrefabReference": "VEN_Booster_Weak_111",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "VEN_FuelPod_111", 
+  
+  "SubObjects": [
+  	{
+      "SubOverrideName": "m_VEN_Bosster_Weak_111",
+    	"MeshName": "VEN_Dragster_Engine.obj",
+      "MeshMaterialName": "VEN_Main",
+      "ColliderMeshName": "VEN_Dragster_Engine_Collider_1.obj"
+    },
+    {
+      "ColliderMeshName": "VEN_Dragster_Engine_Collider_2.obj"
+    },
+    {
+      "ColliderMeshName": "VEN_Dragster_Engine_Collider_3.obj"
+    },
+    {
+      "ColliderMeshName": "VEN_Dragster_Engine_Collider_4.obj"
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWheels.m_TorqueParams.torqueCurveMaxTorque",
+        "ModuleWheels.m_WheelParams.tireProperties.props.gripFactorLong",
+        "ModuleBooster.jets.m_BurnRate"],
+      "m_Strength": [2, 1.0, 0.70],
+      "m_AddAfter": [0, 1, 0],
+      "m_NeedsToBeAnchored": [false, false, false]
+    },
+    "GameObject|_boostJet": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 7.0,
+            "startSize": 0.3,
+            "startLifetime": 0.1,
+            "gravityModifier": 0.0,
+            "maxParticles": 10,
+            "simulationSpace": 0,
+            "scalingMode": 2
+          },
+          "ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 1,
+            "sortMode": 0,
+            "lengthScale": -4.5,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0
+          }
+        },
+        "JetTrail": {
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.23,
+            "y": 0.7,
+            "z": 0.21
+          },
+          "localScale": {
+            "x": 0.45,
+            "y": 0.45,
+            "z": 0.45
+          },
+          "localEulerAngles": {
+            "x": -15.0,
+            "y": 0.0,
+            "z": 105.0
+          }
+        }
+      },
+      "BoosterJet": {
+        "m_Effector": [],
+        "m_Force": 0.0001,
+        "m_BurnRate": 0.0001
+      }
+    },
+    "Duplicate|_boostJet": {
+      "GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.22,
+            "y": 0.72,
+            "z": -0.08
+          }
+        }
+      }
+    },
+    "Duplicate|_boostJet_copy": {
+      "GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.22,
+            "y": 0.73,
+            "z": -0.37
+          }
+        }
+      }
+    },
+    "Duplicate|_boostJet_copy_copy": {
+      "GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.77,
+            "y": 0.7,
+            "z": 0.21
+          },
+          "localEulerAngles": {
+            "x": -15.0,
+            "y": 0.0,
+            "z": 75.0
+          }
+        }
+      }
+    },
+    "Duplicate|_boostJet_copy_copy_copy": {
+      "GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.78,
+            "y": 0.72,
+            "z": -0.08
+          }
+        }
+      }
+    },
+    "Duplicate|_boostJet_copy_copy_copy_copy": {
+      "GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.78,
+            "y": 0.73,
+            "z": -0.37
+          }
+        }
+      }
+    },
+    "ModuleBooster": {
+      "m_BoosterAudioType": 2
+    }
+  }
+}

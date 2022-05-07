@@ -1,0 +1,38 @@
+{
+  "Name": "Old Star Angled Fencing",
+  "Description": "This here is how the Old Star do. With the 'Fence' blocks Old Star can add a bit more decorative flare to bases and techs.",
+
+  "ID": 300055,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 350,
+  "HP": 250,
+  "Mass": 0.5,
+  "IconName": "OS_Angled_Fencing_Icon.png",
+  "MeshName": "OS_Angled_Fence.obj",
+  "ColliderMeshName": "OS_Angled_FenceC.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ", 	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DamageableType": 1,
+  "Cells":[
+    { "x": 0, "y": 0, "z": 0 },{ "x": 0, "y": 1, "z": 1 },
+
+    { "x": 1, "y": 0, "z": 0 },{ "x": 1, "y": 1, "z": 1 }
+    
+  ],
+
+  "APs": [ 
+    //Top
+    { "x": 0, "y": 1.5, "z": 1},{ "x": 1, "y": 1.5, "z": 1 },
+    // Bottom Face
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 1, "y": -0.5, "z": 0 }
+  ],
+  "APsOnlyAtBottom": false
+}

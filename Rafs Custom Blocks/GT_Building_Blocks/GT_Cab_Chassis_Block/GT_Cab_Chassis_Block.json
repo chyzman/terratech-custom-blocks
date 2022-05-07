@@ -1,0 +1,99 @@
+{
+  "Name": "GreenTech Cab Chassis Block",
+  "Description": "A hollowed and reinforced block made to safely accommodate the Ranger Cab, or any other fragile block such as batteries and accessories.",
+  "ID": 911124,
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2952, 
+  "HP": 3200,
+  "Mass": 12,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 9, 9, 32, 32, 32, 32, 52, 52, 53, 54", 
+  "IconName": "GT_Cab_Chassis_Block_Icon.png", 
+  "MeshName": "GT_Cab_Chassis_Block_Beige_2.obj", 
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+	{ "x": 0, "y": 0, "z": 1 },
+	{ "x": 0, "y": 0, "z": 2 },
+	{ "x": 0, "y": 0, "z": 3 },
+	{ "x": 3, "y": 0, "z": 0 },
+	{ "x": 3, "y": 0, "z": 1 },
+	{ "x": 3, "y": 0, "z": 2 },
+	{ "x": 3, "y": 0, "z": 3 },
+	{ "x": 1, "y": 0, "z": 0 },
+	{ "x": 2, "y": 0, "z": 0 }
+  ], 
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 0, "y": 0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": 0.5,"z": 0},
+	{"x": 0, "y": -0.5, "z": 2},
+	{"x": 0, "y": -0.5, "z": 3},
+	{"x": 0, "y": 0.5,"z": 2},
+	{"x": 0, "y": 0.5, "z": 3},
+	{"x": 2, "y": -0.5, "z": 0},
+	{"x": 2, "y": 0.5,"z": 0},
+	{"x": 3, "y": -0.5, "z": 0},
+	{"x": 3, "y": -0.5, "z": 1},
+	{"x": 3, "y": 0.5,"z": 0},
+	{"x": 3, "y": 0.5, "z": 1},
+	{"x": 3, "y": -0.5, "z": 2},
+	{"x": 3, "y": -0.5, "z": 3},
+	{"x": 3, "y": 0.5,"z": 2},
+	{"x": 3, "y": 0.5, "z": 3},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 3.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 3},
+	{"x": 3.5, "y": 0, "z": 3},
+	{"x": -0.5, "y": 0, "z": 1},
+	{"x": 3.5, "y": 0, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": 3.5, "y": 0, "z": 2},
+	{"x": 0.5, "y": 0, "z": 3},
+	{"x": 2.5, "y": 0, "z": 3},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 0, "z": 3.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 2, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": 0.5},
+	{"x": 2, "y": 0, "z": 0.5},
+	{"x": 3, "y": 0, "z": -0.5},
+	{"x": 3, "y": 0, "z": 3.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+		"MakeBoxCollider": true,
+		"SubPosition": { "x": 0, "y": 0, "z": 1.5 },
+		"SubScale": { "x": 1, "y": 1, "z": 4 }
+	},
+	{
+		"MakeBoxCollider": true,
+		"SubPosition": { "x": 3, "y": 0, "z": 1.5 },
+		"SubScale": { "x": 1, "y": 1, "z": 4 }
+	},
+	{
+		"MakeBoxCollider": true,
+		"SubPosition": { "x": 1.5, "y": 0, "z": 0 },
+		"SubScale": { "x": 2, "y": 1, "z": 1 }
+	}
+]
+}

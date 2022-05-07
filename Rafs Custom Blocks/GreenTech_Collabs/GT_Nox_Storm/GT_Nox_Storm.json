@@ -1,0 +1,869 @@
+{
+  "Name": "GreenTech Nox Storm",
+  "Description": "Merging the technology of the Nox Bubble Projector and the legendary 'Phlogus' Spore Pod from FS Industries, the Nox Storm swarms the battlefield with corrosive homing spores.",
+  
+  "ID": 911212,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 4,  
+  "Price": 27699,
+  "HP": 8000,
+  "Mass": 30,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  "EmissionMode": 1, 
+
+  "Recipe":  "13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 44, 44, 45, 45, 52, 52, 56, 56, 56, 58, 58, 58, 60",
+	
+  "IconName": "GT_Nox_Storm_Icon.png", 
+  
+  "BlockExtents":{"x": 4,"y": 3, "z": 4}, 
+  
+  "APs": [ 
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 2, "y": -0.5, "z": 0},
+    
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 3, "y": -0.5, "z": 1},
+    
+    {"x": 0, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 3, "y": -0.5, "z": 2},
+    
+    {"x": 1, "y": -0.5, "z": 3},
+    {"x": 2, "y": -0.5, "z": 3}
+  ],
+
+  "GamePrefabReference": "HE_RailGun_113", 
+  "KeepRenderers": true,
+  "Keepcolliders": false,
+  "DeathExplosionReference": "GC_Battery_222",
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_RailGun_113",
+      "MeshName": "GT_Nox_Storm.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "ColliderMeshName": "GT_Nox_Storm_Collider.obj"
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "MeshName": "GT_Nox_Storm_Rotor.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},
+      {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},
+      {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},
+      {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"},{
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "GT_Nox_Storm_MuzzleFlash.obj"}
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|aCol": null,
+    "GameObject|_gimbalBase": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.5,
+            "y": -0.2,
+            "z": 1.5
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "UnityEngine.AudioSource":{
+          
+        },
+       "Spinner": {
+        "m_Speed": -0.3,
+        "m_RotationAxis": {
+          "axis": 1
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 1,
+        "m_SpinnerSound": "/_gimbalBase/AudioSource.",
+        "m_SpinnerSoundOriginalPitch": 29
+      },
+      "GimbalAimer": { "rotationLimits": [-0.01, 0.01] },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": -1.5,
+            "y": 0,
+            "z": -1.5
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+           }
+         },
+        "GimbalAimer": { "rotationLimits": [-0.01, 0.01] },  
+    // Front Group: 
+      "GameObject|_barrel": {
+        "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.65,
+                "y": 1.25,
+                "z": 2.99
+               },
+               "localEulerAngles": {
+                "x": -30.6,
+                "y": -29.6,
+                "z": 0
+               },
+               "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+               }
+        },
+        "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                 }
+               }
+        },
+        "GameObject|_muzzleFlash": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                }
+              },
+              "UnityEngine.Light": {
+                "color": {
+                  "r": 0.9,
+                  "g": 0.05,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+                //"range": 4.0,
+                //"intensity": 3.0
+              },
+              "GameObject|_muzzleFlashAnim": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "localEulerAngles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "localScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  }
+                },
+                "GameObject|m_MuzzleLaserFlash_01": {
+                  "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0,
+                      "z": 0.12
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0
+                    },
+                    "localScale": {
+                      "x": 1.5,
+                      "y": 1.5,
+                      "z": 0.8
+                    }
+                  },
+                  "UnityEngine.MeshRenderer": {
+                    "material": {
+                      "mainTexture": "GT_Nox_Storm_MuzzleFlash.png"
+                    }
+                  }
+                }
+              }
+        },
+        "CannonBarrel": {
+          "m_FireSpinner": "/_gimbalBase/Spinner."
+        }
+       },    
+      "Duplicate|_barrel": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.5,
+            "y": 1.65,
+            "z": 2.92
+          },
+          "localEulerAngles": {
+          "x": -44.6,
+          "y": 0,
+          "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },              
+       "Duplicate|_barrel_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+                "x": 2.35,
+                "y": 1.25,
+                "z": 2.99
+               },
+               "localEulerAngles": {
+                "x": -30.6,
+                "y": 29.6,
+                "z": 0
+               },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+    // Right Group: 
+      "Duplicate|_barrel_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 3.21,
+            "y": 1.25,
+            "z": 1.49
+          },
+          "localEulerAngles": {
+          "x": -30,
+          "y": 90
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 2.73,
+            "y": 1.65,
+            "z": 0.79
+          },
+          "localEulerAngles": {
+            "x": -43.5,
+            "y": 120
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 2.37,
+            "y": 1.25,
+            "z": 0.02
+          },
+          "localEulerAngles": {
+          "x": -29.5,
+          "y": 150,
+          "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+    // Left Group: 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.63,
+            "y": 1.25,
+            "z": 0.02
+          },
+          "localEulerAngles": {
+            "x": -29.5,
+            "y": -150
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.27,
+            "y": 1.65,
+            "z": 0.79
+          },
+          "localEulerAngles": {
+            "x": -43.5,
+            "y": -120
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": -0.22,
+            "y": 1.25,
+            "z": 1.5
+          },
+          "localEulerAngles": {
+            "x": -30,
+            "y": -90
+            },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+    // Top Group: 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.65,
+            "y": 1.93,
+            "z": 1.99
+          },
+          "localEulerAngles": {
+            "x": -58.5,
+            "y": -60
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.5,
+            "y": 2.14,
+            "z": 2.03
+          },
+          "localEulerAngles": {
+          "x": -106,
+          "y": 0,
+          "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 2.34,
+            "y":  1.93,
+            "z": 1.99
+          },
+          "localEulerAngles": {
+            "x": -58.5,
+            "y": 60
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.96,
+            "y": 2.14,
+            "z": 1.23
+          },
+          "localEulerAngles": {
+            "x": -73.5,
+            "y": 120
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.5,
+            "y":  1.93,
+            "z": 0.52
+          },
+          "localEulerAngles": {
+          "x": -121,
+          "y": 0,
+          "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }, 
+      "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 1.04,
+            "y": 2.14,
+            "z": 1.23
+          },
+          "localEulerAngles": {
+            "x": -73.5,
+            "y": -120
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      }
+    }
+   },
+    "ModuleDrill": {
+      "m_SFXType": 30,
+    "damagePerSecond": 0
+    }, 
+    "ModuleWeapon": { 
+      "m_FireSFXType": 81
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.01,
+      "m_SeekingRounds": true,
+      "m_BurstShotCount": 0.0,
+      "m_BurstCooldown": 0.0,
+      "m_CooldownVariancePct": 10
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.0,
+      "m_MuzzleVelocity": 50.0,
+      "m_KickbackStrength": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": { 
+          "m_DamageType" : 2, 
+          "m_Damage": 300
+        },
+        "Rigidbody": {
+          "mass": 0.0001,
+          "useGravity": true
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 120.0,
+          "m_TurnSpeed": 120,
+          "m_SeekType": 1,
+          "m_UpdateVisibleInterval": 0.1,
+          "m_ActivationDelay": 0.2,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": false,
+          "m_TargetingType" : "BestAimCabOrCentre"//"RandomBlockOnVehicle"
+          },
+          "Projectile": {
+            "m_LifeTime": 6.0,
+            "m_ImpactSFXType" : 4,
+            "m_FlightSFXType" : "DeliveryBomb",
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_DamageType" : 2,
+                "m_EffectRadius":2, 
+                "m_ExplosionType": 0,
+                "m_EffectRadiusMaxStrength": 1, 
+                "m_MaxDamageStrength": 0, 
+                "m_MaxImpulseStrength": 0
+              },
+              "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+                "UnityEngine.ParticleSystemRenderer": {
+                  "renderMode": 0
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startLifetime": 0.2,
+                      "playbackSpeed": 1,
+                      "startSpeed": 0,
+                      "startSize": 8,
+                      "startColor":{
+                        "r": 0.9,
+                          "g": 0.05,
+                          "b": 1.0,
+                          "a": 1.0
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionBright": { 
+                "GameObject|Shockwave":  { 
+                  "UnityEngine.ParticleSystem": {
+                        "startSize": 8.0,
+                        "startLifetime": 0.15,
+                        "startColor": {
+                          "r": 0.9,
+                          "g": 0.05,
+                          "b": 1.0,
+                          "a": 1.0
+                        }
+                  },
+                  "UnityEngine.ParticleSystemRenderer": {
+                    
+                }
+                }, 
+                "GameObject|Sparks": { 
+                  "UnityEngine.ParticleSystem": {
+                    "startSpeed": 15.0,
+                    "startSize": 4,
+                    "startColor": {
+                      "r": 0.9,
+                          "g": 0.05,
+                          "b": 1.0,
+                          "a": 1.0
+                    }
+                 }
+                },
+                "GameObject|Distortion": { 
+                  "UnityEngine.ParticleSystem": {
+                    "startSize": 0
+                 }
+                },
+                "GameObject|Smoke": {
+                "UnityEngine.ParticleSystem": {
+                      "startSize": 0,
+                      "startSpeed": 20,
+                      "maxParticles": 0
+                    }
+                },
+                "GameObject|ExplosionDark": {
+                  "UnityEngine.ParticleSystem": {
+                    "startSize": 0,
+                    "startSpeed": 20,
+                    "maxParticles": 0
+                  }
+                },
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0,
+                "startSpeed": 20,
+                "maxParticles": 0
+                  }
+            }
+            }
+          },
+          
+          "GameObject|FX_SemiCircle": {
+            "UnityEngine.ParticleSystem": {
+              "rotationOverLifetime": {
+                "enabled": true,
+                "z": { "constantMin": -90, "constantMax": 90 }
+              },
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": true,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+               "emissionRate": 100,
+               "startSpeed": 0.0,
+               "startSize": 3.0,
+               "startLifetime": 100,
+               "gravityModifier": 0.0,
+               "maxParticles": 5,
+               "simulationSpace": 0,
+               "scalingMode": 2,
+               "startColor":{
+                "r": 1,
+                "g": 1,
+                "b": 1.0,
+                "a": 1.0
+              }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 0,
+            "sortMode": 0,
+            "lengthScale": 2.0,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0,
+            "material": "BF_ZeroPoint_Flare"
+          }
+        },
+        "GameObject|FX_Distortion": null,
+        "GameObject|Line": {
+          "LineRenderer": null,
+          "UnityEngine.CapsuleCollider": null,
+          "UnityEngine.SphereCollider": {
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.4
+          }
+        },
+        "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale": {
+              "x": 2,
+              "y": 2,
+              "z": 2
+            }
+           },
+           "ParticleSystem": {
+            "startColor": {
+              "r": 1.0,
+              "g": 0.05,
+              "b": 0.8,
+              "a": 1.0
+            },
+            "startDelay": 0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 1,
+            "enableEmission": true,
+            "emissionRate": 50,
+            "startSpeed": 0,
+            "startSize": 1.2,
+            "startLifetime": 0.05,
+            "gravityModifier": 0.0,
+            "maxParticles": 100,
+            "simulationSpace": 0,
+            "scalingMode": 1
+          },
+          "ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 4,
+            "sortMode": 0,
+            "lengthScale": 2.0,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 0.5,
+            "maskInteraction": 0,
+            "trailMaterial": null,
+            "enableGPUInstancing": false,
+            "allowRoll": true,
+            "mesh": {}
+          }
+        },
+        "Duplicate|ParticleSystem_GSO_HoverPad":{}
+      }
+    }
+     /*  "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "ParticleSystem": {
+        "emissionRate": 0.0,
+        "startSize": 0
+      }
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "value": 1,
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy/CannonBarrel.",
+          "type": "BarrelCharge"
+        }
+      ],
+      "Debug": true
+    } */
+  }			
+}

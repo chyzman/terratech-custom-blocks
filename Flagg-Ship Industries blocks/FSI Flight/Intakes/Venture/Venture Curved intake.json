@@ -1,0 +1,33 @@
+{
+	"Name": "Venture Curved Intake",
+	"Description": "A sleek intake with razor sharp funnels. Increases fuel regeneration, though not as much as the inline intake", 
+	"ID": 1700090, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Intake VEN1.png",
+	"Faction": 4,
+	"Category": 8, 
+	"Grade": 1, 
+	"Price": 5009,
+	"HP": 250,
+	"Mass": 0.75,
+	"Recipe": "zeropointsplitter,blastcaps,blastcaps,fuelinjector,olasticbrick,olasticbrick",
+
+	"MeshName": "Venture_Curved_Intake.obj", 
+	"MeshMaterialName": "VEN_Main", 
+	"ColliderMeshName": "Venture_Curved_Intake.obj", 
+
+	"Cells": [ 
+		{ "x": 0, "y": 0, "z": 0 },
+	],
+	"APs": [ 
+		{ "x": 0.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": -0.5 },		
+		{ "x": 0, "y": 0.5, "z": 0},
+		{ "x": 0, "y": -0.5, "z": 0}
+	],
+	"GamePrefabReference": "VENFuelPod(111)", 
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 1 },
+	"JSONBLOCK":{"ModuleFuelTank":{
+				 "m_Capacity":10,"m_RefillRate":10}}
+}

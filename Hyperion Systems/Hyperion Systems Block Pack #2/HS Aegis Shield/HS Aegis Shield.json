@@ -1,0 +1,143 @@
+{
+  "Name": "Hyperion Systems Aegis Barrier",
+  "Description": "A very strong shield projector powered by a negatively charged celestian crystal. Quite unstable when it comes to it's casing, though, and will explode after destruction.",
+  "ID": 100037, 
+
+  "Faction": 7,
+  "Category": 6, 
+  "Grade": 4, 
+  "Price": 29508, 
+  "HP": 1000, 
+  "Mass": 8,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "32, 32, 32, 32, 43, 45, 62, 64, 66", 
+  "IconName": "HSAegisIcon.png", 
+  "MeshName": "HS Aegis Shield.obj",
+  "ColliderMeshName": "HS Aegis Shield.obj",
+  "SupressBoxColliderFallback": true,
+  "MeshTextureName":  "HS textures.png",   
+ 
+   "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "GC_SamSite_Shield_222", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 1,
+    "y": 0.2,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FX_Triangles",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": true
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|_shield": {
+      "GameObject|_bubble": {
+        "GameObject|FX_Triangles": {
+          /*"UnityEngine.ParticleSystem": {
+           "startColor":{
+              "r": 0.0,
+              "g": 0.0,
+              "b": 1.0,
+              "a": 0.5,
+              "maxColorComponent": 0
+            }
+
+          }*/
+
+        },
+ 
+        "GameObject|m_GC_SamSite_Shield_222_Rim": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 1.0,
+                "g": 0,
+                "b": 0,
+                "a": 0.5,
+                "maxColorComponent": 0
+              }
+            }
+          },
+          "GameObject|m_GC_SamSite_Shield_222_Outer": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0,
+                  "b": 0,
+                  "a": 0.2,
+                  "maxColorComponent": 0
+                }
+              }
+          }
+        }
+      },
+
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            "radius": 0
+          }
+        }
+      }
+    },
+    "ModuleShieldGenerator": {
+    "m_Radius": 18,
+    "m_EnergyConsumptionPerSec": 10.0,
+    "m_InitialChargeEnergy": 1200.0,
+    "m_EnergyConsumedPerDamagePoint": 0.5,
+    "m_Healing": false,
+    "m_TechTriggerEvent": null,
+     "Instantiate|m_ChargingParticlesPrefab": {
+      "startSize": 10,
+      "startColor": {
+        "r": 0.4,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.08
+      }
+    }
+  },
+  "ModuleTechController": null,
+  "ModuleVision": null,
+  "ModuleAIBot": null,
+  "ModuleDriveBot": null,
+  "TargetAimer": null
+  /*"ModuleDrill": {
+    "activeColliders": [
+      "_bubbleCollider/SphereCollider."
+    ],
+    "impactDamageMultiplier": 1000.0,
+    "damagePerSecond": 5000.0,
+    "m_SpinOnCollisionDuration": 1
+  }*/
+  }		
+}

@@ -1,0 +1,77 @@
+{
+  "Name": "Old Star Tailfin",
+  "Description": "Now this is new to Old Star. The Tailfin or 'Rudder' is what you use to keep your flying tech straight. Can also be used as the tip of the wings as well!",
+  "ID": 300096, 
+  "Faction": 4,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3915, 
+  "HP": 500, 
+  "Mass": 1.0,
+  "CenterOfMass": {"x": 0, "y": 0.0, "z": 1.0},
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 1,
+  "Recipe":  "7, 7, 11, 43, 52",
+  "IconName": "OS_Tailfin.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+"Cells":[
+   {"x": 0,"y": 3, "z":-1},  {"x": 0,"y": 3, "z":-1},  
+     {"x": 0,"y": 2, "z":-1}, {"x": 0,"y": 2, "z": 0}, {"x": 0,"y": 2, "z": 1},
+     {"x": 0,"y": 1, "z":-1}, {"x": 0,"y": 1, "z": 0}, {"x": 0,"y": 1, "z": 1},
+     {"x": 0,"y": 0, "z":-1}, {"x": 0,"y": 0, "z": 0}, {"x": 0,"y": 0, "z": 1} 
+
+],
+  "APs": [ 
+    //sides
+    {"x":  0.5,"y": 0, "z":1},{"x": 0.5,"y": 0, "z": 0},
+    {"x": -0.5,"y": 0, "z":1},{"x":-0.5,"y": 0, "z": 0},
+
+    //Bottom
+    {"x": 0, "y":-0.5,"z": 1}
+  ],
+  
+  "GamePrefabReference":   "VEN_WingTail_122",
+  "ReferenceOffset":        { "x": 0.0, "y": 0.0, "z": 0.0 },
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "EmissionMode": 2,
+
+  "SubObjects": [
+    {
+    "SubOverrideName":     "m_VEN_Wing_Tail_122_Base",
+    "MeshName":            "Tailfin.obj",
+    "ColliderMeshName":    "Tailfin.obj",
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    },  
+    {
+    "SubOverrideName":     "_Pivot",
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+    "SubOverrideName":     "m_VEN_Wing_Tail_122_Flap",
+    "MeshName":           "Tailfin_flap.obj",
+    "ColliderMeshName":    null,
+    "SubPosition":         { "x": 0.9,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot": {
+       "GameObject|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y":1, "z": -0.5 }
+           }
+        }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "Name": "Old Star Carrage Wheel",
+  "Description": "This here is how the Old Star do. Nobody can get anywhere without wheels and none of them are faster than ours of equal sizes! The Good ol' Carrage Wheel will get ya where you need to and can handle a decent load while at it! Just. . . don't let it get shot. It's made of wood, if you haven't noticed.",
+  "ID": 300015, 
+  "Faction": 4, 
+  "Category": 3, 
+  "Grade": 1, 
+  "Price": 852, 
+  "HP": 500, 
+  "Mass": 1.25,
+  "IconName":"Old_Star_Carrage_Wheel_icon.png",
+  "MeshName":"Old_Star_Carrage_Wheel_Base_Block.obj", 
+  "EmissionMode": 2,
+  "Recipe": { // "ID": Count
+    "0": 10,
+    "3": 10,
+    "43": 10
+  },
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+ // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [ 
+    {"x": 0,"y": 0.5,"z": 0},
+    {"x": 0,"y": 0.5,"z": -1}
+  ],
+  "Cells": [
+    {"x":0,"y":0,"z":0},  {"x":0,"y":-1,"z":0}, 
+    {"x":0,"y":0,"z":-1}, {"x":0,"y":-1,"z":-1},
+    {"x":1,"y":0,"z":1},  {"x":1,"y":-1,"z":1},   {"x":1,"y":-2,"z":1},
+    {"x":1,"y":0,"z":0},  {"x":1,"y":-1,"z":0},   {"x":1,"y":-2,"z":0},
+    {"x":1,"y":0,"z":-1}, {"x":1,"y":-1,"z":-1},  {"x":1,"y":-2,"z":-1},
+    {"x":1,"y":0,"z":-2}, {"x":1,"y":-1,"z":-2},  {"x":1,"y":-2,"z":-2}
+  ],
+
+  "PrefabReference": "GSO_Wheel_222",
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "SubObjects": [ 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_B", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                      
+      "MakeBoxCollider": false, 
+      "MeshName": "Old_Star_Carrage_Wheel_Upper_Spring.obj"
+      //"SubPosition": { "x": 0.7, "y": 0, "z": 0.2 },    
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_A", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,           
+      "MakeBoxCollider": false,            
+      "MeshName": "Old_Star_Carrage_Wheel_Lower_Spring.obj"
+      //"SubPosition": { "x":-0.7, "y": 0, "z": 0 }, 
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Tyre", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+      "ColliderMeshName": "Old_Star_Carrage_Wheel_Collider.obj",
+      "MeshName": "Old_Star_Carrage_Wheel.obj"
+    }, {
+      "OverrideName": "m_GSO_Wheel_222_Base", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+      "MeshName": "Old_Star_Carrage_Wheel_Base_Block.obj"     
+    }, {
+      "OverrideName": "Suspension_B",
+      "SubPosition": { "x":0.75, "y": 0, "z": -0.5 }
+    }, {
+      "OverrideName": "Suspension_A",
+      "SubPosition": { "x":-0.75, "y": 0, "z": 0 }
+    }, {
+      "OverrideName": "_wheel",
+      "SubPosition": { "x":1.5, "y": -0.8, "z": -0.5 }
+    }, {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 0.8, "y": -1, "z": -0.5}
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+     "GameObject|_sparksLocator": {//Where the sparks fly when the wheel is overloaded
+       "x": 0.3,
+       "y": -1.0,
+       "z": 0.5
+     },
+     "GameObject|CentreOfMass": {//This determines the Center of Mass
+       "x": 0.5,
+       "y": -1.0,
+       "z": 0.5
+     },
+  //   // Torque Parameters
+  "ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 5000,
+		   "torqueCurveMaxRpm": 500,
+		  "passiveBrakeMaxTorque": 800,
+		   "reverseBrakeMaxRpm": 400,
+		   "basicFrictionTorque": 500.0,
+		   "fullCompressFrictionTorque": 200
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.5,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 1.46,
+			"thicknessAngular": 15,
+			"suspensionSpring": 5000.0,
+			"suspensionDamper": 200.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 13,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.0,
+		"m_DriveTurnDifferential": 0.5,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 10.0
+	}
+     }
+}

@@ -1,0 +1,393 @@
+{
+  "Name": "GreenTech Mobile All-Block Scrapper",
+  "Description": "A scrapper that can scrap any block, on the move.\n\nFollowing public pressure for a better resolution to the galactic trash problem, the Corporations joined with GreenTech to create this complex mobile recycling machine. Environment cleaning operations are now switfly returning many worlds to their natural state, and in a very lucrative way.",
+  "ID": 911234,
+
+  "Faction": 0,
+  "Category": 7, 
+  "Grade": 4,
+  "Price": 33138, 
+  "HP": 10000,
+  "Mass": 40,
+  "CenterOfMass": {"x": -0.5, "y": 1, "z": -1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "52, 52, 52, 52, 53, 53, 58, 58, 61, 61, 63, 63",  
+  "IconName": "GT_Scrapper_Icon.png", 
+  
+  "Cells":[
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": -1},
+    {"x": 0,"y": 1,"z": 0},
+    {"x": 0,"y": 1,"z": -1},
+    {"x": -1,"y": 0,"z": 0},
+    {"x": -1,"y": 0,"z": -1},
+    {"x": -1,"y": 1,"z": 0},
+    {"x": -1,"y": 1,"z": -1},
+    {"x": -2,"y": 0,"z": 0},
+    {"x": -2,"y": 0,"z": -1},
+    {"x": -2,"y": 1,"z": 0},
+    {"x": -2,"y": 1,"z": -1},
+    {"x": 1,"y": 0,"z": 0},
+    {"x": 1,"y": 0,"z": -1},
+    {"x": 1,"y": 1,"z": 0},
+    {"x": 1,"y": 1,"z": -1},
+
+    {"x": 0,"y": 0,"z": -2},
+    {"x": 0,"y": 0,"z": -3},
+    {"x": 0,"y": 1,"z": -2},
+    {"x": 0,"y": 1,"z": -3},
+    {"x": -1,"y": 0,"z": -2},
+    {"x": -1,"y": 0,"z": -3},
+    {"x": -1,"y": 1,"z": -2},
+    {"x": -1,"y": 1,"z": -3},
+    {"x": -2,"y": 0,"z": -2},
+    {"x": -2,"y": 0,"z": -3},
+    {"x": -2,"y": 1,"z": -2},
+    {"x": -2,"y": 1,"z": -3},
+    {"x": 1,"y": 0,"z": -2},
+    {"x": 1,"y": 0,"z": -3},
+    {"x": 1,"y": 1,"z": -2},
+    {"x": 1,"y": 1,"z": -3},
+
+    {"x": 0,"y": 2,"z": 0},
+    {"x": 0,"y": 2,"z": -1},
+    {"x": 0,"y": 3,"z": 0},
+    {"x": 0,"y": 3,"z": -1},
+    {"x": -1,"y": 2,"z": 0},
+    {"x": -1,"y": 2,"z": -1},
+    {"x": -1,"y": 3,"z": 0},
+    {"x": -1,"y": 3,"z": -1},
+    {"x": -2,"y": 2,"z": 0},
+    {"x": -2,"y": 2,"z": -1},
+    {"x": -2,"y": 3,"z": 0},
+    {"x": -2,"y": 3,"z": -1},
+    {"x": 1,"y": 2,"z": 0},
+    {"x": 1,"y": 2,"z": -1},
+    {"x": 1,"y": 3,"z": 0},
+    {"x": 1,"y": 3,"z": -1},
+
+    {"x": 0,"y": 2,"z": -2},
+    {"x": 0,"y": 2,"z": -3},
+    {"x": 0,"y": 3,"z": -2},
+    {"x": 0,"y": 3,"z": -3},
+    {"x": -1,"y": 2,"z": -2},
+    {"x": -1,"y": 2,"z": -3},
+    {"x": -1,"y": 3,"z": -2},
+    {"x": -1,"y": 3,"z": -3},
+    {"x": -2,"y": 2,"z": -2},
+    {"x": -2,"y": 2,"z": -3},
+    {"x": -2,"y": 3,"z": -2},
+    {"x": -2,"y": 3,"z": -3},
+    {"x": 1,"y": 2,"z": -2},
+    {"x": 1,"y": 2,"z": -3},
+    {"x": 1,"y": 3,"z": -2},
+    {"x": 1,"y": 3,"z": -3}
+  ],
+  
+  "APs": [ 
+
+    
+    {"x": 0, "y": 0, "z": 0.5},
+
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": -1},
+    {"x": 0, "y": -0.5, "z": -2},
+
+    {"x": -1, "y": 0, "z": 0.5},
+
+    {"x": 0, "y": -0.5, "z": -3},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": -1},
+    {"x": 1, "y": -0.5, "z": -2},
+    {"x": 1, "y": -0.5, "z": -3},
+    {"x": -2, "y": -0.5, "z": 0},
+    {"x": -2, "y": -0.5, "z": -1},
+    {"x": -2, "y": -0.5, "z": -2},
+    {"x": -2, "y": -0.5, "z": -3},
+    {"x": -1, "y": -0.5, "z": 0},
+    {"x": -1, "y": -0.5, "z": -1},
+    {"x": -1, "y": -0.5, "z": -2},
+    {"x": -1, "y": -0.5, "z": -3},
+
+    {"x": 1.5, "y": 0, "z": -1},
+    {"x": 1.5, "y": 1, "z": -1},
+    {"x": 1.5, "y": 2, "z": -1},
+    {"x": 1.5, "y": 3, "z": -1},
+    {"x": -2.5, "y": 0, "z": -1},
+    {"x": -2.5, "y": 1, "z": -1},
+    {"x": -2.5, "y": 2, "z": -1},
+    {"x": -2.5, "y": 3, "z": -1}
+  
+  ],
+  
+  "GamePrefabReference": "HE_Scrapper_323", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+ "ReferenceOffset": {
+    "x": -0.25,
+    "y": 0.4,
+    "z": -0.25
+  },
+  "ReferenceScale": {
+    "x": 1.333,
+    "y": 1.8,
+    "z": 1.333
+  },
+  "SubObjects": [
+    {
+      "MeshName": "GT_Scrapper.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Tubes.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Arrows.obj",
+      "MeshMaterialName": "GSO_ConveyorBelt_Main",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Arrows_Glass.obj",
+      "MeshMaterialName": "ObjectHighlightAttach",
+      "MeshTextureName": "Green_Square.png",
+      "MeshEmissionTextureName": "Green_Square.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Arrows_Glass.obj",
+      "MeshMaterialName": "ObjectHighlightAttach",
+      "MeshTextureName": "Green_Square.png",
+      "MeshEmissionTextureName": "Green_Square.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "MeshName": "GT_Scrapper_Arrows_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "MeshTextureName": "Green_Square.png",
+      "MeshEmissionTextureName": "Green_Square.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "SubOverrideName": "Grinder_A",
+      "MeshName": "GT_Scrapper_Grinder.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Grinder_B",
+      "MeshName": "GT_Scrapper_Grinder.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_1.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_2.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_3.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_4.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_5.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_6.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_7.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_8.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_9.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_10.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_11.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    },
+    {
+      "ColliderMeshName": "GT_Scrapper_Collider_12.obj",
+      "layer": 8,
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubPosition": { "x":0, "y": 0, "z": 0 }
+    }
+  ],
+
+ "JSONBLOCK": { 
+  "GameObject|Grinder_A":{
+    "Spinner": {
+      "m_Speed": -0.2,
+      "m_SpinUpTime": 1,
+      "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+      "m_AutoSpin": true
+    },
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": -0.88,
+        "y": 0.54,
+        "z": -1.886
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       }
+     }
+   },
+   "GameObject|Grinder_B":{
+    "Spinner": {
+      "m_Speed": 0.2,
+      "m_SpinUpTime": 1,
+      "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+      "m_AutoSpin": true
+    },
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": -0.13,
+        "y": 0.54,
+        "z": -1.886
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 45
+       }
+     }
+   },
+  "GameObject|_anchor": null,
+  "ModuleAnchor": null,
+  "ModuleItemConsume": {
+    "m_NeedsToBeAnchored": false
+  },
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 1,
+    "m_HeightIncrementScale": 1,
+    "m_BeamStrength": 300
+  },
+  "ModuleItemHolder": {
+  },
+  "ModuleItemPickup": {
+    "m_PickupRange": 20.0
+  },
+  "ModuleRecipeProvider": {
+    "m_RecipeListNames": [
+      {
+        "name": "gsofab",
+        "inverted": true
+      },
+      {
+        "name": "gcfab",
+        "inverted": true
+      },
+      {
+        "name": "venfab",
+        "inverted": true
+      },
+      {
+        "name": "hefab",
+        "inverted": true
+      },
+      {
+        "name": "bffab",
+        "inverted": true
+      },
+      {
+        "name": "rrfab",
+        "inverted": true
+      }
+      /* {
+        "name": "modfab",
+        "inverted": true
+      } */
+    ]
+  }
+  }			
+}

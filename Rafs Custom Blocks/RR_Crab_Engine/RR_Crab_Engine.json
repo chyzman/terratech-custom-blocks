@@ -1,0 +1,253 @@
+{
+  "Name": "Reticule Research Crab Engine",
+  "Description": "This odd device called Crab Engine can cause an electrostatic shift in the Tech wheels' friction, causing it to bizarrely move sideways. The strafing shift can also affect tracks and skids.",
+  "ID": 910723, 
+
+  "Faction": 3, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 38124,
+  "HP": 6000,
+  "Mass": 16,
+  "CenterOfMass": {"x": 0.5, "y": 0.1, "z": 1.5},
+
+  "IconName": "RR_Crab_Engine_Icon.png",
+  
+  "Recipe": "52, 52, 52, 52, 56, 56, 56, 56, 62, 66, 66",
+  
+  "EmissionMode": 1,
+
+  "BlockExtents":{"x": 2,"y": 2, "z": 4}, 
+
+  "APs": [
+    {"x": 0, "y": -0.5,"z": 0},
+    {"x": 0, "y": -0.5,"z": 1},
+    {"x": 0, "y": -0.5,"z": 2},
+    {"x": 0, "y": -0.5,"z": 3},
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 1, "y": -0.5,"z": 1},
+    {"x": 1, "y": -0.5,"z": 2},
+    {"x": 1, "y": -0.5,"z": 3}
+  ],
+
+  "GamePrefabReference": "EXP_Block_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "EXP_TeslaCoil_252", 
+  
+  "SubObjects": [
+  	{
+    	"MeshName": "RR_Crab_Engine.obj",
+      "MeshMaterialName": "RR_Main"
+    },
+    {
+    	"MeshName": "RR_Crab_Engine_Glass.obj",
+      "MeshMaterialName": "ClearPanel"
+    },
+    {
+      "SubOverrideName": "Collider_1",
+      "Layer":8
+    },
+    {
+      "SubOverrideName": "Collider_2",
+      "Layer":8
+    },
+    {
+      "SubOverrideName": "Collider_3",
+      "Layer":8
+    },
+    {
+      "SubOverrideName": "Collider_4",
+      "Layer":8
+    },
+    {
+      "SubOverrideName": "Collider_5",
+      "Layer":8
+    }
+  ],
+  "JSONBLOCK": {
+    "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.84,
+          "y": 0.92,
+          "z": 0.3
+         },
+         "localEulerAngles": {
+          "x": -43.5,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 0.12,
+          "y": 0.12,
+          "z": 0.12
+         }
+         },
+      "GameObject|Light_Point": null,
+       "UnityEngine.ParticleSystem": {
+        "startColor":{
+          "r": 1.0,
+          "g": 1,
+          "b": 1,
+          "a": 1.0
+        }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+          "material": {
+            //"mainTexture": "Thunder_Textures.png"
+          }
+        }
+    },
+    "Duplicate|fx_Lightning":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.84,
+          "y": 0.92,
+          "z": 2.7
+          },
+          "localEulerAngles": {
+          "x": 43.5,
+          "y": 0,
+          "z": 0
+          }
+          },
+      "GameObject|Light_Point": null,
+       "UnityEngine.ParticleSystem": {
+        "startColor":{
+          "r": 1.0,
+          "g": 1,
+          "b": 1,
+          "a": 1.0
+        }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+          "material": {
+            //"mainTexture": "Thunder_Textures.png"
+          }
+        }
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/fx_Lightning/ParticleSystem.",
+          "type": "Attach"
+          
+           /*  Attach = 0,
+            Anchor = 1,
+            WeaponCharge = 2,
+            BarrelCharge = 3,
+            WeaponFiring = 4,
+            None = 6 */
+        
+        },
+        {
+          "m_system": "/fx_Lightning_copy/ParticleSystem.",
+          "type": "Attach"
+          
+           /*  Attach = 0,
+            Anchor = 1,
+            WeaponCharge = 2,
+            BarrelCharge = 3,
+            WeaponFiring = 4,
+            None = 6 */
+        
+        }
+      ]
+    },
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWheels.m_WheelParams.strafeSteeringSpeed"],
+      "m_Strength": [1.0],
+      "m_AddAfter": [20]
+    },
+    "GameObject|Collider_1": {
+      "UnityEngine.BoxCollider":{
+        "center": {
+          "x": 0.5,
+          "y": -0.36,
+          "z": 1.5
+          },
+          "size": {
+          "x": 1.8,
+          "y": 0.28,
+          "z": 3.8
+          }
+        }
+    },
+    "GameObject|Collider_2": {
+      "UnityEngine.BoxCollider":{
+        "center": {
+          "x": 0.5,
+          "y": 0.08,
+          "z": 1.5
+          },
+          "size": {
+          "x": 1.654,
+          "y": 0.6,
+          "z": 3.18
+          }
+        }
+    },
+    "GameObject|Collider_3": {
+      "UnityEngine.BoxCollider":{
+        "center": {
+          "x": 0.5,
+          "y": 0.69,
+          "z": 1.5
+          },
+          "size": {
+          "x": 1.64,
+          "y": 0.62,
+          "z": 2.6
+          }
+        }
+    },
+    "GameObject|Collider_4": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.84,
+          "y": 0.92,
+          "z": 0.3
+         },
+         "localEulerAngles": {
+          "x": -43.5,
+          "y": 0,
+          "z": 0
+         }
+         },
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.62,
+        "height": 1
+      }
+    },
+    "GameObject|Collider_5": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.84,
+          "y": 0.92,
+          "z": 2.7
+          },
+          "localEulerAngles": {
+          "x": 43.5,
+          "y": 0,
+          "z": 0
+          }
+          },
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "radius": 0.62,
+        "height": 1
+      }
+    }
+  }
+}

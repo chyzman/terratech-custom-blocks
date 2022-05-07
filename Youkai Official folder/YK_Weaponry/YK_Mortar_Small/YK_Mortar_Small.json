@@ -1,0 +1,236 @@
+{
+    "Name": "Youkai Hiza K-T Mortar",
+    "Description": "''The rotation method of this small inset mortar was inspired by the joints of mechanical legs. It fires low damage tracking rounds, but at a rapid pace.'' -Dr. Spirit",
+  
+    "ID": 19055,
+    "Faction": 0,
+    "Category": 4,
+    "Grade": 2,  
+    "Price": 6522,
+    "HP": 1200,
+    "Mass": 3,
+    "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+  
+    "Fragility": 0,
+    "Rarity": 0,
+    "DamageableType": 0,
+    
+    "Recipe": "45, 45, 45, 45, 46, 46, 53, 53, 57", 
+    
+    "IconName": "YK_Mortar_Small.png",
+    "EmissionMode": 1, 
+    
+    "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+    
+    "APs": [ 
+      {"x": 0, "y": -0.5, "z": 0},
+      {"x": 0, "y": 0, "z": -0.5},
+      {"x": -0.5, "y": 0, "z": 0},
+      {"x": 0.5, "y": 0, "z": 0}
+    ],
+      
+    "GamePrefabReference": "GSO_Cannon_Turret_111", 
+    "KeepRenderers": false,
+    "KeepColliders": false,
+  
+    "SubObjects": [
+      {
+        "MeshName": "YK_Mortar_Small_Base.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png", 
+        "MakeBoxcollider": true
+      },
+      {
+        "SubOverrideName": "GSO_Cannon_111_Mount",
+        "MeshName": "YK_Mortar_Small_Mount.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": 0, "y": 0, "z": 0},
+      },
+      {
+        "SubOverrideName": "GSO_Cannon_111_Barrel",
+        "MeshName": "YK_Mortar_Small_Barrel.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": 0, "y": 0, "z": 0},
+      },
+      {
+        "SubOverrideName": "_gimbalBase",
+        "SubPosition": { "x": 0, "y": 0, "z": 0},
+      }
+      
+    ],
+  
+    "JSONBLOCK": {
+      "GameObject|_gimbalBase": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": -45,
+            "y": 0,
+            "z": 0
+           }
+         },
+        "GimbalAimer": {
+          "rotationAxis": 2,
+          "rotationLimits": [
+            -15,
+            15
+          ]
+        },
+        "GameObject|GSO_Cannon_111_Mount": {
+          "UnityEngine.SphereCollider": {
+            "center": {
+              "x": 0.0,
+              "y": -0.1,
+              "z": 0.0
+            },
+            "radius": 0.4
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": -0.05,
+              "z": 0.2
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "GameObject|_gimbalElev": {
+          "GameObject|_barrel": {
+             "GameObject|_recoiler": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+            "GameObject|GSO_Cannon_111_Barrel": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+            }
+          },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+            "GameObject|_smoke": {
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0
+              }
+            },
+            "GameObject|_casingSpawn": null,
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0.1,
+                  "z": 0.6
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+            }
+          },
+          "GimbalAimer": {
+            "rotationAxis": 1,
+            "rotationLimits": [
+              -0.01,
+              0.01
+            ]
+          }
+          }
+          
+        },
+        "ModuleWeapon": { 
+          "m_FireSFXType": 5,
+          "m_RotateSpeed": 180.0
+        },
+        "ModuleWeaponGun": {
+          "m_ShotCooldown": 0.65,
+          "m_CooldownVariancePct": 0.1,
+          "m_SeekingRounds": true
+        },
+        "FireData": { //Component, but with a catch
+          "m_MuzzleVelocity": 50, //Bullet speed
+          "m_BulletSprayVariance": 0.05, //Bullet inverse-accuracy
+          "m_KickbackStrength": 50, // Would you like to become a plane
+          "m_BulletCasingPrefab": null,
+          "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+            "UnityEngine.Transform": {"localScale": { "x":1.5, "y":1.5, "z":1.8 }},  // Size of Bullet    
+            "WeaponRound": { //Component because we are in GameObject right now
+              "m_DamageType" : "Bullet",
+              "m_Damage": 150 //This does nothing apparently, so you can probably just delete this block
+            },
+            "Projectile": { //Another one (doot doooooot dododoot)
+                "m_SeekingRounds" : true,
+                "SeekingProjectile": { //- Homing effect for resources
+                    "m_LockOntoTarget": true, //Will this find and home in?
+   
+                    "m_ApplyRotationTowardsTarget": true, //Will it visually point at the target?
+                    "m_UpdateVisibleInterval": 0.3,
+                    "m_ActivationDelay": 0.0, //How long before we aim at the target?
+                    "m_VisionRange": 75, //How far can we see targets?
+                    "m_VisionConeAngle": 150, //How wide can we see targets?
+                    "m_TargetingType": 2,
+                    "m_TurnSpeed": 100 // How strong the turn is towards the enemy
+                  },
+              "m_ImpactSFXType" : "Cannon", //Makes for more intense hit noises
+              "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+                "Explosion": { //wOW a component
+                  //"m_DamageType" : "Explosive", //What damage modifier the explosion does
+                  "m_ExplosionSize": 0, //This is an enum with values 0 1 and 2 for SFX
+                  "m_EffectRadius": 2, //Yes let us clear the entire amazon forest
+                  "m_EffectRadiusMaxStrength": 2, //Max Radius before the effect deals less damage outwards
+                  "m_MaxDamageStrength": 45, //I think this should be lower
+                  "m_MaxImpulseStrength": 100 //How hard to push things, explosion force
+                },
+                "UnityEngine.ParticleSystemRenderer": {
+                  "lengthScale": 3
+                }
+              }
+            }
+          }
+        }
+      }
+  }

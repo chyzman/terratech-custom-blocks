@@ -1,0 +1,85 @@
+// Helpful site https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+    "Name": "Tofuu Cube Head",
+    "Description": "It's a cab, visually identical to that of GSO, except it's tofuu!",
+    "ID": 99992,
+
+    "Faction": 6, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 0, //The desired grade minus one
+    "Price": 100, //The price is measured by sum of recipe value times 3
+    "HP": 500,
+    "Mass": 1,
+
+    //"Recipe": "1, 2",
+
+    "IconName": null,
+    "MeshTextureName": "tofuu_tex.png",
+    "MeshGlossTextureName": "tofuu_tex_2.png",
+    "MeshEmissionTextureName": null,
+
+    "SupressBoxColliderFallback": true,
+
+    "BlockExtents":
+    {
+        "x": 1,
+        "y": 1,
+        "z": 1
+    },
+
+    "APs": [
+        {"x": 0,"y": -0.5,"z": 0},
+        {"x": 0,"y": 0.5,"z": 0},
+        {"x": 0,"y": 0,"z": -0.5},
+        {"x": -0.5,"y": 0,"z": 0},
+        {"x": 0.5,"y": 0,"z": 0}
+    ],
+    "GamePrefabReference": "GSO_Cab_111",
+    "KeepReferenceRenderers": false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "SubObjects": [
+        {
+            "SubOverrideName": "m_GSO_Cab_111_Base",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MakeBoxCollider": true,
+            "MeshName": "tofuu_gso.obj",
+            "SubPosition": { "x": 0, "y": 0, "z": 0 },
+            "SubScale": { "x": 1, "y": 1, "z": 1 }
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_1",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_gso_tyre.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_2",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_gso_tyre.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_3",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_gso_tyre.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_4",
+            "MeshName": "tofuu_gso_tyre.obj"
+        }, {
+            "SubOverrideName": "ViewProp",
+            "DestroyExistingRenderer": true,
+            "SubPosition": { "x": 0, "y": 0, "z": 0.52 },
+            "SubScale": { "x": 1, "y": 1, "z": 1 }
+        }
+    ],
+    "JSONBLOCK": {
+        "GameObject|ViewProp": {
+            "Nuterra.BlockInjector.ModuleFirstPerson": { }
+        },
+        "FireData": {
+            "FireData": {
+                "m_BulletPrefab": null
+            }
+        }
+    }
+}

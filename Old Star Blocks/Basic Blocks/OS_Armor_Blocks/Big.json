@@ -1,0 +1,43 @@
+{
+  "Name": "Old Star Heavy Iron Large Plate",
+  "Description": "This here is how the Old Star do. Heavy Iron does alot of heavy lifting so they need blocks that can handle an impact better than our usual blocks and this is where our plating comes in. A larger variant to fill larger holes on your techs!",
+
+  "ID": 300041,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 9600,
+  "HP": 4000,
+  "Mass": 8,
+  "IconName": "Big_icon.png",
+  "MeshName": "Big_Plate.obj",
+  "Recipe":{
+    "43": 8,
+    "45": 8,
+    "53": 4,
+    "54": 4
+  }, 
+  "EmissionMode": 2,	
+  "ColliderMeshName": "Big_PlateC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DamageableType": 2,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  }, 
+  "APsOnlyAtBottom": true
+}

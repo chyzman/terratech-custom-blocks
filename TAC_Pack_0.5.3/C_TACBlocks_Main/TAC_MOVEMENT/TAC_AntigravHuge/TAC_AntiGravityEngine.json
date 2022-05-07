@@ -1,0 +1,192 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Zephyrus Anti-Gravity Core",
+  "Description": "A large anti-gravity engine built to get large space-only starships safely into the atmosphere. \n\nThis works the best when paired with the Garnigho Spaceship Engine (which maintains perfect positional holding in antigravity).  While BF is the first to make antigravity engines, this was roughly the first large-scale antigravity system shoved on a mothership, the result of a clever setup to force Proxima Darks into a supercompressed form.  We needed to get the Valhalla to be able to fly in atmosphere safely, so this was researched at the end of the <b>Kiwi Wars</b> to make life easier for the larger starships on planets.", //You can make multiple lines with \n
+  "ID": 584437, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 93930, //BF has better budget than this
+  "HP": 4000,//Weaker than TAC norms for the area consumed
+  "Mass": 24.0,//Heavy, 2 mass per block consumed
+
+
+  "IconName": "ZeroLine.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,53, 53, 53, 53, 54, 54, 54, 54, 59, 59, 59, 59, 59, 59, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom
+    { "x":0, "y":-0.5, "z":0 },
+    { "x":2, "y":-0.5, "z":0 },
+    //Back
+    { "x":1, "y":0, "z":-0.5 },
+    { "x":1, "y":1, "z":-0.5 },
+    { "x":1, "y":2, "z":-0.5 },
+    { "x":1, "y":3, "z":-0.5 },
+    //Top
+    { "x":0, "y":3.5, "z":0 },
+    { "x":2, "y":3.5, "z":0 },
+    //Front
+    { "x":1, "y":0, "z":0.5 },
+    { "x":1, "y":1, "z":0.5 },
+    { "x":1, "y":2, "z":0.5 },
+    { "x":1, "y":3, "z":0.5 },
+    //Sides
+    { "x":-0.5, "y":0, "z":0 },
+    { "x":-0.5, "y":3, "z":0 },
+    { "x":2.5, "y":0, "z":0 },
+    { "x":2.5, "y":3, "z":0 }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 4,
+    "z": 1 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_AntiGravityEngine(222)",//
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 1, "y": 1.5, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_BF_AntiGravityEngine_222_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_AntigravFrame.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|BF_AntiGravityEngine_222": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":1, "y":1.5, "z":0 } 
+      },
+      "GameObject|_bubble": {
+        "GameObject|ShieldSphereOuter": {
+          "GameObject|ShieldSphereInner": {
+          },
+          "GameObject|ShieldSphereOuter": {
+          },
+        },
+      },
+      "GameObject|m_BF_AntiGravityEngine_222_Base": {
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_F": {
+          "UnityEngine.MeshRenderer": null,
+        },
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_E": {
+          "UnityEngine.MeshRenderer": null,
+        },
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_D": {
+          "UnityEngine.MeshRenderer": null,
+        },
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_C": {
+          "UnityEngine.MeshRenderer": null,
+        },
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_B": {
+          "UnityEngine.MeshRenderer": null,
+        },
+        "GameObject|m_BF_AntiGravityEngine_222_Ring_A": {
+          "UnityEngine.MeshRenderer": null,
+        },
+      },
+    },
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1.5, "z":0 } 
+      },
+      // "UnityEngine.SphereCollider": {
+      //   "radius": 0.0,
+      //   "center": { "x": 1, "y": 1, "z": 1.0 },
+      // },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0.0 },
+        "size": {
+          "x": 3.0,
+          "y": 4.0,
+          "z": 1.0
+        }
+      }
+    },
+    // "GameObject|m_VEN_Shield_111": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":1, "y":1.5, "z":0 } 
+    //   },
+    // },
+
+    //Settings
+    "ModulePlacementZoneEffect": {// the visual bubble to tell what it covers
+      "m_Radius": 20.0,
+      // "m_VFXBubbleRadiusFudgeFactor": 0.9,
+      // "m_ModuleType": 0,
+    },
+    "ModuleAntiGravityEngine": {// the actual engine
+      "m_Radius": 20.0,
+      "m_StrengthAsGravityScale": 1.0,
+      "m_SubtractGravity": true,
+      "m_EnergyUsedPerFilledCellPerSecond": 0.325,
+      "m_GravityTargetsDirty": false,
+      "m_GravityDelta": 0.0,
+      "m_GravityManipulationZoneDirty": true,
+      // "m_GravityManipulationZone": {
+      //   "m_Position": {
+      //     "x": 0.0,
+      //     "y": 1.0,
+      //     "z": -9.0
+      //   },
+      //   "m_PositionIsLocal": true,
+      //   "m_Radius": 15.05,
+      //   "m_ManipulationAmount": -1.0
+      // },
+      // "m_CurrentGravityAdjustmentTargets": [],
+      // "m_LayerMask": 16640,
+      // "m_ModuleType": 1,
+    },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+  }
+}

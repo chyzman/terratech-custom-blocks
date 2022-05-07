@@ -1,0 +1,417 @@
+
+{
+    "Name": "R&D Creative Storage Unit",
+    "Description": "Let's clean up the R&D Lab with this vacuum cleaner from the future!",
+    "ID": 546356,
+  
+    "Faction": 6,
+    "Category": 7,
+    "Rarity": 2,
+    "Grade": 0,
+    "Price": 999999999,
+    "HP": 5000,
+    "Mass": 200,
+    "Recipe": "32",
+    "DropFromCrates": false, // No change = true
+    "IconName": "RR_RnD_Creative_SCU.png",
+    "MeshName": "RR_RnD_Creative_SCU.obj",
+    "ColliderMeshName": "RR_RnD_Creative_SCU_c.obj",
+
+    "MeshMaterialName": "RR_Main",
+    //"MeshGlossTextureName": "EXP_2", 
+    //"MeshEmissionTextureName": "EXP_3",
+  
+  "Cells":[
+    //The grid space to be occupied
+    {"x":0,"y":0,"z":0},
+  ],
+
+  "APsOnlyAtBottom": false, 
+  
+  "APs": [ 
+    // {"x":0,"y":-0.5,"z":0}
+  ],     
+  "GamePrefabReference": "GSO_Heart_343",
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "GSO_Inventory_Block_334",
+      //"MeshName": "RR_RnD_Creative_SCU.obj",
+      //"MeshMaterialName": "RR_Main",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "IB_Base_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "IB_Base_Anchor",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "GSO_Anchor_SCU_Hook",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "GSO_Inventory_Block_Anchor",
+      "MeshName": "RR_RnD_Creative_SCU_anchor.obj",
+      "MeshMaterialName": "RR_Main",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": 0, // Yaw
+        "z": 0 // Roll
+      }
+    },
+    {
+      "SubOverrideName": "m_IB_Base_Ray_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_Ray_02",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_Ray_03",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_Ray_04",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_RayHinge_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_RayHinge_02",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_RayHinge_03",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_RayHinge_04",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_SRod_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_SRod_02",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_SRod_03",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_IB_Base_Singularity",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "LED0",
+      "MeshName": "RR_RnD_Creative_SCU_LEDempty.obj",
+    },
+    {
+      "SubOverrideName": "LED1",
+      "MeshName": "RR_RnD_Creative_SCU_LEDempty.obj",
+    },
+    {
+      "SubOverrideName": "LED2",
+      "MeshName": "RR_RnD_Creative_SCU_LEDempty.obj",
+    },
+    {
+      "SubOverrideName": "LED3",
+      "MeshName": "RR_RnD_Creative_SCU_LEDempty.obj",
+    },
+    {
+      "SubOverrideName": "LED4",
+      "MeshName": "RR_RnD_Creative_SCU_LEDempty.obj",
+    },
+    {
+      "SubOverrideName": "RR_RnD_Creative_SCU_spin1",
+      "MeshName": "RR_RnD_Creative_SCU_spin1.obj",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+      "MakeBoxCollider": false
+    }
+  ],
+  
+  "Deserializer": {
+    "Reference|GC_Battery_424/GC_Battery_424/fx_Plasma": { // GC mega battery FX
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "UnityEngine.MeshCollider": null,
+      "UnityEngine.MeshRenderer": null,
+      "UnityEngine.ParticleSystem": {
+        "main": {
+          "m_ParticleSystem": {
+            "startColor": {
+              "r": 1.00,
+              "g": 0.10,
+              "b": 0.20,
+              "a": 0.65
+            },
+            "startSize": 0.0,
+            "endSize": 0.0,
+            "maxParticles": 0 //remove
+          }
+        }
+      },
+      "GameObject|fx_Lightning": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1.5,
+            "y": 1.5,
+            "z": 1.5
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 2.1
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 0.40,
+                "g": 0.50,
+                "b": 1.00,
+                "a": 0.65
+              },
+              "startSize": 0.3,
+              "maxParticles": 0 //0 to remove
+            }
+          }
+        }
+      },
+      "GameObject|fx_Particles": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1.2,
+            "y": 1.2,
+            "z": 1.2
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 2.1
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 0.40,
+                "g": 0.50,
+                "b": 1.00,
+                "a": 0.65
+              },
+              "startSize": 0.25,
+              "startSpeed": -0.15,
+            }
+          }
+        }
+      }
+    },
+    "Reference|EXP_Charger_Lab/fx_Lightning": { // RR mission charger FX
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "localPosition": {
+          "x": 1.5,
+          "y": -0.7,
+          "z": -1.5
+        }
+      },
+      "UnityEngine.MeshCollider": null,
+      "UnityEngine.MeshRenderer": null,
+      "UnityEngine.ParticleSystem": {
+        "main": {
+          "m_ParticleSystem": {
+            "startColor": {
+              "r": 1.00,
+              "g": 1.00,
+              "b": 1.00,
+              "a": 1.00
+            },
+            "startSize": 0.0,
+            "endSize": 0.0,
+            "maxParticles": 1000 //0 to remove
+          }
+        }
+      },
+      "GameObject|Light_Point": { // Light
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localPosition": {
+            "x": -1.5,
+            "y": 1,
+            "z": 1.5
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 1.00,
+                "g": 0.00,
+                "b": 0.00,
+                "a": 0.65
+              },
+              "startSize": 0.3,
+              "maxParticles": 0 //0 to remove
+            }
+          }
+        }
+      },
+    },
+
+
+
+    "GameObject|GSO_Inventory_Block_334": {
+      "GameObject|m_IB_Base_Singularity": {
+        "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "UnityEngine.ParticleSystem": {
+            "rotationOverLifetime": {
+              "enabled": true,
+              "SeparateAxis": false,
+              "z": {
+                "constantMin": -3,
+                "constantMax": 3
+              }
+            },
+            "startDelay": 0,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 4.0,
+            "startSpeed": 0,
+            "startSize": 3,
+            "startLifetime": 4.0,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000,
+            "simulationSpace": 0,
+            "scalingMode": 1,
+            "randomSeed": 0
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 0,
+            "sortMode": 0,
+            "lengthScale": 2.0,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 1.0,
+            "material": "FX_Teleporter_Distortion_Spiral"
+          }
+        }
+      }
+    },
+
+  "GameObject|RR_RnD_Creative_SCU_spin1": { // decoration
+    "Spinner": {
+      "m_AutoSpin": true,
+      "m_Speed": 1,
+      "m_RotationAxis": {
+        "axis": 1
+      }
+    }
+  },
+
+    "ModuleHeart": {
+      "m_EventHorizonRadius": 5000,
+      "m_SetupTime": 0.0,
+      "m_StartShrinkingRadius": 50,
+      "m_ReadyAftertime": 150,
+      "m_MinTimeBeforeDrop": 1,
+      "m_Pickup": "ModuleItemPickup",
+      "m_Animator": null
+    },
+    "ModuleItemHolder": {
+      //"m_OverrideBasePositons": [
+        //{
+        //  "x": 0,
+        //  "y": 0,
+        //  "z": 0
+        //}
+      //],
+      "m_CapacityPerStack": 5000
+    },
+    "ModuleItemPickup": {
+      "m_PickupRange": 5000, //Pickup range
+      "m_RangeIndicator": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "m_RangeIndicatorPrefab": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "m_VisionRefreshInterval": 0.1,
+      "m_PrePickupPeriod": 5,
+    }
+  }
+}
+
+

@@ -1,0 +1,296 @@
+{
+    "Name":                 "Railcannon",
+    "Description":          "Railcannon with high power may look quite familiar but I assure you its 100% original design",
+
+    "ID": 620012,
+
+    "Faction": 5,        
+
+    "Category": 4,        
+    "Rarity": 2,
+    "Grade": 2,             
+    "Price": 38622,        
+  
+	
+    "IconName":                   "RCcannon.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "HP": 2500,                            
+    "Mass": 54,
+
+    "DamageableType": 0,    
+    "Fragility": 1,
+    
+    "BlockExtents":
+    { "x": 11,"y": 2, "z": 11 },
+
+    "APs": [
+        {"x": 5, "y": -0.5, "z": 5 },
+    ],
+
+    "GamePrefabReference":    "HE_Cannon_Turret_Short_525",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 5, "y": 0.0, "z": 5 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Base", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Railcannon_Base.obj",
+      "MeshTextureName": "Ellydium 1.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png", 
+        "SubPosition":              { "x": 3, "y": -0.5, "z": 2 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Turret", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Railcannon_Gimbal.obj",
+      "MeshTextureName": "Ellydium 1.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png", 
+        "ColliderMeshName":         "HE_Gungnir_Railgun_Gimbal_Collider.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_GunMantlet", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Railcannon_Elevator.obj",
+      "MeshTextureName": "Ellydium 1.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png", 
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.6, "z": -0.3 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_HE_CannonTurret_Short_Barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": false,
+        "MeshName":                 "Railcannon_Barrel.obj",
+      "MeshTextureName": "Ellydium 1.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png", 
+        "ColliderMeshName":         "Railcannon_Barrel_Collider.obj",
+        "SubPosition":              { "x": 0, "y": -0.6, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+     { 
+        "SubOverrideName":          "_bulletSpawn", 
+        "SubPosition":              { "x": 0, "y": 1, "z": 5},
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_muzzleFlash",
+        "SubPosition":              { "x": 0, "y": 1, "z": 5 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+      { 
+        "SubOverrideName":          "_smoke",
+        "SubPosition":              { "x": 0, "y": 0.8, "z": 5},
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+   ],
+
+    "Deserializer": {    
+      "GameObject|_gimbalBase":{
+        "GimbalAimer": { 
+            "rotationLimits": [-180, 180],
+            "rotationAxis": 2 
+          },
+        "GameObject|_gimbalElev":{
+          "GimbalAimer": { 
+          "rotationLimits": [-60, 60] 
+        },
+        }
+		
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 3,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0.01,          // Dictates how random the length of pause between shots.
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward targets
+       
+        },
+
+      "Reference|HE_Cannon_Battleship_216/FireData.": {
+                "m_MuzzleVelocity": 1000.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+                "m_KickbackStrength": 200.0,            // Dictates the strength of the recoil when firing the gun
+                "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+                "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+    
+                
+                /********** Bullet Prefab **********/
+                "Instantiate|m_BulletPrefab": {
+                    "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                        "ParticleSystem": {
+                            "startSize":    1.0,
+                            "duration":     10.0,
+                            "emissionRate": 2000.0,
+							"startLifetime": 2.0,
+//                            "main":{
+//                              "startDelayMultiplier": 0.0,
+//                              "prewarm": true
+//                            }
+                        }
+                    },
+    
+                    "Rigidbody":{
+                        "useGravity": false
+                    },
+    
+                    // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+                   "UnityEngine.CapsuleCollider": {
+                        "gameObject": {
+                            "layer": 1       // Shield - allows piercing 
+                        },
+                        "center": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 10
+                        },
+                        "radius": 0.15,
+                        "height": 10,
+                        "direction": 2,
+                    },
+    
+                    // This is the bullet's white trail. 
+                    "SmokeTrail":{
+                        "numberOfPoints":   40.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                                    // Do not decrease this too much as it will begin to act strangely.
+    
+                        "spread":           0.0,   // Dictates how erratic the trail is.
+                        "riseSpeed":        0.0,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+                        "updateSpeed":      300,  // Dictates the speed of the trail.
+                    },
+    
+                    // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+                    "LineRenderer": {
+                        "startWidth": 1,
+                        "endWidth": 0.4,
+                        "widthMultiplier": 1.0,
+                        
+                        // The color at the start and end of the trail
+                        "startColor":   { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 },
+                        "endColor":     { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 }
+                    },
+                  
+                    "Projectile":{
+                        "m_Damage": 0,                  // The damage of the bullet when directly hitting a block
+                        "m_LifeTime": 10.0,                  // The duration of the bullet's existence before despawning
+                        "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                        "m_IgnoreCollisionWithBarrel": true,
+                        "Instantiate|m_Explosion": {
+                            "Explosion": {
+                                "m_ExplosionType": 3,                    // Dictates the damage type of the explosion
+                                "m_EffectRadiusMaxStrength": 3.0,
+                                "m_EffectRadius": 5,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                                "m_MaxDamageStrength":      8000.0,        // The splash damage done
+                                "m_MaxImpulseStrength":     100.0       // The strength of the knockback done by the explosion
+                            },
+                            "GameObject|Sparks": { 
+                              "UnityEngine.ParticleSystem": {
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 1.0
+                                    },
+                                    "startSize": 7,
+                                    "startSpeed": 10.0,
+                                    "emissionRate": 100.0,
+                                    "maxParticles": 750,
+                                    "emission": {
+                                      "rateMultiplier": 2450.0,
+                                      "rateOverTimeMultiplier": 0.2,
+                                      "burst": {
+                                        "count": 750,
+                                        "maxCount": 650,
+                                        "minCount": 400
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionBright": { 
+                              "UnityEngine.ParticleSystem": {
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 1.0
+                                    },
+                                    "maxParticles": 1500,
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionDark": { 
+                              "UnityEngine.ParticleSystem": {
+                                "startLifetime": 1.5,
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 0.5
+                                    },
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionSmoke": {
+                              "UnityEngine.ParticleSystem": {
+                                "startLifetime": 1.5,
+                              }
+                            } 
+                        }
+                    }
+                },
+    
+                "Instantiate|m_BulletCasingPrefab": null       
+          
+        },
+
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        "m_RotateSpeed": 40.0, 
+        "m_ChangeTargetInteval": 0.5,
+
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 180.0,
+
+        "m_FireSFXType": 64,
+
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+
+      },
+    
+  }   
+}

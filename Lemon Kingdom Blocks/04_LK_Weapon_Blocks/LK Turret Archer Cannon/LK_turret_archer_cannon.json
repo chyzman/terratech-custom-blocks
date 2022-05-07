@@ -1,0 +1,248 @@
+/*
+Description:    A revolver that uses 3-pounder shells
+Pros:           Burst-fires 6 round quickly, damage is slightly higher than a 3-pounder cannon
+Cons:           Heavy, expensive, has a long reload time
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Archer R6 Heavy Revolver",
+    "Description":          "A heavy revolver cannon that shoots 6 3-pounder shells in quick succession. However, it has a high recoil and takes some time to reload.\n\n\"Dr. Zug W. Bug, a neophyte engineer, had designed the Archer to enter the prestigious Guild of Sciences. He passed, and now his creation is widely used by scout units all over the Zesty Realm's domain.\"",
+
+    "ID": 419040,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 8667,          // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*  The resources/components needed to make this block. For the full ID Resource/Component list, 
+        please refer to the Terratech Wiki.
+
+        Recipe:   2 Titanic Alloy, 1 Plubonic Alloy, 3 Blast Cap, 1 Z4 Explosive, 1 Cyclone Jet, 
+    */
+    "Recipe" : { "54": 2, "53": 1, "46": 3, "55": 1, "57": 1 },
+      
+    "IconName":                   "LK_turret_archer_cannon_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                               // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                               // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 800,              // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 8.0,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 1, "y": 1, "z": 2 },
+
+    "APs": [  { "x": 0, "y": -0.5, "z": 0 }, ],
+    
+    // Advanced Settings
+    "PrefabReference":  "427",                      // 427 HE Repeater Rifle Block ID                      
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+    
+    "SubObjects":[
+      // Replace the original meshes with new ones 
+      {
+        "ObjectName":                 "m_HE_50Cal_112_Base",
+        "DestroyExistingRenderer":    true,
+        "MeshName":                   "LK_turret_archer_cannon_base.obj",
+        "MeshColliderName":           "LK_turret_archer_cannon_base_col.obj",
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+        "ObjectName":                 "m_HE_50Cal_112_RotatingArm",
+        "DestroyExistingRenderer":    true,
+        "MeshName":                   "LK_turret_archer_cannon_mount.obj",
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+        "ObjectName":                 "m_HE_50Cal_112_Gun",
+        "DestroyExistingRenderer":    true,
+        "MeshName":                   "LK_turret_archer_cannon_body.obj",
+        "MeshColliderName":           "LK_turret_archer_cannon_body_col.obj",
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+        "ObjectName":                 "m_HE_50Cal_112_Barrel",
+        "DestroyExistingRenderer":    true,
+        "MeshName":                   "LK_turret_archer_cannon_barrel.obj",
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      // Add the gun cylinder
+      {
+        "ObjectName":                 "cylinder",
+        "MeshName":                   "LK_turret_archer_cannon_cylinder.obj",
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      // Move the other components 
+      {
+        "ObjectName":                 "_smoke",
+        "Position":                   { "x": 0, "y": 0, "z": 0.7 },
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },      
+      {
+        "ObjectName":                 "_muzzleFlash",
+        "Position":                   { "x": 0, "y": 0, "z": 0.65 },
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },    
+      {
+        "ObjectName":                 "_spawnBullet",
+        "Position":                   { "x": 0, "y": 0.0, "z": 0.8 },
+        "Rotation":                   { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+        "ObjectName":                 "_spawnCasing",
+        "Position":                   { "x": -0.2, "y": 0.0, "z": -1 },
+        "Rotation":                   { "x": 0, "y": 180, "z": 0 },
+      },     
+    ],
+
+    "Deserializer":{
+      "GameObject|m_HE_50Cal_112_Base": {
+        "UnityEngine.Transform": { "localPosition": { "x": 0, "y": -0.5, "z": 0 } },
+        
+        "GameObject|_gimbalBase": {
+          "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.22, "z": 0 } },
+
+          "GameObject|_gimbalElev": {
+            "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.43, "z": 0 } },
+            
+            "GameObject|cylinder":{
+              "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.01, "z": -0.08 } },
+              
+              "Spinner":{
+                "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+                "m_RotationAxis": { "axis": 2 },        // Dictates the spinner's rotation axis. 
+                                                        // 2 = Z axis
+                "m_SpinUpTime": 0.5,  
+                "m_Speed": 0.4,
+              }
+            },
+
+            "GameObject|_barrel": {
+              "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.2, "z": 0.85 } },
+              
+              "GameObject|_smoke": {
+                "ParticleSystem": {
+                  "startSize": 0.6,
+                  "duration": 1.5,
+                  "emissionRate": 100,
+                }
+              },
+              // Duplicate the smoke object that moduleDrill will "take" so the smoke doesn't disappear, then attach the duplicate to CannonBarrel
+              "Duplicate|_smoke":{
+                "UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0.2, "z": 0.7 } }
+              },
+              "CannonBarrel": { "particles": [ "_smoke_copy/ParticleSystem." ], }
+
+            }
+          }
+        }
+
+      },
+      /********** ModuleWeapon **********/
+      "ModuleWeapon":{
+        "m_RotateSpeed":          80.0,           // Dictates the speed of the gun's rotation whenever it aims at a target.
+        "m_FireSFXType":          4,              // Dictates the sound used when firing
+                                                  // 4  = GSO 3-Pounder Cannon
+                                                  // 6  = GSO Megaton Cannon
+                                                  // 64 = GSO Gigaton Cannon
+                                                  // 77 = GSO Big Bertha Cannon
+      },
+
+      /********** ModuleWeaponGun **********/
+      "ModuleWeaponGun":{
+        "m_ShotCooldown":         0.15,         // The length of paus between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct":  0.03,         // Dictates how random the length of pause between shots.
+
+        "m_BurstShotCount":       6,            // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                // A non-zero, integer value will dictate the number of shots fired.
+                                                // The pause uses the value in m_BurstCooldown
+
+        "m_BurstCooldown": 4.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                // This is automatically disabled when m_BurstShotCount is set to 0
+
+        "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                // Only applies when m_BurstShotCount is NOT set to 0
+      },
+
+      // Use the GSO 3-Pounder Cannon FireData
+      "Reference|7/FireData.":{
+        "m_MuzzleVelocity":       100.0,        // Dictates the projectile's speed. The higher the value, the faster it will travel.
+        "m_KickbackStrength":     80.0,         // Dictates the strength of the recoil when firing the gun
+        "m_BulletSprayVariance":  0.05,         // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+        
+        "Instantiate|m_BulletPrefab": {
+          "WeaponRound": { 
+            "m_Damage":           330           // Self-explanatory; dictates the amount of damage
+          },
+          // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+          "LineRenderer": {
+            // The color at the start of the trail
+            "startColor": { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+
+            // The color at the end of the trail
+            "endColor":   { "r": 1.0, "g": 0.5, "b": 0.0, "a": 1.0 }
+          }
+  
+        }
+      },
+      "ModuleDrill":{}
+
+    }
+
+
+
+
+
+}

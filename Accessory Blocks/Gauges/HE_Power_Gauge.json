@@ -1,0 +1,72 @@
+
+{
+    "Name": "Hawkeye Power Gauge",
+    "Description": "A power gauge from Hawkeye Black Labs. It has attachment points on all sides, and the same mass as a Hawkeye One Block, so it can be buried in a larger structure without impact.",
+    "ID": 117009,
+  
+    "Faction": 5,
+    "Category": 5,
+    "Rarity": 1,
+    "Grade": 1,
+    "Price": 2184,
+    "HP": 400,
+    "Mass": 1.5,
+  
+    "Recipe": "52, 56",
+  
+    "IconName": "HE_Power_Gauge.png",
+    "MeshName": "HE_Energy_Meter.obj",
+  
+    "MeshMaterialName": "HE_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": "HE_1x1x1_Collider.obj",
+  
+    "BlockExtents":
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+  
+    "APs": [ 
+      { "x": 0,     "y": 0.5,    "z": 0  },
+      { "x": 0,     "y": -0.5,    "z": 0  },
+      { "x": 0.5,     "y": 0,       "z": 0  },
+      { "x": -0.5,     "y": 0,       "z": 0  },
+      { "x": 0,     "y": 0,       "z": 0.5  },
+      { "x": 0,     "y": 0,       "z": -0.5  }
+    ],
+    
+     "GamePrefabReference": "GSO_Radar_111",
+
+     "SubObjects": [
+        {
+          "SubOverrideName": "m_GSO_Radar_111_Dish",
+          "MakeBoxCollider": true,
+          "DestroyExistingRenderer": true,
+          "MeshName": "HE_Power_Gauge_Spinner.obj",
+          "MeshMaterialName": "GSO_Main",
+          "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+          "SubRotation": { "x": 0, "y": 0, "z": 0 }
+        }
+      ],
+     "JSONBLOCK":{
+        "GameObject|_spindle": {
+            "UnityEngine.transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0 },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+              }
+            },
+            "Spinner": {
+              "m_Speed": 0.2,
+              "Speed": 0.2
+            }
+          },
+        "ModulePowerGauge": {},
+        "ModuleRadar": null
+        }
+  }

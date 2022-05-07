@@ -1,0 +1,407 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Right Sideburn Wing",
+  "Description": "A nice side wing.  \n\nMade from a healthy interweave of Plubonic Alloy and Rugged Fiblar, the Sideburn Wings can tolerate some nasty roadrash incase you need to make an emergency landing. \n\nThey also have built-in guns so that you can shoot down whatever forced you to emergency land.", //You can make multiple lines with \n
+  "ID": 584379, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 4872, // :\
+  "HP": 1850, //Decently durable 
+  "Mass": 4.0,//Decent
+
+  "IconName": "RightAntenna.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 45, 45, 52, 52, 54, 54, 54, 54", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+    // { "x": 0, "y": 0, "z": 0 },
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Fairing APs
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 1 },
+    // { "x": 1.5, "y": 0, "z": 0 },
+    // { "x": 1.5, "y": 0, "z": 1 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 3 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Wing_Tail(122)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,  
+  "DeathExplosionReference":"HE_ArmouredBlock_114",//sized explodo
+  // "KeepReferenceColliders": true,
+ //  "ReferenceOffset": { "x":1.0, "y":2.0, "z":8.0 }, //Shift the subobjects of the block prefab by x, y and z 
+	// // "ReferenceOffset": { "x":1.0, "y":2.0, "z":8 }, //Shift the subobjects of the block prefab by x, y and z 
+ //  "ReferenceScale": { "x": 1.0, "y": 1.0, "z": 1.0 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+	  { //Base
+	   "SubOverrideName": "m_VEN_Wing_Tail_122_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "WingSideburner.obj",
+	    "ColliderMeshName": "WingSideBurnColliderMain.obj",
+	    "MakeBoxCollider": false,
+	    "MeshTextureName": null,
+	    "MeshMaterialName": "HE_Main",
+	    //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+	  },
+    { //Additional Collider
+     "SubOverrideName": "m_VEN_Wing_Tail_122_Base_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "WingSideburner.obj",
+      "ColliderMeshName": "WingSideBurnColliderFin.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //Fairings
+    { //Fairing Left
+     "SubOverrideName": "m_LeftFairing",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BendpointWingFront.obj",
+      "ColliderMeshName": "BendpointWingFront.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Fairing Left
+     "SubOverrideName": "m_LeftFairing2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BendpointWingBack.obj",
+      "ColliderMeshName": "BendpointWingBack.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    // { //Fairing Right
+    //  "SubOverrideName": "m_RightFairing",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "BendpointWingFront.obj",
+    //   "ColliderMeshName": "BendpointWingFront.obj",
+    //   "MakeBoxCollider": false,
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+
+    //Remove etc stuff
+    { //Removal
+     "SubOverrideName": "m_VEN_Wing_Tail_122_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_Pivot_copy/m_VEN_Wing_Tail_122_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":0.25, "y":0.5, "z":0.75 },
+        // "localEulerAngles": { "x":0, "y":0, "z":90 }
+      },
+    },
+
+
+    //Smoketrails
+    "GameObject|SmokeTrail": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":1.5, "y":-0.1, "z":-0.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":90 }
+      },
+      "LineRenderer": {
+        "startWidth": 0.10,
+        "endWidth": 0.02,
+      },
+      "SmokeTrail": {
+        "spread": 0.05,
+        "numberOfPoints": 10,
+        "updateSpeed": 0.07,
+        "riseSpeed": 0.1,
+      },
+    },
+    "Duplicate|SmokeTrail": {
+      "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":1.5, "y":1.1, "z":-0.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":90 }
+      },
+    },
+
+
+    //Begin Main Models
+    "GameObject|m_LeftFairing": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":-0.499, "y":0, "z":1.5 },
+        "localScale": { "x":-1.0, "y":1.0, "z":-1.0 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+    "GameObject|m_RightFairing": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":1.499, "y":0, "z":1.5 },
+        "localScale": { "x":-1.0, "y":1.0, "z":1.0 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+    "GameObject|m_LeftFairing2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":-0.5, "y":0, "z":-0.25 },
+        "localScale": { "x":0.75, "y":1.0, "z":-1.0 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+    "GameObject|m_RightFairing2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":1.5, "y":0, "z":-0.25 },
+        "localScale": { "x":0.75, "y":1.0, "z":1.0 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        }, 
+      },
+    },
+
+    //The Base Model
+    "GameObject|m_VEN_Wing_Tail_122_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|_Pivot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|m_VEN_Wing_Tail_122_Flap": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":0.0, "z":0.0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 } 
+          },
+        },
+      },
+      "Duplicate|_Pivot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":90 } 
+        },
+        "GameObject|m_VEN_Wing_Tail_122_Flap": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":0.0, "z":0.0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 } 
+          },
+        },
+      },
+    },// Back to main layer
+    "Duplicate|m_VEN_Wing_Tail_122_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|_Pivot": null,
+      "GameObject|_Pivot_copy": null,
+    },
+
+    "Reference|BF_Cab_212/_gimbalBase_L/_gimbalElev/_barrel": { //Fixed weapon
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1.4, "y":0.5, "z":1.5 } //x:1.65
+      },
+      "GameObject|_muzzleFlash": {
+        "GameObject|_light": {
+          "UnityEngine.Light": {
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.05,
+              "a": 1.0
+            },
+          },
+        }
+      }
+    },
+
+
+    //Modules begin heres
+    //ADDING ATTACK CRAB
+    "Reference|BF_Cab_212/ModuleWeapon.": { //
+      "m_FireSFXType": " VENLaserNano", //Firing noise
+      // "OnAudioTickUpdate": null,
+      "m_LimitedShootAngle": 25,
+      "m_ShotCooldown": 0.0,
+      "m_RotateSpeed" : 1.0, //SPEED of turret aiming, not homing
+    },
+    "Reference|BF_Cab_212/ModuleWeaponGun.": { //
+      // "m_FireControlMode": "AllAtOnce", //IMPORTANT: enables "BurstGun" mode
+      "m_ShotCooldown": 0.5,
+      "m_SeekingRounds" : false, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+    },
+    "Reference|BF_Cab_212/FireData.": { //
+      "m_MuzzleVelocity": 450, 
+      "m_BulletSprayVariance": 0.01, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0.0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 0, //2.5 - Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {"localScale": { "x":1, "y":1, "z":1.5 }},                                                                
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Bullet", //What damage modifier the weapon does
+          "m_Damage": 10 //9001 - was this before LMAO //Damage for successful projectile contact hit
+        }, 
+        "GameObject|Line": {                    
+          "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":2, "y":2, "z":1, },
+            //"localEulerAngles": { "x":0, "y":0, "z":0, "w":1  }
+          },            
+          "UnityEngine.LineRenderer": { //For some reason TerraTech's lasers are shot out of the gun in reverse
+            "startWidth": 0.0001,
+            "endWidth": 0.3,
+            "numCapVertices": 4,
+            "startColor": {
+              "r": 0.75,
+              "g": 0.75,
+              "b": 0.0,
+              "a": 0.70,
+              "maxColorComponent": 1.0
+            },
+            "endColor": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.1,
+              "a": 0.75,
+              "maxColorComponent": 1.0
+            },
+          }
+        },
+        "LaserProjectile": { //Another one (doot doooooot dododoot)
+          "m_LifeTime": 2.0, //Time before BOOM
+          //Nerfing range
+          "m_DamageType" : "Explosive", //What damage modifier the projectile hit does
+          "m_SeekingRounds" : true,
+          "m_ImpactSFXType" : "Laser",
+        },
+      }
+    },
+
+    //Actual Wing
+    "ModuleWing": {
+      "m_Aerofoils": [
+        {// THIS DOESN'T MOVE
+          "trans": "m_VEN_Wing_Tail_122_Base/_Pivot",
+          "flap": "m_VEN_Wing_Tail_122_Base/_Pivot/Spinner.", //"flapName"
+          //"liftCurve": , //AnimationCurve - F^#k 
+          //UnityEngine "AnimationCurve|liftCurve"
+          "liftStrength": 0.25, //How strong this redirects based on angle of attack
+          // "flapAngleRangeActual": 90, //How far the flap turns in terms of forces
+          // "flapAngleRangeVisual": 90, //How far flap turns visually
+          "flapAngleRangeActual": 0, //How far the flap turns in terms of forces
+          "flapAngleRangeVisual": 0, //How far flap turns visually
+          "flapTurnSpeed": 0 //How fast the flap turns
+        },
+        {// THIS DOESN'T MOVE
+          "trans": "m_VEN_Wing_Tail_122_Base/_Pivot_copy",
+          "flap": "m_VEN_Wing_Tail_122_Base/_Pivot_copy/Spinner.", //"flapName"
+          //"liftCurve": , //AnimationCurve - F^#k 
+          //UnityEngine "AnimationCurve|liftCurve"
+          "liftStrength": 0.1, //How strong this redirects based on angle of attack
+          // "flapAngleRangeActual": 90, //How far the flap turns in terms of forces
+          // "flapAngleRangeVisual": 90, //How far flap turns visually
+          "flapAngleRangeActual": 0, //How far the flap turns in terms of forces
+          "flapAngleRangeVisual": 0, //How far flap turns visually
+          "flapTurnSpeed": 0 //How fast the flap turns
+        }
+      ],
+      "m_AttackAngleDamping": 2000.0,//Weaker than HE Wing Tip
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1,
+      "m_AverageLiftCoeff": 0.0,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.5, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC Wings are a liability compared to other TAC parts, despite their intimidating size.
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+  }
+}
+
+
+
+
+
+
+

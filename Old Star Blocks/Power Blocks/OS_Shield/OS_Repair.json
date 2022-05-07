@@ -1,0 +1,237 @@
+{
+  "Name": "Old Star Repair Bubble Projector",
+  "Description":"This ain't how the Old Star do. The Repair Bubble Projector was created after the design team reverse engineered one from GSO after they bought one as we have zero idea how in the world they work and doing so they are somehow unable to replicate how GSO created their repair bubble and SOMEHOW they broke the bubble that it creates. For some reason there is a cab label on the box . . . .         The design team blames the intern for that one",
+  "ID": 300047, 
+
+  "Faction": 4,
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 29508, 
+  "HP": 2000, 
+  "Mass": 4,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "32, 32, 32, 32, 43, 45, 62, 64, 66", 
+  "IconName": "Repair Gen_icon.png", 
+  "MeshName": "OS_Repair Gen.obj",
+  "ColliderMeshName": "OS_Repair Gen.obj",
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "SupressBoxColliderFallback": true,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 2,
+    "z": 2
+  }, 
+  "APsOnlyAtBottom": false,
+"APs":[
+  {
+    "x": 0,
+    "y": 1,
+    "z": 1.5
+  },
+  {
+    "x": 0,
+    "y": 0,
+    "z": 1.5
+  }
+],
+  
+  "GamePrefabReference": "GC_SamSite_Shield_222", 
+  "KeepReferenceRenderers": true,
+
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 1.0,
+    "z": 0.0
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "_spindle",
+      "MeshName": "OS_Repair Gen_Spinner.obj", 
+      "KeepColliders": false,
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z":  0.65
+      }
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.5,
+        "z":  0.65
+      }
+    },
+    {
+      "SubOverrideName": "FX_Triangles",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222_Rim",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": false,
+      "MeshName": "OS_Repair Gen_bubble.obj",
+      "MeshMaterialName": "Mat_GSO_ShieldRegen_Inner"
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222_Outer",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": false,
+      "MeshName": "OS_Repair Gen_bubble.obj",
+      "MeshMaterialName":"ProjectorCrosshair"
+    //"MeshMaterialName":"Gauntlet_Ring_FX_Center" 
+    }
+    
+    
+  ],
+  "JSONBLOCK": {
+   
+  "GameObject|_spindle": {"Spinner": {
+    "m_Speed": 0.51,
+  "m_RotationAxis": {
+    "axis": 1
+  },
+  "m_SteerAxis": {
+    "axis": 1
+  },
+    
+  "m_SpinUpTime":1
+  }
+},
+"ModuleRadar":{
+ "m_Dish":{
+  "m_Speed":0.095,
+  "m_AutoSpin":false,
+  "m_SpinUpTime":1,
+  "m_CurrentAutoSpeed":1
+  }
+},
+
+    "GameObject|_shield": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.5
+        }
+    },
+      "GameObject|_bubble": {
+        "GameObject|FX_Triangles": {
+          "UnityEngine.ParticleSystem": {
+           "startColor":{
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 0.0,
+              "maxColorComponent": 1
+            }
+
+          }
+
+        },
+        "GameObject|m_GC_SamSite_Shield_222_Rim": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 0.0,
+                "g": 1.0,
+                "b": 0.0,
+                "a": 0.01,
+                "maxColorComponent": 0
+              }
+            }
+          },
+          "GameObject|m_GC_SamSite_Shield_222_Outer": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 0.0,
+                  "g": 1.0,
+                  "b": 0.0,
+                  "a": 0.01,
+                  "maxColorComponent": 0
+                }
+              }
+          }
+        }
+      },
+
+        "GameObject|_bubbleTechTrigger": {
+          "isTrigger": false,
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "isTrigger": false,
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleCollider": {
+          "isTrigger": false,
+          "SphereCollider": {
+            "radius": 0
+          }
+        },
+      "Spinner": {
+        "m_Speed": 0.005
+      }
+    }
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 7,
+      "m_EnergyConsumptionPerSec": 10.0,
+      "m_InitialChargeEnergy": 1000.0,
+      "m_EnergyConsumedPerDamagePoint": 0.0,
+      "m_Healing": true,
+      "m_HealingHeartbeatInterval": 1.5,
+      "m_MaxHealingPerHeartbeat": 400.0,
+      "m_EnergyConsumedPerPointHealed": 1.15,
+      "m_TechTriggerEvent": false,
+      "m_Repulsion": false,
+       "Instantiate|m_ChargingParticlesPrefab": {
+        "startSize": 10,
+        "startColor": {
+          "r": 0.0,
+          "g": 1.0,
+          "b": 0.0,
+          "a": 0.08
+        }
+      }
+    },
+    "ModuleTechController": null,
+    "ModuleVision": null,
+    "ModuleAIBot": null,
+    "ModuleDriveBot": null,
+    "TargetAimer": null
+    /*"ModuleDrill": {
+      "activeColliders": [
+        "_bubbleCollider/SphereCollider."
+      ],
+      "impactDamageMultiplier": 1000.0,
+      "damagePerSecond": 5000.0,
+      "m_SpinOnCollisionDuration": 1
+    }*/
+  }		
+}

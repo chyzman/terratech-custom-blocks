@@ -1,0 +1,65 @@
+{
+  "Name": "GreenTech Compact Battery",
+  "Description": "A small yet heavy battery containing many layers of compacted supercapacitors, with equally dense energy storage.",
+  "ID": 911130, 
+
+  "Faction": 0, 
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 1605, 
+  "HP": 350, 
+  "Mass": 4.25,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "5, 7, 9, 13, 13, 13, 13, 32, 43",  
+  "IconName": "GT_Compact_Battery_Icon.png",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},   
+  "APs": [
+
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 0.5, "y": 0, "z": 0},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 0, "z": 0.5}
+  ],
+  
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GSO_Block_111",
+  
+  "SubObjects": [ 
+    {
+    "SubOverrideName":"GC_Battery_222",
+    "MeshName": "GT_Compact_Battery.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+	"MakeBoxCollider": true
+	},
+	{
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "GT_Compact_Battery_LEDs.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 2100}
+	}
+}

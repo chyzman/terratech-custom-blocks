@@ -1,0 +1,224 @@
+{
+  "Name": "Old Star Chariot Wheel",
+  "Description": "Now this isn't what Old Star will usually use. The Chariot Wheel's main use is when we must defend our facilities. And so we needed to armor up our techs to defend against thieves and/or radiers.  They are slower than our usual wheels but can at least take a hit and carry some weight.",
+  "ID": 300017, 
+
+  "Faction": 4,
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 10000, 
+  "HP": 750, 
+  "Mass": 5.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 2,
+  "EmissionMode": 2,
+  "Recipe": "1, 1, 3, 3, 5, 5, 7, 11, 43, 43", 
+  "IconName": "Chariot_Wheel.png", 
+ // X is right and left, Y is up and down, and Z is forward and backward
+
+ "Cells": [
+	{"x":0,"y":0,"z":0},  {"x":0,"y":1,"z":0 }, {"x":0,"y":2,"z":0 },
+	
+    {"x":1,"y":0,"z":1},  {"x":1,"y":1,"z":1 }, {"x":1,"y":2,"z":1 },
+    {"x":1,"y":0,"z":0},  {"x":1,"y":1,"z":0 }, {"x":1,"y":2,"z":0 },
+    {"x":1,"y":0,"z":2},  {"x":1,"y":1,"z":2 }, {"x":1,"y":2,"z":2 },
+	{"x":1,"y":0,"z":-2}, {"x":1,"y":1,"z":-2}, {"x":1,"y":2,"z":-2},
+	{"x":1,"y":0,"z":-1}, {"x":1,"y":1,"z":-1}, {"x":1,"y":1,"z":-2},
+	{"x":1,"y":3,"z":0},  {"x":1,"y":3,"z":1 }, {"x":1,"y":3,"z":-1}, {"x":1,"y":3,"z": 2}, {"x":1,"y":3,"z":-2},
+	{"x":1,"y":-1,"z":0},  {"x":1,"y":-1,"z":1},  {"x":1,"y":-1,"z":-1}, {"x":1,"y":-1,"z":2},  {"x":1,"y":-1,"z":-2}
+	
+  ],
+
+  "APs": [ 
+    {"x": -0.5, "y": 1, "z": 0},
+	{"x": -0.5, "y": 2, "z": 0}
+  ],
+  
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "GamePrefabReference": "VEN_Wheel_211",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 1,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Base",
+		"MeshName": "Chariot Base Block.obj",
+		"MakeBoxCollider": true,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}, 
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Tyre",
+		"MeshName": "Chariot Wheel.obj",
+		"DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,           
+        "MakeBoxCollider": true,   
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Suspension",
+		"MeshName": "Chariot Strut.obj",
+		"DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,           
+        "MakeBoxCollider": true,   
+		"SubPosition": {
+			"x": 0,
+			"y": 0.15,
+			"z": 0.4
+		},
+		"SubRotation": {
+			"x": 180,
+			"y": -90,
+			"z": 55
+		}
+	},
+	{
+		"SubOverrideName": "Suspension",
+		"SubPosition": {
+			"x": 0.0,
+			"y": 0.7,
+			"z": 0.0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 1.08,
+			"y": 0.6,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Up",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|_tireFrame": {
+			"GameObject|_suspensionColliderLower": {
+			  "UnityEngine.Transform": {
+				"localPosition": { "x":0, "y":0, "z":0 },
+				"localScale": { "x":1, "y":1, "z":1 }
+			  }
+			  /*"UnityEngine.SphereCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 1.05
+			  }*/
+			}
+		  },
+		  "UnityEngine.SphereCollider": {
+			"center": {
+			  "x": 0.0,
+			  "y": 0.0,
+			  "z": 0.0
+			},
+			"radius": 1.35
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 4000,
+		   "torqueCurveMaxRpm": 1000,
+		  "passiveBrakeMaxTorque": 1000,
+		   "reverseBrakeMaxRpm":500,
+		   "basicFrictionTorque": 1000.0,
+		   "fullCompressFrictionTorque": 1000
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 9.0,
+					"gripFactorLat": 7.5
+				}
+			  },
+			"radius": 2.23,
+			"thicknessAngular": 15,
+			"suspensionSpring": 7500.0,
+			"suspensionDamper": 200.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 7.5,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 0.5,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

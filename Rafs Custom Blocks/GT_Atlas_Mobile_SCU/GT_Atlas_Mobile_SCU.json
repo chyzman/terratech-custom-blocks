@@ -1,0 +1,503 @@
+{
+  "Name": "GreenTech Atlas Mobile SCU",
+  "Description": "A large mobile SCU with a range equivalent to its anchored counterparts. The lack of anchor requires tight packing of event horizon stability equipment, making it quite heavy; a burden not every Tech can carry around so easily.",
+  "ID": 911180, 
+
+  "Faction": 1, 
+  "Category": 7, 
+  "Grade": 4, 
+  "Price": 32370,
+  "HP": 8000,
+  "Mass": 40,
+  "CenterOfMass": {"x": 0.5, "y": -1, "z": -0.5},
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "IconName": "GT_Atlas_Mobile_SCU_Icon.png",
+  
+  "Recipe": "52, 52, 52, 52, 56, 56, 56, 56, 65, 66",
+
+  "Cells":
+  [
+    { "x": -1, "y": -1, "z": -2 },
+    { "x": 0, "y": -1, "z": -2 },
+    { "x": 1, "y": -1, "z": -2 },
+    { "x": 2, "y": -1, "z": -2 },
+    { "x": -1, "y": 0, "z": -2 },
+    { "x": 0, "y": 0, "z": -2 },
+    { "x": 1, "y": 0, "z": -2 },
+    { "x": 2, "y": 0, "z": -2 },
+    { "x": -1, "y": 1, "z": -2 },
+    { "x": 0, "y": 1, "z": -2 },
+    { "x": 1, "y": 1, "z": -2 },
+    { "x": 2, "y": 1, "z": -2 },
+    { "x": -1, "y": 2, "z": -2 },
+    { "x": 0, "y": 2, "z": -2 },
+    { "x": 1, "y": 2, "z": -2 },
+    { "x": 2, "y": 2, "z": -2 },
+    { "x": -1, "y": 3, "z": -2 },
+    { "x": 0, "y": 3, "z": -2 },
+    { "x": 1, "y": 3, "z": -2 },
+    { "x": 2, "y": 3, "z": -2 },
+
+    { "x": -1, "y": -1, "z": -1 },
+    { "x": 0, "y": -1, "z": -1 },
+    { "x": 1, "y": -1, "z": -1 },
+    { "x": 2, "y": -1, "z": -1 },
+    { "x": -1, "y": 0, "z": -1 },
+    { "x": 0, "y": 0, "z": -1 },
+    { "x": 1, "y": 0, "z": -1 },
+    { "x": 2, "y": 0, "z": -1 },
+    { "x": -1, "y": 1, "z": -1 },
+    { "x": 0, "y": 1, "z": -1 },
+    { "x": 1, "y": 1, "z": -1 },
+    { "x": 2, "y": 1, "z": -1 },
+    { "x": -1, "y": 2, "z": -1 },
+    { "x": 0, "y": 2, "z": -1 },
+    { "x": 1, "y": 2, "z": -1 },
+    { "x": 2, "y": 2, "z": -1 },
+    { "x": -1, "y": 3, "z": -1 },
+    { "x": 0, "y": 3, "z": -1 },
+    { "x": 1, "y": 3, "z": -1 },
+    { "x": 2, "y": 3, "z": -1 },
+
+    { "x": -1, "y": -1, "z": 0 },
+    { "x": 0, "y": -1, "z": 0 },
+    { "x": 1, "y": -1, "z": 0 },
+    { "x": 2, "y": -1, "z": 0 },
+    { "x": -1, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 2, "y": 0, "z": 0 },
+    { "x": -1, "y": 1, "z": 0 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 1, "y": 1, "z": 0 },
+    { "x": 2, "y": 1, "z": 0 },
+    { "x": -1, "y": 2, "z": 0 },
+    { "x": 0, "y": 2, "z": 0 },
+    { "x": 1, "y": 2, "z": 0 },
+    { "x": 2, "y": 2, "z": 0 },
+    { "x": -1, "y": 3, "z": 0 },
+    { "x": 0, "y": 3, "z": 0 },
+    { "x": 1, "y": 3, "z": 0 },
+    { "x": 2, "y": 3, "z": 0 },
+
+    { "x": -1, "y": -1, "z": 1 },
+    { "x": 0, "y": -1, "z": 1 },
+    { "x": 1, "y": -1, "z": 1 },
+    { "x": 2, "y": -1, "z": 1 },
+    { "x": -1, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": 2, "y": 0, "z": 1 },
+    { "x": -1, "y": 1, "z": 1 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 1 },
+    { "x": 2, "y": 1, "z": 1 },
+    { "x": -1, "y": 2, "z": 1 },
+    { "x": 0, "y": 2, "z": 1 },
+    { "x": 1, "y": 2, "z": 1 },
+    { "x": 2, "y": 2, "z": 1 },
+    { "x": -1, "y": 3, "z": 1 },
+    { "x": 0, "y": 3, "z": 1 },
+    { "x": 1, "y": 3, "z": 1 },
+    { "x": 2, "y": 3, "z": 1 }
+],
+  
+  "APs": [ 
+    {"x": -1.5, "y": -1, "z": -2},
+    {"x": -1.5, "y": -1, "z": -1},
+    {"x": 2.5, "y": -1, "z": -2},
+    {"x": 2.5, "y": -1, "z": -1},
+    {"x": -1.5, "y": -1, "z": 0},
+    {"x": -1.5, "y": -1, "z": 1},
+    {"x": 2.5, "y": -1, "z": 0},
+    {"x": 2.5, "y": -1, "z": 1},
+    {"x": -1, "y": -1, "z": -2.5},
+    {"x": -1, "y": -1, "z": 1.5},
+    {"x": 0, "y": -1, "z": -2.5},
+    {"x": 0, "y": -1, "z": 1.5},
+    {"x": 1, "y": -1, "z": -2.5},
+    {"x": 1, "y": -1, "z": 1.5},
+    {"x": 2, "y": -1, "z": -2.5},
+    {"x": 2, "y": -1, "z": 1.5},
+    {"x": -1, "y": -1.5, "z": -1},
+    {"x": 0, "y": -1.5, "z": -2},
+    {"x": 0, "y": -1.5, "z": -1},
+    {"x": -1, "y": -1.5, "z": 0},
+    {"x": 0, "y": -1.5, "z": 0},
+    {"x": 0, "y": -1.5, "z": 1},
+    {"x": 1, "y": -1.5, "z": -2},
+    {"x": 1, "y": -1.5, "z": -1},
+    {"x": 2, "y": -1.5, "z": -1},
+    {"x": 1, "y": -1.5, "z": 0},
+    {"x": 1, "y": -1.5, "z": 1},
+    {"x": 2, "y": -1.5, "z": 0}
+  ],
+
+  "GamePrefabReference": "VEN_MobileSCU_221",
+
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+	
+	"SubObjects": [
+	{
+    "SubOverrideName":"VEN_Mobile SCU_221",
+    "MeshName": "GT_Atlas_Mobile_SCU_Base.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 0.5, "y": -0.8, "z": -0.5 },
+    "SubScale": { "x": 4, "y": 1.4, "z": 4 }
+  },
+  {
+    "SubOverrideName":"m_MSCU_Base_Singularity",
+    "MeshName": "GT_Atlas_Mobile_SCU_Sphere.obj",
+    "ColliderMeshName": "GT_Atlas_Mobile_SCU_Sphere.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName": "m_Ven_MACU_Ray_04",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_Ven_MACU_Ray_03",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_Ven_MACU_Ray_02",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_Ven_MACU_Ray_01",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "LED4",
+    "MeshName": "GT_Atlas_Mobile_SCU_LED4.obj"
+  },
+  {
+    "SubOverrideName": "LED3",
+    "MeshName": "GT_Atlas_Mobile_SCU_LED3.obj"
+  },
+  {
+    "SubOverrideName": "LED2",
+    "MeshName": "GT_Atlas_Mobile_SCU_LED2.obj"
+  },
+  {
+    "SubOverrideName": "LED1",
+    "MeshName": "GT_Atlas_Mobile_SCU_LED1.obj"
+  },
+  {
+    "SubOverrideName": "LED0",
+    "MeshName": "GT_Atlas_Mobile_SCU_LED0.obj"
+  }
+	],
+	
+	"Deserializer":{
+    "GameObject|Geometry": {
+      "GameObject|VEN_Mobile SCU_221": {
+        "GameObject|m_MSCU_Base_Singularity": {
+          "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+             },
+             "UnityEngine.ParticleSystem": {
+              "rotationOverLifetime": {
+                "enabled": true,
+                "SeparateAxis":false,
+                "z": { "constantMin": -3, "constantMax": 3 }
+              },
+            "startDelay": 6,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 4.0,
+            "startSpeed": 0,
+            "startSize": 3,
+            "startLifetime": 4.0,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000,
+            "simulationSpace": 0,
+            "scalingMode": 1,
+            "randomSeed": 0
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "alignment": 0,
+              "renderMode": 0,
+              "sortMode": 0,
+              "lengthScale": 2.0,
+              "velocityScale": 0.0,
+              "cameraVelocityScale": 0.0,
+              "normalDirection": 1.0,
+              "shadowBias": 0.0,
+              "sortingFudge": 0.0,
+              "minParticleSize": 0.0,
+              "maxParticleSize": 1.0,
+              "material": "FX_Teleporter_Spiral"
+            }
+          }
+        }
+      }
+    },
+    "ModuleItemHolder": {
+      "PickupPriority": 20,
+      "HasPickupContentionPeriod": true,
+      "PickupContentionPeriod": 4.0
+     /*  "m_AcceptFlags": 1,
+      "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] } ] */
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamColumnRadius": 40.0,
+      "m_OverrideDropAfterMinTime": 3.0,
+      "m_PrePickupPeriod": 4.0,
+      "m_PickupAfterMinInterval": 2.0,
+      "m_HandoverAfterMinInterval": 2.0
+    },
+    "ModuleItemPickup": {
+      "m_PickupRange": 60.0
+    },
+    "ModuleHeart": {
+      "m_SetupTime": 6,
+      "m_DamageFactorInterruption": 0.1,
+      "m_EjectSpeedBase": 15.0,
+      "m_EjectSpeedVariance": 5.0,
+      "m_EjectSpin": 10.0,
+      "m_EventHorizonRadius": 3,
+      "m_MinTimeBeforeDrop": 3.0,
+      "m_StartShrinkingRadius": 20.0
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/ParticleSystem_GSO_HoverPad/ParticleSystem.",
+          "type": "Attach"
+
+          /*  Attach = 0,
+          Anchor = 1,
+          WeaponCharge = 2,
+          BarrelCharge = 3,
+          WeaponFiring = 4,
+          None = 6 */
+        }
+      ]
+    }
+  } 
+
+  /* "GamePrefabReference": "HE_SCU_343",
+
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 2.5,
+    "y": 0.377,
+    "z": 2.5
+  },
+  "ReferenceScale": {
+    "x": 1.333,
+    "y": 1.333,
+    "z": 1.333
+  },
+	
+	"SubObjects": [
+	{
+    "SubOverrideName":"m_HE_SCU_343_Base",
+    "MeshName": "GT_Atlas_Mobile_SCU_Base.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName":"m_HE_SCU_343_Ray_1",
+    "MeshName": "GT_Atlas_Mobile_SCU_Ray_1.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+  "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName":"m_HE_SCU_343_Ray_2",
+    "MeshName": "GT_Atlas_Mobile_SCU_Ray_2.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+  "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName":"m_HE_SCU_343_Ray_3",
+    "MeshName": "GT_Atlas_Mobile_SCU_Ray_3.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+  "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName":"m_HE_SCU_343_Ray_4",
+    "MeshName": "GT_Atlas_Mobile_SCU_Ray_4.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png",
+  "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName":"m_HE_SCU_343_Sphere",
+    "MeshName": "GT_Atlas_Mobile_SCU_Sphere.obj",
+    "ColliderMeshName": "GT_Atlas_Mobile_SCU_Sphere.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+  },
+  {
+    "SubOverrideName":"_energyGauge",
+    "MeshName": "GT_Atlas_Mobile_SCU_LEDs.obj",
+    "MeshMaterialName": "LED_Heart_Block"
+  }
+	],
+	
+	"Deserializer":{
+    "GameObject|_anchor":null,
+    "ModuleAnchor": null,
+    "GameObject|FX_HE_SCU_343_Active": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.5,
+          "y": 0,
+          "z": 2.5
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "GameObject|Singularity_EventHorizon": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "UnityEngine.ParticleSystem": {
+         },
+         "UnityEngine.ParticleSystemRenderer": {
+        },
+        "GameObject|Initialisation_Singularity_Distortion": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+           "UnityEngine.ParticleSystem": {
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+         }
+        },
+        "GameObject|Initialisation_Burst": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+           "UnityEngine.ParticleSystem": {
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+         } 
+        },
+        "GameObject|Singularity_Geometry": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+           "UnityEngine.ParticleSystem": {
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+         } 
+        },
+        "GameObject|Singularity_Distortion": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+            "UnityEngine.ParticleSystem": {
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+         } 
+        }
+      }
+    },
+    "ModuleItemHolder": {
+    },
+    "ModuleItemHolderBeam": {
+    },
+    "ModuleItemPickup": {
+    },
+    "ModuleHeart": {
+      "m_EventHorizonRadius": 2,
+      "m_HasAnchor": true
+    }
+  }  */
+
+}

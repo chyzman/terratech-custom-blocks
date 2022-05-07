@@ -1,0 +1,386 @@
+{
+	"Name": "Better Future Implosion Repair",
+	"Description": "Similar to the shield, the repair bubble consumes a lot of energy to very quickly repair techs, but has a smaller radius and higher power draw when active", //You can make multiple lines with \n
+	"ID": 1700029, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 111006,
+	"HP": 1250,
+	"Mass": 10,
+
+	"IconName": "Implosion Repair.png",
+
+	"MeshName": "Implosion_repair.obj", //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "46, 46, 46, 46, 46, 46, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 59, 59, 59, 59, 59, 59, 66, 66" 	,
+	
+	
+	
+	"ColliderMeshName":"Implosion_repair.obj",
+	
+	
+	
+	"MeshMaterialName": "BF_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },	
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 4 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 4 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 4 },	
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },
+		{ "x": 0, "y": 4, "z": 3 },
+		{ "x": 0, "y": 4, "z": 4 },		
+        { "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+		{ "x": 1, "y": 4, "z": 3 },
+		{ "x": 1, "y": 4, "z": 4 },
+        { "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+		{ "x": 2, "y": 4, "z": 3 },
+		{ "x": 2, "y": 4, "z": 4 },
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 3, "y": 4, "z": 1 },
+		{ "x": 3, "y": 4, "z": 2 },
+		{ "x": 3, "y": 4, "z": 3 },
+		{ "x": 3, "y": 4, "z": 4 },	
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+		{ "x": 4, "y": 4, "z": 3 },
+		{ "x": 4, "y": 4, "z": 4 },
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 }, 
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 }, 
+
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": 4.5 },
+		{ "x": 0, "y": 4, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": -0.5 } 
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "GC_SamSite_Shield_222", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 2.5,
+    "y": 1.5,
+    "z": 1.5
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "_spindle",
+      "MeshName": "Implosion_repair_spinner.obj", 
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 2.0,
+        "y": 2,
+        "z": 2.0
+      }
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FX_Triangles",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222_Rim",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": false,
+      "MeshName": "Implosion_shield_bubble.obj"
+      
+    },
+    {
+      "SubOverrideName": "m_GC_SamSite_Shield_222_Outer",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "DestroyExistingRenderer": false,
+      "MeshName": "Implosion_shield_bubble.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+    
+  ],
+  "Deserializer": {
+   
+  "GameObject|_spindle": {"Spinner": {
+    "m_Speed": 0.1,
+  "m_RotationAxis": {
+    "axis": 1
+  },
+  "m_SteerAxis": {
+    "axis": 1
+  },
+    
+  "m_SpinUpTime":1
+  }
+},
+"ModuleRadar":{
+ "m_Dish":{
+  "m_Speed":0.1,
+  "m_AutoSpin":true,
+  "m_SpinUpTime":1,
+  "m_CurrentAutoSpeed":1
+  }
+},
+
+    "GameObject|_shield": {
+      "GameObject|_bubble": {
+        "GameObject|FX_Triangles": {
+          "UnityEngine.ParticleSystem": {
+           /*"startColor":{
+              "r": 0.0,
+              "g": 1.0,
+              "b": 0.0,
+              "a": 1.0,
+            }*/
+          }
+
+        },
+        "GameObject|m_GC_SamSite_Shield_222_Rim": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 0.0,
+                "g": 0.7,
+                "b": 0.0,
+                "a": 0.15,
+                "maxColorComponent": 0
+              }
+            }
+          },
+          "GameObject|m_GC_SamSite_Shield_222_Outer": {
+            "UnityEngine.MeshRenderer": {
+                "material": {
+                  "color": {
+                    "r": 0.0,
+                    "g": 1.0,
+                    "b": 0.0,
+                    "a": 0.1
+                  },
+                  "mainTexture": "shieldbarrier.png"
+                }
+          }
+        }
+      },
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            //"isTrigger": true
+            "radius": 0
+          }
+        },
+      "Spinner": {
+        "m_Speed": 0.1,
+		
+  "m_AutoSpin":true,
+      }
+    }
+    },
+    /* "Reference|_C_BLOCK911029/FXGSOShieldCharge(Clone)": {
+      "GameObject|FXGSOShieldCharge 1": {
+        "UnityEngine.ParticleSystem": {
+          "startSize": 6,
+          "startColor": {
+            "r": 0.0,
+            "g": 1.0,
+            "b": 0.0,
+            "a": 0.08
+          }
+        }
+      }
+    }, */
+    "ModuleShieldGenerator": {
+    "m_InterpTimeOn": 2.5,
+    "m_InterpTimeOff": 2.5,
+    "m_Radius": 20,
+	"m_Healing": true,
+    "m_HealingHeartbeatInterval": 0.5,
+    "m_MaxHealingPerHeartbeat": 500.0,
+    "m_EnergyConsumedPerPointHealed": 4,
+      "m_TechTriggerEvent": false,
+      "m_Repulsion": false,
+    "m_EnergyConsumptionPerSec": 350,
+    "m_InitialChargeEnergy": 25000.0,
+    "m_EnergyConsumedPerDamagePoint": 0,
+    "m_PowerUpDelay": 5, //8
+    "m_TechTriggerEvent": null,
+     /* "Instantiate|m_ChargingParticlesPrefab": {
+      "startSize": 10,
+      "startColor": {
+        "r": 0.4,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.08
+      },
+    } */
+  },
+  "ModuleTechController": null,
+  "ModuleVision": null,
+  "ModuleAIBot": null,
+  "ModuleDriveBot": null,
+  "TargetAimer": null
+  /*"ModuleDrill": {
+    "activeColliders": ["_bubbleCollider/SphereCollider."],
+    "m_Blade": "_bubbleCollider/Transform.gameObject",
+    "m_Vibrations": "_bubbleCollider/Transform.gameObject",
+    "impactDamageMultiplier": 1000.0,
+    "damagePerSecond": 5000.0,
+    "m_SpinOnCollisionDuration": 1
+  }*/
+  }	
+	}

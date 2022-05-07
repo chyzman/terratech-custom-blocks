@@ -1,0 +1,622 @@
+
+{
+  "Name": "TAC Substructure Anchor",
+  "Description": "Deploys a massive solid concrete anchor to make a fairly flat platform that you can drive your techs on top of.",
+  "ID": 584420, 
+
+  "Faction": 5,//GSO, because that determines that you can get it in GSO Grade 3 or 4
+  //Changed to hawkeye to allow the mobility to be used
+  "Category": 7,
+  "Grade": 3,
+  "Price": 36609,//Fairly expensive
+  "Rarity": 2,
+  "HP": 15000,//VERY durable, but DON'T overdo the stress!
+  "Mass": 16,//Slightly more heavy
+
+  "IconName": "GroundPlunger.png",
+  "MeshName": null,
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 49, 49, 49, 49, 53, 53, 53, 53, 53, 53, 57, 60",
+
+
+  "MeshTextureName": null,
+
+  // "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 3,
+    "z": 2
+  },
+
+  "APs": [
+    //Side APs
+    { "x": -0.5, "y": 1, "z": 0 },
+    { "x": -0.5, "y": 1, "z": 1 },
+    { "x": 1.5, "y": 1, "z": 0 },
+    { "x": 1.5, "y": 1, "z": 1 },
+  ],
+
+
+  "GamePrefabReference": "HE_Refinery(232)", 
+  "KeepReferenceRenderers": false,
+  // "KeepReferenceColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Base",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACSubstructureAnchorBase.obj",
+      "ColliderMeshName": "TACSubstructureAnchorBase.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "_anchor/GSOAnchorFixed/AnchorExtrudeFollow/m_HE_Block_111",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACSubstructureAnchorConcrete2.obj",
+      "ColliderMeshName": "TACSubstructureAnchorConcrete2.obj",
+      // "MeshMaterialName": "HE_Main",
+      
+      "MeshTextureName":"ConcreteBaseTexture.png"
+    },
+
+    {
+      "SubOverrideName": "m_PistonDown",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACSubstructureAnchorMovingPart.obj",
+      "ColliderMeshName": "TACSubstructureAnchorMovingPart.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {
+      "SubOverrideName": "GSO_Anchor",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      // "MeshMaterialName": "HE_Main",
+    },
+
+    //GreebleLocator
+    {
+      "SubOverrideName": "AnchorExtrudeFollow",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACGreebleGear.obj",
+      // "ColliderMeshName": "TACGreebleGear.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_5_B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_5_A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_4_A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_4_B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_4_C",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_3_A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_3_B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_3_C",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_2_A",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_2_B",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "m_HE_Refinery_232_Shutter_2_C",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+    },
+  ],
+
+  "JSONBLOCK": {
+
+    "GameObject|b_GeometryOverrideBase": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":1.0, "z":0.5 }
+      },
+    },
+    "GameObject|Geometry": {
+      "GameObject|HE_Refinery_232": {
+        "GameObject|m_HE_Refinery_232_Piston": {
+        },
+        "GameObject|m_HE_Refinery_232_Shutter_5_B": {
+          "GameObject|m_HE_Refinery_232_Shutter_5_A": {
+          }
+        },
+        "GameObject|m_HE_Refinery_232_Shutter_4_A": {
+          "GameObject|m_HE_Refinery_232_Shutter_4_B": {
+            "GameObject|m_HE_Refinery_232_Shutter_4_C": {
+            }
+          }
+        },
+        "GameObject|m_HE_Refinery_232_Shutter_3_A": {
+          "GameObject|m_HE_Refinery_232_Shutter_3_B": {
+            "GameObject|m_HE_Refinery_232_Shutter_3_C": {
+            }
+          }
+        },
+        "GameObject|m_HE_Refinery_232_Shutter_2_A": {
+          "GameObject|m_HE_Refinery_232_Shutter_2_B": {
+            "GameObject|m_HE_Refinery_232_Shutter_2_C": {
+            }
+          }
+        },
+        "GameObject|m_HE_Refinery_232_Shutter_1_A": {
+          "GameObject|m_PistonDown": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localPosition": { "x":-0.5, "y":0.2, "z":-0.5 }
+            },
+          },
+          "GameObject|m_HE_Refinery_232_Shutter_1_B": {
+            "GameObject|m_HE_Refinery_232_Shutter_1_C": {
+
+            }
+          }
+        },
+        "GameObject|m_HE_Refinery_232_Hatch": {
+        },
+        "GameObject|m_HE_Refinery_232_Base": {
+          "FollowTransform": {//follow the extending animator
+            "m_TransformToFollow": "/b_GeometryOverrideBase",
+            "m_FollowOrientation": false,
+          },
+        },
+        "GameObject|m_HE_Refinery_232_Arrow_On": {
+        },
+        "GameObject|m_HE_Refinery_232_Arrow_Off": {
+        },
+        "GameObject|m_HE_Refinery_232_Antenna_B": {
+        },
+        "GameObject|m_HE_Refinery_232_Antenna_A": {
+        },
+        "GameObject|BeamHolderDummyOutput": {
+        },
+        "GameObject|BeamHolderDummyInput": {
+        }
+      }
+    },
+    "GameObject|AntennaFx": {
+    },
+
+    // "GameObject|TranslatorMain": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localPosition": { "x":0.5, "y":-2.0, "z":0.5 }
+    //   },
+    //   "FollowSuspension": {//Follow the animation
+    //     "m_TargetWheelTrans": "/Geometry/HE_Refinery_232/m_HE_Refinery_232_Shutter_1_A/m_HE_Refinery_232_Shutter_1_B/m_HE_Refinery_232_Shutter_1_C",
+    //     // "m_TargetUpTrans": "/SuspensionUp2",
+    //     "m_KeepOriginalRotationOffset": false,
+    //     "m_ScaleToMatchDistance": false,
+    //     // "m_OriginalDistance": 0.25,
+    //   },
+    // },
+
+
+    "GameObject|TranslatorFlat": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0, "y":1, "z":0.1 },
+        "localPosition": { "x":0.5, "y":-2.0, "z":0.5 }
+      },
+      "GameObject|Translator": {
+        "FollowTransform": {//follow the extending animator
+          "m_TransformToFollow": "/TranslatorMain",
+          "m_FollowOrientation": true,
+        },
+        "FollowSuspension": {//Follow the animation
+          "m_TargetWheelTrans": "/Geometry/HE_Refinery_232/m_HE_Refinery_232_Shutter_1_A/m_HE_Refinery_232_Shutter_1_B/m_HE_Refinery_232_Shutter_1_C",
+          // "m_TargetUpTrans": "/SuspensionUp2",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.25,
+        },
+        "UnityEngine.Transform": {
+          // "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0}
+        },
+        "GameObject|b_AnchorExtrude": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":-4.5}
+          },
+        },
+      },
+    },
+
+    // "Reference|HE_Block_Alt_01_111/m_HE_Block_111": {//Fake ground
+    //   "UnityEngine.Transform": {
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0.5, "y":-1.0, "z":0.5 },
+    //     "localScale": { "x":2, "y":1, "z":2 }
+    //   },
+    //   "UnityEngine.BoxCollider": { //Give it Grabbable colliders
+    //     "gameObject": {
+    //       "layer": 13//2 //ID 524288Layers:
+    //     },
+    //   },
+    //   // "UnityEngine.MeshRenderer": null,
+    // },
+
+
+
+    "GameObject|_anchor": null,
+    "Reference|GSO_Anchor_Fixed_111/_anchor": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1.0, "y":1, "z":1.0 },
+        "localPosition": { "x":0.5, "y":0, "z":0.5 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 13//2 //ID 524288Layers:
+        },
+      },
+      "GameObject|GSOAnchorFixed": {//Anything in here will only appear when anchored
+        "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+          "gameObject": {
+            "layer": 13//2 //ID 524288Layers:
+          },
+        },
+        "GameObject|AnchorExtrudeFollow": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0}
+          },
+          "FollowTransform": {//follow the extending animator
+            "m_TransformToFollow": "/TranslatorFlat/Translator/b_AnchorExtrude",
+            "m_FollowOrientation": false,
+          },
+          "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+            "gameObject": {
+              "layer": 13//2 //ID 524288Layers:
+            },
+          },
+          "Reference|HE_Block_Alt_01_111/m_HE_Block_111": {//Back
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-19.0, "z":-2.75 },
+              "localScale": { "x":0.75, "y":0.4, "z":0.75 }
+            },
+            "UnityEngine.BoxCollider": null,
+            "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+              "gameObject": {
+                "layer": 13//2 //ID 524288Layers:
+              },
+            },
+            // "UnityEngine.MeshRenderer": null,
+          },
+        },
+        "BlockAnchor": {
+          "m_SnapToleranceUp": 3.0,
+          "m_SnapToleranceDown": 3.0,
+          // "m_SkyAnchorStrength": 1.0,
+          // "m_SkyAnchorDamping": 0.5,
+          // "m_IsSkyAnchor": true,
+          // "m_SkyAnchorSpeed": 100.0,
+          // "m_SkyAnchorRecoilForce": 2.0,
+          // "m_DeathExplosion": null,
+          // "m_Corporation": 7,
+          // "m_Colliders": [],
+          // "m_Beam": null,
+          // "m_BeamParticlesTop": null,
+          // "m_SkyAnchorProxy": null,
+          // "m_AnimTime": 0.0,
+          // "m_AnimSpeed": 0.0,
+          // "m_Damageable": null,
+          // "m_MaterialSwapper": null
+        },
+        
+
+        "GameObject|GSO_Anchor": {
+          "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+            "gameObject": {
+              "layer": 13,//2 //ID 524288Layers:
+              // (0) Default//Collides with normal things
+              // (1) TransparentFX //Bypasses Shields, hits self
+              // (2) Ignore Raycast//Raycasts cannot detect, hits self
+              // (3) 
+              // (4) Water//
+              // (5) UI//No collision
+              // (6) 
+              // (7) 
+              // (8) Tank //Bypasses shields, collides with self
+              // (9) Cosmetic//Collides with nothing.
+              // (10) Bullet //normal projectile
+              // (11) Container //Crates, Collides with nothing.
+              // (12) Shield //Clips through shields, collides with self
+              // (13) Terrain //
+              // (14) TankIgnoreTerrain //Ignores terrain, hits self
+              // (15) Scenery //normal
+              // (16) Pickup //normal
+              // (17) Trigger //No collision
+              // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+              // (19) 3D UI //No collision
+              // (20) WheelSuspension // normal
+              // (21) ShieldBulletFilter //collides with bullets and shields
+              // (22) TerrainCollidingParticles
+              // (23) ShieldTechFilter //collides with Techs
+              // (24) TerrainOnly //idk
+              // (25) RenderImageForPrefab
+              // (26) SceneryCoarse
+              // (27) Landmarks
+              // (28) 
+              // (29) 
+              // (30) 
+              // (31) 
+            },
+          },
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":1, "z":0 }
+          },
+        },
+        "GameObject|_groundPoint": {//the transform in this controls the height
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-1.6, "z":0 }
+          },
+        }
+      }
+    },
+
+
+
+
+
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0,
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 1.0,//Shotguns cannot penentrate this
+    },
+    // "ModuleAnchor": null,
+    "ModuleAnchor": {
+      "m_MaxAngularVelocity": 0.0,
+      "m_MaxTorque": 0.0,
+      "m_BrakeTorque": 1000.0,
+      "m_ForceHorizontal": true,
+      "m_IsSkyAnchor": false,
+      "m_SkyAnchorBeamAttachPoint": null,
+      "m_SkyAnchorFirePoint": null,
+      "m_VisibleAnchorExceptions": 0,
+      "<IsAnchored>k__BackingField": true,
+      "m_APsBlockedByAnchor": [
+        2//Hmmmmmm.....
+      ],
+      "m_HasBeenRestored": false,
+      "IsAnchored": true,
+      "AnchorGeometryActive": true,
+      "MaxTorque": 0.0,
+      "BrakeTorque": 1000.0,
+      "MaxAngVel": 0.0,
+      "IsSkyAnchor": false,
+      "SkyAnchorBeamAttachPoint": null,
+      "SkyAnchorFirePoint": null
+    },
+    "ModuleItemHolderBeam": { //The beams used for holding the item
+      "m_BeamBaseHeight": 1.0,
+      "m_BeamColumnRadius": 1.0,
+      "m_BeamStrength": 2500.0,
+      "m_HeightIncrementScale": 1.0,
+      "m_BeamQuadPrefab": {
+        "transform": {
+          "eulerAngles": {
+            "x": 0.0,
+            "y": 90.0,
+            "z": 0.0
+          },
+        },
+      },
+      "m_ShowParticlesWhenHeld": true,
+      "m_IsOmniDirectionalStack": false,
+      "m_SFXGrabbed": 49,
+      "m_UsePhysicsForHeldItems": false,
+      "m_Pickup": null,
+      "m_OverrideDropAfterMinTime": -1.0,
+      "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      "m_ScaleChanged": false,
+      // "NumStacks": 3
+    },
+    "ModuleItemHolder": { //This is the input port location
+      // "m_OverrideAPConnections": [],
+      "m_CapacityPerStack": 10,
+      "m_Flags": 0,
+      "m_AcceptFlags": 2,
+      "m_HorizontalBoundsRadius": 1.80277562,
+      "m_ContentsModificationIndex": 3,
+      "m_AnonItemTimeStamp": 0,
+      "NumContents": 0,
+      "NumStacks": 3,
+      "IsEmpty": true,
+      "IsFull": false,
+      "TotalCapacityForLimiter": 30,
+      "Acceptance": 2,
+      // "m_OverrideBasePositons": null,
+      "m_OverrideBasePositons": [
+        { "x":100000, "y":100000, "z":100000 }, // Input
+        { "x":100000, "y":100000, "z":100000.0 }, // Output
+        // { "x":2, "y":1.5, "z":0.0 }, // OutputSpawn
+        { "x":100000, "y":100000, "z":100000 }, // InputConsume
+      ],
+    },
+    "ModuleItemConsume": {//We want ONLY the animations, nothing more.
+      "m_Input": {
+        "localPos": { "x":100000, "y":100000, "z":100000 }, // Input
+        // "IsValidPos": false
+      },
+      // "m_Input2": {
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_Input3": {
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      // "m_Input4": { //supports up to 4 inputs for resources, likely for the GSO Static Deli Cannon
+      //   "stack": null,
+      //   "IsValidPos": false
+      // },
+      "m_Consume": {
+        "localPos": { "x":100000, "y":100000, "z":100000  }, // Consume
+        // "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 180.0 },
+        // "IsValidPos": false
+      },
+      "m_Output": { //Where the Output is ejected from
+        "localPos": { "x":100000, "y":100000, "z":100000 },
+        // "IsValidPos": false
+      },
+      // "m_KickOutItem": true, //Is the final item NOT held on a Tractorbeam
+      // "m_KickSpeed": 10.0, //How much YEET a block has when ejected
+      // "m_KickLocator": {
+      //   "localPos": { "x":2, "y":1.5, "z":0.0 },
+      //   // "localEulerAngles": { "x": 315.0, "y": 90.0, "z": 0.0 },
+      // },
+      "m_NeedsToBeAnchored": true, //Disable this for MOBILE BASE
+      "m_DurationMultiplier": 2.0,//5.0, //How long it takes to make block - TAC takes time and effort to craft
+      "m_EnergyMultiplier": 1.0, //How much energy it takes - idk
+      // "m_ManualControl": true, //Can you open up a UI by Right-Clicking?
+      //"m_MenuType": 41, //What the UI looks like (background)
+      "m_CraftingFaction": 0, //Uh-oh - 5 for Hawkeye Corp
+      ////GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+      // "m_UseRecipeBuildTime": false, //If you want to have blocks take time to build based off their own settings
+      // "m_ActivityBlocksInput": false, //Can this grab blocks
+      // "m_OperationBlocksConsume": false, //Is this a Scrapper?
+      // "m_AllowMultItemsOnInput": false, //Can this accept more than one thing at once on the input
+      // "m_AcceptsRecipeDonges": false, //Component fabs
+      // "m_OperatingSFXType": 39, //Running SFX
+      // "m_ConsumeSFXType": 44, //The Thunk noise
+      // "m_ProduceSFXType": 47, //Eject noise
+      // "m_ProduceSFXDelay": 0.6, //delay before Eject noise is played
+      // "m_AddSoldBlocksToShop": false, //idk, prob SCU
+      // "m_HolderBeam": { //How the block holds items - obtained automatically
+      //   "m_BeamBaseHeight": 1.0,
+      //   "m_BeamColumnRadius": 1.0,
+      //   "m_BeamStrength": 250.0,
+      //   "m_HeightIncrementScale": 1.0,
+      //   "m_WaitingParticlesPrefab": null,
+      //   "m_ShowParticlesWhenHeld": true,
+      //   "m_IsOmniDirectionalStack": false,
+      //   "m_SFXGrabbed": 49,
+      //   "m_UsePhysicsForHeldItems": false,
+      //   "m_Pickup": null,
+      //   "m_OverrideDropAfterMinTime": -1.0,
+      //   "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      //   "m_ScaleChanged": false,
+      //   "NumStacks": 3
+      // },
+      "m_ModuleEnergy": null,// Energy impact this has
+      // "m_RecipeOutputs": null, //where it outputs Chunks
+    },
+    // "ModuleAntenna": {
+    //   "m_TransitionDelay": 0.5,
+    //   "m_SFXType": 50,
+    //   // "m_ParticleSystems": [],
+    //   "m_Deployed": false,
+    //   "m_Glowing": false,
+    //   "m_Transitioning": false,
+    //   "m_TransitionTimer": 0.0,
+    //   "m_SFXLoopSyncDelay": 1.2,
+    //   "m_AudioTimer": 0.0,
+    //   "RequestGlow": false,
+    //   "RequestDeploy": false
+    // },
+    // "ModuleRecipeProvider": { //Can't quite touch this just yet... - wait now I can thanks to Aceba1 and Tidgem
+    //   // "m_RecipeListNames": [
+    //   //   {
+    //   //     "name": "gsorefinery",
+    //   //     "inverted": false
+    //   //   }
+    //   // ],
+    //   // "m_RecipeLists": [],
+    //   // "RecipeLists": []
+    // },
+  }
+}
+//   RecipeManager.inst.recipeTable.m_RecipeLists.Add(new List<RecipeTable.Recipe>() {
+//     new RecipeTable.Recipe() { 
+//       m_InputItems = new RecipeTable.Recipe.ItemSpec[] {
+//         new RecipeTable.Recipe.ItemSpec(new ItemTypeInfo(ObjectTypes.Chunk, (int)ChunkTypes.RoditeOre), 1) 
+//       },
+//       m_OutputItems = new RecipeTable.Recipe.ItemSpec[0],
+//       m_OutputType = RecipeTable.Recipe.OutputType.Energy, 
+//       m_EnergyOutput = -1, 
+//       m_BuildTimeSeconds = 16 
+//     },
+//     new RecipeTable.Recipe() { 
+//       m_InputItems = new RecipeTable.Recipe.ItemSpec[] {
+//         new RecipeTable.Recipe.ItemSpec(new ItemTypeInfo(ObjectTypes.Chunk, (int)ChunkTypes.RodiusCapsule), 1) 
+//       },
+//       m_OutputItems = new RecipeTable.Recipe.ItemSpec[0],
+//       m_OutputType = RecipeTable.Recipe.OutputType.Energy, 
+//       m_EnergyOutput = -1, 
+//       m_BuildTimeSeconds = 10 
+//     } 
+//   },
+//   m_Name = "roditefusionreactorloader"
+// }
+// );

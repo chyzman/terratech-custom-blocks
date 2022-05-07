@@ -1,0 +1,110 @@
+{
+   "Name": "Rover Cab",
+  "Description": "Rover cab with High health but is heavy and large", //You can make multiple lines with \n
+  "ID": 620002, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 4, //The desired grade minus one
+  "Price": 500000, //The price is measured by sum of recipe value times 3
+  "HP": 20450, //A GSO one block has 250 health
+  "Mass": 50.0,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+  
+  "IconName": "rover cab.png", 
+  
+  "SupressBoxColliderFallback": true,
+ 
+  "GamePrefabReference": "HE_Character_C_222",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+  "Cells": [ //The grid space to be occupied
+	 { "x": 1, "y": 0, "z": 0 },
+	 { "x": 1, "y": 0, "z": 1 },
+	 { "x": 1, "y": 0, "z": 2 },
+	 { "x": 1, "y": 0, "z": 3 },
+	 { "x": 2, "y": 0, "z": 0 },
+	 { "x": 2, "y": 0, "z": 1 },
+	 { "x": 2, "y": 0, "z": 2 },
+	 { "x": 2, "y": 0, "z": 3 },
+     { "x": 0, "y": 1, "z": 0 },
+     { "x": 1, "y": 1, "z": 0 },
+     { "x": 2, "y": 1, "z": 0 },
+     { "x": 3, "y": 1, "z": 0 },
+     { "x": 1, "y": 1, "z": 1 },
+     { "x": 1, "y": 1, "z": 2 },
+     { "x": 1, "y": 1, "z": 3 },
+     { "x": 2, "y": 1, "z": 1 },
+     { "x": 2, "y": 1, "z": 2 },
+     { "x": 2, "y": 1, "z": 3 },
+     { "x": 3, "y": 1, "z": 1 },
+     { "x": 3, "y": 1, "z": 2 },
+     { "x": 3, "y": 1, "z": 3 },
+     { "x": 0, "y": 1, "z": 1 },
+     { "x": 0, "y": 1, "z": 2 },
+     { "x": 0, "y": 1, "z": 3 },
+     { "x": 0, "y": 2, "z": 1 },
+     { "x": 0, "y": 2, "z": 2 },
+     { "x": 0, "y": 2, "z": 3 },
+     { "x": 0, "y": 2, "z": 0 },
+     { "x": 1, "y": 2, "z": 0 },
+     { "x": 2, "y": 2, "z": 0 },
+	 { "x": 3, "y": 2, "z": 0 },
+     { "x": 1, "y": 2, "z": 1 },
+     { "x": 1, "y": 2, "z": 2 },
+     { "x": 1, "y": 2, "z": 3 },
+     { "x": 2, "y": 2, "z": 1 },
+     { "x": 2, "y": 2, "z": 2 },
+	 { "x": 2, "y": 2, "z": 3 },
+     { "x": 3, "y": 2, "z": 1 },
+     { "x": 3, "y": 2, "z": 2 },
+	 { "x": 3, "y": 2, "z": 3 }
+  ], 
+  "APs": [ 
+    { "x": 1, "y": 0, "z": -0.5 },
+	{ "x": 2, "y": 0, "z": -0.5 },
+	{ "x": 0.5, "y": 0, "z": 0 },
+	{ "x": 0.5, "y": 0, "z": 1 },
+	{ "x": 2.5, "y": 0, "z": 0 },
+	{ "x": 2.5, "y": 0, "z": 1 },
+	{ "x": 1, "y": -0.5, "z": 0 },
+	{ "x": 1, "y": -0.5, "z": 1 },
+	{ "x": 2, "y": -0.5, "z": 0 },
+	{ "x": 2, "y": -0.5, "z": 1 }
+  ],
+   "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_Character_C_222_Base",
+      "MeshName": "rover cab.obj",
+      "ColliderMeshName": "rover cab.obj",
+      "MeshMaterialName": "HE_Main", 
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 1,
+        "y": 0,
+        "z": 0,
+      }
+    },
+   
+   ],
+ }

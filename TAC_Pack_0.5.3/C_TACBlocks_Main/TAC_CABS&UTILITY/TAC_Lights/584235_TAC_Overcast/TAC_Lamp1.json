@@ -1,0 +1,146 @@
+{
+  "Name": "TAC Overcast Flashlight",
+  "Description": "Lights up the area fairly well, like an overcast, but not really. \n\nThis light is small, but it's also EXACTLY half a block!  Amazing right!?",
+  "ID": 584235, 
+
+  "Faction": 5,
+  "Category": 5,
+  "Grade": 3,
+  "Price": 3330,//Fairly expensive
+  "Rarity": 2,
+  "HP": 650,//Far better than average, since this is 1 block and TAC one blocks have 450 HP
+  "Mass": 0.5,
+
+  "IconName": "ArmoredLight.png",
+  "MeshName": null,
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 32, 32, 44, 45, 53, 53, 54,",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [
+    //Bottom AP
+    { "x":0, "y":-0.5, "z":0 },
+  ],
+
+
+  "GamePrefabReference": "GC_Light_Fixed(111)", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_fixedlight",
+      "MakeBoxCollider": true,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACLightAlt.obj",
+      // "ColliderMeshName": "TACRotatingAnchor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Geometry": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-0.25, "z":0 }
+      },
+      "GameObject|aCol": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.BoxCollider": {
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "extents": {
+            "x": 0.5,
+            "y": 0.25,
+            "z": 0.5
+          }
+        }
+      },
+      "GameObject|m_GC_fixedlight": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.5, "y":0.5, "z":0.325 }
+        },
+      }
+    },
+    "GameObject|Lights": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-0.25, "z":0 }
+      },
+      "GameObject|GC_Fixedlight": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.Light": {
+          "spotAngle": 75.0,
+          "color": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          // "colorTemperature": 6570.0,
+          "intensity": 1.0,//2.0
+          "bounceIntensity": 1.0,
+          "shadowCustomResolution": -1,
+          "shadowBias": 0.5,
+          "shadowNormalBias": 1.0,
+          "shadowNearPlane": 0.2,
+          "range": 100.0,
+          "flare": null
+        }
+      }
+    },
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.05,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleLight": {
+      // "m_Lights": [],
+      "m_RotateSpeed": 0.0,
+      // "DelayLightsOnAction": {},
+      // "DelayLightsOffAction": {},
+      "m_TargetAimer": null,
+      "m_Target": null,
+      // "m_DelayedOnOffEvent": {
+      //   "node": null,
+      //   "action": null,
+      //   "IsSet": false,
+      //   "TimeRemaining": 0.0
+      // }
+    },
+  }
+}

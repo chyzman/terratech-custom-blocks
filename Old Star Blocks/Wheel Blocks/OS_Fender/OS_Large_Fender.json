@@ -1,0 +1,105 @@
+{
+  "Name": "Old Star Wheel with Fender",
+  "Description": "This here is how the Old Star do. With Expertly carved hardened Fibron to cover the wheels it should help one get around faster and not worry too much about any rocks or dirt being kicked up",
+  "ID": 300070, 
+
+  "Faction": 4,
+  
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 3084, 
+  "HP": 3500, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 2.0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 1,
+  "EmissionMode": 2,
+  "Recipe":  "3, 3, 3, 3, 7, 7, 9, 9, 43, 43, 57",
+  "IconName": "OS_Large_Fender_icon.png", 
+  "MeshName": "OS_Large_Fender.obj", 
+  "ColliderMeshName": "OS_Large_Fender.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+ 
+"Cells":[
+	//Layer 1
+	{"x": 0,"y": 0,"z": 0},{"x": 0,"y": 0,"z": 1},{"x": 0,"y": 0,"z": 2},{"x": 0,"y": 0,"z": 3},{"x": 0,"y": 0,"z": 4},
+	{"x": 1,"y": 0,"z": 0},{"x": 0,"y": 0,"z": 1},{"x": 0,"y": 0,"z": 2},{"x": 1,"y": 0,"z": 3},{"x": 1,"y": 0,"z": 4},
+	//Layer 2
+	{"x": 0,"y": 1,"z": 0},{"x": 0,"y": 1,"z": 1},{"x": 0,"y": 1,"z": 2},{"x": 0,"y": 1,"z": 3},{"x": 0,"y": 1,"z": 4},
+	{"x": 1,"y": 1,"z": 0},{"x": 0,"y": 1,"z": 1},{"x": 0,"y": 1,"z": 2},{"x": 1,"y": 1,"z": 3},{"x": 1,"y": 1,"z": 4},
+	//Layer 3
+	
+						   {"x": 1,"y": 2,"z": 1},{"x": 1,"y": 2,"z": 2},{"x": 1,"y": 2,"z": 3}
+],
+
+  
+  "APs": [ 
+    {"x":-0.5, "y": 1, "z": 2},{"x": 0.0, "y": 1.5, "z": 2},
+	{"x":-0.5, "y": 0, "z": 2}
+
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Armoured_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "OS_Large_Fender_Wheel.obj",
+		"ColliderMeshName": "OS_Large_Fender_Wheel.obj",
+		"SubRotation": {"x": 0,"y": 0,"z": 0},
+		"SubPosition": {"x": 0,"y": 0,"z": 0}
+	
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {"x": 0,"y": 0,"z": 0},
+		"SubPosition": {"x": 0.7,"y":-0.1,"z": 2.0}		
+	}
+
+  ],
+
+  "JSONBLOCK": {
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 25000,
+		   "torqueCurveMaxRpm": 200,
+		  "passiveBrakeMaxTorque": 50000,
+		   "reverseBrakeMaxRpm": 50,
+		   "basicFrictionTorque": 100,
+		   "fullCompressFrictionTorque": 700
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"radius": 1.3,
+			"thicknessAngular": 20,
+			"suspensionSpring": 30000.0,
+			"suspensionDamper": 1000.0,
+			"maxSuspensionAcceleration": 10.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 10.0,
+			"steerSpeed": 3
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 10.0
+	}
+     }
+}

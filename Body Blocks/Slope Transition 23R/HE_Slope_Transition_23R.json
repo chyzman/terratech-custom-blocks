@@ -1,0 +1,40 @@
+{
+  "Name": "Hawkeye Right Medium-to-Large Slope Transition",
+  "Description": "This Black Labs body block smoothly transitions medium slopes to large.",
+  "ID": 117096,
+
+  "Faction": 5,
+  "Category": 0,
+  "Rarity": 0,
+  "Grade": 1,
+  "Price": 1710,
+  "HP": 3000,
+  "Mass": 3.5,
+
+  "Recipe": "3, 9, 9, 9, 9, 54",
+
+  "IconName": "HE_Slope_Transition_23R.png",
+  "MeshName": "HE_Slope_Transition_23R.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_Slope_Transition_23R_Collider.obj",
+
+  "Cells":[
+
+    {"x": 0, "y": 0, "z": 0},
+    {"x": -1, "y": 0, "z": 0},
+    {"x": -2, "y": 0, "z": 0},
+
+  ],
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": 0.5  },
+    { "x": 0.5,     "y": 0,    "z": 0  },
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": -1,     "y": -0.5,    "z": 0  },
+    { "x": 0,     "y": 0,       "z": -0.5  }
+  ],
+
+   "GamePrefabReference": "HE_ArmouredBlock_113",
+}

@@ -1,0 +1,94 @@
+// Helpful site https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+    "Name": "Tofuu Swift Head",
+    "Description": "It's a cab, visually identical to that of VEN, except it's tofuu!",
+    "ID": 99993,
+
+    "Faction": 6, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 0, //The desired grade minus one
+    "Price": 100, //The price is measured by sum of recipe value times 3
+    "HP": 500,
+    "Mass": 1,
+
+    //"Recipe": "1, 2",
+
+    "IconName": null,
+    "MeshTextureName": "tofuu_tex.png",
+    "MeshGlossTextureName": "tofuu_tex_2.png",
+    "MeshEmissionTextureName": null,
+
+    "SupressBoxColliderFallback": true,
+
+    "BlockExtents":
+    {
+        "x": 1,
+        "y": 1,
+        "z": 1
+    },
+
+    "APs": [
+        {"x": 0,"y": -0.5,"z": 0},
+        {"x": 0,"y": 0,"z": -0.5},
+        {"x": -0.5,"y": 0,"z": 0},
+        {"x": 0.5,"y": 0,"z": 0}
+    ],
+    "GamePrefabReference": "VEN_Cab_111",
+    "KeepReferenceRenderers": false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "SubObjects": [
+        {
+            "SubOverrideName": "m_VEN_Cab_111_Base",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MakeBoxCollider": true,
+            "MeshName": "tofuu_ven.obj",
+            "SubPosition": { "x": 0, "y": 0, "z": 0 },
+            "SubScale": { "x": 1, "y": 1, "z": 1 }
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Lf_Tyre",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_ven_tyre.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Mid_Tyre",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_ven_tyre.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Rt_Tyre",
+            "DestroyExistingRenderer": true,
+            "MeshName": "tofuu_ven_tyre.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Lf",
+            "MeshName": "tofuu_ven_left.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Mid",
+            "MeshName": "tofuu_ven_mid.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Wheel_Rt",
+            "MeshName": "tofuu_ven_right.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Spoiler_Lf",
+            "MeshName": "tofuu_ven_spoiler.obj"
+        }, {
+            "SubOverrideName": "m_VEN_Cab_111_Spoiler_Rt",
+            "MeshName": "tofuu_ven_spoiler.obj"
+        }, {
+            "SubOverrideName": "ViewProp",
+            "DestroyExistingRenderer": true,
+            "SubPosition": { "x": 0, "y": 0.12, "z": 0.3 },
+            "SubScale": { "x": 1, "y": 1, "z": 1 }
+        }
+    ],
+    "JSONBLOCK": {
+        "GameObject|ViewProp": {
+            "Nuterra.BlockInjector.ModuleFirstPerson": { }
+        },
+        "FireData": {
+            "m_BulletPrefab": null
+        }
+    }
+}

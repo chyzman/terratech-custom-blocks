@@ -1,0 +1,75 @@
+{
+	"Name": "Hawkeye Passive All Axis Horizon Gyro",
+	"Description": "A modification of the normal Gyro. This Gyro is ''Passive,'', meaning it will apply Resistance to any rotational movement. it's also ''All Axis,'' meeaning it works in all 3 rotational directions.", //You can make multiple lines with \n
+	"ID": 1700121, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 8094,
+	"HP": 2200,
+	"Mass": 4,
+"IconName": "Gyro HE.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "43, 52, 57, 63" 	
+	
+	
+	
+	
+	
+	, // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"BlockExtents":
+  { "x": 2, "y": 1, "z": 2 },
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": 1.5, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": -0.5 },
+		{ "x": 1, "y": 0, "z": -0.5 },
+		{ "x": -0.5, "y": 0, "z": 1 },
+		{ "x": 1.5, "y": 0, "z": 1 }, 
+		{ "x": 0, "y": 0, "z": 1.5 },
+		{ "x": 1, "y": 0, "z": 1.5 }, 
+		
+	    
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "HE_Gyro_AllAxis_Active_212",
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+	
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"m_HE_Gyro_AllAxis_Active_212_Sphere",
+	"DestroyExistingColliders": true,"DestroyExistingRenderer": true,
+    "MeshName": "HE_Sphere_Passive.obj",
+	"MeshTextureName": "Pulsar Passive.png",
+    
+	"SubPosition":{"x":-0.5,"y":0.5,"z":0}
+
+	}],
+
+	"JSONBLOCK":{
+	 
+	 "ModuleGyro": {
+	  "m_UsePassive": 1,
+	  "m_UseActive":0,
+	  "m_ActiveSpeed": 210.0,
+	  "m_PassiveStrength": {
+       "x": 1260.0,
+       "y": 1260.0,
+       "z": 1260.0,
+      
+      
+    }}}
+	
+	
+	}

@@ -1,0 +1,285 @@
+{
+  "Name": "GreenTech Volt Cannon",
+  "Description": "This weapon builds a charge of plasma with powerful electromagnetic fields and accelerates it very fast.\n The resulting explosion releases an immense amount of energy, with the immediate surroundings reaching sun-like temperatures for a brief moment.",
+  
+  "ID": 911057,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 4,  
+  "Price": 13194,
+  "HP": 2500,
+  "Mass": 7,
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  
+  "Recipe":  "32, 43, 43, 44, 45, 49, 56, 56, 62", 
+  
+  "IconName": "GT_Volt_Cannon_Icon.png",
+  "EmissionMode": 1, 
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+
+  "GamePrefabReference": "HE_RailGun_113", 
+  "KeepRenderers": true,
+  "Keepcolliders": true,
+  "DeathExplosionReference": "GSO_Battery_111",
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_RailGun_113",
+      "MeshName": "GT_Volt_Cannon.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+	 "ColliderMeshName": "GT_Volt_Cannon_Collider_C.obj"
+    },
+    {
+      "ColliderMeshName": "GT_Volt_Cannon_Collider_A.obj"
+    },
+    {
+      "ColliderMeshName": "GT_Volt_Cannon_Collider_B.obj"
+    },
+    {
+      "SubOverrideName": "_muzzleFlash",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+      "SubScale": { "x": 1, "y": 1, "z": 1 }
+    },
+    {
+      "SubOverrideName": "fx_Lightning",
+      "SubPosition": { "x": 0.5, "y": 0.9, "z": 0.5},
+      "SubScale": { "x": 0.2, "y": 0.2, "z": 0.2 }
+    }
+  ],
+
+  "Deserializer": {
+    "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+      "GameObject|Light_Point": null,
+       "UnityEngine.ParticleSystem": {
+        "startColor":{
+          "r": 1.0,
+          "g": 1,
+          "b": 1,
+          "a": 1.0
+        }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+          "material": {
+            "mainTexture": "Thunder_Textures.png"
+          }
+        }
+    },
+    "GameObject|aCol": null,
+    "GameObject|_spindle":{
+      "Spinner": {
+        "m_Speed": 2,
+        "m_RotationAxis": {
+          "axis": 1
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 1,
+        "m_SpinnerSound": "/_spindle/AudioSource.",
+        "m_SpinnerSoundOriginalPitch": 30
+      }
+    },
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {  "rotationLimits": [
+        -0.1,
+        0.1
+      ] },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {  "rotationLimits": [
+          -0.1,
+          0.1
+        ] },
+      "GameObject|_barrel": {
+        "CannonBarrel": {
+          "m_FireSpinner": "/_spindle/Spinner."
+        },
+        "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.5,
+                "y": 1.0,
+                "z": 0.0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+        "GameObject|_muzzleFlash": {
+          "UnityEngine.Light": {
+            "color":{
+              "r": 1.0,
+              "g": 0.8,
+              "b": 0.1,
+              "a": 1.0
+            }
+            //"range": 4.0,
+            //"intensity": 3.0
+          },
+          "GameObject|_muzzleFlashAnim": {
+            "GameObject|m_MuzzleLaserFlash_01": null
+          }
+        }
+       }
+     }
+   },
+   "ParticleManager.ModuleParticleManager": {
+    "Input": [
+      {
+        "m_system": "/fx_Lightning/ParticleSystem.",
+        "type": "WeaponFiring"
+        
+         /*  Attach = 0,
+          Anchor = 1,
+          WeaponCharge = 2,
+          BarrelCharge = 3,
+          WeaponFiring = 4,
+          None = 6 */
+      
+      }
+    ]
+  },
+    "ModuleWeapon": { 
+      "m_FireSFXType": 79 //79
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2.0,
+      "m_SeekingRounds": false,
+      "m_BurstShotCount": 0.0,
+      "m_BurstCooldown": 0.0,
+      "m_CooldownVariancePct": 0.0
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.0,
+      "m_MuzzleVelocity": 200.0,
+      "m_KickbackStrength": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": { 
+          "m_DamageType" : 7, 
+          "m_Damage": 500
+        },
+        "Rigidbody": {
+          "useGravity": false
+        },
+        "Projectile": null,
+        "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.": {
+            "m_LifeTime": 3.0,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "m_RotateWithVelocity": false,
+            "m_CanHaveGravity": false,
+            "m_ImpactSFXType": 6,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_DamageType" : 7,
+                "m_EffectRadius":8,
+                "m_EffectRadiusMaxStrength": 2, 
+                "m_MaxDamageStrength": 1500, 
+                "m_MaxImpulseStrength": 100
+              },
+              "GameObject|FXSmoke": null,
+              "GameObject|FX_Lightning": {
+                "ParticleSystem": {
+                  "startColor":{
+                    "r": 0.8,
+                    "g": 1.0,
+                    "b": 0.5,
+                    "a": 1.0
+                  }
+                }
+              },
+              "GameObject|FX_Shockwave": {
+                "ParticleSystem": {
+                  "startColor":{
+                    "r": 0.5,
+                    "g": 1.0,
+                    "b": 0.3,
+                    "a": 1.0
+                  }
+                }
+              },
+              "GameObject|FX_Sparks": {
+                "ParticleSystem": {
+                  "startColor":{
+                    "r": 0.8,
+                    "g": 1.0,
+                    "b": 0.5,
+                    "a": 1.0
+                  }
+                }
+              }
+            }
+          },
+          
+          "GameObject|FX_SemiCircle": {
+            "UnityEngine.ParticleSystem": {
+              "rotationOverLifetime": {
+                "enabled": true,
+                "z": { "constantMin": -90, "constantMax": 90 }
+              },
+              "startDelay": 0.045,
+              "loop": true,
+              "playOnAwake": true,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+               "emissionRate": 2000,
+               "startSpeed": 1.0,
+               "startSize": 1.5,
+               "startLifetime": 0.03,
+               "gravityModifier": 0.0,
+               "maxParticles": 200,
+               "simulationSpace": 1,
+               "scalingMode": 2,
+               "startColor":{
+                "r": 1.0,
+                "g": 0.6,
+                "b": 0.2,
+                "a": 1.0
+              }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 0,
+            "sortMode": 0,
+            "lengthScale": 2.0,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0,
+            "material": "Thunder_03"
+          }
+        },
+        "GameObject|FX_Distortion": null,
+        "GameObject|Line": {
+          "LineRenderer": null,
+          "UnityEngine.CapsuleCollider": null,
+          "UnityEngine.SphereCollider": {
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.4
+          }
+        } 
+      }
+    }
+  }			
+}

@@ -1,0 +1,144 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+{
+  "Name": "Venture Suction Pad",
+  "Description": "The Suction Pad uses inverted hovering polarity to attract itself to surfaces instead of repelling them; great for keeping a fast Tech grounded at all times!",
+  "ID": 910955, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 4050, 
+  "HP": 250, 
+  "Mass": 0.4,
+
+  "Recipe":  "32, 43, 48, 50", 
+  "IconName": "VEN_Suction_Pad_Icon.png",
+  "SupressBoxColliderFallback": true,  
+ 
+  "BlockExtents": 
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },   
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    }
+  ],
+  "GamePrefabReference": "GSO_HoverJet_111",
+  "KeepReferenceRenderers": true,
+  
+  "SubObjects": [
+     {
+      "SubOverrideName": "m_GSO_Hover_111_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "VEN_Suction_Pad.obj",
+      "MeshMaterialName": "VEN_Main",
+      "ColliderMeshName": "VEN_Suction_Pad_Collider.obj",
+	  "SubPosition": { "x": 0, "y": 0.1, "z": 0},
+	  "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0  
+      }
+	  },
+	  {
+      "SubOverrideName": "m_GSO_Hover_111_Jet",
+	  "DestroyExistingRenderer": true,
+	   "SubPosition": { "x": 0, "y": 0, "z": 0},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0  
+      }
+	  },
+	  {
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": 0, "z": 0},
+	   "SubRotation": {
+        "x": 180,
+        "y": 0, 
+        "z": 0  
+      }
+  },
+  {
+    "SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": 0, "z": 0},
+	   "SubRotation": {
+        "x": 180,
+        "y": 0, 
+        "z": 0  
+      }
+	}
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0.3, "z":0 } 
+      }
+    },
+ "GameObject|m_GSO_Hover_111_Jet": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 } 		
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad": {
+	 "UnityEngine.ParticleSystem": {
+    "maxParticles": 0
+	 }
+	},
+	"HoverJet": {
+	"forceMax": -800.0,
+	"forceRangeMax": 12,
+	"m_DampingScale": 0.02,
+	"m_MaxClimbDistance": 6,
+	"m_VectoredThrustMaxAngle": -5,
+  "m_VectoredThrustMaxForceAngle": -5
+} 
+}  
+},
+"Duplicate|m_GSO_Hover_111_Jet": {
+"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad": {
+	 "UnityEngine.ParticleSystem": {
+    "playOnAwake": true,
+    "startSize": 0.4,
+	 "duration": 1.5,
+	 "maxParticles": 6,
+	 "startLifetime": 1.5,
+   "emissionRate": 3,
+	 "startColor": { "r": 1.0, "g": 0.25, "b": 0.0, "a": 1.0 }  
+   }
+	},
+	"HoverJet": {
+	"forceMax": 0,
+	"forceRangeMax": 0.1,
+	"m_DampingScale": 0.005,
+	"m_MaxClimbDistance": 0.1,
+	"m_VectoredThrustMaxAngle": 0,
+  "m_VectoredThrustMaxForceAngle": 0
+	}  
+  }
+  },
+  "Duplicate|m_GSO_Hover_111_Jet_copy": {
+    "UnityEngine.Transform": { 
+           "localPosition": { "x":0, "y":0, "z":0 },
+           "localScale": { "x":0, "y":0, "z":0 }  
+         }  
+   }
+}
+}

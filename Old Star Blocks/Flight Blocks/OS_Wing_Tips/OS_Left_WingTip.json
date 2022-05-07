@@ -1,0 +1,89 @@
+{
+  "Name": "Old Star Left Wing Tip",
+  "Description": "Now this is new to Old Star. The Left Wing Tip is the wing used on the left side of a flying tech. Why else would we call it the 'LEFT' wing huh?",
+  "ID": 300156, 
+  "Faction": 4,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3915, 
+  "HP": 500, 
+  "Mass": 2.5,
+  "CenterOfMass": {"x": 2.5, "y": 0.0, "z": 2.4},
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 1,
+  "Recipe":  "7, 7, 11, 43, 52",
+  "IconName": "OS_Left_Wing_Tip.png", 
+  "EmissionMode": 2,
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+  "BlockExtents":{"x": 6,"y": 1, "z": 4},
+  "APs": [ 
+    //sides
+    {"x": 5.5, "y": 0, "z": 3},{"x": 5.5, "y": 0, "z": 2}
+
+  ],
+  
+  "GamePrefabReference":   "VEN_Wing_Expander_Left_413",
+  "ReferenceOffset":        { "x": 4.35, "y": 0.0, "z": 2.65 },
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_Wing_Expander_Left_413_Base",
+      "MeshName": "OS_Left_Wing_Tip.obj",
+      "ColliderMeshName": "OS_Left_Wing_Tip.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },  
+    {
+    "SubOverrideName":     "_Pivot",
+    "SubPosition":         { "x": 1,  "y": 0,  "z": 2 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "SubOverrideName": "m_VEN_Wing_Expander_413_Flap",
+      "MeshName": "OS_Left_Wing_Tip_Flap.obj",
+      "ColliderMeshName": "OS_Left_Wing_Tip_Flap.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot": {
+       "GameObject|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": -1.38, "y":0, "z": 0 }
+           }
+        },
+        "Duplicate|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.38, "y":0, "z": 0 }  
+            }
+       }
+    }
+  }
+}

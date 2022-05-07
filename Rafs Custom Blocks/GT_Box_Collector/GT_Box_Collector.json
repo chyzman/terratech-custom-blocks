@@ -1,0 +1,165 @@
+{
+  "Name": "GreenTech Box Collector",
+  "Description": "A boxed-in collector that holds chunks tightly in short beams. Has limited collection arc but very long radius.",
+  "ID": 911079,
+  "Faction": 0, 
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 2484, 
+  "HP": 1500, 
+  "Mass": 10,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 1, 1, 1, 5, 5, 7, 7, 9, 9, 13, 13, 32, 32, 32, 32, 43, 48",  
+  "IconName": "GT_Box_Collector_Icon.png", 
+  
+  "Cells": [ 
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": 1, "y": 1, "z": 0 },
+    { "x": 1, "y": 1, "z": 1 }
+  ],
+  
+   "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 1.5 },
+    { "x": 1, "y": 0, "z": 1.5 },
+    { "x": 0, "y": 1.5, "z": 0 },
+    { "x": 1, "y": 1.5, "z": 0 },
+    { "x": 0, "y": 1.5, "z": 1 },
+    { "x": 1, "y": 1.5, "z": 1 },
+    { "x": 0, "y": 1, "z": -0.5 },
+    { "x": 1, "y": 1, "z": -0.5 },
+    { "x": 0, "y": 1, "z": 1.5 },
+    { "x": 1, "y": 1, "z": 1.5 }
+  ],
+  
+  "GamePrefabReference": "GSO_Tractor_212", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName":"GSO_TracktorPad_4Beams_212",
+      "MeshName": "GT_Box_Collector.obj",
+      
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      }
+    },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": -0.4, "y": 0, "z": 0.5 },
+  "SubScale": { "x": 0.2, "y": 0.8, "z": 1.9 }
+  },
+  /*{
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": 0.5, "z": -0.4 },
+  "SubScale": { "x": 1.8, "y": 1.9, "z": 0.2 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": 0.5, "z": 1.4 },
+  "SubScale": { "x": 1.9, "y": 1.9, "z": 0.2 }
+  },*/
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": -0.4, "z": 0.5 },
+  "SubScale": { "x": 1.8, "y": 0.2, "z": 1.8 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": 1.4, "z": 0.5 },
+  "SubScale": { "x": 1.6, "y": 0.2, "z": 1.6 }
+  }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 4,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0.025, "y": -0.32, "z": 0.15 },
+        { "x": 0.025, "y": -0.32, "z": 0.85 },
+        { "x": 0.825, "y": -0.32, "z": 0.15 },
+        { "x": 0.825, "y": -0.32, "z": 0.85 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.2,
+    "m_BeamStrength": 1000.0,
+    "m_HeightIncrementScale": 0.05
+  },
+  "GameObject|PickUpRadiusForward": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "right": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "up": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      },
+       "forward": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "name": "PickUpRadiusForward"
+     }
+  },
+  "ModuleItemPickup": {
+    "m_PrePickupPeriod": 0.0,
+    "m_PickupAfterMinInterval": 2.0,
+    "m_HandoverAfterMinInterval": 1.0,
+    "m_PickupRange": 40.0,
+    "m_PickUpRadiusFwd": "PickUpRadiusForward",
+    "m_PickUpRadiusAngle": 150.0
+    //"Instantiate|m_RangeIndicatorPrefab":{}
+  }
+  }			
+}

@@ -1,0 +1,483 @@
+{
+  "Name": "GreenTech Leaf Blower",
+  "Description": "Creates a powerful gust, cleaning debris and even pushing techs around if used in larger quantities. Unfortunately, the winds get absorbed by shields.",
+  
+  "ID": 911127,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 2,  
+  "Price": 2370,
+  "HP": 400,
+  "Mass": 1,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 1,
+
+  "Recipe":  "5, 7, 13, 57",
+  "IconName": "GT_Leaf_Blower_Icon.png", 
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5}
+  ],
+
+  "GamePrefabReference": "GSO_ShotgunCombat_111", 
+  "KeepRenderers": true,
+  "Keepcolliders": false,
+  "DeathExplosionReference": "VEN_Prop_Small_111",
+  
+  "SubObjects": [
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.15,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 0.7,
+        "z": 1
+      }
+      },
+    {
+      "SubOverrideName": "Base",
+      "MeshName": "GT_Leaf_Blower_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Roomba",
+      "MeshName": "GT_Leaf_Blower_Roomba.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Barrel",
+      "MeshName": "GT_Leaf_Blower_Barrel.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_GSO_Drill_112_DrillBit",
+      "MeshName": "GT_Leaf_Blower_Fans.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_GSO_ShotgunCombat_111_barrels",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_ShotgunCombat_111_base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_ShotgunCombat_111_mount",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_ShotgunCombat_111_body",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FireData/m_BulletCasingPrefab",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FireDataShotgun/m_BulletCasingPrefab",
+      "DestroyExistingRenderer": true
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|m_GSO_ShotgunCombat_111_base": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+         }
+       },
+       "GameObject|Base": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": -90
+           }
+         }
+        },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "GimbalAimer": { 
+        "enabled": true,
+        "rotationLimits": [
+          -135.0,
+          45.0
+        ]
+      },
+      "Reference|GSO_FixedDrill_112/_spindle": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GameObject|m_GSO_Drill_112_DrillBit": {  
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 90
+            }
+          }
+          },
+          "Spinner": {
+            "m_Speed": 1,
+            "m_RotationAxis": {
+              "axis": 0
+            },
+            "m_SteerAxis": {
+              "axis":0
+            },
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 0.5
+          }  
+      },
+      "GameObject|m_GSO_ShotgunCombat_111_mount": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "GameObject|Roomba": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 90
+             }
+           }
+          },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {  
+          "rotationLimits": [
+          -30,
+          30
+        ]
+      },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "GameObject|m_GSO_ShotgunCombat_111_body":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+         },
+         "GameObject|Barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 90
+             }
+           }
+          },
+      "GameObject|_barrel": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "GameObject|_muzzleFlash": null,
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.6
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+            },
+            "GameObject|_blast": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 1.2
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localScale":{
+                  "x": 3,
+                  "y": 3,
+                  "z": 3
+                 }
+               },
+               "GameObject|FX_Impact_Smoke": {
+                "ParticleSystem": {
+                  "startDelay": 0.0,
+                  "loop": false,
+                  "playOnAwake": false,
+                  "duration": 1.0,
+                  "playbackSpeed": 1.0,
+                  "enableEmission": true,
+                  "emissionRate": 0.0,
+                  "startSpeed": 10.0,
+                  "startSize": 3,
+                "startColor": {
+                  "r": 1,
+                  "g": 0.95,
+                  "b": 0.9,
+                  "a": 0.05
+                },
+                  "startLifetime": 1,
+                  "gravityModifier": 0.0,
+                  "maxParticles": 1000,
+                  "simulationSpace": 1,
+                  "scalingMode": 1
+                },
+                "ParticleSystemRenderer": {
+                  "alignment": 0,
+                  "renderMode": 0,
+                  "sortMode": 0,
+                  "lengthScale": 2.0,
+                  "velocityScale": 0.0,
+                  "cameraVelocityScale": 0.0,
+                  "normalDirection": 1.0,
+                  "shadowBias": 0.0,
+                  "sortingFudge": 0.0,
+                  "minParticleSize": 0.0,
+                  "maxParticleSize": 0.5,
+                  "material": "SnowMedium"
+                }
+               },
+               "GameObject|FX_Impact_Sparks": {
+                "ParticleSystem": {
+                  "startSize": 0.0
+                }
+               },
+               "UnityEngine.ParticleSystem": {
+                "rotationOverLifetime": {
+                  "enabled": true,
+                  "separateAxes":false,
+                  "z": { 
+                    "mode": "TwoCurves",
+                    "curveMultiplier": 1,
+                    "curveMin": {
+                      "keys":
+                      [
+                    { "time": 0.0, "value": -40.0 },
+                    { "time": 0.5, "value": -20.0 },
+                    { "time": 1.0, "value": -15.0 }
+                     ]
+                    },
+                    "curveMax":{
+                      "keys":
+                      [
+                      { "time": 0.0, "value": 20.0 },
+                      { "time": 0.5, "value": 70.0 },
+                      { "time": 1.0, "value": 100.0 }
+                    ]
+                  }
+                   }
+                },
+                "startDelay": 0.0,
+                "loop": false,
+                "playOnAwake": false,
+                "playbackSpeed": 1,
+                "enableEmission": true,
+                "emissionRate": 0.0,
+                "startSpeed": 6,
+                "startSize": 3,
+                "startColor": {
+                  "r": 1,
+                  "g": 0.95,
+                  "b": 0.9,
+                  "a": 0.05
+                },
+                "startLifetime": 1.5,
+                "gravityModifier": 0.0,
+                "maxParticles": 100,
+                "simulationSpace": 0,
+                "scalingMode": 1,
+                "sizeOverLifetime": {
+                  "enabled":true
+                }
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                "alignment": 0,
+                "renderMode": 0,
+                "sortMode": 0,
+                "lengthScale": 6.0,
+                "velocityScale": 0.0,
+                "cameraVelocityScale": 0.0,
+                "normalDirection": 1.0,
+                "shadowBias": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.0,
+                "maxParticleSize": 0.5,
+                "material": "SnowMedium"
+              },
+              "Spinner": {
+                "m_Speed": 2,
+                "m_RotationAxis": {
+                  "axis":2
+                },
+                "m_SteerAxis": {
+                  "axis":2
+                },
+              "m_AutoSpin": false,
+              "m_SpinUpTime": 0
+              }  
+            },
+            "GameObject|_smoke1": {
+               "ParticleSystem": {
+                "startSize": 0
+               }
+            },
+            "GameObject|_smoke2": {
+              "ParticleSystem": {
+               "startSize": 0
+              }
+           },
+           "GameObject|_spawnCasing": null
+
+       }
+       //"Duplicate|_barrel": {}
+     }
+    }
+   }
+  },
+   "Reference|GSO_FixedDrill_112/ModuleDrill.": {
+    "m_FireSFXType": 26,
+   "damagePerSecond": 0
+  },
+    "ModuleWeapon": {
+      "m_RotateSpeed": 120.0, 
+      "m_FireSFXType": 0
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.1,
+      "m_SeekingRounds": true,
+      "m_CooldownVariancePct": 0.5,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_CasingVelocity": 0.0
+    },
+    "FireDataShotgun": {
+      "m_ShotMinRange": 0.5,
+      "m_ShotMaxRange": 15.0,
+      "m_ShotFullDamageRange": 5,
+      "m_ShotArc": 90.0,
+      "m_MinDamagePercent": 0.2,
+      "m_MaxDamagePercent": 1.0,
+      "m_TargetKickbackStrength": 300,
+      "m_TargetKickbackDuration": 0.1,
+      "m_MuzzleVelocity": 60.0,
+      "m_BulletSprayVariance": 0.3,
+      "m_BulletSpin": 0.0,
+      "m_KickbackStrength": 200.0,
+      "m_CasingVelocity": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "ShotgunRound": { 
+          "m_DamageType": 5,
+          "m_Damage": 20
+        }
+      },
+      "m_BulletCasingPrefab": null
+    }
+  }			
+}

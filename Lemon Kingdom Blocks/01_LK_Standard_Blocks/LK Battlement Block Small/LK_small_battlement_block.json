@@ -1,0 +1,38 @@
+/*
+This is a minor basic block meant for closing gaps and as a finish for most LK Techs. Decorative, but tough.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Short Battlement Block",
+    "Description":          "This tough block provides ample cover for your knights whenever they're defending forts or mobile bases. This version is one block long.\n\n\"The knight refers to a type of general-purpose infantry. Its mission is two-fold: to destroy or capture the enemy during wartime, and to provide humanitarian efforts during peacetime.\"\n\n-- Infantry Field Manual",
+
+    "ID": 419016,
+    "Faction": 2,           
+    "Category": 2,          
+    "Grade": 3,         
+
+    "Price": 1536,       
+    "Recipe":  "54, 53, 7",
+	
+    "IconName":                   "LK_small_battlement_block_icon.png",                            
+    "MeshName":                   "LK_small_battlement_block.obj",                                            
+    "ColliderMeshName":           "LK_small_battlement_block_col.obj",    
+    "SupressBoxColliderFallback": false,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    null,
+
+    // Basic Block HP Values
+    "HP": 500,            
+    "Mass": 2.5,             
+
+    "DamageableType": 1,   
+    "Fragility": 0.0,       
+    
+    // Block Dimensions
+    "BlockExtents":     
+    { "x": 1,"y": 1, "z": 1 },
+
+    "APs": [ {"x": 0.0, "y": -0.5, "z": 0.0 } ]
+}

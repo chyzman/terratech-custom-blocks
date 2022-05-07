@@ -1,0 +1,276 @@
+{
+	"Name": "TAC Reinforced Bulkhead Door",
+	"Description": "This door is a masterpiece of TAC engineering. With \"More Hitpoints Than God\", the TAC Bulkhead door is able to hold off an onslaught of attacks and keep your precious cabbies safe and sound from the raging invaders. \n\nThis is just the door by itself, which, without the frame, is quite destructable.  But hey, at least you can use it like a normal door right?", 
+	"ID": 584249, 		
+
+	"Faction": 5,
+	"Category": 5, 
+	"Grade": 3, 
+	"Price": 375630,//Price
+	"HP": 500000, //Huff and puff until ded
+	"Mass": 72,//Heavy, strong, can take waves of EFF HITs
+
+	//"Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 58, 58, 60",//
+
+    "Recipe" : {
+      "44": 80,
+      "45": 120,
+      "52": 100,
+      "53": 80,
+      "54": 120,
+      "58": 20,  
+      "60": 10,
+    }, //It takes all of THIS to make TAC Bulkhead Door Alloy
+
+	"IconName": "IndestructablusMobilius.png", 
+	// "MeshName": null, 
+	// "MeshMaterialName": null, 
+	// "ColliderMeshName": null, 
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 4,
+    "z": 1 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+	"APs": [
+		//Bottom
+		{ "x": 0, "y": -0.5, "z": 0 },
+		{ "x": 1, "y": -0.5, "z": 0 },
+		{ "x": 2, "y": -0.5, "z": 0 },
+		//Top
+		{ "x": 0, "y": 3.5, "z": 0 },
+		{ "x": 1, "y": 3.5, "z": 0 },
+		{ "x": 2, "y": 3.5, "z": 0 },
+		//LSide
+    // { "x": -0.5, "y": 0, "z": 0 },
+		//RSide
+    // { "x": 0.5, "y": 0, "z": 0 },
+	],
+	"GamePrefabReference": "BF_Laser_Scatter(121)", 
+  "KeepReferenceRenderers": false,
+  "KeepReferenceColliders": true,
+	"ReferenceOffset": { "x": 4, "y": 2, "z": 1 },
+
+	"SubObjects": [
+		{
+		  "SubOverrideName": "m_DoorMain",
+		  "MakeBoxCollider": true,
+		  "DestroyExistingRenderer": true,
+		  "MeshName": "TACBulkHeadDoorDoor.obj",
+		  "ColliderMeshName": "TACBulkHeadDoorDoor.obj",
+		  "MeshMaterialName": "HE_Main",
+		},
+	],
+
+	"JSONBLOCK": {
+		"GameObject|BF_Laser_Scatter_121": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":2.5, "y":2.5, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+	    	"localPosition": { "x": 2.875, "y": 1.64, "z": 0 }
+      },
+			"GameObject|m_BF_Laser_Scatter_121_Base": {
+	      "UnityEngine.Transform": {
+	        // "localScale": { "x":1, "y":1, "z":1 },
+	        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+		    	"localPosition": { "x":0, "y":0, "z":0 }
+	      },
+	      // "UnityEngine.BoxCollider": {
+	      //   "center": {
+	      //     "x": 0.0,
+	      //     "y": -1.20,
+	      //     "z": 0.0
+	      //   },
+	      //   "extents": {
+	      //     "x": 1.0,
+	      //     "y": 0.2,
+	      //     "z": 0.6
+	      //   }
+	      // },
+	      "GameObject|m_BF_Laser_Scatter_121_Platform": {
+		      "UnityEngine.Transform": {
+		        "localScale": { "x":0.4, "y":0.4, "z":0.4 },
+		        "localEulerAngles": { "x":0, "y":0, "z":0 },
+			    	"localPosition": { "x": 0, "y": 0, "z": 0 }
+		      },
+		      "GameObject|m_DoorMain": {
+			      "UnityEngine.Transform": {
+			        "localScale": { "x":1, "y":0.925, "z":1 },
+			        "localEulerAngles": { "x":0, "y":0, "z":90 },
+				    	"localPosition": { "x": 0, "y": 0, "z": 0 }
+			      },
+            "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+              "gameObject": {
+                "layer": 8//2 //ID 524288Layers:
+              }, 
+            },
+		      },
+	        "GameObject|m_BF_Laser_Scatter_121_Mount": {
+			      "UnityEngine.Transform": {
+			        "localScale": { "x":1, "y":1, "z":1 },
+			        "localEulerAngles": { "x":0, "y":0, "z":0 },
+				    	"localPosition": { "x": 0, "y": 0, "z": -2 }
+			      },
+	          "GimbalAimer": {
+	            "rotationAxis": 2,
+	            "rotationLimits": [
+	              -45.0,
+	              45.0
+	            ],
+	            "aimClampMaxPercent": 1.0,
+	          },
+	          "GameObject|m_BF_Laser_Scatter_121_Laser": {
+	            "GimbalAimer": {
+	              "rotationAxis": 1,
+	              "rotationLimits": [
+	                -45.0,
+	                45.0
+	              ],
+		            "aimClampMaxPercent": 1.0,
+	            },
+	            "GameObject|_barrel": {
+	              "GameObject|_blast": {
+				          "UnityEngine.ParticleSystem": {
+	                  "main": {
+	                    "m_ParticleSystem": {
+	                      // "startDelay": 0.0,
+	                      // "loop": false,
+	                      // "playOnAwake": false,
+	                      // "duration": 0.5,
+	                      // "playbackSpeed": 1.0,
+	                      // "enableEmission": true,
+	                      // "emissionRate": 0.0,
+	                      "startSpeed": 50.0,
+	                      "startSize": 0.1,
+	                      "startRotation": 0.0,
+	                      "startLifetime": 0.1,
+	                      "gravityModifier": 0.0,
+	                      "maxParticles": 50,
+	                      "simulationSpace": 1,
+	                      "scalingMode": 2,
+	                      "automaticCullingEnabled": false,
+	                      "isPlaying": false,
+	                      "isEmitting": false,
+	                      "isStopped": true,
+	                      "isPaused": false,
+	                      "particleCount": 0,
+	                      "time": 0.5,
+	                      "randomSeed": 3709566478,
+	                      "useAutoRandomSeed": false,
+	                      "proceduralSimulationSupported": false,
+	                    }
+	                  }
+				          },
+	                "ParticleSystemRenderer": {
+	                  "alignment": 0,
+	                  "renderMode": 1,
+	                  "sortMode": 0,
+	                  "lengthScale": 0.1,
+	                  "velocityScale": 0.0,
+	                  "cameraVelocityScale": 0.0,
+	                  "normalDirection": 1.0,
+	                  "shadowBias": 0.0,
+	                  "sortingFudge": 0.0,
+	                  "minParticleSize": 0.0,
+	                  "maxParticleSize": 0.1,
+	                  "maskInteraction": 0,
+	                  "trailMaterial": null,
+	                  "enableGPUInstancing": false,
+	                  "allowRoll": true,
+	                  "mesh": null,
+	                  "meshCount": 0,
+	                  "activeVertexStreamsCount": 5
+	                },
+	              }
+	            }
+	          }
+	        }
+	      }
+	    }
+    },
+
+
+    //Modules Begin Below
+	  "Damageable": {
+	    "m_DamageableType": 1,
+	    //Rock hard armoring. Impact weapons are your only chance of forcing it open.
+      "m_AoEDamageBlockPercent": 10000.0,//0.175 //No Shotgun gets through
+	  },
+    "ModuleWeapon": {
+      "m_AimType": 0,//Will this target "Center of Mass", "Random Blocks", or "Cab in Sight vs Center of Mass"?
+      "m_RotateSpeed": 500.0,//How fast it rotates in degrees per second
+      "m_ChangeTargetInteval": 0.5,//how fast we update aim direction targeting after target is found
+      "m_AutoFire": true,//this doesn't actually do anything
+      "m_PreventShootingTowardsFloor": false,//do we not want to shoot at the ground, AKA strictly AA gun?
+      "m_DeployOnHasTarget": true,//Will this trigger the deploy animation upon target in range?
+      "m_LimitedShootAngle": 90.0,//For the AI, how extreme is the angle that the AI presses "space" for this gun?
+      "m_ShotCooldown": 4.0,//How fast we fire in seconds
+      "m_FireSFXType": "GSOShotgunCombat",//The firing noise
+      //Other random things that cannot be changed below, determined by ingame state:
+      // "m_RemoteShotFiredPending": 0,//How many shots fired from this gun that are still existing
+      // "m_HasTargetInFiringCone": false,//Does AI currently see enemy within "m_LimitedShootAngle"
+      // "FireControl": false,
+      // "AimControl": 0,
+      // "RotateSpeed": 100.0,
+      // "SFXType": 84,
+      // "ShotCooldown": 0.8,
+      // "DisableTargetAimer": true
+    },
+	  "ModuleWeaponGun": {
+	    "m_ShotCooldown": 4.0,
+	    "m_CooldownVariancePct": 0.05,
+	    "m_FireControlMode": 1,
+	    "m_BurstShotCount": 0,
+	    "m_BurstCooldown": 0.0,
+	    "m_ResetBurstOnInterrupt": true,
+	    "m_SeekingRounds": false,
+	    "m_RegisterWarningAfter": 1.0,
+	    "m_ResetFiringTAfterNotFiredFor": 1.0,
+	    "m_HasSpinUpDownAnim": true,
+	    "m_HasCooldownAnim": false,
+	    "m_CanInterruptSpinUpAnim": false,
+	    "m_CanInterruptSpinDownAnim": false,
+	    "m_SpinUpAnimLayerIndex": 0,
+	    "m_DeploySFXType": 85,
+	    "m_FiringData": {
+	      "m_BulletPrefab": {
+	        "m_DamageType": 2,//What kind of damage are we talking about here?
+	        "m_Damage": 85,//Shotgun damage is determined here
+	      },
+	    //   "m_KickbackStrength": 0.0//How much this shoves backwards when firing
+	      //None of the things below have ANY significant impact, from what I can tell...
+	    //   "m_BulletCasingPrefab": null,
+	    //   "m_MuzzleVelocity": 20.0,
+	    //   "m_CasingVelocity": 15.0,
+	    //   "m_BulletSprayVariance": 0.2,
+	    //   "m_BulletSpin": 0.0,
+	    //   "m_CasingEjectVariance": 0.5,
+	    //   "m_CasingEjectSpin": 50.0,
+	    },
+	  },
+	  "FireDataShotgun": {
+	    "m_ShotMinRange": 0.5,// how far until the shotgun effect happens
+	    "m_ShotMaxRange": 4.0,//Max range of the shot
+	    "m_ShotFullDamageRange": 2.0,//Max range until damage falloff occurs
+	    "m_ShotArc": 45.0, //How big the shotgun cone is
+	    "m_MinDamagePercent": 0.1,//lowest "m_Damage" multiplier value for random damage
+	    "m_MaxDamagePercent": 1.0,//highest "m_Damage" multiplier value for random damage
+	    "m_TargetKickbackStrength": 25.0//how much we shove enemy upon successful block hit
+	    //go AWAY trespasser~
+	  },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Popping off in the middle of a fight will really ruin your day
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+	  // "ModuleDetachableLink": {
+	  //   "m_DetachQueued": false,
+	  //   //"m_TechNamer": null
+	  // },
+	}
+}

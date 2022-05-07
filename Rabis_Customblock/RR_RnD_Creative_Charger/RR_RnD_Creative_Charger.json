@@ -1,0 +1,74 @@
+
+{
+    "Name": "R&D Creative Charger",
+    "Description": "This super-fast charger deploys shields and solar panels in seconds! When AI with this charger starts fighting, the charger will automatically disappear.",
+    "ID": 546319,
+  
+    "Faction": 6,
+    "Category": 6,
+    "Rarity": 2,
+    "Grade": 0,
+    "Price": 999999999,
+    "HP": 1,
+    "Mass": 0.1,
+    "Recipe": "32",
+    "DropFromCrates": false, // No change = true
+    "IconName": "RR_RnD_Creative_Charger.png",
+    "MeshTextureName": "RR_RnD_Creative_Charger_1.png",
+    "MeshGlossTextureName": "EXP_2", 
+    "MeshEmissionTextureName": "EXP_3",
+  
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    { "x": 0,    "y": -0.5, "z": 0    }, 
+  ],     
+  "GamePrefabReference": "BF_Radar_111",
+  "KeepReferenceRenderers": false,
+
+  "SubObjects": [
+  {
+    "SubOverrideName": "m_BF_Radar_111_Base",
+    "MeshName": "RR_RnD_Creative_Charger.obj",
+    "SubPosition": { "x": 0,    "y": 0,    "z": 0  },
+    "MakeBoxCollider": true
+  },
+  {
+    "SubOverrideName": "m_BF_Radar_111_Sensor",
+    "MeshName": "RR_RnD_Creative_Charger_spin.obj",
+    "SubPosition": { "x": 0,    "y": 0,    "z": 0  },
+    "MakeBoxCollider": true
+  }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_spindle": {
+      "Spinner": {
+        "m_Speed": 0.17,
+      }
+    },
+  "ModuleEnergy": {
+    "m_OutputPerSecond": 900000000,
+    "m_OutputConditions": 0
+  },
+  "ModuleDetachableLink": {
+  },
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+		"m_BuffPath": [
+			"ModuleShieldGenerator.m_PowerUpDelay",
+			"ModuleShieldGenerator.m_InterpTimeOn",
+			"ModuleEnergy.m_PowerUpDelay"
+		],
+		"m_Strength": [0.0, 0.01, 0.01],
+		"m_AddAfter": [0.0, 0.0, 0.0],
+		"m_NeedsToBeAnchored": [false, false, false]
+	}
+  }
+
+}

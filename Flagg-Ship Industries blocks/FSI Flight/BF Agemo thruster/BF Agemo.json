@@ -1,0 +1,510 @@
+{
+	"Name": "BF 'Agemo' Engine Cluster",
+	"Description": "A very strong engine cluster for the 5x5 series. The Agemo engine, while each bell is weak on it's own, generates enough force to rival the Alpha engine from GeoCorp.", 
+	"ID": 1700135, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Agemo.png",
+	"Faction": 7,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 864231,
+	"HP": 5000,
+	"Mass": 25,
+	"Recipe": "blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick",
+
+	"MeshName": null, 
+	 
+
+	"APs": [ //The location of APs on the block. For use with "Cells"
+    
+    
+    { "x": -0.5, "y": 0, "z": 7 },
+    { "x": -0.5, "y": 4, "z": 7 },
+    { "x": 4.5, "y": 0, "z": 7 },
+    { "x": 4.5, "y": 4, "z": 7 },
+	 { "x": -0.5, "y": 0, "z": 3 },
+    { "x": -0.5, "y": 4, "z": 3 },
+    { "x": 4.5, "y": 0, "z": 3 },
+    { "x": 4.5, "y": 4, "z": 3 },
+	
+	{ "x": 0, "y": -0.5, "z": 7 },
+    { "x": 0, "y": 4.5, "z": 7 },
+    { "x": 4, "y": -0.5, "z": 7 },
+    { "x": 4, "y": 4.5, "z": 7 },
+	 { "x": 0, "y": -0.5, "z": 3 },
+    { "x": 0, "y": 4.5, "z": 3 },
+    { "x": 4, "y": -0.5, "z": 3 },
+    { "x": 4, "y": 4.5, "z": 3 },
+	
+	{ "x": 0, "y": 0, "z": 7.5 },
+    { "x": 0, "y": 4, "z": 7.5 },
+    { "x": 4, "y": 0, "z": 7.5 },
+    { "x": 4, "y": 4, "z": 7.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 5,
+    "y": 5,
+    "z": 8
+  },
+	"GamePrefabReference": "HE_JetEngine_112",
+	
+	
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset":{"x":2,"y":2,"z":4},
+	
+
+	"SubObjects": [ {
+	  "DestroyExistingColliders":true,
+      "SubOverrideName": "Agemo",
+      "MeshName": "BF Agemo.obj",
+      "MeshMaterialName": "BF_Main",
+	  "ColliderMeshName":"BF Agemo.obj",
+      "SubPosition": {
+        "x": 2,
+        "y": 2,
+        "z": 5
+      }
+    }],
+	"JSONBLOCK":
+	{"GameObject|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":1,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},
+	"Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":1.5,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":1.5, "y":0, "z":0.41286 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},
+	"Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":1.5,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":-1.5, "y":0, "z":0.41286 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":2,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":1.5, "y":1.5, "z":0.82572 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":2,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":-1.5, "y":1.5, "z":0.82572 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":2,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":1.5, "y":-1.5, "z":0.82572 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":2,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":-1.5, "y":-1.5, "z":0.82572 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":1.5,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":1.5, "z":0.41286 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},"Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate_Duplicate|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":33500.0,
+	  "m_BurnRate":11.1,
+	  "m_FireRateFalloff":1.5,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":11.1,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":-1.5, "z":0.41286 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},
+	
+	}
+	
+				 
+}

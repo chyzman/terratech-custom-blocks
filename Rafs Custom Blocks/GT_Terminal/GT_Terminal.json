@@ -1,0 +1,117 @@
+{
+  "Name": "GreenTech Payload Terminal",
+  "Description": "A Payload Terminal connected with the vast GreenTech eco-market.",
+  "ID": 911189, 
+
+  "Faction": 1, 
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 34863,
+  "HP": 1400,
+  "Mass": 1.4,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 3,
+
+  "IconName": "GT_Terminal_Icon.png", 
+  
+  
+  "Recipe": "64, 65, 66",
+
+    "BlockExtents":
+  {
+    "x": 1,
+    "y": 2,
+    "z": 1
+  },
+  
+  "APs": [ 
+	{"x": 0,"y": -0.5,"z": 0}
+  ],
+
+  "GamePrefabReference": "VEN_Terminal_111",
+	"ReferenceOffset": { "x": -0.515, "y": -0.08, "z": 0.33},
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [
+	{
+    "SubOverrideName":"m_VEN_Anchor",
+    "MeshName": "GT_Terminal_Anchor.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName":"m_VEN_Terminal_111_Antenna",
+    "MeshName": "GT_Terminal_Antenna.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "MeshName": "GT_Terminal.obj", 
+  "ColliderMeshName": "GT_Terminal_Collider.obj",
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  "SubScale": { "x": -1, "y": 1, "z": 1 }
+  },
+  {
+    "MeshName": "GT_Terminal_Glass.obj",
+    "MeshMaterialName": "HE_Shield_Edge"
+  },
+  {
+    "MeshName": "GT_Terminal_Glass.obj",
+    "MeshMaterialName": "HE_Shield_Edge"
+  }/* ,
+  {
+    "MeshName": "GT_Terminal_Glass.obj",
+    "MeshMaterialName": "ObjectHighlight"
+  } */
+	],
+	
+	"Deserializer":{
+		"GameObject|_anchor":{
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+		 "GameObject|VENAnchorFixed": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+			"UnityEngine.CapsuleCollider": {
+				"center": {
+				  "x": 0,
+				  "y": -1.3,
+				  "z": 0
+				},
+				"radius": 0.4,
+				"height": 2.6,
+				"direction": 1
+			  },
+		  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 0.0,
+            "y": -1.45,
+            "z": 0.0
+          }
+        },
+		  "m_SnapToleranceUp":1,
+      "m_SnapToleranceDown":0.6
+        }
+      }
+    },
+      /* "ModuleAnchor":{
+        "m_MaxAngularVelocity": 120.0,
+        "m_MaxTorque": 60000,
+        "m_BrakeTorque": 30000.0,
+        "m_ForceHorizontal": true,
+      }*/
+    "ModuleShop": {
+      "m_SingleCorpToShow": 1
+    }
+  } 
+}

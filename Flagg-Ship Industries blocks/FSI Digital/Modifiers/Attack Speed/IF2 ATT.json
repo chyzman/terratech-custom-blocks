@@ -1,0 +1,55 @@
+{
+  "Name": "Modifier: Attack",
+  "Description": "Boosts attack speed by 15% at the cost of lowering damage by 5%",
+  "ID": 1700191, 
+
+  "Faction": 7, 
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 104766,
+  "HP": 500,
+  "Mass": 1,
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+
+  "IconName": null,
+  
+  "Recipe": "49, 49, 49, 49, 49, 49, 49, 49, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 61, 61, 61, 61, 61, 61, 66, 66", 
+  
+  "EmissionMode": 1,
+
+  "BlockExtents":{"x": 1, "y": 1,"z": 1},
+    
+
+  "APs": [
+    {"x": 0, "y": -0.5,"z": 0},
+    {"x": 0, "y": 0,"z": -0.5},
+    {"x": 0, "y": 0,"z": 0.5},
+    {"x": -0.5, "y": 0,"z": 0},
+    {"x": 0.5, "y": -0,"z": 0},
+   
+  ],
+
+  "GamePrefabReference": "GSO_Block_Half_Long_211",
+  "KeepReferenceRenderers": false,
+  
+  "SubObjects": [
+  	{"SubOverrideName":"Base",
+    	"MeshName": "ModBase.obj",
+      "MeshMaterialName": "BF_Main",
+      "ColliderMeshName": "ModBase.obj"
+    },{"SubOverrideName":"Modifier",
+    	"MeshName": "ATT.obj",
+		"MeshTextureName": "Infinitode Colors.png",
+      "ColliderMeshName": "ATT.obj"
+    }
+    
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuff": {
+      "m_BuffType": "WeaponCooldown",
+      "m_Strength": 0.8695,
+      //"m_NeedsToBeAnchored": true
+    },
+    
+  	}
+  }

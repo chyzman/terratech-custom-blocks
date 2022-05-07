@@ -1,0 +1,328 @@
+
+
+
+{
+  "Name": "Isotropic Plasma Reactor",
+  "Description": "An advanced reactor core. Expensive and fragile, but of extreme utility",
+  "ID": 10016,
+
+  "Faction": 5,
+  "Category": 6,
+  "Grade": 3,
+  "Price": 555705,
+  "HP": 5000,
+  "Mass": 150,
+
+  "Fragility": 0.0,
+
+  "IconName": "Haemotrope_Reactor.png",
+
+  "MeshName": null,
+
+  "Recipe":  "49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 60, 60, 60, 60, 60, 60, 60, 60, 60, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 64, 64, 64, 64, 64, 64, 65, 65, 65",
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 4,
+    "z": 4
+  },
+
+  "APs": [
+    // Back
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -0.5
+    },
+    // Front
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 3.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 3.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 3.5
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "z": 3.5
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 3.5
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "z": 3.5
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 3.5
+    },
+    // Left
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 3,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": -0.5,
+      "y": 3,
+      "z": 3
+    },
+    // Right
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 3,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 3
+    },
+    {
+      "x": 1.5,
+      "y": 3,
+      "z": 3
+    },
+    // Top
+    {
+      "x": 0,
+      "y": 3.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 3.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 3.5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": 3.5,
+      "z": 3
+    },
+    // Bottom
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 3
+    },
+  ],
+
+
+  "GamePrefabReference": "BF_Radar_111",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Radar_111_Sensor",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "40k_reactor_coils.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_BF_Radar_111_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "frame_left",
+      "MakeBoxCollider": true,
+      "layer": 8,
+      "MeshName": "40k_half_reactor_frame.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "frame_right",
+      "MakeBoxCollider": true,
+      "layer": 8,
+      "MeshName": "40k_half_reactor_frame.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "reactor_core",
+      "MakeBoxCollider": true,
+      "layer": 8,
+      "MeshName": "40k_reactor_core.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "core_detailing",
+      "MakeBoxCollider": true,
+      "layer": 8,
+      "MeshName": "40k_core_detailing.obj",
+      "MeshMaterialName": "HE_Main"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_spindle": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 0.5, "y": 1.5, "z": 1.5 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localScale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "GameObject|m_BF_Radar_111_Sensor": {
+        "UnityEngine.transform": {
+          "localPosition": { "x": 0, "y": 0, "z": 0 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localScale": { "x": 1, "y": 1, "z": 1 }
+        }
+      },
+      "Spinner": {
+        "m_Speed": 15,
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        },
+        "m_SpinUpTime": 0.5,
+        "m_SpinnerSound": ""
+      }
+    },
+    "GameObject|frame_left": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 1, "y": -0.5, "z": -0.5 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localScale": { "x": 1, "y": 1, "z": 1 }
+      }
+    },
+    "GameObject|frame_right": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 0, "y": -0.5, "z": 3.5 },
+        "localEulerAngles": { "x": 0, "y": 180, "z": 0 },
+        "localScale": { "x": 1, "y": 1, "z": 1 }
+      }
+    },
+    "GameObject|reactor_core": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 1, "y": 1.5, "z": 1.5 },
+        "localEulerAngles": { "x": 90, "y": 0, "z": 0 },
+        "localScale": { "x": 1, "y": 1, "z": 1 }
+      }
+    },
+    "GameObject|core_detailing": {
+      "UnityEngine.transform": {
+        "localPosition": { "x": 1, "y": 1.5, "z": 1.5 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localScale": { "x": 1, "y": 1, "z": 1 }
+      }
+    },
+    "ModuleRadar": {
+      "m_Range": 0,
+      "Range": 0
+    },
+    "ModuleEnergy": {
+      "m_Priority": -100,
+      "m_OutputPerSecond": 500,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 0,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 0.0
+    }
+  }
+}

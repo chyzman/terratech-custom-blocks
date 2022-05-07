@@ -1,0 +1,34 @@
+{
+  "Name": "Old Star Left Slope Block",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails. It's the left side for the main slope block. Thats it... What, you expected another story? You need to make these things in pairs, kid!",
+  
+  "ID": 300009,
+  "IDNetHex": "83 a5 d2 00 44 68 c7 ed ",
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 300,
+  "Mass": 1,
+  "IconName": "Old_Star_Right_Slope_Block_icon.png",
+  "MeshName": "Old_Star_Right_Slope_Block.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ", 	
+  "EmissionMode": 2,
+  "ColliderMeshName": "Old_Star_Right_Slope_BlockC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 2},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	  {"x": 0, "y": -0.5, "z": 1},
+	  {"x": 0.5, "y": 0, "z": 0},
+	  {"x": 0.5, "y": 0, "z": 1},
+  	{"x": 0, "y": 0, "z": -0.5}
+  ]
+}

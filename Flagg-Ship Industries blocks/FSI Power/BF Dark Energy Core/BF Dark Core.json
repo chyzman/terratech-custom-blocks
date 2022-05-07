@@ -1,0 +1,500 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Better Future Dark Energy Reactor",
+  "Description": "While Similar to the Draconic Reactor, the Dark Energy Reactor generates power using local dark energy. While nowhere near as effective as some another race's process, it gets the job done. Unlike the draconic reactor, this one is mobile, cheaper, and much lighter. still a kiloton of weight though.",
+  "ID": 1700141,
+
+  "Faction": 7, 
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 1353090,
+  "HP": 50000,
+  "Mass": 1000,
+  "IconName": "BF_DEC_Icon.png", 
+  "MeshName": null,
+  "Recipe":  "49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,17" 	,
+	
+	
+	
+	
+	
+	 	
+	
+	
+	
+	
+	
+	  
+  "MeshMaterialName": null, 
+  "Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },	
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 4 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 4 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 4 },	
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },
+		{ "x": 0, "y": 4, "z": 3 },
+		{ "x": 0, "y": 4, "z": 4 },		
+        { "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+		{ "x": 1, "y": 4, "z": 3 },
+		{ "x": 1, "y": 4, "z": 4 },
+        { "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+		{ "x": 2, "y": 4, "z": 3 },
+		{ "x": 2, "y": 4, "z": 4 },
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 3, "y": 4, "z": 1 },
+		{ "x": 3, "y": 4, "z": 2 },
+		{ "x": 3, "y": 4, "z": 3 },
+		{ "x": 3, "y": 4, "z": 4 },	
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+		{ "x": 4, "y": 4, "z": 3 },
+		{ "x": 4, "y": 4, "z": 4 },],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 }, 
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 }, 
+
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": 4.5 },
+		{ "x": 0, "y": 4, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": -0.5 },
+
+		{ "x": 2, "y": 4.5, "z": 2 },
+		{ "x": 2, "y": -0.5, "z": 2 } 		
+
+					
+    ],
+  "GamePrefabReference": "BF_Radar_111", 
+  "KeepReferenceRenderers":false,
+  "ReferenceOffset": {
+    "x": 2,
+    "y": 0,
+    "z": 2
+  },
+  "SubObjects": [{
+    "SubOverrideName":"Base unit",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Frame2.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Frame2.obj",
+	"SubPosition": {"x": 2,"y": 2,"z": 2},
+	},{
+    "SubOverrideName":"BF_Reactor_Shield2",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield2.obj",
+	"MeshMaterialName": "MAT_BF_LaserBeam",
+	"ColliderMeshName" : "BF_Reactor_Shield2.obj",
+	"SubPosition": {"x": 0,"y": 0,"z": 0},
+	"SubScale":{"x": 0.45,"y": 0.45,"z": 0.45}
+	},{
+    "SubOverrideName":"BF_Reactor_Shield3",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield2.obj",
+	"MeshMaterialName": "MAT_BF_LaserBeam",
+	"ColliderMeshName" : "BF_Reactor_Shield3.obj",
+	"SubPosition": {"x": 0,"y": 0,"z": 0},
+	"SubScale":{"x": 0.45,"y": 0.45,"z": 0.45}
+	},{
+    "SubOverrideName":"BF_Reactor_Shield4",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield2.obj",
+	"MeshMaterialName": "MAT_BF_LaserBeam",
+	"ColliderMeshName" : "BF_Reactor_Shield4.obj",
+	"SubPosition": {"x": 0,"y": 0,"z": 0},
+	"SubScale":{"x": 0.45,"y": 0.45,"z": 0.45}
+
+	},{
+    "SubOverrideName":"Core5",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Core2.obj",
+	"MeshMaterialName": "Mat_FX_Smoke_03",
+	"ColliderMeshName" : "BF_Reactor_Core2.obj",
+	"SubPosition": {"x": 2,"y": 2,"z": 2},
+	"SubScale":{"x": 0.3,"y": 0.3,"z": 0.3}
+	},{
+    "SubOverrideName":"Core6",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Core2.obj",
+	"MeshMaterialName": "Mat_FX_Smoke_03",
+	"ColliderMeshName" : "BF_Reactor_Core2.obj",
+	"SubPosition": {"x": 2,"y": 2,"z": 2},
+	"SubScale":{"x": 0.45,"y": 0.45,"z": 0.45}
+	},{
+    "SubOverrideName":"Core7",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Core2.obj",
+	"MeshMaterialName": "Mat_FX_Smoke_03",
+	"ColliderMeshName" : "BF_Reactor_Core2.obj",
+	"SubPosition": {"x": 2,"y": 2,"z": 2},
+	"SubScale":{"x": 0.4,"y": 0.4,"z": 0.4}
+	},{
+    "SubOverrideName":"Core8",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Core2.obj",
+	"MeshMaterialName": "Mat_FX_Smoke_03",
+	"ColliderMeshName" : "BF_Reactor_Core2.obj",
+	"SubPosition": {"x": 2,"y": 2,"z": 2},
+	"SubScale":{"x": 0.35,"y": 0.35,"z": 0.35}
+	}
+    ],
+  "Deserializer":{"ModuleRadar":null,
+  "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+         },
+         "localScale": {
+          "x": 2,
+          "y": 2,
+          "z": 2
+        }
+       },
+       "ParticleSystem": {
+        "startColor": {
+          "r": 1,
+          "g": 0.2,
+          "b": 0,
+          "a": 1
+        },
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 20,
+        "startSpeed": 0.0,
+        "startSize": 2,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.1,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+  "Reference|GSO_Heart_343/GSO_Inventory_Block_334/Active_Particles/Singularity_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 2, "y": 2, "z": 2 },
+"localScale": { "x": 1, "y": 1, "z": 1 }			},
+            // Slow down the effect
+            "ParticleSystem": {
+                "playbackSpeed": 1
+            },
+			"GameObject|Initialisation_Singularity_Distortion":null,
+			"GameObject|Initialisation_Burst":null,
+			"GameObject|Singularity_Geometry":{"UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 }},
+			"ParticleSystem": {
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        },
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 1,
+        "startSpeed": 0.0,
+        "startSize": 1.2,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 1,
+        "simulationSpace": 0,
+        "scalingMode": 2
+      }},
+			"GameObject|Singularity_Distortion":{"UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 }},
+			"ParticleSystem": {
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 0,
+        "startSpeed": 0.0,
+        "startSize": 1.5,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 2
+      }}},
+  "Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 2, "y": 2, "z": 2 },
+"localScale": { "x": 2, "y": 2, "z": 2 }			},
+            // Slow down the effect
+            "ParticleSystem": {
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.4
+        },
+        
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 1000,
+        "startSize": 0.1,
+        "startLifetime": 0.2,
+		"startSpeed":0,
+        "maxParticles": 1000,
+      },
+
+            "GameObject|Charging_Static": null,
+            "GameObject|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.025, "y": 0.025, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 90 }			}},
+            "GameObject|Ray_02": {"UnityEngine.Transform": { "localPosition": { "x": 0.025, "y": -0.025, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 90 }			}},
+            "GameObject|Ray_03": {"UnityEngine.Transform": { "localPosition": { "x": -0.025, "y": 0.025, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 90 }			}},
+            "GameObject|Ray_04": {"UnityEngine.Transform": { "localPosition": { "x": -0.025, "y": -0.025, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 90 }			}},
+			"Duplicate|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.025, "y": 0.025, "z": -1 },
+"localEulerAngles": { "x": 180, "y": 0, "z": 0 }			}},
+            "Duplicate|Ray_02": {"UnityEngine.Transform": { "localPosition": { "x": 0.025, "y": -0.025, "z": -1 },
+"localEulerAngles": { "x": 180, "y": 0, "z": 0 }			}},
+            "Duplicate|Ray_03": {"UnityEngine.Transform": { "localPosition": { "x": -0.025, "y": 0.025, "z": -1 },
+"localEulerAngles": { "x": 180, "y": 0, "z": 0 }			}},
+            "Duplicate|Ray_04": {"UnityEngine.Transform": { "localPosition": { "x": -0.025, "y": -0.025, "z": -1 },
+"localEulerAngles": { "x": 180, "y": 0, "z": 0 }			}},
+        },
+	  "ModuleEnergy": {
+    "m_Priority": -100,
+    "m_OutputPerSecond": 2500,
+    "m_OutputEnergyType": 0,
+	"m_GeneratingSFXType": 43,
+    "m_OutputConditions": 0,
+    "m_SequentialPowerUp": false,
+    "m_PowerUpDelay": 20.0,},
+	
+	"GameObject|_spindle": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 2, "y": 2, "z": 2 }
+          },
+          "GameObject|BF_Reactor_Shield2": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0 },"localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "Spinner": {"m_RotationAxis": {
+          "axis": 0
+        },
+         "m_SteerAxis": {
+          "axis": 0
+        },
+            "m_Speed": 0.1,
+            "Speed": 0.1,
+		    "m_AutoSpin":true,
+            "m_SpinUpTime": 20
+          },
+          
+        },
+		"Duplicate|_spindle": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 2, "y": 2, "z": 2 }
+          },
+          "GameObject|BF_Reactor_Shield3": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0 },"localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "Spinner": {"m_RotationAxis": {
+          "axis": 1
+        },
+         "m_SteerAxis": {
+          "axis": 1
+        },
+            "m_Speed": 0.1,
+            "Speed": 0.1,
+		    "m_AutoSpin":true,
+            "m_SpinUpTime": 20
+          },
+          
+        },
+		"Duplicate_Duplicate|_spindle": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 2, "y": 2, "z": 2 }
+          },
+          "GameObject|BF_Reactor_Shield4": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0, "y": 0, "z": 0 },"localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+            }
+          },
+          "Spinner": {"m_RotationAxis": {
+          "axis": 2
+        },
+         "m_SteerAxis": {
+          "axis": 2
+        },
+            "m_Speed": 0.1,
+            "Speed": 0.1,
+		    "m_AutoSpin":true,
+            "m_SpinUpTime": 20
+          },
+          
+        }
+		 }
+}

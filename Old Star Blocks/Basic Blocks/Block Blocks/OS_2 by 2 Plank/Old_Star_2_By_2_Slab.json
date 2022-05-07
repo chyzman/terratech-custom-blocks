@@ -1,0 +1,29 @@
+{
+  "Name": "Old Star 2 by 2 Slab",
+  "Description": "This here is how the Old Star do. Just 2 slabs of nicely cut Fibron Wood held together with a few metal bands and nails.  Now this was the interns idea. Insted of thousands of 2 by 1 blocks why not bigger ones that sell for double the amount? The wood cutter was fine with it and went with it and then, just like that they sold out faster than the 2 by 1! The intern has since been part of our design team and I'm sure we shall see even more from him.",
+  
+  "ID": 300002,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 700,
+  "HP": 200,
+  "Mass": 1,
+  "IconName": "2_by_2_icon.png",
+  "MeshName": "Old_Star_2x2_Block.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, ", 	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  }, 
+  "APsOnlyAtBottom": false
+}

@@ -1,0 +1,121 @@
+{
+  "Name": "Old Star Angled Floater Fan",
+  "Description": "Now this is new to Old Star. With the success of the 'Floater Fan', we decided to make another varient of them but at a 45 degree angle for better stability. Better for keeping your tech upright than turning than the standard Floater Fan",
+  "ID": 300109, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3987, 
+  "HP": 1800, 
+  "Mass": 10,
+
+  "Recipe":  "45, 45, 45, 52, 54, 57", 
+  "IconName": "OS_Angled_Hover_Icon.png", 
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "Cells": [ 
+   //0 line
+  {"x": 0,"y": 0,"z": 1},{"x": 1,"y": 0,"z": 1},
+  {"x": 0,"y": 0,"z": 2},{"x": 1,"y": 0,"z": 2}, 
+   //1 line     
+  {"x": 0,"y": 1,"z": 0},{"x": 1,"y": 1,"z": 0},
+  {"x": 0,"y": 1,"z": 1},{"x": 1,"y": 1,"z": 1},
+  {"x": 0,"y": 1,"z": 2},{"x": 1,"y": 1,"z": 2},
+   //2 line
+  {"x": 0,"y": 2,"z": 1},{"x": 1,"y": 2,"z": 1}, 
+  {"x": 0,"y": 2,"z": 2},{"x": 1,"y": 2,"z": 2}
+    ],   
+  "APs": [ 
+    //Tops
+    {"x": 0.0,"y": 1.5,"z": 0.0}, {"x": 1.0,"y": 1.5,"z": 0.0},
+    {"x": 0.0,"y": 2.5,"z": 1.0}, {"x": 1.0,"y": 2.5,"z": 1.0},
+    //"side"
+    {"x": 0.0,"y": 2.0,"z": 0.5}, {"x": 1.0,"y": 2.0,"z": 0.5},
+    {"x": 0.0,"y": 1.0,"z":-0.5}, {"x": 1.0,"y": 1.0,"z":-0.5},
+    //left
+    {"x":-0.5,"y": 1.0,"z": 0.0}, {"x":-0.5,"y": 2.0,"z": 1.0},
+    //right 
+    {"x": 1.5,"y": 1.0,"z": 0.0}, {"x": 1.5,"y": 2.0,"z": 1.0},
+  ],
+  "GamePrefabReference": "GC_Hover_222",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_Hover_222_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,
+      "MeshName": "OS_Angle_Hover_Base.obj",
+	  "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+	  },
+	  {
+      "SubOverrideName": "m_GC_Hover_222_Jet",
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MakeBoxCollider": false,
+      "MeshName": "OS_Angle_Hover_Cover.obj",
+      "ColliderMeshName": "OS_Angle_Hover_Cover.obj",
+      "SubPosition": { "x": 0.5, "y": 1.12, "z": 0.88},
+      "SubRotation": {"x": -45,"y": 0,"z": 0}      
+    },
+
+    {
+     "SubOverrideName": "Hover_Propeller",
+     "MeshName": "OS_Angle_Hover_Prop.obj", 
+     "ColliderMeshName": "OS_Angle_Hover_Prop.obj",
+     "SubPosition": { "x": 0.0, "y":-0.3, "z": 0.0}
+    }
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0.5, "z":0.5 } 
+      }
+    },
+ "GameObject|m_GC_Hover_222_Jet": {
+    "GameObject|_spindle":{
+        "GameObject|Hover_Propeller":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
+             "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
+           "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+    "GameObject|_hoverJet": {
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+} 
+}  
+}
+}
+}

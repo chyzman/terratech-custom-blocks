@@ -1,0 +1,291 @@
+{
+  "Name": "DarkLight Endless Duty Right Tank Track",
+  "Description": "A compact yet still powerful tank track, the Endless Duty Tank Tracks are truly endless.. and also a favorite for DarkLight techs. This is the right version, with deadly spikes galore!\n\nThe wheels only phase through reality itself while not being on the tech is due to them making tech functionality far more difficult if they can collide with the planet while not on a tech. <b>It's just how science works.</b>",
+                 //You can make multiple lines with \n
+  "ID": 2000071, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 3, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 3
+  "Price": 42030, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 9800, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 50.0,
+  "CenterOfMass": {"x": 0.7, "y": 1.5, "z": 1.5},
+
+  "Fragility": 0.7, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 2, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 1, // Common = 0, Uncommon = 1, Rare = 2
+
+  //52, 52, 52, 52, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, Main body, optimized a bit as the block's hull is worth about 6k HP and 24 mass, end version has about 5-4k.
+  //57, 57, 57, 63, Tank tracks, about 8 cells worth of track (2400HP), 12 mass, decently fast but also good at carrying capacity, neither close to what the TAC and LK tracks offer, but its a more compact modular package.
+  //54, 54, 54, 54, 54, 54, 54, For the variants that have spikes, this one does, +1400HP and 14 Weight.
+   //Spikes are an extra hard titanic normally, here a pair of them gives about an titanic alloy. this is justified by double damaging row of about 150 dps each i guess.
+  "Recipe": "52, 52, 52, 52, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 63,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  
+  "IconName": "DLEDRightTrack.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    //Literally a modified Wide Four
+    // Z Layer 1, 5 APs. One of the end points with the two extra APs
+    { "x": 0,    "y": 2,    "z": -0.5 }, { "x": -0.5, "y": 2,    "z": 0    },
+    { "x": 0,    "y": 2.5,  "z": 0    },
+    { "x": 1,    "y": 2,    "z": -0.5 },
+    { "x": 1,    "y": 2.5,  "z": 0    },
+    // Z Layer 2, 4 APs.
+    { "x": 0,    "y": 2.5,  "z": 1    },
+    { "x": 1,    "y": 2.5,  "z": 1    },
+    { "x": -0.5, "y": 2,    "z": 1    },
+    // Z Layer 3, 4 APs. These were done just by copying the above and adding 1 to "z" as both this Layer 1 are just 6 AP loops
+    { "x": 0,    "y": 2.5,  "z": 2    },
+    { "x": 1,    "y": 2.5,  "z": 2    },
+    { "x": -0.5, "y": 2,    "z": 2    },
+    // Z Layer 4, 5 APs. Basically Z Layer 1 but on the other end so it has to be done manually
+    { "x": 0,    "y": 2,    "z": 3.5  }, { "x": -0.5, "y": 2,    "z": 3    },
+    { "x": 0,    "y": 2.5,  "z": 3    },
+    { "x": 1,    "y": 2,    "z": 3.5  },
+    { "x": 1,    "y": 2.5,  "z": 3    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GC_Track_B_422", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true, //If not true, prefab renderers will be removed
+  //"KeepColliders": true, //If not true, colliders will be removed
+  "DeathExplosionReference": "BF_Wheel_Large_Side_244", //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  */
+  /*
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Scale all the subobjects of the block prefab by the origin
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+
+  "SubObjects": [
+    //literally also a knockoff turbotread lmao
+    //Main body, middle's collider can be used for side ones.
+    {
+      "SubOverrideName": "aCol",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "DLEDTracksLeft.obj",
+      "ColliderMeshName": "DLEDTracksMiddleCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png"
+    },
+    //Delet the following things
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false
+    },
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422_Wheel_3",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "MakeBoxCollider": false
+    },
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422_Wheel_2",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "MakeBoxCollider": false
+    },
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422_Wheel_1",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": false,
+      "MakeBoxCollider": false
+    },
+    //purple
+    {
+      "SubOverrideName": "m_GC_Tracks_B_422_Treads",
+      "MeshTextureName": "m_GC_Tracks_Purple.png",
+      "MakeBoxCollider": false
+    },
+    //I AM VERY LUCKY THERE ARE ONLY 3 OF THESE WHEELS
+    {
+      "SubOverrideName": "m_DL_Tracks_B_432_Wheel_3",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "DLEDTracksWheel.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png"
+    },
+    {
+      "SubOverrideName": "m_DL_Tracks_B_432_Wheel_2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "DLEDTracksWheel.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png"
+    },
+    {
+      "SubOverrideName": "m_DL_Tracks_B_432_Wheel_1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "DLEDTracksWheel.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png"
+    },
+
+    {
+      "SubOverrideName": "Spike",
+      "Layer": 14,
+      "ColliderMeshName": "DLEDTracksLeftSpikeTop.obj"
+    },
+    {
+      "SubOverrideName": "Spike1",
+      "Layer": 14,
+      "ColliderMeshName": "DLEDTracksLeftSpikeBottom.obj"
+    }
+  ],
+
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+
+  "Deserializer": {
+    //whel
+    "GameObject|_wheel_3": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.5, "z":2.8 }
+      },
+      "GameObject|m_GC_Tracks_B_422_Wheel_3": {
+        "GameObject|m_DL_Tracks_B_432_Wheel_3": {// this is the model to replace with yours
+          "UnityEngine.Transform": {//You change these values
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          }
+        }
+      }
+    },
+ 
+    "GameObject|_wheel_2": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 }
+      },
+      "GameObject|m_GC_Tracks_B_422_Wheel_2": {
+        "GameObject|m_DL_Tracks_B_432_Wheel_2": {// this is the model to replace with yours
+          "UnityEngine.Transform": {//You change these values
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          }
+        }
+      }
+    },
+
+    "GameObject|_wheel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.5, "z":0.2 }
+      },
+      "GameObject|m_GC_Tracks_B_422_Wheel_1": {
+        "GameObject|m_DL_Tracks_B_432_Wheel_1": {// this is the model to replace with yours
+          "UnityEngine.Transform": {//You change these values
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          }
+        }
+      }
+    },
+
+    //Something the turbotreads had, not sure of its purpose but i got it here if i needed it.
+    /*"GameObject|m_GC_Tracks_238_Body": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":00, "z":0, "w":1 },
+        "localScale": { "x":1, "y":1, "z":1 }, 
+        "localPosition": { "x":0.9, "y":2, "z":9 }
+      },
+    },
+      */
+
+      //So uh now onto wheel stats, i am rather bad with these. TIME TO BASE IT OFF THE GC MIDDLE TRACKS BUT MODIFY IT
+    "ModuleWheel": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 40000.0,
+        "torqueCurveMaxRpm": 400.0,
+        "passiveBrakeMaxTorque": 40000.0,
+        "reverseBrakeMaxRpm": 250.0,
+        "basicFrictionTorque": 500.0,
+        "fullCompressFrictionTorque": 1000.0
+      },
+
+      "m_WheelParams": {
+        //"radius": 0.77,
+        //"thicknessAngular": 58.26,
+        "suspensionSpring": 60000.0,
+        "suspensionDamper": 1000.0
+      }
+    },
+
+    "GameObject|Spike": {
+      "UnityEngine.MeshCollider": { "sharedMesh": "DLEDTracksLeftSpikeTop.obj", "convex": true }
+    },
+   
+    "GameObject|Spike1": {
+      "UnityEngine.MeshCollider": { "sharedMesh": "DLEDTracksLeftSpikeBottom.obj", "convex": true }
+    },
+    "ModuleDrill": {
+      "activeColliders": ["Spike/MeshCollider.", "Spike1/MeshCollider."],
+      "impactDamageMultiplier": 10.0,
+      "damagePerSecond": 150.0,
+      "m_SpinOnCollisionDuration": 1,
+      "m_DamageType": 4
+    }
+  }
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

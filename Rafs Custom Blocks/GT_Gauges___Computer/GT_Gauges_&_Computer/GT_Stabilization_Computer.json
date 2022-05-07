@@ -1,0 +1,80 @@
+{
+  "Name": "GreenTech Stabiliziation Computer",
+  "Description": "A computer that uses available thrusters, hovers, and other transport blocks to help brake a moving tech and stabilize it when parked.",
+  "ID": 911089, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 7638, 
+  "HP": 300, 
+  "Mass": 1.25,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "43, 51, 52, 60",
+  "IconName": "GT_Stabilization_Computer_Icon.png", 
+  "MeshName": "GT_Stabilization_Computer.obj",
+  "ColliderMeshName": "GT_Gauge_Computer_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0}
+  ],
+  
+  "GamePrefabReference": "BF_Stabiliser_Computer_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+    "SubOverrideName": "m_BF_Stabiliser_Computer_111_Ring",
+	  "MeshName": "GT_Stabilization_Computer_Lights.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_spindle": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.0, "y":-0.067156, "z":-0.067156 }
+      },
+      "GameObject|m_BF_Stabiliser_Computer_111_Ring": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0.0, "y":0.067156, "z":0.067156 }
+        }
+      },
+      "Spinner": {
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+        "m_Speed": 0.4,
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 1.0
+      }
+    },
+    "ModuleStabiliser": {}
+  }
+}

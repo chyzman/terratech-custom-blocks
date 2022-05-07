@@ -1,0 +1,495 @@
+{
+	"Name": "TAC Command Pod",
+	"Description": "Press \"<b>R</b>\" to switch to cockpit view for some sweet first-person action. \n\nVR is such an old concept.  In fact, quite strange how it's not executed better here.  So this lets you VR better, because the \"default\" is not exactly stunning. \n\nThis could also be called IVA, Intra-Vehicular Activity. \n\n\n\nYes, it lacks buttons.  So put your VR headset o- \nSEE!  LOOK!  <b>YOU ALREADY HAVE THE CONTROLS IN FRONT OF YOU!</b> \n<b>THINK MCFLY!  THINK!</b>", //You can make multiple lines with \n
+  //Reference to Back to the Future
+  //Good old Kerbal Space Program interiors. too bad there are no actual "Kerbals" in TerraTech.
+	"ID": 584321, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 26922, //Mostly only visual use
+	"HP": 3250, //Fairly durible because losing the IVA cab results in a crash
+
+	"Mass": 9.0, //Fairly heavy to compensate for increased health
+	
+
+	"IconName": "TotallyNotCopyrightInfringement.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "19, 19, 19, 19, 44, 44, 44, 45, 45, 45, 46, 46, 50, 50, 52, 54, 56, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+    //
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Bottom
+        { "x": 0, "y": -0.5, "z": 0 }, 
+
+      //Back
+        { "x": 0, "y": 0, "z": -0.5 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "BF_Laser_Scatter_(121)",
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ 
+    //Exterior Model
+		{
+	    "SubOverrideName":"m_BF_Laser_Scatter_121_Base_copy",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "FighterCockpit2.obj",
+	    "MeshTextureName": null,
+		  "ColliderMeshName" : "FighterCockpit2.obj",
+      "MeshMaterialName": "HE_Main"
+		},
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Base_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterCockpitGlass.obj",
+      "MeshTextureName": null,
+      "ColliderMeshName" : "FighterCockpitGlass.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+
+    //Add IVA - Does NOT have colliders!
+    {
+      "SubOverrideName":"m_IVAGlass",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterCockpitGlassIVA.obj",
+      // "MeshMaterialName": "HE_Main",
+      "MeshMaterialName": "BF_Receiver_Forcefield",
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_Console",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "IVAConsole.obj",
+      "MeshMaterialName": "HE_Main",
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_Reticle",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "IVAAimingReticle.obj",
+      "MeshMaterialName": "HE_Main",
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_EnergyPanel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "IVABatteryPanelBase2.obj",
+      "MeshMaterialName": "HE_Main",
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_DisplayFighter",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "IVAPowerPanelFighter.obj",
+      "MeshMaterialName": "HE_Main",
+      "MakeBoxCollider": false,
+    },
+
+    //Change the LEDs
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "IVAPowerPanelLEDs.obj",
+	    // "MeshTextureName": "m_DefaultPower_1.png",
+		},
+
+    //DESTROY ALL UNWANTED
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Platform",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Mount",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Cover_R",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_BF_Laser_Scatter_121_Cover_L",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+  ],
+	
+	"JSONBLOCK": {
+    "GameObject|BF_Laser_Scatter_121": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.125, "y":0.125, "z":0.125 },
+        "localPosition": { "x":0, "y":0, "z":0.475 }
+      },
+      "Duplicate|m_BF_Laser_Scatter_121_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0.2 },
+          "localScale": { "x":8, "y":8, "z":8 },
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_R": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_L": null,
+      },
+      "Duplicate|m_BF_Laser_Scatter_121_Base_copy": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0.2 },
+          "localScale": { "x":8, "y":8, "z":8 },
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_R": null,
+        "GameObject|m_BF_Laser_Scatter_121_Cover_L": null,
+      },
+      "GameObject|m_BF_Laser_Scatter_121_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Platform": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":8, "y":8, "z":8 },
+            // "localPosition": { "x":0, "y":0, "z":0.5 }
+          },
+          "GameObject|m_Reticle": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":-1.0 },
+              "localPosition": { "x":0, "y":0.0625, "z":0.15 }
+            },
+          },
+          "GameObject|m_BF_Laser_Scatter_121_Mount": {
+            "GameObject|m_BF_Laser_Scatter_121_Laser": null,
+            // "GameObject|m_BF_Laser_Scatter_121_Laser": {
+            //   // "GameObject|_barrel": {
+            //   //   "GameObject|_muzzleFlash": {
+            //   //     "GameObject|_light": {
+            //   //     },
+            //   //     "GameObject|_muzzleFlashAnim": {
+            //   //     }
+            //   //   },
+            //   //   "GameObject|_blast": null,
+            //   //   // "GameObject|_blast": {
+            //   //   // },
+            //   //   "GameObject|_bulletSpawn": {
+            //   //   }
+            //   // }
+            // }
+          }
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Cover_R": {
+        },
+        "GameObject|m_BF_Laser_Scatter_121_Cover_L": {
+        }
+      }
+    },
+    "Reference|BF_Cab_212/_gimbalBase_R": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.385, "y":-0.4, "z":0.8 } 
+      },
+      "GimbalAimer": { //Useful component
+        "rotationLimits": [-6, 6] //[-Left,+Right](Degrees)
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": { //Useful component
+          "rotationLimits": [-6, 6] //[-Up,+Down](Degrees)
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0.0 }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0.0 }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0.0 }
+              },
+              "UnityEngine.Light": {
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.05,
+                  "a": 1.0
+                },
+              },
+            }
+          }
+        }
+      }
+    },
+    "Reference|BF_Cab_212/_gimbalBase_L": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.385, "y":-0.4, "z":0.8 } 
+      },
+      "GimbalAimer": { //Useful component
+        "rotationLimits": [-6, 6] //[-Left,+Right](Degrees)
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": { //Useful component
+          "rotationLimits": [-6, 6] //[-Up,+Down](Degrees)
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0.0 }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0.0 }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0.0 }
+              },
+              "UnityEngine.Light": {
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.05,
+                  "a": 1.0
+                },
+              },
+            }
+          }
+        }
+      }
+    },
+
+    //-----------------------------------
+    //------------ BEGIN IVA ------------
+    //-----------------------------------
+
+    "GameObject|m_IVAGlass":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0.4 } 
+      },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          // "mainTexture": "EPMCEnergyBall.png",
+          "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          "color": {
+            "r": 0.3,
+            "g": 1.0,
+            "b": 0.5,
+            "a": 0.2
+          },
+        }
+      },
+    },
+    "GameObject|FirstPersonAnchor": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.2, "z":0.4 } 
+      },
+      "Nuterra.BlockInjector.ModuleFirstPerson": {
+        // "_anchor": null,
+        "AdaptToMainRot": false,
+        "thisBlock": null,
+      }
+    },
+
+    "GameObject|m_Console":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.3333, "y":0.5, "z":-0.25 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.075, "z":0.55 } 
+      },
+    },
+    "GameObject|ConsolePanel":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":330, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.065, "z":0.55 } 
+      },
+      "GameObject|m_EnergyPanel":{
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.15, "y":0.2, "z":0.2 },
+          "localEulerAngles": { "x":0, "y":270, "z":0 },
+          "localPosition": { "x":0.07, "y":0, "z":0.0475 } 
+        },
+        "GameObject|m_DisplayFighter":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":0.75 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-0.01, "z":0 } 
+          },
+        },
+        "Reference|HE_Battery_211/m_HE_Battery_211_LEDs":{
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":0.75 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":-0.01, "z":0 } 
+          }
+        }
+      },
+    },
+
+
+    //--------------------------------------
+    //------------ BEGIN CODING ------------
+    //--------------------------------------
+
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical 
+      // "m_DamageableType": 6, //What damage multiplier this runs by
+      //Rock because ROCK HARD
+      // "m_HealingOrigin": null,
+      //"m_AoEDamageBlockPercent": 0.15,//Explosions are not as powerful against this - doesn't work, quoted out...
+      //
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false,
+    },
+    "Reference|HE_Battery_211/ModuleEnergyStore.": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+    	"m_Capacity": 1775 //TAC batteries have 1775 m_Capacity in a volume of 1 block
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+
+    //Bonus generation:
+    "Reference|HE_Battery_211/ModuleEnergy.": {//Infinity Generator
+      // "m_OutputEnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+      "m_Priority": -100,
+      "m_OutputPerSecond": 50,//125- generation of Quantumflux, fairly powerful
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": 0,//no noise.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 0.0,
+    },
+
+    "FireDataShotgun": null,
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for batteries
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": " VENLaserNano", //Firing noise
+      // "m_FireSFXType": "StudLaser", //Firing noise
+      // "OnAudioTickUpdate": null,
+      "m_LimitedShootAngle": 10,
+      "m_ShotCooldown": 0.0,
+      "m_RotateSpeed" : 270.0, //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": {
+      "m_FireControlMode": "AllAtOnce", //IMPORTANT: enables "BurstGun" mode
+      "m_DeploySFXType": 75, //Firing noise
+      "m_ShotCooldown": 0.2,
+      "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+    },
+
+    "Reference|BF_Cab_212/FireData.": { //Component, with lazors
+      "m_MuzzleVelocity": 150, 
+      // "m_MuzzleVelocity": 80, //Bullet speed - Slower than the Zeus' approx. 200 MuzzleVelocity. Tested faster values than Zeus and clipping issues began
+      "m_BulletSprayVariance": 0.01, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 0, //2.5 - Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {"localScale": { "x":1, "y":1, "z":1.5 }},                                                                
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Bullet", //What damage modifier the weapon does
+          "m_Damage": 20 //Damage for successful projectile contact hit
+        },
+        "GameObject|Line": {                    
+          "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":2, "y":2, "z":1, },
+            //"localEulerAngles": { "x":0, "y":0, "z":0, "w":1  }
+          },            
+          "UnityEngine.LineRenderer": { //For some reason TerraTech's lasers are shot out of the gun in reverse
+            "startWidth": 0.01,
+            "endWidth": 0.45,
+            "numCapVertices": 4,
+            "startColor": {
+              "r": 0.75,
+              "g": 0.75,
+              "b": 0.0,
+              "a": 0.70,
+            },
+            "endColor": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 0.1,
+              "a": 0.75,
+            },
+          }
+        },
+        "Projectile": { //LaserProjectile has most of the stats
+          "m_ImpactSFXType" : "Bullet",
+          "m_LifeTime": 2.5, //Time before poof
+        },
+        "LaserProjectile": { //Contains the stats
+          "m_VelocityScaleFactor": 0.05,
+          //"m_ExplodeAfterLifetime": true,
+          "m_DamageType" : "Explosive", //What damage modifier the projectile hit does
+          //"m_ExplodeOnTerrain": true,
+          //"m_IgnoreCollisionWithBarrel" : true, //Also causes it to be unable to hit other copies of itself
+          //"m_CanHaveGravity" : false,
+          //"m_GravityScale" : 1, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          // "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+          // "m_FlightSFXType" : "Missile", // Allows for homing effect
+          //"m_Trail" : {"startWidth": 3},
+          // "m_SeekingProjectile": true,
+        },
+      }
+    }
+	}
+}
+
+
+
+

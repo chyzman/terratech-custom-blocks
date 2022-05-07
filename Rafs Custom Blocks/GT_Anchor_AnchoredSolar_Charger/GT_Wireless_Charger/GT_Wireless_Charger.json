@@ -1,0 +1,75 @@
+{
+    "Name": "GreenTech Wireless Charger",
+    "Description": "A wireless charger of mid-long range and average transfer rate, easily stackable.",
+    "ID": 911141, 
+  
+    "Faction": 1, 
+    "Category": 6, 
+    "Grade": 4, 
+    "Price": 11094,
+    "HP": 1200,
+    "Mass": 4,
+  
+    "Fragility": 0,
+    "DamageableType": 0,
+    "Rarity": 0,
+    
+    "Recipe": "5, 7, 9, 43, 48, 48, 58, 58",
+      
+    "IconName":"GT_Wireless_Charger_Icon.png",
+    "EmissionMode": 1,  
+
+    "BlockExtents":
+    {
+      "x": 2,
+      "y": 1,
+      "z": 2
+    },
+    
+    "APs": [ 
+      {"x": 0,"y": 0.5,"z": 0},
+      {"x": 0,"y": 0.5,"z": 1},
+      {"x": 1,"y": 0.5,"z": 0},
+      {"x": 1,"y": 0.5,"z": 1},
+      {"x": 0,"y": -0.5,"z": 0},
+      {"x": 0,"y": -0.5,"z": 1},
+      {"x": 1,"y": -0.5,"z": 0},
+      {"x": 1,"y": -0.5,"z": 1}
+    ],
+
+    "PrefabReference":  "VEN_RemoteCharger_111",
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0.5, "y": 0, "z": 0.5 },
+  
+    
+    "SubObjects":[
+        {
+            "SubOverrideName":            "m_VEN_RemoteCharger_111_Base",
+            "MeshName":                   "GT_Wireless_Charger.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Wireless_Charger_Collider.obj",
+            "SubPosition":                   { "x": 0, "y": 0, "z": 0 }
+        },
+        { 
+            "SubOverrideName":           "m_VEN_RemoteCharger_111_Pipes",
+            "MeshName":                  "GT_Wireless_Charger_Coil.obj",
+            //"MeshMaterialName":          "Mat_Pickup_Resource_RodiusCapsule",
+            "SubPosition":               { "x": 0, "y": 0, "z": 0 }
+          }
+        
+    ],
+
+    "JSONBLOCK":{
+        "ModuleRemoteCharger": {
+            "m_ChargingRadius": 30.0,
+            "m_PowerTransferPerArc": 50.0,
+            "m_ArcFiringInterval": 0.4
+        },
+        "ModulePlacementZoneEffect": {
+            "m_Radius": 30.0  
+        }
+    }
+}

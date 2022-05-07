@@ -1,0 +1,84 @@
+---- [EPMS] Energy Pulse Modulator System ----
+
+The EPMS is designed to operate on a charge that is penalized if the Tech is hit. 
+Being hit once resets the EPMC charge on a Tech.
+
+It is suggested that you install Sozin's ParticleManager mod for the best possible effects.
+
+
+EPMC stands for Energy Pulse Modulator Cannon, a very powerful energy ordinance that can sear through multiple layers of armor. 
+It's range is not all too impressive, making it useless for long-ranged attacks, but it homes in on enemies, making it less painful to aim.
+
+The EPMCs require huge densities of battery charge to fire.
+
+Most TAC techs are built for speed, maneuverability, and resilience, the EPMC system is designed to operate with maneuverability.
+
+In return for it's safety, the EPMC system outputs TREMENDOUS damage in the form of controlled energy blasts. 
+
+These blasts WILL disintegrate any projectile flung at it, denying counterattacks. 
+
+The only way to counter an EPMC is with another EPMC.
+
+PLANS:
+
+// EPMC BASIC MAIN CANNONS
+Version A-Class Release
+-584332 + [EPMC] Cricket Main Cannon (1,1,2) //Charged particle blast, will reset charge if hit, weak built-in capacitor and 
+
+The rest of the fighter-based EPMCs are going to be in EFF's arsenal, since they invented fighter/drone EPMCs
+
+Version 0.7
+584333 + [EPMC] Thyr Main Cannon 	(6,8,18)// Very powerful capital death beam Main Cannon to be built around,
+  and can hard counter the faster modular EPMCs (excluding Sinewave) if used in time
+
+
+//  EPMC Modular Cannons - Spools up and eats energy for a powerful finisher
+// Will chain-detonate if critically damaged!  Will engulf the ship in flames upon Igniter detonation!
+//(Powered by a projectile with a Tank collider cruising through a bunch of otherwise obstructed cannons)
+Version 0.6
+//   Sinewave charges a powerful barrage of shotgun ION particles that disable shields and eat heavy armor  (Valhalla's EO-2 Surge  - Alternative: Flame Strike)
+584334 + [EPMC] Sinewave Burst Ignition 	(3,3,2)// Powerful modular energy cannon that builds up strength with each degree added
+584335 + [EPMC] Sinewave Burst Side Amp 	(1,1,2)// Each 45 degrees adds 150 more damage
+584340 + [EPMC] Sinewave Burst Corner Amp 	(1,1,2)// Each 45 degrees adds 150 more damage
+584341 + [EPMC] Sinewave Burst Armor 		(3,3,2)// Defends the front of the Cannon
+
+Version 0.7
+//   Cosinewave stacks a singular, powerful energy ball that builds up with each ring passing capable of erasing fleets of tiny Techs  (Ragnarok's Atomic Supernova)
+584342 + [EPMC] Cosinewave Collider Ignition 	(4,4,6)// Powerful modular energy cannon that builds up strength with each ring
+584343 + [EPMC] Cosinewave Collider Amplifier 	(4,4,1)// Each ring adds an additional post-explosive to the final detonation
+584344 + [EPMC] Cosinewave Collider Armor 	(4,4,2)// Defends the front of the Cannon
+
+//   Tangent charges a multi-pronged attack that diverges on enemy collision to great effect vs frontsiders  (Hydra's Myriad Mauler - Alternative: Diversion Wave Cannon)
+584345 + [EPMC] Tangent Splitter Ignition 	(2,2,5)// Powerful modular energy cannon that builds up strength with each degree added
+584346 + [EPMC] Tangent Splitter Corner Amp 	(1,1,2)// Each 90 degrees adds an additional two convergence rays
+584347 + [EPMC] Tangent Splitter Armor 	(2,2,2)// Defends the front of the Cannon
+
+//-SAFETIES
+584348 + Shunt Decoupler 	(3,2,1)// Force it away quickly before it explodes!  Point red side in direction of launch!
+584349 + Decoupler Disarm	(1,1,1)// Place by the front of EPMC modular cannons. Disarms all decouplers from accidental ignition (requires BuffBlocks) - low health pool
+
+//------------
+// LEGACY
+The below is obsolete due to the way the Terratech Energy system works
+Now all EPMCs are fully-self contained, apart from requiring energy to fire.
+
+//Heavy EPMC Cannon - getting hit once will reset ALL charge
+-584332 + [EPMC] Particle Main Cannon (1,1,2) //Charged particle blast, will reset charge if hit, weak built-in capacitor and Accumulator
+-584333 + [EPMC] Dense Main Cannon (1,1,4) //Charged particle beam, will reset charge if hit
+-584334 + [EPMC] Shockwave Main Cannon (3,1,3) //Charged particle shock, will reset charge if hit
+-584335 + [EPMC] Mjolnir Heavy Main Cannon (4,5,6) //*Mother Of All Positron Cannons*
+
+
+//Capacitors
+//Holds Wave Cannon charge, and ultimately determines how long it fires
+//They have decent health, lower than average and explode with ENERGY rather than just explosion
+-584340 + Small EMPC Capacitor (1,1,1) //holds Sub-Par amount of particles
+-584341 + Medium EMPC Capacitor (1,1,3) //holds meh amount of particles
+-584342 + Large EMPC Capacitor (2,2,2) //lotta particles, LOTTA BOOM
+
+//Accumulators
+//How to charge the blasted guns
+//They are not as explosive but do not feature much health
+-584343 + EMPC Light Particle Accumulator (1,2,2) //weak, slow collect time
+-584344 + EMPC Fighter Particle Accumulator (2,2,2) //moderate, slow collect time
+-584345 + EMPC Capital Particle Accumulator (4,2,5) //strong, fast collect time

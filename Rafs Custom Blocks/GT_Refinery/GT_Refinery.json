@@ -1,0 +1,211 @@
+{
+  "Name": "GreenTech Mobile Refinery",
+  "Description": "A zero waste and highly modular mobile refinery that transforms raw resources into refined ones.",
+  "ID": 911192,
+
+  "Faction": 0, 
+  "Category": 7, 
+  "Grade": 3, 
+  "Price": 1578, 
+  "HP": 1500,
+  "Mass": 10,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 5, 7, 32, 43, 43, 48",  
+  "IconName": "GT_Refinery_Icon.png", 
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 1.5, "y": 0, "z": 0},
+
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 1.5, "z": 1},
+    {"x": 0, "y": 1.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 1, "y": 1.5, "z": 1},
+    {"x": 1, "y": 1.5, "z": 0},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": 1.5, "y": 0, "z": 1}, 
+    {"x": 0, "y": 0, "z": 1.5},  
+    {"x": 1, "y": 0, "z": 1.5},
+    {"x": 0, "y": 1, "z": 1.5},
+    {"x": 1, "y": 1, "z": 1.5}
+    ],
+  
+  "GamePrefabReference": "BF_Refinery_222", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, 
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Base",
+      "MeshName": "GT_Refinery.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "SubRotation":{
+        "x": 0, // Pitch
+        "y": 90, // Yaw
+        "z": 0  // Roll
+      }
+    },
+    {
+      "SubOverrideName": "FX_AntennaSignal_B",
+      "SubPosition": {
+        "x": -0.06,
+        "y": -0.46,
+        "z": 0.21
+      },
+      "SubRotation":{
+        "x": 0, // Pitch
+        "y": 90, // Yaw
+        "z": 0  // Roll
+      },
+      "SubScale": {
+        "x": 0.9,
+        "y": 0.9,
+        "z": 0.9
+      }
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 0.5, "z": 1 },
+      "SubScale": { "x": 2, "y": 2, "z": 1 }
+    },
+     {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 1.3, "z": 0 },
+      "SubScale": { "x": 2, "y": 0.2, "z": 1 }
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": -0.1, "z": 0 },
+      "SubScale": { "x": 2, "y": 0.8, "z": 1 }
+    },
+    /* {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 1.95, "y": 1, "z": -0.95 },
+      "SubScale": { "x": 0.1, "y": 1, "z": 0.1 }
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": -0.95, "y": 1, "z": -0.95 },
+      "SubScale": { "x": 0.1, "y": 1, "z": 0.1 }
+    }, */
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_A",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_B",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_C",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_D",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Antenna",
+      "MeshName": "GT_Refinery_Antenna.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    }
+    /* {
+      "SubOverrideName": "m_BF_Refinery_222_Arrow_1_On",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Arrow_1_Off",
+      "DestroyExistingRenderer": true
+    },
+     {
+      "SubOverrideName": "ModuleItemConsume.m_PullArrowPrefab",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "ModuleItemConsume.m_PushArrowPrefab",
+      "DestroyExistingRenderer": true
+    },  */
+    /* {
+      "MeshName": "GT_Refinery_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "SubPosition": { "x": 1, "y": 0, "z": 1 },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": -90, // Yaw
+        "z": 0  // Roll
+      }
+    },
+    {
+      "MeshName": "GT_Refinery_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubPosition": { "x": 1, "y": 0, "z": 1 },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": -90, // Yaw
+        "z": 0  // Roll
+      }
+    },
+    {
+      "MeshName": "GT_Refinery_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubPosition": { "x": 1, "y": 0, "z": 1 },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": -90, // Yaw
+        "z": 0  // Roll
+      }
+    } */
+  ],
+
+ "JSONBLOCK": {
+  "GameObject|_anchor": null,
+  "ModuleAnchor": null,
+  "ModuleItemConsume": {
+    "m_NeedsToBeAnchored": false
+  },
+  "ModuleItemHolder": {
+  },
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.3,
+    "m_HeightIncrementScale": 0.3,
+    "m_BeamStrength": 300
+  }
+  }			
+}

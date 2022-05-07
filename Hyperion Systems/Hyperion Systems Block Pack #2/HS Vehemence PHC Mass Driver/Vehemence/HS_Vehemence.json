@@ -1,0 +1,470 @@
+{
+    "Name":                 "Hyperion Systems Vehemence PHC Mass Driver",
+    "Description":          "The latest in weaponized particle accelerators has given us the Vehemence Particle Hyperaccelerator Mass Driver, a huge accelerator capable of tearing entire vessels in half with just a few shots.",
+
+    "ID": 117036,           
+
+    "Faction": 7, 
+    "Category": 4, 
+    "Rarity": 2, 
+    "Grade": 3,
+    
+    "Price": 178968, 
+    
+    "Recipe" : {"53": 8, "54": 12, "56": 8, "58": 8, "62": 2, "63": 2, "64": 4, "66": 4},
+      
+    "IconName":                   "HS_Vehemence.png",                                     
+    "MeshColliderName":           null,
+    "NoBoxCollider":              true,
+    "HP": 24000, 
+    "Mass": 84.0,           
+    "DamageableType": 0,    
+    "DetachFragility": 0.25,
+    
+    "Cells": [
+        { "x": -1, "y": -1,"z": 0 },
+        { "x": 0, "y": -1,"z": 0 },
+        { "x": -1, "y": 0,"z": 0 },
+        { "x": 0, "y": 0,"z": 0 },
+        { "x": -1, "y": 1,"z": 0 },
+        { "x": 0, "y": 1,"z": 0 },
+        { "x": -1, "y": 2,"z": 0 },
+        { "x": 0, "y": 2,"z": 0 },
+
+        { "x": 1, "y": -1,"z": 0 },
+        { "x": -2, "y": -1,"z": 0 },
+        { "x": 1, "y": 0,"z": 0 },
+        { "x": -2, "y": 0,"z": 0 },
+        { "x": 1, "y": 1,"z": 0 },
+        { "x": -2, "y": 1,"z": 0 },
+        { "x": 1, "y": 2,"z": 0 },
+        { "x": -2, "y": 2,"z": 0 },
+
+        { "x": -1, "y": -1,"z": -1 },
+        { "x": 0, "y": -1,"z": -1 },
+        { "x": -1, "y": 0,"z": -1 },
+        { "x": 0, "y": 0,"z": -1 },
+        { "x": -1, "y": 1,"z": -1 },
+        { "x": 0, "y": 1,"z": -1 },
+        { "x": -1, "y": 2,"z": -1 },
+        { "x": 0, "y": 2,"z": -1 },
+
+        { "x": 1, "y": -1,"z": -1 },
+        { "x": -2, "y": -1,"z": -1 },
+        { "x": 1, "y": 0,"z": -1 },
+        { "x": -2, "y": 0,"z": -1 },
+        { "x": 1, "y": 1,"z": -1 },
+        { "x": -2, "y": 1,"z": -1 },
+        { "x": 1, "y": 2,"z": -1 },
+        { "x": -2, "y": 2,"z": -1 },
+
+        { "x": -1, "y": -1,"z": -2 },
+        { "x": 0, "y": -1,"z": -2 },
+        { "x": -1, "y": 0,"z": -2 },
+        { "x": 0, "y": 0,"z": -2 },
+        { "x": -1, "y": 1,"z": -2 },
+        { "x": 0, "y": 1,"z": -2 },
+        { "x": -1, "y": 2,"z": -2 },
+        { "x": 0, "y": 2,"z": -2 },
+
+        { "x": 1, "y": -1,"z": -2 },
+        { "x": -2, "y": -1,"z": -2 },
+        { "x": 1, "y": 0,"z": -2 },
+        { "x": -2, "y": 0,"z": -2 },
+        { "x": 1, "y": 1,"z": -2 },
+        { "x": -2, "y": 1,"z": -2 },
+        { "x": 1, "y": 2,"z": -2 },
+        { "x": -2, "y": 2,"z": -2 },
+
+        { "x": -1, "y": -1,"z": 1 },
+        { "x": 0, "y": -1,"z": 1 },
+        { "x": -1, "y": 0,"z": 1 },
+        { "x": 0, "y": 0,"z": 1 },
+        { "x": -1, "y": 1,"z": 1 },
+        { "x": 0, "y": 1,"z": 1 },
+        { "x": -1, "y": 2,"z": 1 },
+        { "x": 0, "y": 2,"z": 1 },
+
+        { "x": 1, "y": -1,"z": 1 },
+        { "x": -2, "y": -1,"z": 1 },
+        { "x": 1, "y": 0,"z": 1 },
+        { "x": -2, "y": 0,"z": 1 },
+        { "x": 1, "y": 1,"z": 1 },
+        { "x": -2, "y": 1,"z": 1 },
+        { "x": 1, "y": 2,"z": 1 },
+        { "x": -2, "y": 2,"z": 1 },
+
+        { "x": -1, "y": -1,"z": 2 },
+        { "x": 0, "y": -1,"z": 2 },
+        { "x": -1, "y": 0,"z": 2 },
+        { "x": 0, "y": 0,"z": 2 },
+        { "x": -1, "y": 1,"z": 2 },
+        { "x": 0, "y": 1,"z": 2 },
+        { "x": -1, "y": 2,"z": 2 },
+        { "x": 0, "y": 2,"z": 2 },
+
+        { "x": 1, "y": -1,"z": 2 },
+        { "x": -2, "y": -1,"z": 2 },
+        { "x": 1, "y": 0,"z": 2 },
+        { "x": -2, "y": 0,"z": 2 },
+        { "x": 1, "y": 1,"z": 2 },
+        { "x": -2, "y": 1,"z": 2 },
+        { "x": 1, "y": 2,"z": 2 },
+        { "x": -2, "y": 2,"z": 2 },
+
+        { "x": -1, "y": -1,"z": 3 },
+        { "x": 0, "y": -1,"z": 3 },
+        { "x": -1, "y": 0,"z": 3 },
+        { "x": 0, "y": 0,"z": 3 },
+        { "x": -1, "y": 1,"z": 3 },
+        { "x": 0, "y": 1,"z": 3 },
+        { "x": -1, "y": 2,"z": 3 },
+        { "x": 0, "y": 2,"z": 3 },
+
+        { "x": 1, "y": -1,"z": 3 },
+        { "x": -2, "y": -1,"z": 3 },
+        { "x": 1, "y": 0,"z": 3 },
+        { "x": -2, "y": 0,"z": 3 },
+        { "x": 1, "y": 1,"z": 3 },
+        { "x": -2, "y": 1,"z": 3 },
+        { "x": 1, "y": 2,"z": 3 },
+        { "x": -2, "y": 2,"z": 3 },
+
+        { "x": -1, "y": -1,"z": 4 },
+        { "x": 0, "y": -1,"z": 4 },
+        { "x": -1, "y": 0,"z": 4 },
+        { "x": 0, "y": 0,"z": 4 },
+        { "x": -1, "y": 1,"z": 4 },
+        { "x": 0, "y": 1,"z": 4 },
+        { "x": -1, "y": 2,"z": 4 },
+        { "x": 0, "y": 2,"z": 4 },
+
+        { "x": 1, "y": -1,"z": 4 },
+        { "x": -2, "y": -1,"z": 4 },
+        { "x": 1, "y": 0,"z": 4 },
+        { "x": -2, "y": 0,"z": 4 },
+        { "x": 1, "y": 1,"z": 4 },
+        { "x": -2, "y": 1,"z": 4 },
+        { "x": 1, "y": 2,"z": 4 },
+        { "x": -2, "y": 2,"z": 4 },
+
+        { "x": -1, "y": -1,"z": 5 },
+        { "x": 0, "y": -1,"z": 5 },
+        { "x": -1, "y": 0,"z": 5 },
+        { "x": 0, "y": 0,"z": 5 },
+        { "x": -1, "y": 1,"z": 5 },
+        { "x": 0, "y": 1,"z": 5 },
+        { "x": -1, "y": 2,"z": 5 },
+        { "x": 0, "y": 2,"z": 5 },
+
+        { "x": 1, "y": -1,"z": 5 },
+        { "x": -2, "y": -1,"z": 5 },
+        { "x": 1, "y": 0,"z": 5 },
+        { "x": -2, "y": 0,"z": 5 },
+        { "x": 1, "y": 1,"z": 5 },
+        { "x": -2, "y": 1,"z": 5 },
+        { "x": 1, "y": 2,"z": 5 },
+        { "x": -2, "y": 2,"z": 5 },
+
+        { "x": -1, "y": -1,"z": 6 },
+        { "x": 0, "y": -1,"z": 6 },
+        { "x": -1, "y": 0,"z": 6 },
+        { "x": 0, "y": 0,"z": 6 },
+        { "x": -1, "y": 1,"z": 6 },
+        { "x": 0, "y": 1,"z": 6 },
+        { "x": -1, "y": 2,"z": 6 },
+        { "x": 0, "y": 2,"z": 6 },
+
+        { "x": 1, "y": -1,"z": 6 },
+        { "x": -2, "y": -1,"z": 6 },
+        { "x": 1, "y": 0,"z": 6 },
+        { "x": -2, "y": 0,"z": 6 },
+        { "x": 1, "y": 1,"z": 6 },
+        { "x": -2, "y": 1,"z": 6 },
+        { "x": 1, "y": 2,"z": 6 },
+        { "x": -2, "y": 2,"z": 6 },
+
+        { "x": -1, "y": -1,"z": 7 },
+        { "x": 0, "y": -1,"z": 7 },
+        { "x": -1, "y": 0,"z": 7 },
+        { "x": 0, "y": 0,"z": 7 },
+        { "x": -1, "y": 1,"z": 7 },
+        { "x": 0, "y": 1,"z": 7 },
+        { "x": -1, "y": 2,"z": 7 },
+        { "x": 0, "y": 2,"z": 7 },
+
+        { "x": 1, "y": -1,"z": 7 },
+        { "x": -2, "y": -1,"z": 7 },
+        { "x": 1, "y": 0,"z": 7 },
+        { "x": -2, "y": 0,"z": 7 },
+        { "x": 1, "y": 1,"z": 7 },
+        { "x": -2, "y": 1,"z": 7 },
+        { "x": 1, "y": 2,"z": 7 },
+        { "x": -2, "y": 2,"z": 7 },
+
+        { "x": -1, "y": -1,"z": 8 },
+        { "x": 0, "y": -1,"z": 8 },
+        { "x": -1, "y": 0,"z": 8 },
+        { "x": 0, "y": 0,"z": 8 },
+        { "x": -1, "y": 1,"z": 8 },
+        { "x": 0, "y": 1,"z": 8 },
+        { "x": -1, "y": 2,"z": 8 },
+        { "x": 0, "y": 2,"z": 8 },
+
+        { "x": 1, "y": -1,"z": 8 },
+        { "x": -2, "y": -1,"z": 8 },
+        { "x": 1, "y": 0,"z": 8 },
+        { "x": -2, "y": 0,"z": 8 },
+        { "x": 1, "y": 1,"z": 8 },
+        { "x": -2, "y": 1,"z": 8 },
+        { "x": 1, "y": 2,"z": 8 },
+        { "x": -2, "y": 2,"z": 8 },
+
+        { "x": -1, "y": -1,"z": 9 },
+        { "x": 0, "y": -1,"z": 9 },
+        { "x": -1, "y": 0,"z": 9 },
+        { "x": 0, "y": 0,"z": 9 },
+        { "x": -1, "y": 1,"z": 9 },
+        { "x": 0, "y": 1,"z": 9 },
+        { "x": -1, "y": 2,"z": 9 },
+        { "x": 0, "y": 2,"z": 9 },
+
+        { "x": 1, "y": -1,"z": 9 },
+        { "x": -2, "y": -1,"z": 9 },
+        { "x": 1, "y": 0,"z": 9 },
+        { "x": -2, "y": 0,"z": 9 },
+        { "x": 1, "y": 1,"z": 9 },
+        { "x": -2, "y": 1,"z": 9 },
+        { "x": 1, "y": 2,"z": 9 },
+        { "x": -2, "y": 2,"z": 9 },
+
+
+    ],
+
+    "APs": [ 
+        { "x": -2, "y": -1.5, "z": -2 }, 
+        { "x": -2, "y": -1.5, "z": -1 },
+        { "x": -2, "y": 2.5, "z": -2 }, 
+        { "x": -2, "y": 2.5, "z": -1 },
+
+        { "x": -2.5, "y": -1, "z": -2 }, 
+        { "x": -2.5, "y": -1, "z": -1 },
+        { "x": 1.5, "y": -1, "z": -2 }, 
+        { "x": 1.5, "y": -1, "z": -1 },
+
+        { "x": 1, "y": -1.5, "z": -2 }, 
+        { "x": 1, "y": -1.5, "z": -1 },
+        { "x": 1, "y": 2.5, "z": -2 }, 
+        { "x": 1, "y": 2.5, "z": -1 },
+
+        { "x": -2.5, "y": 2, "z": -2 }, 
+        { "x": -2.5, "y": 2, "z": -1 },
+        { "x": 1.5, "y": 2, "z": -2 }, 
+        { "x": 1.5, "y": 2, "z": -1 }
+    ],
+
+    "PrefabReference":                  "HE_Cannon_Battleship_216",
+    "KeepReferenceRenderers":           false,
+    "PrefabPosition":                   { "x": 0, "y": 0, "z": 0 },
+
+    "SubObjects":[
+        {
+            "ObjectName":                 "m_HE_CannonBattleship_216_body",
+            "MeshName":                   "HS_Vehemence_Frame.obj",
+            "ColliderMeshName":           "HS_Vehemence_Frame_Collider.obj",
+            "MeshTextureName":            "HS textures.png", 
+            "Position":                   { "x": -0.5, "y": 0.5, "z": 0.5 },        
+        }, 
+        {
+            "ObjectName":                 "_gimbalBase",
+            "MeshName":                   "HS_Vehemence_Gimbal.obj",
+            "ColliderMeshName":           null,
+            "MeshTextureName":            "HS textures.png", 
+            "Position":                   { "x": -0.5, "y": 0.5, "z": 0.9 },   
+        },
+        {
+            "ObjectName":                 "_gimbalElev",
+            "MeshName":                   "HS_Vehemence_Elevator.obj",
+            "ColliderMeshName":           "HS_Vehemence_Elevator_Collider.obj",
+            "MeshTextureName":            "HS textures.png", 
+            "Position":                   { "x": 0, "y": 0, "z": 0 },   
+        },
+        {
+            "ObjectName":                 "_recoiler",
+            "MeshName":                   "HS_Vehemence_Barrel.obj",
+            "ColliderMeshName":           null,
+            "MeshTextureName":            "HS textures.png", 
+            "Position":                   { "x": 0, "y": 0, "z": 0 },   
+        },
+        {
+            "ObjectName":                   "_smoke",
+            "Position":                     { "x": 0, "y": 0, "z": 9 },
+        },   
+        {
+            "ObjectName":                   "_muzzleFlash",
+            "Position":                     { "x": 0, "y": 0, "z": 6 },
+            "Scale":                        { "x": 1, "y": 1, "z": 9 },
+        },           
+        {
+            "ObjectName":                   "_casingSpawn",
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+        },  
+        {
+            "ObjectName":                   "_bulletSpawn",
+            "Position":                     { "x": 0, "y": 0, "z": 7.0 },
+            "Scale":                        { "x": 1, "y": 1, "z": 1 },         
+        }
+    ],
+    "Deserializer":{
+        "GameObject|_gimbalBase": {
+            "GimbalAimer": { 
+                "rotationLimits": [-10, 10],
+                "rotationAxis": 2 
+              },
+            "GameObject|_gimbalElev": {
+                "GimbalAimer": {
+                    "rotationLimits": [-15, 15], //aimer coordinates are upside-down. First coordinate is how far up, second is how far down. 
+                    "rotationAxis":     1 
+                  },
+                "GameObject|_barrel": {
+                    
+                    // Increase the size and rate of the smoke
+                    "GameObject|_smoke":{
+                        // Particles are similar to most DDCs. They use an emitter and some form of texture to work in-game.                          
+                        "ParticleSystem": {
+                            "startSize":            0.0,       // The start size of the particle
+                            "startLifetime":        2.0,        // The duration of the particle's existence
+                            "emissionRate":         300,
+                            "duration":             5.0,
+                            
+                            // Self-explanatory; this dictates the size of the particle at different points of its life, all the way to the end
+                            "sizeOverLifetime": {
+                                "xMultiplier": 10.0,        // Dictates the multiplier on the X axis of the particle
+                                "yMultiplier": 1.0,         // Dictates the multiplier on the Y axis of the particle
+                                "zMultiplier": 1.0,         // Dictates the multiplier on the Z axis of the particle
+                            }
+
+                        }
+                    },
+                    "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+                        "GameObject|Light_Point": null,
+                         "UnityEngine.ParticleSystem": {
+                          "startColor":{
+                            "r": 1.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 1.0
+                          }
+                            },
+                        "UnityEngine.Transform": {
+                            "localPosition": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 6
+                            },
+                            "localEulerAngles": {
+                                "x": 90,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "localScale": {
+                                "x": 0.6,
+                                "y": 0.6,
+                                "z": 0.6
+                            }
+                        }
+                      }
+
+                }
+            }
+        },
+
+        //********** Weapon Modules **********//
+        "ModuleWeapon": {
+            "m_RotateSpeed": 5,       
+            "m_ChangeTargetInteval": 0.5,   
+            "m_PreventShootingTowardsFloor": false,
+            "m_DeployOnHasTarget": false,
+            "m_LimitedShootAngle": 90.0,    
+            "m_FireSFXType": 77,                     
+        },
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 6.0,  
+            "m_CooldownVariancePct": 0.00, 
+            "m_SeekingRounds": false, 
+        },
+        "Reference|BF_Laser_Deathray_214/FireData.": {
+            "m_MuzzleVelocity": 200.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+            "m_KickbackStrength": 300.0,            // Dictates the strength of the recoil when firing the gun
+            "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+            "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+
+            
+            /********** Bullet Prefab **********/
+            "Instantiate|m_BulletPrefab": {
+                "Projectile":{
+                    "m_Damage": 8000,                  // The damage of the bullet when directly hitting a block
+                    "m_LifeTime": 3.0,                  // The duration of the bullet's existence before despawning
+                    "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                    "m_IgnoreCollisionWithBarrel": true,
+                    "m_ExplodeOnTerrain": true,
+                    "Instantiate|m_Explosion": {
+                        "Reference|1050/ModuleDamage.deathExplosion": { //References the GC MegaReactor Battery's death explosion as the projectile's death explosion
+                            "UnityEngine.Transform":{
+                                "localPosition":{
+                                    "x":0,
+                                    "y":0,
+                                    "z":0
+                                    },
+                                "localScale":{
+                                    "x":15,
+                                    "y":15,
+                                    "z":15
+                                }
+                                    },
+                                    "GameObject|FX_Parts_A": null
+                                },
+                        "Explosion": {
+                            "m_ExplosionType": 3,
+                            "m_EffectRadiusMaxStrength": 4,                    // Dictates the damage type of the explosion
+                            "m_EffectRadius": 10,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_MaxDamageStrength":      6000,        // The splash damage done
+                            "m_MaxImpulseStrength":     500.0       // The strength of the knockback done by the explosion
+                        }
+            
+                    }
+                },
+                   
+                    "GameObject|Line": {                    
+                        "UnityEngine.Transform": {
+                          //"localPosition": { "x":0, "y":0, "z":0 },
+                          "localScale": { "x":4, "y":4, "z":1, },
+                          //"localEulerAngles": { "x":0, "y":0, "z":0, "w":1  }
+                        },            
+                        "UnityEngine.LineRenderer": { //For some reason TerraTech's lasers are shot out of the gun in reverse
+                          "startWidth": 0.0001,
+                          "endWidth": 0.5,
+                          "numCapVertices": 4,
+                          "startColor": {
+                            "r": 0.1,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 1.0,
+                            "maxColorComponent": 1.0
+                          },
+                          "endColor": {
+                            "r": 1.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.75,
+                            "maxColorComponent": 1.0
+                          }
+                      }
+                        }
+                      }
+
+            },
+            "Instantiate|m_BulletCasingPrefab": null
+        }
+    }
+    

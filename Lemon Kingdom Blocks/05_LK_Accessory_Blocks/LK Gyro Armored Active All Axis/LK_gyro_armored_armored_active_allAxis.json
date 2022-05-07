@@ -1,0 +1,169 @@
+/*
+Description: An armored Gyro
+Pros:        Armored and with good HP. Even has better stability for its size
+Cons:        Heavy and expensive.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Armored Active All Axis Gyro",
+    "Description":          "A sturdy and powerful gyro that can keep large vehicles steady.\n\n\"Ask and ye shall receive! I said to the Iron Peel knight that knelt before me. These \"Gyros\" are different compared to others: within is a miniature black hole, stabilized by all those gravitic pads spinning around it. Very powerful...but do not worry, if the gyro is destroyed, so too does black hole as it will simply evaporate due to its size.\"\n\n - Gregory Rook, Guildsman, Note #72",
+
+    "ID": 419095,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 5,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 92862,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body: 16 Titanic Alloy, 16 Plubonic Alloy
+              Gyro:      2 Gluon Beam, 2 Seed A.I., 2 Proxima Dark
+    */
+    "Recipe" : { 
+      // Main Body:
+      "54": 16, "53": 16,
+      // Gyro: 
+      "64": 2, "65": 2, "66": 2 
+    },
+      
+    "IconName":                   "LK_gyro_armored_active_allAxis_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_gyro_armored_active_allAxis_body.obj",                 // Name of the block's mesh                                        
+    "MeshColliderName":           "LK_gyro_armored_active_allAxis_body_col.obj",             // Name of the block's collider.
+    "NoBoxCollider":              true,
+
+    "TextureName":                "LK_tex_1.png",
+    "GlossTextureName":           "LK_tex_2.png",
+    "EmissionTextureName":        "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 4800,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons & Accessory blocks
+                            // 300/cell = Wheels & Prop/Aerial Engines & Electronics
+                            // 100/cell = Fragile Objects (Floor tiles, etc.)
+                            // 750/cell = Rotors (Exclude the propeller blades)
+                            
+    "Mass": 32.0,           // LK Standard Blocks & Prop/Aerial Engines have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons & Batteries have 4 mass per cell
+                            // LK Wheels & Electronics have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock (Floor Tiles must be Rock)
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 4,"z": 2 },
+
+    "APs": [ 
+      //Bottom AP Ring
+      {"x": 0, "y": 0, "z": 1.5 }, {"x": 1, "y": 0, "z": 1.5 },
+      {"x": 0, "y": 0, "z": -0.5 }, {"x": 1, "y": 0, "z": -0.5 },
+      {"x": -0.5, "y": 0, "z": 0 }, {"x": -0.5, "y": 0, "z": 1 },      
+      {"x": 1.5, "y": 0, "z": 0 }, {"x": 1.5, "y": 0, "z": 1 },    
+
+      //Top AP Ring
+      {"x": 0, "y": 3, "z": 1.5 }, {"x": 1, "y": 3, "z": 1.5 },
+      {"x": 0, "y": 3, "z": -0.5 }, {"x": 1, "y": 3, "z": -0.5 },
+      {"x": -0.5, "y": 3, "z": 0 }, {"x": -0.5, "y": 3, "z": 1 },      
+      {"x": 1.5, "y": 3, "z": 0 }, {"x": 1.5, "y": 3, "z": 1 },  
+    ],
+
+    // Advanced Settings
+    "PrefabReference":  "762",                      // GeoCorp All Axis Active Gyro Block ID
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+    
+    "SubObjects":[
+      // Replace the original meshes with new ones
+      {
+        "ObjectName":                   "m_GC_Gyro_AllAxis_Active_222_Sphere",
+        "MeshName":                     "LK_gyro_armored_active_allAxis_ball.obj",    
+        "ColliderMeshName":             null,
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+        "Position":                     { "x": -0.5, "y": 0.5, "z": 1.5 }
+      },
+
+      {
+        "ObjectName":                   "m_GC_Gyro_AllAxis_Active_222_Ring_B",
+        "MeshName":                     "LK_gyro_armored_active_allAxis_ring_B.obj",    
+        "ColliderMeshName":             null,
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+        "Position":                     { "x": 0, "y": 0.0, "z": 1 },
+      },
+    ],
+
+    "Deserializer":{
+      "ModuleGyro": {
+        // Gyros have two types: Passive and Active. Hence, they use two different parameters for each mode. Choose only one of these modes.
+        // Active Gyros will keep the Tech upright regardless of position, useful for helicopters, flying platforms and the like. This is also the typical Gyro used by all Corps.
+        // Passive Gyros will resist movement instead, allowing for some stability while at the same time being mobile. This is perfect for high-mobility air Techs in general
+        
+        // Passive Gyro Parameters
+        "m_UsePassive":       0,                                  // If set to 1, dictates that this Gyro is a Passive Gyro. Only one can be active: Either "m_UsePassive" or "m_UseActive".
+        "m_PassiveStrength":  { "x": 0.0, "y": 0.0, "z": 0.0 },   // Dictates the strength of the Passive Gyro's effect in each axis. The values are float & non-percentile. (e.g. it has no limit from 0 to 100000, etc.)
+
+        // Active Gyro Parameters
+        "m_UseActive":          1,                                // If set to 1, dictates that this Gyro is an Active Gyro. Only one can be active: Either "m_UsePassive" or "m_UseActive".
+        "m_ActiveSpeed":        1920,                             // Dictates the strength of the Active Gyro. 
+                                                                  // For context, here is a strength chart of each Active All-axis gyro in every Corp
+                                                                  // GSO Gyro:  90/cell
+                                                                  // GC Gyro:   45.625/cell
+                                                                  // VEN Gyro:  50/cell
+                                                                  // HE Gyro:   52.5/cell
+                                                                  // BF Gyro:   80/cell
+                                                                  // LK Gyro:   120/cell
+        
+        "m_ActiveStability":    0.01,                             // This parameter seems to do nothing and the value is consistent on all types of gyros in all currently existing corps     
+        "m_ActiveAxisScale":    { "x": 1.0, "y": 1.0, "z": 1.0 }, // Dictates the axis of the gyro's influence. For example, if X is set to 1, the gyro will actively move the Tech in the X axis to keep it upright. 
+        
+        // Trim Gyro Parameters Note: This requires a specific setup to work as adjusting the parameters here can crash the game.
+        "m_TrimPitchMax":     0,  
+        "m_TrimAdjustSpeed":  0,
+
+        // Animation Parameters Note: These parameters aren't related to either passive or active gyros, but perhaps related to the Trim gyros as their animations can slow down or stop depending on their influence on the Tech
+        "m_RotationAnimSpeed": 0.0,
+        "m_RotationMinSpeed": 0.0,
+        "m_RotationMaxSpeed": 0.0,
+      },
+    }
+
+}

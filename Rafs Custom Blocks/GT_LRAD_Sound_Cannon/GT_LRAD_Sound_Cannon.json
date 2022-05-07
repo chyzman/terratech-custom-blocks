@@ -1,0 +1,193 @@
+{
+  "Name": "GreenTech LRAD Sound Cannon",
+  "Description": "LRAD stands for Long Range Acoustic Device. This cannon is capable of projecting sound waves over long distances whith low energy dissipation, making structures many meters away collapse with the intense vibrations. The waves ignore shields.",
+  "ID": 911031, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 4254, 
+  "HP": 1500, 
+  "Mass": 5,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.1},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 3, 3, 5, 7, 43, 56, 56",
+  "IconName": "GT_LRAD_Sound_Cannon_Icon.png",
+ 
+   "BlockExtents":{"x": 2,"y": 3, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	  {"x": 1, "y": -0.5, "z": 0}
+  ],
+  
+  "GamePrefabReference": "VEN_Flamethrower_121", 
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_LRAD_Sound_Cannon.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_LRAD_Sound_Cannon_Collider.obj"
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FXFlameThrower",
+     "MeshMaterialName": "Mat_SFX_GSOHoverPad"
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_gimbalHorizontal": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GimbalAimer": {
+        "rotationLimits": [
+          -0.01,
+          0.01
+        ]
+      },
+      "GameObject|_gimbalVertical": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GimbalAimer": {
+          "rotationLimits": [
+            -0.01,
+            0.01
+          ]
+      },
+      "GameObject|FXFlameThrower": { 
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.5,
+            "y": 0.91,
+            "z": 0.85
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": false,
+              "playbackSpeed": 40.0,
+              "enableEmission": true,
+              "emissionRate": 0.5,
+              "startSpeed": 10.0,
+              "startSize": 20,
+              "startLifetime": 10,
+              "gravityModifier": 0.0,
+              "maxParticles": 20000,
+              "simulationSpace": 0,
+              "scalingMode": 2,
+              "randomSeed": 0,
+              "useAutoRandomSeed": false,
+              "startColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.03
+              },
+              "trails": {
+                "enabled": false
+              },
+              "collision": {
+                "colliderForce": 500.0,
+                "enabled": true,                                   //Setting this to false will break the Particle Weapon
+                "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                "bounceMultiplier": 0.1,//0.5 is default          //How hard it bounces on contact with something
+                "lifetimeLossMultiplier": 0.01,
+                "dampenMultiplier": 0.9                 
+              },
+              "shape": {
+                "radius": 0.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "radiusSpeedMultiplier": 0,
+                "radiusThickness": 1,
+                "angle": 0,
+                "length": 0.0,
+                "randomDirection": false,
+                "randomDirectionAmount": 0.0,
+                "arc": 360.0,
+                "arcMode": 0,
+                "arcSpread": 0.0,
+                "arcSpeedMultiplier": 0.0
+              }
+            }
+          }
+        }
+      }
+    }
+    },
+
+    "ModuleWeapon": {
+      "m_FireSFXType": 71
+    },
+    "ModuleWeaponFlamethrower": {
+      "m_MaxFlameLength": 300.0,
+      "m_DPS": 400.0,
+      "m_DamageType": 2,
+      "m_ExtendTime": 0.25,
+      "m_RetractTime": 0.05,
+    "m_TipLight": {
+      "intensity": 0,
+      "range": 0
+    },
+    "m_JetLight": {
+      "intensity": 0,
+      "range": 0
+    }
+    }
+  }
+}

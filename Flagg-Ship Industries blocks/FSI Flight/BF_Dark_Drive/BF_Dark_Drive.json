@@ -1,0 +1,230 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "BF Dark Drive",
+  "Description": "A slow burning, high speed thruster, powered by a supervoid singularity. It is extremely powerful due to it's role for massive aircraft, but has a downside of a slow acceleration, as well as a high price tag.", //You can make multiple lines with \n
+  "ID": 1700132, //A random ID that MUST be unique
+
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 81312,//81312 //What, you thought this would be CHEEAP???
+  "HP": 4000,//Not very strong. Defend with care!
+  "Mass": 12,//Takes 20 blocks, yet is lightweight for aircraft
+
+  "IconName": "Dark Drive.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "47, 47, 47, 47, 49, 49, 49, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 58, 63, 63, 64",
+
+// Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    
+    
+    { "x": -0.5, "y": 0, "z": 9 },
+    { "x": -0.5, "y": 4, "z": 9 },
+    { "x": 4.5, "y": 0, "z": 9 },
+    { "x": 4.5, "y": 4, "z": 9 },
+	 { "x": -0.5, "y": 0, "z": 5 },
+    { "x": -0.5, "y": 4, "z": 5 },
+    { "x": 4.5, "y": 0, "z": 5 },
+    { "x": 4.5, "y": 4, "z": 5 },
+	
+	{ "x": 0, "y": -0.5, "z": 9 },
+    { "x": 0, "y": 4.5, "z": 9 },
+    { "x": 4, "y": -0.5, "z": 9 },
+    { "x": 4, "y": 4.5, "z": 9 },
+	 { "x": 0, "y": -0.5, "z": 5 },
+    { "x": 0, "y": 4.5, "z": 5 },
+    { "x": 4, "y": -0.5, "z": 5 },
+    { "x": 4, "y": 4.5, "z": 5 },
+	
+	{ "x": 0, "y": 0, "z": 9.5 },
+    { "x": 0, "y": 4, "z": 9.5 },
+    { "x": 4, "y": 0, "z": 9.5 },
+    { "x": 4, "y": 4, "z": 9.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 5,
+    "y": 5,
+    "z": 10
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "BF_IonDrive_Small_(112)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_BF_IonDrive_Small_112",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "Dark-Housing.obj",
+      "ColliderMeshName": "Dark-Housing.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "BF_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Prop
+     "SubOverrideName": "_spinner/m_Fan_Blades",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "Dark-Spinner.obj",
+      "ColliderMeshName": "Dark-Spinner.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "BF_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|fx_Trail": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":2, "y":2, "z":4 }
+      },
+      "UnityEngine.TrailRenderer": { //Paint them trails
+        "material": {
+          "mainTexture": "BF_Supervoid_Ray.png",
+        },
+        "time": 3,
+        "startWidth": 1,
+        "endWidth": 0.05,
+        "widthMultiplier": 0.25,
+        "autodestruct": false,
+        "emitting": 0.2,
+        "numCornerVertices": 6,
+        "numCapVertices": 8,
+        "minVertexDistance": 1,
+        "startColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "endColor": {
+          "r": 1.0,
+          "g": 0.75,
+          "b": 0.5,
+          "a": 0.0
+        },
+        "positionCount": 1,
+        "shadowBias": 0.0,
+        "generateLightingData": false,
+        "textureMode": 0,
+        "alignment": 0,
+      }
+    },
+    "GameObject|m_BF_IonDrive_Small_112": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":2, "y":2, "z":4 },
+        "localEulerAngles": { "x":180, "y":0, "z":0, "w":1 } 
+      }
+    },
+    "GameObject|_fanJet": { //GameObject child - IMPORTANT: FanJet MUST be in GameObject|_fanJet or THE GAME WILL CRASH!
+      "FanJet": { // Propeller Properties - This is where you put the custom prop stats.
+        // "force" : 3000000.0, //TRANSFORM MODE - Just casually breaking the game
+        "force" : 320000.0, //was 18000.0 - Max force forwards - Fastest jet in the game lol
+        //was 45000.0 just before this
+        "backForce" : 1.0, //Max force backwards - not the best for backwards
+        // "spinDelta" : 0.010, //FOR TRANSFORM MODE
+        "spinDelta" : 0.0167, //0.08 //How long it takes the thing to spool up - Also the slowest accelerating prop in the game. Pair up with LME for maximum effect
+        "spinSpeed" : 1500.0, //Max animation rotation speed
+        "detachedForceFactor": 0.2
+      } 
+    },
+    "GameObject|_spinner": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":2, "y":2, "z":4 },
+        "localEulerAngles": { "x":180, "y":0, "z":0, "w":1 } 
+      },
+      "GameObject|m_Fan_Blades": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 } 
+        }
+      },
+      "Spinner": {
+        "m_Speed": 250,
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 10.0,
+        "m_CurrentAngle": 0.0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        // "Speed": 10.0,
+        // "SpeedFraction": 0.0,
+        // "AtFullSpeed": false
+      }
+    }, //Back to GameObject
+    //Changing ANYTHING in rigidbody for a block causes it to NOT work for some reason
+    // "UnityEngine.Rigidbody": {//This is how to control drag
+    //   // "useGravity": true,
+    //   // "mass": 1.0,
+    //   // "collisionDetectionMode": "ContinuousDynamic", //ContinuousDynamic(fast moving objects), Continuous(for colliding with ContinuousDynamic colliders), ContinuousSpeculative(Kinematics), Discrete(Non-Fast Objects),
+    //   // "detectCollisions": true,
+    //   // "maxDepenentrationVelocity": 10000.0,
+    //   // "drag": 0.025,//0.1 //We lower the drag here to allow for higher top speeds on dedicated TAC aircraft parts.
+    //   // "angularDrag": 0.3,//1.0
+    //   // "centerOfMass": { "x":0, "y":0, "z":0 },
+    //   // "isKinematic": false,//If isKinematic is enabled, Forces, collisions or joints will not affect the rigidbody anymore.
+    //   // "freezeRotation": true,
+    // },     
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        "m_BoosterAudioType": 4,
+        // BoosterEngineType
+        // {
+        //   Propeller,
+        //   LargeRotor,
+        //   MediumRotor,
+        //   RotorFan,
+        //   Fan,
+        //   SteeringHover,
+        //   IonDrive
+        // }
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+  }
+}

@@ -1,0 +1,1214 @@
+__________________________________________________________
+ _____    ______ ___    ______   ____                __  
+/     \  /_  __//   |  / ____/  / __ \ ____ _ _____ / /__
+| <^> |   / /  / /| | / /      / /_/ // __ `// ___// //_/
+|  V  |  / /  / ___ |/ /___   / ____// /_/ // /__ / ,<   
+\_____/ /_/  /_/  |_|\____/  /_/     \__,_//\___//_/|_|  
+----------------------------------------------------------
+Version 0.5.2 - Bath Before the Hurricane
+
+A huge thanks to the following who made it all possible!
+Block Models: 
+TAC KRAM ICBM Missile System & TAC KRAM Missile Battery: Shido
+TAC Two Block Remastered: Shido and HeX and WhitePaw
+TAC Repair Bee Nest Bee: Whitepaw
+
+Maritaria & Aceba1/Whitepaw for making the base support for block modding
+(All other TerraTech modders out there as your work inspired me)
+Rafs for Resource Chart calculator (endlessly useful)
+
+HeX for the block inventory snapshots (Over 100!)
+
+Alpha Testers: Shido, Aceba1, Seth_Seth, HeX, Mindl3ss, Sozin, Cloudchaser, Venom, Bedacoalmaster, Scallywag Mag, the Developers of TerraTech to some degree.
+
+Beta Testers(Includes Alpha Testers): 
+- NotExactlyHero(Early Beta tester)
+- Green Theem	(Found collider and other issues)
+- Helios	(Found serious balance issue)
+- 
+
+
+JSON Block Code: Legionite with some assistance from 
+various others in the TerraTech modding community including Whitepaw and Rafs
+
+
+Head of Project: Legionite
+Congrats if you read this file!  If you are interested in taking over in the future (as I cannot handle this forever), please send me a request on Discord so that it can be discussed.
+
+For all TAC Pack mod-related issues, please contact Legionite#8477 on Discord.
+Leg may love game bugs, but bugs in this pack are not really the fun bugs!
+
+----------------------------------------------------------
+
+TAC Corp Summary:
+TAC is all for high-quality Techs. This means high speeds, outstanding armor, and effective weapons at small scales and unreasonable costs. There will be no intimidation from TAC Techs but there sure will be underestimation.
+
+Retro-Future is the style it was aesthetically aiming for. A mix of not too retro-sci-fi backed up by modern designs, and a bonus splash of experimental aspects.
+
+If you would try to compare it to vanilla corps, it would be Hawkeye, GSO, Better Future, and Reticle Research in a mixed up jumble. 
+
+It's far from the Lemon Kingdom mentality of being big, bulky, powerful, and slow
+It's also not manipulation of elements and environment like GreenTech
+TAC wants to go fast, furious, strong, and small. Like modern vehicles...
+
+TAC Blocks have slightly more health than HE blocks. 
+Same weight class as GSO in some cases.
+You could build small and not worry too much about being destroyed.
+
+The main problem being that the costs of said blocks of other corps has overall greater efficiency than what TAC blocks provide of overinflated build costs.
+
+Basically TAC Blocks are generally overpriced in a very unhealthy way. 
+
+There are 125+ Blocks in this Pack!
+
+~~~Summaries~~~
+AI Modules & Manipulators(0.7):
+This is what's neat: You can build a Tech using one of these as the first part, then build off of it and save it later without normal player cabs. When you want to chill or let the AI do the killing for you, you just swap to said tech, and watch the automated carnage!
+
+Manipulators control what a Tech does when an enemy is nearby. Will we try to stay at the same height level as said enemy? How about homing in on an enemy automatically? Do we want to stay away from the enemy? 
+
+Building Blocks:
+Their uses are also greatly limited due to the unordinary designs, but can live through some nasty explosions and resist popping off.
+
+Cabs:
+You can't really get any more mobile than the HovaBugga Cab. Pair it up with the Cab Frame Block for maximum escape planning!
+The Undertaker Mainframe Cab takes absolutely no damage from explosions, but it also has no guns or wheels. It is the PERFECT cab to hide, and ONLY hide!
+
+Mobility:
+Gotta Go Fast, is that right?
+LUDICROUSLY expensive wheels that cruise around at 80 mph or above (or slower when overburdened)
+Unresponsive *Jet Engines* that achieve higher levels of thrust than any prop can manage, incompatible with props and different jet engine models.
+Spaceship engines and thrusters to get going through the skies, FAST.
+
+Weapons: 
+Mostly a slur of abnormal-particle weapons, some of them bypass shields, some of then explode violently, and some have significant range.
+Missiles are fast, VLRS, or nuclear in quality.
++ Experimental Cannon that launches wrecking balls
++ interceptor gun
+
+Utility:
+Check this out for yourself, plenty of goodies.
+
+Base:
+Mobile fabrication things, a long-distance block magnet, and a rotating anchor.
+
+Control: Cabs, Radars, Cab Mounts, etc
+Wheels: Wheels and Standard blocks
+Weapons: Weapon Blocks
+Power: Power Blocks
+Base: Base Blocks
+---------
+
+Block ID + Part Name //Brief Description
+
+AI MODULES
+//Command an army of diverse AIs!
+----------------------------------------------------------------------------------------------------
+--Autopilot
+584255 + Rambot AI 	(1,1,1) //Let's ram the enemy with GEOcorp drills because we can.
+584256 + Sniper AI 	(1,1,1) //Let's snipe the enemy because we have glass cannon
+584257 + Mobile Turret AI(1,1,1) //Let's resist the temptation to Build Beam and do the MT aim correctly. Sit like a good guard dog.
+584271 + Assassin AI 	(1,1,1) //Relentless trouble seeking will always keep this one in a fight, and at a safe distance too!
+--Decoys
+584234 + Decoy 		(1,1,1) //A strong, separate Cab that is targetable, but cannot be controlled from.
+584260 + Ejector Decoy 	(1,1,1) //pops right off, acting as distraction
+----------------------------------------------------------------------------------------------------
+
+
+CONTROL 
+//Many Cabs, such wow.
+----------------------------------------------------------------------------------------------------
+--Cabs
+584297 + Eagleraptor Cab 		(1,2,2) //Introductory jet fighter cab
+584200 + Hovabugga Floating Cab 	(2,2,3) //Can fly like hover bug craft, albeit a bit oddly because Cab physics
+584201 + Undertaker Mainframe Cab 	(2,2,2) //A Cab like the GSO Cab, but with far more health, and a tendency to stay INSIDE the Tech. (looks like a computer thing)
+584320 + AV-7 Space Fighter Core 	(1,1,2), [7,7,8]MAX //VERY POWERFUL CAB, but restricts max building size to 7x7x8 and cannot anchor. DO NOT ATTEMPT FUSION!
+--AIs
+584266 + Repair Bee Commando 		(1,1,1) //The repair bees show no mercy for their enemies and will beam them to death. Shooting it down with flak is also really hard.
+----------------------------------------------------------------------------------------------------
+
+
+STRUCTURE 
+//Mostly strong, experimental armor parts of odd shapes to make stacking them a pain.
+----------------------------------------------------------------------------------------------------
+--Basic Blocks
+584203 + One Block "Maro" 	(1,1,1) //moderate mass, high health, INSANE cost. What’s this? A mushroom?
+584204 + Two Block "Divergent" 	(2,1,2) //A stupendously well-armored block with a rather impractical design.
+584207 + Three Block "L"	(2,1,2) //A Three TAC Block in the shape of an L
+584228 + Four Block "Y"		(2,2,2) //A Four TAC block in the shape of a Y
+584208 + Five Block "U"		(3,1,2) //A U for you!
+584206 + Six Block "Anvil"	(2,1,3) //A stupendously well-armored block with a rather impractical design. - Looks like a 1
+584205 + Heavy Armor 		(3,1,2) //A durable block that can take some serious punishment. Lacks APs on the top face
+584427 + Small Heavy Armor 	(1,1,3) //Smaller version of the Heavy Armor Block
+--Donut Blocks
+584209 + Ring Block 		(3,1,3) //Explosions? Ooof.
+584210 + Donut Block 		(4,1,4) //Explosions? Hmm?
+584211 + Zero Block 		(4,1,6) //Explosions? Wat?
+584212 + o Block 		(6,1,6) //Explosions? That tickles.
+584213 + 0 Block 		(6,1,8) //Explosions? Nah that’s probably nothing.
+584214 + Theta Block 		(8,1,8) //Explosions? Nah that’s probably nothing.
+--Bendpoint Bunker Brackets
+584250 + Bendpoint Block 	(1,1,1) //TAC's Bracket Part
+584251 + Longpoint Block 	(1,1,2) //TAC's Bracket Part
+584276 + Hashpoint Block 	(1,2,2) //TAC's Bracket-Chassis Part
+584277 + Gridpoint Block 	(2,2,2) //TAC's Bracket-Grid Part
+--Slopes 
+584268 + Reactive Armor 		(1,1,1) //Armor that has random change to deflect attacks
+584269 + Scenic Armor 			(2,1,1) //yay windows in armor planes
+584391 + Long Reactive Armor 		(3,1,1) // Longer reactive armor for easier building
+584317 + Reactive Armor Corner 		(3,1,2) //Armor that has random change to deflect attacks
+584390 + Inverted Reactive Armor Corner (1,1,1) //The inverted reactive armor. Goes with Fusion slab for aesthetics.
+584308 + 1.5 Armor 			(1,1,2) //TAC slope
+584309 + Long 1.5 Armor 		(3,1,2) //LOOOONG TAC slope
+584310 + Double 1.5 Armor 		(1,2,2) //45 TAC slope
+584311 + Long Double 1.5 Armor 		(3,2,2) //LOOOONG 45 TAC slope
+584315 + Jab Armor 			(3,1,2) //sharp, but not deadly
+584316 + Long Jab Armor 		(3,1,2) //sharp, but not deadly
+584428 + TriHex Armor Corner		(1,1,1) //Alt corner
+--Half Blocks
+584291 + Half Panel 			(1,1,1) //Smol block
+584301 + Long Half Panel 		(3,1,1) //Long Smol block
+584302 + Angle Half Slab  		(2,1,2) // goes with Half Slab
+584303 + Corner Angle Half Slab 	(2,1,2) // goes with Half Slab
+584304 + Half Half 			(1,1,1) //tiny block
+584305 + Long Half Half 		(3,1,1) //long tiny block
+584306 + Left Fender Half Half  	(2,1,1) // goes with Half Half
+584307 + Right Fender Half Half 	(2,1,1) // goes with Half Half
+584392 + Double Angle Slab 		(3,1,1) //Double-sided angle slab
+584393 + Merge Slab 			(1,1,1) //Inverted angle slab
+584394 + Long Merge Slab 		(1,3,1) //Long inverted angle slab
+584395 + Angle Merge Slab 		(1,2,1) //Brace Half block end
+584243 + Big Grate Slab Block 		(3,2,1) //Blocks explosive attacks better than other Half-Slabs but not bullets, shotguns, and impacts
+584350 + Long Angle Slab		(3,1,2) //to cover up that one hole that now exists in the trundle
+--Adaptors
+584312 + Dynamic Shift Armor 		(2,2,1) //To convert Reactive Armor to 1.5 Block
+584313 + Long Dynamic Shift Armor 	(2,2,3) //To convert Reactive Armor to 1.5 Block
+584314 + Jagged Shift Armor 		(3,3,3) //To convert Reactive Armor to two Half Halves to a Curb Block
+584318 + Sub-Slope 			(1,1,1) //Transition from 0.5 to 1.0
+584319 + Long Sub-Slope 		(3,1,1) //Transition from 0.5 to 1.0
+584426 + Verge Armor			(1,1,1) //Transition from Curb to 0.5 edge
+----------------------------------------------------------------------------------------------------
+
+
+MOBILITY 
+//TAC Wheels are VEN fast and have similar to HE levels of health, but can completely stall over their weight load. 
+// Some floaty engines and thrusters as well. WATCH YOUR BUDGET CAREFULLY!
+----------------------------------------------------------------------------------------------------
+--Ground
+584215 + Bearing Wheel 			(2,2,2)//Wheels that can strafe really well, like hovers.
+584216 + Trundle Wheel 			(3,4,3) //Half of this makes up the wheel motors, VERY fast, decent load tolerance. Doesn't handle hilly terrain that well.
+584146 + Speedomatic Tank Tracks 	(2,3,10) //Fast, beefy treads like an A1 Abrams
+584296 + Mark 8 Wheel (fenderless) 	(2,1,1) //Basic car wheel
+584299 + Mark 8 Wheel 			(2,1,1) //Basic car wheel
+584298 + Terrence Wheel 		(4,5,5) // A VERY strong wheel with moderate speed and a bonus attachment point at the end
+--Mech
+584361 + Stringer Legs 			(6,5,6) //Basic light-load walker legs
+584363 + Stalker Spike Legs 		(6,5,6) //Side walker legs
+--Hover
+584353 + Bunsen Hover Thruster 		(2,3,2) //Very powerful low load hover with very fast responsiveness
+584351 + Reaction Adjustment Thruster 	(1,1,1) //Most powerful TAC steering hover available. Demands fuel to operate.
+584352 + Vernier Adjustment Thruster 	(1,1,2) //Strong, sideways one-directional fuel thruster
+--Air
+584220 + Turbulence Jet Engine 		(2,2,5) //massive speed, but slow acceleration
+584470 + Tempest Jet Engine 		(1,1,3) //Smol jet engine like the turb but Zero Prop-sized for ease of use
+584217 + Vector Engine 			(2,2,4)//Engine that angles itself for incredible control
+584357 + Inline Streamfold Compressor 	(2,2,4) //Use with large fighter jets
+584430 + Middle Waft Intake		(2,2,12) // A safer alternative to regnerating fuel on the fly
+584431 + Funnel Left Waft Intake	(2,2,12) // Demands a bunch of open space to operate
+584432 + Funnel Right Waft Intake	(2,2,12) // Will not explode and has decent health
+584433 + Double 1.5 Waft Intake		(2,2,12) // Corner intake
+--Wings
+584370 + Polaris Wing			(4,2,3) //BICC Wing with INLINE Attachment nodes
+584371 + Neutralis Wing			(3,2,3) //Wing that lacks Control Surfaces
+584371 + Medium Neutralis Wing		(3,2,3) //Wing that lacks Control Surfaces
+584372 + Sheerwing Mid Wing		(2,2,3) //Frontal finishing Wing that is a weapon blade
+584373 + Left Sheerwing Wing		(3,2,3) //Left Sheerwing
+584374 + Right Sheerwing Wing		(3,2,3) //Right Sheerwing
+584375 + Tiny Tab Wing			(1,2,2) //Tiny TAC Aerofoil
+584376 + Middle Flexi Wing 		(3,2,2) //Basic TAC Wing with Control Surfaces and built-in airbrakes
+584378 + Left Sideburner Wing		(2,2,5) //Plasma fin wing
+584379 + Right Sideburner Wing		(2,2,5) //Plasma fin wing
+584380 + Left Flexi Wing 		(3,2,3) //Left Flexi
+584381 + Right Flexi Wing 		(3,2,3) //Right Flexi
+584384 + Small Neutralis Wing 		(3,2,2) //Smaller Neutralis
+584385 + Left Short Flexi Wing 		(2,2,3) //Left Shorter Flexi
+584386 + Right Short Flexi Wing 	(2,2,3) //Right Shorter Flexi
+584387 + Tiny Neutralis Wing 		(1,2,2) //tiny Neutralis
+--Space
+584219 + Gigalord Flight Engine Bell	(2,2,3) //TAC Valhalla Flight Engine
+584218 + Garnigho Spaceship Engine 	(3,4,8) //Hoverbug Engine with restricted steering power, but high mass tolerance
+584322 + HVU Engine 			(1,1,4) //Boosts like steering hovers, weaker than a booster but better than a prop. Consumes fuel.
+584436 + DONUT-16 Fuel Tank		(3,1,3) // Will not explode, safe storage
+584437 + Zephyrus Anti-Gravity Core	(3,4,1) // Antigrav for large ships
+----------------------------------------------------------------------------------------------------
+
+
+WEAPONS 
+//Interesting weapons, which do not act like your average peashooter or boom gun. 
+// Firepower does not nessearily scale with size.
+----------------------------------------------------------------------------------------------------
+--OG Big Bertha Turret Style
+584221 + Light Praetorian Turret 	(5,5,8) //Somewhat like OG Big Bertha, lotta range, lotta damage, and lotta mass.
+--Ballistic
+584222 + Pivelite AutoCannon 		(2,2,3) //Sits on an L-shaped base. Fires shells that fly SUPER FAST to stop even the fastest of threats
+584290 + Ancestor Carbine 		(2,1,2) //Classic, cost-efficient carbine weapon.
+--Energy
+584240 + Extruder Gun 			(1,1,1) // half-slab-sized gun that deploys
+584261 + Spark Battery 			(1,1,1) //Small introductory gun that shoots shield-clipping DEATH
+584223 + Valhalla CrossBeam Turret 	(5,2,5) //Superfiring laser turret with intertwining beams to reach long distances.
+584224 + Valhalla Reilegh Turret 	(5,3,5) //Superfiring "Lasers" that explode a certain distance away
+584225 + Kiyashima II Laser Battery 	(4,4,6) //Superfiring, Powerful capital-class cruiser laser weapon
+584382 + Meteor Dome Laser		(4,4,4) //A very fast laser machine-gun
+584280 + Battlecruiser Laser Turret	(12,6,7) //Large, updated naval laser cannon that runs clean through enemies. 
+584289 + Dreadnaught Laser Turret	(13,6,7) //No messy explosions here.
+584300 + Long Tom Positron		(1,3,16) //Long penetrating laser BS cannon that trades nearly all explosiveness for maximized penetration
+584429 + Diagonal Laser Turret		(5,5,12) //Diagonal laser naval cannon
+--Shotgun
+584285 + Retrograde Burner Shotgun 	(1,1,1) //Turreted pushback shotgun like a Sonic Lance
+584288 + Particle Lance Shotgun		(1,4,1) //Powerful burst lance that ignores obstacles
+--Guided
+584226 + Draccor Hyperspeed Launcher	(3,2,2) //Odd Design, reused parts from the Zorg to save time. Fires VERY FAST missiles that also may miss the target
+584227 + Zorg MK23 VLRS			(3,5,2) //Vertical Rocket Launch System Missiles with strong turning and decent range. Slow missiles, high maneuverability.
+584229 + Repair Bee Nest 		(2,2,2) //Bees that fly into the enemy and do the BUZZ OF DEATH
+584247 + Halberd Toothpaste Laser 	(1,2,4) //Toothpaste Laser that tracks enemies and homes in on them for massive stacking energy damage.
+584263 + KRAM ICBM Missile System 	(2,2,4) // Fires one POWERFUL nuclear missile that follows its target
+584265 + Argentavis Interceptor Rifle 	(2,2,2) //weak gun that shoots projectile deflecting EPMC sparks with low damage, but can intercept almost anything you throw at it
+584324 + Impact Missile			(1,1,1) //Fires out missiles that can intercept things and itself. Spamming is more harmful than good.
+584383 + Pursuit Convergence Missile	(4,2,6) //A very powerful air-to-air superiority 
+--Bowling Ball Cannon 
+584267 + Spheroth Ball Cannon 		(4,7,4) // Launches HUGE SPHERES that bounce around and deal massive damage to the enemy.
+--Beams
+584279 + Positivity Supercharger Beam 	(3,3,3) //Drags enemies towards player Tech
+--Tesla
+584275 + Terminal Overload 		(2,3,2) //was Surge Cannon. zapp. Inaccurate and hits stray blocks.
+--EPMC - Superheavy Energy Ordinance
+584332 + [EPMC] Particle Main Cannon 	(1,1,3) //Charged particle blast, will reset charge if hit
+----------------------------------------------------------------------------------------------------
+
+
+ENERGY 
+//Fairly potent, also fairly demanding for safety precautions in some cases
+----------------------------------------------------------------------------------------------------
+--Generators
+584236 + QuantumFlux Rotary Generator 	(7,7,3)//About as big as the windmill power thing and generates as much as the power thing - was (10,10,3) but block injector decided to crash. Will nerf hard once Dynamos are nerfed to only work on solid terrain.
+584323 + Energy Precipitator 		(3,1,1) //Generates Power and also doubles as energy storage. Dangerously volatile. One going off will set off an instant chain-reaction.
+--Batteries
+584425 + Pancake Battery 		(2,1,2) //Smaller power battery with a weak built-in passive gen
+584237 + Waffle Battery 		(2,3,2) //Stores more than BF, and is bulky. Has weak, built-in generator.
+584460 + Synchrotron Tokamak 		(3,3,4) //Unsafe but EXTREMELY dense battery - requires TONS of power to kickstart
+--Chargers
+584283 + Phase Outlet 			(1,1,1) //Fast charge at melee, use with Plug. Sometimes, old school is just that more effective.
+584284 + Phase Plug 			(1,1,1) //Fast charge at melee, use with Outlet.
+--Shields
+584238 + BroadBody Shield Projector 	(3,3,3) //Offset bubble block, Big bubble, slow recovery
+584239 + Grudge Shield Projector 	(1,2,2) //Offset bubble block, very fast recovery time and low reboot cost, small bubble.
+584272 + AIM-ALL Shield Projector 	(4,4,4) //Shield Stereopticon that rotates towards the nearest enemy with fairly high efficiency.
+584286 + EPMC Defense System 		(2,1,4) //Strong shield that consumes loads of power to maintain an explosive-blocking shield.
+--Repair
+584241 + S.P.A.M.A.T. Repair Projector 	(1,2,1) //Offset bubble block, very fast healing rate, really small bubble.
+584259 + Hoarg Repair Projector 	(2,3,2) //Large, GEOcorp-like healing bubble with decent heal rates, and unfair idle power usage.
+--Jammers
+584242 + Perdition Sphere 		(3,3,2) //Offset bubble block, hinders tech in bubble area.
+----------------------------------------------------------------------------------------------------
+
+
+UTILITY 
+//Fun stuff, excaping death, sensing further, distractions, ETC.
+----------------------------------------------------------------------------------------------------
+--Decorations
+584202 + Oversight Bridge Viewport 	(2,2,1) //A Stackable Bridge window that looks like a Sci-fi battleship bridge section
+584360 + HeXagon Logo 			(1,1,1) //The TAC insignia on a light.
+584321 + Foremount Viewport Cab 	(1,1,2) //Has FP interior with basic vulcan
+--Explosive Bolts
+584230 + Cab Frame Block 		(4,2,4) //A frame to hide your Hoverbugger Cab in and maximise APs from it. Press X to escape! - U-shaped
+584231 + Star Hatch Block 		(4,1,4) //A very handy well-armored hatch that jettisons itself upon pressing X
+--Radars
+584232 + SatNav Radar Dish 		(1,2,1) //More Range in a 45 degree cone
+584233 + SatCom Radar 			(1,3,1) //Even MOAR Range in a 30 degree cone
+--Lights
+584235 + Overcast Flashlight 		(1,1,1) //Nice, bright light
+584252 + Prime Floodlamps 		(1,1,2) //bright lights, but better
+584253 + Retro Headlamp 		(2,1,1) //an actual retro-car headlamp
+--Doors
+584249 + Bulkhead Door 			(1,5,3) //Closes when enemy nearby, near indestructible.
+584254 + Bulkhead Door Frame 		(7,5,3) //Closes when enemy nearby, virtually indestructible.
+--Gyros
+584258 + Torque Single-Axis Gyro 			(1,3,3)//A very powerful single-axis gyro
+----------------------------------------------------------------------------------------------------
+
+
+CONSTRUCTION 
+//All can run without being anchored (Excluding the anchor OBVIOUSLY)
+----------------------------------------------------------------------------------------------------
+--Anchors
+584244 + Stake Rotating Anchor 		(3,1,3) //Strong, armored rotating anchor
+584420 + Substructure Anchor  		(2,3,2) //Anchor that deploys terraforming concrete in an area in front of it to make a nice,
+// flat foundation. Place this last when making a base.
+--Production
+584245 + TAC Fabricator			(2,2,3) //Mobile fabricator for TAC parts
+584400 + Catwalk Conveyor 		(1,3,1) //Strong, bulky conveyor
+584401 + Shunt Conveyor 		(1,3,1) //Pulls from one direction to another
+584402 + Elevate Conveyor 		(1,3,1) //Step conveyor but it does 3 steps at once
+584403 + Filter Conveyor 		(1,3,1) //Average filter conveyor
+584404 + Dropper Conveyor 		(1,3,1) //Moves given chunk far way from craft
+584405 + Vac Receiver			(1,2,1) //Slow, long-ranged directional Collector
+584406 + Parallel Silo	 		(2,6,6) //Large armored silo built to handle lines of fabs, low capacity
+584407 + Vertigo Refinery		(2,5,1) //Tall refinery with 3 inputs, and 3 output connections
+584408 + Tabula Component Factory	(3,6,1) //Tall Component factory with 3 inputs, and 3 output connections
+584410 + Crunch Scrapper		(3,4,3) //Mobile scrapper that also doubles as sparta pit
+584413 + Acute Delivery Cannon		(4,5,1) //Angled Delivery cannon
+584415 + TAC Manager Pacemaker 		(2,2,1) //High-Health, large pacemaker that also doubles as a quad CPU to boost your tech.
+--Magnets
+584246 + Maglock 			(1,1,2) //Long ranged magnet that can carry heavy loads, but only a few blocks at a time
+--Legionite.exe Has Encountered A Serious Error!
+584248 + UnregisteredBlockError  (NaN,NaN,NaN)//NullReferenceException
+----------------------------------------------------------------------------------------------------
+
+CHANGELOG:
+
+Planned
+584458 + ION BEAM CANNON		(2,1,2) //Drains shields like there's no tommorrow
+584459 + Turret Drive Gearbox 		(2,1,2) //Sets all turret aiming speeds to 65. 
+//Hinders smaller, faster turrets but makes larger capital turrets more viable.
+
+----------------------------------------
+TAC_Pack Beta Version 0.5.3 - Bath Before the Hurricane
+
+ANNOUNCEMENT:
+With the advent of NuterraSteam, the TAC Pack will continue to be developed on Forums as the Unofficial Block Injector still and always 
+serves as a powerful development platform.
+The workflow will remain the same until the final shift to Steam:
+Testbench >>> Unofficial >>> Steam
+
+Model overhauls for:
+Positivity Supercharger, Long Tom Positron, AIM-ALL, Pancake Battery, Waffle Battery
+All Shields now have a broadcasting effect
+
+!! -WARNING- !!
+A BLOCK HAS BEEN ADDED TO THE SIZE OF THE LONG TOM POSITRON! (lower clipping area with the large copper bump)
+CHECK FOR MISSING BLOCKS!
+
+Significant Changes:
+>>>The existing bulkhead doors will be moving to special soon<<<
+- a duplicate that's cheaper and not indestructable will be in it's place.
+Cleanup of some errors and reduced unused textures in the Block Injector - loading time should be reduced
+
++++ Added support for RandomAdditions 
+- When RandomAdditions is installed: 
+Most TAC armored blocks lose their armor typing and become standard, but:
+Bendpoints and some others become invulnerable to damage caused by explosions (not the typing, the AoE) only
+all Normal TAC blocks greatly reduce incoming damage caused by explosions (not the typing, the AoE) as originally intended
+This throws TAC into that special position where TAC is used against powerful enemies while also becoming prone to weakness 
+against normal enemies.
+
+? Some Jumbo Jet wings (TAC's wings) now have updated desc showing that they need at least 80 MPH top speed to upkeep their lift.
+
++/- All "lasers" have been renamed to Shock Cannons or Dense Energy Cannons to better represent their projectile type.
++/- Other weapons have been renamed appropreately.
+
++++ The Repair Bee Commando has been retrived from the water and is now water-proofed
+The Repair Bee Commando is back in the block menu!
+
+++ HUGE BUFFS to walker leg health pools as they weren't edited at all from testing to release
+They are still slower than normal wheels and do not feature wall sticking (look to the smaller walker legs in the future)
+Changed Stalker Spikes Health from untested default value 7500 to 52,500
+Changed Stringer Legs Health from untested default value 7500 to 42,500
+
+++ Fixes to shotgun damage handling - a powerful vanilla shotgun alpha-strike will no longer eradicate a TAC tech in one go
+Previously almost all TAC blocks blocked nothing and allowed damage to be applied straight through
+Now:
+All armor slabs entirely block shotgun blasts
+Additionally, normal TAC blocks also block shotgun blasts by 0.9 (vs the typical 0.8), making them effective again, the rings get a damage resistance bonus.
+Surface-mounted turrets that extend beneath the hull also entirely block shotgun blasts from getting inside
+Bendpoints and internal components remain incapable of blocking any shotgun penentration whatsoever
+
++ Buffed Speedomatic Tank Tracks
+They now are less likly to stall
+Overload slowdown force changed from 85000 to 45000
+
++ Overhaul to Mark 8 Wheels
+They now come with a built-in hover controller
+Adjusted hover vectors to allow proper control at max strength - now they should operate like intended
+Hover-based wall sticking has been buffed and tuned to climb 90 degree inclines like intended
+Hover effects mounted to wheel properly
+
++ Overhaul to Argentavis Interceptor Rifle - should now actually stop projectiles
+Remaned to Argentavis EPMS Interceptor Rifle
+It remains a power-free defense measure as it still messes with allied shots.
+It now fires for appox. 1.75 seconds and then reloads for 8, and the inaccuracy was increased to cover more trailing projectiles.
+Unlike other types of defense, this active defense can be used to stop shield-bypassing projectiles, but far less likely compared to interception of normal projectiles.
+
++ Buff to Retroburner Shotgun, should now be far more forceful and gain some viability late-game.
+Changed damage per-hit from 4 to 10
+Changed launch force duration from 3.0 to 2.6 seconds
+Changed launch force strength per-hit from 250 to 400
+Changed launch force spread from 2.0 to 5.0
+Changed maximum range from 20 to 24
+
++ Buff to Ethereal Lancer Shotgun to make it more suitable for lategame, huge given phasing (stacks fast - can kill cabs with little to no resistance)
+Aiming range is still heavily restricted
+Changed damage per-hit from 125 to 150
+Changed maximum range from 30 to 42
+
++ Overhaul to all Capital Class Laser Turrets
+Renamed to Shock Cannons appropreately
+Using the Meteor Turret as a basis:
+Halved Armor Penentration effect
+Changed Cooldown from 4.2 to 1.95
+Lowered Damage per hit
+Added burst stagger fire effect to increase combat efficiency (and make it more asthetic to the source material)
+Overall, DPS should have improved and be on par with Meteor Turret (but deal more against layered armor)
+
++/- Overhaul to Long Tom Positron
+Renamed to Shock Cannon appropreately
+Fixed Crash issue on Fantastic Graphics
+Using the Capital Class Laser Turret overhaul as a basis:
+Changed contact damage per-hit from 4500 to 2000
+Changed Cooldown from 1.5 to 1.95
+Changed Projectile Velocity from 150 to 200
+Changed vertical Aim range from 45 to 75
+Fix to Long Tom Positron's powerful piercing effect
+Reduced contact Armor Penentration effect from 1.0 to 0.75
+Aiming Pivot has changed to make power supplies look more feasable
+Added three more APs to the back bottom
+
++/- Overhaul to Positivity Supercharger
+Renamed to P.S. Tractor Beam since it works like intended now
+Consistancy has been changed to be consistant per-frame (may have a slight performance impact)
+As a result:
+Should no longer break when a fire-rate increasing buffblock is placed upon it
+Targets should be pulled along FAR more realistically
+It deals less damage from ground collisions but should also be less lethal when used for allied purposes (yes it works on allies)
+
++/- Overhaul to Torque Gyro
+Renamed to Torque Single-Axis Gyro
+Added resistive forces to the Torque Gyro to give it a more realistic torque effect and reduce wobble.
+It's remains weaker than the BF passive all-axis.
+Increased stability on the Torque Gyro.  This makes it react slower but stronger, far more suitable now for larger designs.
+
+
+Changes:
+++ Tremendous buffs all-round for Extruder Gun
++ Buffed Spark and Extruder maximum firerate
++ Visual improvements to all TAC boosters
++ Fix to Toothpaste Laser Crash issue on Fantastic Graphics
++ Fix to Theta and Donut Block colliders
++ Fix to Center Of Mass of new Angular wings
++ Fix to Possession Steriopticon grabbing effects
++ Fix to missing AP on Zephyrus Antigrav
++ Fixed some more typos
++ Velocity buff to Extruder Gun: Was 80, now 115
++ Velocity buff to Dreadnaught Laser to match others: Was 175, now 200
++ Changed Extruder Gun from explosive to armor typing to increase viability as a small tech weapon
++ Changed Cross-Beam Turret from shield to armor typing to increase viability
++ Reduced explosions from all intakes as the overhead makes them painful enough
++ Fixed colliders on Pivelite Auto Cannon
+
++ Fixed some model shapes and coloring flaws
+
++/- Halved projectile count of Pivelite but kept the DPS the same
++/- Changed Light Praetorian Turret to fire faster but deal the same DPS
++/- Fixed messed up stats of the TAC Manager (confused the file with a future upcoming corp's "overdrive")
++/- All current TAC AIs are now AI Cores - Reliant on TACtical AI TTMM Mod to function 
+
+- Changed Reilegh Turret from armor to shield typing to make it high-risk, high-reward
+- Greatly lowered Halberd Toothpaste Laser DPS
+- Made Trundles slippery like they were supposed to be
+
+
+// New blocks
+584296 + Mark 8 Wheel (fenderless) 	(2,1,1) //Basic hover car wheel
+584350 + Long Angle Slab		(3,1,2) //to cover up that one hole that now exists in the trundle
+584352 + Vernier Adjustment Thruster 	(2,1,2) //Strong, sideways one-directional fuel thruster
+
+
+-----------------------------------------------------------
+TAC_Pack Beta Version 0.5.1 - The Unpopping
+Announcements:
+Bugfixes after Major Shield Update!
+
+Model overhauls for:
+Turbulence, Pivelite, Trundle, Light Praetorian, Reliegh Cannons, Cross-Beam Cannons, Ancestor
+WARNING: ONE AP WAS REMOVED FROM THE TRUNDLE WHEEL - Check for loose parts!
+
+Naval Ship parts are incoming, with very high buoyancy for the cost of unused volume spaces.
+
+Significant Changes:
+Disabled deflective properties of all Reactive Armor since it was causing issues for the recent weapons
+Removed idle thruster effects from HVU thrusters to reduce lag
+Removed unnesseary hover effects from the  Garnigho Starship Engine to reduce lag
+TAC EPMC Defense Matrix nerfed from radius 35.0 to 22.5 and damage drain increased to prevent just flat out making other TAC shields obsolete.
+Yes I am aware that the LK Solaris and other BL weapons clip through it, no it was >>>not<<< meant to be an apex shield.  
+The way it's built was for smaller tech surviability reasons.
+
+More wing patches, shouldn't bug out as often anymore
+
+Overhaul to TAC AIs - they now can slightly fire while out of player range and use attached boosters (need buffblocks installed)
+Allied AI turret now does it's job whilist stationary
+
++ Fixed all shield/repair generators
++ Fix to Polaris Wing collider blocking off it's cutout
++ Fix to Jagged Shift armor denying small block retreval from within
+
+Thanks to the help of Helios, I have acquired a nice point to balance around, so I can now make other weapons feel relevant rather than exist underpowered
++ Buffed Ancestor Heavy-Repeating Carbine projectile speed (95 -> 135), damage (40 -> 65) and accuraccy (0.25 -> 0.12) and nerfed kickback (30.0 -> 50.0) 
++ Buffed Meteor Laser Turret damage (75 -> 150) and accuraccy (0.15 -> 0.075)
++ Buffed Kiyashima Turret damage (1000 -> 1225)
++ Tweaked Ethreal Lance to deal 125 energy damage every 3 seconds, now much more threatening
++ KRAM ICBM was given some movement under the water
++ Fixed Draccor Missile shield bypass issue
+
+- Nerfed Zorg missile launch flight speed, it now aims correctly, will still miss point-blank.
+- LARGE nerf to Dreadnaught Laser cannon, now identical stats to the Battleship Laser but with 30 more damage per shot
+This was due to the devastating effects of the doubled firerate and the AP effect stacking far more damage than expected
+
+
++/- Changed SFX of Dreadnaught and Battlecruiser turrets to work nicer
+-/+ Energy Pulse Modulator System Beam Gun renamed and overhauled to Halberd Toothpaste Laser
+Now has a shorter range, and a smaller explosion, but handles like an actual toothpaste laser now
+
+
+// New blocks
+
+584470 + Tempest Jet Engine 		(1,1,3) //Smol jet engine like the turb but Zero Prop-sized for ease of use
+
+More wing parts
+584385 + Left Short Flexi Wing 		(2,2,3) //Left Shorter Flexi
+584386 + Right Short Flexi Wing 	(2,2,3) //Right Shorter Flexi
+584387 + Tiny Neutralis Wing 		(1,2,2) //tiny Neutralis
+
+
+
+
+-----------------------------------------------------------
+TAC_Pack Beta Version 0.5.0 - Base and Space Update
+Announcement:
+WARNING! 
+Once TAC Fuel tanks come out, the Compressors will lose most of their fuel reserves!
+
+Significant Changes:
++/- Repair Bee Nest overhauled to repair own player Tech blocks when there are no enemies nearby, weaker attacks overall but can automatically pluck blocks from enemies and grab loose blocks from the battlefield.
+
++/- Tweaks to ION Cannon - Greatly reduced damage and buffed firerate to make it feel less niche
+
++/- Tweaks to various armor blocks after finding cost-related inconsistancies
+
++ All missiles except the nuke were updated to work within water - nuclear torpedoes are too spoopy
++ All Half Slabs and related were buffed from 450 HP density to 750 HP density with mini-changes accordingly to make them viable as high-resistance armor
+Also made their colliders a bit bigger than they actually are to permit usage as flooring
++ Stalker Legs can now strafe
++ New models for TAC Projector bubbles
++ Ethereal Lancer Shotgun damage buffed from 20 to 50 and overhauled effects
++ Tweaked Speedomatic Tank Tracks to work better when used in pairs
++ Fixed control issues with Middle Flex Wing and Tiny Tabs
++ Added more APs to repair projectors to make them less frustrating to use
+
+
+// New blocks
+//   The large starship set is now complete, now they should be vastly easier to make
+//  + Base parts?  A full system built to work while mobile with that much needed symetry aspect.
+
+//Base
+// Notice the tallness of the TAC base system.  Fairly durable.
+// Nearly everything is made to handle well under nomad conditions.
+584400 + Catwalk Conveyor 		(1,3,1) //Strong, bulky conveyor
+584401 + Shunt Conveyor 		(1,3,1) //Pulls from one direction to another
+584402 + Elevate Conveyor 		(1,3,1) //Step conveyor but it does 3 steps at once
+584403 + Filter Conveyor 		(1,3,1) //Average filter conveyor
+584404 + Dropper Conveyor 		(1,3,1) //Moves given chunk far way from craft
+584405 + Vac Receiver			(1,2,1) //Slow, long-ranged directional Reciever
+584406 + Parallel Silo	 		(2,6,6) //Large armored silo built to handle lines of fabs, low capacity
+584407 + Vertigo Refinery		(2,5,1) //Tall refinery with 3 inputs, and 3 output connections
+584408 + Tabula Component Factory	(3,6,1) //Tall Component factory with 3 inputs, and 3 output connections
+584410 + Crunch Scrapper		(3,4,3) //Mobile scrapper
+584413 + Acute Delivery Cannon		(4,5,1) //Angled Delivery cannon
+584415 + TAC Manager Pacemaker 		(2,2,1) //High-Health, large pacemaker that also doubles as a quad CPU to boost your tech.
+
+// Cabs
+584297 + Eagleraptor Cab 		(1,2,2) //Jet fighter cab
+
+// New Power
+584286 + EPMC Defense System 		(2,1,4) //Strong shield that consumes loads of power to maintain an explosive-blocking shield.
+584425 + TAC Pancake Battery 		(2,1,2) //Smaller power battery with a weak built-in passive gen that only works in daytime
+584460 + Synchrotron Tokamak 		(3,3,4) //Unsafe but EXTREMELY dense battery - requires TONS of power to kickstart (Credit tankium)
+
+//  Basics
+584243 + Big Grate Slab Block 	(3,2,1) //Blocks explosive attacks better than other Half-Slabs but not bullets, shotguns, and impacts
+584318 + Sub-Slope 		(1,1,1) //Transition from 0.5 to 1.0
+584319 + Long Sub-Slope 	(3,1,1) //Transition from 0.5 to 1.0
+584426 + Verge Armor		(1,1,1) //Transition from Curb to 0.5 edge
+584427 + Armor Block		(1,1,3) //Smaller version of the Heavy Armor Block
+584428 + TriHex Armor Corner	(1,1,1) //Alt corner
+
+//  Flight
+584430 + Middle Waft Intake		(2,2,12) // A safer alternative to regnerating fuel on the fly
+584431 + Funnel Left Waft Intake	(2,2,12) // Demands a bunch of open space to operate
+584432 + Funnel Right Waft Intake	(2,2,12) // Will not explode and has decent health
+584433 + Double 1.5 Waft Intake		(2,2,12) // Corner intake
+584436 + DONUT-16 Fuel Tank		(3,1,3) // Will not explode, safe storage
+584437 + Zephyrus Anti-Gravity Core	(3,4,1) // Antigrav for large ships
+
+//  Complementary guns
+584280 + Battlecruiser Laser Turret	(12,6,7) //Large, updated naval laser cannon that runs clean through enemies. 
+584289 + Dreadnaught Laser Turret	(13,6,7) //No messy explosions here.
+584291 + Long Tom Positron		(1,3,16) //Long penetrating laser BS cannon that trades nearly all explosiveness for maximized penetration
+584429 + Dialga Laser Turret		(5,5,12) //Diagonal laser naval cannon
+
+Changes:
++ Changed Long Dynamic transition blocks to work better with other existing TAC parts
++ Changed Ancestor Heavy-Repeating Carbine model to work better with 0.5 parts
++ Renamed Pursuit Convergence Missile to Pursuit Convergence Missile Bay
++ Properly added recipe to Pursuit Convergence Missile Bay - Cost changed from 194172 to 309456 to make sure that it abides better by the "more expensive" catch
++ Buffed Grudge Shield Stereopticon bubble size from 9.5 to 12.5
++ Buffed Maglock Block Magnet Grabbing strength from 2000 to 4000 and made it lose less strength from target mass
++ Buffed Positivity Supercharger Beam health from 2500 to 4500
++ Buffed Positivity Supercharger Beam Grabbing strength from 2500 to 3000
+
++/- Renamed Speedomatic Tank Treads to Speedomatic Tank Track to be more consistent with vanilla naming
++/- Tweaked performance of Mark 8 Wheel to handle more like an on-road wheel
+
+- Nerfed O-Latch elevation aiming from [-55, 55] to [-40, 40]
+- Nerfed Maglock Block Magnet Max Block number capacity from 5 to 2
+- Nerfed Grudge Shield Stereopticon health from 7500 to 4500 because it would outlast other reasonable blocks when attacked directly
+- Made Pursuit Convergence Missile Bay visually appropriately explosive
+- Nerf Pursuit Convergence Missile Bay Explosive damage from 150 to 125
+- Changed weight of Positivity Supercharger Beam from default 10 to 30
+- Nerfed max charging speed of the Outlet if are borrowing NASA's supercomputer
+
+
+
+--------------
+TAC_Pack Beta Version 0.4.3 - Bigger, Faster, Stronger!
+
+Note - The TAC base components were held back this update to receive polish.
+
+Changes:
++ Fixed more collider issues
++ Made the Repair Bee Commando a bit more aggressive on request of Helios (target Range now 150)
++ Buffed Repair Bee Commando ranged attack
++ Buffed Repair Bee Nest attack splash
++ Updated the Blocks List
++ Tweaked the recipe on the Repair Bee Nest to be a bit more expensive
++ Buffed Repair Bee Nest firerate by a tidbit
++ Buffed Meteor Turret damage from 25 to 75 and added a bit more heat and accuracy on request of Helios
++ Tweaked Colliders of the Neutralis and Sideburn Wings to allow techs to drive over it properly on request of Green Theem
++ Buffed Turbotreads carrying spring from 7500 to 17500 to make it not handle like jalopy
+
+
+// New blocks
+//  Basics
+584390 + Inverted Reactive Armor Corner (1,1,1) //The inverted reactive armor. Goes with Fusion slab for aesthetics.
+584391 + Long Reactive Armor (3,1,1) // Longer reactive armor for easier building
+584392 + Double Angle Slab (3,1,1) //Double-sided angle slab
+584393 + Merge Slab (1,1,1) //Inverted angle slab
+584394 + Long Merge Slab (1,3,1) //Long inverted angle slab
+584395 + Angle Merge Slab (1,2,1) //Brace Half block end
+584240 + Extruder Gun (1,1,1) // half-slab-sized gun that deploys
+
+// Wheel
+584298 + Terrance Wheel (4,5,5) // A VERY strong wheel with moderate speed and a bonus attachment point at the end
+// NOTE: THIS CAN STILL STALL COMPETELY
+
+//Anchors
+584420 + Substructure Anchor  	(2,4,2) //Anchor that deploys terraforming concrete in an area in front of it to make a nice, flat foundation.
+
+
+--------------
+TAC_Pack Beta Version 0.4.2 - Leg Day
+
+Significant Changes:
+- Repair Bee Commando was so excited with it's new mini-railgun that it forgot it's repair equipment!
++ Made Bulkhead Door one singular, indestructible block. - MAY BREAK SOME BUILDS
++ The Hovabugga Cab now has a more reasonable sounding gun.
+
+
+(Same thing as 0.4.1_D)
+
+
+TAC_Pack Beta Version 0.4.1_D - All buggy indev builds will have a _D suffix.
+Early (buggy) Preview of Leg Day Update
+
+Significant Changes:
+PERFORMANCE PARTICLE CHANGES TO OPERATE BETTER ON FANTASTIC
++ New firing animations for all missiles
+- Nerfed the ~~WMC~~ EPMC Gun damage from the exorbitant 600000 to 6000.
+- Fixed price inconsistencies on basic TAC blocks
+
++ More models have been reworked
++ Fixed visual bugs
++ Hovabugga Cab now has a reliable grabbing collider
++ Undertaker Cab now has a reliable grabbing collider
++ Repair Bee Commando was handed a mini-railgun
++ Perdition Sphere now ignores how heavy enemy is
+
+
+New Additions:
+// Prototype walker legs:
+584361 + Stringer Legs 			(6,5,6) //Basic light-load walker legs
+584363 + Stalker Spike Legs 		(6,5,6) //Side walker legs
+
+// moregun
+584382 + Dome Laser		(4,4,4) //A very fast laser machine-gun
+584383 + Pursuit Convergence Missile	(4,2,6) //A very powerful air-to-air superiority missile
+
+
+//WINGS!
+// Aesthetic of Space Shuttle & JUMBO Jet wings 
+//- the heccin turbulences should have already sent a message
+
+// Only the Flexi and Little Tab wings have control surfaces, notice they are all two tall.
+// Ailerons flex a bit, dynamic with instant weak input, slow strong input.
+584370 + Polaris Wing			(4,2,3) //BICC Wing with INLINE Attachment nodes
+584371 + Neutralis Wing			(3,2,3) //Wing that lacks Control Surfaces
+584371 + Medium Neutralis Wing		(3,2,3) //Wing that lacks Control Surfaces
+584372 + Sheerwing Mid Wing		(2,2,3) //Frontal finishing Wing that is a weapon blade
+584373 + Left Sheerwing Wing		(3,2,3) //Left Sheerwing
+584374 + Right Sheerwing Wing		(3,2,3) //Right Sheerwing
+584375 + Tiny Tab Wing			(1,2,2) //Tiny TAC Aerofoil
+584376 + Middle Flexi Wing 		(3,2,2) //Basic TAC Wing with Control Surfaces and built-in airbrakes
+584378 + Left Sideburner Wing		(2,2,5) //Plasma fin wing
+584379 + Right Sideburner Wing		(2,2,5) //Plasma fin wing
+584380 + Left Flexi Wing 		(3,2,3) //Left Flexi
+584381 + Right Flexi Wing 		(3,2,3) //Right Flexi
+584384 + Small Neutralis Wing 		(3,2,2) //Smaller Neutralis
+
+
+New Basic Blocks based on requests
+584207 + TAC Three Block "Edge" (2,1,2) //A Three TAC Block in the shape of an L
+584228 + TAC Four Block "Vertex" (3,1,2) //A Four TAC block in the shape of a Y
+
+
+Changes:
++ More lore spices
++ Upgraded Bee Brains
++ All Main TAC blocks have numbering names now with the nickname in the blocks folder
++ Buffed Draccor fire rate from 2 every 5 seconds to 2 every 3.5 seconds
++ TACtical Grenade Name changed to TAC-TIC Grenade
++ Made Bulkhead Door one singular, indestructible block. - MAY BREAK SOME BUILDS
++ TAC Cab Frame renamed to TAC Cab Chassis
+- Nerfed Oversight Bridge Viewport health from 7500 to 2250
+
+
+--------------
+TAC_Pack Version 0.4.0 - Gold & Greebles Update
+
+40+ New Blocks!
+Visual Overhaul of nearly all weapons
+
+EPIC Addition:
+584360 + TAC HeXagon Logo 		(1,1,1) //The TAC insignia on a light.
+
+New Additions:
+//New Combat parts
+584275 + Terminal Overload 		(2,3,2) //was Surge Cannon. zapp. Inaccurate and hits stray blocks.
+584278 + Larry Laser 			(2,2,2) //Antimatter death gun of homing doom
+584279 + Positivity Supercharger Beam 	(3,3,3) //Grab and YEET
+584281 + TACtical Grenade 		(1,1,1) //my mAnGo is to bLoW uP
+584282 + Ion Mortar 			(3,5,3) //ION CANNON Mortar. Powerful against only stationary targets
+584285 + Retrograde Burner Shotgun 	(1,1,1) //Turreted pushback shotgun like a Sonic Lance. Doubles as a weak correctional thruster for AI
+584287 + O Latch 			(3,2,1) //Flamethrower module but *rInGs*. Hard countered by bullet spam.
+584288 + Particle Lance Shotgun 	(1,3,1) //stupidly powerful phasing burst lance
+584290 + Ancestor Carbine 		(2,1,2) //Classic
+
+//Finally, the slopes and paneling are here!
+584291 + Half Panel 			(1,1,1) //Smol block
+584301 + Long Half Panel 		(3,1,1) //Long Smol block
+584302 + Angle Half Slab  		(2,1,2) // goes with Half Slab
+584303 + Corner Angle Half Slab 	(2,1,2) // goes with Half Slab
+584304 + Half Half 			(1,1,1) //tiny block
+584305 + Long Half Half 		(3,1,1) //long tiny block
+584306 + Left Fender Half Half  	(2,1,2) // goes with Half Half
+584307 + Right Fender Half Half 	(2,1,2) // goes with Half Half
+584308 + 1.5 Armor 			(1,1,2) //TAC slope
+584309 + Long 1.5 Armor 		(3,1,2) //LOOOONG TAC slope
+584310 + Double 1.5 Armor 		(1,2,2) //45 TAC slope
+584311 + Long Double 1.5 Armor 		(3,2,2) //LOOOONG 45 TAC slope
+584312 + Dynamic Shift Armor 		(2,2,1) //To convert Reactive Armor to 1.5 Block
+584313 + Long Dynamic Shift Armor 	(2,2,3) //To convert Reactive Armor to 1.5 Block
+584314 + Jagged Shift Armor 		(3,3,3) //To convert Reactive Armor to two Half Halves to a Curb Block
+584315 + Jab Armor 			(3,1,2) //sharp, but not deadly
+584316 + Long Jab Armor 		(3,1,2) //sharp, but not deadly
+584317 + Reactive Armor Corner 		(3,1,2) //sharp, but not deadly
+
+//Space Fighter parts!
+//All super-heavy and weigh roughly 9 per unit.
+584320 + AV-7 Space Fighter Core 	(1,1,2), [7,7,8]MAX //VERY POWERFUL CAB, but restricts max building size to 7x7x8 and cannot anchor. DO NOT ATTEMPT FUSION!
+584321 + Foremount Viewport Cab 	(1,1,2) //Has FP interior with basic vulcan
+584322 + HVU Engine 			(1,1,4) //Boosts like steering hovers, weaker than a booster but better than a prop. Consumes fuel.
+584323 + Energy Precipitator 		(3,2,1) //Generates Power and also doubles as energy storage. Dangerously volatile. One going off will set off an instant chain-reaction.
+584324 + Impact Missile			(1,1,1) //Fires out missiles that can intercept things and itself. Spamming is more harmful than good.
+
+//New Energy Parts
+584283 + Phase Outlet 			(1,1,1) //Fast charge at melee, use with Plug. Sometimes, old school is just that more effective.
+584284 + Phase Plug 			(1,1,1) //Fast charge at melee, use with Outlet.
+
+
+//Steering and Hovers
+// TAC steering hovers use fuel, so combine that with compressors for maximum effectiveness.
+584351 + TAC Reaction Adjustment Thruster 	(1,1,1) //Most powerful steering hover available. Demands fuel to operate.
+584353 + TAC BasicBeyond 	(2,3,2) //Very powerful hover with very fast responsiveness
+
+//Compressors
+// DREADFULLY explosive and expensive. USE AT YOUR OWN RISK!
+// Explosions can hit these from beyond their max range, so CAREFUL!
+584357 + TAC Inline Streamfold Compressor 	(?,?,?) //Use with large fighter jets
+
+
+//Wheels
+584299 + TAC Mark 8 Wheel 			(2,1,1) //Basic car wheel
+
+
+//---EPMC Parts---
+// Inspired by R-Type's Wave Cannons
+// Takes time to charge and time while spacebar is held, and when firing nullifies nearby shots
+// Also doesn't have much health either
+// Deals energy damage, but so much and with an explosion radius it is ABSOLUTELY lethal
+// Will be set apart by a little icon at the lower left with a charge bar in the block icon
+// [EPMC] Heavy EPMC Cannon - getting hit once will reset ALL charge
+584332 + [EPMC] Particle Main Cannon (1,1,3) //Charged particle blast, will reset charge if hit, weak built-in capacitor and Accumulator
+
+
+//Returning Part
+*584217 + Vector Engine(2,2,4)//Engine that angles itself for incredible control
+
+
+Significant Changes:
++ Numerous Visual changes to weapons to make them fit in better.
++ Fixed uncountable collision and block selection issues
++ Gigalord Flight Engine Bell now yeets things at the thruster end.
++ Reactive armor is now, well, reactive armor. BY THE POWER OF PARTICLES!
++ Revamped some visual effects to look more powerful
++ Made a few of the TAC blocks available in lower grades
+
++ Removed some borderline swear words from here, please let me know if there are more.
++ Added Details(Greebles) to Pivelite Autocannon
++ Gimbal Jet Engine now works again
+
++ Buff all missiles' damage? Mixes of buffs to damage, decrease to explosion radius.
+
++/- Repair Scrambler Stereopticon (3,3,2) //Changed to Perdition Sphere
++/- Changed name of TAC Pivelite AA Battery to TAC Pivelite AutoCannon
++/- Changed name of TAC QuantumFlux Rotary Generator to TAC QuantumFlux Kinetic Generator
++/- Changed name of TAC AIM-ALL Aiming Shield Stereopticon to TAC AIM-ALL Aiming Panel Shield
++/- Lowered firerate and burst on the Repair Bees, but they can now get lodged in enemies and deal DoT
+
+- Nerfs to various weapons
+
+
+Changes:
++ Upgraded descriptions to be less smol brain and more big brain
++ Renamed Shield Scrambler Stereopticon to Possession Matrix Stereopticon
++ Possession Matrix Stereopticon can now be repaired, no longer jams self
++ Buff to Repair Scrambler Size 7.0 -> 12.5
++ Grudge Shield Size increased from 7.0 -> 9.5
++ Changed visuals on Reilegh Cannon to make it more different from the Cross-Beams
++ Buff to TAC wheels do they don't easily bottom out with light loads 
++ Fixed Pivelite Collider issues
+
+- Garnigho Starship Engine is less responsive now to nerf just how powerful it is compared to traditional hover bug.
+
+- TAC Wheels STALL COMPLETELY when overloaded unlike vanilla wheels and that is INTENTIONAL like pre-full-release terra tech.
+
+
+
+--------------
+CHANGELOG:
+TAC_Pack Beta Version 0.3.3_F
+Announcements:
+This version of TAC Pack is to be released on the forums
+
+Significant Changes:
++ Lots of cleaning up in here
+
++ Blocks that are using "shield" typing have received health buffs because they would die easily under fire and are so unpractically expensive that they are economic suicide
++ Bendpoint bracket health doubled because of atrocious price and weakness to bullet assault
++ More buffs to various blocks
++ Pivelite damage buffed from 15 to 25
++ QuantumFlux Rotary Generator now weighs 105 instead of 147
++ Waffle Battery now generates *2* power per second instead of 1
+
+- Nerfed Speedomatic Tank Treads price from 42756 to 73788 and made recipe more tedious.
+- Shield and Repair generators now have intended masses
+- Gimbal Engine is removed for now while issues are being sorted out.
+
+
+--------------
+TAC_Pack Beta Version 0.3.3
+
+New Additions:
+584276 + Hashpoint Block (1,2,2) //TAC's Bracket-Chassis Part
+584277 + Gridpoint Block (2,2,2) //TAC's Bracket-Grid Part
+
+Significant Changes:
++ Almost all blocks have pictures thanks to HeX's block snapshot skills
+
++ All TAC Blocks now have greatly increased blast resistance, meaning that it's far harder to take out a TAC Tech with only explosives than any other corp. This was done in part to make even the smallest of TAC Techs deadly.
+Currently this isn't working though because the functionality seems to be missing from the game as of recently...
+
++ So for now, the Bendpoint TAC blocks will be using Shield as their armor type.
+The Other TAC blocks will be using Armor.
+
++ Buff to Praetorian - Now hits more than once(it should have been doing that a long time ago, silly me) and deals more "heat" damage. Deals incredible damage if it hits a weak spot in the enemy. Will deal minimal damage if it hits slanted armor though.
+
+Changes:
++ Fixed Droney from flying away
++ Reduced recoil from Light Praetorian Turret from 4750 to 750
++ Buffed Draccor missile launcher to not be too badly overshadowed by the far cheaper HE Seeker Missiles
++ Reilegh and Toothpaste Laser now deal Plasma damage
++ Spark now deals Energy damage
++ Increased weight(x10) and fling (500->750) on Spheroth projectile to fling techs around
++ Buffed and Balanced the damage application on the Cross-Beam and Reilegh
++ Buff to Toothpaste Laser so that it now deals decent damage
++ Hoarg Repair projector now heals 2000 a second rather than 200
++ Shield generators no longer eat entire batteries under basic attacks
++ Waffle Battery now has built-in generation and explosion resistance because it felt very hard to use before
++ Fixed some errors in the Blocks List here
+
++ Buffed the KRAM's explosion from 20 to 22.5 and max damage radius from 12.5 to 20
+
+Cancelled in favor of giving the KRAM the ability to be PLASMA:
++ Buffed the KRAM's explosion from 20 to 25 and the max damage radius from 12.5 to 22.5
++ Buffed the KRAM's explosive damage from 2250 to 2500
+
+Known Issues:
+- Foolish mistakes mixing up area with volume in JSON descriptions exist
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+- Below is not working:
+?+ All Bendpoint Bracket Blocks now take zero damage from explosions, fixed masses.
+?+ Made Bulkhead Door Parts unaffected by indirect explosions: 0.175 -> 0.0
+
+
+Notes:
+- Bulkhead Door may receive an overhaul in the future to only be a two-part block.
+- The Gimbal Jet is not working as intended, the block injector code for custom aerofoils is bugged rn.
+
+--------------
+TAC_Pack Beta Version 0.3.2
+Announcements:
+This version of TAC Pack has been released to the public.
+
+Changes:
++ Fixed Repair Bee Commando
++ Buffed Torque of Maglev Spheroid Wheel from 7500 to 25000
+\ Changed visual effects of the Energy Pulse Modulator System Beam Gun
+- Removed extra particles from Repair Bee block dismantling due to potential likelyhood of causing crashes
+
+Known Issues:
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+
+--------------
+TAC_Pack Beta Version 0.3.1
+Announcements:
+Please update Block Injector!
+
+New Additions:
+584272 + TAC AIM-ALL Shield Projector (4,4,4) //Semi-Flat Shield Stereopticon that rotates towards the nearest enemy with fairly high efficiency. Hard countered by lobbed attacks.
+
+Changes:
++ Buffed Brakes on Speedomatic Tank Treads from 450.0 to 1000.0
++ Buffed Torque of Speedomatic Tank Treads from 57500.0 to 100000.0
++ Added more particles to Repair Bee Nest attack to visualize disassembly of blocks
++ Fixed muzzle flash of Spheroth Ball Cannon
++ Fixed visual clipping issue on Kiyashima II Laser Battery
+/ Changed Spheroth Ball Cannon aiming back to Lob rather than Roll due to buggy aiming issues
++ Nerfed Turning Power Factor of Speedomatic Tank Treads from 1.0 to 0.5
+- Nerfed Max RPM of Speedomatic Tank Treads from 500.0 to 475.0
+- Nerfed Drag Torque when Overloaded for Speedomatic Tank Treads from 850.0 to 85000.0
+- Nerfed Max weight spring for Speedomatic Tank Treads from 50000.0 to 7500.0
+
+Known Issues:
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+
+--------------
+TAC_Pack Beta Version 0.3 - The "Big" One
+New Additions:
+TAC Pack is now Officially Released in Beta "Early Access" state
+++ Many new particle effects added to weapons, do take a gander.
+
+Significant Changes:
++ Buffed Explosive Damage for Kram ICBM from 2000 to 2250
++ Buffed Range time for Kram ICBM from 12.5 to 15
+-- Kram ICBM now has explosive friendly-fire of 100 damage when shot at allies, when it explodes too close to player Tech (or it hits neutral lol). No other weapon in vanilla does this other than the HE Z4 explosive bolt.
+
+Changes:
++ Repair Bee Commando now has explosion resistance, because it is small
++ Fixed Speedomatic Tank Treads track inconsistencies
+/ Exaggerated Undertaker Mainframe Cab death animation
+
+------------------------------------------
+
+>>End of Alpha, Beginning of Beta<<
+Release to "Beta Testers" on authorized request
+
+------------------------------------------
+Last TAC_Pack Alpha Version 0.2.6
+"New" Additions:
+Wow! You Exist!
+
+Significant Changes:
++++ The Repair Bee Commando EXISTS
++ Whitepaw tweaks to Repair Bee Commando to fix AI
+/ Updated recipes for Spheroth Ball Cannon
+/ Updated recipes and health for Vector Engine
+/ Updated recipes for Reactive Armor
+/ Updated recipes for Scenic Armor
+/ Updated recipes for Repair Bee Commando
+
+Changes:
+++ Undertaker Mainframe Cab now takes 0 damage from ALL explosions in the ENTIRE GAME.
++ Added more APs to Spheroth Ball Cannon
++ Added more APs to Vector Engine
+- Nerfed control surfaces to oblivion on Vector Engine
+- Nerfed Health on Undertaker Mainframe Cab from 7500 to 4000
+- Nerfed Mass on Undertaker Mainframe Cab from 6 to 8
+- Nerfed Recipe on Undertaker Mainframe Cab
+
+Known Issues:
+- Twin-Barreled Reilegh Gun does not properly distort visuals upon exploding
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+- The Shaders not working bug has returned
+
+--------------
+Hotfix Version 0.2.5
+- Removed random zips in zip
+
+--------------
+Version 0.2.4
+New Additions:
+584267 + TAC Spheroth Ball Cannon (3,3,3) //Launches HUGE BALLS that bounce around and deal massive damage to the enemy.
+584217 + TAC Vector Engine (2,2,3) //Engine that angles itself for incredible control
+584268 + TAC Reactive Armor (1,1,1) //[BROKEN] Armor that nullifies explosions from explosive projectiles, as simple as that.
+584269 + TAC Scenic Armor (2,1,1) //yay windows in armor planes
+
+Significant Changes:
+++ Fixed invisible collider issue in the center of shield generators
+++ Fixed collider issue on Longpoint Block AGAIN
+++ Greatly improved HovaBugga Cab behavior in control
+
++ Light Praetorian Turret now has anchor and an AI module built-in like OG Big Bertha.
++ Light Praetorian Turret now has red eye glow 
++ Pivelite AutoCannon now has red eye glow 
++ Shield Scrambler Stereopticon's bubble is now red
+
+Changes:
++ Fixed Missing Zero Block APs
++ Fixed Visual gap bug on Spark Battery Azimuth
++ Buffed visual laser effect on Kiyashima II Laser Battery to make it look more deadly
++ Buffed Health on Kiyashima II Laser Battery from 7500 to 17500 to slightly better reflect TAC block healths
++ Buffed Mass on Shield Scrambler Stereopticon from 30 to 20 to make it more usable
++ Air gaps on the Shield Scrambler Stereopticon now allow block placement
+- Nerfed weight on Kiyashima II Laser Battery from 25 to 80 to better reflect TAC block masses
+
+
+Known Issues:
+- Twin-Barreled Reilegh Gun does not properly distort visuals upon exploding
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+- The Undertaker Mainframe Cab has issues being a swappable cab, or do not count as an actual cab when swapping Techs.
+
+--------------
+Version 0.2.3
+Significant Changes:
++ The visual trails for the weapons work again
+/ Moved Overwatch Cab to utilities and renamed it to Oversight Bridge Viewport. 
+/ TAC Fabricator now builds from HE, but is only available from being crafted first.
+
+Changes:
++ Added Rangefinder properties to Oversight Bridge Viewport
++ Buffed Speed of KRAM ICBM Missile System Missiles from 30.0 to 45.0 
++ Buffed Hit Damage of Energy Pulse Modulator System Beam Gun from 200.0 to 450.0 
+- Buffed Explosion Radius of Zorg Missile Launcher from 4.0 to 5.0
+- Removed Cab properties from Oversight Bridge Viewport, as it was causing shield issues when destroyed.
+- Nerfed Explosion visuals of Energy Pulse Modulator System Beam Gun
+- Nerfed Explosion visuals of Draccor Hyperspeed Missile System
+- Nerfed Turn rate of KRAM ICBM Missile System Missiles from 125.0 to 30.0, giving it minimum range.
+- Nerfed Turn rate of Zorg Missile Launcher Missiles from 125.0 to 100.0, making it easier to dodge.
+- Nerfed Gyro correction rate of HovaBugga from 40.0 to 35.0 
+- Nerfed Acceleration of Hovabugga Floating Cab 
+- Nerfed Max Speed of Hovabugga Floating Cab from 100+ to 55 to prevent it from being used as an easy way to win BF hover races
+
+
+Known Issues:
+- Twin-Barreled Reilegh Gun does not distort visuals upon exploding
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+- The Undertaker Mainframe Cab has issues being a swappable cab, or do not count as an actual cab when swapping Techs.
+
+--------------
+Hotfix Version 0.2.2
+Changes:
++ Fixed bug with TAC Bearing Wheel causing crash
+
+--------------
+Version 0.2.1
+Changes:
++ Fixes to credits
+
+--------------
+Version 0.2.0
+New Additions:
+584201 + TAC Undertaker Mainframe Cab //A Cab like the GSO Cab, but with far more health, and a tendency to stay INSIDE the Tech. Also has no wheels. (looks like a computer thing) Resists explosions.
+
+
+Changes:
+++ Repair Bees are looking much healthier thanks to WhitePaw
++ Lore Upgrades/Updates on various blocks
++ Added Greebles to various blocks that felt bland in some areas
++ Decoy Ejector Computer actually detaches from Tech now
++ Buffed Health of QuantumFlux Rotary Generator from 6500 to 9500
++ Buffed Mass of QuantumFlux Rotary Generator from 150.0 to 147.0
++ Buffed Health on Light Praetorian Turret from 8750.0 to 37500.0
++ Buffed Explosive resistance of Light Praetorian Turret from 0.8 to 0.5
++ Buffed Detach resistance of Light Praetorian Turret from Default to 0.1
+/ Moved Bulkhead Door Blocks to Accessories
+/ Fixed various Text formatting errors
+/ Changed slow Zorg Missile Launcher missiles from Impact to Explosive
+/ Changed Repair Bees Lifespan from Default to 3 seconds
+- Removed Visual APs on Kiyashima II Laser Battery to continue with no-AP TAC aesthetics 
+- Nerfed Recoil on Light Praetorian Turret from 1750.0 to 4750.0
+- Nerfed Vision Range on Light Praetorian Turret from 75 to 100.0
+- Nerfed Explosion Visuals on Draccor Hyperspeed Missile System
+- Nerfed Max Damage Explosion Radius on Draccor Hyperspeed Missile System from 3 to 2.75
+- Nerfed Health on Cab Frame Block from 12500 to 10000
+
+
+Known Issues:
+- Shaders are not showing up properly as intended in Terra Tech version 1.3.4 onwards
+- Twin-Barreled Reilegh Gun does not distort visuals upon exploding
+- Base model on the Speedomatic Tank Treads needs updating to fit nicely. Current model is for 2x3x8 stretched to 2x3x10
+- The Commander Cab and the Undertaker Mainframe Cab both have issues being a swappable cab, or do not count as an actual cab when swapping Techs
+
+--------------
+Version 0.1.3
+New Additions:
+584229 + TAC Repair Bee Nest (2,2,2) //Pending Balance and better BEE design. 
+please help I suck at making organic things and the bee currently looks atrocious
+
+Changes:
++ Exaggerated fire animation on Twin-Barreled Reilegh Gun and increased knock back to feel more deadly
++ Buffed rotation rate of the Twin-Barreled Reilegh Gun from 70 to 95
++ Fixed some issues on various blocks
+- Nerfed max range time on Twin-Barreled Reilegh Gun from 0.4 to 0.35
+- Updated and Nerfed Recipe on Argentavis Interceptor Rifle
+- Nerfed explosion on Twin-Barreled Cross-Beam Laser Cannon
+- Nerfed rotation rate of the Twin-Barreled Cross-Beam Laser Cannon from 70 to 50
+
+Known Issues:
+- Shaders are not showing up properly as intended in Terra Tech version 1.3.4 onwards
+- Twin-Barreled Reilegh Gun does not distort visuals upon exploding
+
+--------------
+Version 0.1.2
+New Additions:
++ 584265 - TAC Argentavis Interceptor Rifle (2,2,2) //Weak gun that shoots projectile deflecting EPMC sparks with low damage, but can intercept anything you throw at it 
+
+Changes:
+- Nerfed turning rate of Zorg Missile System Missiles from 175 to 125
+- Nerfed Cost of Kram ICBM Missile System from 70734 to 200043
++ Buffed tracking range of Kram ICBM Missile System from 200 to 300
++ Fixed collider on Elon Truss
++ Fixed model on Spark Battery to reduce clipping
++ Fixed aim issues with the Spark Battery
++ AI Modules now work properly, but only when set to enemy
+
+--------------
+Version 0.1.1
+>Initial Release Alpha<

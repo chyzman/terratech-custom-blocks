@@ -1,0 +1,62 @@
+{
+  "Name": "Hawkeye Jewel Light",
+  "Description": "A small red accent light.",
+  "ID": 117075,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 0,
+  "Grade": 0,
+  "Price": 240,
+  "HP": 250,
+  "Mass": 0.5,
+  "EmissionMode": 2,
+
+  "Recipe": "5, 7, 32",
+
+  "IconName": "HE_Jewel_Light.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "Fragility": 0,
+
+  "Cells": [
+    { "x": 0,     "y": 0,    "z": 0  },
+  ], 
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": -0.5  },
+  ],
+
+  "SubObjects": [
+    {
+        "SubOverrideName": "m_GC_fixedlight",
+        "MeshName": "HE_Jewel_Light.obj",
+        "ColliderMeshName": "HE_Jewel_Light_Collider.obj",
+        "Subposition": {  "x": 0,     "y": 0,    "z": 0  },
+        "Subrotation": {  "x": 90,     "y": 0,    "z": 0  },
+        "MeshMaterialName": "HE_Main",
+    },
+],
+
+"GamePrefabReference": "GC_Light_Fixed_111",
+
+"JSONBLOCK": {
+    "GameObject|Lights": {
+        "GameObject|GC_Fixedlight": {
+          "UnityEngine.Light":{
+            "type": 2,
+            "color": {
+                "r": 1,
+                "g": 0,
+                "b": 0,
+                "a": 1.0
+              },
+            "intensity": 10,
+            "range": 2.0,
+            "spotAngle": 360
+          }
+        },
+    }
+  }
+
+}

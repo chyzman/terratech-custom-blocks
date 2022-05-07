@@ -1,0 +1,117 @@
+{
+  "Name": "Old Star Floater Fan",
+  "Description": "Now this is new to Old Star. The design team was curious to see if they could create one of those fancy 'Hovers' that everyone has by strapping a prop to a motor and pointing it downwwards. And somehow IT WORKED!",
+  "ID": 300097, 
+
+  "Faction": 4, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3987, 
+  "HP": 1800, 
+  "Mass": 10,
+
+  "Recipe":  "45, 45, 45, 52, 54, 57", 
+  "IconName": "OS_Hover_Icon.png", 
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "BlockExtents": 
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },   
+  "APs": [ 
+    //Top
+    {"x": 0.0,"y": 1.5,"z": 0.0}, {"x": 1.0,"y": 1.5,"z": 0.0},
+    {"x": 0.0,"y": 1.5,"z": 1.0}, {"x": 1.0,"y": 1.5,"z": 1.0},
+    //Front
+    {"x": 0.0,"y": 1.0,"z": 1.5}, {"x": 1.0,"y": 1.0,"z": 1.5},
+    //Back
+    {"x": 0.0,"y": 1.0,"z": -0.5}, {"x": 1.0,"y": 1.0,"z":-0.5}, 
+    //Left
+    {"x": 1.5,"y": 1.0,"z": 0.0}, {"x": 1.5,"y": 1.0,"z": 1.0},
+    //Right
+    {"x":-0.5,"y": 1.0,"z": 0.0}, {"x":-0.5,"y": 1.0,"z": 1.0}
+
+  ],
+  "GamePrefabReference": "GC_Hover_222",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_Hover_222_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,
+      "MeshName": "OS_Hover_Base.obj",
+      "ColliderMeshName": "OS_Hover_Base.obj",
+	    "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+	  },
+	  {
+      "SubOverrideName": "m_GC_Hover_222_Jet",
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MakeBoxCollider": false,
+      "MeshName": "HoverSwivel.obj",
+      "ColliderMeshName": null,
+	    "SubPosition": { "x": 0.5, "y": 0.3, "z": 0.5}
+    },
+
+    {
+     "SubOverrideName": "Hover_Propeller",
+     "MeshName": "HoverProp.obj", 
+     "ColliderMeshName": "HoverProp.obj",
+     "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+    }
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0.5, "z":0.5 } 
+      }
+    },
+ "GameObject|m_GC_Hover_222_Jet": {
+    "GameObject|_spindle":{
+        "GameObject|Hover_Propeller":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
+             "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+           }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
+           "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+         },
+        "Spinner": {
+          "m_Speed": -1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,                
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false 
+        }
+      },
+    "GameObject|_hoverJet": {
+	"HoverJet": {
+	"forceMax": 10000.0,
+	"forceRangeMax": 28.0,
+	"m_DampingScale": 0.07,
+	"m_MaxClimbDistance": 10.0
+} 
+}  
+}
+}
+}

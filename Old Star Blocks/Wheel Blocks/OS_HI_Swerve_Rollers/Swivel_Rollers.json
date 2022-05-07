@@ -1,0 +1,201 @@
+
+{
+  "Name": "Old Star Swivel Rollers",
+  "Description": "This here is how the Old Star do. The Swivel Rollers are a type of wheel that come in as a set of 3. Thats 3x more than every other kind of wheel in the catalog that isn't bound to tank tracks!", //You can make multiple lines with \n
+  "ID": 300039, //A random ID that MUST be unique
+
+  "Faction": 4, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 9788,//was 42756 //GEO XL treads are 18834
+  "HP": 3500, //Battleship Cannon has 5500 health  
+  "Mass": 10.0,
+  
+
+  "IconName": "Swivel_Roller_Icon.png",
+  "MeshName": null,
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 47, 47, 49, 49, 49, 49, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 63, 63, 63, 63",
+  "EmissionMode": 2,
+
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top APs
+    { "x": 0, "y": 1.5, "z": 0 }, 
+    { "x": 0, "y": 1.5, "z": 1 }, 
+    { "x": 0, "y": 1.5, "z": 2 }, 
+    { "x": 0, "y": 1.5, "z": 3 },
+
+    // Back
+    { "x": 0  , "y": 1, "z": -0.5 },
+
+    // Front
+    { "x": 0  , "y": 1, "z": 3.5 },
+    
+    // Left
+    { "x": 0.5, "y": 1, "z": 0 }, 
+    { "x": 0.5, "y": 1, "z": 1 },
+    { "x": 0.5, "y": 1, "z": 2 },
+    { "x": 0.5, "y": 1, "z": 3 },
+  
+    // Right
+    { "x": -0.5, "y": 1, "z": 0 }, 
+    { "x": -0.5, "y": 1, "z": 1 },
+    { "x": -0.5, "y": 1, "z": 2 },
+    { "x": -0.5, "y": 1, "z": 3 }
+   
+  ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 2,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+ // Advanced Settings
+ "PrefabReference":                  "HE_Tracks_236",
+ "KeepRenderers": false,
+ "KeepColliders": false,                     // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+ "PrefabPosition":                   { "x": 0, "y": 1, "z": 0 },
+
+ "SubObjects":[
+   // Replace the original meshes with new ones
+   {
+    "ObjectName":                 "m_HE_Tracks_236_Body",
+    "MeshName":                   "Swerve_Base.obj",
+    "ColliderMeshName":           "Swerve_Base.obj",
+    "DestroyExistingRenderer":    true,
+    "DestroyExistingColliders":   true,
+    "Position":                   { "x": 0, "y": 1, "z": 3 }    
+   },
+
+   {
+     "ObjectName":                 "m_HE_Tracks_236_Wheel_01",
+     "MeshName":                   "Swerve_Wheel.obj",
+     "ColliderMeshName":           "Swerve_Wheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}        
+   },
+   
+   {
+     "ObjectName":                 "m_HE_Tracks_236_Wheel_02",
+     "MeshName":                   "Swerve_Wheel.obj",
+     "ColliderMeshName":           "Swerve_Wheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },
+     "Scale":                      {"x": 1, "y": 1, "z": 1}          
+   },
+
+   {
+     "ObjectName":                 "m_HE_Tracks_236_Wheel_03",
+     "MeshName":                   "Swerve_Wheel.obj",
+     "ColliderMeshName":           "Swerve_Wheel.obj",
+     "DestroyExistingRenderer":    true,
+     "DestroyExistingColliders":   true,
+     "Position":                   { "x": 0, "y": 0, "z": 0 },   
+     "Scale":                      {"x": 1, "y": 1, "z": 1}       
+   },
+
+
+   // Move these objects to their proper positions. Note that the track's bones are constrained to the wheel objects
+
+   {
+     "ObjectName":                 "_wheel_01",
+     "Position":                   { "x": 0, "y": 0.7, "z": 0.2 }     
+   },
+   {
+     "ObjectName":                 "_wheel_02",
+     "Position":                   { "x": 0, "y": 0.7, "z": 1.5 }        
+   },    
+   {
+     "ObjectName":                 "_wheel_03",
+     "Position":                   { "x": 0, "y": 0.7, "z":  2.8 }        
+   },  
+   {
+     "ObjectName":                 "b_Wheel_01",
+     "Position":                   { "x": 0, "y": 1, "z": 0.2 },  
+     "Scale":                      { "x": 1, "y": 1, "z": 1 }        
+   },  
+   {
+     "ObjectName":                 "b_Wheel_02",
+     "Position":                   { "x": 0, "y": 1, "z": 1.5 },
+     "Scale":                      { "x": 1, "y": 1, "z": 1 }       
+   },  
+   {
+     "ObjectName":                 "b_Wheel_03",
+     "Position":                   { "x": 0, "y": 1, "z": 2.8 },
+     "Scale":                      { "x": 1, "y": 1, "z": 1 }        
+   },
+   {
+    "OverrideName":                "_sparksLocator",
+    "SubPosition":                 { "x": 0, "y": 1, "z": 2},
+    "SubRotation":                 { "x":  0,  "y": 90,"z": 0}
+  }
+
+ ],
+"Deserializer":{
+ // Torque Parameters
+ "ModuleWheels": {
+   "m_TorqueParams": {
+     "torqueCurveMaxTorque":       8000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                               // A high torque value is good for offroad wheels.
+
+     "torqueCurveMaxRpm":          350.0,      //  Dictates the speed of the wheel. A higher number is faster. 
+                                               // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+     "passiveBrakeMaxTorque":      1200.0,     // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+     "reverseBrakeMaxRpm":         300.0,       // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+     "basicFrictionTorque":        200.0,      // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+     "fullCompressFrictionTorque": 200.0       // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+   },
+   
+   // Aesthetic parameters
+   "m_UseTireTracks":              true,       // Enables the wheel to leave tire tracks
+   "m_WheelTrackType":             0,          // Changes the tracks the wheel leaves behind
+   "m_AudioType":                  5,          // Changes the sound of the wheels when running
+                                               // 1 = Heavy GeoCorp wheels
+   "m_TireTrackWidth":             5,         // Does not work; supposedly, it should be able to change the width of the tire tracks.
+   
+   
+   "m_DustMinimumRPM":             5.0,       // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+                                               // This is related to "torqueCurveMaxRpm"
+   "m_DriveTurnPower": 10.0,
+   "m_DriveTurnBrake": 0.0,
+   "m_DriveTurnDifferential": 0.5,
+   "m_TurnOnSpotPower": 10.0,
+
+   "m_WheelParams":{
+     // Basic Wheel parameters
+     "radius":                     0.65,     // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+     "steerAngleMax":              25.0,      // Dictates how much the wheel is able to turn.
+     "steerSpeed":                 2.5,        // Dictates the time it takes for the wheel to fully go into turning position.
+     "thicknessAngular":           41.1,       // Dictates the width of the tire tracks
+     // Tire Parameters
+     "Instantiate|tireProperties":{
+       "Instantiate|props":{
+         "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+         "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+         "gripFactorLong": 3.5,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+         "gripFactorLat": 2.5                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+       }
+     },
+
+     // Suspension parameters
+     "suspensionSpring":           5000.0,  // Dictates the amount of bounciness of the suspension's spring. 
+                                               // It also affects the wheel's ability to carry weight.
+     "suspensionDamper":           300.0,     // This tells the suspension how much the springiness will be dampened. 
+                                               // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+     "maxSuspensionAcceleration":  15.0,
+     "suspensionQuadratic":        false,
+     "suspensionTravel":           0.3       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   }
+  }
+ }
+}

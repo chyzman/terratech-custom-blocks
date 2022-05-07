@@ -1,0 +1,324 @@
+{
+  "Name": "Hyperion Systems Javelin Heavy Missile Pod",
+  "Description": "A large missile pod developed by Hyperion Systems. The 3-block long Javelin missiles housed in this pod have enormous damage potential, paired with a large blast radius. Also, there's four of them in one pod. What can get any better than that?",
+  
+  "ID": 100023,
+  "Faction": 7,
+  "Category": 4,
+  "Grade": 1,  
+  "Price": 23887,
+  "HP": 1000,
+  "Mass": 4,
+  "CenterOfMass": {"x": 0.5, "y": 2.5, "z": 0.5},
+
+  "Rarity": 2,
+  "DamageableType": 0,
+
+  "Recipe":  "5, 5, 5, 5, 5, 43, 43, 43, 43, 43, 47, 47, 47, 47, 47, 47, 47, 47, 55, 55, 55, 55, 65, ",
+  "IconName": "HSJavelinIcon.png", 
+  
+  "MeshMaterialName": "HS textures.png",
+
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 0, "y": 1, "z": 0},
+    {"x": 0, "y": 2, "z": 0},
+    {"x": 0, "y": 3, "z": 0},
+
+    {"x": 1, "y": 0, "z": 0},
+    {"x": 1, "y": 1, "z": 0},
+    {"x": 1, "y": 2, "z": 0},
+    {"x": 1, "y": 3, "z": 0},
+
+    {"x": 1, "y": 0, "z": 1},
+    {"x": 1, "y": 1, "z": 1},
+    {"x": 1, "y": 2, "z": 1},
+    {"x": 1, "y": 3, "z": 1},
+
+    {"x": 0, "y": 0, "z": 1},
+    {"x": 0, "y": 1, "z": 1},
+    {"x": 0, "y": 2, "z": 1},
+    {"x": 0, "y": 3, "z": 1},
+  ],
+  
+  "APs": [
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": 1.5},
+    {"x": -0.5, "y": 3, "z": 0},
+    {"x": -0.5, "y": 3, "z": 1},
+    {"x": 1.5, "y": 3, "z": 0},
+    {"x": 1.5, "y": 3, "z": 1},
+    {"x": 0, "y": 3, "z": -0.5},
+    {"x": 0, "y": 3, "z": 1.5},
+    {"x": 1, "y": 3, "z": -0.5},
+    {"x": 1, "y": 3, "z": 1.5}
+  ],
+
+  "GamePrefabReference": "HE_BombBay_113",
+  "KeepRenderers": false,
+  "Keepcolliders": false,
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Base",
+      "MeshName": "HS Javelin Heavy Missile Pod.obj", 
+      "MeshTextureName" : "HS textures.png",
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 1, "y": -1, "z": -2 },
+      "SubRotation": { "x": 90, "y": 0, "z": 0 }
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Bomb",
+      "MeshName": "HS Javelin Missile.obj",
+      "MeshTextureName": "HS textures.png",
+      "SubPosition": { "x": -1, "y": 2.8, "z": -1 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "HS Javelin Missile.obj",
+      "MeshTextureName": "HS textures.png",
+      "SubRotation": { "x": 0, "y": -45, "z": 0 },
+      "SubPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "HS Javelin Missile.obj",
+      "MeshTextureName": "HS textures.png",
+      "SubRotation": { "x": 0, "y": -45, "z": 0 },
+      "SubPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "HS Javelin Missile.obj",
+      "MeshTextureName": "HS textures.png",
+      "SubRotation": { "x": 0, "y": 45, "z": 0 },
+      "SubPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+      "MeshName": "HS Javelin Missile.obj", 
+      "MeshTextureName" : "HS textures.png",
+      "SubRotation": { "x": 90, "y": 0, "z": 0 },
+      "SubPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 2,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": -90,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|_recoiler": {
+        "Animation": {
+        "clip": {
+          "length": 0.01
+        }
+      },
+        "GameObject|m_HE_BombBay_113_Base": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": -2
+            },
+            "localEulerAngles": {
+              "x": 90,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "GameObject|m_HE_BombBay_113_Bomb": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 1,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": -90,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+        }
+      }
+    },
+    "Duplicate|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 4.8, "z": 1 },
+      },
+    },
+    "Duplicate|_barrel_1_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 1, "y": 4.8, "z": 0 },
+      },
+    },
+    "Duplicate|_barrel_1_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 1, "y": 4.8, "z": 1 },
+      },
+    },
+
+    "ModuleWeapon": { 
+      "m_FireSFXType": 18
+    },
+
+    "ModuleWeaponGun": {
+     "m_CooldownVariancePct": 0,
+     "m_FireControlMode": 0, //IMPORTANT: enables "ClusterMissile Deploy" mode, which fires all "burst" barrels at once
+     "m_ShotCooldown" : 0.7, //This is the cooldown between every burst shot.
+     "m_BurstShotCount" : 4, //Number of shots before the gun "overheats"
+     "m_BurstCooldown" : 5.5, //2 seconds between bursts.
+     "m_SeekingRounds" : true //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+    },
+
+    "FireData": {
+      "m_MuzzleVelocity": 100,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.1,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 0.0,
+      "m_KickbackStrength": 10.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|CentreOfMass": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+        },
+        "WeaponRound": { 
+          "m_DamageType" : 3, 
+          "m_Damage": 700
+        },
+        "Rigidbody": {
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+          "mass": 0.0001
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 150.0,
+          "m_TurnSpeed": 150,
+          "m_UpdateVisibleInterval": 0.01,
+          "m_ActivationDelay": 0.1,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType" : "BestAimCabOrCentre"
+          },
+        "Projectile": {
+            "m_LifeTime": 5,
+            "m_ImpactSFXType" : 2,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Reference|1050/ModuleDamage.deathExplosion": {
+                "UnityEngine.Transform":{
+                    "localPosition":{
+                        "x":0,
+                        "y":0,
+                        "z":0
+                        },
+                    "localScale":{
+                        "x":15,
+                        "y":15,
+                        "z":15
+                    }
+                        },
+                        "GameObject|FX_Parts_A": null
+                    },
+              "Explosion": {
+                "m_EffectRadius": 10.0,
+                "m_EffectRadiusMaxStrength": 2.0,
+                "m_MaxDamageStrength": 500,
+                "m_MaxImpulseStrength": 50,
+                "m_DamageType": 3
+              },
+              "GameObject|Sparks": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 0.000001, "y": 0.000001, "z": 0.000001 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor":{
+                        "r": 0.3,
+                        "g": 0.5,
+                        "b": 1.0,
+                        "a": 1.0
+                      },
+                      "startSize": 0,
+                      "startSpeed": 0,               
+                      "maxParticles": 0
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionBright": null,
+              "GameObject|ExplosionDark": null,
+              "GameObject|ExplosionSmoke": null,
+              "GameObject|Point light": null
+            },
+            "GameObject|_particles": {
+                "UnityEngine.Transform": {
+                  "localScale": {"x": 0.1, "y": 0.1, "z": 0.1 },
+                  "localPosition": { "x": 0.0, "y": 0, "z": 0.0 },
+                  "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0 }
+                  }         
+                }
+             },
+            "UnityEngine.CapsuleCollider": {
+              "center": { "x": 0.0, "y": 0.0, "z": 0.0 },
+              "radius": 0.1,
+              "height": 2.5,
+              "direction": 2
+             },
+            "MissileProjectile": {
+              "m_MaxBoosterLifetime": 0.0,
+              "m_BoosterActivationDelay": 0.0,
+              "m_ArmDelay": 0.25,
+              "m_DeathDelayNotArmed": 0.25
+            }
+      }   
+    }   
+  }
+}

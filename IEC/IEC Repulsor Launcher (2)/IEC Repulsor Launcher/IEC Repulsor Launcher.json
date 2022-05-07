@@ -1,0 +1,216 @@
+
+{
+  "Name": "IEC Repulsor Launcher",
+  "Description": "A small grenade launcher style weapon that shoots repulsors, small bombs with high knockback. Considered a civilian defense weapon, but nobody is stopping you from using it otherwise.",
+  "ID": 100508,
+
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 1983, 
+
+  "HP": 350, 
+  "Mass": 0.85,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0, 
+
+  "Recipe":  "5, 5, 5, 8, 8, 17, 17,",
+  "IconName": "IEC_AllahYeeterIcon.png", 
+
+  "MeshTextureName": "IEC Textures.png", 
+  
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    { "x": 0,    "y": -0.5, "z": 0    }, 
+    { "x": -0.5, "y": 0,    "z": 0    }, 
+    { "x": 0.5,  "y": 0,    "z": 0    },
+    { "x": 0,    "y": 0,    "z": -0.5 },
+    { "x": 0,    "y": 0,    "z": 0.5  },
+    { "x": 0,    "y": -0.5, "z": 1    }, 
+    { "x": -0.5, "y": 0,    "z": 1    }, 
+    { "x": 0.5,  "y": 0,    "z": 1    }
+  ],  
+  
+  "GamePrefabReference": "GSO_Cannon_Turret_111",
+  "KeepReferenceRenderers": false,
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "GSO_Cannon_111_Base",
+      "MeshName": "IEC Repulsor Launcher Base.obj",
+      "MeshTextureName": "IEC Textures.png",
+      "SubPosition":  { "x": 0,    "y": 0, "z": 0    },
+      "SubRotation":  { "x": 0,    "y": -90, "z": 0    }, 
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Mount",
+      "MeshName": null,
+      "ColliderMeshName": null
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MeshName": "IEC Repulsor Launcher Barrel.obj",
+      "MeshTextureName": "IEC Textures.png",
+      "SubPosition":  { "x": 0,    "y": 0, "z": -1.5    },
+      "SubRotation":  { "x": 0,    "y": -90, "z": 0    }, 
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "MeshName": "IEC Repulsor Launcher Mount.obj",
+      "MeshTextureName": "IEC Textures.png"
+    },
+    {
+      "SubOverrideName": "Bullet3Pound",
+      "MeshName": "allah ball.obj",
+      "MeshTextureName": "IEC Textures.png", 
+      "SubScale": { "x": 0, "y": 0, "z": 0},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+  "GameObject|GSO_Cannon_111_Base": {
+  },
+  "GameObject|_gimbalBase": { 
+    "GimbalAimer": {
+      "rotationLimits": [-5, 5] 
+    },
+    "GameObject|_gimbalElev": { 
+      "GimbalAimer": {
+        "rotationLimits": [-90, 5] 
+      },
+      "GameObject|_barrel": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":1 }
+        },
+        // "GameObject|_recoiler": {
+        //   "GameObject|GSO_Cannon_111_Barrel": {
+        //   }
+        // },
+        "GameObject|_smoke": { 
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":-0.5 }
+          }
+        },
+        "GameObject|_muzzleFlash": {
+          "UnityEngine.Transform": { 
+            "localScale": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        },
+        "GameObject|_bulletSpawn": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        },
+        "GameObject|GSO_Cannon_111_Mount": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    }
+  },
+  "ModuleWeapon": { 
+    "m_RotateSpeed" : 15
+  },
+  "ModuleWeaponGun": {
+    "m_ShotCooldown" : 0.7, 
+    "m_FiringData": null,
+    "m_CooldownVariancePct": 0.1
+  },
+
+  "FireData": {
+    "m_CasingEjectVariance": 0.6,
+    "m_CasingVelocity": 50,
+    "m_CasingEjectSpin": 15,
+    "m_KickbackStrength": 5,
+    "Instantiate|m_BulletCasingPrefab": null,
+    "m_MuzzleVelocity": 75,
+    "Instantiate|m_BulletPrefab": {
+      "UnityEngine.MeshFilter": {
+        "sharedMesh": "allah ball.obj"
+      },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          "mainTexture": "IEC Textures.png"
+        }
+      },
+      "WeaponRound": {
+        "m_Damage": 500
+      },
+      "Projectile":null,
+      "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.": {
+        "m_LifeTime": 3.0,
+        "m_ExplodeOnTerrain": true,
+        "m_IgnoreCollisionWithBarrel": true,
+        "m_RotateWithVelocity": false,
+        "m_CanHaveGravity": true,
+        "m_ImpactSFXType": 6,
+        "Instantiate|m_Explosion": {
+          "Explosion": {
+            "m_DamageType" : 7,
+            "m_EffectRadius":4,
+            "m_EffectRadiusMaxStrength": 2, 
+            "m_MaxDamageStrength": 100, 
+            "m_MaxImpulseStrength": 6500
+          },
+          "GameObject|FXSmoke": null,
+          "GameObject|FX_Lightning": null,
+          "GameObject|FX_Shockwave": {
+            "UnityEngine.ParticleSystem": {
+              "startSize": 35,
+              "startColor":{
+                "r": 0,
+                "g": 0.3,
+                "b": 1,
+                "a": 1.0
+              }
+            }
+          },
+          "GameObject|FX_Sparks": {
+            "ParticleSystem": {
+              "startSize": 0.1,
+              "emissionRate": 1,
+              "startColor":{
+                "r": 0,
+                "g": 0.2,
+                "b": 0.7,
+                "a": 0.7
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

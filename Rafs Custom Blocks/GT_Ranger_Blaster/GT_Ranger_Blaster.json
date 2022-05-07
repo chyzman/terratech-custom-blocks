@@ -1,0 +1,251 @@
+{
+  "Name": "GreenTech Ranger Blaster",
+  "Description": "The Ranger Blaster fires three energy charges in a quick burst, with cooldown between bursts to prevent overheat.\n Packing quite a punch, it is advised for all rangers to carry their trusty Blaster on field.",
+  
+  "ID": 911078,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 2,  
+  "Price": 1866,
+  "HP": 300,
+  "Mass": 1.5,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+
+  "Recipe": "1, 5, 7, 13, 15, 15, 32", 
+  "IconName": "GT_Ranger_Blaster_Icon.png", 
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+
+  "GamePrefabReference": "HE_RailGun_113", 
+  "KeepRenderers": true,
+  "Keepcolliders": false,
+  "DeathExplosionReference": "GSO_MGun_Fixed_111",
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_RailGun_113",
+      "MeshName": "GT_Ranger_Blaster_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "_barrel",
+      "MeshName": "GT_Ranger_Blaster.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+	 "ColliderMeshName": "GT_Ranger_Blaster_Collider.obj"
+    },
+    {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "roundmuzzleflash.obj"
+    },
+    {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "roundmuzzleflash.obj"
+    },
+    {
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_muzzleFlash/_muzzleFlashAnim/m_MuzzleLaserFlash_01",
+      "MeshName": "roundmuzzleflash.obj"
+    }
+  ], 
+  "JSONBLOCK": {
+    "GameObject|aCol": null,
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+      },
+      "GimbalAimer": {  
+        "rotationLimits": [
+        -180.0,
+        180.0
+        ]
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        "GimbalAimer": { 
+          "rotationLimits": [-60, 60] 
+        },
+      "GameObject|_barrel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+             "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.0, "y": 0.2, "z": 0.5 }
+              }
+            },
+        "GameObject|_muzzleFlash": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.2, "z": 0.5 },
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 0.7
+            }
+          },
+          "GameObject|_muzzleFlashAnim": {
+            "GameObject|m_MuzzleLaserFlash_01": {}
+          }
+        }
+      },
+      "Duplicate|_barrel": {
+      },
+      "Duplicate|_barrel_copy": {
+      }
+     }
+   },
+    "ModuleWeapon": { 
+      "m_FireSFXType": 80,
+      "m_RotateSpeed": 180.0
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.0005,
+      "m_BurstShotCount": 3.0,
+    "m_BurstCooldown": 1.2,
+    "m_CooldownVariancePct": 0.0
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.0,
+      "m_MuzzleVelocity": 40.0,
+      "m_KickbackStrength": 10.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": { 
+          "m_DamageType" : 2, 
+          "m_Damage": 120
+        },
+        "Rigidbody": {
+          "mass": 0.0001,
+          "useGravity": false
+        },
+          "Projectile": {
+            "m_LifeTime": 2.5,
+            "m_ImpactSFXType" : 2,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_DamageType" : 2,
+                "m_EffectRadius":2, 
+                "m_ExplosionType": 0,
+                "m_EffectRadiusMaxStrength": 1, 
+                "m_MaxDamageStrength": 0, 
+                "m_MaxImpulseStrength": 0
+              },
+              "GameObject|ExplosionBright": { 
+                "GameObject|Shockwave":{
+                "UnityEngine.ParticleSystem": {
+                  "startColor": {
+                    "r": 1.0,
+                    "g": 0.3,
+                    "b": 0.01,
+                    "a": 1.0
+                  },
+                  "startSize": 2
+               }
+              },
+                "GameObject|Sparks": {
+                  "UnityEngine.ParticleSystem": {
+                  "startColor": {
+                    "r": 1.0,
+                    "g": 0.3,
+                    "b": 0.01,
+                    "a": 1.0
+                  },
+                  "startSize": 0.2,
+                  "startSpeed": 4
+               }
+              },
+                "GameObject|Distortion": null,
+                "GameObject|Smoke": {
+                "UnityEngine.ParticleSystem": {
+                      "startSize": 0,
+                      "startSpeed": 20,
+                      "maxParticles": 0
+                    }
+                },
+                "GameObject|ExplosionDark": {
+                  "UnityEngine.ParticleSystem": {
+                    "startSize": 0,
+                    "startSpeed": 20,
+                    "maxParticles": 0
+                  }
+                },
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0,
+                "startSpeed": 20,
+                "maxParticles": 0
+                  }
+            }
+            }
+          },
+          "GameObject|FX_SemiCircle": {
+            "UnityEngine.ParticleSystem": {
+              "rotationOverLifetime": {
+                "enabled": true,
+                "SeparateAxis":false,
+                "z": { "constantMin": -90, "constantMax": 90 }
+              },
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": true,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+               "emissionRate": 100,
+               "startSpeed": 0.0,
+               "startSize": 1.5,
+               "startLifetime": 100,
+               "gravityModifier": 0.0,
+               "maxParticles": 5,
+               "simulationSpace": 0,
+               "scalingMode": 2,
+               "startColor":{
+                "r": 1.0,
+                "g": 0.7,
+                "b": 0.1,
+                "a": 1.0
+              }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 0,
+            "sortMode": 0,
+            "lengthScale": 2.0,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0,
+            "material": "Mat_FX_Sparks_Yellow"
+          }
+        },
+        "GameObject|FX_Distortion": null,
+        "GameObject|Line": {
+          "LineRenderer": null,
+          "UnityEngine.CapsuleCollider": null,
+          "UnityEngine.SphereCollider": {
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.3
+          }
+        } 
+      }
+    }
+  }			
+}

@@ -1,0 +1,36 @@
+/*
+Description: A small LK banner.
+*/
+{
+    // Basic Block Information
+    "Name":                         "LK Small Hanging Banner",
+    "Description":                  "This version of the small banner can be hung on the side of a Tech. It refuses to detach unless destroyed. All hail the Lemon Kingdom!",
+
+    "ID":                           419028,
+
+    "Faction":                      2,          
+    "Category":                     5,          
+    "Rarity":                       2,  
+    "Grade":                        3,            
+    "Price":                        5874,          
+    "Recipe" :                      { "54": 4, "52": 4, "53": 2, "7": 2, "1": 6},
+      
+    "IconName":                     "LK_small_hanging_banner_icon.png",                   
+    "MeshName":                     "LK_small_hanging_banner_body.obj",                                             
+    "MeshColliderName":             "LK_small_hanging_banner_body_col.obj",
+    "NoBoxCollider":                true,
+
+    "TextureName":                  "LK_tex_1.png",
+    "GlossTextureName":             "LK_tex_2.png",
+    "EmissionTextureName":          "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                           4000,                    
+    "Mass":                         20.0,         
+    "DamageableType":               0,   
+    "DetachFragility":              0.0, 
+    "CenterOfMass":                 { "x": 0.5, "y": 3, "z": -0.5 },
+    "BlockExtents":                 { "x": 2, "y": 4,"z": 1 },
+
+    "APs": [                        { "x": 0.0, "y": 3, "z": -0.5 }, { "x": 1, "y": 3, "z": -0.5 }      ],
+}

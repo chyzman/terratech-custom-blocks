@@ -1,0 +1,245 @@
+
+{
+  "Name": "Hawkeye Riot Shield",
+  "Description": "Projects a large, slightly curved screen, designed to protect crucial parts of the tech while having reduced drain.\nThe distance from the projector ensures efficient explosion suppression.",
+  "ID": 910706, 
+
+  "Faction": 5, 
+  "Category": 6, 
+  "Grade": 2,
+  "Price": 21573,
+  "HP": 1200,
+  "Mass": 6,
+  "CenterOfMass": {"x": 0.5, "y": 0, "z": 0},
+
+  "Recipe": "52, 52, 56, 56, 61, 66",
+  
+  "IconName": "HE_Riot_Shield_Icon.png",
+  "EmissionMode": 1, 
+  
+  "MeshName": "HE_Riot_Shield.obj", 
+  "MeshMaterialName": "HE_Main",
+  "SupressBoxColliderFallback": true,
+
+  "BlockExtents":{"x": 2,"y": 1, "z": 1},   
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 1, "y": 0.5, "z": 0},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 0, "z": 0}
+  ],
+
+  "GamePrefabReference": "GSO_Shield_Bubble_111",
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0
+  },  
+  
+  "SubObjects": [
+    {
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+    "SubScale": {
+      "x": 2,
+      "y": 1,
+      "z": 1
+    }
+    },
+  {
+    "SubOverrideName": "ExperimentalCorp_Base_Shield",
+    "DestroyExistingRenderer": true,
+    "DestroyExistingColliders": true
+  },
+  {
+    "SubOverrideName": "FXGSOShieldCharge(Clone)",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "FXGSOShieldCharge 1",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "_bubbleBulletTrigger"
+    //"layer": 21
+  },
+  {
+    "SubOverrideName": "ShieldSphereOuter",
+    "MeshName": "HE_Riot_Shield_Plate.obj",
+    "MeshMaterialName": "ExplosionLaser"
+    //"MeshName": "HE_Riot_Shield_Plate2.obj",
+    //"MeshMaterialName": "BF_Receiver_Forcefield",
+  },
+  {
+    "SubOverrideName": "ShieldSphereInner",
+    "MeshName": "HE_Riot_Shield_Frame.obj",
+    "MeshMaterialName": "ExplosionLaser"
+    //"MeshName": "HE_Riot_Shield_Frame2.obj",
+    //"MeshMaterialName": "BF_Receiver_Forcefield",
+  },
+  {
+    "SubOverrideName": "ShieldSphereEdge",
+    "MeshName": "HE_Riot_Shield_Pattern.obj",
+    "MeshMaterialName": "ExplosionLaser"
+    //"MeshName": "HE_Riot_Shield_Pattern2.obj",
+    //"MeshMaterialName": "BF_Receiver_Forcefield",
+  }
+  ],
+  "JSONBLOCK": {
+    "GameObject|_shield": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0,
+          "z": 20
+        },
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false,
+            "enabled": false
+          },
+          "BoxCollider": { 
+            "isTrigger": true,
+            "enabled": true,
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 29,
+              "y": 12,
+              "z": 3
+            },
+            /*"attachedRigidbody": null,
+          "contactOffset": 0.01,
+          "sharedMaterial": {
+            "bounciness": 0.0,
+            "dynamicFriction": 0.6,
+            "staticFriction": 0.6,
+            "frictionCombine": 0,
+            "bounceCombine": 0,
+            "bouncyness": 0.0,
+            "frictionDirection2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "dynamicFriction2": 0.0,
+            "staticFriction2": 0.0,
+            "frictionDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "name": "Corp_GSO",
+            "hideFlags": 0
+          },
+          "material": {
+            "bounciness": 0.0,
+            "dynamicFriction": 0.6,
+            "staticFriction": 0.6,
+            "frictionCombine": 0,
+            "bounceCombine": 0,
+            "bouncyness": 0.0,
+            "frictionDirection2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "dynamicFriction2": 0.0,
+            "staticFriction2": 0.0,
+            "frictionDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "name": "Corp_GSO (Instance)",
+            "hideFlags": 0
+          },*/
+          "transform": "/_shield/_bubble/_bubbleBulletTrigger",
+          "tag": "Untagged",
+          "name": "_bubbleBulletTrigger",
+          "hideFlags": 0
+        }
+      },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|ShieldSphereEdge": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": -20
+             }
+            },
+          "GameObject|ShieldSphereInner": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+              }
+          },
+          "GameObject|ShieldSphereOuter": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+              }
+          }
+        },
+      "Spinner": {
+        "m_Speed": 0.0
+      }
+    }
+  },
+    "ModuleShieldGenerator": {
+      "m_Radius": 1,
+      "m_EnergyConsumptionPerSec": 1.5,
+      "m_InitialChargeEnergy": 200.0,
+      "m_EnergyConsumedPerDamagePoint": 0.5
+      /*"Instantiate|m_ChargingParticlesPrefab": {
+        "startSize": 0.4,
+        "startColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 1.0,
+          "a": 0.5
+        }
+      }*/
+  }
+  }	
+}

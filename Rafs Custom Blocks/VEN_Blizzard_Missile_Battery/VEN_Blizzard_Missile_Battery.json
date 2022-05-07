@@ -1,0 +1,373 @@
+{
+  "Name": "Venture Blizzard Missile Battery",
+  "Description": "Known as a larger variant of the Avalanche, the Blizzard releases a storm of rockets like no other missile battery. The fixed angle shot and formidable seeking grants it flexible placement and usage in almost any tech, for a cost.",
+  "ID": 910698, 
+
+  "Faction": 4, 
+  "Category": 4, 
+  "Grade": 2, 
+  "Price": 53154,
+  "HP": 400,
+  "Mass": 4,
+  "CenterOfMass": {"x": 1, "y": 0.3, "z": 0.5},
+
+  "IconName": "VEN_Blizzard_Missile_Battery_Icon.png",
+  
+  "Recipe": "52, 52, 52, 52, 62, 62, 63, 63, 63, 65, 65",
+  
+  "EmissionMode": 0,
+
+  "BlockExtents":{"x": 3,"y": 2, "z": 2},
+
+  "APs": [
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 1, "y": -0.5,"z": 1}
+  ],
+
+  "GamePrefabReference": "VEN_RPGLauncher_122",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  //"DeathExplosionReference": "VEN_FuelPod_111", 
+  
+  "SubObjects": [
+  	{
+      "SubOverrideName": "m_VEN_RPGLauncher_122_Base",
+    	"MeshName": "VEN_Blizzard_Battery_Base.obj",
+      "MakeBoxCollider": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_RPGLauncher_122_Barrel",
+    	"MeshName": "VEN_Blizzard_Battery_Barrel.obj",
+      "ColliderMeshName": "VEN_Blizzard_Battery_Barrel_Collider.obj"
+    },
+    {
+      "SubOverrideName": "BarrelCollider2",
+      "ColliderMeshName": "VEN_Blizzard_Battery_Barrel_Collider_2.obj",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "m_VEN_RPGLauncher_122_RotatingArm",
+      "DestroyExistingRenderer": true
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1,
+          "y": 0.05,
+          "z": 0.5
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GimbalAimer": {},
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.1
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GimbalAimer": {  "rotationLimits": [
+          -0.1,
+          0.1
+        ] },
+        "GameObject|BarrelCollider2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.05,
+              "z": -0.1
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "GameObject|m_VEN_RPGLauncher_122_Barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.05,
+              "z": -0.1
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "GameObject|_barrel_2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.72,
+              "y": -0.01,
+              "z": -0.4
+            },
+            "localEulerAngles": {
+              "x": -35.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "GameObject|_spawnBullet": {
+            /*"UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }*/
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "GameObject|m_VEN_RPGLauncher_122_MissileDummy": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            }
+          }
+        },
+        "GameObject|_barrel_1": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.44,
+              "y": 0.22,
+              "z": -0.56
+            },
+            "localEulerAngles": {
+              "x": -35.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "GameObject|_spawnBullet": {
+            /*"UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }*/
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "GameObject|m_VEN_RPGLauncher_122_MissileDummy": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            }
+          }
+        }
+      },
+      "Duplicate|_gimbalElev": {
+        "GameObject|m_VEN_RPGLauncher_122_Barrel": null,
+        "GameObject|_barrel_1": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.685,
+              "y": 0.167,
+              "z": 0.035
+            }
+          }
+        },
+        "GameObject|_barrel_2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.555,
+              "y": 0.274,
+              "z": -0.06
+            }
+          }
+        }
+      },
+      "Duplicate|_gimbalElev_copy": {
+        "GameObject|m_VEN_RPGLauncher_122_Barrel": null,
+        "GameObject|_barrel_1": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.28,
+              "y": 0.1,
+              "z": 0.6
+            }
+          }
+        },
+        "GameObject|_barrel_2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.315,
+              "y": 0.21,
+              "z": 0.52
+            }
+          }
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_RotateSpeed": 20.0
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.25,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 30.0,
+      "m_BulletSprayVariance": 0.0,
+      "m_KickbackStrength": 2.0,
+      "Instantiate|m_BulletPrefab": {
+        /*"GameObject|_boostJet": {
+          "GameObject|m_BoosterRocketFlame_01": {
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              "UnityEngine.ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": false,
+                "playOnAwake": false,
+                "duration": 0.2,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 0,
+                "startSpeed": 15.0,
+                "startSize": 0,
+                "startLifetime": 0,
+                "gravityModifier": 0.0,
+                "maxParticles": 10
+              }
+            },
+            "JetTrail": {
+              "randomScaleFactor": 0.5,
+              "particles": null,
+              "m_Scale": 1.0
+            }
+          }
+        },*/
+        "LineRenderer": {
+        },
+        "GameObject|_particles": {
+          "UnityEngine.ParticleSystem": {
+            "startSpeed": 5.0,
+            "startSize": 0.7
+          }
+        },
+        "SmokeTrail": {
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 145.0,
+          "m_VisionRange": 100.0,
+          "m_TurnSpeed": 200.0,
+          "m_SeekType": 1,
+          "m_UpdateVisibleInterval": 0.3,
+          "m_ActivationDelay": 0.3
+        },
+        "MissileProjectile": {
+          "m_MaxBoosterLifetime": 2.0,
+          "m_BoosterActivationDelay": 0.05,
+          "m_ArmDelay": 0.001,
+          "m_DeathDelayNotArmed": 0.4,
+          "Instantiate|m_SmokeTrailPrefab": {
+            "GameObject|ParticleSystemVaporTrail": {
+              "UnityEngine.ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "duration": 2.0,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 50.0
+              }
+            }
+          }
+        },
+        "WeaponRound": {
+          "m_DamageType": 3,
+          "m_Damage": 125
+        },
+        "Projectile": {
+          "m_LifeTime": 3.0,
+          "m_ExplodeAfterLifetime": true,
+          "m_DeathDelay": 0.0,
+          "m_ExplodeOnTerrain": true,
+          "m_Explosion": {
+            "Explosion": {
+              "m_EffectRadius": 2.0,
+              "m_EffectRadiusMaxStrength": 1.0,
+              "m_MaxDamageStrength": 50.0,
+              "m_MaxImpulseStrength": 50.0,
+              "m_DamageType": 3,
+              "m_ExplosionType": 0,
+              "m_ExplosionSize": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

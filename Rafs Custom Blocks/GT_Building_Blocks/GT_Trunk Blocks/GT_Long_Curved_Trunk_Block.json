@@ -1,0 +1,54 @@
+{
+  "Name": "GreenTech Long Curved Trunk Block",
+  "Description": "A composite of recycled wooden bits mixed with a special strong resin makes this log resembling block, which is both light and durable.",
+  "ID": 911048, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 531, 
+  "HP": 1800, 
+  "Mass": 2.25,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 32, 32, 32",  
+  "IconName": "GT_Long_Curved_Trunk_Block_Icon.png", 
+  "MeshName": "GT_Long_Curved_Trunk_Block.obj",
+  //"ColliderMeshName":  
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "Cells": [ 
+    { "x": 0, "y": 0, "z": 0 },
+	{ "x": 0, "y": 1, "z": 0 },
+	{ "x": 0, "y": 2, "z": 1 },
+	{ "x": 0, "y": 2, "z": 2 }
+	], 
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+  	{"x": 0, "y": 2,"z": 2.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+  "SubObjects": [ {
+    "ColliderMeshName": "GT_Long_Curved_Trunk_Block_Collider.obj",
+    "Position": { "x": 0, "y": -0.4, "z": 2.4 }
+  }, {
+    "ColliderMeshName": "GT_Long_Curved_Trunk_Block_Collider.obj",
+    "Position": { "x": 0, "y": -0.4, "z": 2.4 },
+    "Rotation": { "x": 30, "y": 0, "z": 0 }
+  }, {
+     
+    "ColliderMeshName": "GT_Long_Curved_Trunk_Block_Collider.obj",
+    "Position": { "x": 0, "y": -0.4, "z": 2.4 },
+    "Rotation": { "x": 60, "y": 0, "z": 0 }
+  } ]
+}

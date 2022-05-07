@@ -1,0 +1,169 @@
+{
+    "Name": "GreenTech Mobile Grasslands Biodome",
+    "Description": "A compact biodome containing a very small grasslands patch.\nActs as a sustainable, mobile source of Fibron.\n The compact grasslands biome, unlike the larger anchored one, is much less resilient, confined to a very limited area and suffering the constant physical stress of movement. The high technology employed within makes it the most expensive biodome, despite its tiny size.",
+    "ID": 911221,
+  
+    "Faction": 1,
+    "Category": 7, 
+    "Grade": 4,
+    "Price": 10383,
+    "HP": 5000,
+    "Mass": 20,
+    "CenterOfMass": {"x": 1.5, "y": 1, "z": 1.5},
+  
+    "Fragility": 0,
+    "DamageableType": 0,
+    "Rarity": 0,
+    "EmissionMode": 2,
+    
+    "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 9, 9, 32, 32, 32, 32, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 45, 56, 60",
+      
+    "IconName":"GT_Grasslands_Biodome_M_Icon.png",
+
+    "CellMap":
+	[
+    [
+			"    ",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+		],
+		[
+			" xx ",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+		],
+    [
+			" xx ",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+		],
+    [
+			"    ",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+		]
+    ],
+    
+    "APs": [
+      {"x": 1,"y": -0.5,"z": 0},
+      {"x": 2,"y": -0.5,"z": 0},
+      {"x": 1,"y": -0.5,"z": 3},
+      {"x": 2,"y": -0.5,"z": 3},
+
+      {"x": 0,"y": -0.5,"z": 1},
+      {"x": 1,"y": -0.5,"z": 1},
+      {"x": 2,"y": -0.5,"z": 1},
+      {"x": 3,"y": -0.5,"z": 1},
+      {"x": 0,"y": -0.5,"z": 2},
+      {"x": 1,"y": -0.5,"z": 2},
+      {"x": 2,"y": -0.5,"z": 2},
+      {"x": 3,"y": -0.5,"z": 2}
+    ],
+
+    "GamePrefabReference": "GSO_Autominer_324",
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+  
+    
+    "SubObjects":[
+        {
+            "MeshName":                   "GT_Biodome_Base_M.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Biodome_M_Collider.obj",
+            "layer": 8
+        },
+        /* {
+            "SubOverrideName": "GSO_Anchor",
+            "MeshName":                   "GT_Biodome_Anchor.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Biodome_Anchor_Collider.obj"
+        }, */
+        {
+            "MeshName": "GT_Biodome_Glass_M.obj",
+            "MeshMaterialName": "HE_Shield_Edge"
+        },
+        {
+            "MeshName": "GT_Biodome_Glass_M.obj",
+            "MeshMaterialName": "ObjectHighlight"
+        },
+        {
+            "MeshName": "GT_Biodome_Terrain_M.obj",
+            "MeshTextureName": "TERRAIN_GRASS_01.png",
+            "MeshGlossTextureName": null, 
+            "MeshEmissionTextureName": null
+        },
+        {
+            "MeshName": "GT_Biodome_Grassland_Vegetation_M.obj",
+            "MeshMaterialName": "Scenery_ALL"
+        },
+        {
+            "MeshName": "GT_Biodome_Grassland_Rocks_M.obj",
+            "MeshTextureName": "SubObject_203_Clutter_TextureSheet_1.png",
+            "MeshGlossTextureName": null, 
+            "MeshEmissionTextureName": null
+        }
+    ],
+
+    "JSONBLOCK":{
+        //Anchor
+        "GameObject|_anchor": null,
+        "ModuleAnchor": null,
+
+        //Autominer
+        "GameObject|ItemSpawnLocation":{
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 1.5,
+                "y": 0.25,
+                "z": 3.5
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+          }
+           },
+          "ModuleItemProducer": {
+            "m_ItemSpawnTransform" : "/ItemSpawnLocation/Transform.",
+             "m_CompatibleChunkTypes": [
+               1
+              // 3
+              // 32
+              // 1, 1, 1, 1, 1, 3, 3, 32
+            ],
+            "m_OperationMode": 0, //1 = inf production when anchored
+            "m_SecPerItemProduced": 27,//how long till we spew out chunk //9, 15, 18, 23, 27
+            "m_MinDispenseInterval": 27,//minimum time between chunks
+            "m_ItemSpawnVelocity": 10.0,
+            "m_ItemSpawnAngularVelocity": {
+              "x": 10.0,
+              "y": 10.0,
+              "z": 10.0
+            },
+            /* "m_ProduceWhileUnloaded": true,
+            "m_ResourceSiphonPoint": {
+              "x": -1.0,
+              "y": -1.0,
+              "z": -0.5
+            },
+            "m_ResourceGroundRadius": 100, */
+            "m_OperatingSFXType": 0,
+            "m_ProduceSFXType": 45,
+            "m_ProduceSFXDelay": 0.0
+          }
+    }
+}

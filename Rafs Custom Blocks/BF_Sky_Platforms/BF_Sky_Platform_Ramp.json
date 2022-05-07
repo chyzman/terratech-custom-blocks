@@ -1,0 +1,64 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Better Future Sky Platform Ramp",
+  "Description": "The Sky Platform can act like an excellent flooring for a wheeled Tech to move or park on, but unlike other platforms, it also repels hovers, therefore it can be used in hangars and carriers for any type of mobile Tech. It can also be used in expensive roads and race tracks.",
+  "ID": 910915, 
+
+  "Faction": 7, 
+  "Category": 0, 
+  "Grade": 2, 
+  "Price": 14040,
+  "HP": 4000,
+  "Mass": 16,
+
+  "IconName": "BF_Sky_Platform_Small_Ramp_Icon.png", 
+  "MeshName": "BF_Sky_Platform_Small_Ramp.obj", 
+  "Recipe": "3, 3, 3, 3, 3, 3, 45, 45, 45, 45, 50, 50, 50, 50, 52, 52, 52, 52", 
+  "MeshMaterialName": "BF_Main",
+  "ColliderMeshName": "BF_Sky_Platform_Small_Ramp_Collider.obj",
+  "SupressBoxColliderFallback": true,
+
+    "BlockExtents":
+  {
+    "x": 4,
+    "y": 2,
+    "z": 4
+  },
+  
+  "APs": [ 
+	{
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 3,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 3,
+      "y": 1,
+      "z": 3.5
+    },
+	{
+      "x": 0,
+      "y": 1,
+      "z": 3.5
+    }
+  ],
+
+  "GamePrefabReference": "BF_Block_111",
+  "KeepReferenceRenderers": false,
+  
+  "SubObjects": [
+    {
+      "ColliderMeshName": "BF_Sky_Platform_Small_Ramp_Collider_2.obj",
+	  "layer": 20,
+    }
+  ]
+
+
+}

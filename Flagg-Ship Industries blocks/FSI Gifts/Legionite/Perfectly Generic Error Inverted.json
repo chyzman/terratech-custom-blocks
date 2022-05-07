@@ -1,0 +1,74 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Perfectly Generic Error (Inverted)",
+  "Description": "462: Server was shot by 12 gauge shotgun \n\nA gift for Legionite", 
+  "ID": 1701001, 
+
+  "Faction": 6, 
+  "Category": 7, 
+  "Grade": 1, 
+  "Price": 100,
+  "HP": 400,
+  "Mass": 0.1,
+
+  "MeshName": "PGR2.obj", 
+
+  "Recipe":  "1",
+ 
+  "MeshTextureName": "pgi-error-texture.png",
+  "ColliderMeshName": "PGR2.obj", 
+
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 0.5
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    }
+  ],
+
+  
+  "GamePrefabReference": "GSO_Block_Half_111", 
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  } 
+} 
+
+  

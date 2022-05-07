@@ -1,0 +1,154 @@
+{
+  "Name": "Old Star Receiver",
+  "Description": "Now this is how the Old Star do. After discovering how collection beams work the design team at old star developed how to use them in our techs by adding a cooling fan to keep the collector beem emitters away from fibron ignition.",
+  "IconName": "OS_Receiver_Icon.png",
+  "ID": 300118,
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 1,
+  "Price": 3714,
+  "HP": 2000,
+  "Mass": 16,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 50",
+
+  "Cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1
+    }
+
+  ],
+  "APs": [
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "z": -0.5
+    },
+    {
+      "x": 1.0,
+      "y": 0.0,
+      "z": -0.5
+    }
+  ],
+
+  "GamePrefabReference": "GC_Receiver_212",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_Receiver_212",
+      "MeshName": "OS_Receiver.obj",
+      "ColliderMeshName": "OS_Receiver.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 9,
+      "m_AcceptFlags": -2,
+      "m_OverrideBasePositons": [
+        {
+          "x": 0.1,
+          "y": 0.15,
+          "z": 0
+        },
+        {
+          "x": 0.9,
+          "y": 0.5,
+          "z": 0.15
+        },
+        {
+          "x": 0.1,
+          "y": 0.15,
+          "z": 0.8
+        },
+        {
+          "x": 0.9,
+          "y": 0.15,
+          "z": 0.8
+        }
+      ],
+      "m_OverrideAPConnections": []
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": 1.0,
+      "m_BeamColumnRadius": 1.0,
+      "m_BeamStrength": 1000.0,
+      "m_HeightIncrementScale": 0.4
+    },
+    "GameObject|PickUpRadiusForward": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "right": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "up": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "forward": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "name": "PickUpRadiusForward"
+      }
+    },
+    "ModuleItemPickup": {
+      "m_PrePickupPeriod": 0.0,
+      "m_PickupAfterMinInterval": 0.5,
+      "m_HandoverAfterMinInterval": 0.5,
+      "m_PickupRange": 10.0,
+      "m_PickUpRadiusFwd": "PickUpRadiusForward",
+      "m_PickUpRadiusAngle": 360.0
+      //"Instantiate|m_RangeIndicatorPrefab":{}
+    }
+  }
+}

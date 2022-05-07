@@ -1,0 +1,190 @@
+
+{
+    "Name": "Hawkeye Cascade AM2500 Jet Turbine",
+    "Description": "In an effort to counter the rising aerial might of Better Future, Black Labs developed this engine. The Cascade AM1500 was reworked and upsized to fill a dedicated airplane role. The resulting AM2500 Jet Turbine offers unparalleled forward thrust, at the expense of being reversable.",
+    "ID": 117011,
+
+    "Faction": 5,
+    "Category": 8,
+    "Rarity": 2,
+    "Grade": 2,
+    "Price": 91332,
+    "HP": 3500,
+    "Mass": 20,
+
+    "Recipe":  {"47": 6, "52": 4, "54": 4, "57": 6, "62": 2, "63": 6, "66": 2},
+
+    "IconName": "HE_Cascade_Turbo.png",
+    "MeshName": "HE_Cascade_Turboprop.obj",
+
+    "MeshMaterialName": "HE_Main",
+
+    "ColliderMeshName": "HE_Cascade_Turboprop_Collider.obj",
+
+    "Cells": [
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": -1, "z": 0},
+        {"x": 0, "y": 1, "z": 0},
+        {"x": 1, "y": 0, "z": 0},
+        {"x": -1, "y": 0, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+        {"x": -1, "y": -1, "z": 0},
+        {"x": -1, "y": 1, "z": 0},
+        {"x": 1, "y": -1, "z": 0},
+
+        {"x": 0, "y": 0, "z": -1},
+        {"x": 0, "y": -1, "z": -1},
+        {"x": 0, "y": 1, "z": -1},
+        {"x": 1, "y": 0, "z": -1},
+        {"x": -1, "y": 0, "z": -1},
+        {"x": 1, "y": 1, "z": -1},
+        {"x": -1, "y": -1, "z":-1},
+        {"x": -1, "y": 1, "z": -1},
+        {"x": 1, "y": -1, "z": -1},
+
+        {"x": 0, "y": 0, "z": -2},
+        {"x": 0, "y": -1, "z": -2},
+        {"x": 0, "y": 1, "z": -2},
+        {"x": 1, "y": 0, "z": -2},
+        {"x": -1, "y": 0, "z": -2},
+        {"x": 1, "y": 1, "z": -2},
+        {"x": -1, "y": -1, "z": -2},
+        {"x": -1, "y": 1, "z": -2},
+        {"x": 1, "y": -1, "z": -2},
+
+        {"x": 0, "y": 0, "z": -3},
+        {"x": 0, "y": -1, "z": -3},
+        {"x": 0, "y": 1, "z": -3},
+        {"x": 1, "y": 0, "z": -3},
+        {"x": -1, "y": 0, "z": -3}
+
+    ],
+
+    "APs": [ 
+        { "x": 0,     "y": 0,    "z": 0.5  },
+        { "x": 1.5,     "y": 0,    "z": 0  },
+        { "x": 0,     "y": -1.5,       "z": 0  },
+        { "x": -1.5,     "y": 0,       "z": 0  },
+        { "x": 0,     "y": 1.5,       "z": 0  }
+    ],
+
+    "GamePrefabReference": "HE_Gyroprop_313",
+
+    "SubObjects":[
+        {
+        "SubOverrideName": "m_HE_GyroProp_rotors",
+            "MeshName": "HE_Cascade_Turboprop_Rotors.obj",
+            "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+            "SubRotation": { "x": 0, "y": 180, "z": 0 }
+            },
+        {
+            "SubOverrideName": "_spinner",
+            "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+            "SubRotation": { "x": 0, "y": 180, "z": 0 }
+    }
+    ],
+   
+    "Deserializer": {
+        "GameObject|_spinner": {
+            "Spinner": {
+                "m_Speed": 1.0,
+            }
+        },
+        "GameObject|_fanJet": {
+            "FanJet": {
+                "force": 11250,
+                "backForce": 0
+            }
+        },
+        "Reference|HE_JetEngine_112/_boostJet": {
+            "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localPosition": { "x": 0, "y": 0, "z": -2 }
+            },
+            "BoosterJet": {
+                "m_Force": 0,
+                "m_ConsumesFuel": false
+            },
+            "GameObject|m_BoosterRocketFlame_01": {
+                "GameObject|ParticleSystemBoosterRocketFlame": {
+                    "UnityEngine.ParticleSystem": {
+                        "startDelay": 0.0,
+                        "loop": true,
+                        "playOnAwake": true,
+                        "playbackSpeed": 1.0,
+                        "enableEmission": true,
+ //                       "emissionRate": 500,
+                        "startSpeed": 100,
+                        "startSize": 0.5,
+                        "startRotation": 0,
+                        "startLifetime": 0.035,
+                        "gravityModifier": 0.0,
+                        "maxParticles": 1000,
+                        "simulationSpace": 0,
+                        "scalingMode": 0,
+                        "useAutoRandomSeed": false,
+                        "shape": {
+                            "position": { "x": 0, "y": 0, "z": 2 },
+                        //    "shapeType": 2,
+                            "angle": 0,
+                            "length": 2,
+                        },
+                        "collision": {
+                          "enabled": false
+                        },
+                        "startColor": {
+                            "r": 0.5,
+                            "g": 0.3,
+                            "b": 1,
+                            "a": 1.0
+                        },
+                        "sizeOverLifetime": {
+                            "size": {
+                                "mode": "curve",
+                                "curve": {
+                                  "keys": [
+                                    {
+                                      "time": 0.0172413774,
+                                      "value": 1.5,
+                                      "weightedMode": 0,
+                                      "tangentMode": 0
+                                    },
+                                    {
+                                      "time": 0.9590517,
+                                      "value": 0.75,
+                                      "weightedMode": 0,
+                                      "tangentMode": 0
+                                    }
+                                  ],
+                                  "preWrapMode": 8,
+                                  "postWrapMode": 8
+                                }
+                            }
+                        },
+                        "emission": {
+                            "rateOverTimeMultiplier": 250
+                        }
+                    },
+                    "UnityEngine.ParticleSystemRenderer": {
+                        "alignment": "Facing",
+                        "renderMode": "Billboard",
+                        "lengthScale": 0.0,
+                        "sortingFudge": 0.0,
+                        "minParticleSize": 0.0,
+                        "maxParticleSize": 50.0,
+                        "material": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material."
+                    }
+                },
+                "JetTrail": {
+                    "initParticleSize": 0,
+                    "randomScaleFactor" : 0
+                }
+            },
+        },
+        "ModuleBooster": {
+            "m_UseBoostControls": true,
+            "m_UseDriveControls": true,
+            "jets": [ "/_boostJet/BoosterJet." ]
+        }
+    }
+}

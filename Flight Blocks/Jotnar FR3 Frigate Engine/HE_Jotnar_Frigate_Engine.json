@@ -1,0 +1,162 @@
+
+{
+  "Name": "Hawkeye Jotnar FR3 Frigate Engine",
+  "Description": "A Jotnar class plasma engine built by Hawkeye Black Labs with small vehicles in mind. While slightly more powerful than Better Future's medium ion drive, the FR3 Frigate Engine is much heavier.",
+  "ID": 117066,
+
+  "Faction": 5,
+  "Category": 8,
+  "Rarity": 2,
+  "Grade": 2,
+  "Price": 47523,
+  "HP": 750,
+  "Mass": 4,
+
+  "Recipe":  {"50": 2, "52": 3, "54": 3, "56": 4, "58": 2, "63": 2, "64": 1},
+
+  "IconName": "HE_Frigate_Engine.png",
+  "MeshName": null,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "Cells": [
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": 0, "z": 1},
+        {"x": 0, "y": 0, "z": 2},
+        {"x": 0, "y": 0, "z": 3}, 
+
+  ],
+
+ "APs": [ 
+    { "x": 0,     "y": 0,    "z": 3.5  },
+
+    { "x": 0,     "y": 0.5,    "z": 3  },
+    { "x": 0,     "y": 0.5,    "z": 2  },
+    { "x": 0,     "y": 0.5,    "z": 1  },
+
+    { "x": 0,     "y": -0.5,    "z": 3  },
+    { "x": 0,     "y": -0.5,    "z": 2  },
+    { "x": 0,     "y": -0.5,    "z": 1  },
+
+    { "x": 0.5,     "y": 0,    "z": 2  },
+    { "x": -0.5,     "y": 0,    "z": 2  },
+
+  ],
+
+   "GamePrefabReference": "BF_IonDrive_Small_112",
+
+   "SubObjects":[
+     {
+      "SubOverrideName":         "m_BF_IonDrive_Small_112",
+         "MeshName":             "HE_Frigate_Engine.obj",
+         "ColliderMeshName":     "HE_Frigate_Engine_Collider.obj",
+         "SubPosition":          { "x": 0,  "y": 0,  "z": 1.5 },
+         "SubRotation":          { "x": 0, "y": 180, "z": 0 }
+      },
+  ],
+   
+ "JSONBLOCK": {
+  "GameObject|_fanJet": {
+    "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0, "z": 1 },
+      },
+    "FanJet": {
+       "force": 2750,
+       "backForce": 0,
+       "spinSpeed": 100.0,
+        }
+      },
+      "Reference|HE_JetEngine_112/_boostJet": {
+        "UnityEngine.Transform": {
+            "localScale": { "x": 0.8, "y": 0.8, "z": 0.8 },
+            "localPosition": { "x": 0, "y": 0, "z": 1 }
+        },
+        "BoosterJet": {
+            "m_Force": 0,
+            "m_ConsumesFuel": false
+        },
+        "GameObject|m_BoosterRocketFlame_01": {
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+                "UnityEngine.ParticleSystem": {
+                    "startDelay": 0.0,
+                    "loop": true,
+                    "playOnAwake": true,
+                    "playbackSpeed": 1.0,
+                    "enableEmission": true,
+                    "startSpeed": 100,
+                    "startSize": 0.3,
+                    "startRotation": 0,
+                    "startLifetime": 0.035,
+                    "gravityModifier": 0.0,
+                    "maxParticles": 1000,
+                    "simulationSpace": 0,
+                    "scalingMode": 0,
+                    "useAutoRandomSeed": false,
+                    "shape": {
+                        "position": { "x": 0, "y": 0, "z": 2 },
+                        "angle": 0,
+                        "length": 2,
+                    },
+                    "collision": {
+                      "enabled": false
+                    },
+                    "startColor": {
+                      "r": 0.8,
+                      "g": 0.1,
+                      "b": 0.1,
+                      "a": 1.0
+                  },
+                    "sizeOverLifetime": {
+                        "size": {
+                            "mode": "curve",
+                            "curve": {
+                              "keys": [
+                                {
+                                  "time": 0.0172413774,
+                                  "value": 1.5,
+                                  "weightedMode": 0,
+                                  "tangentMode": 0
+                                },
+                                {
+                                  "time": 0.9590517,
+                                  "value": 0.75,
+                                  "weightedMode": 0,
+                                  "tangentMode": 0
+                                }
+                              ],
+                              "preWrapMode": 8,
+                              "postWrapMode": 8
+                            }
+                        }
+                    },
+                    "emission": {
+                        "rateOverTimeMultiplier": 500
+                    }
+                },
+                "UnityEngine.ParticleSystemRenderer": {
+                    "alignment": "Facing",
+                    "renderMode": "Billboard",
+                    "lengthScale": 0.0,
+                    "sortingFudge": 0.0,
+                    "minParticleSize": 0.0,
+                    "maxParticleSize": 50.0,
+                    "material": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material."
+                }
+            },
+            "JetTrail": {
+                "initParticleSize": 0,
+                "randomScaleFactor" : 0
+            }
+        },
+    },
+    "ModuleBooster": {
+        "m_UseBoostControls": true,
+        "m_UseDriveControls": true,
+        "jets": [ "/_boostJet/BoosterJet." ],
+        "m_BoosterAudioType": 3,
+    },
+
+    "GameObject|fx_Trail": null
+  }
+}

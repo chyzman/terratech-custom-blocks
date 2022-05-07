@@ -1,0 +1,36 @@
+{
+  "Name": "GreenTech Long Corner Hardwood Plate Right",
+  "Description": "An armour plate of dense resin treated hardwood, capable of absorbing impacts and resisting high stress.",
+  "ID": 911073, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 1647, 
+  "HP": 2000, 
+  "Mass": 0.75,
+  "CenterOfMass": {"x": 1, "y": 0, "z": -0.4},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 43, 43, 43, 43, 45, 45", 
+  "IconName": "GT_Long_Corner_Armour_Plate_Icon.png", 
+  "MeshName": "GT_Long_Corner_Armour_Plate.obj",
+  "ColliderMeshName": "GT_Long_Corner_Armour_Plate_Collider.obj", 
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 3,"y": 1, "z": 1},   
+  "APs": [
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_ArmourPlate_Small_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

@@ -1,0 +1,223 @@
+{
+  "Name": "GreenTech Hydro Cannon",
+  "Description": "An environmental-friendly cannon that shoots a high velocity stream of water, containing abrasive particles similar to sand that can quickly wear and tear surfaces. Though weak by weapon standards, it bypasses shields.",
+  "ID": 911028, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 2, 
+  "Price": 3882, 
+  "HP": 1800, 
+  "Mass": 5,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "9,43, 43, 44, 45, 49", 
+  "IconName": "GT_Water_Cannon_Icon.png", 
+  "MeshName": "GT_Water_Cannon_Base.obj",
+  "ColliderMeshName": "GT_Water_Cannon_Base_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 2,"y": 1, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "VEN_Flamethrower_121", 
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0.5
+  },
+
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "MeshName": "GT_Water_Cannon.obj", 
+      "ColliderMeshName": "GT_Water_Cannon_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": -0.5,
+        "y": 0,
+        "z": -0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "MeshName": "GT_Water_Cannon_Barrel.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+      "DestroyExistingColliders": true,
+      "SubScale": { "x": 1.1, "y": 1.1, "z": 1.1},
+      "SubRotation": {
+        "x": 15,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": -0.55,
+        "y": 0.18,
+        "z": -1.25
+      }
+    },
+    {
+      "SubOverrideName": "FXFlameThrower",
+      "SubRotation": {
+        "x": -15,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0.08,
+        "z": 0.2
+      },
+      "MeshMaterialName": "HoverSmoke"
+
+    },
+    {
+      "SubOverrideName": "_gimbalHorizontal",
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalVertical",
+      "SubRotation": {
+        "x": 15,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0.18,
+        "z": 0.63
+      }
+    }
+  ],
+
+  "Deserializer": {
+
+    "GameObject|_gimbalHorizontal": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -180.0,
+          180.0
+        ]
+      },
+      "GameObject|_gimbalVertical": {
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -40.0,
+            0
+          ]
+      },
+      "GameObject|FXFlameThrower": { 
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "collision": {
+                "enabled": true,                                   //Setting this to false will break the Particle Weapon
+                "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+                "lifetimeLossMultiplier": 0.2,
+                //"dampenMultiplier": 10.0,                    
+              },
+              "sizeOverLifetime": { //Annoying module that manages size
+                "enabled": true
+              }
+            }
+          }
+        }
+      }
+    }
+    },
+
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 200.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.0,
+      "m_FireSFXType": 26
+    },
+    "ModuleWeaponFlamethrower": {
+      "m_MaxFlameLength": 50.0,
+    "m_DPS": 200.0,
+    "m_DamageType": 6,
+    "m_ExtendTime": 0.01,
+    "m_RetractTime": 0.001,
+    "m_Particles": {
+      "startDelay": 0.0,
+      "loop": true,
+      "playOnAwake": false,
+      "playbackSpeed": 30.0,
+      "enableEmission": true,
+      "emissionRate": 10.0,
+      "startSpeed": 1.5,
+      "startSize": 2,
+      "startLifetime": 2,
+      "gravityModifier": 0.001,
+      "maxParticles": 20000,
+      "simulationSpace": 0,
+      "scalingMode": 2,
+      "time": 0.0,
+      "randomSeed": 0,
+      "useAutoRandomSeed": false,
+      "startColor": {
+        "r": 0.92,
+        "g": 0.94,
+        "b": 1,
+        "a": 0.15
+      },
+      "trails": {
+        "enabled": true
+      }
+  },
+    "m_TipLight": {
+      "intensity": 0,
+      "range": 0
+    },
+    "m_JetLight": {
+      "intensity": 0,
+      "range": 0
+    }
+    }
+  }
+}

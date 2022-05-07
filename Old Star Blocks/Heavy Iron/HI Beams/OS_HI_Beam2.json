@@ -1,0 +1,49 @@
+{
+  "Name": "Old Star Iron Beam Model 2",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! Our Iron Beams are our main use of scafolding. Model 2 is one of our most mass produced varients of them and is great for most scafolding needs",
+  "ID": 300067,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 3636,
+  "HP": 1200,
+  "Mass": 4,
+  "IconName": "OS_Beam2_Icon.png",
+  "MeshName": "HI_Beam2.obj",
+  "ColliderMeshName":"HI_Beam2.obj",
+  "Recipe":  [
+      {"0":  "5"},
+      {"5":  "8"},
+      {"7":  "8"},
+      {"45": "2"},
+      {"54": "2"}
+], 	
+"DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+// 0    = Standard
+// 1    = Armor
+// 2    = Rubber
+// 3    = Volatile
+// 4    = Shield
+// 5    = Wood
+// 6    = Rock
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 4
+  }, 
+  "APsOnlyAtBottom": false,
+  "APs":[
+    //Back
+    { "x": 0.0,"y": 0.0,"z":-0.5 },
+    //Front
+    { "x": 0.0,"y": 0.0,"z": 3.5 }
+  ]
+}

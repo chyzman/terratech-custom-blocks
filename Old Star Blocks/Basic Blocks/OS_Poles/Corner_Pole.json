@@ -1,0 +1,50 @@
+{
+  "Name": "Old Star Corner Pole",
+  "Description": "This here is how the Old Star do. Be it a Post, Rail or a stick the Pole will get it done!",
+
+  "ID": 300004,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 500,
+  "HP": 960,
+  "Mass": 0.5,
+  "IconName": "Corner_Pole.png",
+  "MeshName": "OS_Corner_Pole.obj",
+  "ColliderMeshName": "OS_Corner_PoleC.obj",
+  "Recipe": "0, 0, 0, 43, 43, 44, 44, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  }, // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [
+    // Front Face
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+    // Top Face
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    //Left Face
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  "APsOnlyAtBottom": false
+}

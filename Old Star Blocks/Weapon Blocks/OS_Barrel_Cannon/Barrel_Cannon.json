@@ -1,0 +1,443 @@
+{
+  "Name": "Old Star Barrel Cannon ",
+  "Description": "Now this is how the Old Star do . . . if one keeps insisting on raiding our settlements. The Barrel Cannon is a triple barreled weapon made from a repurposed water tank. It fires similar sticks of dynamite that the 'Dynamite Mortar' fires but at a much faster rate, but due to thier tendancy to be deflected by enemy rounds they have a much smaller punch then the mortar but its made up by sheer quantity.", //You can make multiple lines with \n
+  "ID": 300063,
+
+  "Faction": 4, 
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 19536,
+  "HP": 5000,
+  "Mass": 36,
+  "CenterofMass": {"x": 2.5,"y": 2.0,"z": 2.5},
+  "IconName": "Barrel_Cannon_icon.png",
+  "MeshName": null, 
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 52, 52, 55, 55, 55, 55, 55, 55, ",	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "CellMap": [
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "      "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],     
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],    
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT", 
+     " TTTT "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "      "]
+ 
+   ],
+
+  "APs": [
+    // Bottom
+    {"x": 1.0,"y":-0.5,"z": 1.0},{"x": 2.0,"y":-0.5,"z": 1.0},{"x": 3.0,"y":-0.5,"z": 1.0},{"x": 4.0,"y":-0.5,"z": 1.0},
+    {"x": 1.0,"y":-0.5,"z": 2.0},                                                          {"x": 4.0,"y":-0.5,"z": 2.0},
+    {"x": 1.0,"y":-0.5,"z": 3.0},                                                          {"x": 4.0,"y":-0.5,"z": 3.0},
+    {"x": 1.0,"y":-0.5,"z": 4.0},{"x": 2.0,"y":-0.5,"z": 4.0},{"x": 3.0,"y":-0.5,"z": 4.0},{"x": 4.0,"y":-0.5,"z": 4.0},
+
+    // Back
+    {"x": 1.0,"y": 0.0,"z": 0.5},{"x": 2.0,"y": 0.0,"z": 0.5},{"x": 3.0,"y": 0.0,"z": 0.5},{"x": 4.0,"y": 0.0,"z": 0.5},
+
+    // Front
+    {"x": 1.0,"y": 0.0,"z": 4.5},{"x": 2.0,"y": 0.0,"z": 4.5},{"x": 3.0,"y": 0.0,"z": 4.5},{"x": 4.0,"y": 0.0,"z": 4.5},
+
+    //Left
+    {"x": 0.5,"y": 0.0,"z": 1.0},{"x": 0.5,"y": 0.0,"z": 2.0},{"x": 0.5,"y": 0.0,"z": 3.0},{"x": 0.5,"y": 0.0,"z": 4.0},
+
+    //Right
+    {"x": 4.5,"y": 0.0,"z": 1.0},{"x": 4.5,"y": 0.0,"z": 2.0},{"x": 4.5,"y": 0.0,"z": 3.0},{"x": 4.5,"y": 0.0,"z": 4.0}
+
+  ],
+
+  "GamePrefabReference": "HE_CannonBattleship(216)",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {"x": 0.0,"y": 0.0,"z": 0.0},
+    
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Barrel.obj",
+      "ColliderMeshName":"OS_BC_Barrel.obj"
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Barrel.obj",
+      "ColliderMeshName":"OS_BC_Barrel.obj"
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Barrel.obj",
+      "ColliderMeshName":"OS_BC_Barrel.obj"
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Base.obj",
+      "ColliderMeshName": "OS_BC_Base.obj"
+    },
+    {
+      "SubOverrideName": "Turret_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Horizontal.obj",
+      "ColliderMeshName": "OS_BC_Horizontal.obj"
+    },
+    {
+      "SubOverrideName": "Barrel_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Verticle.obj",
+      "ColliderMeshName": "OS_BC_Verticle.obj"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleDamage": {
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+                                                      // Borrow a clean projectile explosion for this block's death
+                                                      // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+      "Instantiate|deathExplosion": {             // Instantiate after referencing to modify
+          "Explosion": {
+              "m_EffectRadius": 25,               // Outer radius, damage is 0 to max
+              "m_EffectRadiusMaxStrength": 15,    // Inner radius, damage is at max within here
+              "m_ExplosionSize": 2,               // 2: Large
+              "m_MaxDamageStrength": 1500,        // 
+              "m_MaxImpulseStrength": 200,        // 
+              "DoDamage": false
+          },
+          "GameObject|Sparks": {          // Flying sparks
+              "ParticleSystem": {
+                  "startSpeed": 20.0,
+                  "startSize": 5,
+                  "startLifetime": 4,
+                  "gravityModifier": 0.5,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|ExplosionSmoke": {  // Smog
+              "ParticleSystem": {
+                  "startDelay": 0.1,
+                  "startSpeed": 100,
+                  "startSize": 170,
+                  "startLifetime": 7,
+                  "gravityModifier": 0.0,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|ExplosionDark": {   // It looks like weird biscuits
+              "ParticleSystem": {
+                  "startDelay": 0.2,
+                  "startSpeed": 60,
+                  "startSize": 8,
+                  "startLifetime": 2,
+                  "gravityModifier": 0.05,
+                  "maxParticles": 1000
+              }
+          }, 
+          "GameObject|ExplosionBright": { // The glow
+              "ParticleSystem": {
+                  "startSpeed": 40,
+                  "startSize": 70,
+                  "startLifetime": 3,
+                  "gravityModifier": -0.2,
+                  "maxParticles": 1000
+              }
+          },
+          "GameObject|Point light": {     // The light that catches all on fire
+              "UnityEngine.Light": {
+                  "intensity": 50.0,
+                  "range": 34.0
+              },
+              "FadeInOutLight": {
+                  "StartDelay": 0.0,
+                  "FadeInSpeed": 0.5,
+                  "FadeOutDelay": 0.0,
+                  "FadeOutSpeed": 1
+              }
+          } // The actual glow
+      }
+  },
+      //Horizontal aim
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationLimits": [-180, 180]
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localPosition": { "x": 2.5, "y":-0.05, "z": 2.5 }
+      },
+      "GameObject|Turret_Mount": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0, "w": 1 },
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        }
+      },
+      //Verticle aim
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-91, 20]
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 0, "y": 2.0, "z": 0 }
+        },
+        "GameObject|Barrel_Mount": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 180, "w": 1 },
+            "localPosition": { "x": 0, "y": 0, "z": 0.9 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_CannonBattleship_216_barrel": {
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localPosition": { "x": 0, "y": -0.33, "z": 0.0 }
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 2, "z": -0.9 }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1.5, "y": 1.5, "z": 1.5 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.33, "z": 2.7 }
+            }
+          }
+        },
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 60, "w": 1 },
+            "localPosition": { "x": 0, "y": 0, "z": 0.9 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_CannonBattleship_216_barrel": {
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localPosition": { "x": 0, "y": -0.33, "z": 0.0 }
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 2, "z": -0.9 }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1.5, "y": 1.5, "z": 1.5 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.33, "z": 2.7 }
+            }
+          }
+        },
+        "Duplicate|_barrel_copy": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": -60, "w": 1 },
+            "localPosition": { "x": 0, "y": 0, "z": 0.9 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_CannonBattleship_216_barrel": {
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localPosition": { "x": 0, "y": -0.33, "z": 0.0 }
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 2, "z": -0.9 }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1.5, "y": 1.5, "z": 1.5 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.09, "z": 2.3 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": -0.33, "z": 2.7 }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|m_HE_CannonBattleship_216_body": {
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localPosition": { "x": 2.5, "y":0.0, "z":2.5 }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 75,
+      "m_RotateSpeed" : 25
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 1.0,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_ResetBurstOnInterrupt": false,
+      "m_NumCannonBarrels": 3
+    },
+    "FireData": {
+      "m_CasingEjectVariance": 0.6,
+      "m_CasingVelocity": 50,
+      "m_CasingEjectSpin": 15,
+      "m_KickbackStrength": 200,
+      "m_MuzzleVelocity": 150.0,
+      "m_BulletSpin": 350, 
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "Dynamite2.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "OST1.png"
+          }
+        },
+        "WeaponRound": {
+          "m_Damage": 175
+        },
+        "UnityEngine.CapsuleCollider": { 
+            "gameObject": {
+              "layer": 8
+            },
+            "radius": 0.74,
+            "height": 1.0,
+            "direction": 2,
+            "center": { "x": 0, "y": 0, "z": 0 }
+        },
+        "Projectile": {
+            "m_ExplodeAfterLifetime": true,
+            "m_LifeTime": 3.0,
+            "m_DeathDelay": 1.0,
+            "m_ExplodeOnTerrain": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 10,
+              "m_MaxDamageStrength": 175,
+              "m_MaxImpulseStrength": 500
+            }
+          }
+        }
+      }
+    }
+  }
+}

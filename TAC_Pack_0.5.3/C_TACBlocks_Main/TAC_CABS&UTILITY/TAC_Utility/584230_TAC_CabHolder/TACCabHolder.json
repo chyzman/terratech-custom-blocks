@@ -1,0 +1,210 @@
+{
+	"Name": "TAC Cab Chassis Block",//was "Frame"
+	"Description": "Press X to escape, because the HovaBug cab is actually capable of escaping, unlike the other cabs that have small slow wheels. \n\n\nYou know, something like this should be reusable but sometimes the Tech you are leaving isn't, so this does the self die to minimise what's left for the enemy.", 
+	"ID": 584230, 		
+
+	"Faction": 5,
+	"Category": 5, 
+	"Grade": 3, 
+	"Price": 12492,//4164x3=12492 //Cheap for a TAC block.
+	"HP": 10000, //would be 7000, but the cab is held by this, so buffed to 12500 to make it feasable
+	//The nerfed to 10000 by reducing splash damage taken.
+	"Mass": 28,//Heavier because F*bron. //Was 14
+
+	"Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 43, 43, 43, 43, 46, 46",//
+	//Finally something to put all that useless f*bron to good use
+
+	"IconName": "SuicideDock.png", 
+	// "MeshName": null, 
+	// "MeshMaterialName": null, 
+	// "ColliderMeshName": null, 
+
+  "Cells": [ //The grid space to be occupied
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 2, "y": 0, "z": 0 },
+		{ "x": 2, "y": 1, "z": 0 },
+		{ "x": 3, "y": 0, "z": 0 },
+		{ "x": 3, "y": 1, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 1, "z": 3 }
+  ],
+
+	"APs": [
+		//Outside APs
+		//Back face
+		{ "x": 0, "y": 0, "z": -0.5 },
+		{ "x": 0, "y": 1, "z": -0.5 },
+		{ "x": 1, "y": 0, "z": -0.5 },
+		{ "x": 1, "y": 1, "z": -0.5 },
+		{ "x": 2, "y": 0, "z": -0.5 },
+		{ "x": 2, "y": 1, "z": -0.5 },
+		{ "x": 3, "y": 0, "z": -0.5 },
+		{ "x": 3, "y": 1, "z": -0.5 },
+		//Top and Bottom Faces
+		{ "x": 0, "y": -0.5, "z": 0 },
+		{ "x": 0, "y": 1.5, "z": 0 },
+		{ "x": 1, "y": -0.5, "z": 0 },
+		{ "x": 1, "y": 1.5, "z": 0 },
+		{ "x": 2, "y": -0.5, "z": 0 },
+		{ "x": 2, "y": 1.5, "z": 0 },
+		{ "x": 3, "y": -0.5, "z": 0 },
+		{ "x": 3, "y": 1.5, "z": 0 },
+		{ "x": 0, "y": -0.5, "z": 1 },
+		{ "x": 0, "y": 1.5, "z": 1 },
+		{ "x": 3, "y": -0.5, "z": 1 },
+		{ "x": 3, "y": 1.5, "z": 1 },
+		{ "x": 0, "y": -0.5, "z": 2 },
+		{ "x": 0, "y": 1.5, "z": 2 },
+		{ "x": 3, "y": -0.5, "z": 2 },
+		{ "x": 3, "y": 1.5, "z": 2 },
+		{ "x": 0, "y": -0.5, "z": 3 },
+		{ "x": 0, "y": 1.5, "z": 3 },
+		{ "x": 3, "y": -0.5, "z": 3 },
+		{ "x": 3, "y": 1.5, "z": 3 },
+
+		//Side faces
+		{ "x": -0.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 1, "z": 0 },
+		{ "x": 3.5, "y": 0, "z": 0 },
+		{ "x": 3.5, "y": 1, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 1 },
+		{ "x": -0.5, "y": 1, "z": 1 },
+		{ "x": 3.5, "y": 0, "z": 1 },
+		{ "x": 3.5, "y": 1, "z": 1 },
+		{ "x": -0.5, "y": 0, "z": 2 },
+		{ "x": -0.5, "y": 1, "z": 2 },
+		{ "x": 3.5, "y": 0, "z": 2 },
+		{ "x": 3.5, "y": 1, "z": 2 },
+		{ "x": -0.5, "y": 0, "z": 3 },
+		{ "x": -0.5, "y": 1, "z": 3 },
+		{ "x": 3.5, "y": 0, "z": 3 },
+		{ "x": 3.5, "y": 1, "z": 3 },
+		//Front APs - disabled because APs don't fit there
+		// { "x": 0, "y": 0, "z": 3.5 },
+		// { "x": 0, "y": 1, "z": 3.5 },
+		// { "x": 3, "y": 0, "z": 3.5 },
+		// { "x": 3, "y": 1, "z": 3.5 },
+
+		//Center APs
+		//Back face
+		{ "x": 1, "y": 0, "z": 0.5 },
+		{ "x": 1, "y": 1, "z": 0.5 },
+		{ "x": 2, "y": 0, "z": 0.5 },
+		{ "x": 2, "y": 1, "z": 0.5 },
+		//Side faces
+		{ "x": 0.5, "y": 0, "z": 1 },
+		{ "x": 0.5, "y": 1, "z": 1 },
+		{ "x": 2.5, "y": 0, "z": 1 },
+		{ "x": 2.5, "y": 1, "z": 1 },
+		{ "x": 0.5, "y": 0, "z": 2 },
+		{ "x": 0.5, "y": 1, "z": 2 },
+		{ "x": 2.5, "y": 0, "z": 2 },
+		{ "x": 2.5, "y": 1, "z": 2 },
+
+	],
+	"GamePrefabReference": "GC_Exploder(221)", 
+  "KeepReferenceRenderers": false,
+	"ReferenceOffset": { "x": 1.5, "y": 0, "z": 1.5 },
+
+	"SubObjects": [
+		{
+		  "SubOverrideName": "m_Base",
+		  "MakeBoxCollider": false,
+		  "DestroyExistingRenderer": true,
+		  "MeshName": "TACHovaBugCabFrameExploder.obj",
+		  // "ColliderMeshName": "TAC_FAB.obj",
+		  "MeshMaterialName": "HE_Main",
+		}
+	],
+
+	"JSONBLOCK": {
+		"GameObject|m_Base": {
+    	"UnityEngine.Transform": {
+	    	"localScale": { "x": 1, "y": 1, "z": 1 },
+	    	"localEulerAngles": { "x":0, "y":0, "z":0  },
+	    	"localPosition": { "x": 1.5, "y": 0.5, "z": 1.5 }
+	    },
+		},
+		"GameObject|m_GC_Exploder_221": {
+    	"UnityEngine.Transform": {
+	    	// "localScale": { "x": 2, "y": 1, "z": 1 },
+	    	"localPosition": { "x": 1.5, "y": 0, "z": 0 }
+	    },
+	    "UnityEngine.BoxCollider": {
+	      "size": {
+	        "x": 4.0,
+	        "y": 2.0,
+	        "z": 1.0
+	      }
+	    }
+    },
+		"Duplicate|m_GC_Exploder_221": {
+    	"UnityEngine.Transform": {
+	    	// "localScale": { "x": 0.5, "y": 1, "z": 4 },
+	    	"localEulerAngles": { "x":0, "y":0, "z":0  },
+	    	"localPosition": { "x": 0, "y": 0, "z": 1.5 }
+	    },
+	    "UnityEngine.BoxCollider": {
+	      "size": {
+	        "x": 1.0,
+	        "y": 2.0,
+	        "z": 4.0
+	      }
+	    }
+		},
+		"Duplicate|m_GC_Exploder_221_copy": {
+    	"UnityEngine.Transform": {
+	    	// "localScale": { "x": 0.5, "y": 1, "z": 4 },
+	    	"localEulerAngles": { "x":0, "y":0, "z":0  },
+	    	"localPosition": { "x": 3, "y": 0, "z": 1.5 }
+	    },
+	    "UnityEngine.BoxCollider": {
+	      "size": {
+	        "x": 1.0,
+	        "y": 2.0,
+	        "z": 4.0
+	      }
+	    }
+		},
+	  "Damageable": {
+	    //"m_OrigMaxHealth": 300.0,
+	    "m_DamageableType": 5,
+	    //Condensed f*bron armoring. Avoid fire at all costs
+	    //"m_HealingOrigin": null,
+	    "m_AoEDamageBlockPercent": 2.0, //Block shotguns
+	    // "destroyOnDeath": false,
+	    // "damageThresholdEvent": null,
+	    // "m_NextThreshold": 0.0,
+	    // "m_InvulnerableEndTime": -1.0,
+	    // "m_Invulnerable": false,
+	    // "m_HealthFixed": 1228800,
+	    // "m_MaxHealthFixed": 1228800,
+	  },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Popping off in the middle of a fight will really ruin your day
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+	  "ModuleDetachableLink": {
+	    "m_DetachQueued": false,
+	    //"m_TechNamer": null
+	  },
+	}
+}

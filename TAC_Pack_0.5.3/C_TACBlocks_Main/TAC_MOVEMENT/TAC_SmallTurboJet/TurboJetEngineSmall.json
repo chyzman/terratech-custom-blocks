@@ -1,0 +1,793 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Tempest Jet Engine",
+  "Description": "A small turbo ramjet for use on flight matters smaller than the more popular Turbulence jet engine. \n\nCompared to similarly sized propellors, this doesn't handle as responsively nor have many APs but packs overwhelming forwards thrust. \nThe reverse drive exists but it's quite minimal, and make sure you have a long takeoff strip or aircraft catapult as this certainly takes it's time to ramp up to it's 4500 pounds of thrust.  \n\nIt's not too great compared to the full-size but it sure packs HUGE thrust for just how dinky it is! \n\n\n<color=red><b>NEVER</b></color> use this with the AI in general!  They will STRUGGLE using this thing.  Give them the RCS or the space fighter engines to rove with instead!", //You can make multiple lines with \n
+  "ID": 584470, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 17613,//Not as expensive as the Turb but doesn't reach anywhere as fast
+  "HP": 375,//Not very strong. Defend with care! (health density 125)
+  "Mass": 2.0,//whoa
+
+  "IconName": "vwwOOOOOSH.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "46, 49, 53, 53, 53, 54, 54, 54, 57, 57, 63",
+
+// Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Left
+    { "x": -0.5, "y": 0, "z": 1 },
+    //Right
+    { "x": 0.5, "y": 0, "z": 1 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 3
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "BF_IonDrive_Small_(112)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0.0, "y": 0.0, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    //Normal Model
+    { //Base
+     "SubOverrideName": "m_BF_IonDrive_Small_112_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_TinyJet_Base.obj",
+      "ColliderMeshName": "TAC_TinyJet_Base.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Prop
+     "SubOverrideName": "_spinner/m_Fan_Blades",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_TinyJet_SpinningPart.obj",
+      // "ColliderMeshName": "TAC_TinyJet_SpinningPart.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "ParticlesOffset/p_MoveParticles",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "ParticlesOffset_copy/p_MoveParticles",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    // { //Only way to safely override the graphics it seems
+    //   "SubOverrideName": "_boostJet/m_BoosterRocketFlame_R/ParticleSystemBoosterRocketFlame",
+    //   "MeshTextureName": "ExhaustParticles.png",
+    //   "MakeBoxCollider": false,
+    //   // "SubPosition": {
+    //   //   "x": 0,
+    //   //   "y": 0.0,
+    //   //   "z": 1.5
+    //   // }
+    // },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|fx_Trail": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.0, "y":0.0, "z":-0.2 }
+      },
+      "UnityEngine.TrailRenderer": { //Paint them trails
+        "material": {
+          "mainTexture": "LED_BeamBlockTJ.png", //<--Change this to the .png file you want to use
+          "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+        },
+        "time": 0.15,
+        "startWidth": 0.075,
+        "endWidth": 0.025,
+        "widthMultiplier": 0.25,
+        "autodestruct": false,
+        "emitting": 0.2,
+        "numCornerVertices": 6,
+        "numCapVertices": 8,
+        "minVertexDistance": 1,
+        "startColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "endColor": {
+          "r": 1.0,
+          "g": 0.75,
+          "b": 0.5,
+          "a": 0.0
+        },
+        "positionCount": 1,
+        "shadowBias": 0.0,
+        "generateLightingData": false,
+        "textureMode": 0,
+        "alignment": 0,
+      }
+    },
+    "GameObject|m_BF_IonDrive_Small_112_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.0, "y":0.0, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      }
+    },
+    "Reference|VEN_Light_Stud_111/_light": {//Does work
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0, "z":-0.15 },
+        "localScale": { "x":1, "y":1, "z":1, },
+        "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "UnityEngine.Light": {
+        "cookieSize": 4.0,
+        "spotAngle": 360.0,
+        "color": {
+          "r": 1.0,
+          "g": 0.5,
+          "b": 0.1,
+          "a": 1.0
+        },
+        "colorTemperature": 6570.0,
+        // "areaSize": 52.5,//2.0
+        "intensity": 5.0,//2.0
+        "bounceIntensity": 1.0,
+        // "shadowCustomResolution": -1,
+        // "shadowBias": 0.5,
+        // "shadowNormalBias": 1.0,
+        // "shadowNearPlane": 0.2,
+        "renderMode": "Auto",
+        // "isActiveAndEnabled": true,
+        //Auto, ForcePixel, ForceVertex
+        "type": "Point",
+        //Spot, Directional, Point, Rectangle, Disc
+        "range": 0.6,
+        // "flare": null
+      },
+    },
+
+    //Tried using boosterJet to add particles and it ruins the sfx.
+
+    //Instead adding my own...
+
+    "GameObject|ParticlesOffset": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":0, "z":-0.25 }
+      },
+      "GameObject|p_MoveParticles": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTexture": "EPMCEnergyBall.png",
+            "globalIlluminationFlags": 1,
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          // "alignment": 0,
+          "renderMode": 0,
+          // "sortMode": 0,
+          // "minParticleSize": 0.05,
+          "maxParticleSize": 0.15,
+          "motionVectorGenerationMode": 1,
+        },
+        "UnityEngine.ParticleSystem": {
+          "startSpeed": {
+            "curveMin": -2,
+            "curveMax": -2,
+          }, //How far you want the particles to spread
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 1.0,
+                "g": 0.5,
+                "b": 0.1,
+                "a": 0.2
+              },
+              "playOnAwake": true,
+              "startDelay": 0.0,//Delay
+              "startLifetime": 0.1,
+              "startRotation": 0.0,
+              "playbackSpeed": 0.5,
+              //
+              "ringBufferMode": null,
+              "scalingMode": null,
+              "useUnscaledTime": false,
+              "prewarm": false,
+              // "startRotation": 0.0,
+              // "playbackSpeed": 0.5,
+              //
+              "gravityModifier": 0.0,//No gravity
+              "loop": true, 
+              "startSize": 0.25,
+              "startSpeed": 0.25, //How far you want the particles to spread
+              "emissionRate": 20.0,
+              "emitterVelocityMode": 1,
+              "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+              "maxParticles": 150,
+              "useAutoRandomSeed": false,
+              "textureSheetAnimation": null,
+              "subEmitters": {
+                "enabled": false,
+              },
+              "proceduralSimulationSupported": false,
+              "inheritVelocity": {
+                "enabled": true,
+                "mode": 0,
+                "curve": {
+                  "keys": [
+                    {
+                      "time": 0.0,
+                      "value": 1.0,
+                      "inTangent": 1.0,
+                      "outTangent": 0.0,
+                      "inWeight": 0.333333343,
+                      "outWeight": 0.333333343,
+                      "weightedMode": 0,
+                      "tangentMode": 0
+                    },
+                    {
+                      "time": 1.0,
+                      "value": 0.0,
+                      "inTangent": 0.0,
+                      "outTangent": 1.0,
+                      "inWeight": 0.333333343,
+                      "outWeight": 0.333333343,
+                      "weightedMode": 0,
+                      "tangentMode": 0
+                    }
+                  ],
+                  "length": 2,
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                },
+                "curveMultiplier": 0.75
+              },
+              "sizeBySpeed": {
+                "enabled": true,
+                "size": {
+                  "m_Mode": 1,
+                  "m_CurveMultiplier": 1.0,
+                  "m_CurveMin": null,
+                  "m_CurveMax": null,
+                  "m_ConstantMin": 1.0,
+                  "m_ConstantMax": 1.0,
+                  "mode": 1,
+                  "curveMultiplier": 1.0,
+                  "curveMin": null,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "constant": 0.0
+                },
+                "sizeMultiplier": 2.0,
+                "xMultiplier": 2.0,
+                "yMultiplier": 2.0,
+                "zMultiplier": 2.0,
+                "separateAxes": false
+              },
+              "customData": {
+                "enabled": false
+              },
+              "velocityOverLifetime": {
+                "enabled": true,
+                "xMultiplier": 0.0,
+                "yMultiplier": 0.0,
+                "zMultiplier": 0.0,
+                "orbitalXMultiplier": 0.0,
+                "orbitalYMultiplier": 0.0,
+                "orbitalZMultiplier": 0.0,
+                "orbitalOffsetXMultiplier": 0.0,
+                "orbitalOffsetYMultiplier": 0.0,
+                "orbitalOffsetZMultiplier": 0.0,
+                "radialMultiplier": 1.0,
+                "speedModifierMultiplier": 1.5,
+                "space": 0
+              },
+              "forceOverLifetime": {
+                "enabled": false,
+              },
+              "externalForces": {
+                "enabled": false,
+              },
+              "noise": {
+                "enabled": false,
+              },
+              "emission": {
+                "type": 0,
+                "rateMultiplier": 100.0,
+                "enabled": true,
+                "rateOverTimeMultiplier": 100.0,
+                "rateOverDistanceMultiplier": 0.0,
+                "burstCount": 0
+              },
+              "shape": {
+                "enabled": true,
+                "shapeType": 0,
+                "meshShapeType": 0,
+                "meshScale": 1.0,
+                "radius": 0.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "angle": 0.0,
+                "length": 0,
+                "arcMode": 0,
+                "randomDirectionAmount": 0.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "randomDirection": false,
+                "randomDirectionAmount": 0.0,
+              }
+            }
+          }
+        }
+      },
+    },
+
+    "Duplicate|ParticlesOffset": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":0, "z":0.25 }
+      },
+      "GameObject|p_MoveParticles": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTexture": "EPMCEnergyBall.png",
+            "globalIlluminationFlags": 1,
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          // "alignment": 0,
+          "renderMode": 0,
+          // "sortMode": 0,
+          // "minParticleSize": 0.05,
+          "maxParticleSize": 0.15,
+          "motionVectorGenerationMode": 1,
+        },
+        "UnityEngine.ParticleSystem": {
+          "startSpeed": {
+            "curveMin": -2,
+            "curveMax": -2,
+          }, //How far you want the particles to spread
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 0.8,
+                "a": 0.5
+              },
+              "playOnAwake": true,
+              "startDelay": 0.0,//Delay
+              "startLifetime": 0.75,
+              "startRotation": 0.0,
+              "playbackSpeed": 1.0,
+              //
+              "ringBufferMode": null,
+              "scalingMode": null,
+              "useUnscaledTime": false,
+              "prewarm": false,
+              // "startRotation": 0.0,
+              // "playbackSpeed": 0.5,
+              //
+              "gravityModifier": 0.0,//No gravity
+              "loop": true, 
+              "startSize": 0.25,
+              "startSpeed": 0.1, //How far you want the particles to spread
+              "emissionRate": 30.0,
+              "emitterVelocityMode": 1,
+              "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+              "maxParticles": 750,
+              "useAutoRandomSeed": false,
+              "textureSheetAnimation": null,
+              "subEmitters": {
+                "enabled": false,
+              },
+              "proceduralSimulationSupported": false,
+              "inheritVelocity": {
+                "enabled": true,
+                "mode": 0,//initial and current
+                "curve": {
+                  "keys": [
+                    {
+                      "time": 0.0,
+                      "value": 1.0,
+                      "inTangent": 1.0,
+                      "outTangent": 0.0,
+                      "inWeight": 0.333333343,
+                      "outWeight": 0.333333343,
+                      "weightedMode": 0,
+                      "tangentMode": 0
+                    },
+                    {
+                      "time": 1.0,
+                      "value": 0.0,
+                      "inTangent": 0.0,
+                      "outTangent": 1.0,
+                      "inWeight": 0.333333343,
+                      "outWeight": 0.333333343,
+                      "weightedMode": 0,
+                      "tangentMode": 0
+                    }
+                  ],
+                  "length": 2,
+                  "preWrapMode": 8,
+                  "postWrapMode": 8,
+                },
+                "curveMultiplier": -0.5
+              },
+              "limitVelocityOverLifetime": {
+                "enabled": false,
+                // "dragMultiplier": 1.0,
+              },
+              "sizeBySpeed": {
+                "enabled": true,
+                "size": {
+                  "m_Mode": 1,
+                  "m_CurveMultiplier": 1.0,
+                  "m_CurveMin": null,
+                  "m_CurveMax": null,
+                  "m_ConstantMin": 1.0,
+                  "m_ConstantMax": 1.0,
+                  "mode": 1,
+                  "curveMultiplier": 1.0,
+                  "curveMin": null,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "constant": 0.0
+                },
+                "sizeMultiplier": 2.0,
+                "xMultiplier": 2.0,
+                "yMultiplier": 2.0,
+                "zMultiplier": 2.0,
+                "separateAxes": false
+              },
+              "customData": {
+                "enabled": false
+              },
+              "velocityOverLifetime": {
+                "enabled": false,
+                "xMultiplier": 0.0,
+                "yMultiplier": 0.0,
+                "zMultiplier": 0.0,
+                "orbitalXMultiplier": 0.0,
+                "orbitalYMultiplier": 0.0,
+                "orbitalZMultiplier": 0.0,
+                "orbitalOffsetXMultiplier": 0.0,
+                "orbitalOffsetYMultiplier": 0.0,
+                "orbitalOffsetZMultiplier": 0.0,
+                "radialMultiplier": 1.0,
+                "speedModifierMultiplier": 1.5,
+                "space": 0
+              },
+              "sizeOverLifetime": {
+                "enabled": true,
+                // "seperateAxes": false,
+                "xMultiplier": 1.0,
+                "yMultiplier": 1.0,
+                "zMultiplier": 1.0,
+                "sizeMultiplier": 1.5,
+                "size": {
+                  "mode": 1,
+                  "curveMultiplier": 1.0,
+                  // "curveMax": null,
+                  "curveMax": {
+                    "keys": [
+                      {
+                        "time": 0.0,
+                        "value": 1.0,
+                        // "inTangent": 17.21697,
+                        // "outTangent": 17.21697,
+                        // "inWeight": 0.333333343,
+                        // "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      },
+                      // {
+                      //   "time": 0.0589806437,
+                      //   "value": 0.99636364,
+                      //   "inTangent": 0.02026558,
+                      //   "outTangent": 0.02026558,
+                      //   "inWeight": 0.333333343,
+                      //   "outWeight": 0.333333343,
+                      //   "weightedMode": 0,
+                      //   "tangentMode": 0
+                      // },
+                      {
+                        "time": 1.0,
+                        "value": 0.0,
+                        // "inTangent": 0.0249999017,
+                        // "outTangent": 0.0249999017,
+                        // "inWeight": 0.333333343,
+                        // "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      }
+                    ],
+                    "length": 3,
+                    "preWrapMode": 8,
+                    "postWrapMode": 8
+                  },
+                  "curveMin": null,
+                  "constantMax": 1.0,
+                  "constantMin": 0.0,
+                  "constant": 0.0,
+                  "curve": null,
+                  "curve": {
+                    "keys": [
+                      {
+                        "time": 0.0,
+                        "value": 1.0,
+                        // "inTangent": 17.21697,
+                        // "outTangent": 17.21697,
+                        // "inWeight": 0.333333343,
+                        // "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      },
+                      // {
+                      //   "time": 0.0589806437,
+                      //   "value": 0.99636364,
+                      //   "inTangent": 0.02026558,
+                      //   "outTangent": 0.02026558,
+                      //   "inWeight": 0.333333343,
+                      //   "outWeight": 0.333333343,
+                      //   "weightedMode": 0,
+                      //   "tangentMode": 0
+                      // },
+                      {
+                        "time": 1.0,
+                        "value": 0.0,
+                        // "inTangent": 0.0249999017,
+                        // "outTangent": 0.0249999017,
+                        // "inWeight": 0.333333343,
+                        // "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      }
+                    ],
+                    "length": 3,
+                    "preWrapMode": 8,
+                    "postWrapMode": 8
+                  }
+                },
+              },
+              "forceOverLifetime": {
+                "enabled": false,
+              },
+              "externalForces": {
+                "enabled": false,
+              },
+              "noise": {
+                "enabled": false,
+              },
+              "emission": {
+                "type": 0,
+                "rateMultiplier": 100.0,
+                "enabled": true,
+                "rateOverTimeMultiplier": 100.0,
+                "rateOverDistanceMultiplier": 0.0,
+                "burstCount": 0
+              },
+              "shape": {
+                "enabled": true,
+                "shapeType": 0,
+                "meshShapeType": 0,
+                "meshScale": 1.0,
+                "radius": 0.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "angle": 0.0,
+                "length": 0,
+                "arcMode": 0,
+                "randomDirectionAmount": 0.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "randomDirection": false,
+                "randomDirectionAmount": 0.0,
+              }
+            }
+          }
+        }
+      },
+    },
+
+
+
+    //Normal FanJet effects
+
+    "GameObject|_fanJet": { //GameObject child - IMPORTANT: FanJet MUST be in GameObject|_fanJet or THE GAME WILL CRASH!
+      "FanJet": { // Propeller Properties - This is where you put the custom prop stats.
+        "force" : 4500.0, //Max force forwards, weak compared to the turbulence but it's all convinence
+        // Venture's Zero prop outputs *1500*, this is 3x that!
+        "backForce" : 200.0, //Max force backwards - almost nothing
+        // "spinDelta" : 0.010, //FOR TRANSFORM MODE
+        "spinDelta" : 0.075, //0.08 //How long it takes the thing to spool up - Also the slowest accelerating prop in the game. Pair up with LME for maximum effect
+        "spinSpeed" : -12600.0, //Max animation rotation speed
+        "detachedForceFactor": 0.2
+      } 
+    },
+    "GameObject|_spinner": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|m_Fan_Blades": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "Spinner": {
+        "m_Speed": -2520,
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 10.0,
+        "m_CurrentAngle": 0.0,
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        // "Speed": 10.0,
+        // "SpeedFraction": 0.0,
+        // "AtFullSpeed": false
+      }
+    }, //Back to GameObject
+    //Changing ANYTHING in rigidbody for a block causes it to NOT work for some reason
+    // "UnityEngine.Rigidbody": {//This is how to control drag
+    //   // "useGravity": true,
+    //   // "mass": 1.0,
+    //   // "collisionDetectionMode": "ContinuousDynamic", //ContinuousDynamic(fast moving objects), Continuous(for colliding with ContinuousDynamic colliders), ContinuousSpeculative(Kinematics), Discrete(Non-Fast Objects),
+    //   // "detectCollisions": true,
+    //   // "maxDepenentrationVelocity": 10000.0,
+    //   // "drag": 0.025,//0.1 //We lower the drag here to allow for higher top speeds on dedicated TAC aircraft parts.
+    //   // "angularDrag": 0.3,//1.0
+    //   // "centerOfMass": { "x":0, "y":0, "z":0 },
+    //   // "isKinematic": false,//If isKinematic is enabled, Forces, collisions or joints will not affect the rigidbody anymore.
+    //   // "freezeRotation": true,
+    // },     
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      "m_ConsumesFuel" : false, //not set yet
+      "m_BoosterAudioType": 3,
+      "m_UseBoostControls": true,
+      "m_UseDriveControls": true,
+      "m_IsFiringBoost": false,
+      "m_IsFiringSteer": false,
+      "IsRocketBooster": true,
+      "IsRotor": false,
+      "m_UseDriveControls": true,
+      // BoosterEngineType
+      // {
+      //   Propeller,
+      //   LargeRotor,
+      //   MediumRotor,
+      //   RotorFan,
+      //   Fan,
+      //   SteeringHover,
+      //   IonDrive
+      // }
+    },
+    "ParticleManager.ModuleParticleManager": {//Additonal bonus effects with Sozin's mod installed
+      // "maxWeaponChargeTime" : -6.25, //
+      "needToCorrectDelay" : 6.25, //
+      // "Debug" : true, //
+      // [Serializable()]
+      // public enum MetadataType
+      // {
+      //     Attach = 0,
+      //     Anchor = 1,
+      //     WeaponCharge = 2,
+      //     BarrelCharge = 3,
+      //     WeaponFiring = 4,
+      //     BarrelFired = 5,
+      //     None = 6,
+      //     FanFire = 7,
+      //     FanIdle = 8,
+      //     JetIdle = 9
+      // }
+      "Input": [
+        // { //Fire Exhaust glow
+        //   "m_system": "/ParticlesOffset/p_MoveParticles/ParticleSystem.",
+        //   "type": 7
+        // },
+        { //Smoke Exhaust
+          "m_system": "/ParticlesOffset_copy/p_MoveParticles/ParticleSystem.",
+          "type": 7
+        },
+        // {
+        //   "m_system": "/fx_Plasma/fx_Particles/ParticleSystem.",
+        //   // "value": 0.8,//Delay before firing
+        //   "type": "Attach"
+        // },
+      ]
+    },  
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.05,//Shotguns go right through this
+    },
+  }
+}

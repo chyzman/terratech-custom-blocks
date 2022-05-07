@@ -1,0 +1,1931 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC <color=#c584deff><b>[EPMC]</b></color> Cricket Main Cannon",
+  "Description": "A powerful fighter-mounted <color=#c584deff>Main Cannon</color> that can disintegrate enemies encased in sheer solid armor, shielded or not-shielded with pure, tamed electrical joy. \n\nThis certainly takes battery energy to fire, and it is certainly not advised to spam this weapon as it will cancel out all other overlapping weapons, including itself.  It will also collide with your Tech, so you cannot hide it in armor or place it too close to the ground. \n\nThis can also be seen as an advantage since it also can disintegrate all incoming enemy projectiles (and allied projectiles) regardless of their attack power. \n\n\n\n\nYes, we know umm, TAC was the thief this time, stolen fighter EPMC technology from EFF.  \n<b>BUT THEY STARTED IT FIRST!</b>", //You can make multiple lines with \n
+  "ID": 584332, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 265386,//IT'S LITERALLY A WANNABE WMC WITHIN 3 BLOCKS!
+  "HP": 2500,//-200 health
+  "Mass": 18.0,//Heavy
+
+  "IconName": "WMCAssaultRifle.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 45, 45, 48, 48, 49, 49, 49, 49, 53, 53, 56, 56, 56, 56, 60, 60, 60, 60, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //Look at all those Gluon Beams! my my, how much one can YIELD with that much firepower squeezed into just 3 blocks!
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //bottom
+     { "x": 0, "y": -0.5, "z": 0 },
+    //  { "x": 0, "y": -0.5, "z": 1 },
+    //  { "x": 0, "y": -0.5, "z": 2 },
+    // //top
+    //  { "x": 0, "y": 0.5, "z": 0 },
+    //  { "x": 0, "y": 0.5, "z": 1 },
+    // //left
+    //  { "x": -0.5, "y": 0, "z": 0 },
+    //  { "x": -0.5, "y": 0, "z": 1 },
+    //  { "x": -0.5, "y": 0, "z": 2 },
+    // //right
+    //  { "x": 0.5, "y": 0, "z": 0 },
+    //  { "x": 0.5, "y": 0, "z": 1 },
+    //  { "x": 0.5, "y": 0, "z": 2 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 3 //
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Laser_MachineGun_112",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_ArmouredBlock_114",//sized explodo
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Replacing Models
+     "SubOverrideName": "m_VEN_LaserMachineGun_112_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "WC_LT_Base.obj",
+      "MeshColliderName": "WC_LT_Base.obj",
+      // "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing Models
+     "SubOverrideName": "m_VEN_LaserMachineGun_112_Laser",
+      "DestroySubReferenceRenderer": true,
+      // "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "WC_LT_Barrel.obj",
+      // "MeshColliderName": "TACBeamGuided.obj",
+      "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+    // { //Replacing Models
+    //  "SubOverrideName": "m_VEN_LaserMachineGun_112_Front",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "LancerBarrel.obj",
+    //   // "MeshColliderName": "TACBeamGuided.obj",
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "ExplosionBright",
+      "MeshTextureName": "EPMCEnergyBall.png",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.5
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      //"MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      //"MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy_copy",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      //"MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy_copy_copy",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_gimbalBase/_gimbalElev/_barrel/_muzzleFlash/FX_ChargeParticles2",
+      // "MeshTextureName": "EPMCEnergyBall.png",
+      "MeshMaterialName": "Sparks",
+      "MakeBoxCollider": false,
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 0
+      }
+    },
+
+    //removalss
+    { //Removing Models
+     "SubOverrideName": "m_VEN_LaserMachineGun_112_Mount",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    { //Removing Models
+     "SubOverrideName": "m_VEN_LaserMachineGun_112_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    { //Removing Models
+     "SubOverrideName": "m_VEN_LaserMachineGun_112_Front",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    // {
+    //   "SubOverrideName":"m_HE_Battery_211_LEDs",
+    //   // "DestroySubReferenceRenderer": true,
+    //   // "DestroyExistingColliders": true,
+    //   "MeshName": "m_TAC_LED_5.obj",
+    //   // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+    //   "MeshTextureName": "m_TAC_Battery_LED_Power_1.png",
+    //   // "MeshTextureName": "CirculatedBattery.png",
+    //   // "MeshMaterialName": "HE_Main"
+    // },
+  ],
+	
+  //
+  // Note this is not exactly a shotgun, but rather an amped-up insta-explosion gun for phasing damage.
+  //
+  "JSONBLOCK": { //Root GameObject
+
+    "GameObject|m_VEN_LaserMachineGun_112_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":-0.5, "z":1 }
+      },
+    },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":-0.1, "z":0.1 }
+      },
+      "GimbalAimer": { //Useful component - Horizontal Aiming
+        "rotationLimits": [-1, 1] //[-Left,+Right](Degrees)
+      },
+      "GameObject|m_VEN_LaserMachineGun_112_Mount": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": { //Useful component - Vertical Aiming
+          "rotationLimits": [-4, 1] //[-Up,+Down](Degrees) - VERY focused cone
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|ChargeParticlesOffset": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0},
+            "localPosition": { "x":0, "y":0, "z":2.5 }
+          },
+          "GameObject|p_ChargeParticles": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                "shaderKeywords": [
+                  "_ALBEDO",
+                  "_EMISSION",
+                  "_NORMALMAP"
+                ],
+                "mainTexture": "EPMCEnergyBall.png",
+                "globalIlluminationFlags": 1,
+              }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              // "sortMode": 0,
+              // "minParticleSize": 0.05,
+              "maxParticleSize": 0.15,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "startSpeed": {
+                //"curveMin": -2,
+                //"curveMax": -2,
+              }, //How far you want the particles to spread
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.7,
+                    "g": 0.6,
+                    "b": 1.0,
+                    "a": 0.5
+                  },
+                  "playOnAwake": false,//Prevents it from activating without Sozin's mod
+                  "startDelay": 0.0,//Delay
+                  "startLifetime": 1.00,
+                  "startRotation": 0.0,
+                  "playbackSpeed": 1.0,
+                  //
+                  // "ringBufferMode": null,
+                  // "scalingMode": null,
+                  // "startRotation": 0.0,
+                  // "playbackSpeed": 0.5,
+                  //
+                  "gravityModifier": 0.0,//No gravity
+                  "loop": true, //Charging the beam
+                  "startSize": 1.0,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "emissionRate": 125.0,
+                  "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                  "maxParticles": 500,
+                  "useAutoRandomSeed": false,
+                  "textureSheetAnimation": null,
+                  "subEmitters": {
+                    "enabled": false,
+                  },
+                  "proceduralSimulationSupported": false,
+                  "sizeBySpeed": {
+                    "enabled": true,
+                    "size": {
+                      "m_Mode": 1,
+                      "m_CurveMultiplier": 1.0,
+                      "m_CurveMin": null,
+                      "m_CurveMax": null,
+                      "m_ConstantMin": 1.0,
+                      "m_ConstantMax": 1.0,
+                      "mode": 1,
+                      "curveMultiplier": 1.0,
+                      "curveMin": null,
+                      "constantMax": 0.0,
+                      "constantMin": 0.0,
+                      "constant": 0.0
+                    },
+                    "sizeMultiplier": 2.0,
+                    "xMultiplier": 2.0,
+                    "yMultiplier": 2.0,
+                    "zMultiplier": 2.0,
+                    "separateAxes": false
+                  },
+                  "customData": {
+                    "enabled": false
+                  },
+                  "velocityOverLifetime": {
+                    "enabled": true,
+                    "xMultiplier": 0.0,
+                    "yMultiplier": 0.0,
+                    "zMultiplier": 0.0,
+                    "orbitalXMultiplier": 0.0,
+                    "orbitalYMultiplier": 0.0,
+                    "orbitalZMultiplier": 0.0,
+                    "orbitalOffsetXMultiplier": 0.0,
+                    "orbitalOffsetYMultiplier": 0.0,
+                    "orbitalOffsetZMultiplier": 0.0,
+                    "radialMultiplier": 1.0,
+                    "speedModifierMultiplier": -2.5,
+                    "space": 0
+                  },
+                  "forceOverLifetime": {
+                    "enabled": false,
+                  },
+                  "externalForces": {
+                    "enabled": false,
+                  },
+                  "noise": {
+                    "enabled": false,
+                  },
+                  "emission": {
+                    "type": 0,
+                    "rateMultiplier": 100.0,
+                    "enabled": true,
+                    "rateOverTimeMultiplier": 100.0,
+                    "rateOverDistanceMultiplier": 0.0,
+                    "burstCount": 0
+                  },
+                  "shape": {
+                    "enabled": true,
+                    "shapeType": 0,
+                    "meshShapeType": 0,
+                    "meshScale": 1.0,
+                    "radius": 3.0,
+                    "radiusMode": 0,
+                    "radiusSpread": 0.0,
+                    "angle": 0.0,
+                    "length": 0,
+                    "arcMode": 0,
+                    "randomDirectionAmount": 0.0,
+                    "sphericalDirectionAmount": 0.0,
+                    "randomPositionAmount": 0.0,
+                    "randomDirection": false,
+                    "randomDirectionAmount": 0.0,
+                  }
+                }
+              }
+            }
+          },
+          "Duplicate|p_ChargeParticles": {
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              "pivot": { "x":0.0, "y":0.0, "z":-0.5 },
+              // "minParticleSize": 0.05,
+              // "maxParticleSize": 0.25,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.9,
+                    "g": 0.9,
+                    "b": 1.0,
+                    "a": 0.75
+                  },
+                  "startSize": 0.5,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "shape": {
+                    "enabled": true,
+                    "shapeType": 0,
+                    "meshShapeType": 0,
+                    "meshScale": 1.0,
+                    "radius": 2.0,
+                    "radiusMode": 0,
+                    "radiusSpread": 0.0,
+                    "angle": 0.0,
+                    "length": 0,
+                    "arcMode": 0,
+                    "randomDirectionAmount": 0.0,
+                    "sphericalDirectionAmount": 0.0,
+                    "randomPositionAmount": 0.0,
+                    "randomDirection": false,
+                    "randomDirectionAmount": 0.0,
+                  }
+                }
+              }
+            }
+          },
+          "Duplicate|p_ChargeParticles_copy": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0.25 }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              "pivot": { "x":0.0, "y":0.0, "z":0.0 },
+              // "minParticleSize": 0.05,
+              // "maxParticleSize": 0.25,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.6,
+                    "g": 0.5,
+                    "b": 1.0,
+                    "a": 0.25
+                  },
+                  "startSize": 1.5,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "shape": {
+                    "radius": 1.75,
+                  }
+                }
+              }
+            }
+          },
+          "Duplicate|p_ChargeParticles_copy_copy": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              "pivot": { "x":0.0, "y":0.0, "z":0.0 },
+              // "minParticleSize": 0.05,
+              // "maxParticleSize": 0.25,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.6,
+                    "g": 0.5,
+                    "b": 1.0,
+                    "a": 0.1
+                  },
+                  "startSize": 1.95,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "shape": {
+                    "radius": 1.25,
+                  }
+                }
+              }
+            }
+          },
+        },
+
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0},
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|m_VEN_LaserMachineGun_112_Body": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+          "CannonBarrel": {
+          },
+          // "GameObject|_smoke2": {
+          // },
+          // "GameObject|_smoke1": {
+          // },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              // "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            // "UnityEngine.AudioModule": {//Failed attempt at audio
+            //   "AudioClip": "halp",
+            //   "AudioSource":{
+            //     "loop": true,
+            //     "playOnAwake": true,
+            //     "priority": true,
+            //     "spread": 360,
+            //     "volume": 0.5, 
+            //   }, 
+            // },
+            "GameObject|_spindle": {
+              "Spinner": {//Charge
+                // "Speed": .0,
+                "m_Speed": 6.0,
+                "m_SpinUpTime": 6.0,// How long until it fires
+                "m_CurrentAngle": 0,
+                "m_CurrentAutoSpeed": 0.0,
+                "m_CurrentSpeedFraction": 0.0,
+                // "m_SpinnerSound": {//unityengine AUDIOSOURCE
+                //   "loop": true,
+                //   "playOnAwake": true,
+                //   "priority": true,
+                //   "spread": 360,
+                //   "volume": 0.5,
+                //   // "clip": {
+                //   //   // "loadInBackground": ,
+                //   //   // "loadState": ,
+                //   //   // "preloadAudioData": ,
+                //   //   "name": "",
+                //   // },
+
+
+
+                // },
+                "m_SpinnerSoundOriginalPitch": 1.0,
+              },
+              "GameObject|m_VEN_LaserMachineGun_112_Front": {
+              },
+            },
+            "GameObject|m_VEN_LaserMachineGun_112_Laser": {
+            },
+          },
+          "GameObject|_muzzleFlash": {
+            // "Reference|GC_PlasmaCutter_Auto_434/_gimbalBase/_gimbalElev/_barrel/_muzzleFlashAnim":{
+
+            // },
+            "GameObject|FX_ChargeParticles2": {
+              "UnityEngine.ParticleSystemRenderer": {
+
+                "renderMode": 0, //This handles Direction BEFORE alignment and ultimately determines what alignment does
+                //--------  There is:  --------
+                // Billboard            (Render particles as billboards facing the active camera.)
+                // Stretch              (Stretch particles in the direction of motion.)
+                // HorizontalBillboard  (Render particles as billboards always facing up along the y-Axis.)
+                // VerticalBillboard    (Render particles as billboards always facing the player, but not pitching along the x-Axis.)
+                // Mesh                 (Render particles as meshes.)
+                // None                 (Do not render particles.)
+
+                // "alignment": 0, //This handles direction AFTER renderMode, make sure you change renderMode first!
+                //--------  There is:  --------
+                // View       (Particles face the camera plane.)
+                // World      (Particles align with the world.)
+                // Local      (Particles align with their local transform.)
+                // Facing     (Particles face the eye position.)
+                // Velocity   (Particles are aligned to their direction of travel.)
+
+                "motionVectorGenerationMode": 1, //How to track the particles moving with the camera's view
+                //--------  There is:  --------
+                // Camera         (Use only camera movement to track motion.)
+                // Object         (Use a specific pass (if required) to track motion.)
+                // ForceNoMotion  (Do not track motion. Motion vectors will be 0.)
+
+                // "sortMode": 0, //Handles which particles appear in front of the others visually
+                //--------  There is:  --------
+                // Distance         (Sort based on distance.)
+                // OldestInFront    (Sort the oldest particles to the front.)
+                // YoungestInFront  (Sort the youngest particles to the front.)
+
+                //Max Scaling restricted by size on screen
+                // "minParticleSize": 0.05,
+                "maxParticleSize": 0.15,
+
+              },
+              "UnityEngine.ParticleSystem": {
+                "startSpeed": {
+                  "curveMin": -2,
+                  "curveMax": -2,
+                }, //How far you want the particles to spread
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.7,
+                      "g": 0.6,
+                      "b": 1.0,
+                      "a": 0.5
+                    },
+                    "playOnAwake": true,
+                    "startDelay": 0.0,//Delay
+                    "startLifetime": 1.00,
+                    "startRotation": 0.0,
+                    "playbackSpeed": 1.0,
+                    //
+                    // "startRotation": 0.0,
+                    // "playbackSpeed": 0.5,
+                    //
+                    "gravityModifier": 0.0,//No gravity
+                    "loop": true, //Charging the beam
+                    "startSize": 1.0,
+                    "startSpeed": 1.0, //How far you want the particles to spread
+                    "emissionRate": 125.0,
+                    "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                    "maxParticles": 500,
+                    "useAutoRandomSeed": false,
+                    "textureSheetAnimation": null,
+                    "subEmitters": {
+                      "enabled": false,
+                    },
+                    "proceduralSimulationSupported": false,
+                    "sizeBySpeed": {
+                      "enabled": true,
+                      "size": {
+                        "m_Mode": 1,
+                        "m_CurveMultiplier": 1.0,
+                        "m_CurveMin": null,
+                        "m_CurveMax": null,
+                        "m_ConstantMin": 1.0,
+                        "m_ConstantMax": 1.0,
+                        "mode": 1,
+                        "curveMultiplier": 1.0,
+                        "curveMin": null,
+                        "constantMax": 0.0,
+                        "constantMin": 0.0,
+                        "constant": 0.0
+                      },
+                      "sizeMultiplier": 2.0,
+                      "xMultiplier": 2.0,
+                      "yMultiplier": 2.0,
+                      "zMultiplier": 2.0,
+                      "separateAxes": false
+                    },
+                    "customData": {
+                      "enabled": false
+                    },
+                    "velocityOverLifetime": {
+                      "enabled": true,
+                      "xMultiplier": 0.0,
+                      "yMultiplier": 0.0,
+                      "zMultiplier": 0.0,
+                      "orbitalXMultiplier": 0.0,
+                      "orbitalYMultiplier": 0.0,
+                      "orbitalZMultiplier": 0.0,
+                      "orbitalOffsetXMultiplier": 0.0,
+                      "orbitalOffsetYMultiplier": 0.0,
+                      "orbitalOffsetZMultiplier": 0.0,
+                      "radialMultiplier": 1.0,
+                      "speedModifierMultiplier": -2.5,
+                      "space": 0
+                    },
+                    "forceOverLifetime": {
+                      "enabled": false,
+                    },
+                    "externalForces": {
+                      "enabled": false,
+                    },
+                    "noise": {
+                      "enabled": false,
+                    },
+                    "emission": {
+                      "type": 0,
+                      "rateMultiplier": 100.0,
+                      "enabled": true,
+                      "rateOverTimeMultiplier": 100.0,
+                      "rateOverDistanceMultiplier": 0.0,
+                      "burstCount": 0
+                    },
+                    "shape": {
+                      "enabled": true,
+                      "shapeType": 0,
+                      "meshShapeType": 0,
+                      "meshScale": 1.0,
+                      "radius": 3.0,
+                      "radiusMode": 0,
+                      "radiusSpread": 0.0,
+                      "angle": 0.0,
+                      "length": 0,
+                      "arcMode": 0,
+                      "randomDirectionAmount": 0.0,
+                      "sphericalDirectionAmount": 0.0,
+                      "randomPositionAmount": 0.0,
+                      "randomDirection": false,
+                      "randomDirectionAmount": 0.0,
+                    }
+                  }
+                }
+              },
+            },
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":-0.1 }
+            },
+            "MuzzleFlash": {
+              "m_SpeedFactor": 0.90,
+            },
+            "GameObject|_light": {
+              "UnityEngine.Light": {
+                  "color": {
+                    "r": 0.6,
+                    "g": 0.6,
+                    "b": 1.0,
+                    // "a": 0.2
+                  },
+                // "areaSize": 5.0,//2.0
+                // "intensity": 5.0,//2.0
+                // "range": 7.5,
+              }, 
+            },
+          },
+          "GameObject|_casingSpawn": {
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0.3 }
+            },
+          }
+        },
+      }
+    },
+
+
+    "ModuleConsumeEnergyToShell": {
+      "EnergyCost":           20000,   // How much energy is needed to fire one round- LOADS of energy
+                                      // (For continuous weapons, how much energy per second)
+      "EnergyCapacity":       25000,   // How much energy this block can hold
+                                      
+      // The two below are intended for flamethrowers and beam weapons
+      "LowestPermittedEnergy": 5000,    // The minimum amount of energy that can be left in a system 
+                                      // (Useful for continuous weapons: Don't drain all energy)
+      "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                      // (Useful for continuous weapons: Prevents studdering effect)
+    },
+
+    "Damageable": {
+      "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for batteries
+    },
+
+    "ModuleWeapon": { //Component
+      "m_ShotCooldown" : 0.0, //This is the cooldown between every burst shot.
+      "m_FireSFXType": "GCPlasmaCutterAuto",//"HEMiniGun",//"BFLaserGatling",//"VENRPGLauncher", //Firing noise //36 -Delicannon 48 -canon -doesn't work
+      // "m_AutoFire": false,
+      //"m_LimitedShootAngle": 180,
+      "m_RotateSpeed" : 10.0 //SPEED of turret aiming, not homing
+    },
+
+    // "ModuleStopSpinnersOnDamage": { // N E W  Aceba1 component for Reset fire On Damage
+    //   //Weapon resets charge if directly hit
+    //   "targetSpinners": ["_gimbalBase/_gimbalElev/_barrel/_recoiler/_spindle/Spinner.", "_gimbalBase/_gimbalElev/_barrel_copy/_recoiler/_spindle/Spinner.", "_gimbalBase/_gimbalElev/_barrel_copy_copy/_recoiler/_spindle/Spinner."], // Optional array to set specific spinners
+    //   "SetFullSpeedInstead": false,
+    // },
+
+    "ParticleManager.ModuleParticleManager": {//Additonal bonus effects with Sozin's mod installed
+      // "maxWeaponChargeTime" : -6.25, //
+      "needToCorrectDelay" : 6.25, //
+      // "Debug" : true, //
+
+      "Input": [
+        {
+          "m_system": "/_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles/ParticleSystem.",
+          // "value": 0.8,//Delay before firing
+          "value": 6,//Delay before firing
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+          "type": "WeaponFiring"
+        },
+        {
+          "m_system": "/_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy/ParticleSystem.",
+          // "value": 0.8,//Delay before firing
+          "value": 6,//Delay before firing
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+          "type": "WeaponFiring"
+        },
+        {
+          "m_system": "/_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy_copy/ParticleSystem.",
+          // "value": 0.6,//Delay before firing
+          "value": 4,//Delay before firing
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+          "type": "WeaponFiring"
+        },
+        {
+          "m_system": "/_gimbalBase/_gimbalElev/ChargeParticlesOffset/p_ChargeParticles_copy_copy_copy/ParticleSystem.",
+          // "value": 0.25,//Delay before firing
+          "value": 2,//Delay before firing
+          "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+          "type": "WeaponFiring"
+        },
+        // {
+        //   "m_system": "/_gimbalBase/_gimbalElev/ChargeParticlesOffset/Sparks/ParticleSystem.",
+        //   // "value": 0.25,//Delay before firing
+        //   "value": 0,//Delay before firing
+        //   // "CannonBarrel": "/_gimbalBase/_gimbalElev/_barrel/CannonBarrel.",
+        //   "type": "WeaponFiring"
+        // },
+      ]
+    },  
+    // "PlayAudioLoop": { //Component
+    //   "m_SFXType" : " CabDetachKlaxon",
+    // },
+
+    "ModuleWeaponGun": { // Another component
+      //"UnityEngine.Transform": {"localScale": { "x":6, "y":6, "z":6 }}, //Bigger for placeholder - broken as it crashes the game
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      "m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      // "m_AutoFire": false,
+      "m_SpinUp": "true", //enable Charge SFX
+      "m_HasSpinUpDownAnim": "true", //enable Charge SFX
+      "m_ShotCooldown" : 6.0, //This is the cooldown between every burst shot.
+      "m_ResetBurstOnInterrupt" : true,
+      // "m_CooldownVariancePct" : 0.15, 
+      "m_BurstShotCount" : 0, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 6.0, //3 seconds
+      "m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      "m_HasCooldownAnim" : false, //Doesn't change anything
+      "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    },//comma
+
+    "Reference|GC_BuzzSaw_246/ModuleDrill.": { //Component for just the noise
+      "m_FireSFXType": "BFLaserGatling",//"HEMiniGun",//"BFLaserGatling",//"VENRPGLauncher", //Firing noise //36 -Delicannon 48 -canon -doesn't work
+      // "m_FireSFXType": "", //Firing noise - ItemBlockProduced
+      // // "m_FireSFXType": "SCUItemConsumed", //Firing noise
+      // //"m_LimitedShootAngle": 180,
+      // "m_RotateSpeed" : 150.0 //SPEED of turret aiming, not homing
+    },
+
+
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 50,//75 //YEET the missile before booster
+      "m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 5.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "LaserProjectile": {
+          "m_VelocityScaleFactor": 0.05,
+          // "m_MeshRenderer": null,
+          // "m_Collider": null,
+          // "m_DamageType": 2,
+          // "m_Damage": 600000,
+        },    
+        // "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+        //   // "useGravity": true,
+        //   // "CollisionDetectionMode": "Continuous",//Discrete, Continuous, ContinuousSpeculative
+        // },  
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : " AnimBFSolarClose", //IntroCabImpact,Artefact 
+        },
+        "GameObject|FireBurst": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },       
+          "Reference|HE_CannonTurret_Short_525.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+              "localPosition": { "x":0, "y":0, "z":0.5 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 }
+            },  // Size of Bullet      
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              // "sortMode": 0,
+              // "minParticleSize": 0.05,
+              "maxParticleSize": 0.25,
+            },
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.1,
+                    "g": 0.125,
+                    "b": 1.0,
+                    "a": 0.4
+                  },
+                  "playOnAwake": false,//Prevents it from activating without Sozin's mod
+                  "startDelay": 0.0,
+                  "startLifetime": 2.5,
+                  "playbackSpeed": 1.0,
+                  "gravityModifier": 0.0,//No gravity
+                  "loop": false, //
+                  "startSize": 12.5,
+                  "startSpeed": 75.0, //How far you want the particles to spread
+                  "emissionRate": 75.0,
+                  "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+                  "maxParticles": 750,
+                }
+              }
+            }
+          },
+        },
+        "GameObject|GunReset": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },       
+          "Explosion": { //Reset the spin charge noise
+            // "m_DamageType" : "Energy", //What damage modifier the explosion does - MAGIC SMOKE
+            // "m_ExplosionSize": "Large", //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+            // ExplosionSize
+            // {
+            //   Small,
+            //   Medium,
+            //   Large
+            // }
+            // "m_ExplosionType": "Firework", //What the explosion looks like
+            // ExplosionType
+            // {
+            //   None,
+            //   Blocks,
+            //   Weapon,
+            //   Fuel,
+            //   Chemical,
+            //   Firework
+            // }
+            "m_EffectRadius": 3.5, //Boom
+            "m_EffectRadiusMaxStrength": 2.5, 
+            "m_MaxDamageStrength": 1, //This affects splash damage - 100 splash damage
+            "m_MaxImpulseStrength": 1, //How hard to push things, explosion force -YEET
+            // "m_CorpExplosionAudioType": 2,
+          },           
+        },
+
+        "GameObject|AuxNoiseCompounder": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },       
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " AnimBFSolarClose", //IntroCabImpact,Artefact 
+          },     
+        },
+        "Duplicate|AuxNoiseCompounder": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },      
+        },
+        "Gameobject|AuxNoiseCompounder2": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },      
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " IntroWindAndAlarm",
+          },
+        },
+        "Duplicate|AuxNoiseCompounder2": {  
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },      
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " IntroWindAndAlarm",
+          },
+        },
+        "GameObject|Line": {   
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " IntroWindAndAlarm",
+          },
+          "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+            "gameObject": {
+              "layer": 8 //ID 524288Layers:
+                // (0) Default//Collides with normal things
+                // (1) TransparentFX //Bypasses Shields, hits self
+                // (2) Ignore Raycast//Raycasts cannot detect, hits self
+                // (3) 
+                // (4) Water//
+                // (5) UI//No collision
+                // (6) 
+                // (7) 
+                // (8) Tank //Bypasses shields, collides with self
+                // (9) Cosmetic//Collides with nothing.
+                // (10) Bullet //normal projectile
+                // (11) Container //Crates, Collides with nothing.
+                // (12) Shield //Clips through shields, collides with self
+                // (13) Terrain //
+                // (14) TankIgnoreTerrain //Ignores terrain, hits self
+                // (15) Scenery //normal
+                // (16) Pickup //normal
+                // (17) Trigger //No collision
+                // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+                // (19) 3D UI //No collision
+                // (20) WheelSuspension // normal
+                // (21) ShieldBulletFilter //collides with bullets and shields
+                // (22) TerrainCollidingParticles
+                // (23) ShieldTechFilter //collides with Techs
+                // (24) TerrainOnly //idk
+                // (25) RenderImageForPrefab
+                // (26) SceneryCoarse
+                // (27) Landmarks
+                // (28) 
+                // (29) 
+                // (30) 
+                // (31) 
+            },
+            "radius": 0.05,
+            "center": { "x": 0, "y": 0, "z": 0 },
+            // "height": 0.1,
+            // "direction": 2
+          },                
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":2 },
+            // "localScale": { "x":2, "y":2, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0}
+          },            
+          "UnityEngine.LineRenderer": { //For some reason TerraTech's lasers are shot out of the gun in reverse
+            "startWidth": 15.0,
+            "endWidth": 3.0,
+            "numCapVertices": 10,
+            "startColor": {
+              "r": 0.75,
+              "g": 0.2,
+              "b": 0.2,
+              "a": 0.0,
+              // "a": 0.60,
+              "maxColorComponent": 1.0
+            },
+            "endColor": {
+              "r": 1.0,
+              "g": 0.2,
+              "b": 0.2,
+              "a": 0.0,
+              // "a": 0.8,
+              "maxColorComponent": 1.0
+            },
+          }
+        },
+        // "UnityEngine.TrailRenderer": { //Paint them trails
+        //   //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+        //   "material": {
+        //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+        //     "mainTexture": "LED_BeamBlockBN.png",
+        //     "shaderKeywords": [
+        //       "_ALBEDO",
+        //       "_EMISSION",
+        //       "_NORMALMAP"
+        //     ],
+        //     "mainTextureOffset": {"x":1, "y":1},
+        //     "mainTextureScale": {"x":1, "y":1},
+        //     "globalIlluminationFlags": 1
+        //   },
+        //   "receiveShadows": false,
+        //   "shadowCastingMode": "Off",
+        //   "rendererPriority": 1,
+        //   "realtimeLightmapIndex": -1,
+        //   "generateLightingData": false,
+        //   "time": 0.16,
+        //   "startWidth": 0.5,
+        //   "endWidth": 0.5,
+        //   "widthMultiplier": 1.25, //Uniform Width Multiplier
+        //   "autodestruct": false, // Having this true crashes the game
+        //   "emitting": true, //0.2
+        //   "numCornerVertices": 20,
+        //   "numCapVertices": 8,
+        //   "minVertexDistance": 0.25,
+        //   "startColor": {
+        //     "r": 1.0,
+        //     "g": 1.0,
+        //     "b": 1.0,
+        //     "a": 0.925,
+        //     "maxColorComponent": 1.0
+        //   },
+        //   "endColor": {
+        //     "r": 0.5,
+        //     "g": 0.5,
+        //     "b": 0.5,
+        //     "a": 0.05,
+        //     "maxColorComponent": 1.0
+        //   },
+        //   "positionCount": 1,
+        //   "shadowBias": 0.0,
+        //   // "generateLightingData": false,
+        //   "textureMode": 0,
+        //   "alignment": 0,
+        // },
+
+        "GameObject|_glow": {//Does work
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          /*
+          "UnityEngine.Light": {
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            "color": {
+              "r": 0.3,
+              "g": 0.4,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "colorTemperature": 6570.0,
+            // "areaSize": 52.5,//2.0
+            "intensity": 25.0,//2.0
+            "bounceIntensity": 1.0,
+            // "shadowCustomResolution": -1,
+            // "shadowBias": 0.5,
+            // "shadowNormalBias": 1.0,
+            // "shadowNearPlane": 0.2,
+            "renderMode": "Auto",
+            // "isActiveAndEnabled": true,
+            //Auto, ForcePixel, ForceVertex
+            "type": "Point",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 3.0,
+            // "flare": null
+          },
+          */
+        },
+        "GameObject|_Basiclight": {//Does work
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1, },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.Light": {
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            "color": {
+              "r": 0.4,
+              "g": 0.5,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "colorTemperature": 6570.0,
+            // "areaSize": 52.5,//2.0
+            "intensity": 8.5,//2.0
+            "bounceIntensity": 1.0,
+            // "shadowCustomResolution": -1,
+            // "shadowBias": 0.5,
+            // "shadowNormalBias": 1.0,
+            // "shadowNearPlane": 0.2,
+            "renderMode": "Auto",
+            // "isActiveAndEnabled": true,
+            //Auto, ForcePixel, ForceVertex
+            "type": "Point",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 50.0,
+            // "flare": null
+          },
+        },
+        "Reference|HE_CannonTurret_Short_525.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+            // "minParticleSize": 0.05,
+            "maxParticleSize": 0.25,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.125,
+                  "b": 1.0,
+                  "a": 0.4
+                },
+                "startDelay": 0.0,
+                "startLifetime": 2.5,
+                "playbackSpeed": 0.75,
+                "gravityModifier": 0.0,//No gravity
+                "loop": true, //Happens during flight
+                "startSize": 8.5,
+                "startSpeed": 25.0, //How far you want the particles to spread
+                "emissionRate": 75.0,
+                "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+                "maxParticles": 750,
+                "maxParticles": 750,
+                "emission": {
+                  // "burst": {
+                  //   "probability": 0,
+                  // },
+                },
+                "shape": {
+                  "radius": 0.15,
+                  "radiusSpread": 0.5,
+                  "angle": 90.0,
+                  "length": 0.5,
+                  "randomDirectionAmount": 1.0,
+                },
+                "lights": {
+                  "enabled": false,
+                  "ratio": 1.0,
+                  "intensityMultiplier": 1.0,
+                  "maxLights": 20,
+                  "rangeMultiplier": 1.0,
+                  "intensityMultiplier": 1.0,
+                  "light": {
+                    "cookieSize": 4.0,
+                    "spotAngle": 360.0,
+                    "color": {
+                      "r": 0.1,
+                      "g": 0.3,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+                    "colorTemperature": 6570.0,
+                    // "areaSize": 52.5,//2.0
+                    "intensity": 17.5,//2.0
+                    // "bounceIntensity": 1.0,
+                    // "shadowCustomResolution": -1,
+                    // "shadowBias": 0.5,
+                    // "shadowNormalBias": 1.0,
+                    // "shadowNearPlane": 0.2,
+                    "renderMode": "Auto",
+                    // "isActiveAndEnabled": true,
+                    //Auto, ForcePixel, ForceVertex
+                    "type": "Point",
+                    //Spot, Directional, Point, Rectangle, Disc
+                    "range": 7.5,
+                    // "flare": null
+                  },
+                },
+                "limitVelocityOverLifetime": {
+                  "enabled": true,
+                  "dragMultiplier": 1.0,
+                },
+                "inheritVelocity": {
+                  "enabled": true,
+                  "mode": 0,
+                  "curve": {
+                    "keys": [
+                      {
+                        "time": 0.0,
+                        "value": 1.0,
+                        "inTangent": 1.0,
+                        "outTangent": 0.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      },
+                      {
+                        "time": 1.0,
+                        "value": 0.0,
+                        "inTangent": 0.0,
+                        "outTangent": 1.0,
+                        "inWeight": 0.333333343,
+                        "outWeight": 0.333333343,
+                        "weightedMode": 0,
+                        "tangentMode": 0
+                      }
+                    ],
+                    "length": 2,
+                    "preWrapMode": 8,
+                    "postWrapMode": 8,
+                  },
+                  "curveMultiplier": -0.01
+                },
+                "velocityOverLifetime": {
+                  "enabled": true,
+                  "x": {
+                    "mode": 0,
+                    "curveMultiplier": 0.0,
+                    "constantMax": 0.5,
+                    "constantMin": 0.0,
+                    "constant": 0.5,
+                    "curve": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 1.0,
+                          "inTangent": 1.0,
+                          "outTangent": 0.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 0.0,
+                          "inTangent": 0.0,
+                          "outTangent": 1.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 2,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8,
+                    },
+                    // "curve": null
+                  },
+                  "y": {
+                    "mode": 0,
+                    "curveMultiplier": 0.0,
+                    "curveMax": null,
+                    "curveMin": null,
+                    "constantMax": 0.5,
+                    "constantMin": 0.0,
+                    "constant": 0.0,
+                    "curve": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 1.0,
+                          "inTangent": 1.0,
+                          "outTangent": 0.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 0.0,
+                          "inTangent": 0.0,
+                          "outTangent": 1.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 2,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8,
+                    },
+                    // "curve": null
+                  },
+                  "z": {
+                    "mode": 0,
+                    "curveMultiplier": 0.0,
+                    "curveMax": null,
+                    "curveMin": null,
+                    "constantMax": 0.5,
+                    "constantMin": 0.0,
+                    "constant": 0.0,
+                    "curve": {
+                      "keys": [
+                        {
+                          "time": 0.0,
+                          "value": 1.0,
+                          "inTangent": 1.0,
+                          "outTangent": 0.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        },
+                        {
+                          "time": 1.0,
+                          "value": 0.0,
+                          "inTangent": 0.0,
+                          "outTangent": 1.0,
+                          "inWeight": 0.333333343,
+                          "outWeight": 0.333333343,
+                          "weightedMode": 0,
+                          "tangentMode": 0
+                        }
+                      ],
+                      "length": 2,
+                      "preWrapMode": 8,
+                      "postWrapMode": 8,
+                    },
+                  },
+                  "xMultiplier": 1.0,
+                  "yMultiplier": 1.0,
+                  "zMultiplier": 1.0,
+                },
+              }
+            }
+          }
+        },
+        "Duplicate|Sparks": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+        },
+        "Duplicate|Sparks_copy": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+        },
+        "Duplicate|Sparks_copy_copy": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+            "maxParticleSize": 0.35,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.2,
+                  "b": 1.0,
+                  "a": 0.1
+                },
+                "startDelay": 0.0,
+                "startLifetime": 2.0,
+                "playbackSpeed": 0.75,
+                "gravityModifier": 0.0,//No gravity
+                "loop": true, //Happens during flight
+                "startSize": 37.5,
+                "startSpeed": 45.0, //How far you want the particles to spread
+                "emissionRate": 25.0,
+                "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+                "maxParticles": 500,
+                "maxParticles": 500,
+                "emission": {
+                  // "burst": {
+                  //   "probability": 0,
+                  // },
+                },
+                "shape": {
+                  "radius": 0.15,
+                  "radiusSpread": 0.5,
+                  "angle": 180.0,
+                  "length": 0.5,
+                  "randomDirectionAmount": 50.0,
+                },
+              }
+            }
+          }
+        },
+        "Duplicate|Sparks_copy_copy_copy": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+        },
+        "Duplicate|Sparks_copy_copy_copy_copy": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+        },
+        "Duplicate|Sparks_copy_copy_copy_copy_copy": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":1.2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet      
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.125,
+                  "b": 1.0,
+                  "a": 0.4
+                },
+                "startDelay": 0.0,
+                "startSpeed": 25,
+                "startLifetime": 2.5,
+                "playbackSpeed": 0.75,
+                "gravityModifier": 0.0,//No gravity
+                "loop": false, //Happens during flight
+                "startSize": 12.0,
+                "emissionRate": 0.0,
+              }
+            }
+          }
+        },
+        "Reference|VEN_Flamethrower_121/_gimbalHorizontal/_gimbalVertical/FXFlameThrower": { //superthruster
+        // "GameObject|Pusher": { //pusher
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":-2.5 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet 
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+            "maxParticleSize": 0.15,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.0,
+                  "a": 0.0
+                },
+                "playOnAwake": true,
+                "startDelay": 0.2,//Delay before persistant thrust
+                "startLifetime": 0.5,
+                "playbackSpeed": 1.0,
+                "gravityModifier": 0.0,//No gravity
+                "loop": true, //Happens during flight
+                "startSize": 1.0,
+                "startSpeed": 100.0, //How far you want the particles to spread
+                "emissionRate": 25.0,
+                "simulationSpace": 1,// 0 = Host Gameobject, 1 = World
+                "maxParticles": 100,
+                "collision": {
+                  "enabled": true, 
+                  "type": 1, //Planes or World 
+                  "mode": 0, //3D or 2D 
+                  "colliderForce": 0.025,
+                  // "collidesWith": 8,
+                  "radiusScale": 0.75,
+                  "maxCollisionShapes": 10,
+                  "enableDynamicColliders": true,
+                  "multiplyColliderForceByCollisionAngle": 1,
+                  "multiplyColliderForceByParticleSize": 1,
+                  "multiplyColliderForceByParticleSpeed": 1,
+                  // "enabled": false,                              //Setting this to false will break the Particle Weapon
+                  "enableInteriorCollisions": true,                 //Can the weapon's own particles collide with each other?
+                  "bounceMultiplier": 1.0,//0.5 is default          //How hard it bounces on contact with something
+                  "lifetimeLossMultiplier": 1.2,                     //How fast it will dissappear after contact
+                  "minKillSpeed": 0.0,
+                  "maxKillSpeed": 10000.0,
+                },
+                "limitVelocityOverLifetime": {
+                  "enabled": false,
+                  // "dragMultiplier": 1.0,
+                },
+                "emission": {
+                },
+                "shape": {
+                  "radius": 0.0,
+                  "radiusSpread": 0.0,
+                  "angle": 0.0,
+                  "length": 2.5,
+                  "randomDirectionAmount": 0.0,
+                },
+              }
+            }
+          }, 
+        },
+        "Duplicate|FXFlameThrower": { //yeet projectiles outta our way
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+            "localPosition": { "x":0, "y":0, "z":4.0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },  // Size of Bullet     
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+            // "maxParticleSize": 0.15,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 0.0
+                },
+                "playOnAwake": true,
+                "startDelay": 0.0,//Delay before persistant thrust
+                "startLifetime": 0.5,
+                "playbackSpeed": 1.0,
+                "gravityModifier": 0.0,//No gravity
+                "loop": true, //Happens during flight
+                "startSize": 4.0,
+                "startSpeed": 100.0, //How far you want the particles to spread
+                "emissionRate": 125.0,
+                "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                "maxParticles": 500,
+                "collision": {
+                  "enabled": true, 
+                  "type": 1, //Planes or World 
+                  "mode": 0, //3D or 2D 
+                  "colliderForce": 0.03,
+                  "collidesWith": 
+                  {
+                    "m_Mask": -1,
+                    "value": -1//512
+                  },
+                  "radiusScale": 5.0,
+                  "maxCollisionShapes": 250,
+                  "enableDynamicColliders": true,
+                  "multiplyColliderForceByCollisionAngle": 0.1,
+                  "multiplyColliderForceByParticleSize": 0.1,
+                  "multiplyColliderForceByParticleSpeed": 0.1,
+                  // "enabled": false,                              //Setting this to false will break the Particle Weapon
+                  "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                  "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+                  "lifetimeLossMultiplier": 0.5,                     //How fast it will dissappear after contact
+                  "minKillSpeed": 0.0,
+                  "maxKillSpeed": 10000.0,
+                },
+                "limitVelocityOverLifetime": {
+                  "enabled": false,
+                  // "dragMultiplier": 1.0,
+                },
+                "shape": {
+                  "radius": 2.0,
+                  "radiusSpread": 0.0,
+                  "angle": 0.0,
+                  "length": 2.5,
+                  "randomDirectionAmount": 0.0,
+                },
+              }
+            }
+          }, 
+        },
+        "WeaponRound": {
+          "m_DamageType": 2,
+          "m_Damage": 6000,//DEATH
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Cannon",
+          "m_FlightSFXType" : "DeliveryBomb", // Allows for homing sound
+          "m_LifeTime": 4.0, //Time before BOOM
+          //slo
+          "m_OriginalCollisionDetectionMode": 0,
+          // "m_HasSetCollisionDeathDelay": true,
+          "m_DeathDelay": 1.0,
+          "m_SingleImpact" : false, // The Bees are Relentless and will continuously deal damage while in the Enemy
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel" : true,
+          "m_CanHaveGravity" : false,
+          "m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          "m_ImpactSFXType" : "Laser",
+          "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+          //"m_Trail" : {"startWidth": 3},
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "UnityEngine.Transform": {
+              "localScale": { "x":1.0, "y":1.0, "z":1 },
+              "localPosition": { "x":0, "y":0, "z":-0.5 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 }
+            },
+            "PlayAudioLoop": { //Component
+              "m_SFXType" : " IntroExplosionHuge",
+            },
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Energy", //What damage modifier the explosion does - MAGIC SMOKE
+              "m_ExplosionSize": "Large", //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+              // ExplosionSize
+              // {
+              //   Small,
+              //   Medium,
+              //   Large
+              // }
+              "m_ExplosionType": "Firework", //What the explosion looks like
+              // ExplosionType
+              // {
+              //   None,
+              //   Blocks,
+              //   Weapon,
+              //   Fuel,
+              //   Chemical,
+              //   Firework
+              // }
+              "m_EffectRadius": 8.5, //Boom
+              "m_EffectRadiusMaxStrength": 6, 
+              "m_MaxDamageStrength": 5250, //This affects splash damage - 100 splash damage
+              "m_MaxImpulseStrength": 2500, //How hard to push things, explosion force -YEET
+              // "m_CorpExplosionAudioType": 2,
+            },             
+            "Reference|GC_Battery_424.ModuleDamage.deathExplosion/FX_Lightning": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+              },
+              // "UnityEngine.ParticleSystemRenderer": {
+              //   // "alignment": 0,
+              //   "renderMode": 1,
+              //   // "sortMode": 0,
+              // },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 15.0,
+                    // "startRotation": 5.0,
+                    "startSpeed": 10.0, //How far you want the particles to spread
+                    "startColor": {
+                      "r": 0.35,
+                      "g": 0.6,
+                      "b": 1.0,
+                      "a": 0.9
+                    },
+                    "emissionRate": 25.0,
+                    "maxParticles": 14,
+                    "emission": {
+                      "rateMultiplier": 50.0,
+                      "rateOverTimeMultiplier": 0.4,
+                    },
+                    // "duration": 8.0,
+                    "playbackSpeed": 1.0,
+                    "shape": {
+                      // "meshScale": 1.0,
+                      "randomDirection": true,
+                      // "enabled": true,
+                      // "shapeType": 4,
+                      "randomDirectionAmount": 4.5,
+                      "sphericalDirectionAmount": 17.6,
+                      "randomPositionAmount": 0.0,
+                    },
+                    // "rotationOverLifetime": {
+                    //   "enabled": true,
+                    //   "xMultiplier": 1.0,
+                    //   "yMultiplier": 0.0,
+                    //   "zMultiplier": 0.0,
+                    //   "separateAxes": false
+                    // },
+                    // // "randomizeRotationDirection": 90.0,
+                    // "startRotationMultiplier": 1.0,
+                    // "startRotationXMultiplier": 1.0,
+                    // "startRotationYMultiplier": 1.0,
+                    // "startRotationZMultiplier": 1.0,
+                    // "flipRotation": 90.0,
+                  }
+                }
+              }
+            },
+            "Reference|HE_CannonTurret_Short_525.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+              "UnityEngine.ParticleSystemRenderer": {
+                // "alignment": 0,
+                "renderMode": 0,
+                // "sortMode": 0,
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startDelay": 0.0,
+                    "startColor": {
+                      "r": 0.05,
+                      "g": 0.125,
+                      "b": 1.0,
+                      "a": 0.75
+                    },
+                    "playbackSpeed": 1.25,
+                    "gravityModifier": 0.0,//No gravity
+                    "shape": {
+                      // "radiusMode": true,
+                      "shapeType": "Sphere",
+                      "arc": 360.0,
+                      "radius": 0.5,
+                      "radiusSpread": 5.0,
+                      "angle": 360.0,
+                      "length": 0.5,
+                      "randomDirectionAmount": 10.0,
+                    },
+                    "startSize": 20,
+                    "startSpeed": 45,               //How far you want the particles to spread
+                    // "emissionRate": 75.0,
+                    "maxParticles": 7500,
+                    // "maxParticles": 0,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    // } 
+                  }
+                }
+              }
+            },
+            "Duplicate|Sparks": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":180, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Duplicate|Sparks_copy": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Duplicate|Sparks_copy_copy": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":180, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Duplicate|Sparks_copy_copy_copy": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Duplicate|Sparks_copy_copy_copy_copy": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":180, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Reference|HE_CannonTurret_Short_525.FireData.m_BulletPrefab/Projectile.m_Explosion/Point light": {//Does work
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":1, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+              "UnityEngine.Light": {
+                // "cookie": {
+                //   "mainTexture": "LED_BeamBlockB.png",
+                //   "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                //   "color": {
+                //     "r": 0.1,
+                //     "g": 0.2,
+                //     "b": 1.0,
+                //     "a": 0.2
+                //   },
+                // },
+                "cookieSize": 4.0,
+                "spotAngle": 360.0,
+                // "innerSpotAngle": 360.0,
+                "color": {
+                  "r": 0.4,
+                  "g": 0.5,
+                  "b": 1.0,
+                  "a": 0.75
+                },
+                "colorTemperature": 6570.0,
+                // "areaSize": 100.0,//2.0
+                "intensity": 15.0,//2.0
+                "bounceIntensity": 1.0,
+                // "shadowCustomResolution": -1,
+                // "shadowBias": 0.5,
+                // "shadowNormalBias": 1.0,
+                // "shadowNearPlane": 0.2,
+                "renderMode": "Auto",
+                //Auto, ForcePixel, ForceVertex
+                "type": "point",
+                //Spot, Directional, Point, Rectangle, Disc
+                "range": 125.0,
+                // "flare": null
+              }, 
+              "FadeInOutLight": {
+                "StartDelay": 0.0,
+                "FadeInSpeed": 0.02,
+                "FadeOutDelay": 0.15,
+                "FadeOutSpeed": 0.2,
+                "FadeOutAfterCollision": true,
+                "UseHideStatus": true,
+                // "goLight": "TheLightSpecifiedAbove",
+                // "canStart": true,
+              }
+            },
+          }
+        },
+        "SeekingProjectile": {
+          "m_LockOntoTarget": true, //Will this find and home in?
+          "m_ApplyRotationTowardsTarget": true, //Will it visually point at the target?
+          "m_SeekType" : "Vehicle", //What can this target?
+          //ObjectTypes
+          // {
+          //   Null,
+          //   Vehicle,
+          //   Block,
+          //   Scenery,
+          //   Chunk,
+          //   Waypoint,
+          //   Crate
+          // }
+          "m_TargetingType" : "BestAimCabOrCentre", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          "m_UpdateVisibleInterval" : 0.2, //idk
+          "m_ActivationDelay": 0.1, //How long before we aim at the target?
+          "m_VisionRange": 150, //How far can we see targets?
+          //Was 200
+          "m_VisionConeAngle": 180, //How wide can we see targets?
+          "m_TurnSpeed": 15 // How strong the turn is towards the enemy
+          // "m_TurnSpeed": 4 // How strong the turn is towards the enemy
+        }, 
+      },
+    } 
+  }
+}

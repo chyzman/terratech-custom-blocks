@@ -1,0 +1,1234 @@
+
+{
+    "Name":                 "Adaranth-Pattern MacroLaser",
+    "Description":          "A massive energy weapon stripped from the arm of a Titan warform.",
+
+    "ID": 10028,
+
+    "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 3, //The desired grade minus one
+    "Price": 445614,
+    "HP": 250000,
+    "Mass": 400,
+
+    "Fragility": 0.0,
+    
+    "Recipe":  "48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 51, 51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 58, 58, 58, 58, 58, 58, 58, 58, 58, 58, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 65" ,	
+	
+    "IconName":                   "MacroLaser.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "DamageableType": 0,
+
+    "BlockExtents":
+    { "x": 6,"y": 3, "z": 23 },
+
+    "APs": [
+      // back face
+        {"x": 0, "y": 0.0, "z": -0.5 },
+        {"x": 0, "y": 1.0, "z": -0.5 },
+        {"x": 1, "y": 0.0, "z": -0.5 },
+        {"x": 1, "y": 1.0, "z": -0.5 },
+
+        {"x": 4, "y": 0.0, "z": -0.5 },
+        {"x": 4, "y": 1.0, "z": -0.5 },
+        {"x": 5, "y": 0.0, "z": -0.5 },
+        {"x": 5, "y": 1.0, "z": -0.5 },
+      
+      // bottom face
+        {"x": 0, "y": -0.5, "z": 0.0 },
+        {"x": 0, "y": -0.5, "z": 1.0 },
+        {"x": 0, "y": -0.5, "z": 2.0 },
+        {"x": 1, "y": -0.5, "z": 0.0 },
+        {"x": 1, "y": -0.5, "z": 1.0 },
+        {"x": 1, "y": -0.5, "z": 2.0 },
+
+        {"x": 4, "y": -0.5, "z": 0.0 },
+        {"x": 4, "y": -0.5, "z": 1.0 },
+        {"x": 4, "y": -0.5, "z": 2.0 },
+        {"x": 5, "y": -0.5, "z": 0.0 },
+        {"x": 5, "y": -0.5, "z": 1.0 },
+        {"x": 5, "y": -0.5, "z": 2.0 },
+
+        {"x": 1, "y": -0.5, "z": 4.0 },
+        {"x": 2, "y": -0.5, "z": 4.0 },
+        {"x": 3, "y": -0.5, "z": 4.0 },
+        {"x": 4, "y": -0.5, "z": 4.0 },
+
+        {"x": 0, "y": -0.5, "z": 5.0 },
+        {"x": 1, "y": -0.5, "z": 5.0 },
+        {"x": 2, "y": -0.5, "z": 5.0 },
+        {"x": 3, "y": -0.5, "z": 5.0 },
+        {"x": 4, "y": -0.5, "z": 5.0 },
+        {"x": 5, "y": -0.5, "z": 5.0 },
+
+        {"x": 1, "y": -0.5, "z": 6.0 },
+        {"x": 2, "y": -0.5, "z": 6.0 },
+        {"x": 3, "y": -0.5, "z": 6.0 },
+        {"x": 4, "y": -0.5, "z": 6.0 },
+      
+      // left face
+        {"x": -0.5, "y": 0.0, "z": 0.0 },
+        {"x": -0.5, "y": 1.0, "z": 0.0 },
+
+        {"x": -0.5, "y": 1.0, "z": 4.0 },
+        {"x": -0.5, "y": 2.0, "z": 4.0 },
+
+        {"x": -0.5, "y": 0.0, "z": 5.0 },
+        {"x": -0.5, "y": 1.0, "z": 5.0 },
+        {"x": -0.5, "y": 2.0, "z": 5.0 },
+      
+      // Right face
+        {"x": 5.5, "y": 0.0, "z": 0.0 },
+        {"x": 5.5, "y": 1.0, "z": 0.0 },
+
+        {"x": 5.5, "y": 1.0, "z": 4.0 },
+        {"x": 5.5, "y": 2.0, "z": 4.0 },
+
+        {"x": 5.5, "y": 0.0, "z": 5.0 },
+        {"x": 5.5, "y": 1.0, "z": 5.0 },
+        {"x": 5.5, "y": 2.0, "z": 5.0 },
+    ],
+
+    "GamePrefabReference":    "GC_PlasmaCutter_222",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 3.0, "y": 0.0, "z": 2.0 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_GC_PlasmaCutter_222_Base", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MakeBoxCollider":          false,
+        "ColliderMeshName":         "MacroLaserCollider.obj",
+        "MeshName":                 "MacroLaser.obj",
+        "MeshMaterialName":         "HE_Main",
+        "SubPosition":              { "x": 2.5, "y": 1.0, "z": -0.5 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "m_GC_PlasmaCutter_222_Barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MakeBoxCollider":          false,
+        "ColliderMeshName":         "MacrolaserCharger.obj",
+        "MeshName":                 "MacrolaserCharger.obj",
+        "MeshMaterialName":         "HE_Main",
+        "SubPosition":              { "x": 0.0, "y": 0.0, "z": -3.65 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      {
+        "SubOverrideName": "Aquila_Base_Left",
+        "MakeBoxCollider": false,
+        "DestroyExistingRenderer": true,
+        "MeshName": "40k_Aquila.obj",
+        "MeshMaterialName": "HE_Main"
+      },
+      {
+        "SubOverrideName": "Aquila_Base_Right",
+        "MakeBoxCollider": false,
+        "DestroyExistingRenderer": true,
+        "MeshName": "40k_Aquila.obj",
+        "MeshMaterialName": "HE_Main"
+      },
+      {
+        "SubOverrideName": "Aquila_Base_Back",
+        "MakeBoxCollider": false,
+        "DestroyExistingRenderer": true,
+        "MeshName": "40k_Aquila.obj",
+        "MeshMaterialName": "HE_Main"
+      },
+      { 
+        // Place the "Glass" mesh
+        "SubOverrideName": "glass",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "HE_Shield_Edge",
+        "MeshName": "LaserGlass.obj"
+      },
+      { 
+        // Place the "Glass" mesh
+        "SubOverrideName": "glass_copy",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "HE_Shield_Edge",
+        "MeshName": "LaserGlass.obj"
+      },
+   ],
+
+    "Deserializer": {
+      "GameObject|particles": {
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 3.0 }
+        },
+        // Plasma beam particles #1
+        "GameObject|UselessName": {
+            "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystem.": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": false,
+            "maxParticles": 2000,
+            "startLifetime": 2.0,
+            "duration": 2.0,
+                //"playbackSpeed": 1.0,
+            //"emissionRate": 20,
+            //"startSpeed": 0.5,
+            "main": {
+              "prewarm": true,
+              "startSize3D": true,
+              "startSizeX": {
+              "mode": 3,
+                  // 0: Use a single constant for the MinMaxCurve.
+                  // 1: Use a single curve for the MinMaxCurve.
+                  // 2: Use a random value between 2 curves for the MinMaxCurve.
+                  // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "curve": null,
+              "constantMax": 0.5,
+              "constantMin": 0.5,
+              "constant": 1.0
+              },
+              "startSizeXMultiplier": 2.0,
+              "startSizeY": {
+              "mode": 3,
+                  // 0: Use a single constant for the MinMaxCurve.
+                  // 1: Use a single curve for the MinMaxCurve.
+                  // 2: Use a random value between 2 curves for the MinMaxCurve.
+                  // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "curve": null,
+              "constantMax": 1.0,
+              "constantMin": 0.7,
+              "constant": 1.0
+              },
+              "startSizeYMultiplier": 2.0,
+              "startSizeZ": {
+              "mode": 0,
+                  // 0: Use a single constant for the MinMaxCurve.
+                  // 1: Use a single curve for the MinMaxCurve.
+                  // 2: Use a random value between 2 curves for the MinMaxCurve.
+                  // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "curve": null,
+              "constantMax": 0.0,
+              "constantMin": 0.0,
+              "constant": 1.0
+              },
+              "startSizeZMultiplier": 6.0,
+            },
+            "emission": {
+                "rateOverTimeMultiplier": 600
+            },
+            "collision": {
+                "enabled": true,
+                "type": "World",
+                "mode": "Collision3D",
+                "maxKillSpeed": 0.0,
+                "minKillSpeed": 1001.0,
+                "quality": "High",
+                "voxelSize": 0.25,
+                "maxPlaneCount": 12
+            },
+            "shape": {
+                "shapeType": 8,
+                //0: Sphere
+                //1: Hemisphere
+                //2: Cone
+                "angle": 0,
+                "length": 2,
+                //3: Box
+                "box": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+                },
+
+                //4: Mesh
+
+                //5: ConeVolume
+
+                //6: Circle
+
+                //7: SingleSidedEdge
+
+                //8: MeshRenderer
+                "meshRenderer": null,
+
+                //9: SkinnedMeshRenderer
+                "skinnedMeshRenderer": null,
+
+                //10: BoxShell
+                //11: BoxEdge
+                //12: Donut
+                
+                "sphericalDirectionAmount": 0,
+
+                "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+                },
+                "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 4.0
+                },
+
+                "scale": {
+                "x": 0.1,
+                "y": 0.1,
+                "z": 1.0
+                },
+                "randomDirectionAmount": 0.0,
+                "randomPositionAmount": 1.0,
+
+                "useMeshColors": false,
+
+                "normalOffset": 0.0
+            },
+            "sizeOverLifetime": {
+                "enabled": false
+            },
+            "velocityOverLifetime": {
+                "enabled": false
+            },
+            "startSpeed": 400
+            },
+            "Reference|BF_Laser_Melee_212/_gimbalBase/_gimbalElev/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.": {
+              "material": "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material."
+            }
+        },
+
+        "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/":{
+          "GameObject|FX_Sparkles": null,
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localPosition": { "x": 2.5, "y": 2.3, "z": 0.0 },
+            "localScale": { "x": 0.55, "y": 0.55, "z": 0.55 }
+          },
+          "ParticleSystem": {
+            "main": {
+              "startSize": {
+                "mode": 3,
+                  // 0: Use a single constant for the MinMaxCurve.
+                  // 1: Use a single curve for the MinMaxCurve.
+                  // 2: Use a random value between 2 curves for the MinMaxCurve.
+                  // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+                "curveMultiplier": 0.0,
+                "curveMax": null,
+                "curveMin": null,
+                "curve": null,
+                "constantMax": 1.0,
+                "constantMin": 0.3,
+                "constant": 0.2
+              },
+              "startSizeMultiplier": 1.25,
+              "simulationSpace": "Local",
+              "simulationSpeed": 1.0,
+              // Local
+              // World
+              // Custom: use whatever is specified in ParticleSystem.MainModule.customSimulationSpace.
+              "playOnAwake": false,
+              "loop": true,
+              "duration": 1.0,
+              "maxParticles": 1000,
+              "startDelay": 0.0,
+              "prewarm": false
+            },
+            "shape": {
+              // specify which shapetype to use: affects which variables you need to set
+              "shapeType": "Circle",
+    
+              //Shared Variables:
+                // single edge + all/most circular things
+                "radius": 3.0,
+                "radiusThickness": 0.0,
+                "arc": 360.0,
+                "arcMode": 0,
+                "arcSpread": 0.01,
+                "arcSpeed": {
+                  "mode": 0,
+                  "constant": 1.0,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "curve": null,
+                  "curveMin": null,
+                  "curveMax": null
+                },
+                "arcSpeedMultiplier": 1.0,
+    
+                // sprite/mesh renderers only
+                "normalOffset": 0.0,
+    
+              //0: Sphere
+              //1: Hemisphere
+                // [float] radius: The radius of the circular aspect of the shape.
+                // [float] radiusThickness: The proportion of the volume that emits particles.
+                //                    A value of 0 emits particles from the outer surface of the shape.
+                //                    A value of 1 emits particles from the entire volume.
+                //                    Values in between will use a proportion of the volume.
+    
+              //2: Cone (Base): Emit particles from the base or body of a cone. The particles diverge in proportion to their distance from the cone’s center line.
+              //5: ConeVolume (Body)
+                // [float] angle: The angle of the cone at its point.
+                //        An angle of 0 produces a cylinder while an angle of 90 gives a flat disc.
+                "angle": 90.0,
+    
+                // [float] radius: The radius of the circular aspect of the shape.
+                // [float] radiusThickness: The proportion of the volume that emits particles.
+                //                    A value of 0 emits particles from the outer surface of the shape.
+                //                    A value of 1 emits particles from the entire volume.
+                //                    Values in between will use a proportion of the volume.
+                // [float] arc: The angular portion of a full circle that forms the emitter’s shape.
+                // [enum] arcMode: Define how Unity generates particles around the arc of the shape.
+                //            When set to Random, Unity generates particles randomly around the arc.
+                //            If using Loop, Unity generates particles sequentially around the arc of the shape, and loops back to the start at the end of each cycle.
+                //            Ping-Pong is the same as Loop, except each consecutive loop happens in the opposite direction to the last.
+                //            Finally, Burst Spread mode distributes particle generation evenly around the shape. This can be used to give you an even spread of particles,
+                //              compared to the default randomized behavior, where particles may clump together unevenly. Burst Spread is best used with burst emissions.
+                // [float] arcSpread: Control the discrete intervals around the arc where particles may be generated.
+                //          For example, a value of 0 will allow particles to spawn anywhere around the arc,
+                //          and a value of 0.1 will only spawn particles at 10% intervals around the shape.
+                // [MinMaxCurve] arcSpeed: Set a value for the speed the emission position moves around the arc. Using the small
+                //        black drop-down next to the value field, set this to Constant for the value to always remain the same,
+                //        or Curve for the value to change over time.
+                //     Nota Bene: This option is only available if Mode is set to something other than Random
+                // [float] arcSpeedMultiplier: handy multiplier for fast adjustment
+                // [float] length:	The length of the cone. This only applies when shapeType is ConeVolume
+                "length": 10.0,
+    
+              // Box: Emit particles from the edge, surface, or body of a box shape. The particles move in the emitter object’s forward (Z) direction.
+                //3: Box (Volume)
+                //10: BoxShell (Shell)
+                //11: BoxEdge (Edge)
+              
+    
+              //6: Circle: 	Uniform particle emission from the center or edge of a circle. The particles move only in the plane of the circle.
+                // [float] radius: The radius of the circular aspect of the shape.
+                // [float] radiusThickness: The proportion of the volume that emits particles.
+                //                    A value of 0 emits particles from the outer edge of the circle.
+                //                    A value of 1 emits particles from the entire area.
+                //                    Values in between will use a proportion of the area.
+                // [float] arc: The angular portion of a full circle that forms the emitter’s shape.
+                // [enum] arcMode: Define how Unity generates particles around the arc of the shape.
+                //            When set to Random, Unity generates particles randomly around the arc.
+                //            If using Loop, Unity generates particles sequentially around the arc of the shape, and loops back to the start at the end of each cycle.
+                //            Ping-Pong is the same as Loop, except each consecutive loop happens in the opposite direction to the last.
+                //            Finally, Burst Spread mode distributes particle generation evenly around the shape. This can be used to give you an even spread of particles,
+                //              compared to the default randomized behavior, where particles may clump together unevenly. Burst Spread is best used with burst emissions.
+                // [float] arcSpread: Control the discrete intervals around the arc where particles may be generated.
+                //          For example, a value of 0 will allow particles to spawn anywhere around the arc,
+                //          and a value of 0.1 will only spawn particles at 10% intervals around the shape.
+                // [MinMaxCurve] arcSpeed: Set a value for the speed the emission position moves around the arc. Using the small black drop-down next to the value field,
+                //        set this to Constant for the value to always remain the same,
+                //        or Curve for the value to change over time.
+                //      Nota Bene: This option is only available if Mode is set to something other than Random
+                // [float] arcSpeedMultiplier: handy multiplier for fast adjustment
+                
+              
+              //7: SingleSidedEdge (Edge): Emit particles from a line segment. The particles move in the emitter object’s upward (Y) direction.
+                // [float] radius: The radius property is used to define the length of the edge.
+                // [enum] radiusMode: Define how Unity generates particles around the radius of the shape.
+                //            When set to Random, Unity generates particles randomly around the radius.
+                //            If using Loop, Unity generates particles sequentially around the radius of the shape, and loops back to the start at the end of each cycle.
+                //            Ping-Pong is the same as Loop, except each consecutive loop happens in the opposite direction to the last.
+                //            Finally, Burst Spread mode distributes particle generation evenly around the shape. This can be used to give you an even spread of particles,
+                //              compared to the default randomized behavior, where particles may clump together unevenly. Burst Spread is best used with burst emissions.
+                "radiusMode": 0,
+                // [float] radiusSpread: Control the discrete intervals around the arc where particles may be generated.
+                //          For example, a value of 0 will allow particles to spawn anywhere around the arc,
+                //          and a value of 0.1 will only spawn particles at 10% intervals around the shape.
+                "radiusSpread": 0.0,
+                // [MinMaxCurve] radiusSpeed: Set a value for the speed the emission position moves around the arc. Using the small black drop-down next to the value field,
+                //        set this to Constant for the value to always remain the same,
+                //        or Curve for the value to change over time.
+                //      Nota Bene: This option is only available if Mode is set to something other than Random
+                "radiusSpeed": {
+                  "mode": 0,
+                  "constant": 0.0,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "curve": null,
+                  "curveMin": null,
+                  "curveMax": null
+                },
+                // [float] radiusSpeedMultiplier: handy multiplier for fast adjustment
+                "radiusSpeedMultiplier": 1.0,
+              
+              //12: Donut: Emit particles from a torus. The particles move outwards from the ring of the Torus.
+                // [float] radius: The radius of the main donut ring.
+                // [float] donutRadius: The thickness of the outer donut ring.
+                "donutRadius": 0.05,
+                // [float] radiusThickness: The proportion of the volume that emits particles.
+                //                    A value of 0 emits particles from the outer edge of the circle.
+                //                    A value of 1 emits particles from the entire area.
+                //                    Values in between will use a proportion of the area.
+                // [float] arc: The angular portion of a full circle that forms the emitter’s shape.
+                // [enum] arcMode: Define how Unity generates particles around the arc of the shape.
+                //            When set to Random, Unity generates particles randomly around the arc.
+                //            If using Loop, Unity generates particles sequentially around the arc of the shape, and loops back to the start at the end of each cycle.
+                //            Ping-Pong is the same as Loop, except each consecutive loop happens in the opposite direction to the last.
+                //            Finally, Burst Spread mode distributes particle generation evenly around the shape. This can be used to give you an even spread of particles,
+                //              compared to the default randomized behavior, where particles may clump together unevenly. Burst Spread is best used with burst emissions.
+                // [float] arcSpread: Control the discrete intervals around the arc where particles may be generated.
+                //          For example, a value of 0 will allow particles to spawn anywhere around the arc,
+                //          and a value of 0.1 will only spawn particles at 10% intervals around the shape.
+                // [MinMaxCurve] arcSpeed: Set a value for the speed the emission position moves around the arc. Using the small black drop-down next to the value field,
+                //        set this to Constant for the value to always remain the same,
+                //        or Curve for the value to change over time.
+                //      Nota Bene: This option is only available if Mode is set to something other than Random
+                // [float] arcSpeedMultiplier: handy multiplier for fast adjustment
+    
+              //14: Sprite
+              //15: SpriteRenderer
+                // [float] normalOffset: Distance away from the surface of the Mesh to emit particles (in the direction of the surface normal)
+                // [Sprite] sprite: Emits particles from a Sprite shape supplied via the Inspector.
+                "sprite": null,
+                // [SpriteRenderer] spriteRenderer: Emits particles from a reference to a GameObject’s Sprite Renderer
+                "spriteRenderer": null,
+    
+              
+              //4: Mesh
+              //8: MeshRenderer
+              //9: SkinnedMeshRenderer
+                "mesh": null, //  [Mesh*] Mesh to emit particles from.
+                "useMeshMaterialIndex": false,  // 	Specify whether to emit particles from a particular sub-Mesh (identified by the material index number). If enabled, a numeric field appears, which allows you to specify the material index number.
+                "meshMaterialIndex": 0,  //	[int] Emit particles from a single Material of a Mesh.
+                "skinnedMeshRenderer": null,  // [SkinnedMeshRenderer*] SkinnedMeshRenderer to emit particles from.
+                "meshRenderer": null,  //	[MeshRenderer*] MeshRenderer to emit particles from.
+                "meshShapeType": 0,  //	[enum] Where particles are emitted from.
+                    // 0: Select Vertex for the particles to emit from the vertices,
+                    // 1: Edge for the particles to emit from the edges,
+                    // 2: Triangle for the particles to emit from the triangles.
+                    // This is set to Vertex by default.
+    
+                "meshSpawnMode": 0,  //	[enum] The mode to use to generate particles on a Mesh.
+                    // 0: Select Random for the particles to choose a random position
+                    // 1: Loop for each new particle to be emitted from the next vertex in the mesh,
+                    // 2: Ping-Pong to behave similarly to Loop mode, but to alternate the direction along the mesh vertices after each cycle.
+                    // This is set to Random by default.
+    
+                "meshSpawnSpeed": {
+                  "mode": 0,
+                  "constant": 0.0,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "curve": null,
+                  "curveMin": null,
+                  "curveMax": null
+                },  //	[MinMaxCurve] In animated modes, this determines how quickly the particle emission position moves across the Mesh.
+                "meshSpawnSpeedMultiplier": 0.0,  //	[float] A multiplier of the Mesh spawn speed.
+                "meshSpawnSpread": 0.0,  // [float] Control the gap between particle emission points across the Mesh.
+                "useMeshColors": false, // Modulate particle color with Mesh vertex colors, or, if they don’t exist, use the shader color property “Color“ or ”TintColor” from the material.
+                // [float] normalOffset: Distance away from the surface of the Mesh to emit particles (in the direction of the surface normal)
+    
+              //13: Rectangle: emit from a rectangle. No special args here
+    
+              // General parameters (used in all things):
+                // [Texture2D] texture: Choose a texture to be used for tinting and discarding particles.
+                "texture": null,
+    
+                // [enum] textureClipChannel: Select a channel from the texture to be used for discarding particles.
+                //    0: Red
+                //    1: Blue
+                //    2: Green
+                //    3: Alpha
+                // [float] textureClipThreshold: When mapping particles to positions on the texture, discard any whose pixel color falls below this threshold.
+                "textureClipChannel": 3,
+                "textureClipThreshold": 0.0,
+    
+                // [bool] textureColorAffectsParticles: Multiply particle colors by the texture color.
+                "textureColorAffectsParticles": false,
+    
+                // [bool] textureAlphaAffectsParticles: Multiply particle alphas by the texture alpha.
+                "textureAlphaAffectsParticles": true,
+    
+                // [bool] textureBilinearFiltering: When reading the texture, combine 4 neighboring samples, for smoother changes in particle color, regardless of the texture dimensions.
+                "textureBilinearFiltering": false,
+    
+                // [vec3] position: Apply an offset to the emitter shape used for spawning particles.
+                "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+    
+                // [vec3] rotation: Rotate the emitter shape used for spawning particles.
+                "rotation": { "x": 90.0, "y": 0.0, "z": 0.0 },
+    
+                // [vec3] scale: Change the size of the emitter shape used for spawning particles.
+                "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+    
+                // [bool] alignToDirection: Use this checkbox to orient particles based on their initial direction of travel.
+                //            This can be useful if you want to simulate, for example, chunks of car paint flying off a car’s bodywork during a collision.
+                //            If the orientation is not satisfactory, you can also override it by applying a Start Rotation value in the Main module.
+                "alignToDirection": false,
+    
+                // [float] randomDirectionAmount: Blend particle directions towards a random direction.
+                //            When set to 0, this setting has no effect.
+                //            When set to 1, the particle direction is completely random.
+                "randomDirectionAmount": 0.0,
+    
+                // [float] sphericalDirectionAmount: Blend particle directions towards a spherical direction, where they travel outwards from the center of their Transform.
+                //            When set to 0, this setting has no effect.
+                //            When set to 1, the particle direction points outwards from the center (behaving identically to when the Shape is set to Sphere).
+                "sphericalDirectionAmount": 0.0,
+    
+                // [float] randomPositionAmount: Move particles by a random amount, up to the specified value.
+                //            When this is set to 0, this setting has no effect. Any other value will apply some randomness to the spawning positions of the particles.
+                "randomPositionAmount": 0.0
+            },
+            "emission": {
+              "rateOverTimeMultiplier": 8000
+            },
+            "velocityOverLifetime": {
+              "enabled": false
+            },
+            "sizeOverLifetime": {
+              "enabled": false
+            },
+            "colorOverLifetime": {
+              "enabled": false
+            },
+            "colorBySpeed": {
+              "enabled": false
+            },
+            "startSpeed": 0,
+            "noise": {
+              "enabled": false,
+              "frequency": 500,
+              "strength": {
+                "mode": 0,
+                "constant": 1.0,
+                "constantMin": 0.0,
+                "constantMax": 1.0,
+                "curve": null,
+                "curveMin": null,
+                "curveMax": null
+              },
+              "strengthMultiplier": 10.0,
+    
+              "scrollSpeed": {
+                "mode": 0,
+                "constant": 1.0,
+                "constantMin": 0.0,
+                "constantMax": 1.0,
+                "curve": null,
+                "curveMin": null,
+                "curveMax": null
+              },
+              "scrollSpeedMultiplier": 1.0,
+    
+              "damping": true,
+    
+              "quality": 2,
+    
+              "octaveCount": 2,
+              "octaveMultiplier": 0.5,
+              "octaveScale": 2,
+    
+              "remapEnabled": false,
+    
+              "positionAmount": {
+                "mode": 0,
+                "constant": 10.0,
+                "constantMin": 0.0,
+                "constantMax": 1.0,
+                "curve": null,
+                "curveMin": null,
+                "curveMax": null
+              }
+            },
+            "trails": {
+              "enabled": false,
+              "inheritParticleColor": true,
+              "lifetime": {
+                "mode": 0,
+                "constant": 1.0,
+                "constantMin": 0.0,
+                "constantMax": 1.0,
+                "curve": null,
+                "curveMax": null,
+                "curveMin": null
+              },
+              "lifetimeMultiplier": 1.0,
+              "sizeAffectsLifetime": false,
+    
+              "minVertexDistance": 0.0001,
+    
+              "widthOverTrail": {
+                "mode": 0,
+                "constant": 1.0,
+                "constantMin": 0.0,
+                "constantMax": 1.0,
+                "curve": null,
+                "curveMax": null,
+                "curveMin": null
+              },
+              "widthOverTrailMultiplier": 0.3,
+              "sizeAffectsWidth": false,
+    
+              "ribbonCount": 1,
+    
+              "worldSpace": false,
+    
+              "textureMode": 0,
+    
+              "mode": 0,
+              "dieWithParticles": true,
+    
+              "colorOverLifetime": {
+                "mode": 0,
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "colorMin": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "colorMax": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "gradient": null,
+                "gradientMin": null,
+                "gradientMax": null
+              }
+    
+            },
+            "loop": true
+          },
+          "ParticleSystemRenderer": {
+            // "material": "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material.",
+            "trailMaterial": "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material.",
+            "alignment": 0,
+              // View:	Particles face the camera plane.
+              // World:	Particles align with the world.
+              // Local:	Particles align with their local transform.
+              // Facing:	Particles face the eye position.
+              // Velocity:	Particles are aligned to their direction of travel.
+            "renderMode": 0
+              // Billboard: Render particles as billboards facing the active camera. (Default)
+              // Stretch: Stretch particles in the direction of motion.
+              // HorizontalBillboard: Render particles as billboards always facing up along the y-Axis.
+              // VerticalBillboard: Render particles as billboards always facing the player, but not pitching along the x-Axis.
+              // Mesh: Render particles as meshes.
+              // None: Do not render particles.
+          }
+        },
+        "Duplicate|FX_GC_PlasmaCutter_Beam": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 90, "y": 0, "z": 0 },
+            "localPosition": { "x": 2.5, "y": 0.50, "z": -3.45 },
+            "localScale": { "x": 0.55, "y": 0.55, "z": 0.55 }
+          },
+          "ParticleSystem": {
+            "main": {
+              "simulationSpeed": 1.0,
+              "maxParticles": 2000,
+              "startDelay": 0.0,
+              "prewarm": false,
+              "startSizeMultiplier": 0.75
+            },
+            "startSpeed": 0.0,
+            "startLifetime": 0.15,
+            "emission": {
+              "rateOverTimeMultiplier": 1600
+            },
+            "shape": {
+              "arcSpread": 0.0,
+              "arcSpeedMultiplier": 10.0,
+              "sphericalDirectionAmount": 1.0,
+              "radius": 0.75
+            }
+          }
+        },
+
+
+        "Duplicate|FX_GC_PlasmaCutter_Beam_copy": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localPosition": { "x": 2.5, "y": 2.3, "z": 0.0 },
+            "localScale": { "x": 0.55, "y": 0.55, "z": 0.55 }
+          },
+          "ParticleSystem": {
+            "main": {
+              "simulationSpeed": 1.0,
+              "maxParticles": 2000,
+              "startDelay": 0.0,
+              "prewarm": false,
+              "startSizeMultiplier": 1.0
+            },
+            "startSpeed": 0.0,
+            "startLifetime": 0.15,
+            "trails": {
+              "enabled": true,
+              "widthOverTrailMultiplier": 0.1
+            },
+            "noise": {
+              "enabled": true,
+              "frequency": 5,
+              "octaveCount": 1,
+              "positionAmount": {
+                "mode": 3,
+                "constantMin": 0.1,
+                "constantMax": 1.0
+              }
+            },
+            "emission": {
+              "rateOverTimeMultiplier": 800
+            },
+            "shape": {
+              "arcSpread": 0.0,
+              "arcSpeedMultiplier": 10.0,
+              "sphericalDirectionAmount": 1.0,
+              "radius": 3.0
+            }
+          },
+          "ParticleSystemRenderer": {
+            "alignment": "View",
+              // View:	Particles face the camera plane.
+              // World:	Particles align with the world.
+              // Local:	Particles align with their local transform.
+              // Facing:	Particles face the eye position.
+              // Velocity:	Particles are aligned to their direction of travel.
+            "renderMode": "None"
+              // Billboard: Render particles as billboards facing the active camera. (Default)
+              // Stretch: Stretch particles in the direction of motion.
+              // HorizontalBillboard: Render particles as billboards always facing up along the y-Axis.
+              // VerticalBillboard: Render particles as billboards always facing the player, but not pitching along the x-Axis.
+              // Mesh: Render particles as meshes.
+              // None: Do not render particles.
+          }
+        },
+        "Duplicate|FX_GC_PlasmaCutter_Beam_copy_copy": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 90, "y": 0, "z": 0 },
+            "localPosition": { "x": 2.5, "y": 0.50, "z": -3.5 },
+            "localScale": { "x": 0.55, "y": 0.55, "z": 0.55 }
+          },
+          "ParticleSystem": {
+            "main": {
+              "simulationSpeed": 1.0,
+              "maxParticles": 2000,
+              "startDelay": 0.0,
+              "prewarm": false,
+              "startSizeMultiplier": 0.75
+            },
+            "startSpeed": 0.0,
+            "startLifetime": 0.15,
+            "trails": {
+              "enabled": true,
+              "widthOverTrailMultiplier": 0.1
+            },
+            "noise": {
+              "enabled": true,
+              "frequency": 5,
+              "octaveCount": 1,
+              "positionAmount": {
+                "mode": 3,
+                "constantMin": 0.1,
+                "constantMax": 1.0
+              }
+            },
+            "emission": {
+              "rateOverTimeMultiplier": 800
+            },
+            "shape": {
+              "arcSpread": 0.0,
+              "arcSpeedMultiplier": 10.0,
+              "sphericalDirectionAmount": 1.0,
+              "radius": 0.75
+            }
+          }
+        },
+
+        "Reference|GC_Battery_424/fx_Plasma": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localScale": { "x": 0.4, "y": 0.4, "z": 1.0 },
+            "localPosition": { "x": 1.075, "y": 1.0, "z": 6.0 }
+          },
+          "GameObject|fx_Lightning": null,
+          "GameObject|fx_Particles": null,
+          "ParticleSystem": {
+            "main": {
+              "startSizeMultiplier": 3.0,
+              // "startLifetime": 1.0,
+              // "duration": 1.0,
+              // "startDelay": 0.0,
+              // "loop": true,
+              // "prewarm": true,
+              // "maxParticles": 1000,
+              "startColor": {
+                "mode": 0,
+                "color": {
+                  "r": 0.5,
+                  "g": 0.5,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+              }
+            },
+            "shape": {
+              "shapeType": "ConeVolume",
+              "radius": 0.25,
+              "radiusThickness": 1.0,
+              "arc": 360.0,
+              "arcMode": "Random",
+              "arcSpread": 0.0,
+              "arcSpeed": 1.0,
+              "angle": 0.0,
+              "length": 6.0,
+              "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+              "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+              "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+              "alignDirection": false,
+              "sphericalDirectionAmount": 0.0,
+              "randomDirectionAmount": 0.0,
+              "randomPositionAmount": 1.0
+            },
+            "emission": {
+              "rateMultiplier": 60.0
+            }
+          }
+        },
+
+        "Duplicate|fx_Plasma": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localScale": { "x": 0.4, "y": 0.4, "z": 1.0 },
+            "localPosition": { "x": 3.925, "y": 1.0, "z": 6.0 }
+          },
+        },
+
+        "GameObject|MuzzleParticles": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localScale": { "x": 0.45, "y": 0.45, "z": 1.0 },
+            "localPosition": { "x": 1.075, "y": 1.0, "z": 21.5 }
+          },
+          "Reference|GC_Battery_424/fx_Plasma/fx_Particles": {
+            "ParticleSystem": {
+              "main": {
+                "startSizeMultiplier": 0.25,
+                // "startLifetime": 1.0,
+                // "duration": 1.0,
+                // "startDelay": 0.0,
+                // "loop": true,
+                // "prewarm": true,
+                // "maxParticles": 1000,
+                "startColor": {
+                  "mode": 0,
+                  "color": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 1.0,
+                    "a": 1.0
+                  }
+                }
+              },
+              "shape": {
+                "shapeType": "ConeVolume",
+                "angle": 60,
+                "radius": 0.5,
+                "sphericalDirectionAmount": 0.0,
+                "length": 2.0,
+                "alignDirection": true
+              },
+              "velocityOverLifetime": {
+                "enabled": true,
+                "xMultiplier": 0.0,
+                "yMultiplier": 0.0,
+                "zMultiplier": -2.75,
+                "orbitalXMultiplier": 0.0,
+                "orbitalYMultiplier": 0.0,
+                "orbitalZMultiplier": 4.0,
+                "orbitalOffsetXMultiplier": 0.0,
+                "orbitalOffsetYMultiplier": 0.0,
+                "orbitalOffsetZMultiplier": 0.0,
+                "speedModifierMultiplier": 1.0,
+                "space": 0
+              },
+              "emission": {
+                "rateMultiplier": 25.0
+              }
+            },
+            "Duplicate|/particles/MuzzleParticles/fx_Particles": {
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                "localPosition": { "x": 0.0, "y": 0.0, "z": -2.0 }
+              },
+              "ParticleSystem": {
+                "main": {
+                  "startSizeMultiplier": 0.25,
+                  // "startLifetime": 1.0,
+                  // "duration": 1.0,
+                  // "startDelay": 0.0,
+                  // "loop": true,
+                  // "prewarm": true,
+                  // "maxParticles": 1000,
+                  "startColor": {
+                    "mode": 0,
+                    "color": {
+                      "r": 0.5,
+                      "g": 0.5,
+                      "b": 1.0,
+                      "a": 1.0
+                    }
+                  }
+                },
+                "shape": {
+                  "shapeType": "ConeVolume",
+                  "angle": 45,
+                  "radius": 0.35,
+                  "sphericalDirectionAmount": 0.0,
+                  "length": 3.0,
+                  "alignDirection": true
+                },
+                "velocityOverLifetime": {
+                  "enabled": true,
+                  "xMultiplier": 0.0,
+                  "yMultiplier": 0.0,
+                  "zMultiplier": -0.75,
+                  "orbitalXMultiplier": 0.0,
+                  "orbitalYMultiplier": 0.0,
+                  "orbitalZMultiplier": 12.0,
+                  "orbitalOffsetXMultiplier": 0.0,
+                  "orbitalOffsetYMultiplier": 0.0,
+                  "orbitalOffsetZMultiplier": 0.0,
+                  "speedModifierMultiplier": 1.0,
+                  "space": 0
+                }
+              }
+            }
+          },
+
+          "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": -1.75 }
+            },
+            "ParticleSystem": {
+              "main": {
+                "startSize": {
+                  "mode": 0,
+                    // 0: Use a single constant for the MinMaxCurve.
+                    // 1: Use a single curve for the MinMaxCurve.
+                    // 2: Use a random value between 2 curves for the MinMaxCurve.
+                    // 3: 	Use a random value between 2 constants for the MinMaxCurve.
+                  "curveMultiplier": 0.0,
+                  "curveMax": null,
+                  "curveMin": null,
+                  "curve": null,
+                  "constantMax": 0.0,
+                  "constantMin": 0.0,
+                  "constant": 2.5
+                },
+                "simulationSpace": 0,
+                // Local
+                // World
+                // Custom: use whatever is specified in ParticleSystem.MainModule.customSimulationSpace.
+                "playOnAwake": true
+              },
+              "emission": {
+                "rateOverTimeMultiplier": 60.0
+              },
+              "velocityOverLifetime": {
+                "enabled": false
+              }
+            },
+            "PlayParticlesOnFirstUpdate": null
+          },
+        },
+
+        "Duplicate|MuzzleParticles": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localScale": { "x": 0.45, "y": 0.45, "z": 1.0 },
+            "localPosition": { "x": 3.925, "y": 1.0, "z": 21.5 }
+          },
+          "GameObject|fx_Particles": {
+            "ParticleSystem": {
+              "velocityOverLifetime": {
+                "orbitalZMultiplier": -4.0,
+              }
+            },
+            "GameObject|fx_Particles_copy": {
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                "localPosition": { "x": 0.0, "y": 0.0, "z": -2.0 }
+              },
+              "ParticleSystem": {
+                "velocityOverLifetime": {
+                  "orbitalZMultiplier": -12.0,
+                }
+              }
+            }
+          }
+        }
+      },
+      "GameObject|_barrel": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 1.075, "y": 1.0, "z": 22.5 }
+        },
+
+        "GimbalAimer": {
+          "rotationAxis": 0,
+          "rotationLimits": [-2, 2]
+        },
+
+        "GameObject|_beam": {
+          "BeamWeapon": {
+            "m_DamagePerSecond": 12000,
+            "m_Range": 800, // 200
+            "m_DamageType": "Plasma",
+            // "m_BeamParticles": "/_gimbalBase/_gimbalElev/_barrel/_beam/_beamParticles/ParticleSystem.",
+            //"m_BeamParticlesPrefab": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab." 
+            //"m_BeamParticlesPrefab": "/_gimbalBase/_gimbalElev/_barrel/particles/BF_LaserBeam_Emission/ParticleSystem."
+            "m_BeamParticlesPrefab": "/particles/BF_LaserBeam_Emission/ParticleSystem.",
+            
+            // "m_BeamParticlesPrefab": "/_gimbalBase/_gimbalElev/particles/FX_SemiCircle/ParticleSystem.",
+            // "m_BeamParticlesPrefab": null,
+            
+            
+          }
+        },
+        
+      },
+
+      "GameObject|glass": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 1.075, "y": 1.0, "z": 14.75 }
+        }
+      },
+
+      "Duplicate|glass": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 3.925, "y": 1.0, "z": 14.75 }
+        }
+      },
+
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 0.8,
+          "m_SpinUpTime": 2.0,
+        }
+      },
+
+      "Duplicate|_barrel": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 3.925, "y": 1.0, "z": 22.5 }
+        }
+      },
+
+      "GameObject|Aquila_Base_Left": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.2, "y": 0.2, "z": 0.1 },
+          "localEulerAngles": { "x": 0, "y": 90, "z": 0 },
+          "localPosition": { "x": -0.4, "y": 0.75, "z": 1.75 }
+        }
+      },
+
+      "GameObject|Aquila_Base_Right": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.2, "y": 0.2, "z": 0.1 },
+          "localEulerAngles": { "x": 0, "y": -90, "z": 0 },
+          "localPosition": { "x": 5.4, "y": 0.75, "z": 1.75 }
+        }
+      },
+
+      "GameObject|Aquila_Base_Back": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.3, "y": 0.25, "z": 0.1 },
+          "localEulerAngles": { "x": 45, "y": 0, "z": 0 },
+          "localPosition": { "x": 2.5, "y": 1.95, "z": -0.05 }
+        }
+      },
+
+      "FireData": { 
+        
+      },
+      "ModuleWeaponGun": {
+        "m_FireControlMode": "AllAtOnce", //Fires all "burst" barrels at once on one tap of Spacebar
+        "m_NumCannonBarrels": 2
+      },
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        // "m_RotateSpeed": 20.0,
+        // "m_FireSFXType": 64
+
+      },
+
+      "ParticleManager.ModuleParticleManager": {
+        "Input": [
+          {
+            "m_system": "/particles/FX_GC_PlasmaCutter_Beam/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+          {
+            "m_system": "/particles/FX_GC_PlasmaCutter_Beam_copy/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+          {
+            "m_system": "/particles/FX_GC_PlasmaCutter_Beam_copy_copy/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+          {
+            "m_system": "/particles/FX_GC_PlasmaCutter_Beam_copy_copy_copy/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+
+          {
+            "m_system": "/particles/MuzzleParticles/FX_SemiCircle/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+          {
+            "m_system": "/particles/MuzzleParticles_copy/FX_SemiCircle/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+
+          {
+            "m_system": "/particles/MuzzleParticles/fx_Particles/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+          {
+            "m_system": "/particles/MuzzleParticles_copy/fx_Particles/ParticleSystem.",
+            "type": "WeaponFiring"
+          },
+
+          {
+            "m_system": "/particles/fx_Plasma/ParticleSystem.",
+            "type": "Attach"
+          },
+          {
+            "m_system": "/particles/fx_Plasma_copy/ParticleSystem.",
+            "type": "Attach"
+          }
+        ],
+        "Debug": false
+      }
+    }
+}

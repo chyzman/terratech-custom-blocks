@@ -1,0 +1,496 @@
+{
+    "Name": "Old Star Heavy Iron Eternal Steam Engine",
+    "Description": "Now this is how the Old Star Do. The design team has somehow created a steam engine that collects water from the air to create an indefinite supply of steam AND REUSES IT! Now most of Old Star techs can keep running way past the midnight oil with no worries.",
+    "ID": 300033,
+    "Faction": 4,
+    "Category": 6,
+    "Grade": 2,
+    "Price": 53778,
+    "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 9,9,11, 11, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 47, 47, 52, 52, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 57, 58, 64, 64, 66, ",
+    "EmissionMode": 2,
+    "IconName": "OS_Engine_Icon.png",
+    "SupressBoxColliderFallback": true,
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName": "OST2.png",
+    "MeshEmissionTextureName": "OST3.png",
+    "HP": 4800,
+    "Mass": 30,
+    "DamageableType": 3,
+    "DeathExplosionReference": "HE_CruiseMissile_121",
+    "Fragility": 0.0,
+    // Block Dimensions
+    "CellMap": [
+        [
+            "    ",
+            "EEEE",
+            "EEEE",
+            "EEEE"
+        ],
+        [
+            " EE ",
+            "EEEE",
+            "EEEE",
+            "EEEE"
+        ],
+        [
+            " EE ",
+            "EEEE",
+            "EEEE",
+            "EEEE"
+        ],
+        [
+            "    ",
+            "EEEE",
+            "EEEE",
+            "EEEE"
+        ],
+        [
+            "    ",
+            "EEEE",
+            "EEEE",
+            "EEEE"
+        ],
+        [
+            "    ",
+            " EE ",
+            " EE ",
+            " EE "
+        ]
+    ],
+    "APs": [
+        {
+            "x": 1,
+            "y": -0.5,
+            "z": 1
+        },
+        {
+            "x": 1,
+            "y": -0.5,
+            "z": 2
+        },
+        {
+            "x": 1,
+            "y": -0.5,
+            "z": 3
+        },
+        {
+            "x": 1,
+            "y": -0.5,
+            "z": 4
+        },
+        {
+            "x": 2,
+            "y": -0.5,
+            "z": 1
+        },
+        {
+            "x": 2,
+            "y": -0.5,
+            "z": 2
+        },
+        {
+            "x": 2,
+            "y": -0.5,
+            "z": 3
+        },
+        {
+            "x": 2,
+            "y": -0.5,
+            "z": 4
+        }
+    ],
+    // Advanced Settings
+    "GamePrefabReference": "GSO_Block_112",
+    "KeepReferenceRenderers": false, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "SubObjects": [
+        // In this case, this block will be using the GSO Radar as it's one of the few blocks that spin passively.
+        { "SubOverrideName": "GSO_Block_112",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Main.obj", // Name of the block's mesh                                        
+            "ColliderMeshName": "OS_E_Main.obj", // Name of the block's collider.
+            "SubPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        { "ObjectName": "PistonWheel",
+            "MeshName": "OS_E_Piston_Wheel.obj",
+            "ColliderMeshName": "OS_E_Piston_Wheel.obj",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "SubPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        { "ObjectName": "BigGear",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Gear_Big.obj",
+            "ColliderMeshName": "OS_E_Gear_Big.obj",
+            "SubRotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        { "ObjectName": "MidGear",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Gear_Mid.obj",
+            "ColliderMeshName": "OS_E_Gear_Mid.obj",
+            "SubRotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        { "ObjectName": "SmallGear",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Gear_Small.obj",
+            "ColliderMeshName": "OS_E_Gear_Small.obj",
+            "SubRotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        { "ObjectName": "PistonThick",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Piston_Thick.obj",
+            "ColliderMeshName": "OS_E_iston_Thick.obj",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        { "ObjectName": "PistonThin",
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MeshName": "OS_E_Piston_Thin.obj",
+            "ColliderMeshName": "OS_E_iston_Thin.obj",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0
+            }
+        },
+        // Pivot Points 1
+        { "OverrideName": "B_PThick1", //Thick is on the base
+            "SubPosition": {
+                "x": 1.5,
+                "y": 0.7,
+                "z": 2.5
+            }
+        },
+        { "OverrideName": "B_PThin1", // Thin on the wheel
+            "SubPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.38
+            }
+        },
+        { "OverrideName": "_WheelP",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 1.5,
+                "y": 0.85,
+                "z": 0.76
+            }
+        },
+        { "OverrideName": "WheelPivot",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 1.5,
+                "y": 0.85,
+                "z": 0.76
+            }
+        },
+        // Gear Locations
+        { "OverrideName": "_Gear1",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 270,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 1.5,
+                "y": 0.77,
+                "z": 0.3
+            }
+        },
+        { "OverrideName": "_Gear2",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        { "OverrideName": "_Gear3",
+            "SubRotation": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+            },
+            "SubPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        }
+    ],
+    "JSONBLOCK": {
+        "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": { //Smoke Code
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "x": 1.5,
+                    "y": 3.59,
+                    "z": 1.55
+                },
+                "localScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            },
+            "ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 25.0,
+                "startSpeed": 0.0,
+                "startSize": 0.6,
+                "startColor": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0.5
+                },
+                "startLifetime": 1.8,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 1,
+                "scalingMode": 2
+            },
+            "ParticleSystemRenderer": {
+                "material": "Mat_FX_Smoke_Dark"
+            }
+        },
+        "Duplicate|FX_Smoker_Steam": { //Smoke Code Copy
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "localPosition": {
+                        "x": 1.5,
+                        "y": 3.59,
+                        "z": 1.55
+                    }
+                }
+            }
+        },
+        // Gear Assebmbly
+        "GameObject|_Gear1": {
+            "GameObject|BigGear": {
+                "Spinner": {
+                    "m_Speed": 0.5,
+                    "m_AutoSpin": true,
+                    "m_SpinUpTime": 0.0,
+                    "m_CurrentAngle": 90.0,
+                    "m_CurrentAutoSpeed": 0.0,
+                    "m_CurrentSpeedFraction": 0.0,
+                    "m_SpinnerSound": null,
+                    "m_SpinnerSoundOriginalPitch": 0.0,
+                    "Speed": 0.2, // This does nothing
+                    "SpeedFraction": 0.0,
+                    "AtFullSpeed": false
+                }
+            },
+            "Duplicate|_Gear2": {
+                "GameObject|MidGear": {
+                    "Spinner": {
+                        "m_Speed": 1.5,
+                        "m_AutoSpin": true,
+                        "m_SpinUpTime": 0.0,
+                        "m_CurrentAngle": 0.0,
+                        "m_CurrentAutoSpeed": 0.0,
+                        "m_CurrentSpeedFraction": 0.0,
+                        "m_SpinnerSound": null,
+                        "m_SpinnerSoundOriginalPitch": 0.0,
+                        "Speed": 0.2, // This does nothing
+                        "SpeedFraction": 0.0,
+                        "AtFullSpeed": false
+                    }
+                },
+                "Duplicate|_Gear3": {
+                    "GameObject|SmallGear": {
+                        "Spinner": {
+                            "m_Speed": 3.5,
+                            "m_AutoSpin": true,
+                            "m_SpinUpTime": 0.0,
+                            "m_CurrentAngle": 0.0,
+                            "m_CurrentAutoSpeed": 0.0,
+                            "m_CurrentSpeedFraction": 0.0,
+                            "m_SpinnerSound": null,
+                            "m_SpinnerSoundOriginalPitch": 0.0,
+                            "Speed": 0.2, // This does nothing
+                            "SpeedFraction": 0.0,
+                            "AtFullSpeed": false
+                        }
+                    }
+                }
+            }
+        },
+        "ModuleEnergy": { // Power block code
+            "m_Priority": -100,
+            "m_OutputPerSecond": 400, // The amount is based on a GSO Solar Panel's output,
+            "m_OutputEnergyType": 0, // Dictates the type of energy it will use/give.
+            // 0 = Battery Energy
+            // 1 = Fuel
+            "m_OutputConditions": 0, // 
+            "m_SequentialPowerUp": false, // Dictates whether it should power up one at a time with other blocks
+            "m_PowerUpDelay": 0.0 // Dictates the time delay when powering up. 
+        },
+        // follow code-------------------------------------------------------
+        "GameObject|B_PThick1": { // Base to wheel
+            // Using this as a followTransform bone for the relocated "PistonThick" which is now positioned within the same gameobject as "B_PThin1"
+            // This is to copy those rotational aiming movements and complete the loop without redeclaring "B_PThick1" below "B_PThin1" and risking it
+          },
+          "GameObject|Suspension_Up": {
+            // As Suspension_Up is supposed to determine the z-axis upright rotation of FollowSuspensions assigned to it, it's genrerally the safest case to leave it in the base GameObject.
+            "UnityEngine.Transform": {
+              "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+              },
+              "localPosition": {
+                  "x": 0,
+                  "y": 2,
+                  "z": 0
+              },
+              "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+              }
+            }
+          },
+          "GameObject|_WheelP": {
+            "GameObject|PistonWheel": {
+              "Spinner": { //Spin animation
+                "m_Speed": 1.5,
+                "m_AutoSpin": true,
+                "m_SpinUpTime": 0.0,
+                "m_CurrentAngle": 0.0,
+                "m_CurrentAutoSpeed": 0.0,
+                "m_CurrentSpeedFraction": 0.0,
+                "m_SpinnerSound": null,
+                "m_SpinnerSoundOriginalPitch": 0.0,
+                "Speed": 0.2, // This does nothing
+                "SpeedFraction": 0.0,
+                "AtFullSpeed": false
+              },
+              "GameObject|B_PThin1": { //Wheel to Base
+                "GameObject|PistonThin": { // Thin on the wheel
+                  "UnityEngine.Transform": {//
+                    "localPosition": {//(Remember to offset this for the chugga movement)
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                  },
+                  "FollowSuspension": {// (set this to point at the fixed base)
+                    "m_TargetWheelTrans": "/B_PThick1",
+                    "m_TargetUpTrans": "/Suspension_Up",
+                    "m_KeepOriginalRotationOffset": false,
+                    "m_ScaleToMatchDistance": false
+                  },
+                  "GameObject|PistonThick": { //(placed this within "PistonThin" to follow the orientation of the parent GameObject [PistonThin])
+                    "UnityEngine.Transform": {
+                      "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "localEulerAngles": {
+                        "x": 180,//Get it to aim back at the other half of the piston-
+                        "y": 0,
+                        "z": 0
+                      }
+                    },
+                    "FollowTransform": { // FollowTransform provides the "anchor point" around which the EPiston Thin can rotate.
+                      //It can also be used to fasten this GameObject's center to somewhere else on the model and keep the rotation of this GameObject's originatingParent.
+                      //  to do this, just keep "m_FollowOrientation": false,
+                      "m_TransformToFollow": "/B_PThick1", //This path determines the "anchor point". B_PThin1 can rotate around this point, but the distance stays fixed.
+                      "m_FollowOrientation": false
+                    }
+                  }
+                }
+              }
+            }
+          }// end of follow code    
+        }
+    }

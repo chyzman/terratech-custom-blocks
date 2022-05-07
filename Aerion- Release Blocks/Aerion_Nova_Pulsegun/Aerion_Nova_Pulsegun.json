@@ -1,0 +1,178 @@
+{
+    "Name": "Aerion Nova Pulsegun",
+    "Description": "The Aerion Nova Pulsegun is the smallest of the Aerion weaponry line, but still manages to hit moderately hard for its size.",
+    
+    "ID": 101005,
+    "Faction": 7,
+    "Category": 4,
+    "Grade": 2,  
+    "Price": 1866,
+    "HP": 500,
+    "Mass": 2,
+    
+    "Fragility": 0,
+    "Rarity": 0,
+    "DamageableType": 0,
+  
+    "Recipe": "1, 5, 7, 13, 15, 15, 32", 
+    "IconName": "Aerion Nova Pulsegun.png", 
+    
+    "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+    
+    "APs": [ 
+      {"x": 0, "y": -0.5, "z": 0}
+    ],
+  
+    "GamePrefabReference": "GSO_Cannon_Turret_111", 
+    "KeepRenderers": false,
+    "Keepcolliders": false,
+    "DeathExplosionReference": "GSO_MGun_Fixed_111",
+    
+    "SubObjects": [
+      {
+        "SubOverrideName": "m_GSO_Cannon_Turret_111",
+        "MeshName": "Aerion_Nova_Pulsegun_Base.obj", 
+        "MeshTextureName": "Aerion-Default.png",
+      "MakeBoxCollider": true
+      },
+      {
+        "SubOverrideName": "_barrel",
+        "MeshName": "Aerion_Nova_Pulsegun.obj", 
+        "MeshTextureName": "Aerion-Default.png",
+       "ColliderMeshName": "Aerion_Nova_Pulsegun.obj",
+       "Position": { "x": 0.0, "y": 0.08, "z": 0.2 }
+      },
+      {
+        "SubOverrideName": "_bulletSpawn",
+       "Position": { "x": 0.0, "y": 0.1, "z": 0.45 },
+       "SubScale": { "x": 0.3, "y": 0.3, "z": 0.3 }
+      }
+    ], 
+    "JSONBLOCK": {
+      "ModuleHealOverTime": {
+        "HealAmount": 20, // Health per pulse,
+        "HealDelay": 1.0, // Seconds per pulse,
+        "EnergyDrain": 10, // Energy consumed each healing pulse,
+        "EnergyMinLimit": 20, // How much energy must be present to heal,
+        "Capacity": 100 // A small battery inside the block, because, uh...
+      },
+      "GameObject|_gimbalBase": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        "GimbalAimer": {  
+          "rotationLimits": [
+          -180.0,
+          180.0
+          ]
+        },
+        "GameObject|_gimbalElev": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.08, "z": 0.2 }
+          },
+          "GimbalAimer": { 
+            "rotationLimits": [-60, 60] 
+          },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+              }
+            }
+          }
+        },
+       
+      "ModuleWeapon": { 
+        "m_FireSFXType": 80,
+        "m_RotateSpeed": 90.0
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 0.5
+      },
+      "FireData": {
+        "Instantiate|m_BulletCasingPrefab": null,
+        "m_BulletSprayVariance": 0.0,
+        "m_MuzzleVelocity": 60.0,
+        "m_KickbackStrength": 10.0,
+        "Instantiate|m_BulletPrefab": {
+          "Scale": { "x": 0.3, "y": 0.3, "z": 0.3 },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "Kinetic-Blast.obj"
+          },
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "mainTexture": "Aerion-Default.png"
+            }
+          },
+          "WeaponRound": {
+            "m_DamageType" : 2, 
+            "m_Damage": 120
+          },
+          "Rigidbody": {
+            "mass": 0.0001,
+            "useGravity": true
+          },
+            "Projectile": {
+              "m_LifeTime": 2.5,
+              "m_ImpactSFXType" : 2,
+              "m_ExplodeOnTerrain": true,
+              "m_IgnoreCollisionWithBarrel": true,
+              "Instantiate|m_Explosion": {
+                "Explosion": {
+                  "m_DamageType" : 2,
+                  "m_EffectRadius": 3, 
+                  "m_ExplosionType": 0,
+                  "m_EffectRadiusMaxStrength": 3, 
+                  "m_MaxDamageStrength": 0, 
+                  "m_MaxImpulseStrength": 0
+                },
+                "GameObject|ExplosionBright": { 
+                  "GameObject|Shockwave":{
+                  "UnityEngine.ParticleSystem": {
+                    "startColor": {
+                      "r": 1.0,
+                      "g": 0.3,
+                      "b": 0.01,
+                      "a": 1.0
+                    },
+                    "startSize": 2
+                 }
+                },
+                  "GameObject|Sparks": {
+                    "UnityEngine.ParticleSystem": {
+                    "startColor": {
+                      "r": 1.0,
+                      "g": 0.3,
+                      "b": 0.01,
+                      "a": 1.0
+                    },
+                    "startSize": 0.2,
+                    "startSpeed": 4
+                 }
+                },
+                  "GameObject|Distortion": null,
+                  "GameObject|Smoke": {
+                  "UnityEngine.ParticleSystem": {
+                        "startSize": 0,
+                        "startSpeed": 20,
+                        "maxParticles": 0
+                      }
+                  },
+                  "GameObject|ExplosionDark": {
+                    "UnityEngine.ParticleSystem": {
+                      "startSize": 0,
+                      "startSpeed": 20,
+                      "maxParticles": 0
+                    }
+                  },
+                "UnityEngine.ParticleSystem": {
+                  "startSize": 0,
+                  "startSpeed": 20,
+                  "maxParticles": 0
+                    }
+              }
+              }
+            },
+          },
+        }
+    }
+} 

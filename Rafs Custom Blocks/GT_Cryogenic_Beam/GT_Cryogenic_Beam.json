@@ -1,0 +1,287 @@
+{
+  "Name": "GreenTech Cryogenic Beam",
+  "Description": "Fires a potent stream of near 0 Kelvin ice crystals.\nSome surfaces will freeze so fast they'll crack and break immediately, some will get more and more brittle until collapsing.\n\nThis technology was responsible for much of Earth's glaciers recovery in recent years, with hundreds of massive Cryo Tankers replenishing ice caps all over the world.",
+  "ID": 911134, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 4, 
+  "Price": 25164, 
+  "HP": 3500, 
+  "Mass": 14,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "44, 44, 45, 45, 49, 49, 49, 49, 52, 52, 57, 57, 58, 58", 
+  "IconName": "GT_Cryogenic_Beam_Icon.png", 
+  "MeshName": "GT_Cryogenic_Beam_Base.obj",
+  "ColliderMeshName": "GT_Cryogenic_Beam_Base_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 4,"y": 2, "z": 5}, 
+  
+  "APs": [ 
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2}
+  ],
+  
+  "GamePrefabReference": "VEN_Flamethrower_121", 
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "MeshName": "GT_Cryogenic_Beam_Turret.obj", 
+      "ColliderMeshName": "GT_Cryogenic_Beam_Turret_Collider_1.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "Collider2",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColliderMeshName": "GT_Cryogenic_Beam_Turret_Collider_2.obj"
+    },
+    {
+      "SubOverrideName": "Collider3",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "ColliderMeshName": "GT_Cryogenic_Beam_Turret_Collider_3.obj"
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "MeshName": "GT_Cryogenic_Beam_Barrel.obj",
+     //"ColliderMeshName": "GT_Cryogenic_Beam_Barrel_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": { "x": 1, "y": 1, "z": 1},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "FirePoint",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 2.5
+      }
+    },
+    {
+      "SubOverrideName": "FXFlameThrower",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 2.5
+      },
+      "MeshMaterialName": "Snowflake"
+    },
+    {
+      "SubOverrideName": "_gimbalHorizontal",
+      "SubPosition": {
+        "x": 1.5,
+        "y": 0,
+        "z": 0.94
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalVertical",
+      "SubPosition": {
+        "x": 0,
+        "y": 0.31,
+        "z": 1.8
+      }
+    }
+    /* {
+      "SubOverrideName": "Jet_Light",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1.8
+      }
+    },
+    {
+      "SubOverrideName": "Tip_Light",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1.8
+      }
+    } */
+  ],
+
+  "Deserializer": {
+
+    "GameObject|_gimbalHorizontal": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -110.0,
+          110.0
+        ]
+      },
+      "GameObject|m_VEN_FlameThrower_121_RotatingPart": {
+        "GameObject|Collider2":{},
+        "GameObject|Collider3":{}
+      },
+      "GameObject|_gimbalVertical": {
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -45.0,
+            45
+          ]
+      },
+      /* "GameObject|Jet Light": {
+        "UnityEngine.Light": {
+          "spotAngle": 30.0,
+          "intensity": 1.0,
+          "range": 10.0,
+          "color": {
+            "r": 0.2,
+            "g": 0.5,
+            "b": 1.0,
+            "a": 1.0
+          }
+        }
+      },
+      "GameObject|Tip Light": {
+        "UnityEngine.Light": {
+          "spotAngle": 30.0,
+          "intensity": 0.0,
+          "range": 3.0,
+          "color": {
+            "r": 0.5,
+            "g": 0.8,
+            "b": 1.0,
+            "a": 1.0
+          }
+        }
+      }, */
+      "GameObject|FXFlameThrower": { 
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "collision": {
+                "enabled": true,                                   //Setting this to false will break the Particle Weapon
+                "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+                "lifetimeLossMultiplier": 0,
+                "lifetimeLoss": null,
+                "dampenMultiplier": 0.8
+                //"colliderForce": 50.0
+              },
+              "sizeOverLifetime": { //Annoying module that manages size
+                "enabled": true
+              }
+            }
+          }
+        }
+      }
+    }
+    },
+
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 80.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.0,
+      "m_FireSFXType": 26
+    },
+    "ModuleWeaponFlamethrower": {
+      "m_MaxFlameLength": 80.0,
+      "m_DPS": 600.0,
+      "m_DamageType": 0,
+      "m_ExtendTime": 0.01,
+      "m_RetractTime": 0.001,
+      "m_Particles": {
+      "startDelay": 0.0,
+      "loop": true,
+      "playOnAwake": false,
+      "playbackSpeed": 1.0,
+      "enableEmission": true,
+      "emissionRate": 150.0,
+      "startSpeed": 80,
+      "startSize": 6,
+      "startLifetime": 8,
+      "gravityModifier": 0,
+      "maxParticles": 20000,
+      "simulationSpace": 1,
+      "scalingMode": 2,
+      "time": 0.0,
+      "randomSeed": 0,
+      "useAutoRandomSeed": false,
+      "startColor": {
+        "r": 0.5,
+        "g": 0.7,
+        "b": 1,
+        "a": 0.2
+      },
+      "trails": {
+        "enabled": false
+      }
+  },
+  "m_TipLight": {
+    "intensity": 0,
+    "range": 0
+  },
+  "m_JetLight": {
+    "intensity": 0,
+    "range": 0
+  }
+    }
+  }
+}

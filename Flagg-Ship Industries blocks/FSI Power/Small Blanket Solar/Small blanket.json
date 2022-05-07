@@ -1,0 +1,85 @@
+{
+	"Name": "Better Future Small Blanket array",
+	"Description": "Inspired by little green, cylinder-like creatures, the Blanket Arrays generate double the power of the base array, at the cost of durability. Due to a flaw though, we can't retract it.", //You can make multiple lines with \n
+	"ID": 1700018, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 0, //The grade minus one
+	"Price": 4341,
+	"HP": 1250,
+	"Mass": 1.8,
+
+	"IconName": "Small Blanket.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy,ionpulsecell", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": "BF_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 0 },
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 0 },
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 0 },
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 5, "y": 0, "z": 0 },
+		{ "x": 5, "y": 0, "z": 1 },
+		{ "x": 5, "y": 0, "z": 2 },
+		{ "x": 5, "y": 0, "z": 3 },
+		
+		
+		
+		
+		
+		
+		 
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": -0.5, "y": 0, "z": 1 },{ "x": -0.5, "y": 0, "z": 2 } 
+	
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "BF_SolarPanel(215)",
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [{
+    "SubOverrideName":"Smallblanket",
+	"DestroyExistingColliders": true,
+    "MeshName": "Small_blanket_panel.obj",
+	"ColliderMeshName": "Small_blanket_panel.obj",
+	"MeshMaterialName": "BF_Main",
+    
+	"SubPosition":{"x":0,"y":0,"z":1.5},
+	"SubScale":{"x":1,"y":1,"z":1}
+    }],
+	
+	"JSONBLOCK": {
+    "ModuleEnergy": {"m_OutputPerSecond":140}
+	}
+}

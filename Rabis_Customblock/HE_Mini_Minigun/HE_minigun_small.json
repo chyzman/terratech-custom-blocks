@@ -1,0 +1,220 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Hawkeye N870 Point-defense gun",
+  "Description": "Small rotary-barreled machine gun. The N870 was a scaled-down smaller and lighter version of the N830RC rotary machine gun.", //You can make multiple lines with \n
+  "ID": 546321, //A random ID that MUST be unique
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 19923,
+  "HP": 750,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 4.0,
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+
+  "Recipe": "52, 48, 55, 62, 64",
+
+  "DamageableType": 1,
+
+  "IconName": "HE_Mini_Minigun_icon.png", 
+  "MeshName": null, 
+  "MeshTextureName": null, 
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": 1}
+  ],
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+      {"x": 0,"y": -0.5,"z": 0}
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_MiniGun_Large_525", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_MiniGun_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_Mini_Minigun_barrel.obj",
+      "ColliderMeshName": "m_HE_MiniGun_Barrel_c.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    {
+      "SubOverrideName": "m_HE_MiniGun_313_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Mini_Minigun_base.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    {
+      "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_B",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Mini_Minigun_rotatingpart_B.obj",
+      "ColliderMeshName": "HE_Mini_Minigun_rotatingpart_B.obj",
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0.036981, "z": 0},
+    },
+    {
+      "SubOverrideName": "m_HE_MiniGun_313_RotatingPart_A",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_Mini_Minigun_rotatingpart_A.obj",
+      "ColliderMeshName": "HE_Mini_Minigun_rotatingpart_A.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    {
+      "SubOverrideName": "_gimbalBase",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    },
+    {
+      "SubOverrideName": "_gimbalElev",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|m_HE_MiniGun_313_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0.0, "z":0 }
+      },
+      "GameObject|_gimbalBase": {
+        "GimbalAimer": {
+          "rotationLimits": [-180, 180] //[-Left,+Right](Degrees)
+        },
+        "GameObject|m_HE_MiniGun_313_RotatingPart_A": {
+          "GameObject|_gimbalElev": {
+            "GimbalAimer": {
+              "rotationLimits": [-55, 18] //[-Up,+Down](Degrees)
+            },
+
+            "GameObject|m_HE_MiniGun_313_RotatingPart_B": {
+
+            },
+            "GameObject|_barrel": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0.051447, "z":0 }
+                },
+              "GameObject|_spindle": {
+                "Spinner": {
+                  "m_Speed": 50.0,
+                  "m_AutoSpin": false,
+                  "m_SpinUpTime": 0.9,
+                  "m_CurrentAutoSpeed": 0.0,
+                  "m_CurrentSpeedFraction": 0.0,
+                  "m_SpinnerSoundOriginalPitch": 0.0,
+                  "Speed": 50.0,
+                  "SpeedFraction": 0.0,
+                  "AtFullSpeed": false
+                },
+              },
+              "GameObject|_smoke": { 
+                "UnityEngine.Transform": { //Offsetting the smoke effect so it looks neater
+                  "localPosition": { "x":0, "y":0.08, "z":1.5 }
+                }
+              },
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": { //Offsetting and making the Muzzle Flash bigger so it looks neater
+                  "localScale": { "x":0.75, "y":0.75, "z":1.0 },
+                  "localPosition": { "x":0, "y":0.08, "z":1.5 }
+                }
+              },
+              "GameObject|_spawnBullet": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  "localPosition": { "x":0, "y":0.08, "z":1.5 }
+                }
+              },
+              "GameObject|_spawnCasing": {
+                "UnityEngine.Transform": { //Offsetting the bullet spawn so it looks neater
+                  "localEulerAngles": { "x":230, "y":0, "z":0, "w":1 },
+                  "localPosition": { "x":-0.2, "y":0.08, "z":0 },
+                  "localScale": { "x":1, "y":1, "z":1 }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+  "ModuleWeapon": {
+    "m_FireSFXType": "66",
+    "m_PreventShootingTowardsFloor": false,
+    "m_ShotCooldown": 0,
+    "m_RotateSpeed": 120.0
+  },
+  "ModuleWeaponGun": {
+    "m_ShotCooldown": 0.05,
+    "m_FiringData": null,
+    "m_DeploySFXType": 77
+    },
+  "FireData": {
+    "m_BulletSprayVariance":    0.11,
+    "m_KickbackStrength": 100,
+    "Instantiate|m_BulletCasingPrefab": {
+      "m_LifeTime": 1.0,
+      "UnityEngine.Transform": {"localScale": { "x":1, "y":1, "z":1 }}
+    },
+    "m_MuzzleVelocity": 120,
+      "WeaponRound": {
+        "m_DamageType": "Bullet" //What damage modifier the weapon does
+      },
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":0.5, "y":0.5, "z":0.5 }},
+        "WeaponRound": { 
+          "m_Damage": 65
+        },
+        // RandomAdditions ----------------------------------------------
+        "RandomAdditions.InterceptProjectile": {
+          "InterceptRange": 2, // The range when this projectile applies it's damage
+          "StartDelay": 3,
+          "InterceptedExplode": true, // Any projectile intercepted by this will explode (no damage)
+          "PointDefDamage": 80, // How much damage to apply when target projectile is hit 
+          // - leave at zero to use the WeaponRound damage
+        },
+      }
+    },
+    "RandomAdditions.ModulePointDefense": {
+      "DefendOnly": false, // Do not fire on spacebar
+      "CanInterceptFast": true, // Can this also shoot fast projectiles?
+      "ForcePulse": false, // Force the hitscan pulse effect
+      "SpoolOnEnemy": true, // Spin the barrels when an enemy is in range
+      "LockOnDelay": 8, // Frames this will not track for - Set to 0 to maximize scanning rate. WARNING - May negatively impact performance under 8!
+      "LockOnStrength": 15, // Will to keep lock on a projectile that's fast and/or far. WARNING - May negatively impact performance under 10!
+      "DefenseCooldown": 0.05, // How long until it fires the next intercept
+      "DefenseEnergyCost": 0, // How much it takes to maintain passive defense
+      "DefendRange": 100, // The range of which this can find and track projectiles
+      "RotateRate": 200, // How fast we should rotate the turret when dealing with a projectile
+      "FireSFXType": "66", // Same as ModuleWeapon but for Pulse
+      "ExplodeOnHit": 1, // Make the target projectile explode on death (without dealing damage)
+      "OverrideEnemyAiming": false // Will this prioritize projectiles over the enemy? - Also allow firing when spacebar is pressed
+    },
+  }
+}
+
+

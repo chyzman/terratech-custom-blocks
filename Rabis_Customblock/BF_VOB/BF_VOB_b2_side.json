@@ -1,0 +1,466 @@
+{
+  "Name": "B.F. & COUGER V.O.B - Heavy Booster",
+  "Description": "Large booster that provides most of the V.O.B's thrust. Normally, four of this boosters are mounted per V.O.B unit",
+  "ID": 546391,
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2,
+  "Price": 86670,
+  "HP": 10680, 
+  //10680
+  //*250
+  // m3 * 4
+  // 42.72m3
+  // 39.01373672m3
+  "Mass": 170.9,
+  /*"CenterOfMass": {
+    "x": 2.0,
+    "y": 2.0,
+    "z": 5
+  },*/
+  "Fragility": 0.0, //no fall off
+  "DamageableType": 3, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+  "EmissionMode": 1,
+  // Fibre Plating	     16
+  // Hard Light Drive	    4
+  // Zero Point Splitter 	6
+  // Thermo Jet	          4
+  // Proxima Dark	        2
+  "Recipe": "43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 50,50,50,50,59, 59, 59, 59, 59, 59, 63, 63, 63, 63, 66, 66, ",
+  "IconName": "BF_VOB_b2_side.png",
+  "MeshName": "BF_VOB_side.obj",
+  //"ColliderMeshName": "BF_VOB_side.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true,
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  "Bounciness": 0.0, //A value between 0 and 1, how much it bounces back from a collision
+  "MeshTextureName": null,
+  "MeshMaterialName": "BF_Main",
+  "CellMap": [ // Slices of the block's cell occupancy, from back to front
+    // Any character placement that is not a space will be filled as a cell
+    [ // Z 0
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 1
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 2
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 3
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 4
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 5
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 6
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 7
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 8
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 9
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 10
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 11
+      "00",
+      "00",
+      "  ",
+    ],
+    [ // Z 12
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 13
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 14
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 15
+      "00",
+      "00",
+      "  ",
+    ],
+    [ // Z 16
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 17
+      "00",
+      "00",
+      "00",
+    ],
+    [ // Z 18
+      "00",
+      "00",
+      "00",
+    ],
+
+  ],
+  /*"BlockExtents": {
+    "x": 2,
+    "y": 3,
+    "z": 18
+  },*/
+  "APs": [
+    {"x": -0.5,"y": 1,"z": 6},
+    {"x": -0.5,"y": 1,"z": 9},
+    {"x": -0.5,"y": 1,"z": 11},
+    {"x": -0.5,"y": 1,"z": 15},
+    {"x": 1.5,"y": 1,"z": 6},
+    {"x": 1.5,"y": 1,"z": 9},
+    {"x": 1.5,"y": 1,"z": 11},
+    {"x": 1.5,"y": 1,"z": 15}
+  ],
+  "GamePrefabReference": "HE_JetEngine_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "DeathExplosionReference": "HE_JetEngine_112",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 90 // Roll
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "BF_VOB_side_nozzle",
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_VOB_side_nozzle.obj",
+      "ColliderMeshName": null,
+      //"MeshMaterialName": "HE_Main",
+      //"MeshTextureName": "EXP_1",
+      //"MakeBoxCollider": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    // booster flame replace
+    { // GSO booster flame
+      "SubOverrideName": "_boostJet/m_BoosterRocketFlame_01",
+      "MeshTextureName": "BF_VOB_flame.png"
+    },
+    { // VEN booster flame
+      "SubOverrideName": "_boostJet/m_BoosterRocketFlame_R",
+      "MeshName": "BF_VOB_flame_VEN.obj",
+      "MeshTextureName": "BF_VOB_flame2.png"
+    },
+    // colliders setting ----------------------------------------------------------------
+    // Mesh Collider
+    { // ---------- c1
+      "SubOverrideName": "col_1",
+      "ColliderMeshName": "BF_VOB_side_c1.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { // ---------- c2
+      "SubOverrideName": "col_2",
+      "ColliderMeshName": "BF_VOB_side_c2.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { // ---------- c3
+      "SubOverrideName": "col_3",
+      "ColliderMeshName": "BF_VOB_side_c3.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { // ---------- c4
+      "SubOverrideName": "col_4",
+      "ColliderMeshName": "BF_VOB_side_c4.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { //
+      "SubOverrideName": "col_5",
+      "ColliderMeshName": "BF_VOB_side_c4.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 4},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    // Primitive Collider
+    // !!!!------ Don't forget to swap the Y and Z ------!!!!
+    { // 
+      "SubOverrideName": "col_6",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0.5,"y": 1,"z": 7.50732},
+      "SubScale": {"x": 1.9984,"y": 1.95038,"z": 3.25185}
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_boostJet":{ // 
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.5,"y": 1.0,"z": -1.0},
+        "localScale": { "x": 2.7, "y": 2.7, "z": 30 }
+      },
+      "BoosterJet": { // booster setting 
+        // Force / 50 = BurnRate
+        // Poor fuel efficiency
+        "m_Force": 300000.0,
+        "m_BurnRate": 6000,
+        "m_FireRateFalloff": 1.0
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": null, // remove HE booster FX
+      "Reference|GSO_Booster_112/_boostJet/m_BoosterRocketFlame_01": { // GSO orange flame
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        }
+      },
+      "Reference|VEN_Booster_Double_211/_boostJet/m_BoosterRocketFlame_R": { // VEN blue flame
+        "GameObject|ParticleSystemBoosterRocketFlame": null,
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1.5,
+            "z": 1.5
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "maxParticles": 0
+        },
+        "UnityEngine.Light": {
+          "spotAngle": 360.0,
+          "color": {
+            "r": 0.5,
+            "g": 0.85,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "areaSize": 1.5,
+          "intensity": 2,
+          "type": "point",
+          "range": 6,
+          "flare": null
+        }
+      },
+      // RandomAdditions ------------------------------------------------------------------------------------
+      "RandomAdditions.BurnerJet": {     // Burn & yeet
+        "UseDamage": true,               // Enable damage dealing - note that enemies being affected still turn red with this off
+        "DamagePerSecond": 300,          // Damage dealt per second
+        "Radius": 0.8,                   // Width/Height Radius of the spheroid
+        "RadiusStretchMultiplier": 15,   // Length Radius of the Spheroid
+        "RadiusFalloff": 0.3,              // the damage will falloff beyond this
+        "DamageType": "Plasma",          // DamageType to deal against target
+        "FriendlyFire": false,           // Can deal damage against allied Techs
+        // ---------------------------------------------------------------------
+        "UseRecoil": true,               // Enable enemy yeet
+        "Backforce": 25                  // the force applied on each enemy block affected
+      }
+    },
+
+    "Reference|VEN_FuelPod_111/ModuleFuelTank.": { // fuel tank
+      // TankVolume * 20000 = Capacity - TankVolume is calculated from a 3D mesh using Blender's add-on
+      // Capacity / 210 = RefillRate - Takes 210 seconds to refill
+      // tank 39.013m3
+      "m_Capacity": 780260.0,
+      "m_RefillRate": 3715.524 // Refill rate per second
+    },
+
+    "ModuleDamage": { // death explosion FX
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //bigbertha
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          // Not a lot of damage, but the explosion radius is large
+          "m_EffectRadius": 10, // Outer radius, damage is 0 to max
+          "m_EffectRadiusMaxStrength": 2, // Inner radius, damage is at max within here
+          "m_ExplosionSize": 2,
+          "m_MaxDamageStrength": 300,
+          "m_MaxImpulseStrength": 4000,
+          "DoDamage": false
+        },
+        "GameObject|Sparks": {
+          "UnityEngine.ParticleSystem": {
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 30.0,
+            "playbackSpeed": 1.0,
+            "startSpeed": 8.0,
+            "startSize": 0.7,
+            "startLifetime": 10,
+            "gravityModifier": -0.05,
+            "maxParticles": 10000,
+            "scalingMode": 3,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.02,
+                  "g": 0.4,
+                  "b": 1,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 5000.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "minParticleSize": 0.0,
+            "maxParticleSize": 0.2
+          }
+        },
+        "GameObject|ExplosionBright": {
+          "UnityEngine.ParticleSystem": {
+            "startSpeed": 25,
+            "startSize": 70,
+            "startLifetime": 4,
+            "gravityModifier": -0.2,
+            "maxParticles": 750,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.6,
+                  "b": 1,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 5000.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          }
+        },
+        "GameObject|ExplosionSmoke": {
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.1,
+            "startSpeed": 35,
+            "startSize": 40,
+            "startLifetime": 5,
+            "gravityModifier": 0.0,
+            "maxParticles": 750,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.2,
+                  "g": 0.6,
+                  "b": 1,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 5000.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          }
+        },
+        "GameObject|ExplosionDark": null,
+        /*
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.1,
+            "startSpeed": 60,
+            "startSize": 60,
+            "startLifetime": 3,
+            "gravityModifier": 0.05,
+            "maxParticles": 750,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.6,
+                  "b": 1,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 5000.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          }
+        },*/
+        "GameObject|Point light": {
+          "UnityEngine.Light": {
+            "intensity": 25.0,
+            "range": 25.0,
+            "color": {
+              "r": 0.427,
+              "g": 1,
+              "b": 0.904,
+              "a": 1.0
+            }
+          },
+          "FadeInOutLight": {
+            "StartDelay": 0.0,
+            "FadeInSpeed": 0.5,
+            "FadeOutDelay": 0.0,
+            "FadeOutSpeed": 1.6
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,153 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Better Future Large Hover Deflector",
+  "Description": "A special block that will repel any Hover close enough to interact with it, creating powerful forces and increasing aerial control.", //You can make multiple lines with \n
+  "ID": 910912, //A random ID that MUST be unique
+
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 20163,
+  "HP": 1200,
+  "Mass": 2.8,
+
+  "IconName": "BF_Large_Hover_Deflector_Icon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "BF_Large_Hover_Deflector.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "43, 43, 43, 50, 50, 50, 52, 52, 59, 59, 59 ", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "BF_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything!
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if SubObjects is being used for it
+
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //Units in the grid space to be occupied
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1
+    }
+  ],
+  /*  OR  */
+
+  /*  EITHER  */
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+  /*  OR  */
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "BlockExtents": and "APsOnlyAtBottom":
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1.5
+    }
+	
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "BF_Block_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+"SubObjects": [
+    {
+      "SubOverrideName": "m_HoverTrigger",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0.5,"y": 0,"z": 0.5},
+      "SubScale": {"x": 2,"y": 1,"z": 2}
+    }
+  ],
+
+  "JSONBLOCK": {          
+    "GameObject|m_HoverTrigger": {     
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 //ID 524288
+        }
+      }
+    }
+  }
+}

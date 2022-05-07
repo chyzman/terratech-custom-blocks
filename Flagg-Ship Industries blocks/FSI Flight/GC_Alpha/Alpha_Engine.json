@@ -1,0 +1,441 @@
+{
+	"Name": "GeoCorp 'Alpha' rocket engine",
+	"Description": "One of the strongest 'boosters' available to off-world miners. The ALPHA engine Has enough force to easilly carry up to 5 kilotons of mass. It is not recommended to use this on a small miner due to the sheer force of the thruster. Instead, use either the smaller booster or GSO's own Titan engine for that.", 
+	"ID": 1700044, 		
+	"IDNetHex": "5322f86dfba408ec", 
+
+	"Faction": 2,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 864231,
+	"HP": 5000,
+	"Mass": 25,
+	"Recipe": "blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick,blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick",
+
+	"IconName": "Alpha_icon.png", 
+	"MeshName": null, 
+	"MeshMaterialName": "GC_Main", 
+	 
+
+	"Cells": [
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 0, "y": 2, "z": 0 },
+		{ "x": 0, "y": 3, "z": 0 },
+		{ "x": 0, "y": 4, "z": 0 },
+		{ "x": 0, "y": 5, "z": 0 },
+		
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 1, "y": 2, "z": 0 },
+		{ "x": 1, "y": 3, "z": 0 },
+		{ "x": 1, "y": 4, "z": 0 },
+		{ "x": 1, "y": 5, "z": 0 },
+		
+		{ "x": 2, "y": 0, "z": 0 },
+		{ "x": 2, "y": 1, "z": 0 },
+		{ "x": 2, "y": 2, "z": 0 },
+		{ "x": 2, "y": 3, "z": 0 },
+		{ "x": 2, "y": 4, "z": 0 },
+		{ "x": 2, "y": 5, "z": 0 },
+		
+		{ "x": 3, "y": 0, "z": 0 },
+		{ "x": 3, "y": 1, "z": 0 },
+		{ "x": 3, "y": 2, "z": 0 },
+		{ "x": 3, "y": 3, "z": 0 },
+		{ "x": 3, "y": 4, "z": 0 },
+		{ "x": 3, "y": 5, "z": 0 },
+		
+		{ "x": 4, "y": 0, "z": 0 },
+		{ "x": 4, "y": 1, "z": 0 },
+		{ "x": 4, "y": 2, "z": 0 },
+		{ "x": 4, "y": 3, "z": 0 },
+		{ "x": 4, "y": 4, "z": 0 },
+		{ "x": 4, "y": 5, "z": 0 },
+		
+		{ "x": 5, "y": 0, "z": 0 },
+		{ "x": 5, "y": 1, "z": 0 },
+		{ "x": 5, "y": 2, "z": 0 },
+		{ "x": 5, "y": 3, "z": 0 },
+		{ "x": 5, "y": 4, "z": 0 },
+		{ "x": 5, "y": 5, "z": 0 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 4, "z": 1 },
+		
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 4, "z": 1 },
+		
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 4, "z": 1 },
+		
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 4, "z": 1 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 4, "z": 2 },
+		
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 4, "z": 2 },
+		
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 4, "z": 2 },
+		
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 4, "z": 2 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 4, "z": 3 },
+		
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 4, "z": 3 },
+		
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 4, "z": 3 },
+		
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 4, "z": 3 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 4 },
+		{ "x": 1, "y": 2, "z": 4 },
+		{ "x": 1, "y": 3, "z": 4 },
+		{ "x": 1, "y": 4, "z": 4 },
+		
+		{ "x": 2, "y": 1, "z": 4 },
+		{ "x": 2, "y": 2, "z": 4 },
+		{ "x": 2, "y": 3, "z": 4 },
+		{ "x": 2, "y": 4, "z": 4 },
+		
+		{ "x": 3, "y": 1, "z": 4 },
+		{ "x": 3, "y": 2, "z": 4 },
+		{ "x": 3, "y": 3, "z": 4 },
+		{ "x": 3, "y": 4, "z": 4 },
+		
+		{ "x": 4, "y": 1, "z": 4 },
+		{ "x": 4, "y": 2, "z": 4 },
+		{ "x": 4, "y": 3, "z": 4 },
+		{ "x": 4, "y": 4, "z": 4 },
+		
+		
+		
+		{ "x": 0, "y": 0, "z": 5 },
+		{ "x": 0, "y": 1, "z": 5 },
+		{ "x": 0, "y": 2, "z": 5 },
+		{ "x": 0, "y": 3, "z": 5 },
+		{ "x": 0, "y": 4, "z": 5 },
+		{ "x": 0, "y": 5, "z": 5 },
+		
+		{ "x": 1, "y": 0, "z": 5 },
+		{ "x": 1, "y": 1, "z": 5 },
+		{ "x": 1, "y": 2, "z": 5 },
+		{ "x": 1, "y": 3, "z": 5 },
+		{ "x": 1, "y": 4, "z": 5 },
+		{ "x": 1, "y": 5, "z": 5 },
+		
+		{ "x": 2, "y": 0, "z": 5 },
+		{ "x": 2, "y": 1, "z": 5 },
+		{ "x": 2, "y": 2, "z": 5 },
+		{ "x": 2, "y": 3, "z": 5 },
+		{ "x": 2, "y": 4, "z": 5 },
+		{ "x": 2, "y": 5, "z": 5 },
+		
+		{ "x": 3, "y": 0, "z": 5 },
+		{ "x": 3, "y": 1, "z": 5 },
+		{ "x": 3, "y": 2, "z": 5 },
+		{ "x": 3, "y": 3, "z": 5 },
+		{ "x": 3, "y": 4, "z": 5 },
+		{ "x": 3, "y": 5, "z": 5 },
+		
+		{ "x": 4, "y": 0, "z": 5 },
+		{ "x": 4, "y": 1, "z": 5 },
+		{ "x": 4, "y": 2, "z": 5 },
+		{ "x": 4, "y": 3, "z": 5 },
+		{ "x": 4, "y": 4, "z": 5 },
+		{ "x": 4, "y": 5, "z": 5 },
+		
+		{ "x": 5, "y": 0, "z": 5 },
+		{ "x": 5, "y": 1, "z": 5 },
+		{ "x": 5, "y": 2, "z": 5 },
+		{ "x": 5, "y": 3, "z": 5 },
+		{ "x": 5, "y": 4, "z": 5 },
+		{ "x": 5, "y": 5, "z": 5 },
+		
+		
+		
+		{ "x": 0, "y": 0, "z": 6 },
+		{ "x": 0, "y": 1, "z": 6 },
+		{ "x": 0, "y": 2, "z": 6 },
+		{ "x": 0, "y": 3, "z": 6 },
+		{ "x": 0, "y": 4, "z": 6 },
+		{ "x": 0, "y": 5, "z": 6 },
+		
+		{ "x": 1, "y": 0, "z": 6 },
+		{ "x": 1, "y": 1, "z": 6 },
+		{ "x": 1, "y": 2, "z": 6 },
+		{ "x": 1, "y": 3, "z": 6 },
+		{ "x": 1, "y": 4, "z": 6 },
+		{ "x": 1, "y": 5, "z": 6 },
+		
+		{ "x": 2, "y": 0, "z": 6 },
+		{ "x": 2, "y": 1, "z": 6 },
+		{ "x": 2, "y": 2, "z": 6 },
+		{ "x": 2, "y": 3, "z": 6 },
+		{ "x": 2, "y": 4, "z": 6 },
+		{ "x": 2, "y": 5, "z": 6 },
+		
+		{ "x": 3, "y": 0, "z": 6 },
+		{ "x": 3, "y": 1, "z": 6 },
+		{ "x": 3, "y": 2, "z": 6 },
+		{ "x": 3, "y": 3, "z": 6 },
+		{ "x": 3, "y": 4, "z": 6 },
+		{ "x": 3, "y": 5, "z": 6 },
+		
+		{ "x": 4, "y": 0, "z": 6 },
+		{ "x": 4, "y": 1, "z": 6 },
+		{ "x": 4, "y": 2, "z": 6 },
+		{ "x": 4, "y": 3, "z": 6 },
+		{ "x": 4, "y": 4, "z": 6 },
+		{ "x": 4, "y": 5, "z": 6 },
+		
+		{ "x": 5, "y": 0, "z": 6 },
+		{ "x": 5, "y": 1, "z": 6 },
+		{ "x": 5, "y": 2, "z": 6 },
+		{ "x": 5, "y": 3, "z": 6 },
+		{ "x": 5, "y": 4, "z": 6 },
+		{ "x": 5, "y": 5, "z": 6 },
+		
+		
+		
+		{ "x": 0, "y": 0, "z": 7 },
+		{ "x": 0, "y": 1, "z": 7 },
+		{ "x": 0, "y": 2, "z": 7 },
+		{ "x": 0, "y": 3, "z": 7 },
+		{ "x": 0, "y": 4, "z": 7 },
+		{ "x": 0, "y": 5, "z": 7 },
+		
+		{ "x": 1, "y": 0, "z": 7 },
+		{ "x": 1, "y": 1, "z": 7 },
+		{ "x": 1, "y": 2, "z": 7 },
+		{ "x": 1, "y": 3, "z": 7 },
+		{ "x": 1, "y": 4, "z": 7 },
+		{ "x": 1, "y": 5, "z": 7 },
+		
+		{ "x": 2, "y": 0, "z": 7 },
+		{ "x": 2, "y": 1, "z": 7 },
+		{ "x": 2, "y": 2, "z": 7 },
+		{ "x": 2, "y": 3, "z": 7 },
+		{ "x": 2, "y": 4, "z": 7 },
+		{ "x": 2, "y": 5, "z": 7 },
+	
+		{ "x": 3, "y": 0, "z": 7 },
+		{ "x": 3, "y": 1, "z": 7 },
+		{ "x": 3, "y": 2, "z": 7 },
+		{ "x": 3, "y": 3, "z": 7 },
+		{ "x": 3, "y": 4, "z": 7 },
+		{ "x": 3, "y": 5, "z": 7 },
+		
+		{ "x": 4, "y": 0, "z": 7 },
+		{ "x": 4, "y": 1, "z": 7 },
+		{ "x": 4, "y": 2, "z": 7 },
+		{ "x": 4, "y": 3, "z": 7 },
+		{ "x": 4, "y": 4, "z": 7 },
+		{ "x": 4, "y": 5, "z": 7 },
+		
+		{ "x": 5, "y": 0, "z": 7 },
+		{ "x": 5, "y": 1, "z": 7 },
+		{ "x": 5, "y": 2, "z": 7 },
+		{ "x": 5, "y": 3, "z": 7 },
+		{ "x": 5, "y": 4, "z": 7 },
+		{ "x": 5, "y": 5, "z": 7 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 8 },
+		{ "x": 1, "y": 2, "z": 8 },
+		{ "x": 1, "y": 3, "z": 8 },
+		{ "x": 1, "y": 4, "z": 8 },
+		
+		{ "x": 2, "y": 1, "z": 8 },
+		{ "x": 2, "y": 2, "z": 8 },
+		{ "x": 2, "y": 3, "z": 8 },
+		{ "x": 2, "y": 4, "z": 8 },
+		
+		{ "x": 3, "y": 1, "z": 8 },
+		{ "x": 3, "y": 2, "z": 8 },
+		{ "x": 3, "y": 3, "z": 8 },
+		{ "x": 3, "y": 4, "z": 8 },
+		
+		{ "x": 4, "y": 1, "z": 8 },
+		{ "x": 4, "y": 2, "z": 8 },
+		{ "x": 4, "y": 3, "z": 8 },
+		{ "x": 4, "y": 4, "z": 8 },
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 9 },
+		{ "x": 1, "y": 2, "z": 9 },
+		{ "x": 1, "y": 3, "z": 9 },
+		{ "x": 1, "y": 4, "z": 9 },
+		
+		{ "x": 2, "y": 1, "z": 9 },
+		{ "x": 2, "y": 2, "z": 9 },
+		{ "x": 2, "y": 3, "z": 9 },
+		{ "x": 2, "y": 4, "z": 9 },
+		
+		{ "x": 3, "y": 1, "z": 9 },
+		{ "x": 3, "y": 2, "z": 9 },
+		{ "x": 3, "y": 3, "z": 9 },
+		{ "x": 3, "y": 4, "z": 9 },
+		
+		{ "x": 4, "y": 1, "z": 9 },
+		{ "x": 4, "y": 2, "z": 9 },
+		{ "x": 4, "y": 3, "z": 9 },
+		{ "x": 4, "y": 4, "z": 9 },
+		
+		
+		
+		{ "x": 2, "y": 2, "z": 10 },
+		
+		{ "x": 3, "y": 2, "z": 10 },
+		
+		{ "x": 2, "y": 3, "z": 10 },
+		
+		{ "x": 3, "y": 3, "z": 10 },
+		
+		
+		
+		
+	],
+	"APs": [ 
+		{ "x": 2, "y": 2, "z": 10.5 },
+		{ "x": 3, "y": 2, "z": 10.5 },
+		{ "x": 2, "y": 3, "z": 10.5 },
+		{ "x": 3, "y": 3, "z": 10.5 },
+		
+		{ "x": -0.5, "y": 2, "z": 7 },
+		{ "x": -0.5, "y": 3, "z": 7 },
+		{ "x": -0.5, "y": 2, "z": 6 },
+		{ "x": -0.5, "y": 3, "z": 6 },
+		
+		{ "x": 5.5, "y": 2, "z": 7 },
+		{ "x": 5.5, "y": 3, "z": 7 },
+		{ "x": 5.5, "y": 2, "z": 6 },
+		{ "x": 5.5, "y": 3, "z": 6 },
+		
+		{ "x": 2, "y": -0.5, "z": 7 },
+		{ "x": 3, "y": -0.5, "z": 7 },
+		{ "x": 2, "y": -0.5, "z": 6 },
+		{ "x": 3, "y": -0.5, "z": 6 },
+		
+		{ "x": 2, "y": 5.5, "z": 7 },
+		{ "x": 3, "y": 5.5, "z": 7 },
+		{ "x": 2, "y": 5.5, "z": 6 },
+		{ "x": 3, "y": 5.5, "z": 6 },
+		
+	],
+	"GamePrefabReference": "HE_JetEngine_112",
+	
+	
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset":{"x":2.5,"y":2.5,"z":4},
+	
+	
+	"SubObjects": [ {
+	  "DestroyExistingColliders":true,
+      "SubOverrideName": "Alpha",
+      "MeshName": "Alpha.obj",
+      "MeshMaterialName": "GC_Main",
+	  "ColliderMeshName":"Alpha.obj",
+      "SubPosition": {
+        "x": 2.5,
+        "y": 2.5,
+        "z": 2.5
+      }
+    }],
+	"JSONBLOCK":
+	{"GameObject|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":301500.0,
+	  "m_BurnRate":100.0,
+	  "m_FireRateFalloff":1,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":100.0,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":4 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 20.0,
+            "startSpeed": 5,
+            "startSize": 5,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},
+	
+	}
+	
+				 
+}

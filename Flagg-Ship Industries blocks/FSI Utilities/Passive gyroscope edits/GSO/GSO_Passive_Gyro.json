@@ -1,0 +1,72 @@
+{
+	"Name": "GSO Passive All Axis  Gyro",
+	"Description": "A modification of the normal Gyro. This Gyro is ''Passive,'', meaning it will apply Resistance to any rotational movement. it's also ''All Axis,'' meeaning it works in all 3 rotational directions.", //You can make multiple lines with \n
+	"ID": 1700122, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 0, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 4326,
+	"HP": 500,
+	"Mass": 1,
+"IconName": "Gyro GSO.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "43, 52, 57, 57" 	
+	
+	
+	
+	
+	
+	, // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"BlockExtents":
+  { "x": 1, "y": 1, "z": 1 },
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": 0.5, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": -0.5 },
+		{ "x": 0, "y": 0, "z": 0.5 },
+		 
+		
+	    
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "GSO_Gyro_AllAxis_Active_111",
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+	
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"m_GSO_Gyro_AllAxis_Active_111_Sphere",
+	"DestroyExistingColliders": true,"DestroyExistingRenderer": true,
+    "MeshName": "GSO_Sphere_Passive.obj",
+	"MeshTextureName": "Pulsar Passive.png",
+    
+	"SubPosition":{"x":0,"y":0,"z":0}
+
+	}],
+
+	"JSONBLOCK":{
+	 
+	 "ModuleGyro": {
+	  "m_UsePassive": 1,
+	  "m_UseActive":0,
+	  "m_ActiveSpeed": 90.0,
+	  "m_PassiveStrength": {
+       "x": 540.0,
+       "y": 540.0,
+       "z": 540.0,
+      
+      
+    }}}
+	
+	
+	}

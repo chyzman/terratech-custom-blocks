@@ -1,0 +1,151 @@
+
+{
+    // Basic Block Information
+    "Name":                 "Venture Turbinator II Wheel",
+    "Description":          "A sleek, durable wheel that can get a tech to a very high speed, faster than both of the F1 wheels. They don't have a great grip, but you can do some sick drifts with them.",
+
+    "ID": 1700108,           // This is the Block ID; it must be unique
+"IconName": "Turbinator V2.png",
+    "Faction": 4,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 3,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 2,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 11235,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+   
+    "Recipe":  "52" ,	
+	
+	
+	
+	
+	
+	  
+    
+  
+    "MeshName": null,                                       //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+    
+
+    // Basic Block HP Values
+    "HP": 5000,            // A GSO one block has 250 health
+                            
+    "Mass": 1,           
+
+    "DamageableType": 2,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+   
+    // Block Dimensions
+    "Cells": [ //The grid space to be occupied
+        
+	
+		{ "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 1, "z": 1 },
+		
+		],
+
+    "APs": [{ "x": -0.5,"y": 1, "z": 0},
+	{ "x": -0.5,"y": 1, "z": 1}
+			
+      
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference":      "HEWheelLarge(244)",
+    "KeepReferenceRenderers":   true,
+    "ReferenceOffset":          { "x": -1.5, "y": 5, "z": 5 },
+     
+    "SubObjects": [
+        {
+          "SubOverrideName":          "m_HE_WheelLarge_244_Base",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+      "MeshMaterialName": "VEN_Main",
+          "MeshName":                 "Turbinator_2_Base.obj",
+          "ColliderMeshName":         "Turbinator_2_Base.obj",
+          "SubPosition":              { "x": -0.25, "y": 0.5, "z": 0.5 },
+        },
+        
+        {
+          "SubOverrideName":          "m_HE_WheelLarge_244_Tyre",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+          "ColliderMeshName":         "Turbinator_2_Wheel.obj",
+      "MeshMaterialName": "VEN_Main",
+          "MeshName":                 "Turbinator_2_Wheel.obj",
+        }
+    ],
+    
+    "JSONBLOCK":{
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.75, "y":0.5, "z":0.5 }
+        },
+      },
+      // Torque Parameters
+      "ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 5000,
+		   "torqueCurveMaxRpm": 2000,
+		  "passiveBrakeMaxTorque": 300,
+		   "reverseBrakeMaxRpm": 1000,
+		   "basicFrictionTorque": 200.0,
+		   "fullCompressFrictionTorque": 300
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 20.0,
+					"gripFactorLat": 10
+				}
+			  },
+			"radius": 1,
+			"thicknessAngular": 30,
+			"suspensionSpring": 9000.0,
+			"suspensionDamper": 200.0,
+			"maxSuspensionAcceleration": 2.5,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.1,
+			"steerAngleMax": 5,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.0,
+		"m_DriveTurnDifferential": 0.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	},
+    }
+}

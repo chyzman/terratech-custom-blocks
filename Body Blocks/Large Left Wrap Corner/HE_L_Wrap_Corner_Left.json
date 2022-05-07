@@ -1,0 +1,49 @@
+{
+  "Name": "Hawkeye Large Left Corner Wrap Armor",
+  "Description": "A large wrap corner block from Hawkeye Black Labs. The left member in a pair.",
+  "ID": 117013,
+
+  "Faction": 5,
+  "Category": 0,
+  "Rarity": 0,
+  "Grade": 2,
+  "Price": 1674,
+  "HP": 4500,
+  "Mass": 5.5,
+
+  "Recipe": "3, 3, 3, 5, 5, 5, 7, 7, 7, 45, 45, 45",
+
+  "IconName": "HE_L_Wrap_Corner_Left.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+
+  "Cells":[
+    {"x": 0, "y": 0, "z": 0},
+    {"x": -1, "y": 0, "z": 0},
+    {"x": -2, "y": 0, "z": 0},
+    {"x": -2, "y": -1, "z": 0}
+],
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": -0.5  },
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": -1,     "y": -0.5,    "z": 0  },
+    { "x": -1.5,     "y": -1,    "z": 0  },
+    { "x": -2,     "y": -1,       "z": -0.5  }
+  ],
+
+   "GamePrefabReference": "HE_ArmouredBlock_Edge_OutsideCorner_212",
+
+   "SubObjects": [
+    {
+      "SubOverrideName":        "Collider1",
+      "MeshName":               "HE_L_Wrap_Corner_Left.obj",
+      "ColliderMeshName":       "HE_L_Wrap_Corner_Left_Collider1.obj",
+      "MeshMaterialName":       "HE_Main",
+    },
+    {
+      "SubOverrideName":        "Collider2",
+      "ColliderMeshName":       "HE_L_Wrap_Corner_Left_Collider2.obj",
+    }
+  ],
+}

@@ -1,0 +1,34 @@
+{
+	"Name": "GSO Small Intake",
+	"Description": "Inspired by How Hawkeye's Thruster's are fuel efficent, the intake makes it so that your tech can refuel faster. Has a small tank of fuel, so it's slightly explosive.", 
+	"ID": 1700024, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Intake GSO1.png",
+	"Faction": 1,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 5009,
+	"HP": 250,
+	"Mass": 2,
+	"Recipe": "zeropointsplitter,blastcaps,blastcaps,fuelinjector,olasticbrick,olasticbrick",
+
+	"MeshName": "GSO_Intake_Small.obj", 
+	"MeshMaterialName": "GSO_Main", 
+	"ColliderMeshName": "GSO_Intake_Small.obj", 
+
+	"Cells": [ 
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 }
+	],
+	"APs": [ 
+		{ "x": 0.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": -0.5 },		
+		{ "x": 0, "y": -0.5, "z": 1},
+		{ "x": 0, "y": -0.5, "z": 0}
+	],
+	"GamePrefabReference": "VENFuelPod(111)", 
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 1 },
+	"JSONBLOCK":{"ModuleFuelTank":{
+				 "m_Capacity":10,"m_RefillRate":8.75}}
+}

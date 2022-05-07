@@ -1,0 +1,87 @@
+{
+  "Name": "GreenTech Side Conversion Tube Section",
+  "Description": "A conversion section for interacting with conveyor belts, silos and other crafting blocks on one margin of the tube flow.",
+
+  "ID": 911103,
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 150,
+  "HP": 250,
+  "Mass": 0.8,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 32",  
+  "IconName": "GT_Side_Conversion_Tube_Section_Icon.png",
+  
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+   "APs": [
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 0.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0.5, "y": 0, "z": 0 }
+  ],
+
+  "GamePrefabReference": "GSO_Conveyor_111", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_Side_Conversion_Tube_Section_Base.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      }
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.5, "z": 0 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 0.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 0 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 0.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": -0.5, "y": 0, "z": 0 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 0.8}
+    }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0, "y": -0.51, "z": 0 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1, 3] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.01,
+    "m_BeamStrength": 500.0
+  }
+  }			
+}

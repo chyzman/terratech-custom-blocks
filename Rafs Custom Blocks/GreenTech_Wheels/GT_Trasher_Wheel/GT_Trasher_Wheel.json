@@ -1,0 +1,240 @@
+{
+  "Name": "GreenTech Trasher Wheel",
+  "Description": "Heavy armoured wheel used at GreenTech' operated landfills for crushing trash, with strong spikes that can break even the hardest rubble.",
+  "ID": 911041, 
+  "PairedBlock": 911041, 
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 9744, 
+  "HP": 8000, 
+  "Mass": 40,
+  "CenterOfMass": {"x": 0.5, "y": 1.5, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe":  "3, 3, 3, 3, 9, 9, 9, 9, 11, 11, 11, 11, 43, 43, 43, 43, 47, 47, 47, 47, 53, 53, 54, 54", 
+  "IconName": "GT_Trasher_Wheel_Icon.png", 
+  "MeshName": "GT_Trasher_Wheel.obj", 
+  
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":
+	{
+		"x": 2,
+		"y": 4,
+		"z": 4
+	},
+  
+  "APs": [ 
+    {"x": 1.5, "y": 1, "z": 1},
+	{"x": 1.5, "y": 1, "z": 2},
+	{"x": 1.5, "y": 2, "z": 1},
+	{"x": 1.5, "y": 2, "z": 2},
+	{"x": -0.5, "y": 1, "z": 1},
+	{"x": -0.5, "y": 1, "z": 2},
+	{"x": -0.5, "y": 2, "z": 1},
+	{"x": -0.5, "y": 2, "z": 2}
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Armoured_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"MakeBoxCollider": true,
+		"SubScale": {
+			"x": 0.5,
+			"y": 0.5,
+			"z": 0.5
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 1.5,
+			"z": 1.5
+		},
+		"Layer": 8
+	  },
+	{
+		"SubOverrideName": "m_HE_EnclosedWheel_Wheel_122",
+		"MeshName": "GT_Trasher_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Trasher_Wheel_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"Layer":8
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.5,
+			"y": 1.65,
+			"z": 1.5
+		}
+	},
+	{
+		"SubOverrideName": "Box_1",
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_2",
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_3",
+		"SubRotation": {
+			"x": 45,
+			"y": 0,
+			"z": 0
+		},
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_4",
+		"SubRotation": {
+			"x": 45,
+			"y": 0,
+			"z": 0
+		},
+		"Layer":14
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 25000,
+		   "torqueCurveMaxRpm": 150,
+		  "passiveBrakeMaxTorque": 20000,
+		   "reverseBrakeMaxRpm": 100,
+		   "basicFrictionTorque": 500,
+		   "fullCompressFrictionTorque": 1000
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+		"Instantiate|tireProperties": {
+					"Instantiate|props": {
+						"frictionScaleLong": 1.0,
+						"frictionScaleLat": 1.0,
+						"gripFactorLong": 5.0,
+						"gripFactorLat": 2.25
+					}
+				  },
+			"radius": 1.6,
+			"thicknessAngular": 30,
+			"suspensionSpring": 30000.0,
+			"suspensionDamper": 1000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.3,
+			"steerAngleMax": 8,
+			"steerSpeed": 3
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	},
+	"GameObject|Box_1": {
+		"UnityEngine.BoxCollider":{
+			"center": {
+				"x": 0.5,
+				"y": 1.5,
+				"z": 1.5
+			  },
+			  "size": {
+				"x": 1,
+				"y": 1,
+				"z": 3.3
+			  }
+		  }
+ },
+ "GameObject|Box_2": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 0.5,
+			"y": 1.5,
+			"z": 1.5
+		  },
+		  "size": {
+			"x": 1,
+			"y": 3.3,
+			"z": 1
+		  }
+	  }
+},
+"GameObject|Box_3": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 0.5,
+			"y": 1.5,
+			"z": 1.5
+		  },
+		  "size": {
+			"x": 1,
+			"y": 3.3,
+			"z": 1
+		  }
+	  }
+},
+"GameObject|Box_4": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 0.5,
+			"y": 1.5,
+			"z": 1.5
+		  },
+		  "size": {
+			"x": 1,
+			"y": 3.3,
+			"z": 1
+		  }
+	  }
+},
+	"ModuleDrill": {
+		"activeColliders": [
+			"Box_1/BoxCollider.",
+			"Box_2/BoxCollider.",
+			"Box_3/BoxCollider.",
+			"Box_4/BoxCollider."
+		],
+		"impactDamageMultiplier": 3.0,
+		"damagePerSecond": 700.0,
+		"m_SpinOnCollisionDuration": 1,
+		"m_DamageType": 0
+	}
+     }
+}

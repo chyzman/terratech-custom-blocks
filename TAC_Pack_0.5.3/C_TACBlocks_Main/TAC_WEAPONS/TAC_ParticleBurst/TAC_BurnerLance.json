@@ -1,0 +1,435 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Retroburner Incendiary Shotgun",
+  "Description": "Fires a burner jet flame at the enemy to make them \"feel the heat\".  \n\nThere is controversy to using a rocket engine as a means of attack.  While the combat itself is \"repulsive\" to many, its found its home with the notorious <b>Darklight</b> Pirates and Space Invaders as a useful nuisance to many GEOcorp miners who want to keep their resource bays intact. \n\nThis is a terribly shifty retrofit of an obscure <b>Darklight</b> weapon. \n\nBig Pete has had a few run-ins with some of these buggers and reported two times that he'd \"lost his meal\" from the unnecessary ticklish prodding these give out. \n\nIt has a chance to flip the target over, a worthy matter to look forwards to. \n\nSo wait why is this in TAC?  One thing is for certain.  The AI <b>loves</b> using this.  Just make sure they have enough weight to operate safely with these!\n\n\n\n<b>PAWOMWHOSH</b>", //You can make multiple lines with \n
+  "ID": 584285, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 6165,//TAC-Economical... if it wasn't for the fairly limited use against shields.
+  "HP": 500,//+50 health, still a liability with normal armoring.
+  "Mass": 3.0,//Heavy
+
+  "IconName": "hottttt.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 45, 51, 54, 57", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //bottom
+     { "x": 0, "y": -0.5, "z": 0 },
+     // { "x": 0, "y": -0.5, "z": 1 },
+     // { "x": 1, "y": -0.5, "z": 0 },
+     // { "x": 1, "y": -0.5, "z": 1 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1 //
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_Shotgun_Rotating(212)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "ReferenceScale": { "x": 0.5, "y": 0.5, "z": 0.5 }, //Shift the subobjects of the block prefab by x, y and z
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_HE_Shotgun_Rotating_212_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BurstFlameGunBase2.obj",
+      "MeshColliderName": "BurstFlameGunBase2.obj",
+      "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Azimuth
+     "SubOverrideName": "m_HE_Shotgun_Rotating_212_Mount",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BurstFlamerRotPart.obj",
+      "MeshColliderName": "BurstFlamerRotPart.obj",
+      "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Elevation
+     "SubOverrideName": "m_HE_Shotgun_Rotating_212_Body",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BurstFlamerElev.obj",
+      "MeshColliderName": "BurstFlamerElev.obj",
+      "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Barrel
+     "SubOverrideName": "m_HE_Shotgun_Rotating_212_Barrel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "BurstFlamerBarrel.obj",
+      "MeshColliderName": "BurstFlamerBarrel.obj",
+      "MakeBoxCollider": true,
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+	
+  //
+  // SPEAR OF OUR DOOM
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|m_HE_Shotgun_Rotating_212_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":-0.5, "z":0 }
+      },
+    },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0},
+        "localPosition": { "x":0, "y":-0.5, "z":0 }
+      },
+      "GimbalAimer": {
+         "rotationLimits": [-180, 180]
+      }, //For horizontal aim restrictions
+      "GameObject|m_HE_Shotgun_Rotating_212_Mount": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":2 },
+          // "localEulerAngles": { "x":0, "y":0, "z":0},
+          "localPosition": { "x":0, "y":0.475, "z":0 }
+        },
+        "GimbalAimer": {
+          "rotationLimits": [-26, 26] //Vertical aim restrictions - was [-55, 10]
+        },
+        "GameObject|m_HE_Shotgun_Rotating_212_Body": {
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0},
+            // "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "CannonBarrel": {
+          },
+          "GameObject|_blast": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              // "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            "ParticleSystem": {
+              "startDelay": 0.0,
+              "loop": false,
+              "playOnAwake": false,
+              "duration": 0.0,
+              "playbackSpeed": 0.0,
+              "enableEmission": true,
+              "emissionRate": 0.0,
+              "startSpeed": 50.0,
+              "startSize": 0.3,
+              "startRotation": 0.0,
+              "startLifetime": 0.0,//0.17
+              "gravityModifier": 0.0,
+              "maxParticles": 0,
+              // "simulationSpace": 1,
+              // "scalingMode": 2,
+              // "automaticCullingEnabled": false,
+              // "isPlaying": false,
+              // "isEmitting": false,
+              // "isStopped": true,
+              // "isPaused": false,
+              // "particleCount": 0,
+              // "time": 0.0,
+            },
+            "GameObject|FX_Impact_Smoke": null,
+            "GameObject|FX_Impact_Sparks": null,
+            "GameObject|FX_Impact_Smoke": {
+              "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+                "UnityEngine.Transform": {
+                  // "localScale": { "x":0.2, "y":0.2, "z":0.2 },
+                  // "localEulerAngles": { "x":0, "y":0, "z":0},
+                  "localPosition": { "x":0, "y":0, "z":-2.2 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startSize": 1,
+                      "startSpeed": 0, //How far you want the particles to spread
+                      "startColor": {
+                        "r": 1.0,
+                        "g": 0.2,
+                        "b": 0.2,
+                        "a": 1.0
+                      },
+                      // "duration": 2.0,
+                      "playbackSpeed": 0.25,
+                      // "emissionRate": 25.0,
+                      // "maxParticles": 750,
+                      // "emission": {
+                      //   "rateMultiplier": 20.0,
+                      //   // "rateOverTimeMultiplier": 0.2,
+                      //   "burst": {
+                      //     "count": 20,
+                      //     //"cycleCount": 1,
+                      //     "maxCount": 20,
+                      //     "minCount": 8,
+                      //     // "probability": 150,
+                      //     // "repeatInterval": 150,
+                      //     //"time": 0
+                      //   }
+                      // },
+                    }
+                  }
+                },
+              },
+            },
+            // "GameObject|FX_Impact_Smoke": {
+            // },
+            // "GameObject|FX_Impact_Sparks": {
+            // },
+          },
+          "GameObject|_smoke2": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 }, 
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+          "GameObject|_smoke1": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 }, 
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":0.5 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              // "localPosition": { "x":0, "y":0, "z":0.1 }
+            },
+            "GameObject|m_HE_Shotgun_Rotating_212_Barrel": {
+            },
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.25, "y":1, "z":0.5 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0},
+              "localPosition": { "x":0, "y":0, "z":0 }
+            },
+            "MuzzleFlash": {
+              "m_SpeedFactor": 1.0,
+            },
+            "GameObject|_light": {
+            },
+            "GameObject|_muzzleFlashAnim": null,
+            "Reference|HE_Shotgun_Rotating_212/_muzzleFlashAnim": {
+              "GameObject|ClusterF": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x":10, "y":2, "z":10 },
+                  // "localEulerAngles": { "x":0, "y":0, "z":0},
+                  "localPosition": { "x":0, "y":0, "z":2 }
+                },
+                "Reference|VEN_Laser_MachineGun_112/m_MuzzleLaserFlash_01": {
+                  "Spinner": {//Pulsating Fire Effect
+                    "m_Speed": 2.25,
+                    "m_RotationAxis": {
+                      "axis": 1
+                    },
+                    // "m_SteerAxis": {
+                    //   "axis": 1
+                    // },
+                    "m_AutoSpin": true,
+                    "m_SpinUpTime": 0.1,
+                    "m_CurrentAngle": 0,
+                    "m_CurrentAutoSpeed": 0.0,
+                    "m_CurrentSpeedFraction": 0.0,
+                    "m_SpinnerSound": null,
+                    "m_SpinnerSoundOriginalPitch": 0.0,
+                    "Speed": -2.0,
+                    "SpeedFraction": 0.0,
+                    "AtFullSpeed": true
+                  },
+                  "UnityEngine.Transform": {
+                    "localScale": { "x":1, "y":1, "z":1 },
+                    // "localEulerAngles": { "x":0, "y":0, "z":0},
+                    "localPosition": { "x":0, "y":0, "z":0 }
+                  },
+                  "UnityEngine.MeshRenderer": {
+                    "material": {
+                      // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                      // "shaderKeywords": [
+                      //   "_ALBEDO",
+                      //   "_EMISSION",
+                      //   "_NORMALMAP"
+                      // ],
+                      // "mainTexture": "LED_BeamBlockG.png",
+                      "color": {
+                        "r": 0.1,
+                        "g": 0.1,
+                        "b": 1.0,
+                        "a": 1.0,
+                        "maxColorComponent": 2.0
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x":2, "y":18, "z":2 },
+                  // "localEulerAngles": { "x":0, "y":0, "z":0},
+                  "localPosition": { "x":0, "y":0, "z":0 }
+                },
+                "UnityEngine.MeshRenderer": {
+                  "material": {
+                    // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    // "shaderKeywords": [
+                    //   "_ALBEDO",
+                    //   "_EMISSION",
+                    //   "_NORMALMAP"
+                    // ],
+                    // "mainTexture": "LED_BeamBlockG.png",
+                    "color": {
+                      "r": 0.1,
+                      "g": 0.1,
+                      "b": 1.0,
+                      "a": 1.0,
+                      "maxColorComponent": 2.0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "GameObject|_spawnCasing": {
+          },
+          "GameObject|_spawnBullet": {
+          }
+        }
+      }
+    },
+
+    "Damageable": {
+      "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleWeapon": { //Component
+      "m_ShotCooldown" : 0.0, //This is the cooldown between every burst shot.
+      "m_FireSFXType": "HEHomingMissile", //Firing noise
+      // "m_AutoFire": true,
+      //"m_LimitedShootAngle": 180,
+      "m_RotateSpeed" : 200.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": { // Another component
+      //"UnityEngine.Transform": {"localScale": { "x":6, "y":6, "z":6 }}, //Bigger for placeholder - broken as it crashes the game
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      //"m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      // "m_AutoFire": false,
+      "m_ShotCooldown" : 0.2, // was 3.0 //This is the cooldown between every burst shot.
+      "m_ResetBurstOnInterrupt" : false,
+      "m_CooldownVariancePct" : 0.02, 
+      // "m_BurstShotCount" : 16, //Number of shots before the gun "overheats"
+      // "m_BurstCooldown" : 3.0, //3 seconds
+      //"m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      "m_HasCooldownAnim" : false, //Doesn't change anything
+      "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "FireDataShotgun": {
+      "m_ShotMinRange": 0.0,
+      "m_ShotMaxRange": 24,
+      "m_ShotFullDamageRange": 20,
+      "m_ShotArc": 5.0,
+      "m_MinDamagePercent": 0.4,
+      "m_MaxDamagePercent": 1.0,
+      "m_TargetKickbackStrength": 400.0,//this STACKS FAST
+      "m_TargetKickbackDuration": 2.6,//make the enemy "run away" when hit by this deadly lance
+      "m_MuzzleVelocity": 40.0,
+      "m_CasingVelocity": 15.0,
+      "m_BulletSprayVariance": 0.0,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.5,
+      "m_CasingEjectSpin": 50.0,
+      "m_KickbackStrength": 250.0,
+    },
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 25, //YEET the missile before booster
+      "m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 250.0, // Yay big tony can use it
+      // "m_KickbackStrength": 1250.0, // Would you like to become a plane
+      "Instantiate|m_BulletCasingPrefab": null,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":15 },
+          "localScale": { "x":1, "y":1, "z":30 }, //{ "x":1.5, "y":1.5, "z":4 }
+          "localEulerAngles": { "x":0, "y":0, "z":0},
+        },
+        // "Explosion": { //wOW a component
+        //   //"m_DamageType" : "Explosive", //What damage modifier the explosion does
+        //   // "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX
+        //   "m_EffectRadius": 2.0, //Evil gun
+        //   "m_EffectRadiusMaxStrength": 1.0, //Max Radius before the effect deals less damage outwards
+        //   "m_MaxDamageStrength": 100, // boop
+        //   "m_MaxImpulseStrength": 1 //meh
+        // },
+        "ShotgunRound": {
+          "m_LastFireDirection": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_LastFireSpin": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "m_DamageType": 5,
+          "m_Damage": 10,//was 4
+        },
+        "WeaponRound": {
+          "m_DamageType": 5,
+          "m_Damage": 10,//was 4
+        }
+      },
+    } 
+  }
+}

@@ -1,0 +1,85 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+
+
+// Double small floater strength, 1.2x altitude
+
+{
+  "Name": "Better Future Medium Floater Tank",
+  "Description": "When attached to a Tech, this tank heats Celestian Crystals contained within, sublimating these into Celestian Gas, which has high atmospheric buyoancy due to antigravity properties.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.",
+  "ID": 910602, 
+
+  "Faction": 7, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 5265,
+  "HP": 800,
+  "Mass": 0.6,
+
+  "IconName": "BF_Medium_Floater_Tank_Icon.png",
+  "MeshName": "BF_Medium_Floater_Tank.obj", 
+  
+  "Recipe": "17, 17, 43, 43, 43, 45, 45, 49",
+  
+  "MeshMaterialName": "BF_Main", 
+  "SupressBoxColliderFallback": false, 
+
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1
+    }
+  ],
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+  "GamePrefabReference": "BF_Block_111",
+  "KeepReferenceRenderers": false, 
+  
+  "JSONBLOCK": {
+  "MotionBlocks.ModuleFloater": {
+//  "MinHeight": -85,
+    "MaxHeight": 480,
+    "MaxStrength": 28,
+    "VelocityDampen": 0.12
+}
+    
+  }
+}

@@ -1,0 +1,428 @@
+{
+	"Name": "Old Star Steam Wheel",
+	"Description": "This here is how the Old Star do. A large wheel with massive tourque to get all matter of things moving with the assistance of a steam piston. This wheel get any heavy load moving, just be sure to pair it with wheels with a proper turning radius as there is zero turning ability if used on its own if more than two are used on one tech.",
+	"ID": 300081, 
+  
+	"Faction": 4,
+	
+	"Category": 3, 
+	"Grade": 2, 
+	"Price": 3084, 
+	"HP": 3500, 
+	"Mass": 20,
+	"CenterOfMass": {"x": 2.0, "y": 0.0, "z": 2.5},
+	"EmissionMode": 2,
+	"Fragility": 0,
+	"DamageableType": 0,
+	"Rarity": 2,
+  
+	"Recipe": [
+	  {"0": 10},
+	  {"5": 4},
+	  {"7": 4},
+	  {"49": 2},
+	  {"52": 2},
+	  {"54": 3},
+	  {"60": 2}
+	],
+	"IconName": "OS_Steam_Wheel_icon.png", 
+	"MeshName": null, 
+	"ColliderMeshName": null,
+	"SupressBoxColliderFallback": true,
+   
+	"MeshTextureName": "OST1.png",
+	"MeshGlossTextureName":"OST2.png",
+	"MeshEmissionTextureName":"OST3.png",
+  
+  "Cells":[
+	  //AP layer
+  
+	  {"x": 0,"y": 1,"z":-1},{"x": 0,"y": 1,"z": 0},{"x": 0,"y": 1,"z": 1},{"x": 0,"y": 1,"z": 2},{"x": 0,"y": 1,"z": 3},{"x": 0,"y": 1,"z": 4},{"x": 0,"y": 1,"z": 5},{"x": 0,"y": 1,"z": 6},
+	  {"x": 0,"y": 0,"z":-1},{"x": 0,"y": 0,"z": 0},{"x": 0,"y": 0,"z": 1},{"x": 0,"y": 0,"z": 2},{"x": 0,"y": 0,"z": 3},{"x": 0,"y": 0,"z": 4},{"x": 0,"y": 0,"z": 5},{"x": 0,"y": 0,"z": 6},
+	  {"x": 0,"y":-1,"z":-1},{"x": 0,"y":-1,"z": 0},{"x": 0,"y":-1,"z": 1},{"x": 0,"y":-1,"z": 2},{"x": 0,"y":-1,"z": 3},{"x": 0,"y":-1,"z": 4},{"x": 0,"y":-1,"z": 5},{"x": 0,"y":-1,"z": 6},
+  
+	  //Wheel Layer
+	  {"x": 1,"y": 2,"z": -2},{"x": 1,"y": 2,"z":-1},{"x": 1,"y": 2,"z": 0},{"x": 1,"y": 2,"z": 1},{"x": 1,"y": 2,"z": 2},{"x": 1,"y": 2,"z": 3},{"x": 1,"y": 2,"z": 4},{"x": 1,"y": 2,"z": 5},{"x": 1,"y": 2,"z": 6},
+	  {"x": 1,"y": 1,"z": -2},{"x": 1,"y": 1,"z":-1},{"x": 1,"y": 1,"z": 0},{"x": 1,"y": 1,"z": 1},{"x": 1,"y": 1,"z": 2},{"x": 1,"y": 1,"z": 3},{"x": 1,"y": 1,"z": 4},{"x": 1,"y": 1,"z": 5},{"x": 1,"y": 1,"z": 6},
+	  {"x": 1,"y": 0,"z": -2},{"x": 1,"y": 0,"z":-1},{"x": 1,"y": 0,"z": 0},{"x": 1,"y": 0,"z": 1},{"x": 1,"y": 0,"z": 2},{"x": 1,"y": 0,"z": 3},{"x": 1,"y": 0,"z": 4},{"x": 1,"y": 0,"z": 5},{"x": 1,"y": 0,"z": 6},
+	  {"x": 1,"y":-1,"z": -2},{"x": 1,"y":-1,"z":-1},{"x": 1,"y":-1,"z": 0},{"x": 1,"y":-1,"z": 1},{"x": 1,"y":-1,"z": 2},{"x": 1,"y":-1,"z": 3},{"x": 1,"y":-1,"z": 4},{"x": 1,"y":-1,"z": 5},{"x": 1,"y":-1,"z": 6},
+	  {"x": 1,"y":-2,"z": -2},{"x": 1,"y":-2,"z":-1},{"x": 1,"y":-2,"z": 0},{"x": 1,"y":-2,"z": 1},{"x": 1,"y":-2,"z": 2},{"x": 1,"y":-2,"z": 3},{"x": 1,"y":-2,"z": 4},{"x": 1,"y":-2,"z": 5},{"x": 1,"y":-2,"z": 6},
+	  //Piston rods layer
+	  {"x": 2,"y": 2,"z": -2},{"x": 2,"y": 2,"z":-1},{"x": 2,"y": 2,"z": 0},{"x": 2,"y": 2,"z": 1},{"x": 2,"y": 2,"z": 2},{"x": 2,"y": 2,"z": 3},{"x": 2,"y": 2,"z": 4},{"x": 2,"y": 2,"z": 5},{"x": 2,"y": 2,"z": 6},
+	  {"x": 2,"y": 1,"z": -2},{"x": 2,"y": 1,"z":-1},{"x": 2,"y": 1,"z": 0},{"x": 2,"y": 1,"z": 1},{"x": 2,"y": 1,"z": 2},{"x": 2,"y": 1,"z": 3},{"x": 2,"y": 1,"z": 4},{"x": 2,"y": 1,"z": 5},{"x": 2,"y": 1,"z": 6},
+	  {"x": 2,"y": 0,"z": -2},{"x": 2,"y": 0,"z":-1},{"x": 2,"y": 0,"z": 0},{"x": 2,"y": 0,"z": 1},{"x": 2,"y": 0,"z": 2},{"x": 2,"y": 0,"z": 3},{"x": 2,"y": 0,"z": 4},{"x": 2,"y": 0,"z": 5},{"x": 2,"y": 0,"z": 6},
+	  {"x": 2,"y":-1,"z": -2},{"x": 2,"y":-1,"z":-1},{"x": 2,"y":-1,"z": 0},{"x": 2,"y":-1,"z": 1},{"x": 2,"y":-1,"z": 2},{"x": 2,"y":-1,"z": 3},{"x": 2,"y":-1,"z": 4},{"x": 2,"y":-1,"z": 5},{"x": 2,"y":-1,"z": 6},
+	  {"x": 2,"y":-2,"z": -2},{"x": 2,"y":-2,"z":-1},{"x": 2,"y":-2,"z": 0},{"x": 2,"y":-2,"z": 1},{"x": 2,"y":-2,"z": 2},{"x": 2,"y":-2,"z": 3},{"x": 2,"y":-2,"z": 4},{"x": 2,"y":-2,"z": 5},{"x": 2,"y":-2,"z": 6},
+	  //outer layer
+	  {"x": 2,"y": 2,"z":-1},{"x": 2,"y": 2,"z": 0},{"x": 2,"y": 2,"z": 1},{"x": 3,"y": 2,"z": 2},{"x": 3,"y": 2,"z": 3},{"x": 3,"y": 2,"z": 4},{"x": 3,"y": 2,"z": 5},{"x": 3,"y": 2,"z": 6},
+	  {"x": 2,"y": 1,"z":-1},{"x": 2,"y": 1,"z": 0},{"x": 2,"y": 1,"z": 1},{"x": 3,"y": 1,"z": 2},{"x": 3,"y": 1,"z": 3},{"x": 3,"y": 1,"z": 4},{"x": 3,"y": 1,"z": 5},{"x": 3,"y": 1,"z": 6},
+	  {"x": 2,"y": 0,"z":-1},{"x": 2,"y": 0,"z": 0},{"x": 2,"y": 0,"z": 1},{"x": 3,"y": 0,"z": 2},{"x": 3,"y": 0,"z": 3},{"x": 3,"y": 0,"z": 4},{"x": 3,"y": 0,"z": 5},{"x": 3,"y": 0,"z": 6},
+	  {"x": 2,"y":-1,"z":-1},{"x": 2,"y":-1,"z": 0},{"x": 2,"y":-1,"z": 1},{"x": 3,"y":-1,"z": 2},{"x": 3,"y":-1,"z": 3},{"x": 3,"y":-1,"z": 4},{"x": 3,"y":-1,"z": 5},{"x": 3,"y":-1,"z": 6},
+	  {"x": 2,"y":-2,"z":-1},{"x": 2,"y":-2,"z": 0},{"x": 2,"y":-2,"z": 1},{"x": 3,"y":-2,"z": 2},{"x": 3,"y":-2,"z": 3},{"x": 3,"y":-2,"z": 4},{"x": 3,"y":-2,"z": 5},{"x": 3,"y":-2,"z": 6}
+  ],
+  
+	
+  "APs": [ 
+  {"x":-0.5, "y": 0, "z": 0},{"x":-0.5, "y": 0, "z": 1},{"x":-0.5, "y": 0, "z": 4},{"x":-0.5, "y": 0, "z": 5}
+  ],
+	
+	"PrefabReference": "HE_Wheel_Armoured_122",
+	"KeepRenderers": true,
+	"KeepColliders": true,
+	"SubObjects": [ 
+	  {// AP points
+			"OverrideName": "Main_Part", 
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+			"SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+			 "MeshName": "OS_SW_APs.obj",
+			"ColliderMeshName":"OS_SW_APs.obj",
+			"MeshTextureName": "OST1.png",
+			"MeshGlossTextureName":"OST2.png",
+			"MeshEmissionTextureName":"OST3.png"
+	  },
+	  {//Actual Wheel
+			"OverrideName": "m_HE_EnclosedWheel_Wheel_122", 
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+			"SubPosition": { "x": 0.0, "y": 1.0, "z": 0.0 },                      
+			"ColliderMeshName": "OS_SW_Wheel.obj",
+			"MeshName": "OS_SW_Wheel.obj",
+			"MeshTextureName": "OST1.png",
+			"MeshGlossTextureName":"OST2.png",
+			"MeshEmissionTextureName":"OST3.png"
+	  },
+	  
+	  {//the actual meat of the block
+			"ObjectName":  "m_HE_ArmouredWheel_122",
+			"MeshName": "OS_SW_Base.obj",
+			"ColliderMeshName":"OS_SW_Base.obj",
+			"MeshTextureName": "OST1.png",
+			"MeshGlossTextureName":"OST2.png",
+			"MeshEmissionTextureName":"OST3.png",
+			"SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+	  },
+	  {
+			"OverrideName": "_wheel",
+			"SubPosition": { "x": 1.0, "y": 0.0, "z": 0.5 }
+	  }, 
+	  {
+			"OverrideName": "_sparksLocator",
+			"SubPosition": { "x": 1.5, "y": -2, "z": 0 }
+	  },
+	  //Piston Rods
+	  { 
+		  "OverrideName": "Pv_piston1", //1 is on the base
+			"SubPosition": {
+				"x": 0.925,
+				"y": 0.0,
+				"z": 5.0
+			}
+		},
+		{ 
+			"OverrideName": "Pv_piston2", // 2 on the wheel
+			"SubPosition": {
+				"x": 0.85,
+				"y": 0.8,
+				"z": 0.0
+			}
+		},
+	  {
+			"ObjectName": "Piston_A",
+			"MeshName": "OS_SW_Piston_A.obj",
+			"ColliderMeshName":"OS_SW_Piston_A.obj",
+			"MeshTextureName": "OST1.png",
+			"MeshGlossTextureName":"OST2.png",
+			"MeshEmissionTextureName":"OST3.png",
+			"SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+	  },
+	  {
+			"ObjectName": "Piston_B",
+			"MeshName": "OS_SW_Piston_B.obj",
+			"ColliderMeshName":"OS_SW_Piston_B.obj",
+			"MeshTextureName": "OST1.png",
+			"MeshGlossTextureName":"OST2.png",
+			"MeshEmissionTextureName":"OST3.png",
+			"SubPosition": { "x": 0.0, "y": 0.0, "z": -1.1 }
+	  }
+  
+	],
+	//GameObject|WheelPivot-followtransform  GameObject|BasePivot-follow suspenssion  GameObject|PistonPivotA GameObject|PistonPivotB
+	"JSONBLOCK": {
+	  "GameObject|m_HE_ArmouredWheel_122": {// "armoredwheel" is the body "enclosedwheel" is the actual wheel
+		  "FollowTransform": {
+				"m_TransformToFollow": "/_wheel/m_HE_EnclosedWheel_Wheel_122",//Very center of the wheel
+				"m_FollowOrientation": false //Remain aligned with the root
+		  },
+		  "GameObject|m_m_HE_ArmouredWheel_122": {//The actual model is here, offsetting the model from the very center of the wheel
+				"UnityEngine.Transform": {
+				  "localEulerAngles": { "x":0, "y":0, "z":0},//Controls rotation relative to parent
+				  "localPosition": { "x":-0.5, "y":0, "z": 0 }, //Controls position relative to parent
+				  "localScale": { "x":1, "y":1, "z":1 } //Controls scale relative to parent
+				}
+		  },
+		  "GameObject|Pv_piston1": { // Base to wheel
+		    // Using this as a followTransform bone for the relocated "Piston_B" which is now positioned within the same gameobject as "Pv_piston1"
+		    // This is to copy those rotational aiming movements and complete the loop without redeclaring "Pv_piston2" below "Pv_piston1" and risking it
+		  }
+		},
+    // follow code-------------------------------------------------------
+    "GameObject|Suspension_Up": {
+      // As Suspension_Up is supposed to determine the z-axis upright rotation of FollowSuspensions assigned to it, it's genrerally the safest case to leave it in the base GameObject.
+      "UnityEngine.Transform": {
+        "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "localPosition": {
+            "x": 0,
+            "y": 2,
+            "z": 0
+        },
+        "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        }
+      }
+    },
+    "GameObject|_wheel": {
+      "GameObject|m_HE_EnclosedWheel_Wheel_122": {
+        "GameObject|Pv_piston2": { //Wheel to Base
+          "GameObject|Piston_A": { // Thin on the wheel
+            "UnityEngine.Transform": {//
+              "localPosition": {//
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+              },
+              "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+              }
+            },
+            "FollowSuspension": {// (set this to point at the fixed base)
+              "m_TargetWheelTrans": "/m_HE_ArmouredWheel_122/Pv_piston1",
+              "m_TargetUpTrans": "/Suspension_Up",
+              "m_KeepOriginalRotationOffset": false,
+              "m_ScaleToMatchDistance": false
+            },
+            "GameObject|Piston_B_Bone": { //(placed this within "Piston_A" to follow the orientation of the parent GameObject [Piston_A])
+              "FollowTransform": { // FollowTransform provides the "anchor point" around which the Piston can rotate.
+                //It can also be used to fasten this GameObject's center to somewhere else on the model and keep the rotation of this GameObject's originatingParent.
+                //  to do this, just keep "m_FollowOrientation": false,
+                "m_TransformToFollow": "/m_HE_ArmouredWheel_122/Pv_piston1", //This path determines the "anchor point". Pv_piston1 can rotate around this point, but the distance stays fixed.
+                "m_FollowOrientation": false
+              },
+	            "GameObject|Piston_B": { //Actual Model is located here (adjusted)
+	              "UnityEngine.Transform": {
+	                "localEulerAngles": {
+	                  "x": 0,//Get it to aim back at the other half of the piston-
+	                  "y": 0,
+	                  "z": 0
+	                }
+	              }
+	            }
+	          }
+          }
+        }
+			}
+    },// end of follow code   
+	  "ModuleWheels": {
+		  "m_TorqueParams": {
+		   "torqueCurveMaxTorque": 50000,
+			 "torqueCurveMaxRpm": 150,
+			"passiveBrakeMaxTorque": 50000,
+			 "reverseBrakeMaxRpm": 50,
+			 "basicFrictionTorque": 100,
+			 "fullCompressFrictionTorque": 700
+		  },
+		  "Capacity": 4,
+		  "m_UseTireTracks": true,
+		  "m_WheelTrackType": 0,              
+			"m_AudioType": 0,
+		  "m_WheelParams": {
+			  "radius": 2.65,
+			  "thicknessAngular": 20,
+			  "suspensionSpring": 50000.0,
+			  "suspensionDamper": 1000.0,
+			  "maxSuspensionAcceleration": 10.0,
+			  "suspensionQuadratic": true,
+			  "suspensionTravel": 0.5,
+			  "steerAngleMax": 0.0,
+			  "steerSpeed": 0,
+			  "Instantiate|tireProperties": {
+				  "Instantiate|props": {
+					  "frictionScaleLong": 1.0,
+					  "frictionScaleLat": 1.0,
+					  "gripFactorLong": 15.0,
+					  "gripFactorLat": 5.5
+				  }
+			  }
+		  },
+		  "m_DriveTurnPower": 1.0,
+		  "m_DriveTurnBrake": 0.1,
+		  "m_DriveTurnDifferential": 0.8,
+		  "m_TurnOnSpotPower": 1.0,
+		  "m_DustMinimumRPM": 10.0
+	  }
+	}
+}
+  /*
+         // follow code-------------------------------------------------------
+        "GameObject|Pv_piston2": { // Base to wheel
+            // Using this as a followTransform bone for the relocated "Piston_B" which is now positioned within the same gameobject as "Pv_piston1"
+            // This is to copy those rotational aiming movements and complete the loop without redeclaring "Pv_piston2" below "Pv_piston1" and risking it
+          },
+          "GameObject|Suspension_Up": {
+            // As Suspension_Up is supposed to determine the z-axis upright rotation of FollowSuspensions assigned to it, it's genrerally the safest case to leave it in the base GameObject.
+            "UnityEngine.Transform": {
+              "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+              },
+              "localPosition": {
+                  "x": 0,
+                  "y": 2,
+                  "z": 0
+              },
+              "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+              }
+            }
+          },
+          "GameObject|_WheelP": {
+            "GameObject|PistonWheel": {
+              "Spinner": { //Spin animation
+                "m_Speed": 1.5,
+                "m_AutoSpin": true,
+                "m_SpinUpTime": 0.0,
+                "m_CurrentAngle": 0.0,
+                "m_CurrentAutoSpeed": 0.0,
+                "m_CurrentSpeedFraction": 0.0,
+                "m_SpinnerSound": null,
+                "m_SpinnerSoundOriginalPitch": 0.0,
+                "Speed": 0.2, // This does nothing
+                "SpeedFraction": 0.0,
+                "AtFullSpeed": false
+              },
+              "GameObject|Pv_piston1": { //Wheel to Base
+                "GameObject|Piston_A": { // Thin on the wheel
+                  "UnityEngine.Transform": {//
+                    "localPosition": {//(Remember to offset this for the chugga movement)
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                  },
+                  "FollowSuspension": {// (set this to point at the fixed base)
+                    "m_TargetWheelTrans": "/Pv_piston2",
+                    "m_TargetUpTrans": "/Suspension_Up",
+                    "m_KeepOriginalRotationOffset": false,
+                    "m_ScaleToMatchDistance": false
+                  },
+                  "GameObject|Piston_B": { //(placed this within "Piston_A" to follow the orientation of the parent GameObject [Piston_A])
+                    "UnityEngine.Transform": {
+                      "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "localEulerAngles": {
+                        "x": 180,//Get it to aim back at the other half of the piston-
+                        "y": 0,
+                        "z": 0
+                      }
+                    },
+                    "FollowTransform": { // FollowTransform provides the "anchor point" around which the EPiston Thin can rotate.
+                      //It can also be used to fasten this GameObject's center to somewhere else on the model and keep the rotation of this GameObject's originatingParent.
+                      //  to do this, just keep "m_FollowOrientation": false,
+                      "m_TransformToFollow": "/Pv_piston2", //This path determines the "anchor point". Pv_piston1 can rotate around this point, but the distance stays fixed.
+                      "m_FollowOrientation": false
+                    }
+                  }
+                }
+              }
+            }
+          }// end of follow code     
+  */
+
+  //old code
+  /*
+ 	  "GameObject|m_HE_ArmouredWheel_122": {
+		  "FollowTransform": {
+			"m_TransformToFollow": "/_wheel/m_HE_EnclosedWheel_Wheel_122",//Very center of the wheel
+			"m_FollowOrientation": false //Remain aligned with the root
+		  },
+		  "GameObject|m_m_HE_ArmouredWheel_122": {//The actual model is here, offsetting the model from the very center of the wheel
+			"UnityEngine.Transform": {
+			  "localEulerAngles": { "x":0, "y":0, "z":0},//Controls rotation relative to parent
+			  "localPosition": { "x":-0.5, "y":0, "z": 0 }, //Controls position relative to parent
+			  "localScale": { "x":1, "y":1, "z":1 }       //Controls scale relative to parent
+			}
+		  },
+		  "GameObject|BasePivotA":{
+			"GameObject|Piston_B":{},
+			  "UnityEngine.Transform": {
+				"localPosition": { "x": 0.9, "y": 0.0, "z": 4 },
+				"localEulerAngles":{ "x": 0, "y": 0, "z": 0 }
+			  }
+		  }
+		},
+	  "GameObject|_wheel": {
+		  "GameObject|m_HE_EnclosedWheel_Wheel_122": {
+				  "GameObject|Suspension_Up": {
+		  "UnityEngine.Transform": {
+			  "localEulerAngles": { "x":0, "y":0, "z":0 },
+			  "localPosition": { "x":0, "y":4, "z": 0},
+			  "localScale": { "x":1, "y":1, "z":1 }
+			}
+		   },
+		   "GameObject|BasePivotB":{ //this is the half of the piston "connected" to the elevator
+			  "GameObject|PistonPivotB":{
+				"GameObject|Piston_A":{},
+					"UnityEngine.Transform": {
+						"localPosition": { "x": 1, "y": -0.2, "z": 0.5 },
+						"localEulerAngles":{ "x": 0, "y": 0, "z": 0 }
+					} 
+				},
+				"FollowSuspension": {// (set this to point at the fixed base)
+                    "m_TargetWheelTrans": "/BasePivotA",
+                    "m_TargetUpTrans": "/Suspension_Up",
+                    "m_KeepOriginalRotationOffset": false,
+                    "m_ScaleToMatchDistance": false
+                  },
+                  "GameObject|Piston_B": { //(placed this within "Piston_B" to follow the orientation of the parent GameObject [Piston_A])
+                    "UnityEngine.Transform": {
+                      "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      },
+                      "localEulerAngles": {
+                        "x": 180,//Get it to aim back at the other half of the piston-
+                        "y": 0,
+                        "z": 0
+                      }
+                    },
+                    "FollowTransform": { // FollowTransform provides the "anchor point" around which the Piston_A Thin can rotate.
+                      //It can also be used to fasten this GameObject's center to somewhere else on the model and keep the rotation of this GameObject's originatingParent.
+                      //  to do this, just keep "m_FollowOrientation": false,
+                      "m_TransformToFollow": "/Piston_B", //This path determines the "anchor point". Piston_B can rotate around this point, but the distance stays fixed.
+                      "m_FollowOrientation": false
+                    }
+                  }
+			}
+		  }
+		}, 
+  */

@@ -1,0 +1,539 @@
+{
+  "Name": "Old Star Heavy Beam Gun",
+  "Description": "Now this is how the Old Star do. Some 'Agent' from Better Future atempted to forcefully take our salvage and failed as Heavy Iron was guarding it. With the parts he had we were able to create The Heavy Beam gun. Heavy Iron was able to make a beam gun with fire rate so grate it might as well be a laser. Its downsides are its need to cool down or it risks igniting and its volitile nature of how much energy is in it.",
+  "ID": 300180,
+
+  "Faction": 4,
+
+  "Category": 4,
+
+  "Grade": 2,
+  "Price": 13098,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 13, 32, 43, 43, 43, 43, 50,50,52, 52, 64",
+  "IconName": "OS_HA_Icon.png",        
+  "MeshName": null,                                     
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "EmissionMode": 2,
+
+  "HP": 3300,
+
+  "Mass": 15,
+
+  "DamageableType": 3,
+  // 0    = Standard
+  // 1    = Armor
+  // 2    = Rubber
+  // 3    = Volatile
+  // 4    = Shield
+  // 5    = Wood
+  // 6    = Rock
+  "Fragility": 0.0,
+  "BlockExtents": 
+  {
+    "x": 2,
+    "y": 2,
+    "z": 3
+  },
+
+  "APs": [
+    // Bottom APs
+    {
+      "x": 0.0,
+      "y": -0.5,
+      "z": 0.0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": -0.5,
+      "z": 1.0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1.0
+    },
+    {
+      "x": 0.0,
+      "y": -0.5,
+      "z": 2.0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 2.0
+    },
+    // Side APs 1
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 1.0
+    },
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 2.0
+    },
+    // Side APs 1
+    {
+      "x": 1.5,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 1.5,
+      "y": 0.0,
+      "z": 1.0
+    },
+    {
+      "x": 1.5,
+      "y": 0.0,
+      "z": 2.0
+    },
+    // Front APs
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 2.5
+    },
+    {
+      "x": 1.0,
+      "y": 0.0,
+      "z": 2.5
+    },
+    // Back APs
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "z": -0.5
+    },
+    {
+      "x": 1.0,
+      "y": 0.0,
+      "z": -0.5
+    }
+  ],
+
+  // Advanced Settings
+  "GamePrefabReference": "BF_Laser_Gatling_423",
+  "KeepReferenceRenderers": true, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Base_Block.obj",
+      "ColliderMeshName": "OS_HA_Base_Block.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Flap_1_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Flap_1_A.obj",
+      "ColliderMeshName": "OS_HA_Flap_1_A.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Flap_1_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Flap_1_B.obj",
+      "ColliderMeshName": "OS_HA_Flap_1_B.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Flap_2_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Flap_2_A.obj",
+      "ColliderMeshName": "OS_HA_Flap_2_A.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Flap_2_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Flap_2_B.obj",
+      "ColliderMeshName": "OS_HA_Flap_2_B.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Arm_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Arm_A.obj",
+      "ColliderMeshName": "OS_HA_Arm_A.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Arm_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Arm_B.obj",
+      "ColliderMeshName": "OS_HA_Arm_B.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_RotatingBase",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Gun_Base.obj",
+      "ColliderMeshName": "OS_HA_Gun_Base.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Gun",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Gun.obj",
+      "ColliderMeshName": "OS_HA_Gun.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_BF_Laser_Gatling_423_Barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HA_Barrel.obj",
+      "ColliderMeshName": "OS_HA_Barrel.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_spawnBullet",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+      }
+    },
+    {
+      "ObjectName": "_muzzleFlashAnim",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "ObjectName": "m_MuzzleFlash_01",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "ObjectName": "_muzzleFlash",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "ObjectName": "_spindle",
+      "DestroyExistingRenderer": false,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "ObjectHighlight",
+      "MeshName": "OS_HA_Barrel_Glass.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "Deserializer": {
+    "ModuleDamage": {
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion",
+      //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+      // Borrow a clean projectile explosion for this block's death
+      // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          "m_EffectRadius": 8, // Outer radius, damage is 0 to max
+          "m_EffectRadiusMaxStrength": 4, // Inner radius, damage is at max within here
+          "m_ExplosionSize": 2, // 2: Large
+          "m_MaxDamageStrength": 1000, // 
+          "m_MaxImpulseStrength": 200, // 
+          "DoDamage": true
+        },
+        "GameObject|Sparks": { // Flying sparks
+          "ParticleSystem": {
+            "startSpeed": 20.0,
+            "startSize": 5,
+            "startLifetime": 4,
+            "gravityModifier": 0.5,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionSmoke": { // Smog
+          "ParticleSystem": {
+            "startDelay": 0.1,
+            "startSpeed": 100,
+            "startSize": 200,
+            "startLifetime": 7,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionDark": { // It looks like weird biscuits
+          "ParticleSystem": {
+            "startDelay": 0.2,
+            "startSpeed": 60,
+            "startSize": 8,
+            "startLifetime": 2,
+            "gravityModifier": 0.05,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionBright": { // The glow
+          "ParticleSystem": {
+            "startSpeed": 40,
+            "startSize": 100,
+            "startLifetime": 3,
+            "gravityModifier": -0.2,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|Point light": { // The light that catches all on fire
+          "UnityEngine.Light": {
+            "intensity": 50.0,
+            "range": 64.0
+          },
+          "FadeInOutLight": {
+            "StartDelay": 0.0,
+            "FadeInSpeed": 0.5,
+            "FadeOutDelay": 0.0,
+            "FadeOutSpeed": 1
+          }
+        } // The actual glow
+      }
+    },
+
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [ -200.0, 200.0 ]
+      },
+      "GameObject|_gimbalVertical": {
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [ -35.0, 20 ]
+        },
+        "GameObject|m_BF_Laser_Gatling_423_Gun": {
+          "GameObject|_Barrel": {
+          }
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 70,
+      "m_LimitedShootAngle": 90,
+      "m_RotateSpeed": 70.0,
+      "SFXType": 70
+    },
+    "ModuleWeaponGun": {
+      "m_FireControlMode": 0,
+      "m_ShotCooldown": 0.01,
+      "m_CooldownVariancePct": 0.0,
+      "m_BurstShotCount": 60,
+      "m_BurstCooldown": 1.5,
+      "m_HasCooldownAnim": false,
+      "m_Animator": null,
+      "m_FiringData": null
+
+    },
+    "Reference|VEN_Laser_MachineGun_112/FireData.": {
+      "m_MuzzleVelocity": 150.0, // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength": 3.0, // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance": 0.05, // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      "Projectile": {
+        "m_ImpactSFXType": 2,
+        "m_FlightSFXType": 0
+      },
+      "m_CasingVelocity": 10.0,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 50.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_DamageType": 2,
+          "m_Damage": 120
+        }
+      }
+    }
+  }
+}

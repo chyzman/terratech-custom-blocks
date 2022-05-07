@@ -1,0 +1,208 @@
+{
+  "Name": "Old Star Adjustment Impeller",
+  "Description": "Now this is new to Old Star. With the creation of the 'Floater Fan', Old Star needed a way to control their techs that are now airborn. With the Adjustment Impeller they can now control the floating techs with greater ease than using the small 'Horizon' or the mighty 'Dawnstar' propellers that basicly only work effectively in one direction.",
+  "ID": 300092,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 2,
+  "Price": 10230,
+  "HP": 800,
+  "Mass": 4,
+
+  "IconName": "OS_Impeller_icon.png",
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 57, 57, 63, ",
+
+  "BlockExtents": {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  "EmissionMode": 2,
+  "APsOnlyAtBottom": true,
+
+  "MeshName": null,
+  "GamePrefabReference": "BF_Hover_Steering_212",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Hover_Steering_212",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": true,
+      "MeshName": "Impeller_Base.obj",
+      "ColliderMeshName": "Impeller_Base.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "Impeller",
+      "MeshName": "Impeller_Fan.obj",
+      "ColliderMeshName": "Impeller_Fan.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      }
+    },
+    "GameObject|boosterFront": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 1.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|FX_HoverForce": {
+
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1500.0
+      }
+    },
+    "GameObject|boosterBack": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": -0.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 180,
+          "z": 0
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|FX_HoverForce": {
+
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1500.0
+      }
+    },
+    "GameObject|boosterLeft": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 0.0,
+          "z": 0.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 90,
+          "z": 0
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|FX_HoverForce": {
+
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1500.0
+      }
+    },
+    "GameObject|boosterRight": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": -0.5,
+          "y": 0.0,
+          "z": 0.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": -90,
+          "z": 0
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|FX_HoverForce": {
+
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1500.0
+      }
+    },
+    "ModuleBooster": {
+      "m_BoosterAudioType": 5
+    },
+    "GameObject|m_BF_Hover_Steering_212": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false
+        },
+        "GameObject|Impeller": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.5,
+            "y": 0.0,
+            "z": 0.5
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "Name": "DarkLight Brudger Small Invert Slope",
+  "Description": "A version of the Two Slope that had two of them shoved together into this somewhat unique look.",
+                 //You can make multiple lines with \n
+  "ID": 2000045, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 0, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 1
+  "Price": 3175, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 900, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 3.5,
+  "CenterOfMass": {"x": 0.0, "y": 0.0, "z": 0.5},
+
+  "Fragility": 1.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "43, 43, 44, 44, 45, 45, 45,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLInvertSlope9.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": "DLSmallInsideSlope.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": "DLSmallInsideSlopeCollider.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    { "x": 0,    "y": 0,    "z": -0.5 },
+    { "x": -0.5, "y": 0,    "z": 0    },
+    { "x": 0.5,  "y": 0,    "z": 0    },
+    { "x": 0,    "y": -0.5, "z": 0    },
+    { "x": 0,    "y": 0.5,  "z": 0    },
+    { "x": 0.5,  "y": 0,    "z": 1    },
+    { "x": 0,    "y": -0.5, "z": 1    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "BF_Block_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  } //Shift the subobjects of the block prefab by x, y and z
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab by the origin
+  */
+  /*
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Scale all the subobjects of the block prefab by the origin
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+  /*
+  "SubObjects": [
+    { // This is the start of a subobject modifier item. All the parameters are here for reference
+      "SubOverrideName": "m_CORP_Block_SubObject", //This line can be omitted (or set to not a valid subobject of the prefab) to create a new gameobject child.
+      "DestroyExistingRenderer": false, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+      "DestroyExistingColliders": false,
+      "MeshName": null,
+      "MakeBoxCollider": false, //Will resize to mesh if one is present, otherwise SubScale
+      "MakeSphereCollider": false, //Just a sphere
+      "ColliderMeshName": null,
+      "Layer": null, //Leave as null to be the default Tech layer for collision. Advanced use only!
+      "Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+      "StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+      "Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+      "MeshTextureName": null,
+      "MeshMaterialName": null,
+      "SubPosition": { "x": 0, "y": 0, "z": 0 },
+      "SubScale": { "x": 1, "y": 1, "z": 1 },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": 0, // Yaw
+        "z": 0  // Roll
+      }
+    }, // You can add as many items as needed for your block
+    { // This item example only has a few of the parameters, as it does not need all of it
+      "SubOverrideName": "SubGameObject/CommonName", // For target subobjects with shared names, a number or parent subobject name can be used to target the right one. Property paths can also be used to find an object underneath a class
+      "DestroyExistingRenderer": false,
+      "MeshName": null,
+      "ColliderMeshName": null,
+      "MeshMaterialName": null,
+      "SubPosition": { "x": 0, "y": 0, "z": 0 }
+    }
+  ],
+  /**/
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+  /*
+  "Deserializer: {
+    // Complicated things go here, will be explained elsewhere. Check out other blocks or the discord for help
+  }
+  /**/
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

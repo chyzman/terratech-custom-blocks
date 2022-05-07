@@ -1,0 +1,74 @@
+{
+	"Name": "Hawkeye Windmill Pole",
+	"Description": "A pole for the windmill multistructure. Very armored and heavy.", //You can make multiple lines with \n
+	"ID": 1700100, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+"IconName": "HE Windmill2.png",
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 3780,
+	"HP": 5000,
+	"Mass": 5,
+
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "54, 54, 54, 54, 54" 	
+	
+	
+	
+	
+	
+	, // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 	
+        { "x": 0, "y": 1, "z": 0 }, 
+        { "x": 0, "y": 2, "z": 0 }, 
+        { "x": 0, "y": 3, "z": 0 }, 
+        { "x": 0, "y": 4, "z": 0 }, 
+        { "x": 0, "y": 5, "z": 0 }, 
+        { "x": 0, "y": 6, "z": 0 }, 
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       
+		{ "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": 6.5, "z": 0 },
+		 
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "GSO_Block_Half_Long_211",
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"HE Windmill Pole",
+	"DestroyExistingColliders": true,
+    "MeshName": "HE_Windmill_Pole.obj",
+	"MeshMaterialName": "HE_Main",
+	"ColliderMeshName": "HE_Windmill_Pole.obj",
+    
+	"SubPosition":{"x":0,"y":-2,"z":0},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	
+	}]
+	
+	
+	}

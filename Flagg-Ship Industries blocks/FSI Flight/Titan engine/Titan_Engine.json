@@ -1,0 +1,179 @@
+{
+	"Name": "GSO 'Titan' rocket engine",
+	"Description": "A very strong rocket engine. 8x the force of the Redux mega booster, at roughly quadruple the fuel usage. Does not have any internal fuel.", 
+	"ID": 1700043, 		
+	"IDNetHex": "5322f86dfba408ec", 
+
+	"Faction": 1,
+	"Category": 8, 
+	"Grade": 4, 
+	"Price": 43012,
+	"HP": 750,
+	"Mass": 10,
+	"Recipe": "blastcaps,blastcaps,blastcaps,fuelinjector,fuelinjector,fuelinjector,olasticbrick,olasticbrick",
+
+	"IconName": "Titan_Icon.png", 
+	"MeshName": null, 
+	"MeshMaterialName": "GSO_Main", 
+	 
+
+	"Cells": [ 
+		
+		
+		
+		
+		
+		{ "x": 1, "y": 1, "z": 0 },
+	
+		
+		
+		
+		
+		
+		{ "x": 1, "y": 0, "z": 1 },
+		
+		
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 1 },
+		
+		
+		{ "x": 1, "y": 2, "z": 1 },
+		
+		
+		
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 2 },
+		
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 2 },
+		
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 2 },
+		
+		
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 3 },
+		
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 3 },
+		
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 3 },
+		
+		
+		{ "x": 0, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 4 },
+		{ "x": 2, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 4 },
+		{ "x": 1, "y": 1, "z": 4 },
+		{ "x": 2, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 4 },
+		{ "x": 1, "y": 2, "z": 4 },
+		{ "x": 2, "y": 2, "z": 4 },
+		
+		
+		
+		
+		
+		
+		
+		
+	],
+	"APs": [ 
+		{ "x": 1, "y": -0.5, "z": 2 },
+		{ "x": 1, "y": 2.5, "z": 2 },
+		{ "x": -0.5, "y": 1, "z": 2 },
+		{ "x": 2.5, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 4.5 },
+		
+	],
+	"GamePrefabReference": "HE_JetEngine_112",
+	
+	
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset":{"x":1,"y":1,"z":3},
+	
+	
+	"SubObjects": [ {
+	  "DestroyExistingColliders":true,
+      "SubOverrideName": "Titan",
+      "MeshName": "Titan_engine.obj",
+      "MeshMaterialName": "GSO_Main",
+	  "ColliderMeshName":"Titan_engine.obj",
+      "SubPosition": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      }},{
+	  "DestroyExistingColliders":true,
+      "SubOverrideName": "m_BoosterRocketFlame_01",
+	  "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }],
+	"JSONBLOCK":
+	{"GameObject|_boostJet": 
+	 {
+	 "BoosterJet":{
+	  "m_Force":72000.0,
+	  "m_BurnRate":60.0,
+	  "m_FireRateFalloff":3,
+	  "m_ConsumesFuel":true,
+	  "BurnRate":60.0,
+	  "ConsumesFuel":true},
+	"GameObject|m_BoosterRocketFlame_01": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":2 },
+          "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 1,
+            "playbackSpeed": 8,
+            "enableEmission": true,
+            "emissionRate": 10.0,
+            "startSpeed": 0,
+            "startSize": 2.25,
+            "startRotation": 1.6,
+            "startLifetime": 1.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 3,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "time": 0.08266406,
+            "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false
+          },
+        }}},
+	
+	}
+	
+				 
+}

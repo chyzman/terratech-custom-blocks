@@ -1,0 +1,77 @@
+{
+    "Name":                 "Old Star Rotating Base Anchor",
+    "Description":          "Now this is how the Old Star do. Just like the Standard Anchor but with a twist! with a single thick anchor it can pivot on it to ensure whatever your dealing with you can take it head on.",
+    "ID": 300053,
+    "Faction": 4,
+    "Category": 7,
+    "Rarity": 0,
+    "Grade": 1,
+    "Price": 1500,
+    "Recipe" : { "54": 12, "52": 4, "53": 12, "7": 8 },
+    "EmissionMode": 2, 
+    "IconName":                   "OS_Speen_Anchor_icon.png",                           
+    "MeshName":                   null,                                                                                    
+    "MeshColliderName":           null,                                             
+    "NoBoxCollider":              false,
+
+    "HP": 600,        
+    "Mass": 8.0,
+    "DamageableType": 2,
+    "DetachFragility": 0.0,
+    "Cells": [
+        { "x":-1.0, "y": 0.0, "z": 0.0 },{ "x":-1.0, "y": 0.0, "z":-1.0 },
+        { "x": 0.0, "y": 0.0, "z": 0.0 },{ "x": 0.0, "y": 0.0, "z":-1.0 }
+    ],
+
+    "APs": [ 
+        //Top
+        { "x":-1, "y": 0.5, "z":-1 }, { "x": 0, "y": 0.5, "z":-1 },
+        { "x":-1, "y": 0.5, "z": 0 }, { "x": 0, "y": 0.5, "z": 0 },
+
+        //ring
+        { "x":-1.0, "y": 0, "z": 0.5 }, { "x": 0.0, "y": 0, "z": 0.5 },
+        { "x": -1.5, "y": 0, "z":-1.0 }, { "x": -1.5, "y": 0, "z": 0.0 },
+        { "x": 0.5, "y": 0, "z":-1.0 }, { "x": 0.5, "y": 0, "z": 0.0 },
+        { "x":-1.0, "y": 0, "z": -1.5 }, { "x": 0.0, "y": 0, "z": -1.5 }
+      ],
+
+    "PrefabReference":  "GC_Anchor_Fixed_222",         
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+  
+    
+    "SubObjects":[
+
+        {
+            "ObjectName":                 "m_GC_Anchor_Fixed_222_Base",
+            "MeshName":                   "OS_Anchor_RA.obj",
+            "MeshColliderName":           "OS_Anchor_RA.obj",
+            "MeshTextureName": "OST1.png",
+            "MeshGlossTextureName":"OST2.png",
+            "MeshEmissionTextureName":"OST3.png",
+  
+            "Position":                   { "x":-1.0, "y": 0.0, "z":-1.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_Anchor_Fixed_A",
+            "MeshName":                   "OS_Anchor_RB.obj",
+            "MeshColliderName":           "OS_Anchor_RB.obj",
+            "MeshTextureName": "OST1.png",
+            "MeshGlossTextureName":"OST2.png",
+            "MeshEmissionTextureName":"OST3.png",
+  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        }
+    ],
+
+    "Deserializer":{
+        "ModuleAnchor": {
+            "m_ForceHorizontal": true,
+            "m_MaxAngularVelocity":         35.5,
+            "m_MaxTorque":                  7000.0,
+            "m_BrakeTorque":                1000.0,
+            "m_IsSkyAnchor": false                        
+        }    
+    }
+}

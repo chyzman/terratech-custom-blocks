@@ -1,0 +1,55 @@
+{
+	"Name": "SiegeCorps Hover Cube",
+	"Description": "Created in ages past, this proves that even the ancients wanted to avoid water via unorthodox means. It is incredibly heavy, but is more than capable of lifting several thousands times its own weight.", //You can make multiple lines with \n
+	"ID": 5000508, //A random ID that must be unique		
+
+	"Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 4, //The grade minus one
+	"Price": 106677,
+	"HP": 6000,
+	"Mass": 30,
+	"IconName":"mod-thumbnail.png",
+
+	"MeshName": "hoverscaled.obj", //Name of mesh, such as "mesh.obj"
+	  "MeshTextureName": "hovertexture.png", 
+  "MeshGlossTextureName": "Black.png", 
+  "MeshEmissionTextureName": "Black.png",
+	"Recipe":  "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 65, 65, 65, 65, 65, 65, " 	, // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": 0, "y": -0.5, "z": 0 }, 					
+		{ "x": 0, "y": 0.5, "z": 0 }, 					
+        { "x": -0.5, "y": 0, "z": 0 }, 					
+		{ "x": 0.5, "y": 0, "z": 0 }, 					
+        { "x": 0, "y": 0, "z": -0.5 }, 					
+		{ "x": 0, "y": 0, "z": 0.5 } 					
+    ],
+	"GamePrefabReference": "GSO_HoverJet_111",
+	"ReferenceOffset": { "x": 0, "y": -0.5, "z": 0 },
+	
+	"KeepRenderers": false,
+
+	"JSONBLOCK": {
+		"GameObject|CentreOfMass": {
+			"UnityEngine.Transform": { 
+				"localPosition": { "x":0, "y":0.7, "z":0 } 
+			}
+		},
+		"GameObject|m_GSO_Hover_111_Jet": {
+			"GameObject|_hoverJet": {
+				"HoverJet": {
+					"forceMax": 100000.0,
+					"forceRangeMax": 20.0,
+					"m_DampingScale": 0.005,
+					"m_MaxClimbDistance": 20
+				}
+			}
+		}
+	}
+}

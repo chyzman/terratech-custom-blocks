@@ -1,0 +1,160 @@
+{
+  "Name": "GreenTech Mobile Delivery Cannon",
+  "Description": "This delivery cannon encourages prospectors to be more efficient and refine all their resources before selling, as it does not sell raw resources. It only sells refined resources and components.",
+  "ID": 911222,
+
+  "Faction": 0,
+  "Category": 7, 
+  "Grade": 4,
+  "Price": 13137, 
+  "HP": 2500,
+  "Mass": 2.5,
+  "CenterOfMass": {"x": 0, "y": 0, "z": -0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "44, 45, 51, 52, 52, 55, 55, 62",  
+  "IconName": "GT_Delivery_Cannon_Icon.png", 
+  
+  "Cells":[
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": -1},
+    {"x": 0,"y": 1,"z": 0},
+    {"x": 0,"y": 1,"z": -1}
+  ],
+  
+  "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 0.5},
+
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": -1} 
+    ],
+  
+  "GamePrefabReference": "GSO_DeliCannon_221", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, 
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_DeliveryCannon_112_Base",
+      "MeshName": "GT_Delivery_Cannon_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "MeshName": "GT_Delivery_Cannon_Tubes.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_GSO_DeliveryCannon_112_Barrel_A",
+      "MeshName": "GT_Delivery_Cannon_A.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_GSO_DeliveryCannon_112_Barrel_B",
+      "MeshName": "GT_Delivery_Cannon_B.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "MakeBoxCollider": true
+    },
+    {
+      "SubOverrideName": "m_GSO_DeliveryCannon_112_Barrel_C",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.05, "z": 0.15 },
+      "SubScale": { "x": 1, "y": 0.9, "z": 0.7 },
+      "layer": 8
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.05, "z": -0.85 },
+      "SubScale": { "x": 1, "y": 0.9, "z": 1.3 },
+      "layer": 8
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0.7, "z": -0.9 },
+      "SubScale": { "x": 1, "y": 0.6, "z": 1 },
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "m_GSO_Anchor",
+      "DestroyExistingRenderer": true
+    }
+  ],
+
+ "JSONBLOCK": {
+  "GameObject|_anchor": null,
+  "ModuleAnchor": null,
+  "ModuleItemConsume": {
+    "m_NeedsToBeAnchored": false
+  },
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.3,
+    "m_HeightIncrementScale": 0.3,
+    "m_BeamStrength": 300
+  },
+  "ModuleItemHolder": {
+  },
+ "ModuleRecipeProvider": {
+   "m_RecipeListNames": [
+    {
+      "name": "gsodelicannon",
+      "inverted": false
+    }
+   /* {
+        "name": "gsoDelivery_Cannon",
+        "inverted": false
+      }
+       {
+        "name": "hegeneratorstatic",
+        "inverted": false
+      }
+      {
+        "name": "hegeneratorstatic",
+        "inverted": false
+      }
+      {
+        "name": "rawresources",
+        "inverted": false
+      },
+      {
+        "name": "gsodelicannon",
+        "inverted": false
+      },
+      {
+        "name": "extra_for_purchases",
+        "inverted": false
+      }
+      */
+    ]
+  }
+  }			
+}

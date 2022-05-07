@@ -1,0 +1,253 @@
+{
+	"Name": "Basilisk",
+	"Description": "Powerful Laser that has a high risk due to its laser taking time to turn off, make sure it doesnt fall off befor the laser turns off", //You can make multiple lines with \n
+	"ID": 620011, //A random ID that must be unique
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 2500000,
+	"HP": 3500,
+	"Mass": 250.0,
+
+	"IconName": "basilisk.png", //Name of image, such as "icon.png"
+
+	
+	"MeshName": "BasiliskBeam.obj",
+	"ColliderMeshName": "BasiliskBeam.obj",	
+	"SupressBoxColliderFallback": true,
+
+	"MeshTextureName": "Ellydium 1purp.png", 
+    "MeshGlossTextureName": "Ellydium 2.png", 
+    "MeshEmissionTextureName": "Ellydium 3.png",
+	
+	"Cells": [ //The grid space to be occupied
+		{"x": 0,"y": 0,"z": 0},
+		{"x": 1,"y": 0,"z": 0},
+		{"x": 0,"y": 0,"z": 1},
+		{"x": 1,"y": 0,"z": 1},
+		{"x": 0,"y": 1,"z": 0},
+		{"x": 1,"y": 1,"z": 0},
+		{"x": 0,"y": 1,"z": 1},
+		{"x": 1,"y": 1,"z": 1},
+		{"x": 0,"y": 1,"z": 2},
+		{"x": 1,"y": 1,"z": 2},
+		{"x": 0,"y": 1,"z": 3},
+		{"x": 1,"y": 1,"z": 3},
+		{"x": 1,"y": 1,"z": 5},
+		{"x": 0,"y": 1,"z": 5},
+		{"x": 3,"y": 1,"z": 5},
+		{"x": 2,"y": 1,"z": 5},
+		{"x": 3,"y": 1,"z": 4},
+		{"x": 2,"y": 1,"z": 4},
+		{"x": 3,"y": 1,"z": 3},
+		{"x": 2,"y": 1,"z": 3},
+		{"x": 3,"y": 1,"z": 2},
+		{"x": 2,"y": 1,"z": 2},
+		{"x": 3,"y": 1,"z": 1},
+		{"x": 2,"y": 1,"z": 1},
+		{"x": 3,"y": 1,"z": 0},
+		{"x": 2,"y": 1,"z": 0},
+		{"x": 3,"y": 1,"z": -1},
+		{"x": 2,"y": 1,"z": -1},
+		{"x": 3,"y": 1,"z": -2},
+		{"x": 2,"y": 1,"z": -2},
+		{"x": 3,"y": 1,"z": -3},
+		{"x": 2,"y": 1,"z": -3},
+		{"x": 3,"y": 1,"z": -4},
+		{"x": 2,"y": 1,"z": -4},
+		{"x": 1,"y": 1,"z": -1},
+		{"x": 0,"y": 1,"z": -1},
+		{"x": 1,"y": 1,"z": -2},
+		{"x": 0,"y": 1,"z": -2},
+		{"x": 1,"y": 1,"z": -3},
+		{"x": 0,"y": 1,"z": -3},
+		{"x": 1,"y": 1,"z": -4},
+		{"x": 0,"y": 1,"z": -4},
+		{"x": -1,"y": 1,"z": -1},
+		{"x": -2,"y": 1,"z": -1},
+		{"x": -1,"y": 1,"z": -2},
+		{"x": -2,"y": 1,"z": -2},
+		{"x": -1,"y": 1,"z": -3},
+		{"x": -2,"y": 1,"z": -3},
+		{"x": -1,"y": 1,"z": -4},
+		{"x": -2,"y": 1,"z": -4},
+		{"x": -2,"y": 1,"z": 5},
+		{"x": -1,"y": 1,"z": 5},
+		{"x": -2,"y": 1,"z": 4},
+		{"x": -1,"y": 1,"z": 4},
+		{"x": -2,"y": 1,"z": 3},
+		{"x": -1,"y": 1,"z": 3},
+		{"x": -2,"y": 1,"z": 2},
+		{"x": -1,"y": 1,"z": 2},
+		{"x": -2,"y": 1,"z": 1},
+		{"x": -1,"y": 1,"z": 1},
+		{"x": -2,"y": 1,"z": 0},
+		{"x": -1,"y": 1,"z": 0},
+		{"x": 1,"y": 1,"z": 4},
+		{"x": 0,"y": 1,"z": 4},
+	],
+	"APs": [ //The location of APs on the block. For use with "Cells"
+		{"x": 0,"y": 0,"z": -0.5},
+		{"x": 1,"y": 0,"z": -0.5},
+		{"x": 0,"y": -0.5,"z": 0},
+		{"x": 1,"y": -0.5,"z": 0},
+		{"x": 0,"y": -0.5,"z": 1},
+		{"x": 1,"y": -0.5,"z": 1},
+		{"x": -0.5,"y": 0,"z": 0},
+		{"x": -0.5,"y": 0,"z": 1},
+		{"x": 1.5,"y": 0,"z": 0},
+		{"x": 1.5,"y": 0,"z": 1},
+	],
+	"GamePrefabReference": "BF_Laser_Turret_313", //Use a block prefab from the Game's resources as a base. For example, "GSOBlock(111)"
+	"KeepReferenceRenderers": true,
+	"ReferenceOffset": {
+		"x": -0.5,
+		"y": 1,
+		"z": 2.6
+	}, //Shift the subobjects of the block prefab by x, y and z
+
+	"SubObjects": [
+		{
+			"SubOverrideName": "m_BF_Laser_Turret_313",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+			"SubPosition": {"x": 0,"y": 0,"z": 0},
+		},
+		{
+			"SubPosition": {"x": 0.0,"y": 0.5,"z": -0.4},
+			"SubScale": {"x": 2,"y": 2,"z": 0.2},
+			"MakeBoxCollider": true
+		},
+		{
+			"SubOverrideName": "_gimbalBase",
+			"SubPosition": { "x": 0.5, "y": 0.6, "z": 1.2 }
+		}, {
+			"SubOverrideName": "_gimbalElev",
+			"SubPosition": { "x": 0, "y": 0, "z": 1.2 }
+		}, {
+			"SubOverrideName": "_barrel",
+			"SubPosition": { "x": 0, "y": 0.45, "z": 2.2 }
+		}, {
+			"SubOverrideName": "_beam",
+			"SubPosition": { "x": 0, "y": 0, "z": 1.5 }
+		}, {
+			"SubOverrideName": "_barrel_copy",
+			"SubPosition": { "x": 0, "y": 0.45, "z": 2.7 },
+			"SubRotation": { "x": 0, "y": 0, "z": 0 }
+		}, {
+			"SubOverrideName": "_barrel_copy/_beam",
+			"SubPosition": { "x": 0, "y": 0, "z": 0 },
+			"SubRotation": { "x": 0, "y": 0, "z": 0 }
+		},
+		{ 
+        "SubOverrideName":          "m_BF_MotionEngine_Linear_112_SpinningPart", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Basiliskspin.obj",
+        "MeshTextureName": "Ellydium 1purp.png", 
+		"MeshGlossTextureName": "Ellydium 2.png", 
+		"MeshEmissionTextureName": "Ellydium 3.png",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0}
+      }
+	],
+  	"JSONBLOCK": {
+   		"ModuleWeapon": {
+   			"m_FireSFXType": 32
+   		},
+		"Reference|BF_MotionEngine_Linear_112/_Spindle":{
+					"UnityEngine.Transform": {
+					"localPosition": { "x": 0.5, "y": 1, "z": -1.45 },
+					"localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+					},
+					"Spinner": {
+					"m_Speed": 0.5,   
+					}
+				},
+   		"ModuleWeaponGun": {
+   			"m_DeploySFXType": 32
+   		},
+   		"GameObject|_gimbalBase": {
+		"GimbalAimer": { //Useful component - Horizontal Aiming
+          "rotationLimits": [-20, 20] //[-Left,+Right](Degrees)
+        },
+   			"GameObject|_gimbalElev": {
+			"GimbalAimer": { //Useful component - Vertical Aiming
+              "rotationLimits": [-5, 5] //[-Up,+Down](Degrees)
+            },
+   				"GameObject|_barrelStationary": {},
+   				"GameObject|_barrel": {
+   					"GameObject|_muzzleFlash": {
+   						"GameObject|_light": {
+   							"UnityEngine.Light": {
+              					"shadows": 1,
+   								"spotAngle": 93.1,
+						  		"color": { "r": 0.5, "g": 0.1, "b": 0.5, "a": 0.8 },
+						  		"range": 5.0,
+								"intensity": 6.0
+							}
+						}
+					},
+					"GameObject|_beam": {
+						"BeamWeapon": {
+						  	"m_Range": 456.0,
+						  	"m_DamagePerSecond": 4500,
+						  	"m_DamageType": 7, //7 is plasma
+							"m_FadeOutTime": 2.49,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 0.5, "g": 0.1, "b": 0.5, "a": 0.8 },
+									"startSize": 2,
+									"shape": {
+										"scale": { "x": 1, "y": 1, "z": 1 },
+										"rotation": { "x": 0, "y": 180, "z": 0 }
+									}
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0.5,
+							"endWidth": 0.5,
+							"textureMode": 1,
+							"numCapVertices": 8,
+							"material": {
+								"mainTexture": "BasiliskBeam.png"
+							}
+						}
+					},
+				},
+				"Duplicate|_barrel": {
+					"GameObject|_muzzleFlash": {
+					  	"GameObject|_light": {
+							"UnityEngine.Light": {
+								"shadows": 0,
+						  		"color": { "r": 0.5, "g": 0.1, "b": 0.5, "a": 0.0 },
+						  		"range": 5.0,
+								"intensity": 6.0
+							}
+						}
+					},
+					"GameObject|_beam": {
+						"BeamWeapon": {
+							"m_DamageType": 7,
+							"m_FadeOutTime": 1.7,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.2, "b": 1.0, "a": 0.8 },
+									"startSize": 0.5
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0.5,
+							"endWidth": 0.5
+						}
+					}
+			}
+		}
+	}
+}
+}

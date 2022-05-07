@@ -1,0 +1,283 @@
+{
+  "Name": "Old Star Heavy Iron Hydro Jet",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! The Hydro Jet is one of the main methods of how Heavy Iron clears out the ore in quarries while also keeping the dust down. It also is a great way for hosing down those pesky thieves and raiders who are trying to take our hard work from us. Without the fancy 'auto-aim' everyone else has in their cab, Old Star can keep the water jets facing where the rocks are and not worry about it pointing where they don't need it",
+  "ID": 300103,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 28407,
+  "EmissionMode": 2,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 53, 53, 54, 54, 56, 56, 60, 63, 63, ",
+
+  "IconName": "Hydro_Jet_icon.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "HP": 6300,
+  "Mass": 21,
+  "DamageableType": 1,
+  "Fragility": 0.0,
+  "BlockExtents": {
+    "x": 6,
+    "y": 3,
+    "z": 6
+  },
+
+  "APs": [
+    // Bottom APs
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 2.0
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 3.0
+    },
+    {
+      "x": 3,
+      "y": -0.5,
+      "z": 2.0
+    },
+    {
+      "x": 3,
+      "y": -0.5,
+      "z": 3.0
+    }
+  ],
+  // Advanced Settings
+  "GamePrefabReference": "VEN_FlameThrower_121",
+  "KeepReferenceRenderers": false, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    //Base Block
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HI_Waterjet_Base.obj",
+      "ColliderMeshName": "OS_HI_Waterjet_Base.obj",
+      "SubPosition": {
+        "x": 2.0,
+        "y": 0.0,
+        "z": 2.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    //Base Gimball
+    {
+      "SubOverrideName": "_gimbalHorizontal",
+      "SubPosition": {
+        "x": 2.5,
+        "y": 0,
+        "z": 2.5
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    //Horizontal Model
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HI_Waterjet_Horizontal.obj",
+      "ColliderMeshName": "OS_HI_Waterjet_Horizontal.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    //Elevation Gimbal
+    {
+      "SubOverrideName": "_gimbalVertical",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    //Vertical Model
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_HI_Waterjet_Vertical.obj",
+      "ColliderMeshName": "OS_HI_Waterjet_Vertical.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0.7,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    //FxFlameThrower
+    {
+      "SubOverrideName": "FXFlameThrower",
+      "MeshMaterialName": "MAT_BF_LaserBeam",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 2.35
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_gimbalHorizontal": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [ -180.0, 180.0 ]
+      },
+      "GameObject|_gimbalVertical": {
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [ -10.0, 20.0 ]
+        }
+      }
+    },
+
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_FireSFXType": 26,
+      "m_RotateSpeed": 100.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 1.0,
+      "<FireControl>k__BackingField": false,
+      "<AimControl>k__BackingField": 0,
+      "<DisableTargetAimer>k__BackingField": false,
+      "OnAudioTickUpdate": null,
+      "m_TargetAimer": null,
+      "m_WeaponComponent": null,
+      "m_DontFireIfNotAimingAtTarget": false,
+      "m_TargetAimDirectionLocal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "m_TargetPosition": {
+        "x": 0.0,
+        "y": -9.0,
+        "z": 0.0
+      }
+    },
+    "ModuleWeaponFlamethrower": {
+      "m_FirePos": "/_gimbalHorizontal/_gimbalVertical/FirePoint",
+      "m_MaxFlameLength": 18.0,
+      "m_DPS": 1000.0,
+      "m_DamageType": 7,
+      "m_ExtendTime": 0.25,
+      "m_RetractTime": 0.5,
+      "m_TipLightVariance": 0,
+      "m_TipLightIntensity": 0,
+      "m_JetLightVariance": 0,
+      "m_JetLightIntensity": 0,
+      "m_Particles": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": false,
+        "playbackSpeed": 4.0,
+        "enableEmission": true,
+        "emissionRate": 100.0,
+        "startSpeed": 12.0,
+        "startSize": 1,
+        "startLifetime": 0.7,
+        "gravityModifier": 0.07,
+        "maxParticles": 2000,
+        "scalingMode": 0,
+        "time": 0.0,
+        "randomSeed": 0,
+        "useAutoRandomSeed": false,
+        "startColor": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 1.0,
+          "a": 0.15
+        },
+        "trails": {
+          "enabled": true
+        }
+      }
+    },
+
+    "m_TipLight": {
+      "intensity": 0,
+      "range": 0
+    },
+    "m_JetLight": {
+      "intensity": 0,
+      "range": 0
+    }
+
+  }
+}

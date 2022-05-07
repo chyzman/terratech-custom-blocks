@@ -1,0 +1,201 @@
+{
+  "Name": "GreenTech Jumbo Fuselage four",
+  "Description": "Prefabricated fuselage section using lightweight materials and durable armouring. Recommended for assembling tube shaped structures such as the body of planes, cargo containers, towers, modular walls, or even the hull of a vehicle.",
+  "ID": 911250, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4,
+  "Price": 6450,
+  "HP": 6000, 
+  "Mass": 10,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe": "32, 32, 32, 32, 32, 32, 52, 52, 52, 52, 52, 52, 52, 52, 54, 54, 54, 54, 54",  
+  "IconName": "GT_Jumbo_Fuselage_4_Icon.png", 
+  "MeshName": "GT_Jumbo_Fuselage_4.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+    [
+      "xxxx",
+      "x  x",
+      "x  x",
+      "x  x"
+    ],
+    [
+      "xxxx",
+      "x  x",
+      "x  x",
+      "x  x"
+    ]
+  ], 
+  "APs": [
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 1},
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 2.5, "y": 0, "z": 1},
+
+    {"x": 1, "y": 3.5, "z": 0},
+    {"x": 2, "y": 3.5, "z": 0},
+    {"x": 1, "y": 3.5, "z": 1},
+    {"x": 2, "y": 3.5, "z": 1},
+
+    {"x": 1, "y": 2.5, "z": 0},
+    {"x": 2, "y": 2.5, "z": 0},
+    {"x": 1, "y": 2.5, "z": 1},
+    {"x": 2, "y": 2.5, "z": 1},
+
+    {"x": -0.5, "y": 1, "z": 0},
+    {"x": -0.5, "y": 2, "z": 0},
+    {"x": -0.5, "y": 1, "z": 1},
+    {"x": -0.5, "y": 2, "z": 1},
+    {"x": 3.5, "y": 1, "z": 0},
+    {"x": 3.5, "y": 2, "z": 0},
+    {"x": 3.5, "y": 1, "z": 1},
+    {"x": 3.5, "y": 2, "z": 1},
+
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 3, "y": 0, "z": -0.5},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 3, "y": 1, "z": -0.5},
+    {"x": 0, "y": 2, "z": -0.5},
+    {"x": 3, "y": 2, "z": -0.5},
+    {"x": 0, "y": 3, "z": -0.5},
+    {"x": 1, "y": 3, "z": -0.5},
+    {"x": 2, "y": 3, "z": -0.5},
+    {"x": 3, "y": 3, "z": -0.5},
+
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 3, "y": 0, "z": 1.5},
+    {"x": 0, "y": 1, "z": 1.5},
+    {"x": 3, "y": 1, "z": 1.5},
+    {"x": 0, "y": 2, "z": 1.5},
+    {"x": 3, "y": 2, "z": 1.5},
+    {"x": 0, "y": 3, "z": 1.5},
+    {"x": 1, "y": 3, "z": 1.5},
+    {"x": 2, "y": 3, "z": 1.5},
+    {"x": 3, "y": 3, "z": 1.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Jumbo_Fuselage_2_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Jumbo_Fuselage_2_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Jumbo_Fuselage_2_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    } */
+    {
+      "SubOverrideName": "Collider_1",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_2",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_4",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_5",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_6",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_7",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "Collider_8",
+      "layer": 8
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|Collider_1": {
+      "UnityEngine.BoxCollider": {
+        "center": { "x": -0.1, "y": 1.5, "z": 0.5 },
+        "size": { "x": 0.8, "y": 2, "z": 2}
+      }
+    },
+    "GameObject|Collider_2": {
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 3.1, "y": 1.5, "z": 0.5 },
+        "size": { "x": 0.8, "y": 2, "z": 2}
+      }
+    },
+    "GameObject|Collider_4": {
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 1.5, "y": 3, "z": 0.5 },
+        "size": { "x": 2, "y": 1, "z": 2}
+      }
+    },
+    "GameObject|Collider_5": {
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 0.1,
+          "y": 2.9,
+          "z": 0.5
+        },
+        "radius": 0.55,
+        "height": 2,
+        "direction": 2
+      }
+    },
+    "GameObject|Collider_6": {
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 2.9,
+          "y": 0.1,
+          "z": 0.5
+        },
+        "radius": 0.55,
+        "height": 2,
+        "direction": 2
+      }
+    },
+    "GameObject|Collider_7": {
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.5
+        },
+        "radius": 0.55,
+        "height": 2,
+        "direction": 2
+      }
+    },
+    "GameObject|Collider_8": {
+      "UnityEngine.CapsuleCollider": {
+        "center": {
+          "x": 2.9,
+          "y": 2.9,
+          "z": 0.5
+        },
+        "radius": 0.55,
+        "height": 2,
+        "direction": 2
+      }
+    }
+  }
+}

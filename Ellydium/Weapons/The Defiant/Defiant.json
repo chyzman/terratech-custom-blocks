@@ -1,0 +1,1019 @@
+{
+  "Name": "The Defiant Cannon",
+  "Description": "The Defiant cannon was pulled right off the latest model dreadnaughts so its big its mean and its not green", //You can make multiple lines with \n
+  "ID": 620014,
+
+  "Faction": 5,	
+  "Category": 4,
+  "Grade": 3,
+  "Price": 5300000,
+  "HP": 40650,
+  "Mass": 4314,
+
+  "IconName": "Defiant_Cannon.png",
+  "MeshName": null,
+
+  "CenterOfMass": {"x": 7, "y": 0.5, "z": 10},
+
+  "MeshTextureName": null,
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                            // Any character placement that is not a space will be filled as a cell
+        [ // Z Layer 0
+			"				",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 1
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "              ",
+            "              "
+        ],
+		[ // Z Layer 2
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "              ",
+            "              "
+        ],
+		[ // Z Layer 3
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "              ",
+            "              "
+        ],
+		[ // Z Layer 4
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "              ",
+            "              "
+        ],
+		[ // Z Layer 5
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "              ",
+            "              "
+        ],
+		[ // Z Layer 6
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 7
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 8
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 9
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 10
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 11
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 12
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "     xxxxxx    ",
+            "     xxxxxx    "
+        ],
+		[ // Z Layer 13
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 14
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 15
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 16
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 17
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 18
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 19
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 20
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 21
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 22
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 23
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 24
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 25
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 26
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 27
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 28
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 29
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 30
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 31
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 32
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 33
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 34
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 35
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 36
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 37
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 38
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 39
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 40
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],
+		[ // Z Layer 41
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxx",
+            "               ",
+            "               "
+        ],	
+    ],
+
+  "APs": [	
+    {
+      "x": 7,
+      "y": -0.5,
+      "z": 10
+    },
+    {
+      "x": 6,
+      "y": -0.5,
+      "z": 10
+    },
+    {
+      "x": 8,
+      "y": -0.5,
+      "z": 10
+    },
+    {
+      "x": 7,
+      "y": -0.5,
+      "z": 11
+    },
+	{
+      "x": 7,
+      "y": -0.5,
+      "z": 9
+    },
+	{
+      "x": 6,
+      "y": -0.5,
+      "z": 9
+    },
+    {
+      "x": 8,
+      "y": -0.5,
+      "z": 9
+    }
+  ],
+
+  "GamePrefabReference": "VEN_Cannon_Rapid_313", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 6,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel_L/_recoiler/m_VEN_CannonRapid_313_Barrel_L",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Defiant_fooledmodel.obj",
+      "MeshTextureName": "Ellydium 1purp.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_barrel_R/_recoiler/m_VEN_CannonRapid_313_Barrel_R",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Defiant_fooledmodel.obj",
+      "MeshTextureName": "Ellydium 1purp.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Defiant_Base.obj",
+	  "ColliderMeshName": "Defiant_Base.obj",
+      "MeshTextureName": "Ellydium 1purp.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 7,
+        "y": -0.5,
+        "z": 10
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Defiant_RotatingPart.obj",
+      "MeshTextureName": "Ellydium 1purp.png",
+      "MeshGlossTextureName": "Ellydium 2.png",
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_CannonRapid_313_Body",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "Defiant_Elevationremake.obj",
+		"ColliderMeshName": "Defiant_Elevationremake.obj",
+      "MeshTextureName": "Ellydium 1purp.png",
+      "MeshGlossTextureName": "Ellydium 2.png",
+      "MeshEmissionTextureName": "Ellydium 3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+	{
+	"SubOverrideName":          "m_BF_MotionEngine_Linear_112_SpinningPart", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "Defiant_spinny.obj",
+        "MeshTextureName":			"Ellydium 1purp.png", 
+		"MeshGlossTextureName":		"Ellydium 2.png", 
+		"MeshEmissionTextureName": 	"Ellydium 3.png",
+        "ColliderMeshName":         "Defiant_spinny.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 90, "y": 90, "z": 90}
+      }
+  ],
+
+  "JSONBLOCK": { 
+    "GameObject|_gimbalBase": { 
+      "UnityEngine.Transform": { 
+        "localPosition": { "x": 7, "y": -0.25, "z": 10 }
+      },
+      "GimbalAimer": {
+		   "rotationLimits": [-90, 90] 
+	    }, 
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 0.9, "z": 0 }
+        },
+        "GimbalAimer": { 
+          "rotationLimits": [-10, 10] 
+        },
+		"Reference|BF_MotionEngine_Linear_112/_Spindle":{
+					"UnityEngine.Transform": {
+					"localPosition": { "x": 0, "y": 2.99, "z": 7.5 },
+					"localEulerAngles": { "x": 90, "y": 0, "z": 90 }
+					},
+					"Spinner": {
+					"m_Speed": 0.5,   
+					}
+				},
+				
+			"GameObject|energyGaugeParticles": {
+            "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+                "GameObject|Light_Point": null,
+                "ParticleSystem": {
+                    "startSize": 1.5,
+                    "startSpeed": 2,
+                    "startLifetime": 0.5,
+                    "startColor":{ "r": 0.1, "g": 1.0, "b": 0.1, "a": 1.0 },
+
+                    "shape": {
+                      "shapeType": 5,
+                      "randomDirectionAmount": 1000,
+                      "alignToDirection": true,
+                      "meshRenderer": null,
+                      "normalOffset": 0,
+                      "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "scale": { "x": 3, "y": 3, "z": 30 }
+                    },
+                    "emission": {
+                      "rateOverTimeMultiplier": 1000.0
+                    }
+                },
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 7, "y": 3.8, "z": 30	 },
+                    "localScale": { "x": 0.5, "y": 0.5, "z": 0.5},
+                    "localEulerAngles": { "x": 0, "y": 0, "z": 0}
+                }
+            },
+        },
+		
+
+        "GameObject|_barrel_L": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": 0, "y": 2.8, "z": 28 }
+          },
+		  "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.001, "y":0.001, "z":0.001 }, //Animation rescaling
+              "localPosition": { "x":0, "y":-1000, "z":-0.25 }
+            },
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+			  "localScale": { "x":0.1, "y":0.1, "z":0.1	 },			
+              "localPosition": { "x": -0.15, "y": 0.4 , "z": 6.5 }
+            }
+			
+          }
+        },
+
+        "GameObject|_barrel_R": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": 0, "y": 2.8, "z": 28 }
+          },
+		  "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.001, "y":0.001, "z":0.001 }, //Animation rescaling
+              "localPosition": { "x":0, "y":-1000, "z":-0.25 }
+            },
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": { 
+			"localScale": { "x":0.1, "y":0.1, "z":0.1 },
+              "localPosition": { "x": -0.15, "y": 0.4, "z": 6.5 }
+            }
+          }
+        }
+      }
+      
+    }, 
+    "ModuleWeapon": { 
+      "m_FireSFXType": " IntroCabImpact", 
+      "m_RotateSpeed" : 10
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 30,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 500, 
+      "m_BulletSprayVariance": 0.0,
+      "m_KickbackStrength": 450000,
+	  
+      "Instantiate|m_BulletPrefab": { 
+        "WeaponRound": { 
+          "m_Damage": 800000
+        },
+		  "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "radius": 2.2,
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "height": 1,
+          "direction": 2
+        },
+		 "Reference|GC_Battery_424.ModuleDamage.deathExplosion/FX_Lightning": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":2, "y":2, "z":2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.45,
+                  "g": 0.55,
+                  "b": 1.0,
+                  "a": 0.915
+                },
+                "startSize": 2.5,
+                // "endSize": 15.0,
+                "startSpeed": 5.5, //How far you want the particles to spread
+                "emissionRate": 10.0,
+                "maxParticles": 100,
+                "emission": {
+                  "burstCount": 1,
+                  "rateMultiplier": 20.0,
+                  "rateOverTimeMultiplier": 40,
+                  "burst": {
+                    "count": 20,
+                    //"cycleCount": 1,
+                    "maxCount": 20,
+                    "minCount": 10,
+                    // "probability": 150,
+                    // "repeatInterval": 150,
+                    //"time": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+
+		"UnityEngine.TrailRenderer": { //Paint them trails
+          //"transform.Translate": { "x":0, "y":0, "z":0 }, //Laser Projectile Position
+          "material": {
+            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          //  "mainTexture": "SmokeTrailBullet",
+            // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+            "shaderKeywords": [
+              "_ALBEDO",
+              "_EMISSION",
+              "_NORMALMAP"
+            ],
+            "mainTextureOffset": {"x":1, "y":1},
+            "mainTextureScale": {"x":1, "y":1},
+            "globalIlluminationFlags": 1
+          },
+          "receiveShadows": false,
+          "shadowCastingMode": "Off",
+          "rendererPriority": 1,
+          "realtimeLightmapIndex": -1,
+          "generateLightingData": false,
+          "time": 0.25	,
+          "startWidth": 2,
+          "endWidth": 1,
+          "widthMultiplier": 1, //Uniform Width Multiplier
+          "autodestruct": false, // Having this true crashes the game
+          "emitting": true, //0.2
+          "numCornerVertices": 4,
+          "numCapVertices": 8,
+          "minVertexDistance": 0.25,
+          "startColor": {
+            "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 0.925,
+            "maxColorComponent": 1.0
+          },
+          "endColor": {
+            "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 0.925,
+            "maxColorComponent": 1.0
+          },
+          "positionCount": 1,
+          "shadowBias": 0.0,
+          "generateLightingData": false,
+          "textureMode": 0,
+          "alignment": 0,
+        },
+		"Rigidbody":{
+                        "useGravity": false
+                    },					
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.85, "y": 0.85, "z": 1 }
+        },
+        "Projectile": {
+          "m_ImpactSFXType" : "Cannon",
+		  "m_FlightSFXType" : "DeliveryBomb",
+          "UnityEngine.TrailRenderer": {
+            "widthMultiplier": 0.0,
+          },
+		  "Instantiate|m_BulletPrefab": {
+                "UnityEngine.MeshFilter": {
+                    "sharedMesh": "Defiantcrystlal.obj"
+                }
+				},
+		  "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": {
+                            "m_EffectRadius": 100,              
+                            "m_EffectRadiusMaxStrength": 90,   
+                            "m_ExplosionSize": 2,               
+                            "m_MaxDamageStrength": 1000000,  
+                            "m_MaxImpulseStrength": 200     
+                        },
+			"Reference|8/ModuleDamage.deathExplosion/FX_Explosion_Shockwave": { 
+                            "UnityEngine.Transform": 
+							{ "localPosition": {"x":0, "y":1, "z":0}
+							}, 
+                            "UnityEngine.ParticleSystem": {
+				"main":{	 "m_ParticleSystem":{		
+                                "startDelay": 0,
+								"startColor": {
+							 	 "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+								 "a": 1.0
+								},
+                               "playbackSpeed": 2,							
+                                "startSize": 500,      
+                                "startLifetime": 2 
+                            }}}
+                        },
+                        "GameObject|Point light": {     
+                            "UnityEngine.Light": {
+                                "intensity": 50.0,
+                                "range": 50.0,
+								"color": {
+					"r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+					"a": 1.0
+                }
+                            },
+                            "FadeInOutLight": {
+                                "StartDelay": 0.0,
+                                "FadeInSpeed": 1,
+                                "FadeOutDelay": 0.0,
+                                "FadeOutSpeed": 1
+                            }
+                        }, // The actual glow
+			
+            
+              
+          "GameObject|Sparks": { 
+              "Explosion": { //wOW a component -BONUS for more SOUND, plus friendly fire!
+                "m_DamageType" : "Plasma", //What damage modifier the explosion does
+                "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+                "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+                "m_EffectRadius": 90, //KA-BAM
+                "m_EffectRadiusMaxStrength": 85 , 
+                "m_MaxDamageStrength": 40000, //This affects splash damage
+                "m_MaxImpulseStrength": 2000 //How hard to push things
+              },
+			  
+			  }, "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+                      "a": 1.0
+                    },
+                    "startSize": 25,
+					"playbackSpeed": 1,
+                    "startSpeed": 50, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        //"cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                   "startSize": 25,
+				   "startColor": {
+                      "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,
+                      "a": 1.0
+                    },
+					"playbackSpeed": 0.5,
+                    "startSpeed": 25, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        //"cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.3,
+            "g": 0.3,
+            "b": 1.0,	
+                      "a": 0.85
+                    },
+                    "startSize": 25,
+					"playbackSpeed": 0.5,
+                    "startSpeed": 25, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    "maxParticles": 750,
+                    "duration": 6.5,
+                    "playbackSpeed": 0.75,
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2,
+                      "burst": {
+                        "count": 650,
+                        "cycleCount": 1,
+                        "maxCount": 600,
+                        "minCount": 500,
+                        // "probability": 150,
+                        // "repeatInterval": 150,
+                        //"time": 0
+                      }
+                    }
+                    // "shape": {
+                    //   "texture": {
+                    //     "mainTexture": "Sparks",
+                    //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    //   }
+                    // },
+                  }
+                }
+              }
+            }
+        }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "Name": "GeoCorp to Old Star Transition Block",
+  "Description": "A transition block to blend Old Star and GeoCorp together",
+  "ID": 300135,
+  "Faction": 2,
+  "Category": 2,
+  "Grade": 1,
+  "Rarity": 0,
+  "Price": 534,
+  "HP": 550,
+  "Mass": 2.25,
+  "IconName": "OS_GC_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 6, 6, 6, 6",
+  "EmissionMode": 2,
+  "GamePrefabReference": "GC_Block_221",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 2,
+    "y": 2,
+    "z": 1
+  },
+  "APsOnlyAtBottom": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_Block_221",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GC_2.obj",
+      "ColliderMeshName": "OS_GC_2.obj",
+      "MeshMaterialName": "GC_Main"
+    },
+    {
+      "ObjectName": "OS_Half",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GC_1.obj",
+      "ColliderMeshName": "OS_GC_1.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    }
+  ]
+}

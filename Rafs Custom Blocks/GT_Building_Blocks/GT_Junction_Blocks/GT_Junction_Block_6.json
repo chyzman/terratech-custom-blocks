@@ -1,0 +1,98 @@
+{
+  "Name": "GreenTech Junction Block Six",
+  "Description": "A special curved block section with a wooden bridge to another section.",
+  "ID": 911188, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2442,
+  "HP": 6800, 
+  "Mass": 14,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 9, 9, 9, 32, 32, 32, 32, 45, 52, 52", 
+  "IconName": "GT_Junction_Block_6_Icon.png", 
+  "MeshName": "GT_Junction_Block_6.obj", 
+  "ColliderMeshName": "GT_Junction_Block_6_Collider_A.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "   x  "
+  ],
+  [
+    "  xx  "
+  ],
+  [
+    " xxxx "
+  ],
+  [
+    "xxxxxx"
+  ],
+  [
+    "  xxx "
+  ],
+  [
+    "   x  "
+  ]
+],   
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 0, "y": 0.5,"z": 3},
+    {"x": 3, "y": -0.5, "z": 0},	
+    {"x": 3, "y": 0.5,"z": 0},
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 2, "y": 0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 1, "y": 0.5,"z": 2},
+    {"x": 2, "y": -0.5, "z": 1},	
+    {"x": 2, "y": 0.5,"z": 1},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": 3, "y": 0, "z": -0.5}, 
+    {"x": 0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": 0.5}, 
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 1.5}, 
+    {"x": 2.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 2.5},
+
+    {"x": 3, "y": -0.5, "z": 5},	
+    {"x": 5, "y": -0.5, "z": 3},
+    {"x": 4, "y": -0.5, "z": 4},
+    {"x": 3, "y": 0.5,"z": 5},
+    {"x": 5, "y": 0.5,"z": 3},
+    {"x": 4, "y": 0.5, "z": 4},
+    {"x": 3.5, "y": 0, "z": 5},
+    {"x": 5, "y": 0, "z": 3.5},
+    {"x": 5.5, "y": 0, "z": 3},
+    {"x": 3, "y": 0, "z": 5.5},
+    {"x": 4.5, "y": 0, "z": 4},
+    {"x": 4, "y": 0, "z": 4.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "ColliderMeshName": "GT_Junction_Block_6_Collider_B.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_6_Collider_C.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_6_Collider_D.obj",
+      "Layer": 8
+    }
+  ]
+}

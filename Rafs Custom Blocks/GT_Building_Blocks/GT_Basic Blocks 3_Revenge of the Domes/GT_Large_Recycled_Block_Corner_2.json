@@ -1,0 +1,64 @@
+{
+  "Name": "GreenTech Large Recycled Block Corner Two",
+  "Description": "A larger corner version of the Recycled Block, hull shaped.",
+  "ID": 911144, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 1908,
+  "HP": 2500, 
+  "Mass": 8,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 9, 9, 32, 32, 32, 43, 43, 43, 45",  
+  "IconName": "GT_Large_Recycled_Block_Corner_2_Icon.png", 
+  "MeshName": "GT_Large_Recycled_Block_Corner_2.obj", 
+  "ColliderMeshName": "GT_Large_Recycled_Block_Corner_2_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "  x",
+    "  x"
+  ],
+  [
+    " xx",
+    " xx"
+  ],
+  [
+    "xxx",
+    "xxx"
+  ]
+],  
+  "APs": [ 
+  {"x": 0, "y": -0.5, "z": 2},	
+	{"x": 2, "y": -0.5, "z": 0},
+  {"x": 1, "y": -0.5, "z": 1},
+  {"x": 0, "y": 1.5,"z": 2},
+	{"x": 2, "y": 1.5,"z": 0},
+	{"x": 1, "y": 1.5, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": -0.5, "y": 1, "z": 2},
+	{"x": 2, "y": 0, "z": -0.5},
+  {"x": 2, "y": 1, "z": -0.5},
+  {"x": 1.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 1, "z": 0},
+	{"x": 0, "y": 0, "z": 1.5},
+  {"x": 0, "y": 1, "z": 1.5},
+  {"x": 0.5, "y": 0, "z": 1},
+	{"x": 0.5, "y": 1, "z": 1},
+	{"x": 1, "y": 0, "z": 0.5},
+	{"x": 1, "y": 1, "z": 0.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

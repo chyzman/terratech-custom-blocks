@@ -1,0 +1,140 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Hyperion Systems Auxiliary Generator",
+  "Description": "A small generator that usually serves as a backup generator. Can be used as a primary generator on small techs, if you have enough of them. Will constantly create power.",
+  "ID": 100033,
+
+  "Faction": 7,
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 2076,
+  "HP": 250,
+  "Mass": 0.001,
+
+  "Recipe":  "17, 45, 48", 
+
+  "IconName": "HSMiniGenIcon.png",
+  "MeshName": "HS Auxiliary Generator Casing.obj", 
+  "MeshTextureName": "HS textures.png",
+  "SupressBoxColliderFallback": false,
+
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 0.5}
+  ],
+
+  "SubObjects": [
+      {
+        "SubOverrideName": "glass",
+        "MeshName": "HS Auxiliary Generator Glass.obj",
+        "MeshMaterialName": "HE_Shield_Edge"
+      },
+      {
+        "SubOverrideName": "spinny",
+        "MeshName": "HS Auxiliary Generator Spinny.obj",
+        "MeshTextureName": "HS_textures.png"
+      }
+  ],
+
+  "JSONBLOCK": {
+    "Reference|GC_Battery_424/fx_Plasma":{
+      "GameObject|fx_Lightning": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 0.3
+           }
+        }
+      },
+      "GameObject|fx_Particles": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 0.3,
+            "y": 0.3,
+            "z": 0.3
+           }
+        }
+      },
+      "GameObject|Light_Point": null,
+       "UnityEngine.ParticleSystem": {
+        "startColor":{
+          "r": 1.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             },
+             "localScale": {
+              "x": 0.1,
+              "y": 0.1,
+              "z": 0.1
+             }
+           }
+          },
+    "ModuleEnergy": {
+      "m_OutputPerSecond": 10,
+      "m_OutputConditions": 0
+    },
+    "GameObject|_spindle":{
+      "GameObject|spinny": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         }
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "Spinner": {
+        "m_Speed": 0.05,
+        "m_RotationAxis": {
+          "axis": 2
+        },
+        "m_SteerAxis": {
+          "axis": 2
+        },
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 0.1,
+        "m_CurrentAngle": 0.0,                
+        "m_CurrentAutoSpeed": 0.0,
+        "m_CurrentSpeedFraction": 0.0,
+        "m_SpinnerSound": null,
+        "m_SpinnerSoundOriginalPitch": 0.0,
+        "AtFullSpeed": false 
+      }
+    }
+      }
+    }

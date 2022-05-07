@@ -1,0 +1,743 @@
+{
+  "Name": "Old Star Double Tap Cab",
+  "Description": "This here is how the Old Star do. The Double Tap Cab is Old Stars newest battle ready cab to deal with constant raiders who see Old Star as easy targets. With twin cannons that deal a heafty amount at a decent rate for a pair of cab guns, standard Old Star Cab mobility and the cab also come equiped with the auto lock on feature that Old Star cabs usually lack but at the cost of Old Stars usual cab sturdyness. so be carful and keep it well protected.",
+  "ID": 300120,
+  "Faction": 4,
+  "Category": 1,
+  "Grade": 2,
+  "Price": 6162,
+  "HP": 800,
+  "Mass": 5,
+  "CenterOfMass": {
+    "x": 0.5,
+    "y": -0.5,
+    "z": 0.5
+  },
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 43, 44, 46, 46, 52, 53, 54, 55",
+  "IconName": "OS_Combat_Cab_Icon.png",
+
+  "SupressBoxColliderFallback": true,
+
+  "CellMap": [
+    [
+      "  ",
+      "TT"
+    ],
+
+    [
+      "TT",
+      "TT"
+    ],
+
+    [
+      "TT",
+      "TT"
+    ]
+  ],
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": 0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 0.5
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 1.0
+    },
+    {
+      "x": 1.5,
+      "y": 1,
+      "z": 1.0
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1.0
+    },
+    {
+      "x": 1.0,
+      "y": 1.5,
+      "z": 1.0
+    }
+  ],
+  "GamePrefabReference": "GSO_Cab_111",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.5
+  },
+  "ReferenceScale": {
+    "x": 3,
+    "y": 2,
+    "z": 2
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "ObjectName": "Base_Block",
+      "MeshName": "OS_Combat_Cab_Base.obj",
+      "ColliderMeshName": "OS_Combat_Cab_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Gun_Rt",
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Combat_Cab_Gun.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Gun_Lf",
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Combat_Cab_Gun.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "_spotlight",
+      "DestroyExistingRenderer": false,
+      "SubScale": {
+        "x": 1.25,
+        "y": 1.5,
+        "z": 1.5
+      },
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 1.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Tyre_1",
+      "MeshName": "OS_Combat_Cab_Wheel.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroyExistingRenderer": true,
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Tyre_2",
+      "MeshName": "OS_Combat_Cab_Wheel.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroyExistingRenderer": true,
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Tyre_3",
+      "MeshName": "OS_Combat_Cab_Wheel2.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroyExistingRenderer": true,
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Tyre_4",
+      "MeshName": "OS_Combat_Cab_Wheel2.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroyExistingRenderer": true,
+      "SubPosition": {
+        "x": 1.2,
+        "y": 0,
+        "z": 1
+      },
+      "SubScale": {
+        "x": 0.25,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Flap_1",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Flap_2",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Flap_3",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Cab_111_Flap_4",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "Cab_Glass",
+      "MeshName": "OS_Combat_Cab_Glass.obj",
+      "ColliderMeshName": "OS_Combat_Cab_Glass.obj",
+      "MeshMaterialName": "GSO_Main"
+    }
+  ],
+
+  "Deserializer": {
+
+    "ModuleRadar": {
+      "m_Priority": 0,
+      "m_MiniMapType": 0,
+      "m_Range": 150.0,
+      "m_Dishes": [],
+      "m_ModuleType": 0,
+      "MiniMapType": 0,
+      "Range": 150.0
+    },
+    "GameObject|_gimbalBase_R": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.27,
+          "y": 0.65,
+          "z": 1.5
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GameObject|m_GSO_Cab_111_Gun_Rt": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 0.25,
+                "y": 0.5,
+                "z": 0.5
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0.1
+              }
+            },
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 0.25,
+                  "y": 0.5,
+                  "z": 0.5
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.4
+                }
+              },
+              "Light": {
+                "m_BakedIndex": 0,
+                "type": 2,
+                "spotAngle": 93.1,
+                "range": 1.0
+              }
+            },
+            "GameObject|_muzzleFlashAnim": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.1
+                }
+              },
+              "GameObject|m_MuzzleLaserFlash_01": {
+                "UnityEngine.Transform": {
+                  "localScale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                  },
+                  "localPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.1
+                  }
+                }
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0.3
+              }
+            }
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -10.0,
+            15.0
+          ]
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -10.0,
+          15.0
+        ]
+      }
+    },
+    "GameObject|_gimbalBase_L": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        },
+        "localPosition": {
+          "x": -0.27,
+          "y": 0.65,
+          "z": 1.5
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GameObject|m_GSO_Cab_111_Gun_Lf": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 0.25,
+                "y": 0.5,
+                "z": 0.5
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0.1
+              }
+            },
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 0.25,
+                  "y": 0.5,
+                  "z": 0.5
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.3
+                }
+              },
+              "Light": {
+                "m_BakedIndex": 0,
+                "type": 2,
+                "spotAngle": 93.1,
+                "range": 1.0
+              }
+            },
+            "GameObject|_muzzleFlashAnim": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0.1
+                }
+              },
+              "GameObject|m_MuzzleLaserFlash_01": {
+                "UnityEngine.Transform": {
+                  "localScale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                  },
+                  "localPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.1
+                  }
+                }
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0.3
+              }
+            }
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -10.0,
+            15.0
+          ]
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -10.0,
+          15.0
+        ]
+      }
+    },
+    "ModuleLight": {},
+
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 8000.0,
+        "torqueCurveMaxRpm": 500.0,
+        "passiveBrakeMaxTorque": 600.0,
+        "reverseBrakeMaxRpm": 65.0,
+        "basicFrictionTorque": 100.0,
+        "fullCompressFrictionTorque": 200.0
+      },
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 3,
+      "m_AudioType": 4,
+      "m_TireTrackWidth": 7,
+      "m_DustMinimumRPM": 20.0,
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.3,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 4.0,
+      "m_WheelParams": {
+        "radius": 0.46,
+        "steerAngleMax": 0.5,
+        "steerSpeed": 0,
+        "thicknessAngular": 31,
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 3.5,
+            "gripFactorLat": 2.5
+          }
+        },
+        "suspensionSpring": 500.0,
+        "suspensionDamper": 200.0,
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 0.15
+      }
+    },
+
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.5,
+      "m_FiringData": null,
+      "m_DeploySFXType": 77,
+      "m_NumCannonBarrels": 2
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": "66",
+      "m_PreventShootingTowardsFloor": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0,
+      "m_RotateSpeed": 100.0
+    },
+    "Reference|VEN_TurretRoundabout_111/FireData.": {
+      "m_BulletSprayVariance": 0.1,
+      "m_KickbackStrength": 5,
+      "Instantiate|m_BulletCasingPrefab": null,
+      "m_MuzzleVelocity": 150
+    },
+    "WeaponRound": {
+      "m_DamageType": "Bullet",
+      "m_Damage": 105
+    },
+
+    "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.4,
+          "z": 0.5
+        },
+        "localScale": {
+          "x": 0.06,
+          "y": 0.06,
+          "z": 0.06
+        }
+      },
+      "ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 1.0,
+        "enableEmission": true,
+        "emissionRate": 25.0,
+        "startSpeed": 0.0,
+        "startSize": 0.6,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.5
+        },
+        "startLifetime": 1.8,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "material": "Mat_FX_Smoke_Dark"
+      }
+    },
+    "Duplicate|FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.4,
+          "z": 0.5
+        }
+      }
+    }
+  }
+}

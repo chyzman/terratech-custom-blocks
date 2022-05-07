@@ -1,0 +1,84 @@
+{
+  "Name": "Hawkeye Left Tank Tusk",
+  "Description": "A slab of high-density metal used for clearing rocks, flora, or... you know, minefields. Whatever.",
+  "ID": 117071,
+
+  "Faction": 5,
+  "Category": 4,
+  "Rarity": 1,
+  "Grade": 1,
+  "Price": 13080,
+  "HP": 12000,
+  "Mass": 16,
+  "DamageableType": 1, 
+
+  "Recipe": {"53": 8, "54": 10},
+
+  "IconName": "HE_Left_Tank_Tusk.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "Fragility": 0,
+
+  "CellMap": [
+    [
+      "00  ",
+      "00  ",
+      "00  ",
+    ],
+    [
+      "0000",
+      "0000",
+      "0000",
+    ],
+    [
+      "00  ",
+      "000 ",
+      "0000",
+    ],
+    [
+      "    ",
+      "    ",
+      "00  ",
+    ],
+  ],
+
+  "APs": [ 
+    { "x": 2,     "y": 1,    "z": 0.5  },
+    { "x": 3,     "y": 1,    "z": 0.5  },
+  ],
+
+  "SubObjects": [
+    {
+        "SubOverrideName": "Base",
+        "MeshName": "HE_Right_Tank_Tusk.obj",
+        "ColliderMeshName": "HE_Right_Tank_Tusk_Collider.obj",
+        "Subposition": {  "x": 1.5,     "y": 0.5,    "z": 1.5  },
+        "Subrotation": {  "x": 0,     "y": 180,    "z": 0  },
+        "MeshMaterialName": "HE_Main",
+    },
+    {
+        "SubOverrideName": "Tusk",
+        "Layer": 14,
+        "ColliderMeshName": "HE_Right_Tank_Tusk_Drill_Collider.obj",
+        "Subposition": {  "x": 1.5,     "y": 0.5,    "z": 1.5  },
+        "Subrotation": {  "x": 0,     "y": 180,    "z": 0  },
+    }
+],
+
+"JSONBLOCK": {
+    "GameObject|Tusk": {
+      "UnityEngine.MeshCollider": { 
+          "sharedMesh": "HE_Right_Tank_Tusk_Drill_Collider.obj", 
+          "convex": true 
+        }
+    },
+    "ModuleDrill": {
+      "activeColliders": ["Tusk/MeshCollider."],
+      "impactDamageMultiplier": 10.0,
+      "damagePerSecond": 0,
+      "m_SpinOnCollisionDuration": 0,
+      "m_DamageType": 4
+  }
+  }
+
+}

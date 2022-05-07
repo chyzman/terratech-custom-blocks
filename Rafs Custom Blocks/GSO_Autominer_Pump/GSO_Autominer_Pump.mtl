@@ -1,0 +1,14 @@
+# Blender MTL File: 'GSO_Autominer_Pump.blend'
+# Material Count: 1
+
+newmtl _auto_.004
+Ns 9.000004
+Ka 0.900000 0.900000 0.900000
+Kd 0.800000 0.800000 0.800000
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Program Files (x86)\\Steam\\steamapps\\common\\TerraTech\\Custom Textures\\GSO.ExamplePack.tsmod\\1.png
+map_Ke C:\\Program Files (x86)\\Steam\\steamapps\\common\\TerraTech\\Custom Textures\\GSO.ExamplePack.tsmod\\3.png

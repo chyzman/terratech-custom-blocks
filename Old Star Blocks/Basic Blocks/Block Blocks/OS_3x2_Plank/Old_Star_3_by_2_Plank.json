@@ -1,0 +1,29 @@
+{
+  "Name": "Old Star 3 by 2 Slab",
+  "Description": "This here is how the Old Star do. Just 2 slabs of nicely cut Fibron Wood held together with a few metal bands and nails. Now this was hand made by our wood cutter when he found natural GOOD slabs of Fibron wood. He says they are too good to be cut into smaller sizes and we've been getting the occasional complaint that people are losing their things to the holes that happen between the 2 by 2 slab when they use it as a floor. So we let him make these when he can. But DON'T let him find out it you blew yours up, hehe... ",
+  "ID": 300012,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 700,
+  "HP": 900,
+  "Mass": 3,
+  "IconName": "3_by_2_slab_icon.png",
+  "MeshName": "Old_Star_3_by_2_Plank.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5, ", 	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 3,
+    "z": 2
+  }, 
+  "APsOnlyAtBottom": false
+}

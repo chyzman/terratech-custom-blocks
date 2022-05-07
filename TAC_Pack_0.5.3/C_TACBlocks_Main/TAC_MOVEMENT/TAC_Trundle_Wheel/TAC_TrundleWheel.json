@@ -1,0 +1,410 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Trundle High-Speed Locomator Motor",
+  "Description": "A VERY fast wheel despite the misleading name.  It's fairly fast given it being a bus wheel, and can support a decent load and maintain highway-legal top speeds.  Just keep your Tech's weight under reasonable bounds. \n\nThis wheel has a <b>WHOLE</b> gearbox and dual XXL motors dedicated to it, a significant improvement over the traditional motors in traditional off-world wheels. \nThe catch here is that the wheel itself suffers as a result. \nIt's acceleration while under super-heavy military loads is sub-par, meaning that it also doesn't handle too well when overloaded. \nIn fact, these can become super-overloaded and stall completely unlike ordinary wheels, but hey, <b>sick drifts!</b> \n\n\n<b>WARNING!</b> Do NOT use on rough terrain! It will scratch up the gearbox!", //You can make multiple lines with \n
+  "ID": 584216, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 55617, //55617 // The Price is Right
+  "HP": 6500, //Battleship Cannon has 5500 health //was 4500
+  "Mass": 12.0,
+
+  "IconName": "BrightningMacQueerEngine.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 49, 49, 49, 49, 52, 52, 52, 52, 53, 53, 53, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 61", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //Dat's a lotta Cyclone Jets
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Back Face
+    {"x": -0.5,"y": 1,"z": 0},
+    {"x": -0.5,"y": 1,"z": 1},
+    {"x": -0.5,"y": 1,"z": 2},
+    {"x": -0.5,"y": 2,"z": 0},
+    {"x": -0.5,"y": 2,"z": 1},
+    {"x": -0.5,"y": 2,"z": 2},
+    //Left Face
+    {"x": 0,"y": 1,"z": 2.5},
+    {"x": 0,"y": 2,"z": 2.5},
+    {"x": 1,"y": 1,"z": 2.5},
+    {"x": 1,"y": 2,"z": 2.5},
+    {"x": 2,"y": 2,"z": 2.5},
+    {"x": 3,"y": 2,"z": 2.5},
+    //Right Face
+    {"x": 0,"y": 1,"z": -0.5},
+    {"x": 0,"y": 2,"z": -0.5},
+    {"x": 1,"y": 1,"z": -0.5},
+    {"x": 1,"y": 2,"z": -0.5},
+    {"x": 2,"y": 2,"z": -0.5},
+    {"x": 3,"y": 2,"z": -0.5},
+    //Top Face
+    {"x": 0,"y": 2.5,"z": 0},
+    {"x": 1,"y": 2.5,"z": 0},
+    {"x": 2,"y": 2.5,"z": 0},
+    {"x": 3,"y": 2.5,"z": 0},
+    {"x": 0,"y": 2.5,"z": 1},
+    {"x": 1,"y": 2.5,"z": 1},
+    // {"x": 2,"y": 2.5,"z": 1},
+    {"x": 3,"y": 2.5,"z": 1},
+    {"x": 0,"y": 2.5,"z": 2},
+    {"x": 1,"y": 2.5,"z": 2},
+    {"x": 2,"y": 2.5,"z": 2},
+    {"x": 3,"y": 2.5,"z": 2},
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 3,
+    "z": 3
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "GSO_Wheel_(233)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x":2.5, "y":1.1, "z":1 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+    "SubObjects": [ 
+    { //Wheeel
+     "SubOverrideName": "m_Trundle_Wheel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTrundleWheelWheel.obj",
+      "MakeBoxCollider": false,
+      // "ColliderMeshName": "Orb.obj",
+      // "MeshTextureName": "LED_BeamBlockG.png",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Suspension
+     "SubOverrideName": "m_Trundle_Suspension",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTrundleWheelSuspension.obj",
+      "ColliderMeshName": "TACTrundleWheelSuspension.obj",
+      //"MeshTextureName": "LED_BeamBlockG.png",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Removing useless things
+     "SubOverrideName": "m_GSO_Wheel_233_Tyre",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Removing useless things
+     "SubOverrideName": "m_GSO_Wheel_233_Suspension_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Removing useless things
+     "SubOverrideName": "m_GSO_Wheel_233_Suspension_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    // { //Removing useless things
+    //  "SubOverrideName": "m_BF_Hover_Ring_Small_212_Base",
+    //      "DestroyExistingRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    { //Base
+     "SubOverrideName": "m_GSO_Wheel_233_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTrundleWheel.obj",
+      "ColliderMeshName": "TACTrundleWheel.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel Hub Non-rotating
+     "SubOverrideName": "m_WheelHub",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACTrundleWheelDriver.obj",
+      // "ColliderMeshName": "TACTrundleWheelDriver.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+
+    "GameObject|Suspension_Tyre": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":1.5, "y":1.5, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "GameObject|Suspension_A": {
+        "UnityEngine.Transform": {
+          // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|m_GSO_Wheel_233_Suspension_A": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "GameObject|m_Trundle_Suspension": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":270, "z":270 },
+              "localPosition": { "x":2, "y":0, "z":0.225 },
+              "localScale": { "x":1, "y":1, "z":1 }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|Suspension_B": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":2.5, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "GameObject|m_GSO_Wheel_233_Suspension_B": {
+        "UnityEngine.Transform": {
+          // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+      }
+    },
+    "GameObject|Suspension_Up": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.5, "y":1.5, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|_wheel": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":1.3, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "GameObject|_tireFrame": {
+        // "UnityEngine.Transform": {
+        //   // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        //   "localPosition": { "x":0, "y":0.5, "z":0 },
+        //   "localScale": { "x":1, "y":1, "z":1 }
+        // },
+        "GameObject|_suspensionColliderLower": {//Adjust the 
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0.5, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+        }
+      },
+      "GameObject|m_GSO_Wheel_233_Tyre": {
+        "GameObject|m_Trundle_Wheel": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "GameObject|b_TurnAimer": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":2 },
+            }
+          },
+        },
+        "GameObject|WheelDustStandard(Clone)": {
+        }
+      }
+    },
+    "GameObject|_sparksLocator": {
+      "GameObject|SparksWheelGSODiscOffset(Clone)": {
+        "GameObject|FXWheelSparks 2": {
+        },
+        "GameObject|FXWheelSparks 1": {
+        },
+      }
+    },
+    //SUSPENSION
+    "GameObject|SuspensionUp2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":-0.5, "y":1, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      }
+    },
+
+    "GameObject|m_WheelHub": {
+      "FollowTransform": {//follow the wheel center
+        "m_TransformToFollow": "/_wheel/m_GSO_Wheel_233_Tyre/m_Trundle_Wheel",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+      "FollowSuspension": {//Follow the Wheel's turning direction
+        "m_TargetWheelTrans": "/_wheel/m_GSO_Wheel_233_Tyre/m_Trundle_Wheel/b_TurnAimer",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.25,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2, "y":1, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":1, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      }
+    },
+    "GameObject|m_GSO_Wheel_233_Base": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":0.5, "y":1, "z":1 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      }
+    },
+
+
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+
+    // Torque Parameters
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 9500.0, //trash torque for this size - This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+        //This wheel is very fast, but cannot support heavy loads
+        //was 7750.0, worse than bearing
+                                            // A high torque value is good for offroad wheels.
+
+        "torqueCurveMaxRpm":    17500.0, //SPEEED.  I.  AM. SPEEED       //REALLY FAST - Dictates the speed of the wheel. A higher number is faster. 
+                                            // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+        // was 17500.0
+
+        "passiveBrakeMaxTorque": 3500.0,  // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+        "reverseBrakeMaxRpm": 1000.0,       // How mich the wheel adds to the "passiveBrakeMaxTorque" when trying to go backwards when already rolling forwards
+        "basicFrictionTorque": 4500.0,      //the Parking brake
+        "fullCompressFrictionTorque": 9500.0, // This is when the wheel is over max weight capacity (suspension overloaded), how much it is slowed by.
+      },
+      
+      // Aesthetic parameters
+      "m_UseTireTracks": true,                  // Enables the wheel to leave tire tracks
+      "m_WheelTrackType": 0,                    // Changes the tracks the wheel leaves behind
+      "m_AudioType": 0,                         // Changes the sound of the wheels when running
+                                                // 1 = Heavy GeoCorp wheels
+      "m_TireTrackWidth": 2,                 // Width of the tires? - doesn't seem to do much...
+
+      "m_WheelParams":{
+        // Basic Wheel parameters
+        "radius":                     1.15,      // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+        "steerAngleMax":              22.5,      // Dictates how much the wheel is able to turn.
+        "steerSpeed":                 2,        // Dictates the time it takes for the wheel to fully go into turning position.
+        "thicknessAngular":           30,     // Determines how wide the Tire tracks are
+
+        //Tire Parameters
+        "Instantiate|tireProperties":{
+          "props":{
+            "frictionScaleLong": 1.25,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+            "frictionScaleLat": 1.25,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+            "gripFactorLong": 1.75,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20 or below 1.5, as all wheels will begin to act strangely.
+            "gripFactorLat": 1.0,                // Dictates the tire traction on the sides. Warning: Do not go beyond 20 or below 1.5, as all wheels will begin to act strangely.
+            //Friction isn't the best
+          }
+        },
+
+        // Suspension parameters
+        "suspensionSpring":           27500.0,    // Dictates the amount of bounciness of the suspension's spring. 
+                                                  // It also affects the wheel's ability to carry weight.
+
+        "suspensionDamper":           750.0,     // This tells the suspension how much the springiness will be dampened. 
+                                                  // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+        //"maxSuspensionAcceleration":  3.5,
+        "suspensionQuadratic":        true,       
+        "suspensionTravel":           0.65,//was 0.5       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   
+        "m_TracksSkidSpeed": 0.1, 
+        "m_TracksMaxSkidSpeed": 1.0,
+        "m_TracksMinSpeed": 0.5,
+        "m_TracksMaxSpeed": 25.0,
+        
+        "m_wheels": {
+          "m_DriveTurnPower": 0.5,//was 1.0
+          "m_DriveTurnBrake": 0.1,//was 0.1
+          "m_DriveTurnDifferential": 0.25,//was 0.8
+          "m_TurnOnSpotPower": 0.1,//was 1.0
+          "m_DustMinimumRPM": 20.0,
+          "Capacity": 4,
+        },
+      }
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    // TAC Standard - Shockwave Dissipation Armor
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.6,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": false,     // Should the multipliers be used?
+    },
+  }
+}
+
+
+
+
+
+
+

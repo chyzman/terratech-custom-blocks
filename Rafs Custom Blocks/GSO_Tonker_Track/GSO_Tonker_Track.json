@@ -1,0 +1,292 @@
+{
+  "Name": "GSO Tonker Track",
+  "Description": "A strange design that survived time, made to carry the largest cannons and equipment.\nThe engineering is pretty solid and balanced for big techs, being a good choice to those who think that size indeed does matter.",
+  "ID": 910570, 
+
+  "Faction": 1, 
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 16704,
+  "HP": 9000,
+  "Mass": 20.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 2},
+
+  "IconName": "GSO_Tonker_Track_Icon.png",
+  
+  "Recipe": "44, 44, 52, 52, 52, 56, 56, 63, 63",
+  
+  "EmissionMode": 0,
+  "DamageableType": 1,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 3,
+    "z": 5
+  },
+
+  "APs": [
+    {"x": 0, "y": 2.5,"z": 1},
+    {"x": 0, "y": 2.5,"z": 2},
+    {"x": 0, "y": 2.5,"z": 3},
+    {"x": 1, "y": 2.5,"z": 1},
+    {"x": 1, "y": 2.5,"z": 2},
+    {"x": 1, "y": 2.5,"z": 3},
+    {"x": -0.5, "y": 1,"z": 2},
+    {"x": -0.5, "y": 1,"z": 3},
+    {"x": -0.5, "y": 2,"z": 2},
+    {"x": -0.5, "y": 2,"z": 3},
+    {"x": 1.5, "y": 1,"z": 2},
+    {"x": 1.5, "y": 1,"z": 3},
+    {"x": 1.5, "y": 2,"z": 2},
+    {"x": 1.5, "y": 2,"z": 3}
+  ],
+
+  "GamePrefabReference": "GSO_Track_112",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_Track_112", 
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Track_112_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Track_112_Wheel_1_Suspension",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_Track_112_Wheel_2_Suspension",
+      "DestroyExistingRenderer": true
+    },
+    {
+    	"MeshName": "GSO_Tonker_Track.obj",
+      "MeshMaterialName": "GSO_Main",
+      "ColliderMeshName": "GSO_Tonker_Track_Collider_A.obj"
+    },
+    {
+      "ColliderMeshName": "GSO_Tonker_Track_Collider_B.obj"
+    },
+    {
+      "ColliderMeshName": "GSO_Tonker_Track_Collider_C.obj"
+    },
+      {
+        "SubOverrideName": "m_GSO_Track_112_Wheel_1_Tyre",
+        "MeshName": "GSO_Tonker_Track_Wheel.obj",
+        "MeshMaterialName": "GSO_Main",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "m_GSO_Track_112_Wheel_2_Tyre",
+        "MeshName": "GSO_Tonker_Track_Wheel.obj",
+        "MeshMaterialName": "GSO_Main",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "SubOverrideName": "_wheel_1",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0.5,
+          "y": 1.3,
+          "z": 0.85
+        }
+      },
+      {
+        "SubOverrideName": "_wheel_2",
+        "SubRotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "SubPosition": {
+          "x": 0.5,
+          "y": 1.3,
+          "z": 3.14
+        }
+      }
+  ],
+  "JSONBLOCK": {
+    "GameObject|GSO_Track_112": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+      },
+    "GameObject|b_Wheel_1": {
+      "UnityEngine.Transform": {
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 2,
+          "y": 3,
+          "z": 3
+         }
+       }
+    },
+    "GameObject|b_Wheel_2": {
+      "UnityEngine.Transform": {
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 2,
+          "y": 3,
+          "z": 3
+         }
+       }
+    },
+    "GameObject|b_Static": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":2, "z":2 },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localScale":{
+          "x": 2,
+          "y": 0.01,
+          "z": 0.01
+         }
+       }
+    },
+    "GameObject|_wheel_1": {
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            "center": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+            },
+            "radius": 0.1
+          }
+        }
+      },
+      "GameObject|m_GSO_Track_112_Wheel_1_Tyre": {
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "radius": 0.9,
+          "height": 1,
+          "direction": 0
+        }
+      }
+    },
+    "GameObject|_wheel_2": {
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            "center": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+            },
+            "radius": 0.1
+          }
+        }
+      },
+      "GameObject|m_GSO_Track_112_Wheel_2_Tyre": {
+        "UnityEngine.CapsuleCollider": {
+          "center": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "radius": 0.9,
+          "height": 1,
+          "direction": 0
+        }
+      }
+    }
+  },
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 25000.0,
+        "torqueCurveMaxRpm": 290,
+        "passiveBrakeMaxTorque": 3800.0,
+        "reverseBrakeMaxRpm": 65.0,
+        "basicFrictionTorque":200.0,
+        "fullCompressFrictionTorque": 450.0
+      },
+      "m_UseTireTracks": true,
+      "m_WheelTrackType": 3,
+      "m_AudioType": 4,
+      "m_WheelParams": {
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 5,
+            "gripFactorLat": 2.25
+            
+          }
+          },
+        "radius": 1.2,
+        "thicknessAngular": 36,
+        "suspensionSpring": 50000.0,
+        "suspensionDamper": 400.0,
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": true,
+        "suspensionTravel": 1.2,
+        "steerAngleMax": 0.0,
+        "steerSpeed": 2.0
+      },
+      "m_DriveTurnPower": 1.0,
+      "m_DriveTurnBrake": 0.3,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 1.0,
+      "m_DustMinimumRPM": 20.0
+    }     
+  }
+}

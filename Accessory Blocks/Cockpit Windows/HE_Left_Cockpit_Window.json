@@ -1,0 +1,35 @@
+
+{
+  "Name": "Hawkeye Left Cockpit Window",
+  "Description": "A veiwport for piloting your tech or viewing battlefields.",
+  "ID": 117082,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 0,
+  "Grade": 0,
+  "Price": 1881,
+  "HP": 2000,
+  "Mass": 3,
+  "DamageableType": 1, 
+
+  "Recipe": "43, 43, 44, 44, 44, 45, 45", 
+
+  "IconName": "HE_Left_Cockpit_Window.png",
+  "MeshName": "HE_Left_Cockpit_Window.obj",
+
+  "MeshMaterialName": "HE_Main",
+  "EmissionMode": 2,
+
+  "ColliderMeshName": "HE_Left_Cockpit_Window_Collider.obj",
+
+
+  "BlockExtents":
+  { "x": 3, "y": 1, "z": 1},
+
+  "APs": [
+    { "x": 0,     "y": 0,       "z": -0.5  },
+    { "x": 0,     "y": -0.5,       "z": 0  },
+  ]
+
+}

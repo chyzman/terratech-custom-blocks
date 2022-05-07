@@ -1,0 +1,54 @@
+{
+  "Name": "Hawkeye Navigation Computer",
+  "Description": "This Black Labs developed navigation computer incorporates both a speedometer and altimeter into a single, structural block.",
+  "ID": 117012,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 1,
+  "Grade": 1,
+  "Price": "2097",
+  "HP": 2000,
+  "Mass": 3,
+
+  "Recipe": "7, 7, 7, 9, 9, 9, 13, 13, 13, 45, 45, 45 ",
+
+  "IconName": "HE_Navigation_Computer.png",
+  "MeshName": "HE_Navigation_Computer.obj",
+
+  "MeshMaterialName": "HE_Main",
+  "EmissionMode": 1,
+
+  "ColliderMeshName": "HE_2x1x1_Collider.obj",
+
+  "Cells":[
+      {"x": 0, "y": 0, "z": 0},
+      {"x": -1, "y": 0, "z": 0}
+  ],
+
+  "APs": [ 
+    { "x": 0,     "y": 0.5,    "z": 0  },
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": 0.5,     "y": 0,       "z": 0  },
+    { "x": 0,     "y": 0,       "z": 0.5  },
+    { "x": 0,     "y": 0,       "z": -0.5  },
+    { "x": -1,     "y": -0.5,    "z": 0  },
+    { "x": -1,     "y": 0.5,    "z": 0  },
+    { "x": -1.5,     "y": 0,       "z": 0  },
+    { "x": -1,     "y": 0,       "z": 0.5  },
+    { "x": -1,     "y": 0,       "z": -0.5  }
+  ],
+
+   "GamePrefabReference": "HE_Block_112",
+
+   "JSONBLOCK":{
+    "ModuleSpeedo": {
+        "m_SpinnerRotationModifier": null,
+        "m_SpinnerMaxRotationSpeedChange": null,
+        "m_StationaryEpsilon": null,
+        "m_Spinners": [],
+        "m_CurrentSpeed": null
+      },
+      "ModuleAltimeter": {},
+   }
+}

@@ -1,0 +1,84 @@
+
+{
+    "Name": "Reticule Research Superconducting Magnetic Energy Storage",
+    "Description": "Extra large battery for a fixed base. It has more than five times the capacity of the Gluon Mega Battery, but weighs more than seven times as much.",
+    "ID": 546322,
+  
+    "Faction": 3,
+    "Category": 6,
+    "Rarity": 1,
+    "Grade": 2,
+    "Price": 134010,
+    "HP": 38880, //270 hp per 1 block
+    "Mass": 576, //4 mass per 1 block
+  
+    "Recipe": "61, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62",
+  
+    "IconName": "RR_Battery_big.png",
+    "MeshName": null,
+  
+    "MeshMaterialName": "RR_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": "RR_Battery_big_c.obj",
+  
+    "BlockExtents":
+    {
+      "x": 4,
+      "y": 6,
+      "z": 6
+    },
+  
+   "APs": [
+    { "x": 1.0, "y":-0.5, "z": 1.0 },{ "x": 2.0, "y":-0.5, "z": 1.0 },
+    { "x": 1.0, "y":-0.5, "z": 2.0 },{ "x": 2.0, "y":-0.5, "z": 2.0 },
+    { "x": 1.0, "y":-0.5, "z": 3.0 },{ "x": 2.0, "y":-0.5, "z": 3.0 },
+    { "x": 1.0, "y":-0.5, "z": 4.0 },{ "x": 2.0, "y":-0.5, "z": 4.0 }
+  ],
+    
+    
+    
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GSO_Block_111",
+  
+  "SubObjects": [ 
+  {
+      "SubOverrideName": "GC_Battery_222",
+      "DestroyExistingRenderer": true,
+      "MeshName": "RR_Battery_big.obj",
+      "MeshMaterialName": "EXP_Main",
+	  "MeshTextureName": "EXP_1", 
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+  },
+  {
+    "SubOverrideName": "RR_Batteri_big_mesh2",
+    "DestroyExistingRenderer": true,
+    "MeshName": "RR_Battery_big2.obj",
+    "MeshMaterialName": "EXP_Main",
+  "MeshTextureName": "EXP_1", 
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 0, "y": 0, "z": 0}
+},
+	{
+      "SubOverrideName": "_energyGauge",
+      "MeshName": "RR_Battery_big_LED.obj",
+      "DestroyExistingRenderer":    false,
+      "DestroyExistingColliders":   true,
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+	}
+    ],
+
+
+
+  "JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 277200} //1925 cap per 1 block
+  }
+}

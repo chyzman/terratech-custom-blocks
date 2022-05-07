@@ -1,0 +1,37 @@
+{
+  "Name": "Hawkeye Medium Left Corner Fortress Armor",
+  "Description": "A medium exterior corner block from Hawkeye Black Labs. The left member in a pair.",
+  "ID": 117006,
+
+  "Faction": 5,
+  "Category": 0,
+  "Rarity": 0,
+  "Grade": 1,
+  "Price": "1116",
+  "HP": 2000,
+  "Mass": 2.5,
+
+  "Recipe": "3, 3, 5, 5, 7, 7, 45, 45",
+
+  "IconName": "HE_M_Fortress_Corner_Left.png",
+  "MeshName": "HE_M_Fortress_Corner_Left.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_M_Fortress_Corner_Left_Collider.obj",
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [ 
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": 1,     "y": -0.5,    "z": 0  },
+    { "x": 0,     "y": 0,       "z": -0.5  }
+  ],
+
+   "GamePrefabReference": "HE_ArmouredBlock_112"
+}

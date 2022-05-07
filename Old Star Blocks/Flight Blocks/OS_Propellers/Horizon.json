@@ -1,0 +1,100 @@
+
+{
+  "Name": "Old Star Horizon Engine",
+  "Description": "Now this is new to Old Star. With the inclusion of the new Horizon Engine, Old Star can now take to the skies. As our first real flying motor this little guy can get most winged light techs off the ground but dont expect it to haul too much into the skies. Also, make sure it's facing the forward. We didn't add a reverse on these.",
+  "ID": 300091,
+
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 2,
+  "Price": 8143,
+  "HP": 1000,
+  "Mass": 5,
+
+  "Recipe":  "47, 52, 52, 57, 62, 66, 66",
+
+  "IconName": "Horizon_Icon.png",
+  "MeshName": "engine1.obj",
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "EmissionMode": 2,
+  "ColliderMeshName": "engine1.obj",
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "Cells": [
+    {"x": 0.0,"y": 0.0, "z": 0.0}, {"x": 0.0,"y": 0.0, "z": 1.0}, 
+    
+    {"x":-1.0,"y": 1.0, "z": 2.0},{"x": 0.0,"y": 1.0, "z": 2.0},{"x": 1.0,"y": 1.0, "z": 2.0},
+    {"x":-1.0,"y": 0.0, "z": 2.0},{"x": 0.0,"y": 0.0, "z": 2.0},{"x": 1.0,"y": 0.0, "z": 2.0},
+    {"x":-1.0,"y":-1.0, "z": 2.0},{"x": 0.0,"y":-1.0, "z": 2.0},{"x": 1.0,"y":-1.0, "z": 2.0}
+ ],
+
+ "APs": [ 
+   // Back
+    {"x": 0.0,"y": 0.0, "z": -0.5},
+  
+    // top
+    {"x": 0.0,"y": 0.5, "z": 0.0}, {"x": 0.0,"y": 0.5, "z": 1.0},
+    
+    // Bottom
+    {"x": 0.0,"y":-0.5, "z": 0.0}, {"x": 0.0,"y":-0.5, "z": 1.0}
+
+  ],
+
+   "GamePrefabReference": "HE_GyroProp_313",
+
+   "SubObjects":[
+    {
+      "SubOverrideName": "m_HE_GyroProp_rotors",
+         "MeshName": "Propeller1.obj",
+         "ColliderMeshName": "Propeller1.obj",
+         "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+         "SubRotation": { "x": 0, "y": 0, "z": 0 }
+     },
+     {
+     "SubOverrideName": "_spinner",
+         "SubPosition": { "x": 0.0,  "y": 0.0,  "z": 1.6 },
+         "SubRotation": { "x": 0, "y": 0, "z": 0 }
+   }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_fanJet": {
+      "FanJet": {
+        "force": 3250.0,
+        "backForce": 1250.0,
+        "spinDelta": 2.4,
+        "spinSpeed": 900.0,
+        "detachedForceFactor": 0.4
+      }
+
+    },
+    "GameObject|_spinner": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 80.5,
+          "m_AutoSpin": false,
+
+          "m_SpinUpTime": 1.5,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0,
+          "m_CurrentSpeedFraction": 0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": null,
+          "AtFullSpeed": false
+
+        },
+        "GameObject|m_HE_GyroProp_rotors": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

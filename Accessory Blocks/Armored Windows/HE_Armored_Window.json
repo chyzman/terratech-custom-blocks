@@ -1,0 +1,41 @@
+
+{
+  "Name": "Hawkeye Medium Armored Window",
+  "Description": "A reinforeced, hermetic window suitible for viewing ground, air, and space battles alike. Engineered by Hawkeye Black Labs.",
+  "ID": 117003,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 1,
+  "Grade": 1,
+  "Price": 1881,
+  "HP": 2000,
+  "Mass": 0.9,
+  "DamageableType": 1, 
+
+  "Recipe": "43, 43, 44, 44, 44, 45, 45", 
+
+  "IconName": "HE_Armored_Window.png",
+  "MeshName": "HE_Armored_Window.obj",
+
+  "MeshMaterialName": "HE_Main",
+  "EmissionMode": 2,
+
+  "ColliderMeshName": "HE_Armored_Window_Collider.obj",
+
+
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [
+    { "x": 0,     "y": 0,       "z": 0.5  },
+    { "x": 1,     "y": 0,       "z": 0.5  }
+  ],
+
+   "GamePrefabReference": "HE_ArmourPlate_211"
+}

@@ -1,0 +1,79 @@
+{
+  "Name": "GreenTech Resource Receiving Hub",
+  "Description": "A large Receiver station comprised of a central high capacity Pod and several long range Receiving Units covering all directions.",
+  "ID": 911223,
+  "Faction": 0, 
+  "Category": 7, 
+  "Grade": 4, 
+  "Price": 3720, 
+  "HP": 2000,
+  "Mass": 10,
+  "CenterOfMass": {"x": 1.5, "y": 0, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "5, 5, 7, 7, 32, 32, 32, 32, 43, 43, 50",  
+  "IconName": "GT_Receiver_Icon.png",
+  
+  "BlockExtents":{"x": 4,"y": 1, "z": 4}, 
+  
+   "APs": [ 
+    {"x": 1, "y": 0, "z": -0.5 },
+    {"x": 2, "y": 0, "z": -0.5 }
+  ],
+  
+  "GamePrefabReference": "GSO_Receiver_312", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName":"m_Experimental_Base_Receiver_312",
+      "MeshName": "GT_Receiver.obj",
+      "ColliderMeshName": "GT_Receiver_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 4,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 1.2, "y": 0.35, "z": 0.97 },
+        { "x": 1.8, "y": 0.35, "z": 0.97 },
+        
+        { "x": 0.88, "y": 0.35, "z": 1.5 },
+        { "x": 1.5, "y": 0.35, "z": 1.5 },
+        { "x": 2.12, "y": 0.35, "z": 1.5 },
+
+        { "x": 1.2, "y": 0.35, "z": 2 },
+        { "x": 1.8, "y": 0.35, "z": 2 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1] } ]
+	},
+  "ModuleItemPickup": {
+    "m_PickupRange": 20.0
+  }
+  }			
+}

@@ -1,0 +1,342 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Hawkeye T.R.E.N.",
+  "Description": "The T.R.E.N.(Terrential Roving Earth Navigator) is a fast and effective way to get around the off-world in a blaze. You can also hook it onto another Tech to pull loads too! \nChoo Choo <b>MOTHERTECHER</b>", //You can make multiple lines with \n
+  "ID": 584001, //A random ID that MUST be unique
+  "IDNetHex": "4ffffff3fd3f9f44", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 0, //The desired grade minus one
+  "Price": 2000000,
+  "HP": 20000, //no die
+  "Mass": 45.0,//Heavy.
+
+  "IconName": null, //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "53, 53, 46, 46, 61, 61, 61, 64", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     {
+       "x": 1,
+       "y": -0.5,
+       "z": 2
+     },
+     {
+       "x": 1,
+       "y": -0.5,
+       "z": 3
+     },
+     {
+       "x": 1,
+       "y": 2.5,
+       "z": 2
+     },
+     {
+       "x": 1,
+       "y": 2.5,
+       "z": 3
+     },
+     {
+       "x": 2.5,
+       "y": 1,
+       "z": 2
+     },
+     {
+       "x": 2.5,
+       "y": 1,
+       "z": 3
+     },
+     {
+       "x": -0.5,
+       "y": 1,
+       "z": 2
+     },
+     {
+       "x": -0.5,
+       "y": 1,
+       "z": 3
+     },
+     {
+       "x": 1,
+       "y": 1,
+       "z": -0.5
+     }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 7 //Absolutely massive for now.
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_AIModule_Guard_(112)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 3.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+ // {//More to the Big Bertha - Anchor
+ //    "SubOverrideName": "m_GSO_Base_Fixed_Top_111",
+ //    "DestroySubReferenceRenderer": true,
+ //    "DestroyExistingColliders": true,
+ //    "MeshName": "m_GSO_BigBertha_556_MainPart.obj",
+ //    "ColliderMeshName": "m_GSO_BigBertha_556_MainPart.obj",//"m_GSO_BigBertha_548_ShockAbsorber_MOD_Instance.obj",
+ //    "MeshTextureName": null,
+ //    "MeshMaterialName": "GSO_Main",
+ //    //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+ //  },
+ //  { //More to the Big Bertha - Base
+ //    "SubOverrideName": "GSO_Anchor",
+ //    "DestroySubReferenceRenderer": true,
+ //    "DestroyExistingColliders": true,
+ //    "MeshName": "m_GSO_BigBertha_556_Wheels.obj",
+ //    "ColliderMeshName": null,//"m_GSO_BigBertha_548_ShockAbsorber_MOD_Instance.obj",
+ //    "MeshTextureName": null,
+ //    "MeshMaterialName": "GSO_Main",
+ //    //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+ //  }
+],
+	
+  //
+  // Deadly Laser
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|HE_AIModule_Guard_112": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":3, "y":3, "z":3.5 },
+        "localPosition": { "x":1, "y":1, "z":1.25 }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_1": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":3, "y":3, "z":3 },
+          "localPosition": { "x":0, "y":0.4, "z":0 }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_2": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":3, "y":3, "z":3 },
+          "localPosition": { "x":0, "y":0.4, "z":0 }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_3": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":3, "y":3, "z":3 },
+          "localPosition": { "x":0, "y":0.4, "z":0 }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_4": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":3, "y":3, "z":3 },
+          "localPosition": { "x":0, "y":0.4, "z":0 }
+        }
+      }
+    },
+    "GameObject|_wheels": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":3.25, "y":3, "z":4 },
+        "localPosition": { "x":1, "y":1.4, "z":2 }
+      }
+    },
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+             //"rotationAxis": "Free",
+        "rotationLimits": [-60, 60]
+      }, //For horizontal aim restrictions - Doesn't work on this Turret though
+      "UnityEngine.Transform": {
+        "localScale": { "x":3, "y":3, "z":5.5 },
+        "localPosition": { "x":2, "y":1.75, "z":1.75 }
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          //"rotationAxis": "Free",
+          "rotationLimits": [-75, 25] //Vertical aim restrictions
+        },
+        "GameObject|_barrel": {
+          // "UnityEngine.Transform": {
+          //   "localScale": { "x":3, "y":3, "z":6 }
+          // },
+          "GameObject|_recoiler": {
+            "GameObject|m_HE_AIModule_Guard_112_Gun": {
+              // "UnityEngine.Transform": {
+              //   "localScale": { "x":3, "y":3, "z":6 }
+              // }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|CentreOfMass": {
+        "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":1, "y":0.2, "z":4.25 }
+      }
+    },
+    "GameObject|Spotlight": {
+        "UnityEngine.Transform": {
+        //"localScale": { "x":3, "y":3, "z":3 },
+        "localPosition": { "x":1, "y":1.2, "z":3.75 }
+      }
+    },
+    "ModuleWheels": { //WHEELS
+      "m_TorqueParams": { //How stronk?
+        "torqueCurveMaxRpm": 20000.0, //How fast?
+        "torqueCurveMaxTorque": 17500.0, //How furious?
+        "torqueCurveDrive": {
+            // "m_Ptr": {
+            //   "m_value": {}
+            // }, //"keys" is where the magic happens
+          // "keys": [
+          //   {"m_Time":0, "m_Value":1}, //edit THIS "m_Value" to change the speed. I am still figuring ot the others.
+          //   {"m_Time":0.2, "m_Value":0.9}, //HOLD ON dammit
+          //   {"m_Time":0.4, "m_Value":0.6},
+          //   {"m_Time":1, "m_Value":0.3},
+          //   {"m_Time":5, "m_Value":0}
+          // ],//HAH! Works lol, well, only one value rip //Trashed: {"m_Time":0.2, "m_Value":2000},{"m_Time":0.5, "m_Value":6000},{"m_Time":0.9, "m_Value":1500},{"m_Time":1, "m_Value":1000}, {"m_Time":5, "m_Value":0}
+          "length": 5, //How many complete {}'s in "keys" there are
+          "preWrapMode": 8, //idk what this is
+          "postWrapMode": 8 //idk what this is
+        },
+        "passiveBrakeMaxTorque": 1000.0, //BRAKES: IMPORTANT OR SLIDE
+        "reverseBrakeMaxRpm": 150.0, //How fast the wheels go to counteract sliding
+        "basicFrictionTorque": 2.0, //Not sure
+        "fullCompressFrictionTorque": 50.0 //slowdown caused by wheel overload
+      },
+      "m_WheelParams": {
+        "tireProperties": {
+          "props": {
+      //       "frictionLong": {
+      //         //"m_Ptr": "Depth exceeded!", //F*ck
+      //         "keys": [], //wat - Probably like the KSP stuff or the thing above
+      //         "length": 5,
+      //         "preWrapMode": 8,
+      //         "postWrapMode": 8
+      //       },
+      //       "frictionLat": {
+      //         //"m_Ptr": "Depth exceeded!",
+      //         "keys": [], //wat
+      //         "length": 6,
+      //         "preWrapMode": 8,
+      //         "postWrapMode": 8
+      //       },
+            "frictionScaleLong": 1.0,
+            "frictionScaleLat": 1.0,
+            "gripFactorLong": 3.0, //Prevent skidd
+            "gripFactorLat": 6.0  //Prevent slipp
+          }
+        },
+        "radius": 0.8, //"Size" of wheels
+        "thicknessAngular": 35.0, //THICC
+        "suspensionSpring": 12000.0, //Max wheel load capacity related
+        "suspensionDamper": 250.0, //Max wheel load capacity related
+        "maxSuspensionAcceleration": 0.0, //Prevent "sparks" on bumps
+        "suspensionQuadratic": true, //Max wheel load capacity related
+        "suspensionTravel": 0.3, //Max wheel load capacity related
+        "steerAngleMax": 35.0, //Max Turn
+        "steerSpeed": 50.0  // How fast the wheels turn to steer
+      },
+      "m_DriveTurnPower": 1.0, //Diverted power for tank steering
+      "m_DriveTurnBrake": 0.5, //Slow down the turning
+      "m_DriveTurnDifferential": 0.5, //idk
+      "m_TurnOnSpotPower": 0.75, //Definitive Tank turning
+      "m_DustMinimumRPM": 20.0,
+      "m_DustParticlesPrefab": null,
+      "m_SuspensionSparkParticlesPrefab": null,
+      "m_SuspensionSparksTransform": null,
+      //"m_SuspensionWarningWaitTime": 5.0, //YOUR WHEELS ARE OVERLOADED
+      //"m_WheelGeometry": [],
+      "m_UseTireTracks": true, //wheel vs tread tracks
+      "m_WheelTrackType": 0,
+      "m_AudioType": 0,
+      "m_Enabled": true,
+      "m_Animated": false, // is something visually spinning
+      //"m_WheelGeometryColliderObjects": [],
+      "m_TireTrackWidth": 0.84024909,
+      // "m_PrevTireTrackIndex": [
+      //   100,
+      //   101,
+      //   102,
+      //   103
+      // ],
+      "m_PrevTrackType": 1,
+      "m_TracksSkidSpeed": 0.1,
+      "m_TracksMaxSkidSpeed": 1.0,
+      "m_TracksMinSpeed": 5.0,
+      "m_TracksMaxSpeed": 50.0,
+      // "Grounded": true,
+      // "FirstWheelTireRotation": 1064.637,
+      // "AudioType": 0
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "VENCannonRapid", //Firing noise
+      "m_LimitedShootAngle": 180,
+      "m_RotateSpeed" : 12.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.6,
+    },
+    "ModuleTechController": { //Let's-a-Control!
+      "m_PlayerInput": true,
+      "HandlesPlayerInput": true
+    },
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 140, //Bullet speed - Slower than the Zeus' approx. 200 MuzzleVelocity. Tested faster values than Zeus and clipping issues began
+      "m_BulletSprayVariance": 0.15, //Bullet inverse-accuracy 
+      "m_BulletSpin": 0.3, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 20.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {"localScale": { "x":6.5, "y":6.5, "z":7 }},  //BIG FAT Shell - You cannot literally miss seeing this lol                                                                 
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Bullet", //What damage modifier the weapon does
+          "m_Damage": 250 //9001 - was this before LMAO //Damage for successful projectile contact hit
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          //"m_Lifetime": 10, //Time before BOOM
+          //"m_ExplodeAfterLifetime": true,
+          "m_DamageType" : "Explosive", //What damage modifier the projectile hit does
+          //"m_ExplodeOnTerrain": true,
+          //"m_IgnoreCollisionWithBarrel" : true, //Also causes it to be unable to hit other copies of itself
+          //"m_CanHaveGravity" : false,
+          //"m_GravityScale" : 1, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          "m_ImpactSFXType" : "Cannon",
+          //"m_FlightSFXType" : "None", // Allows for homing effect
+          "m_Trail" : {"startWidth": 3},
+          "SeekingProjectile": { //For Tracking Projectiles
+            "m_TurnSpeed" : 1 // How strong the turn is towards the enemy
+          }
+        }
+      }
+    }
+  }
+}

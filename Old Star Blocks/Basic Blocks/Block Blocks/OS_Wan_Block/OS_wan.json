@@ -1,0 +1,33 @@
+{
+  "Name": "Old Star Single Block",
+  "Description": "This here is how the Old Star do. This block was made purly to fill in spots. Dispite to how much the wood cutter's oppinion, he could not disagree with that a 1 block is needed for some spots.",
+  "ID": 300001,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 0,
+  "Price": 666,
+  "HP": 150,
+  "Mass": 0.5,
+  "IconName": "OS_Single_Block_Icon.png",
+  "MeshName": "OS_1x1.obj",
+  "ColliderMeshName": "OS_1x1C.obj",
+  "Recipe": [
+    { "0": "10" },
+    { "5": "2" },
+    { "7": "2" },
+    { "43": "1" }
+  ],
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "APsOnlyAtBottom": false
+}

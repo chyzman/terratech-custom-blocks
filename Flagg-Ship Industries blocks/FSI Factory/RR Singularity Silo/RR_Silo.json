@@ -1,0 +1,531 @@
+
+{
+  "Name": "Reticule Research Singularity Silo",
+  "Description": "An experimental silo that uses a modified SCU to store chunks instead of blocks. The modification allows for up to a thousand of a single chunk. The downside is that it's quite heavy, expensive, and WILL Destroy any chunks in storage when it fails",
+  "ID": 1700247, 
+
+  "Faction": 3,
+  "Category": 7,
+  "Grade": 1,
+  "Price": 102600,
+  "Rarity": 2,
+  "HP": 6250,//
+  "Mass": 25,//
+
+  "IconName": "RR_Silo_Icon",
+  "MeshName": null,
+
+"Recipe":  "45, 45, 45, 45, 45, 45, 45, 45, 59, 59, 64, 64, 64, 64, 64, 64, 66, 66", 	
+	
+	
+	
+	
+	
+	
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 3,
+    "y": 5,
+    "z": 3
+  },
+
+
+  "APs": [
+    {"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	
+	{"x": 2.5, "y": 0, "z": 0},
+	{"x": 2.5, "y": 0, "z": 1},
+	{"x": 2.5, "y": 0, "z": 2},
+	
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 2, "y": 0, "z": -0.5},
+	
+	{"x": 0, "y": 0, "z": 2.5},
+	{"x": 1, "y": 0, "z": 2.5},
+	{"x": 2, "y": 0, "z": 2.5},
+	
+	{"x": 0, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 2, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 2, "y": -0.5, "z": 1},
+	{"x": 0, "y": -0.5, "z": 2},
+	{"x": 1, "y": -0.5, "z": 2},
+	{"x": 2, "y": -0.5, "z": 2},
+  ],
+
+
+  "GamePrefabReference": "GSO_Silo(111)", 
+  "KeepReferenceRenderers": false,
+  "KeepReferenceColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 1
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Block_112",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "m_siloDisplayDefault.obj",
+      "MeshMaterialName": "GSO_Logo",
+    },
+	{
+      "SubOverrideName": "RRSilo",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "RR_Silo_Base.obj",
+	  "ColliderMeshName": "RR_Silo_Base.obj",
+	  "SubPosition":{"x":1,"y":0,"z":1},
+      "MeshMaterialName": "RR_Main",
+    },
+    {
+      "SubOverrideName": "m_Gauge",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "RR_Silo_Gauge.obj",
+      "MeshMaterialName": "GSO_Logo",
+    },
+	{
+      "SubOverrideName": "RRSilo_Shield",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+	  "SubPosition":{"x":1,"y":3,"z":1},
+      "MeshName": "RR_Silo_Base_Shield.obj",
+      "MeshMaterialName": "RR_Main",
+    },
+	{
+      "SubOverrideName": "RRSilo_Core",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "RR_Silo_Base_Core.obj",
+      "MeshMaterialName": "GSO_Logo",
+    },
+  ],
+
+  "JSONBLOCK": {
+  "GameObject|_siloSpawn": {"UnityEngine.Transform": { "localPosition": { "x": 1, "y": 3, "z": 1 },
+"localScale": { "x": 1, "y": 1, "z": 1 }			}},
+  "Reference|GSO_Heart_343/GSO_Inventory_Block_334/Charging_Particles/Charging_EventHorizon":{
+            "UnityEngine.Transform": { "localPosition": { "x": 1, "y": 1.5, "z": 1 },
+"localScale": { "x": 1, "y": 1, "z": 1 }			},
+            // Slow down the effect
+            "ParticleSystem": {	
+        
+		"startDelay": 1,
+		
+        "enableEmission": false,
+        
+      },
+
+            "GameObject|Charging_Static": {
+		"ParticleSystem": {	
+        "startColor": {
+          "r": 0,
+          "g": 0.5,
+          "b": 1,
+          "a": 1
+        },
+        
+        "playbackSpeed": 1,
+		"startDelay": 0,
+        "enableEmission": false,
+        "emissionRate": 1000,
+        "startSize": 3,
+        "startLifetime": 0.002,
+		"startSpeed":0,
+        "maxParticles": 2000,
+      },
+	  "UnityEngine.Transform": { "localPosition": { "x": 1, "y": 0.0, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_01": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_02": {"UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0, "z": 1 },
+"localEulerAngles": { "x": 0, "y": 0, "z": 0 }			}},
+            "GameObject|Ray_03": null,
+            "GameObject|Ray_04": null,
+			
+        },
+  "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/": {
+      "Spinner": {
+        "m_Speed": 0.0,
+        "m_RotationAxis": {
+          "axis": 2
+        },
+        "m_SteerAxis": {
+          "axis": 2
+        },
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 0
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1,
+          "y": 3,
+          "z": 1
+         },
+         "localScale":{
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+        },
+        "ParticleSystem":{
+          "startDelay": 0.0,
+          "loop": true,
+          "playOnAwake": true,
+          "duration": 5.0,
+          "playbackSpeed": 1.0,
+          "enableEmission": true,
+          "emissionRate": 250,
+          "startSpeed": -0.8,
+          "startSize": 0.01,
+          "startRotation": 0.0,
+          "startLifetime": 0.5,
+          "gravityModifier": 0.0,
+          "maxParticles": 1000,
+          "simulationSpace": 0,
+          "scalingMode": 0,
+          "startColor":{
+            "r": 0,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          
+          "sizeOverLifetime": {
+            "enabled": true,
+            "sizeMultiplier": 1.0
+          },
+          "velocityOverLifetime": {
+            "enabled": true,
+            "xMultiplier": 0.0,
+            "yMultiplier": 0.0,
+            "zMultiplier": 0.0,
+            "radialMultiplier": -3
+          },
+          "limitVelocityOverLifetime": {
+            "enabled": true,
+            "dragMultiplier": 0.6,
+            "multiplyDragByParticleSize": false,
+            "multiplyDragByParticleVelocity": false
+          },
+          "sizeBySpeed": {
+            "enabled": false,
+            "sizeMultiplier": 0.5
+          },
+          "rotationOverLifetime": {
+            "enabled": false
+          },
+          "shape": {
+            "box": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "meshScale": 2.0,
+            "randomDirection": false,
+            "enabled": true,
+            "shapeType": 0,
+            "randomDirectionAmount": 0.0,
+            "sphericalDirectionAmount": 0.0,
+            "randomPositionAmount": 0.0,
+            "alignToDirection": false,
+            "radius": 1.72721386,
+            "radiusMode": 0,
+            "radiusSpread": 0.0,
+            "radiusSpeed": {
+              "mode": 0,
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "constantMax": 1.0,
+              "constantMin": 0.0,
+              "constant": 1.0,
+              "curve": null
+            },
+            "radiusSpeedMultiplier": 1.0,
+            "radiusThickness": 1.0,
+            "angle": 360,
+            "length": 5.0,
+            "boxThickness": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "meshShapeType": 0,
+            "mesh": null,
+            "meshRenderer": null,
+            "skinnedMeshRenderer": null,
+            "sprite": null,
+            "spriteRenderer": null,
+            "useMeshMaterialIndex": false,
+            "meshMaterialIndex": 0,
+            "useMeshColors": true,
+            "normalOffset": 0.0,
+            "meshSpawnMode": 0,
+            "meshSpawnSpread": 0.0,
+            "meshSpawnSpeed": {
+              "mode": 0,
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "constantMax": 1.0,
+              "constantMin": 0.0,
+              "constant": 1.0,
+              "curve": null
+            },
+            "meshSpawnSpeedMultiplier": 1.0,
+            "arc": 360.0,
+            "arcMode": 0,
+            "arcSpread": 0.0,
+            "arcSpeed": {
+              "mode": 0,
+              "curveMultiplier": 0.0,
+              "curveMax": null,
+              "curveMin": null,
+              "constantMax": 1.0,
+              "constantMin": 0.0,
+              "constant": 1.0,
+              "curve": null
+            },
+            "arcSpeedMultiplier": 1.0,
+            "donutRadius": 0.2,
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "rotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "texture": null,
+            "textureClipChannel": 3,
+            "textureClipThreshold": 0.0,
+            "textureColorAffectsParticles": true,
+            "textureAlphaAffectsParticles": true,
+            "textureBilinearFiltering": false,
+            "textureUVChannel": 0
+          },
+          "textureSheetAnimation": {
+            "flipU": 0.0,
+            "flipV": 0.0,
+            "enabled": false,
+            "mode": 0,
+            "timeMode": 0,
+            "fps": 30.0,
+            "numTilesX": 1,
+            "numTilesY": 1
+          }
+        },
+        "ParticleSystemRenderer":{
+                "alignment": 0,
+                "renderMode": 0,
+                "sortMode": 0,
+                "lengthScale": 2.0,
+                "velocityScale": 0.0,
+                "cameraVelocityScale": 0.0,
+                "normalDirection": 1.0,
+                "shadowBias": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.005,
+                "maxParticleSize": 0.02,
+                "pivot": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "flip": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "maskInteraction": 0,
+                "trailMaterial": null,
+                "enableGPUInstancing": true,
+                "allowRoll": true,
+                "mesh": {},
+                "meshCount": 0,
+                "activeVertexStreamsCount": 4,
+                "castShadows": false,
+                "motionVectors": true,
+                "useLightProbes": false,
+                "bounds": {
+                  "center": {
+                    "x": 84.96855,
+                    "y": 4.499149,
+                    "z": -121.1819
+                  },
+                  "size": {
+                    "x": 5.518096,
+                    "y": 3.948298,
+                    "z": 5.51219368
+                  },
+                  "extents": {
+                    "x": 2.759048,
+                    "y": 1.974149,
+                    "z": 2.75609684
+                  },
+                  "min": {
+                    "x": 82.2095,
+                    "y": 2.52499986,
+                    "z": -123.937996
+                  },
+                  "max": {
+                    "x": 87.7276,
+                    "y": 6.473298,
+                    "z": -118.425804
+                  }
+                },
+                "enabled": true,
+                "isVisible": false,
+                "shadowCastingMode": 0,
+                "receiveShadows": false,
+                "motionVectorGenerationMode": 1,
+                "lightProbeUsage": 0,
+                "reflectionProbeUsage": 0,
+                "renderingLayerMask": 1,
+                "rendererPriority": 0,
+                "sortingLayerName": "Default",
+                "sortingLayerID": 0,
+                "sortingOrder": 0,
+                "sortingGroupID": 1048575,
+                "sortingGroupOrder": 0,
+                "allowOcclusionWhenDynamic": true,
+                "staticBatchIndex": 0,
+                "isPartOfStaticBatch": false,
+                "lightProbeProxyVolumeOverride": null,
+                "lightmapIndex": -1,
+                "realtimeLightmapIndex": -1,
+                "lightmapScaleOffset": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "realtimeLightmapScaleOffset": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 0.0,
+                  "w": 0.0
+                }
+        },
+		"GameObject|FX_Sparkles":null
+    },
+  
+  "GameObject|RRSilo_Shield":{
+  
+						
+	"Spinner":{
+	  "m_Speed": 0.1,
+      "Speed": 0.1, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        },},
+    //Main Gauge Model
+    "GameObject|m_Gauge": {//the Base model
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.48251, "y":0.60175, "z":0.2 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "RandomAdditions.SiloGauge":{ // Add a display for your ModuleItemSilo
+        "MaxHeightMultiplier": 62.3,      // Scaling of the mesh at full capacity
+        "MinHeightMultiplier": 1,      // Scaling of the mesh at empty
+        "DisplayDampener": 1,          // Dampener for the updating of the display
+
+        "AllowCustomTextures": false,       // Use the existing textures?
+        "UseResourceColorsForGauge": true, // Use stored resource colors for the gauge?
+      },
+    },
+	"GameObject|RRSilo_Core": {//the Base model
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":3, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+      },
+      "RandomAdditions.SiloGauge":{ // Add a display for your ModuleItemSilo
+        "MaxHeightMultiplier": 0.1,      // Scaling of the mesh at full capacity
+        "MinHeightMultiplier": 0.1,      // Scaling of the mesh at empty
+        "DisplayDampener": 1,          // Dampener for the updating of the display
+
+        "AllowCustomTextures": false,       // Use the existing textures?
+        "UseResourceColorsForGauge": true, // Use stored resource colors for the gauge?
+      },
+    },
+    //Main Dice Model
+    "Reference|GSO_Block_112/m_GSO_Block_112": {//
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.49, "y":1, "z":1.8 },
+        "localEulerAngles": { "x":0, "y":-90, "z":0 },
+        "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+      },
+      "UnityEngine.BoxCollider": null,
+      "RandomAdditions.SiloDisplay":{},
+    },
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "RandomAdditions.ModuleItemSilo":{ // Add internal resource storage capacity to your block
+      "StoresBlocksInsteadOfChunks": false,   // Send blocks the the SCU instead of storing chunks?
+      "UseShrinkAnim": true,                  // Do we shrink the items when storing?
+      "MaxOutputRate": 1,                     // Max Rate this silo can output at - also determines stack heights. Leave at 0 to auto-set
+
+      // For Chunks: 
+      "MaxCapacity": 1000,                      // Max resource storage capacity
+      "DestroyContentsOnDestruction": true,  // Is this silo that dirty cheap that if it explodes it destroys all chunks inside?
+    },
+    "ModuleItemStore": {
+      //"m_Capacity": 1000,
+      "m_SingleType": true,//MUST be true!
+    },
+    "ModuleItemHolder": {
+	"m_OverrideBasePositons": [
+            { "x": 0, "y": 0, "z": 1 },]
+      //"m_AcceptFlags": 1,
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 1,
+      //Default
+    },
+    "Damageable": {
+      "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.8,//Default
+    },
+  }
+}

@@ -1,0 +1,14 @@
+# Blender MTL File: 'GC_Thor_Engine.blend'
+# Material Count: 1
+
+newmtl _auto_.004
+Ns 9.000004
+Ka 0.900000 0.900000 0.900000
+Kd 0.800000 0.800000 0.800000
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Program Files (x86)\\Steam\\steamapps\\common\\TerraTech\\Custom Textures\\GC.ExamplePack.tsmod\\(original).png
+map_Ke C:\\Program Files (x86)\\Steam\\steamapps\\common\\TerraTech\\_Export\\Textures\\GC_Battery_424\\GC_3.png

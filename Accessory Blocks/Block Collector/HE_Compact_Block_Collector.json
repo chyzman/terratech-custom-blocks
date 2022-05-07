@@ -1,0 +1,64 @@
+{
+  "Name": "Hawkeye Compact Block Collector",
+  "Description": "Frustrated by conventional magnet and SCU technology, Black Labs developed this block collector to allow hauling of significant quantities of blocks with ease. Each collector can hold 10 blocks, but the form factor allows many to be placed. Like all Hawkeye technology, it is heavy and durable.",
+  "ID": 117103,
+  "Faction": 5, 
+  "Category": 5, 
+  "Grade": 1, 
+  "Price": 8814, 
+  "HP": 1200, 
+  "Mass": 12,
+
+  "Rarity": 1,
+
+  "Recipe":  "44, 44, 45, 45, 50, 50, 56",  
+  "IconName": "HE_Block_Collector.png", 
+  "MeshName": "HE_Block_Collector.obj", 
+  "MeshMaterialName": "HE_Main",
+  "EmissionMode": 1,
+  "ColliderMeshName": "HE_Block_Collector_Collider.obj",
+  
+  "BlockExtents": { "x": 1, "y": 1, "z": 3 },
+  
+   "APs": [ 
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 2 },
+
+    { "x": 0, "y": 0.5, "z": 0 },
+    { "x": 0, "y": 0.5, "z": 2 },
+
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 2 },
+
+    { "x": 0.5, "y": 0, "z": 0 },
+    { "x": 0.5, "y": 0, "z": 2 },
+
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 2.5 },
+  ],
+  
+  "GamePrefabReference": "BF_Collector_111", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset":        { "x": 0, "y": 0, "z": 1 },
+  
+
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 10,
+      "m_AcceptFlags": 1,
+      "m_OverrideBasePositons": [{ "x": 0, "y": 0.5, "z": 1 }]
+	},
+    "ModuleItemHolderBeam": {
+        "m_BeamBaseHeight": 1.0,
+        "m_BeamStrength": 1500,
+        "m_HeightIncrementScale": 1.5
+    },
+    "ModuleItemPickup": {
+        "m_PickupRange": 35.0,
+        "m_Priority": 5
+    }
+  }			
+}

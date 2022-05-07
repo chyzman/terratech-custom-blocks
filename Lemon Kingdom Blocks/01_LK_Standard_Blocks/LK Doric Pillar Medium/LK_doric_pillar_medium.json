@@ -1,0 +1,107 @@
+/*
+This was a request from Venom who wanted to make a mobile building. He wanted a large, pillar-like block that he can use, so here it is.
+Pros:   High HP and uses armor
+Cons:   Heavy, expensive and also only has APs on top and bottom.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Doric Medium Pillar",
+    "Description":          "A fine pillar to quickly build civic structures and military bases. It's well-armored too. However, it's quite heavy.",
+
+    "ID": 419022,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 2,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 25824,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body: 24 Titanic Alloy, 8 Plubonic Alloy, 24 Titania Ingot
+    */
+    "Recipe" : {
+      "54" : 24, "53" : 8, "7": 24
+    },
+    
+    "IconName":                   "LK_doric_pillar_medium_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                      // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                      // Name of the block's collider.
+    "NoBoxCollider":              true,                                      // When set to false, this enables the block to create a box collider when no custom mesh collider is assigned.
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+
+    // Basic Block Values
+    "HP": 12000,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 60,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 6, "z": 2 },
+
+    "APs": [
+      // Bottom APs
+      {"x": 0.0, "y": -0.5, "z": 0.0}, {"x": 0.0, "y": -0.5, "z": 1.0},  
+      {"x": 1.0, "y": -0.5, "z": 0.0}, {"x": 1.0, "y": -0.5, "z": 1.0},  
+
+      // Top APs
+      {"x": 0.0, "y": 5.5, "z": 0.0}, {"x": 0.0, "y": 5.5, "z": 1.0},  
+      {"x": 1.0, "y": 5.5, "z": 0.0}, {"x": 1.0, "y": 5.5, "z": 1.0},  
+    ],
+
+    //Edit the block's meshes here
+    "SubObjects":[
+      {     
+        "ObjectName" :                "body",
+        "MeshName":                   "LK_doric_pillar_medium_body.obj",
+        "MeshColliderName":           "LK_doric_pillar_medium_body_col.obj",
+        "Position":                   { "x": 0.5, "y": -0.5, "z": 0.5 },
+      }
+    ]
+
+  }

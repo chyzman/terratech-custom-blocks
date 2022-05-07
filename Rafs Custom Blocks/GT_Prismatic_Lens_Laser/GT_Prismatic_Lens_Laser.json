@@ -1,0 +1,411 @@
+{
+  "Name": "GreenTech Prismatic Lens Laser",
+  "Description": "Do not fool yourself with the fragile appearance of this small weapon, the beam of light that comes from the prism does a good amount of damage. It uses many different crystals and their combined wavelengths to create a wide spectrum laser.\nUsing multiple lasers will allow for focused attacks, melting their way to the enemy cab.",
+  
+  "ID": 911123,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 2,  
+  "Price": 2244,
+  "HP": 300,
+  "Mass": 1.0,
+  
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "5, 15, 17, 19, 32", 
+  "IconName": "GT_Prismatic_Lens_Laser_Icon.png", 
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+
+  "GamePrefabReference": "BF_Laser_Turret_313",
+  "KeepRenderers": false,
+  "Keepcolliders": false,
+  //"DeathExplosionReference": "GSO_MGun_Fixed_111",
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Laser_Turret_313",
+      "MeshName": "GT_Prismatic_Lens_Laser_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "ColliderMeshName": "GT_Prismatic_Lens_Laser_Base_Collider.obj"
+    },
+    {
+      "SubOverrideName": "Barrel",
+      "MeshName": "GT_Prismatic_Lens_Laser_Barrel.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "ColliderMeshName": "GT_Prismatic_Lens_Laser_Barrel_Collider.obj",
+    "layer":8
+    },
+    {
+      "SubOverrideName": "BarrelRGB",
+      "MeshName": "GT_Prismatic_Lens_Laser_Barrel_RGB.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Gimbal",
+      "MeshName": "GT_Prismatic_Lens_Laser_Gimbal.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "Prism",
+      "MeshName": "GT_Prismatic_Lens_Laser_Prism.obj", 
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "SubOverrideName": "Prism2",
+      "MeshName": "GT_Prismatic_Lens_Laser_Prism.obj", 
+      "MeshMaterialName":"LaserBeam"//"LaserBeam""UI_Throttle_trans""Mat_BoosterRocketFlame"
+    },
+    {
+      "SubOverrideName": "Prism3",
+      "MeshName": "GT_Prismatic_Lens_Laser_Prism.obj", 
+      "MeshMaterialName": "HE_Shield_Inner"
+    },
+    {
+      "SubOverrideName": "Prism4",
+      "MeshName": "GT_Prismatic_Lens_Laser_Prism.obj", 
+      "MeshMaterialName": "HE_Shield_Outer"
+    }
+  ], 
+
+  "JSONBLOCK": {
+    "ModuleWeapon": {
+      "m_FireSFXType": 87,
+      "m_RotateSpeed": 400.0,
+      "m_ChangeTargetInteval": 0.01
+    },
+    "ModuleWeaponGun": {
+      "m_DeploySFXType": 0
+    },
+
+    "GameObject|_gimbalBase": {
+     "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.135,
+        "z": 0.0
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       }
+     },
+     "GameObject|Gimbal": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": -0.135,
+          "z": 0.0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       }
+     },
+      "GimbalAimer": { //Useful component - Horizontal Aiming
+       "rotationLimits": [-180, 180] //[-Left,+Right](Degrees)
+     },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "GameObject|Barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+             },
+             "localEulerAngles": {
+              "x": 45,
+              "y": 0,
+              "z": 0
+             }
+           }
+           },
+   "GimbalAimer": { //Useful component - Vertical Aiming
+           "rotationLimits": [-90, 45] //[-Up,+Down](Degrees)
+           
+         },
+        "GameObject|_barrel": {
+          "Spinner": {
+            "m_Speed": 3.0,
+            "m_SpinUpTime": 0.1
+          },
+          "GameObject|BarrelRGB": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+               },
+               "localEulerAngles": {
+                "x": 45,
+                "y": 0,
+                "z": 0
+               }
+             },
+             "GameObject|Prism": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+             },
+             "GameObject|Prism2": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+             },
+             "GameObject|Prism3": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+             },
+             "GameObject|Prism4": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+             }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_light": {
+              "UnityEngine.Light": {
+                     "shadows": 1,
+                "spotAngle": 93.1,
+               "color": { "r": 1.0, "g": 1.0, "b": 1, "a": 1.0 },
+               "range": 0.4,
+             "intensity": 5
+           }
+         }
+          },
+       "GameObject|_beam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.3
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "BeamWeapon": {
+             "m_Range": 35.0,
+             "m_DamagePerSecond": 300,
+             "m_DamageType": 2, //7 is plasma
+           "m_FadeOutTime": 0.5,
+           "Instantiate|m_HitParticlesPrefab": {
+             "UnityEngine.ParticleSystem": {
+               "startColor": { "r": 1.0, "g": 0.4, "b": 0.0, "a": 1.0 },
+               "startSize": 0.5,
+               "shape": {
+                 "scale": { "x": 1, "y": 1, "z": 1 },
+                 "rotation": { "x": 0, "y": 180, "z": 0 }
+               }
+             }
+           }
+         },
+         "UnityEngine.LineRenderer": {
+          "startWidth": 0.18,
+          "endWidth": 0.1,
+          "textureMode": 0,
+							"numCapVertices": 0,
+							"material": {
+								"mainTexture": "Prismatic_Beam_White.png"
+							}
+         }
+       }
+     },
+     "Duplicate|_barrel": {
+      "GameObject|Barrel": null,
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+       "GameObject|_beam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.16,
+            "z": 0.08
+           },
+           "localEulerAngles": {
+            "x": 45,
+            "y": 0,
+            "z": 0
+           }
+         },
+         "BeamWeapon": {
+          "m_Range": 0.27,
+          "m_DamagePerSecond": 1,
+           "m_DamageType": 2,
+           "m_FadeOutTime": 0.5,
+           "Instantiate|m_HitParticlesPrefab": {
+             "UnityEngine.ParticleSystem": {
+               "startSize": 0
+             }
+           }
+         },
+         "UnityEngine.LineRenderer": {
+           "startWidth": 0.15,
+           "endWidth": 0.12,
+           "material": {
+            "mainTexture": "Prismatic_Beam_Red.png"
+          }
+         }
+       }
+     },
+     "Duplicate|_barrel_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+        },
+        "GameObject|_beam": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -0.16,
+              "y": -0.09,
+              "z": 0.05
+             },
+             "localEulerAngles": {
+              "x": -20,
+              "y": 40,
+              "z": 0
+             }
+           },
+          "UnityEngine.LineRenderer": {
+            "material": {
+             "mainTexture": "Prismatic_Beam_Green.png"
+           }
+          }
+        }
+     },
+     "Duplicate|_barrel_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+       "GameObject|_beam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.16,
+            "y": -0.09,
+            "z": 0.05
+           },
+           "localEulerAngles": {
+            "x": -20,
+            "y": -40,
+            "z": 0
+           }
+         },
+        "UnityEngine.LineRenderer": {
+          "material": {
+           "mainTexture": "Prismatic_Beam_Blue.png"
+         }
+        }
+      }
+     }
+   }
+ }
+}
+}

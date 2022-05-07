@@ -1,0 +1,81 @@
+{
+  "Name": "Hawkeye Combat Vehicle Headlight",
+  "Description": "An armored headlight for night time convoys.",
+  "ID": 117073,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 0,
+  "Grade": 0,
+  "Price": 1146,
+  "HP": 1600,
+  "Mass": 2,
+  "EmissionMode": 2,
+
+  "Recipe": "5, 5, 7, 7, 32, 32, 45, 45",
+
+  "IconName": "HE_Headlight.png",
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "Fragility": 0,
+
+  "Cells": [
+    { "x": 0,     "y": 0,    "z": 0  },
+    { "x": -1,     "y": 0,    "z": 0  },
+  ], 
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": -0.5  },
+    { "x": -1,     "y": 0,    "z": -0.5  },
+    { "x": 0.5,     "y": 0,    "z": 0 },
+
+    { "x": 0,     "y": 0.5,    "z": 0 },
+    { "x": 0,     "y": -0.5,    "z": 0 },
+
+    { "x": -1,     "y": 0.5,    "z": 0 },
+    { "x": -1,     "y": -0.5,    "z": 0 },
+  ],
+
+  "SubObjects": [
+    {
+        "SubOverrideName": "m_GC_fixedlight",
+        "MeshName": "HE_Headlight.obj",
+        "ColliderMeshName": "HE_Headlight_Collider.obj",
+        "Subposition": {  "x": 0,     "y": 0,    "z": 0  },
+        "Subrotation": {  "x": 90,     "y": 0,    "z": 0  },
+        "MeshMaterialName": "HE_Main",
+    },
+    {
+        "SubOverrideName": "Lightbulbs",
+        "MeshName": "HE_Headlight_Lightbulbs.obj",
+        "ColliderMeshName": null,
+        "Subposition": {  "x": 0,     "y": 0,    "z": 0  },
+        "Subrotation": {  "x": 90,     "y": 0,    "z": 0  },
+        "MeshMaterialName": "GC_Main",
+    },
+],
+
+"GamePrefabReference": "GC_Light_Fixed_111",
+
+"JSONBLOCK": {
+    "GameObject|Lights": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": -0.5, "y": 0, "z": 0 },
+       },
+        "GameObject|GC_Fixedlight": {
+          "UnityEngine.Light":{
+            "color": {
+                "r": 1,
+                "g": 0.8,
+                "b": 0.6,
+                "a": 1.0
+              },
+            "intensity": 2,
+            "range": 120.0,
+            "spotAngle": 105.0
+          }
+        },
+    }
+  }
+
+}

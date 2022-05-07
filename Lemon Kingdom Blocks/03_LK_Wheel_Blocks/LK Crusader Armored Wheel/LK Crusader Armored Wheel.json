@@ -1,0 +1,227 @@
+/*
+This is the "Small" Wheel for LK. 
+Pros:   Ultra-strong grip rivaling the Behemoth Wheel, very durable and has a high carrying capacity
+Cons:   Extremely slow (20mph), expensive and very heavy for its size.
+
+Update: It can now damage objects by touch alone
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Crusader Armored Wheel",
+    "Description":          "A durable wheel designed for harsh environments. It may be slow and can barely turn, but it has excellent grip, carrying capacity and will damage obstacles in its path. \n\n 'By chaining 16 Thermo Jets together in a radial layout, my team have made the most powerful engine in the off-world! Even better, the King has heard of our creation and has given us research funding! What a joyous day!' \n\n - Gregory Rook, Guildsman, Note #32 ",
+
+    "ID": 419003,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 3,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare      
+                                             
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+
+    "Price": 160392,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body:  64 Titanic Alloy, 12 Plubonic Alloy 
+              Engine:     16 Thermo Jet, 12 Fuel Injector
+    */
+    "Recipe" : {
+      // Main Body
+      "54": 64,
+      "53": 12,
+      // Engine
+      "63": 16,
+      "47": 12
+    },
+
+
+    "IconName": "LK_crusader_armored_wheel_icon.png",       //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+    "MeshName": null,                                       //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+    
+    "MeshTextureName":      "LK_tex_1.png",
+    "MeshGlossTextureName": "LK_tex_2.png",
+
+    // Basic Block HP Values
+    "HP": 19200,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 128,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 4,"y": 4, "z": 4 },
+
+    "APs": [
+      // 1st Row Back
+      { "x": -0.5, "y": 3.0, "z": 0.0 }, { "x": -0.5, "y": 3.0, "z": 1.0 },
+      { "x": -0.5, "y": 3.0, "z": 2.0 }, { "x": -0.5, "y": 3.0, "z": 3.0 },
+
+      // 2nd Row Back
+      { "x": -0.5, "y": 2.0, "z": 0.0 }, { "x": -0.5, "y": 2.0, "z": 1.0 },
+      { "x": -0.5, "y": 2.0, "z": 2.0 }, { "x": -0.5, "y": 2.0, "z": 3.0 },
+
+      // 3rd Row Top
+      { "x": 0.0,  "y": 3.5, "z": 0.0 }, { "x": 0.0, "y": 3.5,  "z": 3.0 },
+
+      // Front & Back APs
+      { "x": 0.0,  "y": 2.0, "z": 3.5 }, { "x": 0.0, "y": 2.0, "z": -0.5 }, 
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference":      "HEWheelLarge(244)",
+    "KeepReferenceRenderers":   true,
+    "ReferenceOffset":          { "x": -0.1, "y": 1.0, "z": 1 },
+     
+    "SubObjects": [
+        {
+          "SubOverrideName":          "m_HE_WheelLarge_244_Base",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+          "MeshName":                 "LK_crusader_armored_wheel_A.obj",
+          "ColliderMeshName":         "LK_crusader_armored_wheel_A_col.obj",
+          "SubPosition":              { "x": -0.5, "y": 0.5, "z": 2.5 },
+        },
+        
+        {
+          "SubOverrideName":          "m_HE_WheelLarge_244_Tyre",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+          "MeshName":                 "LK_crusader_armored_wheel_B.obj",
+          "ColliderMeshName":         "LK_crusader_armored_wheel_B_col.obj",
+          "Layer": 8
+        },
+
+        {
+          "ObjectName":               "meleeCollider",    
+          "ColliderMeshName":         "LK_crusader_armored_wheel_melee_col.obj",
+          "Layer":                    14
+        }
+    ],
+    
+    "Deserializer":{
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":2, "y":1.5, "z":1.5 }
+        },
+
+        "GameObject|meleeCollider":{
+          "UnityEngine.MeshCollider": {},
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0}
+          },
+        },
+  
+      },
+      
+      // Torque Parameters
+      "ModuleWheels": {
+        "m_TorqueParams": {
+          "torqueCurveMaxTorque": 1000000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                                // A high torque value is good for offroad wheels.
+
+          "torqueCurveMaxRpm":    35.0,         //  Dictates the speed of the wheel. A higher number is faster. 
+                                                // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+          "passiveBrakeMaxTorque": 300000.0,    // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+          "reverseBrakeMaxRpm": 1000.0,         // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+          "basicFrictionTorque": 1000.0,        // Dictates how strong the wheel brakes are when not moving.
+          "fullCompressFrictionTorque": 5000.0
+        },
+        
+        // Aesthetic parameters
+        "m_UseTireTracks": true,                  // Enables the wheel to leave tire tracks
+        "m_WheelTrackType": 2,                    // Changes the tracks the wheel leaves behind
+        "m_AudioType": 1,                         // Changes the sound of the wheels when running
+                                                  // 1 = Heavy GeoCorp wheels
+        "m_TireTrackWidth": 10000,                // Does not work; supposedly, it should be able to change the width of the tire tracks.
+
+        "m_WheelParams":{
+          // Basic Wheel parameters
+          "radius":                     2.0,      // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+          "steerAngleMax":              5.0,      // Dictates how much the wheel is able to turn.
+          "steerSpeed":                 5,        // Dictates the time it takes for the wheel to fully go into turning position.
+          "thicknessAngular":           38.5,     // Dictates the width of the tire tracks
+
+          // Tire Parameters
+          "Instantiate|tireProperties":{
+            "Instantiate|props":{
+              "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+              "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+              "gripFactorLong": 20.0,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+              "gripFactorLat": 20.0                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+            }
+          },
+
+          // Suspension parameters
+          "suspensionSpring":           50000.0,    // Dictates the amount of bounciness of the suspension's spring. 
+                                                    // It also affects the wheel's ability to carry weight.
+
+          "suspensionDamper":           1000.0,     // This tells the suspension how much the springiness will be dampened. 
+                                                    // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+          "maxSuspensionAcceleration":  0.0,
+          "suspensionQuadratic":        true,
+          "suspensionTravel":           0.25,       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+          
+          "m_wheels": {
+            "m_DriveTurnPower": 1.0,
+            "m_DriveTurnBrake": 0.1,
+            "m_DriveTurnDifferential": 0.8,
+            "m_TurnOnSpotPower": 1.0,
+            "Capacity": 4,
+          },
+        }
+      },
+
+      "ModuleDrill":{
+        "activeColliders": [                                            // The list of colliders the weapon will use. This is required for the melee weapon to function
+          "_wheel/meleeCollider/MeshCollider."              // Use the collider from above
+        ], 
+        "impactDamageMultiplier": 10.0,          // Dictates the damage the weapon deals when hitting an enemy.
+        "damagePerSecond": 200.0,                // Dictates the damage this weapon deals per second.
+        "m_DamageType": 4,                      // Dictates the damage type that the weapon will deal
+  
+        "scaleHitParticles": 1.0                // Dictates the size of the particles emitted when the weapon hits something. (Somehow doesn't work)
+      },
+
+
+    }
+}

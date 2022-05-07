@@ -1,0 +1,405 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC AIM-ALL Aiming Panel Shield",
+  "Description": "Deploys a targeted shield some distance away from the block, projecting it to allow protection of an area far out of ordinary shield generator reach.  However it leaves itself defenseless in the process and drains a bit more power when idle than traditional shields. \n\nIt can block a VERY POWERFUL atomic assault if used correctly. \nThis shield works best on rotating multi-Techs, or when you need to stop the threat far before it hits. \nIt can't do much against boomerangs and has <b>absolutely nothing</b> against lobbed shots. \n\nThis is also known as \"The Hand\", as it is incredibly effective at denying fast, powerful attacks. \n\n\nI don't know why we get so many complaints that the generator breaks when it is hit.  I mean the bubble is LITERALLY far away from the generator!  Bullets HIT the SHIELD, not the block!", //You can make multiple lines with \n
+  "ID": 584272, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 58590, //more tha 3x more expensive than Havoc - Same as Broadbody, but much further reach with greater effciency at the cost of covering far less area-wise
+  "HP": 7250,//Weak for the area consumed
+  "Mass": 64.0,//1 mass per block consumed
+
+  "IconName": "GimbalGod.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 49, 49, 51, 52, 52, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 56, 56, 56, 56, 60, 63, 63, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom
+    { "x":1, "y":-0.5, "z":1 },
+    { "x":2, "y":-0.5, "z":1 },
+    { "x":1, "y":-0.5, "z":2 },
+    { "x":2, "y":-0.5, "z":2 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 4,
+    "z": 4 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Shield_Bubble(111)",//(was VEN_FuelTank(212))VERY explosive. - Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 1, "y": 1, "z": 14.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_VEN_Shield_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACInterceptGunBase.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Elevation Part
+      "SubOverrideName": "m_Barrel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_AIMALLElev.obj",
+      "ColliderMeshName": "TAC_AIMALLElev.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Sphere Part
+      "SubOverrideName": "m_Sphere",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "ShieldBallBlueGlow.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "BF_Main"
+    },
+    { //Azimuth Part
+      "SubOverrideName": "m_RotPart",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_AIMALLRotPart.obj",
+      "ColliderMeshName": "TAC_AIMALLRotPart.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Broadcasting Glow Part
+      "SubOverrideName": "ShieldMesh_Beam",
+      // "DestroySubReferenceRenderer": true,
+      // "DestroyExistingColliders": true,
+      "MeshName": "TAC_Steriopticon_Glow.obj",
+      "MakeBoxCollider": false,
+      // "MeshTextureName": null,
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|FXGSOShieldCharge(Clone)": { //The Bubble Charging effect
+      "GameObject|FXGSOShieldCharge 1": {
+      }
+    },
+    "GameObject|aCol": {
+      "UnityEngine.SphereCollider": {
+        "radius": 0.0,
+        "center": { "x": 1.5, "y": 1.5, "z": 1.5 },
+      }
+    },
+    // "GameObject|m_Truss_1": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1.8, "y":1.5, "z":1.8 },
+    //     "localEulerAngles": { "x":0, "y":45, "z":0 },
+    //     "localPosition": { "x":0, "y":1, "z":1 } 
+    //   },
+    // },
+    "GameObject|_shield": { //The actual Shield
+      "UnityEngine.Transform": {
+        "localScale": { "x":2.0, "y":2.0, "z":0.4 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":2.2, "z":1.5 } 
+      },
+      "GameObject|b_RotTarget": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":1.25 } 
+        },
+      },
+	    "GameObject|m_Sphere": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":0.225, "y":0.225, "z":1.5 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":1.25 } 
+	      },
+	    },
+	    "GameObject|b_Barrel": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":0.5, "y":0.5, "z":2.5 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":-1.15, "z":0 } 
+	      },
+	    },
+      "GameObject|b_Glow": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":2.5 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+      },
+      "GimbalAimer": {
+        "rotationAxis": 0, // Free, X, Y
+        "rotationLimits": [
+          -180.0,
+          180.0
+        ],
+        "aimClampMaxPercent": 1.0,
+        // "currentAngle": 0.0
+      },
+      "GameObject|_bubble": {
+	      "UnityEngine.Transform": {
+	        // "localScale": { "x":1, "y":1, "z":0.1 },
+	        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":125.0 } 
+	      },          
+        "GameObject|_Glow": {//Broadcasting effect
+          "FollowTransform": {//snap to the broadcasting lens
+            "m_TransformToFollow": "/_shield/b_Glow",
+            "m_FollowOrientation": true,
+          },
+          "Reference|VEN_Shield_Targeting_111/_gimbalBase/_gimbalElev/_shield/_bubble/ShieldMesh_Edge/ShieldMesh_Beam": { //Broadcasting effect
+            "UnityEngine.Transform": {
+              "localScale": { "x":0.5, "y":0.5, "z":1.125 },
+              "localPosition": { "x":0, "y":0, "z":0.225 } 
+            },          
+          },
+        },
+		    "Reference|HE_Laser_Targetting_111/Spotlight_Red": { //Aiming mode
+	        "UnityEngine.Light": {
+	          "color": {
+	            "r": 0.2,
+	            "g": 0.2,
+	            "b": 1.0,
+	            "a": 0.2
+	          },
+            "range": 30.0,
+	        },
+		    },
+        "GameObject|_bubbleTechTrigger": {
+          // "UnityEngine_SphereCollider": { //Cannot change directly, "ModuleShieldGenerator" overrules this
+          //   "radius": 0.5
+          // },
+        },
+        "GameObject|_bubbleBulletTrigger": {
+        },
+        "GameObject|_bubbleCollider": {
+        },
+        "GameObject|ShieldSphereEdge": {
+          "GameObject|ShieldSphereInner": {
+          },
+          "GameObject|ShieldSphereOuter": {
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.0,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.05,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+      "GameObject|_projector": {
+        "GameObject|_particles4": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles3": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles2": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles1": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        }
+      }
+    },
+    //Gimbal alignment
+    "GameObject|b_RotBase": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":-0.2, "z":1.5 } 
+      },
+    },
+    //Following gimbal effect
+    "GameObject|m_Barrel": {//Get the correct colors
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-1.15, "z":0 } 
+      },
+      "FollowTransform": {//follow the shield
+        "m_TransformToFollow": "/_shield/b_Barrel",
+        "m_FollowOrientation": true,
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+    "GameObject|m_RotPart": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":-0.1, "z":1.5 } 
+      },
+      "FollowSuspension": {//Follow the aiming
+        "m_TargetWheelTrans": "/b_RotBase",
+        "m_TargetUpTrans": "/_shield/b_RotTarget",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.25,
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+
+    //Base colliders
+    "GameObject|m_VEN_Shield_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":2.0, "y":3.5, "z":2.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":-0.5, "z":1.5 } 
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+        },
+      },
+    },
+	  "TargetAimer": {
+	    "m_ChangeTargetInteval": 3.5,
+	    "rotateSpeed": 0.5,
+	  },
+	  "ModuleLight": {
+	    "m_RotateSpeed": 0.5,
+	  },
+
+
+    // "Damageable": 
+    // { //Modify the base stats
+    //   //"m_OrigMaxHealth": 300.0,
+    //   "m_DamageableType": 1,
+    //   //"m_HealingOrigin": null,
+    //   //"m_AoEDamageBlockPercent": 3.0, //Damage taken from splash
+    //   // "destroyOnDeath": false,
+    //   // "damageThresholdEvent": null,
+    //   // "m_NextThreshold": 0.0,
+    //   // "m_InvulnerableEndTime": -1.0,
+    //   // "m_Invulnerable": false //Hmmmmmm...
+    //   // "m_HealthFixed": 1228800,
+    //   // "m_MaxHealthFixed": 1228800,
+    // },
+    "ModuleShieldGenerator": {
+      "m_Radius": 12.5,//this x2
+      "m_MaxScale": 12.5,//this x2
+      "m_EnergyConsumptionPerSec": 2.5, //Effcient, but small
+      "m_InitialChargeEnergy": 100,//You must kickstart it - Projectors take less to start, but more to maintain.
+      "m_InterpTimeOn": 1.0, //How fast the shield inflates
+      "m_InterpTimeOff": 1.0,//How fast the shield deflates The Grudge refuses to back down
+      // "m_ParticleLife": 1.0,
+      // "m_ParticleSpeed": 10.0,
+      // "m_Repulsion": true,
+      // "m_RepelKick": 5.0,
+      // "m_RepelKickAngular": 5.0,
+      "m_EnergyConsumedPerDamagePoint": 0.55,// More than VEN's 0.25 - CRAZY consumption to deny NUKES
+      "m_Healing": false,
+      "m_HealingHeartbeatInterval": 0.75,
+      "m_MaxHealingPerHeartbeat": 100.0,
+      "m_EnergyConsumedPerPointHealed": 0.1,
+      "m_PowerUpDelay": 1.0,
+      "m_MinTechForce": 50.0,
+      "m_MaxTechForce": 100.0,
+      // "m_Shield": {
+      //   "m_Speed": 0.05,
+      //   "m_RotationAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_SteerAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_AutoSpin": false,
+      //   "m_SpinUpTime": 1.0,
+      //   "m_CurrentAngle": 0.0,
+      //   "m_CurrentAutoSpeed": 0.0,
+      //   "m_CurrentSpeedFraction": 0.0,
+      //   "m_SpinnerSound": null,
+      //   "m_SpinnerSoundOriginalPitch": 0.0,
+      //   "Speed": 0.05,
+      //   "SpeedFraction": 0.0,
+      //   "AtFullSpeed": false
+      // },
+      // "m_Projector": null,
+      // "m_RepulsorBulletTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_RepulsorTechTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_TargetScale": 0.0,
+      // "m_CurrentInterpCurve": null,
+      // "m_InterpStartTime": 0.0,
+      // "m_InterpDuration": 0.0,
+      // "m_InterpStartScale": 0.0,
+      // "m_InterpScaleMin": 0.0,
+      // "IsScaling": false,
+      // "CurrentScale": 0.0,
+      // "ShieldRadius": 3.0,
+      // "m_EnergyDeficit": 800.0,
+      // "m_EnergyDrain": 0.0,
+      // "m_HealingHeartbeatNextTime": 322.266449,
+      // "m_TimeWithoutEnergy": 2.3562026,
+      // "m_EnoughPower": false,
+      // "m_ChargingEffect": false,
+      // "m_State": 0,
+      // "m_PowerUpTimer": 5.0,
+      // "m_CachedCollisionFixedFrameCount": 0
+    },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+  }
+}

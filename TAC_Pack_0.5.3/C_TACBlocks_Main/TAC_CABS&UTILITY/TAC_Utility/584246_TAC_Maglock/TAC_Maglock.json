@@ -1,0 +1,300 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Maglock Block Magnet",
+  "Description": "A Magnet that can grab HUGE objects from FAR distances, but only 4-5 of them.  We would NOT advise using this on small techs, dispite it's minimal size. \n\nNow the lackluster carrying capacity may seem like a hefty catch, but if you combine it with an SCU, things can get REAL interesting. \n\n\nYozare can carry this, despite just how heavy this is.",//You can make multiple lines with \n
+  //\nIt is advised to use another corp magnet along with this to hold the retrived blocks, as this passes to them.
+  "ID": 584246, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 5, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 8595,
+  "HP": 5000,
+  "Mass": 8.0,//Heavy
+
+  "IconName": "Grabbbbbb.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 44, 44, 45, 48, 48, 53, 54, 54, 54, 57", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     { "x": 0, "y": -0.5, "z": 0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 2 //Absolutely massive for now.
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+  //This was originally planned to be an anchored AI, but for now that is on hold due to limitations and lack of 
+  //knowledge of adding anchors to blocks that don't have any.
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "GC_ScrapMagnet_(424)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 3 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+  { //Stickyzone
+   "SubOverrideName": "m_GC_ScrapMagnet_424",
+    "DestroyExistingRenderer": true,
+    "DestroyExistingColliders": false,
+    // "MeshName": "TACMaglock3.obj",
+    // "ColliderMeshName": "TACMaglock3.obj",
+    // "MeshTextureName": null,
+    // "MeshMaterialName": "HE_Main",
+  },
+  { //Base
+   "SubOverrideName": "m_GC_ScrapMagnet_424_copy",
+    "DestroySubReferenceRenderer": true,
+    "DestroyExistingColliders": true,
+    "MeshName": "TACMaglock3.obj",
+    "ColliderMeshName": "TACMaglock3.obj",
+    "MeshTextureName": null,
+    "MeshMaterialName": "HE_Main",
+  },
+],
+	
+  //
+  // Deadly Laser
+  //
+  "JSONBLOCK": { //Root GameObject
+    // "GameObject|_glued objects": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":0, "z":2 } 
+    //   },
+    // },
+    "GameObject|m_GC_ScrapMagnet_424": {//Sticky Part
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.3, "y":0.8, "z":0.3 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":0.155, "y":0.155, "z":0.3 } 
+      },
+    },
+    "Duplicate|m_GC_ScrapMagnet_424": {//Visuals
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0.5 } 
+      },
+    },
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":1.25 } 
+      },
+    }, //Back to GameObject
+    // Command stuff
+
+    // Flags
+    // {
+    //   Collector = 0x1,
+    //   Receiver = 0x2,
+    //   Deliverer = 0x4,
+    //   TakeFromSilo = 0x8,
+    //   LinkedStacks = 0x10,
+    //   NoSimpleCollider = 0x20,
+    //   SortLinkedStacks = 0x40,
+    //   NoAcceptDrops = 0x80,
+    //   ReceiverInternal = 0x100
+    // }
+
+    // [Flags]
+    // AcceptFlags
+    // {
+    //   Blocks = 0x1,
+    //   Chunks = 0x2
+    // }
+
+    // [Flags]
+    // PassType
+    // {
+    //   Pick = 0x1,
+    //   Pass = 0x2,
+    //   Drop = 0x4,
+    //   Test = 0x8,
+    //   External = 0x10
+    // }
+    "ModuleItemHolder": {
+      // "m_OverrideBasePositons": [],
+      // "m_OverrideAPConnections": [],
+      "m_StackUpDir": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      },
+      "m_CapacityPerStack": 2,//How much it can hold at max
+      // "m_Flags": 165,
+      // "m_AcceptFlags": -3,
+      // "m_DefaultDropStack": {
+      // },
+      // "m_Stacks": [],
+      // "m_HorizontalBoundsRadius": 2.828427,
+      // "m_ContentsModificationIndex": 1,
+      // "m_AcceptFilterCallback": [],
+      // "m_ReleaseFilterCallback": [],
+      // "m_AnonItemTimeStamp": 0,
+      // "NumContents": 0,
+      // "NumStacks": 1,
+      // "IsEmpty": true,
+      // "IsFull": false,
+      // "TotalCapacityForLimiter": 40,
+      // "Acceptance": -3,
+      // "Conveyor": null,
+      // "Antenna": null,
+      // "ItemStore": null,
+      // "HorizontalBoundsRadius": 2.828427,
+      // "PickupPriority": 5,
+      // "HasPickupContentionPeriod": true,
+      // "PickupContentionPeriod": 0.00100708008,
+      // "RequestVisitedTimestamp": 0
+    },
+
+    "ModuleItemPickup": {
+      "m_PickupRange": 75.0,//Dat's a lotta range, GEO is 40.0
+      "m_PickupSortBuckets": 2,//idk
+      "m_VisionRefreshInterval": 1.0, //How frequently it checks for new blocks in range.
+      "m_AcceptNeutral": false, //idk, probably means if it accepts players on neutral handing over to the player
+      "m_PrePickupPeriod": 0.25, //GEO is 3.0 //How long does block remain there in range until it gets grabbed?
+      "m_PickupAfterMinInterval": 2.0,//How long until if the magnet gives up for others to grab the dropped block?
+      "m_HandoverAfterMinInterval": 0.25,//how long until we allow others to take from this Magnet?
+      "m_Priority": 25,//this magnet grab before others?
+      "m_RangeIndicatorPrefab": {
+        "UnityEngine.Transform":{
+          "localScale": {"x": 1.875,"y":1.875, "z":1.875},
+        }
+      },
+      //Low so it passes to others to allow them to store
+      "m_PickUpRadiusFwd": null,
+      "m_PickUpRadiusAngle": 180.0,// how wide is grab - GEO is 360
+      "m_SFXPickupItem": 53,
+      "m_SFXContentionLoop": 52,
+      // "<IsEnabled>k__BackingField": true,
+      // "<RestrictAcceptItemTypes>k__BackingField": null,
+      // "m_VisionRefreshTimer": 445.8195,
+      // "m_VisibleBuckets": [],
+      // "m_SortFirstBucket": false,
+      // "m_PushStackIndex": 0,
+      // "m_RangeIndicator": null,
+      // "m_RangeIndicatorSpinAngle": 0.6669121,
+      // "PickupRange": 75.0,//Dat's a lotta range
+      // "IsEnabled": true,
+      // "RestrictAcceptItemTypes": null
+    },
+    "ModuleItemHolderMagnet": {
+      "m_Strength": 4000.0, // How powerful the grab on the Magnet is
+      // GEO is 2000!
+      "m_PowerDecayMassThreshold": 50.0,// How fast it gets weaker based on how much it is aquiring
+      // GEO is 16.0
+      "m_DropRadiusVsPickup": 1.2,// The Multiplier for the drop range, value taken from ModuleItemPickup
+      // GEO is 1.4
+      "m_DropAfterMinTime": 6.0, //We give up on holding an out-of-range block after this time
+      "m_DropUnstuckAfterTime": 4.0,//When do we give up if object is not attaching to Magnet
+      "m_DropOnDamageThreshold": 5000.0,//We drop everything if the Tech takes more than this much damage in a single attack
+      // GEO is 100.0 
+      //we no drop
+      "m_GluePeriod": 0.05,//How long do the blocks have to touch till the blocks stay?
+      //was 0.1
+      "m_SettlingSpeedThreshold": 100.0,//How slow do the blocks have to be going to be glued?
+      //was 0.8
+      "m_SettleThresholdSqr": 0.04,//0.0400000028
+      // "m_ActiveCollider": {
+      //   "enabled": true,
+      //   "isTrigger": false,
+      //   "contactOffset": 0.1,
+      // },
+      // "m_GluedParticlesPrefab": {
+      // },
+      // "m_OnlineSFXType": 52,
+      // "m_Pickup": { //Determined already by "ModuleItemPickup"
+      //   "m_SpecificPickupStack": {
+      //     "localPos": {
+      //       "x": -1000.0,
+      //       "y": -1000.0,
+      //       "z": -1000.0,
+      //       "magnitude": 1732.05078,
+      //       "sqrMagnitude": 3000000.0
+      //     },
+      //     "stack": null,
+      //     "IsValidPos": false
+      //   },
+      //   "m_HandOffStack": {
+      //     "stack": null,
+      //     "IsValidPos": false
+      //   },
+      //   "m_PickupRange": 40.0,
+      //   "m_PickupSortBuckets": 4,
+      //   "m_VisionRefreshInterval": 1.0,
+      //   "m_AcceptNeutral": false,
+      //   "m_PrePickupPeriod": 3.0,
+      //   "m_PickupAfterMinInterval": 4.0,
+      //   "m_HandoverAfterMinInterval": 2.0,
+      //   "m_Priority": 5,
+      //   "m_RangeIndicatorPrefab": {
+      //   },
+      //   "m_VisibleBuckets": [],
+      //   "m_SortFirstBucket": false,
+      //   "m_PushStackIndex": 0,
+      //   "m_RangeIndicator": null,
+      //   "m_RangeIndicatorSpinAngle": 0.6669121,
+      //   "m_AudioProvider": {
+      //   },
+      //   "m_PickupFilterCallback": {},
+      //   "m_PickedUpItems": {
+      //   "PickupRange": 40.0,
+      //   "IsEnabled": true,
+      //   "RestrictAcceptItemTypes": null
+      // },
+      // "m_GluedMass": 0.0,
+      // "m_PickupDelayTimeout": 444.981,
+      // "m_GluedObjectsContainer": {
+      // },
+      // "m_GluedObjects": {
+      // },
+      // "m_ObjectsToGlue": {
+      // },
+      // "m_TriggeredAudioItems": {
+      // },
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.1, //was 0.25 //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+  }
+}

@@ -1,0 +1,390 @@
+//The Javelin and Fenrir was quite the help on this one
+{
+  "Name": "DarkLight Pizern Hull Missile Battery",
+  "Description": "A compact support <b>Missile Battery</b> with multiple powerful missiles for its size and spammability. This is the hull version, which loss some missile power in turn for more hull durability but it has some pretty neat panels.\n\n\nThis bomb-powered missile technology was found at a base owned by <b>Hyperion Systems</b>, while it was supposed to be simply just sneakily taking the technology, it turned into a sudo-crusade on us partway thanks to <color=#008080ff>other forces.</color>\n\nIt also turns out that at very low speeds the missiles will start to fly <color=red>backwards</color> instead of dropping for unknown reasons.\n\n\n<color=red>M<color=orange>I<color=yellow>S<color=green>S<color=blue>I<color=purple>L<color=#008080ff>E<color=red> M<color=orange>A<color=yellow>E<color=green>S<color=blue>T<color=purple>R<color=#008080ff>O<color=red>-",
+                 //You can make multiple lines with \n
+                 //I'd suggest not doing that mess at the end unless you seriously want to
+  "ID": 2000078, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 4, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 3
+  "Price": 51595, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 3200, 
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 22.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+
+  "Fragility": 0.75, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 1, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "52, 52, 52, 52, 53, 53, 53, 54, 54, 54, 55, 55, 57, 57, 57, 59, 65,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLPizernHull.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a filled grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    // Each of these "blocks" (vertically) are a face, just a heads up for anyone reading this.
+    { "x": 0,    "y": 0,    "z": -0.5 }, { "x": 0,    "y": -0.5, "z": 0    }, { "x": -0.5, "y": 0,    "z": 0    },
+    { "x": 1,    "y": 0,    "z": -0.5 }, { "x": 1,    "y": -0.5, "z": 0    }, { "x": -0.5, "y": 0,    "z": 1    },
+    { "x": 0,    "y": 1,    "z": -0.5 }, { "x": 0,    "y": -0.5, "z": 1    },
+    { "x": 1,    "y": 1,    "z": -0.5 }, { "x": 1,    "y": -0.5, "z": 1    },
+    // The other 2 faces. No top for you
+    { "x": 0,    "y": 0,    "z": 1.5  }, { "x": 1.5,  "y": 0,    "z": 0    },
+    { "x": 1,    "y": 0,    "z": 1.5  }, { "x": 1.5,  "y": 0,    "z": 1    },
+    { "x": 0,    "y": 1,    "z": 1.5  },
+    { "x": 1,    "y": 1,    "z": 1.5  }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_BombBay_113", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": false, //If not true, prefab renderers will be removed
+  "KeepColliders": false, //If not true, colliders will be removed
+  //"DeathExplosionReference": 52, //Like the GamePrefabReference, but copies the explosion of a specific block. (Copies before Deserializer, so it is possible to manipulate in there)
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+  "SubObjects": [
+    //There is no strategy to getting positions to work properly, good luck!
+
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Base",
+      "MeshName": "DLPizernHullHull.obj", 
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "ColliderMeshName": "DLPizernHullHullCollider.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": -2 },
+      "SubRotation": { "x": 90, "y": 0, "z": 0 }
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "_barrel_1_copy_copy_copy_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubPosition": { "x": 0.2, "y": 1, "z": -0.2 },
+      "SubRotation": { "x": 0, "y": 45, "z": 0 }
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+      "MeshName": "DLPizernMissileMaestro.obj",
+      "MeshTextureName": "DarkLight1.png",
+      "MeshGlossTextureName": "DarkLight2.png",
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": { "x": 90, "y": 0, "z": 0 },
+      "SubPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+    }
+  ],
+
+
+  // For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  // Note: There can only be one "JSONBLOCK" / "Deserializer" property in a file, but what is in it can be changed depending on use. These are examples.
+
+  "Deserializer": { //oh boy
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 2, "z": 0 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": -0.4 },
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      },
+      "GameObject|_recoiler": {
+        "Animation": {
+        "clip": {
+          "length": 0.01
+        }
+      }
+     }
+    },
+
+    "Duplicate|_barrel_1": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.6, "y": 0.0, "z": 0 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": 0.8 }, //Z is somehow Y
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      }
+    },
+    "Duplicate|_barrel_1_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0.0, "z": 0.7 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": 0.8 },
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      }
+    },
+    "Duplicate|_barrel_1_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.6, "y": 0.0, "z": 0.7 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": 0.8 },
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      }
+    },
+    "Duplicate|_barrel_1_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0.0, "z": 1.4 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": 0.8 },
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      }
+    },
+    "Duplicate|_barrel_1_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.6, "y": 0.0, "z": 1.4 },
+        "localEulerAngles": { "x": -90,  "y": 0.0,  "z": 0.0 }
+      },
+      "GameObject|_spawnBullet": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.2, "y": 0.2, "z": 0.8 },
+          "localEulerAngles": { "x": 0.0,  "y": 0.0,  "z": 0.0 }
+        }
+      }
+    },
+        //yes this has too much
+
+    "ModuleWeapon": { 
+      "m_FireSFXType": 18
+    }, //Using the same one the Javelin did
+
+    "ModuleWeaponGun": {
+      "m_CooldownVariancePct": 0,
+      "m_FireControlMode": 0, //IMPORTANT: enables "ClusterMissile Deploy" mode, which fires all "burst" barrels at once
+      "m_ShotCooldown" : 0.3, //This is the cooldown between every burst shot.
+      "m_BurstShotCount" : 6, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 8, //2 seconds between bursts.
+      "m_SeekingRounds" : true //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin")
+     },
+     //oh bOY
+     "FireData": {
+      "m_MuzzleVelocity": 30,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.1,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.0,
+      "m_CasingEjectSpin": 0.0,
+      "m_KickbackStrength": 7.0, //SHEER FORCE
+      "Instantiate|m_BulletPrefab": {
+
+        "WeaponRound": { 
+          "m_DamageType" : 7, 
+          "m_Damage": 150
+        },
+
+        "Rigidbody": {
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+          "mass": 0.0001
+        },
+
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 150.0,
+          "m_TurnSpeed": 100,
+          "m_UpdateVisibleInterval": 0.01,
+          "m_ActivationDelay": 0.2,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType" : "RandomBlockOnVehicle"
+          },
+
+          "Projectile": {
+            "m_LifeTime": 10,
+            "m_ImpactSFXType" : 2,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_EffectRadius": 5.0,
+                "m_EffectRadiusMaxStrength": 2.0,
+                "m_MaxDamageStrength": 50,
+                "m_MaxImpulseStrength": 5,
+                "m_DamageType": 7
+              },
+               //copypaste from Arcis
+              "GameObject|ExplosionBright": { 
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 0.1, "y": 0.1, "z": 0.1 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor": {
+                        "r": 0.5,
+                        "g": 0.2,
+                        "b": 0.9,
+                        "a": 0.75
+                      }
+                    }
+                  } 
+                }
+              }, 
+
+              "GameObject|ExplosionSmoke": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 0.1, "y": 0.1, "z": 0.1 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor": {
+                        "r": 0.6,
+                        "g": 0.1,
+                        "b": 0.8,
+                        "a": 1.0
+                      }
+                    }
+                  }
+                }
+              },
+
+              "GameObject|ExplosionDark": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 0.1, "y": 0.1, "z": 0.1 }
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor": {
+                        "r": 0.5,
+                        "g": 0.0,
+                        "b": 0.7,
+                        "a": 1.0
+                      }
+                    }
+                  }
+                }
+              },
+
+              "GameObject|Sparks": {
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor": {
+                        "r": 0.3,
+                        "g": 0.0,
+                        "b": 0.7,
+                        "a": 1.0
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+          },
+
+          "UnityEngine.CapsuleCollider": {
+            "center": { "x": 0.0, "y": 0.0, "z": 0.0 },
+            "radius": 0.2,
+            "height": 1.3,
+            "direction": 2
+           },
+           "MissileProjectile": {
+            "m_MaxBoosterLifetime": 0.0,
+            "m_BoosterActivationDelay": 0.0,
+            "m_ArmDelay": 0.25,
+            "m_DeathDelayNotArmed": 0.25
+          }
+      }
+    }
+  }
+
+
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed, or by dumping the block's JSON with Misc Mods.
+}

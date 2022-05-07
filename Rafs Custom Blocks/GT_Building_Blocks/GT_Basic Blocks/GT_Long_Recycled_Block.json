@@ -1,0 +1,51 @@
+{
+  "Name": "GreenTech Long Recycled Block",
+  "Description": "A long four-block version of the Recycled Block.",
+  "ID": 911018, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 1251, 
+  "HP": 1200, 
+  "Mass": 5,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe":  "5, 5, 5, 5, 7, 7, 7, 9, 9, 32, 32, 32",  
+  "IconName": "GT_Long_Recycled_Block_Icon.png", 
+  "MeshName": "GT_Long_Recycled_Block.obj", 
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 4},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 0, "y": 0.5, "z": 1},
+	{"x": 0, "y": -0.5, "z": 2},
+	{"x": 0, "y": -0.5, "z": 3},
+	{"x": 0, "y": 0.5,"z": 2},
+	{"x": 0, "y": 0.5, "z": 3},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+	{"x": 0.5, "y": 0, "z": 0},
+	{"x": 0.5, "y": 0, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": -0.5, "y": 0, "z": 3},
+	{"x": 0.5, "y": 0, "z": 2},
+	{"x": 0.5, "y": 0, "z": 3},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 0, "z": 3.5},
+	
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+}

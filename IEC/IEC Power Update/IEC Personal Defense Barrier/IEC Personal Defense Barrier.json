@@ -1,0 +1,237 @@
+
+{
+  "Name": "IEC Personal Defense Barrier",
+  "Description": "A small directional shield that can absorb a good amount of damage, while not consuming very much energy passively.",
+  "ID": 100534,
+
+  "Faction": 0,
+  "Category": 6,
+  "Grade": 2,
+  "Price": 1095, 
+
+  "HP": 350, 
+  "Mass": 0.85,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0,    
+
+  "Recipe":  "5, 8, 17, 43, ",
+  "IconName": "IEC_DirectionalShieldIcon.png", 
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    { "x": 0,    "y": -0.5, "z": 0    }, 
+    { "x": 0,    "y": 0.5,  "z": 0    },
+    { "x": -0.5, "y": 0,    "z": 0    }, 
+    { "x": 0.5,  "y": 0,    "z": 0    },
+    { "x": 0,    "y": 0,    "z": -0.5 },
+  ],  
+  
+  "GamePrefabReference": "GSO_Shield_111",
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },  
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "Spinny",
+      "MeshName": "IEC DirectionalShield Spinner.obj",
+      "MeshTextureName": "IEC Textures.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+    "SubOverrideName": "Base",
+    "MeshName": "IEC DirectionalShield Base.obj",
+    "MakeBoxCollider": true,
+    "MeshTextureName": "IEC Textures.png",
+    "SubRotation": {
+      "x": 0,
+      "y": -90,
+      "z": 0
+    }
+    },
+    {
+      "SubOverrideName": "ExperimentalCorp_Base_Shield",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge(Clone)",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge 1",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "_bubbleBulletTrigger"
+      //"layer": 21
+    },
+    {
+      "SubOverrideName": "ShieldSphereOuter",
+      "MeshName": "IEC DirectionalShield ShieldPlate.obj",
+      "MeshMaterialName": "MAT_BF_LaserBeam",
+      "SubRotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "ShieldSphereInner",
+      "MeshName": "IEC DirectionalShield ShieldPlate.obj",
+      "MeshMaterialName": "MAT_BF_LaserBeam",
+    },
+    {
+      "SubOverrideName": "ShieldSphereOuter/ShieldSphereOuter",
+      "MeshName": "IEC DirectionalShield ShieldPattern.obj",
+      "MeshMaterialName": "MAT_BF_LaserBeam"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Spinny": {
+      "Spinner": {
+        "m_Speed": 0.25,
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 1,
+        "m_CurrentAngle": 0.0, 
+        "m_RotationAxis": { "axis": 2 }
+      }
+    },
+    "GameObject|_shield": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 10
+        },
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false,
+            "enabled": false
+          },
+          "BoxCollider": { 
+            "isTrigger": true,
+            "enabled": true,
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "size": {
+              "x": 9,
+              "y": 9,
+              "z": 2
+            },
+            /*"attachedRigidbody": null,
+          "contactOffset": 0.01,
+          "sharedMaterial": {
+            "bounciness": 0.0,
+            "dynamicFriction": 0.6,
+            "staticFriction": 0.6,
+            "frictionCombine": 0,
+            "bounceCombine": 0,
+            "bouncyness": 0.0,
+            "frictionDirection2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "dynamicFriction2": 0.0,
+            "staticFriction2": 0.0,
+            "frictionDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "name": "Corp_GSO",
+            "hideFlags": 0
+          },
+          "material": {
+            "bounciness": 0.0,
+            "dynamicFriction": 0.6,
+            "staticFriction": 0.6,
+            "frictionCombine": 0,
+            "bounceCombine": 0,
+            "bouncyness": 0.0,
+            "frictionDirection2": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "dynamicFriction2": 0.0,
+            "staticFriction2": 0.0,
+            "frictionDirection": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "name": "Corp_GSO (Instance)",
+            "hideFlags": 0
+          },*/
+          "transform": "/_shield/_bubble/_bubbleBulletTrigger",
+          "tag": "Untagged",
+          "name": "_bubbleBulletTrigger",
+          "hideFlags": 0
+        }
+      },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.0,
+      }
+    }
+  },
+    "ModuleShieldGenerator": {
+      "m_PowerUpDelay": 0.5,
+      "m_Radius": 1,
+      "m_EnergyConsumptionPerSec": 0.75,
+      "m_InitialChargeEnergy": 100.0,
+      "m_EnergyConsumedPerDamagePoint": 0.5
+      /*"Instantiate|m_ChargingParticlesPrefab": {
+        "startSize": 0.4,
+        "startColor": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 1.0,
+          "a": 0.5
+        }
+      }*/
+  }
+  }	
+}
+           

@@ -1,0 +1,47 @@
+{
+  "Name": "GreenTech Mobile Solar Panel",
+  "Description": "A rather weak solar panel that doesn't need to be anchored in order to generate energy. It still needs the sun; our scientists weren't able to overcome that detail yet.",
+  "ID": 911023, 
+
+  "Faction": 0, 
+  "Category": 6, 
+  "Grade": 3,
+  "Price": 2730,
+  "HP": 900,
+  "Mass": 1.5,
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "15, 15, 32, 43, 43, 48",  
+  "IconName": "GT_Mobile_Solar_Panel_Icon.png", 
+  "MeshName": "GT_Mobile_Solar_Panel.obj", 
+  "ColliderMeshName": "GT_Mobile_Solar_Panel_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 3, "z": 1},  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+  "GamePrefabReference": "BF_Fin_116",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  
+  "JSONBLOCK": {
+	"ModuleEnergy": {
+    "m_OutputPerSecond": 8,
+    "m_OutputEnergyType": 0,
+    "m_OutputConditions": 2,
+    "m_SequentialPowerUp": false,
+    "m_PowerUpDelay": 0.0,
+    "m_GeneratingSFXType": 1
+      }
+     }
+}

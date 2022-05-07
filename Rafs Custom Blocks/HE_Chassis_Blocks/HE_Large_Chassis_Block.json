@@ -1,0 +1,144 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Hawkeye Large Chassis Block",
+  "Description": "A sturdy and light variation of the Hawkeye Six Block, perfect for reducing weight where dense armouring isn't required.", 
+  "ID": 910321,
+
+  "Faction": 5,
+  "Category": 0,
+  "Grade": 2,
+  "Price": 2136,
+  "HP": 2100,
+  "Mass": 4.8,
+
+  "IconName": "HE_Large_Chassis_Block_Icon.png",
+  "MeshName": "HE_Large_Chassis_Block.obj", 
+
+  "Recipe":  "5, 5, 5, 32, 32, 45, 45, 45, 54" ,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": false, 
+   
+   "BlockExtents": 
+  {
+    "x": 2,
+    "y": 1,
+    "z": 3
+  },   
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 2.5
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 2.5
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 2
+    },
+	{
+      "x": 1,
+      "y": 0.5,
+      "z": 2
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 2
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 2
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+	{
+      "x": 1.5,
+      "y": 0,
+      "z": 2
+    }
+  ],
+  "GamePrefabReference": "HE_Block_213", 
+}

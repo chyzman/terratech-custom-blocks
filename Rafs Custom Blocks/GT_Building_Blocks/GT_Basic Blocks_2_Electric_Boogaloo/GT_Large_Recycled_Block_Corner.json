@@ -1,0 +1,61 @@
+{
+  "Name": "GreenTech Large Recycled Block Corner",
+  "Description": "The standard GreenTech block, made of processed construction rubble in a mix of concrete and steel. The resulting ceramo-metal composite is a dense and hardy material, also flame resistant, but brittle against large impacts. These blocks also form strong bonds between each other.\n GreenTech 'Rangers' have high survivability and fear little in face of danger.",
+  "ID": 911116, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 1872, 
+  "HP": 2000, 
+  "Mass": 7,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 5, 5, 5, 5, 7, 7, 7, 7, 9, 9, 9, 9, 32, 32, 32",
+  "IconName": "GT_Large_Recycled_Block_Corner_Icon.png", 
+  "MeshName": "GT_Large_Recycled_Block_Corner.obj", 
+  "ColliderMeshName": "GT_Large_Recycled_Block_Corner_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "Cells": [ 
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 0 }
+  ],   
+  "APs": [ 
+    {"x": 1, "y": 1.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 0, "y": 1.5, "z": 1},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": 0.5, "y": 1, "z": 0},
+    {"x": 0, "y": 1, "z": 0.5},
+    {"x": 1, "y": 1, "z": -0.5},
+    {"x": -0.5, "y": 1, "z": 1}
+    ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+  "SubObjects": [ 
+    {
+      "ColliderMeshName": "GT_Large_Recycled_Block_Corner_Collider2.obj"
+    },
+    {
+      "ColliderMeshName": "GT_Large_Recycled_Block_Corner_Collider3.obj"
+    }
+  ]
+}

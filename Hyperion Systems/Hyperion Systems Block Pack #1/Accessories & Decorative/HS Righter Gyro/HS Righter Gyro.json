@@ -1,0 +1,44 @@
+
+{
+  "Name": "Hyperion Systems Righter Gyro",
+  "Description": "A gyroscope with enough power to rival even the GSO gyro in corrective power for size. Actually, it makes the GSO gyro look puny! Double the correction power, in a one-celled, convenient package. But it also has less AP's. Also alot less health... but we don't talk about that little detail.",
+  "ID": 100011,
+
+  "Faction": 7,
+  "Category": 5,
+  "Grade": 2,
+  "Price": 1000, 
+
+  "HP": 100, 
+  "Mass": 1.0,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 2, 
+
+  "Recipe": "7, 7",
+  "IconName": "HSGyroIcon.png", 
+  "MeshName": "HS Righter Gyro.obj", 
+
+  "MeshTextureName": "HS textures.png", 
+  
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    { "x": 0,    "y": 0,    "z": -0.5 },
+    { "x": 0,    "y": 0,    "z": 0.5  }
+  ],
+  "GamePrefabReference" : "BF_Gyro_AllAxis_Active_111",
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 },
+	
+  "KeepReferenceRenderers": false,
+  
+  "JSONBLOCK":{"ModuleGyro": {"m_UseActive": 1,"m_ActiveSpeed": 165.0}
+  }
+}

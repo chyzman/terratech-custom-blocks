@@ -1,0 +1,358 @@
+// This is the "Workhorse" turret for LK.
+// Pros:  Uses Megaton cannon rounds fired from a longer barrel - increasing muzzle velocity and slightly increasing damage.
+//        Has an autoloader; will fire 6 rounds in quick succession before reloading.
+// Cons:  Reloading takes more time due to the autoloader. 
+
+{
+    // Basic Block Information
+    "Name":                 "LK Baroness R6 Turret",
+    "Description":          "This cannon fires 6 Megaton shells in quick bursts, thanks to its dual autoloaders. Its firepower is equal to 4 GSO Megaton Cannons - not as impressive compared to its larger sisters, but she gets the job done. \n\n \"Our King, always the pragmatist, has requested that we create a cannon that uses GSO's Megaton ammunition. Veteran cannoneers had also visited our forge and asked for a cannon that has a high rate of fire...I am honored to have built this after 4 days and 10 cups of coffee.\" \n\n Gregory Rook, Guildsman, Note #43",
+
+    "ID": 419011,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 46794,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+
+    // Recipe:  Main Body:    29 Titanic Alloy, 10 Plubonic Alloy
+    //          Gun Assembly: 4 Blast Caps, 
+    //          Autoloaders:  6 Z4 Explosives, 2 Cylone Jet
+    "Recipe":  "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 55, 55, 55, 55, 55, 55, 46, 46, 46, 46, 57, 57",	
+	
+    "IconName":                   "LK_baroness_turret_icon.png",  // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                           // Name of the block's mesh                                        
+    "ColliderMeshName":           null,                           // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    "LK_tex_3.png",
+
+    // Basic Block HP Values
+    "HP": 11600,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 116,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 4,"y": 2, "z": 4 },
+
+    "APs": [
+        // Bottom APs
+        {"x": 1.0, "y": -0.5, "z": 0.0 }, {"x": 2.0, "y": -0.5, "z": 0.0 },  
+        {"x": 0.0, "y": -0.5, "z": 1.0 }, {"x": 1.0, "y": -0.5, "z": 1.0 }, {"x": 2.0, "y": -0.5, "z": 1.0 }, {"x": 3.0, "y": -0.5, "z": 1.0 },  
+        {"x": 0.0, "y": -0.5, "z": 2.0 }, {"x": 1.0, "y": -0.5, "z": 2.0 }, {"x": 2.0, "y": -0.5, "z": 2.0 }, {"x": 3.0, "y": -0.5, "z": 2.0 },  
+        {"x": 1.0, "y": -0.5, "z": 3.0 }, {"x": 2.0, "y": -0.5, "z": 3.0 }
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference":    "GSO_Cannon_Medium(222)",
+    "KeepRenderers": true,    // Keep the block's renderers
+    "KeepColliders": true,    // Keep the block's colliders
+    "ReferenceOffset":        { "x": 2.0, "y": 0.0, "z": 2.0 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_GSO_MegatonCannon_222_Base", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_turret_base.obj",
+        "ColliderMeshName":         "LK_baroness_col_turret_base.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_GSO_MegatonCannon_222_Turret", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_turret_body.obj",
+        "ColliderMeshName":         "LK_baroness_col_turret_body.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_GSO_MegatonCannon_222_Barrel_A", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_barrel_base.obj",
+        "ColliderMeshName":         "LK_baroness_col_barrel_base.obj",
+        "SubPosition":              { "x": 0, "y": -0.1, "z": 1.5 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      { 
+        "SubOverrideName":          "m_GSO_MegatonCannon_222_Barrel_B", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_barrel_body.obj",
+        "ColliderMeshName":         "LK_baroness_col_barrel_body.obj",
+        "SubPosition":              { "x": 0, "y": -0.20, "z": -0.1 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+
+      // Adjust the smoke and bullet spawns
+      { 
+        "SubOverrideName":          "_bulletSpawn", 
+        "SubPosition":              { "x": 0, "y": -0.2, "z": 2.0},
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_muzzleFlash",
+        "SubPosition":              { "x": 0, "y": -0.2, "z": 1.9 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+      { 
+        "SubOverrideName":          "_smoke",
+        "SubPosition":              { "x": 0, "y": -0.2, "z": 2.0 },
+        "SubScale":                 { "x": 10, "y": 10, "z": 10 }
+      },
+      { 
+        "SubOverrideName":          "_casingSpawn",
+        "SubPosition":              { "x": 0, "y": 0, "z": -2 },
+        "SubRotation":              { "x": -135, "y": 0, "z": 0 }
+      },
+
+      // Add the Autoloaders
+      { 
+        "SubOverrideName":          "m_GC_BuzzSaw_213_Blade", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_turret_R_loader.obj",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": -1 },
+        "SubRotation":              { "x": 90, "y": -60, "z": 0}
+      },
+
+      { 
+        "SubOverrideName":          "_Spindle_copy/m_GC_BuzzSaw_213_Blade", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "LK_baroness_turret_L_loader.obj",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 90, "y": 60, "z": 0}
+      }
+    ],
+
+    "Deserializer": {     
+      "GameObject|_gimbalBase":{
+        "Reference|GC_BuzzSaw_312/m_GC_BuzzSaw_213_Base/_Spindle":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x": -1.25, "y": 0.4, "z": -1.33 },
+            "localRotation": { "x": 0, "y": 90, "z": 90 }
+          },
+          "Spinner": {
+            "m_Speed": 0.4,                         // Dictates the speed of the rotation
+            "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+  
+                                                    // Mileage varies between blocks, but in general, any block that has a spinning component 
+                                                    // will have this module and will work.
+  
+            "m_SpinUpTime": 1.0,                    // Dictates the amount of time required for the object to spin in full speed
+            "m_CurrentAngle": 30.0,                 // Dictates the starting angle of the object when spawned into the world
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSound": null,
+            "m_SpinnerSoundOriginalPitch": 0.0,
+            "AtFullSpeed": false            
+          },
+        },
+        "Duplicate|_Spindle":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 1.25, "y": 0.4, "z": -1.33 },
+            "localRotation": { "x": 0, "y": -90, "z": 90 }
+          },
+        },
+
+
+        "GameObject|_gimbalElev":{
+          "GimbalAimer": { "rotationLimits": [7, -10] },
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.0, "y": 0.55, "z": -1.5 }
+          },
+          "GameObject|_barrel":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 0.0, "y": 0.2, "z": 1.6 }
+            }
+          }
+
+        }
+      },
+
+      // Gun Attributes
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 0.2,                  // The length of paus between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0.01,          // Dictates how random the length of pause between shots.
+
+        "m_BurstShotCount": 6,                  // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                // A non-zero, integer value will dictate the number of shots fired.
+                                                // The pause uses the value in m_BurstCooldown
+
+        "m_BurstCooldown": 3.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                // This is automatically disabled when m_BurstShotCount is set to 0
+
+        "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                // Only applies when m_BurstShotCount is NOT set to 0
+
+        "m_FireControlMode": 1,                 // Dictates how the guns will fire
+                                                //  0 =   The guns will fire one at a time
+                                                //  1 =   All guns will fire at the same time
+
+
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward targets
+
+        "m_ResetFiringTAfterNotFiredFor": 10.0,
+
+        "m_RegisterWarningAfter": 1.0,
+
+        "m_HasSpinUpDownAnim": false,
+        "m_HasCooldownAnim": false,
+        "m_CanInterruptSpinUpAnim": false,
+        "m_CanInterruptSpinDownAnim": false,
+        "m_SpinUpAnimLayerIndex": 0,
+        "m_DeploySFXType": 0,
+        "OnAudioTickUpdate": null,
+        "m_NumCannonBarrels": 0,
+        },
+
+        "FireData": {
+          "m_MuzzleVelocity": 200.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+          "m_KickbackStrength": 600.0,            // Dictates the strength of the recoil when firing the gun
+          "m_BulletSprayVariance": 0.03,          // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+
+          "m_CasingVelocity": 10.0,
+          "m_BulletSpin": 0.0,
+          "m_CasingEjectVariance": 0.3,
+          "m_CasingEjectSpin": 50.0,
+
+
+          "Instantiate|m_BulletPrefab": {
+            "WeaponRound": {
+              "m_Damage": 1500.0
+            }
+          }
+        },
+
+      "ModuleWeapon": {
+        "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+        "m_AimType": 0,
+        "m_RotateSpeed": 15.0,                    // Dictates the speed of the gun's rotation whenever it aims at a target.
+        "m_ChangeTargetInteval": 0.5,
+
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 90.0,
+
+        "m_FireSFXType": 64,                      // Dictates the sound used when firing
+                                                  // 6  = GSO Megaton Cannon
+                                                  // 64 = GSO Gigaton Cannon
+                                                  // 77 = GSO Big Bertha Cannon
+
+        "m_TargetAimer": {
+          "m_ChangeTargetTimeout": 0.0,
+          "m_ChangeTargetInteval": 0.5,
+        },
+
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+
+        "DisableTargetAimer": false,
+
+        //Redundant Attributes
+        "RotateSpeed": 20.0,                      // Use m_RotateSpeed instead
+        "SFXType": 64,                            // Use m_FireSFXType instead
+        "ShotCooldown": 1.0,                      // Use m_ShotCooldown in the ModuleWeaponGun instead.
+        "m_ShotCooldown": 1.0,                    // Use m_ShotCooldown in the ModuleWeaponGun instead.   
+      },
+
+
+      // Due to the Referenced GC Buzz Saw, this is a required module or else the autoloaders will not animate
+      // Simply remove the damage and cheat by making sure that the loaders do not collide with anything.
+      "ModuleDrill":{
+        "impactDamageMultiplier": 0.0,
+        "damagePerSecond": 0.0,
+        "m_DamageType": 6,
+        "scaleHitParticles": 0.0,
+        "m_SpinOnCollisionDuration": 0.0,
+        "m_SFXType": 27,
+
+
+        "m_ContactTimeout": 0.1,
+        "m_DisabledWhenAttachedToBlocks": false,
+        "<SpinRate>k__BackingField": 0.0,
+        "OnAudioTickUpdate": null,
+        "hitEffect": null,
+        "playHitEffectOneFrame": false,
+        "allSpinners": [],
+        "m_SpinCollisionTimeout": 0.0,
+        "m_Spinning": false,
+        "m_TimeOfLastContact": 0.0,
+        "m_cachedContactParam": {
+          "m_ParamName": "contact",
+          "m_Value": 0.0
+        },
+
+        "m_Catcher": null,
+        "m_AnimatorModule": null,
+        "SFXType": 35,
+        "SpinRate": 0.0,
+        "IsEnabled": true
+
+
+      },
+
+
+
+    }
+    
+
+}

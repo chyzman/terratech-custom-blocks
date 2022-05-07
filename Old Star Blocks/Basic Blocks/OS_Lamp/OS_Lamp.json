@@ -1,0 +1,88 @@
+{
+  "Name": "Old Star Headlight",
+  "Description": "Now this is how the Old Star do! \n Its a lamp.",
+  "ID": 300079, 
+  "Faction": 4, 
+  "Category": 5, 
+  "Grade": 1, 
+  "Price": 828, 
+  "HP": 450, 
+  "Mass": 1.5,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "1, 1, 5, 5, 7, 7, 9, 32, 32, 32, ", 
+  "IconName": "OS_Light_Icon.png", 
+  "MeshName": "OS_Lamp.obj", 
+  "ColliderMeshName": "OS_LampC.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "OST1.png", 
+  "MeshGlossTextureName": "OST2.png", 
+  "MeshEmissionTextureName": "OST3.png",
+ 
+  "Cells": 
+  [ 
+    { "x": 0, "y": 0, "z": 0 }
+  ],
+
+  "APs": 
+  [ 
+  {"x": 0, "y":-0.5, "z": 0}
+  ],
+  "GamePrefabReference": "GSO_Light_Fixed_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "SubObjects": [
+    {
+      "MeshName": "OS_Lamp_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "OS_Lamp_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "OS_Lamp_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Lights": {
+      "GameObject|GSO_Fixed Light_Spotlight": {
+        "Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "UnityEngine.Light":{
+          "color": {
+            "r": 0.6,
+            "g": 1.0,
+            "b": 0.3,
+            "a": 1.0
+          },
+          "intensity": 3.0,
+          "range": 150.0,
+          "spotAngle": 105.0
+        }
+      }
+    }
+  }
+}

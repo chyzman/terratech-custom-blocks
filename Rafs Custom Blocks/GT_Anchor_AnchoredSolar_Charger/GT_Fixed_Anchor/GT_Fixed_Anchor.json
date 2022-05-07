@@ -1,0 +1,87 @@
+{
+  "Name": "GreenTech Fixed Anchor",
+  "Description": "An anchor of expandable fibron, capable of quickly deploying a long and durable wooden pillar.",
+  "ID": 911140, 
+
+  "Faction": 1, 
+  "Category": 7, 
+  "Grade": 2, 
+  "Price": 714,
+  "HP": 2000,
+  "Mass": 6,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "IconName": "GT_Fixed_Anchor_Icon.png", 
+  "MeshName": "GT_Fixed_Anchor.obj", 
+  "ColliderMeshName": "GT_Fixed_Anchor_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  
+  "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 3, 5, 9, 32, 32",
+
+    "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  
+  "APs": [ 
+	{"x": 0,"y": 0.5,"z": 0},
+	{"x": 0,"y": 0.5,"z": 1},
+	{"x": 1,"y": 0.5,"z": 0},
+	{"x": 1,"y": 0.5,"z": 1}
+  ],
+
+  "GamePrefabReference": "HE_Anchor_Fixed_212",
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 },
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [
+	{
+    "SubOverrideName":"HEAnchor22",
+    "MeshName": "GT_Fixed_Anchor_Anchor.obj",
+	"MeshTextureName": "GreenTech 1.png", 
+	"MeshGlossTextureName": "GreenTech 2.png", 
+	"MeshEmissionTextureName": "GreenTech 3.png"
+	}
+	],
+	
+	"Deserializer":{
+		"GameObject|_anchor":{
+		 "GameObject|HEAnchor22": {
+			"UnityEngine.CapsuleCollider": {
+				"center": {
+				  "x": 0,
+				  "y": -2.5,
+				  "z": 0
+				},
+				"radius": 0.8,
+				"height": 5,
+				"direction": 1
+			  },
+		  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 0.0,
+            "y": -3.3,
+            "z": 0.0
+          }},
+		  "m_SnapToleranceUp":3.8,
+      "m_SnapToleranceDown":1.5}}}
+      /* "ModuleAnchor":{
+        "m_MaxAngularVelocity": 120.0,
+        "m_MaxTorque": 60000,
+        "m_BrakeTorque": 30000.0,
+        "m_ForceHorizontal": true,
+      }*/
+  } 
+
+
+}

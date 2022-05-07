@@ -1,0 +1,184 @@
+{
+  "Name": "Hawkeye Flying <color=red><b>DESPACITO 2</b></color> Cab", //"Hawkeye Flying DESPACITO Cab",
+  "Description": "NOW STREAMING LIVE IN AIR PORDS, YOU CANNOT OUTRUN THE <color=red><b>DESPACITO 2</b></color>",
+  "ID": 944352,
+
+  "Faction": 5,
+  "Category": 1,
+  "Grade": 2,
+  "Rarity": 2,
+  "Price": 19251,
+  "Health": 2425,
+  "Mass": 4,
+  "CenterOfMass": {"x": 0, "y": -0.2, "z": 0.5}, // Very good plane cab yes
+
+  "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": -1, "y": 0, "z": 0 },
+    { "x": -1, "y": 0, "z": 1 }
+  ],
+  "APs": [
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 }
+  ],
+
+  // Array form: ID or "name"
+  "Recipe": [52,48,60, // Cab, p5700, h1000
+    52,47,57,62, // Prop, p9936, h300
+    7,43,11,52, // Wing 1, p723, h225
+    7,43,11,52, // Wing 2, p723, h225
+    7,43,11,52, // Wing 3, p723, h225
+    7,43,11,52, // Wing 4, p723, h225
+    7,43,11,52 // Wing 5, p723, h225
+  ], 
+  // Object form: "ID" or "name" : count
+  /* "Recipe": {
+    "7": 5,
+    "11": 5
+    "43": 5,
+    "47": 1,
+    "48": 1,
+    "52": 7,
+    "57": 1,
+    "60": 1,
+    "62": 1
+  }, */
+
+  "GamePrefabReference": 587, // "HE_AI_Module_Guard_112", // Use an ID of the block because I'm feeling special:tm:
+  "KeepRenderers": true, // Keep the block's renderers
+  "KeepColliders": true, // Keep the block's colliders
+
+  "DeathExplosionReference": "GSO_FuelTank_222", // Use the explosion from the fuel tank. ID can also be used.
+
+  // No use of "SubObjects": [ ] here
+
+  "Deserializer": {
+    "ModuleTechController": { // Make it controllable
+      "m_PlayerInput": true
+    },
+
+    "Reference|HE_Prop_331/m_HE_GyroProp_331": { // Copy a propeller's model
+      "UnityEngine.Transform": { // Move it to the front of the block
+        "localPosition": { "x": 0, "y": 0, "z": 1.5 }
+      },
+      "UnityEngine.MeshCollider": null, // Delete the collider
+      "Reference|HE_Prop_331/_spinner": { }, // Copy the propeller's spinner model
+      "Reference|HE_Prop_331/_fanJet": { // Copy the propeller's jet effect
+        "UnityEngine.Transform": { // Move it a bit lower for COM to not be a problem
+          "localPosition": { "x": 0, "y": -0.2, "z": 0 }
+        },
+        "FanJet": {
+          "force": 900.0,
+          "backForce": 500.0,
+          "spinDelta": 0.7, // I think the higher this is, the faster it reaches top speed?
+          "spinSpeed": 1000.0, // Model animation
+          "m_FanSpinner": "_spinner/Spinner." // Give it the spinner class so that it still spins
+          // The period makes it look for a class or property, instead of a transform
+        }
+      }
+    },
+    "ModuleBooster": { }, // Give it a booster to use the prop above
+    
+    "Reference|HE_Wing_Tip_121/m_HE_Wingtip_121": { // Copy the wing tip model
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": -0.1, "z": -0.1 } // Move it a bit in to the main model
+      },
+      "Reference|HE_Wing_Tip_121/SmokeTrail": { // Copy the smoke trail, put it in the wing tip object for easy copying later
+        "UnityEngine.Transform": {  
+          "localPosition": { "x": 1.352, "y": 0, "z": 0.197 } // Ungodly positioning
+        }
+      },
+      "Reference|445/_Pivot": { // Copy the moving part of the wing, also in the wing object. Except use the ID of the wing tip for demonstration purposes, and to flex my special needs:tm:
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.258, "y": 0, "z": 0.103 }, // More ungodly positioning
+          "localEulerAngles": { "x": 0, "y": 180, "z": 180 } // Ungodly rotating
+        }
+      }
+    },
+
+    "GameObject|HE_AIModule_Guard_112": { // main model
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_4": { // back right wheel
+        "Duplicate|/m_HE_Wingtip_121": { // When provided a path to a transform, it will duplicate from the transform it can find on that path!
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": -0.2, "z": -0.1 },
+            "localEulerAngles": { "x": 180, "y": 0, "z": 0 }
+          }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_3": { // back left wheel
+        "Duplicate|/m_HE_Wingtip_121": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": -0.2, "z": -0.1 },
+            "localEulerAngles": { "x": 0, "y": 180, "z": 0 }
+          }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_2": { // front right wheel
+        "Duplicate|/m_HE_Wingtip_121": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": -0.3, "y": -0.2, "z": 0.9 },
+            "localEulerAngles": { "x": 180, "y": 0, "z": 0 }
+          }
+        }
+      },
+      "GameObject|m_HE_AIModule_Guard_112_WheelSet_1": { // front left wheel
+        "Duplicate|/m_HE_Wingtip_121": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.3, "y": -0.2, "z": 0.9 },
+            "localEulerAngles": { "x": 0, "y": 180, "z": 0 }
+          }
+        }
+      }
+    },
+
+    // Referencing a module makes a new one, and sets it to the values of the source. This gives us the default curves and stuff here, very helpful.
+    "Reference|HE_Wing_Tip_121/ModuleWing.": { // The period after a name means it is a class or property. Otherwise it would try to find and copy a transform
+      "m_Aerofoils": [ { // Every item in an array is copied to avoid reference corruption. Unless it is a value-array, in which it doesn't really matter
+          "trans": "m_HE_Wingtip_121/_Pivot",
+          "flap": "m_HE_Wingtip_121/_Pivot/Spinner.", // The period makes it look for a class or property
+          "liftStrength": 0.5,
+          "flapAngleRangeVisual": 10,
+          "flapAngleRangeActual": 10
+        }, { // The original array only had one item in it. The items below are copying from the last item in the source array
+          "trans": "m_HE_AIModule_Guard_112_WheelSet_4/m_HE_Wingtip_121_copy/_Pivot", // Transforms duplicated from paths still have _copy
+          "flap": "m_HE_AIModule_Guard_112_WheelSet_4/m_HE_Wingtip_121_copy/_Pivot/Spinner.",
+          "liftStrength": 0.4,
+          "flapAngleRangeVisual": 3,
+          "flapAngleRangeActual": 3
+        }, {
+          "trans": "m_HE_AIModule_Guard_112_WheelSet_3/m_HE_Wingtip_121_copy/_Pivot",
+          "flap": "m_HE_AIModule_Guard_112_WheelSet_3/m_HE_Wingtip_121_copy/_Pivot/Spinner.",
+          "liftStrength": 0.4,
+          "flapAngleRangeVisual": 3,
+          "flapAngleRangeActual": 3
+        }, {
+          "trans": "m_HE_AIModule_Guard_112_WheelSet_2/m_HE_Wingtip_121_copy/_Pivot",
+          "flap": "m_HE_AIModule_Guard_112_WheelSet_2/m_HE_Wingtip_121_copy/_Pivot/Spinner.",
+          "liftStrength": 0.5,
+          "flapAngleRangeVisual": 8,
+          "flapAngleRangeActual": 8
+        }, {
+          "trans": "m_HE_AIModule_Guard_112_WheelSet_1/m_HE_Wingtip_121_copy/_Pivot",
+          "flap": "m_HE_AIModule_Guard_112_WheelSet_1/m_HE_Wingtip_121_copy/_Pivot/Spinner.",
+          "liftStrength": 0.5,
+          "flapAngleRangeVisual": 8, // Won't look too pretty, but it is the cost of functionality. Devs, fix your game
+          "flapAngleRangeActual": 8
+        }
+      ]
+    },
+
+    // Just for that little something e x t r a
+    "GameObject|FPV": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0.3, "z": 2.1 }
+      },
+      "Nuterra.BlockInjector.ModuleFirstPerson": { } // Yes that is right give it FPV
+    }
+  }
+}

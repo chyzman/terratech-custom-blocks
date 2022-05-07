@@ -1,0 +1,50 @@
+/*
+Description: A fancy armor plate carrying LK's heraldry
+Pros:   Good HP
+Cons:   Heavy and more expensive than the regular LK armor plate
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Heraldry Armor Plate",
+    "Description":          "Show your fealty to the Lemon Kingdom with this armor plate! This plating is just as tough as the regular version, though a bit more expensive.\n\n\"Order, Stability, Purpose, we offer all three to thine planet. We ask only your unwavering loyalty.\"",
+
+    "ID":                   419059,           
+    "Faction":              2,           
+    "Category":             5,          
+    "Rarity":               2,            
+    "Grade":                3,
+    "Price":                10248,         
+    
+    //Recipe:     Main Body:    8 Titanic Alloy, 4 Rugged Fiblar, 4 Plubonic Alloy
+    //            Heraldry:     4 Erudian Crystal, 4 Luxian Crystal
+    "Recipe" : { 
+        //Main Body
+        "54": 8, "52": 4, "53": 12, 
+        // Heraldry
+        "32": 4, "19": 4,
+    },
+      
+    "IconName":                   "LK_plate_heraldry_icon.png",                          
+    "MeshName":                   "LK_plate_heraldry_body.obj",                                 
+    "MeshColliderName":           "LK_plate_heraldry_body_col.obj",                
+    "NoBoxCollider":              true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                       3000,                      
+    "Mass":                     20.0,           
+    "DamageableType":           1,    
+    "DetachFragility":          0.0,
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 1,"z": 2 },
+
+    "APs": [ 
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 0, "y": -0.5, "z": 1 },
+        { "x": 1, "y": -0.5, "z": 0 }, { "x": 1, "y": -0.5, "z": 1 },
+    ],
+}

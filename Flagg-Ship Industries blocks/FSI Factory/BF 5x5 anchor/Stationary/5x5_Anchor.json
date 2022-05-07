@@ -1,0 +1,124 @@
+{
+	"Name": "Better Future Cubic Anchor",
+	"Description": "A simple anchor for the 5x5 series", //You can make multiple lines with \n
+	"ID": 1700093, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 3434,
+	"HP": 5000,
+	"Mass": 5,
+"IconName": "Cube Anchor.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy,titanicalloy,", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 	
+        { "x": 1, "y": 0, "z": 0 }, 
+        { "x": 2, "y": 0, "z": 0 }, 
+        { "x": 3, "y": 0, "z": 0 }, 
+        { "x": 4, "y": 0, "z": 0 }, 
+		
+		{ "x": 0, "y": 0, "z": 1 }, 	
+        { "x": 1, "y": 0, "z": 1 }, 
+        { "x": 2, "y": 0, "z": 1 }, 
+        { "x": 3, "y": 0, "z": 1 }, 
+        { "x": 4, "y": 0, "z": 1 }, 
+		
+		{ "x": 0, "y": 0, "z": 2 }, 	
+        { "x": 1, "y": 0, "z": 2 }, 
+        { "x": 2, "y": 0, "z": 2 }, 
+        { "x": 3, "y": 0, "z": 2 }, 
+        { "x": 4, "y": 0, "z": 2 }, 
+		
+		{ "x": 0, "y": 0, "z": 3 }, 	
+        { "x": 1, "y": 0, "z": 3 }, 
+        { "x": 2, "y": 0, "z": 3 }, 
+        { "x": 3, "y": 0, "z": 3 }, 
+        { "x": 4, "y": 0, "z": 3 }, 
+		
+		{ "x": 0, "y": 0, "z": 4 }, 	
+        { "x": 1, "y": 0, "z": 4 }, 
+        { "x": 2, "y": 0, "z": 4 }, 
+        { "x": 3, "y": 0, "z": 4 }, 
+        { "x": 4, "y": 0, "z": 4 }, 
+		
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		
+		{ "z": -0.5, "y": 0, "x": 0 }, 
+		{ "z": 4.5, "y": 0, "x": 0 },
+		{ "z": -0.5, "y": 0, "x": 4 },
+		{ "z": 4.5, "y": 0, "x": 4 },
+		
+		{ "x": 0, "y": 0.5, "z": 0 }, 
+		{ "x": 4, "y": 0.5, "z": 0 },
+		{ "x": 0, "y": 0.5, "z": 4 },
+		{ "x": 4, "y": 0.5, "z": 4 },
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "HE_Anchor_Fixed_212",
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"m_HE_Anchor_Fixed_212",
+	"DestroyExistingColliders": true,
+    "MeshName": "551Cube.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName": "551Cube.obj",
+    
+	"SubPosition":{"x":2,"y":0,"z":2},
+	"SubRotation":{"x":0,"y":0,"z":90}
+	
+	},{
+    "SubOverrideName":"HE_Anchor_22",
+	"DestroyExistingColliders": true,
+    "MeshName": "BF_5x5_Anchor.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName": "BF_5x5_Anchor.obj",
+    "SubPosition":{"x":2.25,"y":-2,"z":2.25},
+	"SubScale":{"x":0.9,"y":1,"z":0.9},
+	}],"JSONBLOCK":{
+		"GameObject|_anchor":{
+		 "GameObject|HEAnchor22": {
+		  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 0.0,
+            "y": -4.5,
+            "z": 0.0,
+            "normalized": {
+              "x": 0.0,
+              "y": -1.0,
+              "z": 0.0,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            },
+            "magnitude": 2.128,
+            "sqrMagnitude": 4.528384
+          }},"m_SnapToleranceUp":1,"m_SnapToleranceDown":0.5}}}}
+	
+	
+	}

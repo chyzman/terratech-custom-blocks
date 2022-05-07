@@ -1,0 +1,1572 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC AV-7 Space Fighter Core",
+  "Description": "Fighter cores allow you to create massively powerful Space Fighters in the compact size of 7x7x8.  Pressing <b>R</b> also activates the 3rd-person camera. \n\nUsing technology originally used to fight against an unjust cause above the Gridnella base on Mars, the TAC Spacefighter Core improves upon the Gridnella Antigravity Unification Technology by combining it with some knowledge from multiple intersellar avian species. \n\nAdmidst the TAChnobable, we get the Spacefighter Core that also features a built-in compressor. \nDue to it's unstable nature, it prevents techs larger than 7x7x8 from being created safely, and is unable to be hard-docked to stations without causing rapid unplanned disassembly.  It's explosion on death is also lethal enough to disintegrate all blocks attached to it. \n\nNot compatable with AI atm, pls wait. \n\n\n\n\n\nThe max supported size IS 7x7x8. \nSure, you can use floating point APs to bypass this, but at that point you're being ridiculous.", //You can make multiple lines with \n
+  //Aerial Vehicle - MK 7
+  //the ENTIRE A-Space fighter series is a indirect reference to R-Type, the sideways space fighter shooter.
+  "ID": 584320, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 155085,//The price for Super-fighter
+  "HP": 4500, //Battleship Cannon has 5500 health, this thing takes up loads of extra space.
+  "Mass": 80.0, //Whack into anything and you are bound to break something.
+
+  "IconName": "spAAAAAAAAAAAAAAAAAACE.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 44, 44, 44, 44, 45, 45, 45, 45, 48, 48, 49, 49, 49, 49, 49, 49, 50, 50, 53, 53, 56, 56, 57, 57, 57, 57, 58, 58, 58, 58, 59, 59, 59, 59, 59, 59, 59, 59, 60, 60, 61, 63, 63, 63, 63, 65, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Back
+     { "x": 4, "y": 4, "z": 3.5 },
+     //Front
+     { "x": 4, "y": 4, "z": 5.5 },
+     //Sides
+     { "x": 3.5, "y": 4, "z": 4 },
+     { "x": 4.5, "y": 4, "z": 4 },
+     { "x": 4, "y": 3.5, "z": 4 },
+     { "x": 4, "y": 4.5, "z": 4 },
+     { "x": 3.5, "y": 4, "z": 5 },
+     { "x": 4.5, "y": 4, "z": 5 },
+     { "x": 4, "y": 3.5, "z": 5 },
+     { "x": 4, "y": 4.5, "z": 5 },
+  ],
+  /*  OR  */
+  "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                        // Any character placement that is not a space will be filled as a cell
+    [ // Z Layer 0
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXTACXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 1
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 2
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 3
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 4
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X   0   X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 5
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X   0   X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 6
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 7
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 8
+      "XXXXXXXXX",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "X       X",
+      "XXXXXXXXX",
+    ],
+    [ // Z Layer 9
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXTACXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+      "XXXXXXXXX",
+    ],
+  ],
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+  "GamePrefabReference": "GC_Cab(222)",
+	//"GamePrefabReference": "BF_Hover_Ring_Small(212)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "KeepReferenceColliders": false,
+	"ReferenceOffset": { "x":4, "y":4, "z":4.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    {
+      "SubOverrideName": "m_HB_Core",
+      "MakeBoxCollider": true,
+    }, 
+    { // Base
+      "SubOverrideName": "m_GC_Cab_222", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterCore.obj",
+      "ColliderMeshName": "FighterCore.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main", 
+    },
+    { //Base Detail
+     "SubOverrideName": "m_GC_Cab_222_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterCore.obj",
+      "ColliderMeshName": "FighterCore.obj", 
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main", 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false,  
+    },
+
+    //Aux Hovers
+    { // Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { // Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { // Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { // Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Removing Models...
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove Bubble effect
+     "SubOverrideName": "ShieldSphereInner",
+      "DestroyExistingRenderer": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove Bubble effect
+     "SubOverrideName": "ShieldSphereOuter",
+      "DestroyExistingRenderer": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove unwanted items
+     "SubOverrideName": "GeoCorp_Cab_Light 2",
+      "DestroyExistingRenderer": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove unwanted items
+     "SubOverrideName": "GeoCorp_Cab_Light 1",
+      "DestroyExistingRenderer": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove unwanted items
+     "SubOverrideName": "m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove unwanted items
+     "SubOverrideName": "_Pivot_copy/m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    { //Remove unwanted items
+     "SubOverrideName": "_Pivot_copy_copy/m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true, 
+      "MakeBoxCollider": false, 
+    },
+    //
+    // -COMPRESSOR-
+    //
+    {  
+      "SubOverrideName": "m_CompressorCore",
+      "MeshName": "CompressorCoreSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressInnerRot",
+      "MeshName": "CompressorInnerSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressMidRot",
+      "MeshName": "CompressorMidSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressOuterRot",
+      "MeshName": "CompressorOuterSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+  ],
+
+
+
+
+	// JSONBLOCK or Deserializer
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":4, "z":4.5 } 
+      },
+    },
+
+    "GameObject|m_CompressorCore": {// COMPRESSOR
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.6, "y":0.6, "z":0.8 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.75 },
+      },
+      "UnityEngine.Light": {
+        "cookieSize": 4.0,
+        "spotAngle": 360.0,
+        "color": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.3,
+          "a": 1.0
+        }, 
+        "intensity": 8.5,//2.0
+        "bounceIntensity": 1.0, 
+        "renderMode": "Auto", 
+        //Auto, ForcePixel, ForceVertex
+        "type": "Point",
+        //Spot, Directional, Point, Rectangle, Disc
+        "range": 0.25,
+        // "flare": null
+      },
+      "GameObject|m_CompressInnerRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.90,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressMidRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1.25 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": -0.75,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressOuterRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.3,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+    },
+
+
+    //
+    // Begin normal stuff
+    //
+    "GameObject|GeoCorp_Cab_Light 2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|GeoCorp_Cab_Light 1": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|m_GC_Cab_222": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.MeshCollider":{
+        "gameObject": {
+          "layer": 8 //ID 524288Layers:
+        }
+      },
+    },
+    "Duplicate|m_GC_Cab_222": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":-1, "y":1, "z":1 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "UnityEngine.MeshCollider":{
+        "gameObject": {
+          "layer": 8 //ID 524288Layers:
+        }
+      },
+    }, 
+
+    "GameObject|GEO_Corp_Cab2_SPOTLIGHT 2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.Light": {
+        "spotAngle": 45.0,
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        // "colorTemperature": 6570.0,
+        "intensity": 0.25,//2.0
+        "bounceIntensity": 1.0,
+        "shadowCustomResolution": -1,
+        "shadowBias": 0.5,
+        "shadowNormalBias": 1.0,
+        "shadowNearPlane": 0.2,
+        "range": 15.0,
+        "flare": null
+      }
+    },
+    "GameObject|GEO_Corp_Cab2_SPOTLIGHT 1": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.Light": {
+        "spotAngle": 360.0,
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        // "colorTemperature": 6570.0,
+        "intensity": 0.1,//2.0
+        "bounceIntensity": 1.0,
+        "shadowCustomResolution": -1,
+        "shadowBias": 0.5,
+        "shadowNormalBias": 1.0,
+        "shadowNearPlane": 0.2,
+        "range": 15.0,
+        "flare": null
+      }
+    },
+    "GameObject|m_HB_Core": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":90, "y":0, "z":270 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "gameObject": {
+          "layer": 20 //ID 524288
+        },
+        //"contactOffset": 0.00,
+        "enabled": true,
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 0.75,
+        "height": 7.5,
+        "direction": 2,
+        // "isTrigger": false
+      }
+    },
+    "GameObject|m_HB_Core_T": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":90, "y":0, "z":270 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "gameObject": {
+          "layer": 20 //ID 524288
+        },
+        //"contactOffset": 0.00,
+        "enabled": true,
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 0.75,
+        "height": 3.5,
+        "direction": 1,
+        // "isTrigger": false
+      }
+    },
+    "GameObject|m_BF_Hover_Ring_Small_212_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":4, "y":4, "z":4.5 } 
+      },
+    },
+    "Reference|BF_Hover_Ring_Small_212/m_BF_Hover_Ring_Small_212_Hover": { //topF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":5.25, "z":6.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          // "forceFunction": {
+          //   "m_Ptr": {
+          //     "m_value": {}
+          //   },
+          //   "keys": [],
+          //   "length": 2,
+          //   "preWrapMode": 8,
+          //   "postWrapMode": 8
+          // },
+          "forceMax": 2000.0, //STRONK
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 1.15,//0.30 //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 75.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 250.0,
+          "m_AutoStabiliseStrength": 0.2,//0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 25,//10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            // "loop": true,
+            // "playOnAwake": true,
+            // "duration": 0.6,
+            // "playbackSpeed": 1.0,
+            // "enableEmission": true,
+            // "emissionRate": 5.0,
+            // "startSpeed": 1.0,
+            // "startSize": 1.0,
+            // "startRotation3D": {
+            //   "x": 1.0,
+            //   "y": 1.0,
+            //   "z": 3.14159274
+            // },
+            "startLifetime": 1.0,
+            "gravityModifier": 0.0,
+            "maxParticles": 0,
+          },
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover": {//topR
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":5.25, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy": {//BottomF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":2.75, "z":6.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy": {//BottomR
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":2.75, "z":2.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy": {//Front
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":4, "z":7.75 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          // "forceFunction": {
+          //   "m_Ptr": {
+          //     "m_value": {}
+          //   },
+          //   "keys": [],
+          //   "length": 2,
+          //   "preWrapMode": 8,
+          //   "postWrapMode": 8
+          // },
+          "forceMax": 50000.0, //STRONK
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 0.005, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 75.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 250.0,
+          "m_AutoStabiliseStrength": 0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy": {//Back
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":4, "z":1.25 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy": {//RightF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":5.25, "y":4, "z":6.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          // "forceFunction": {
+          //   "m_Ptr": {
+          //     "m_value": {}
+          //   },
+          //   "keys": [],
+          //   "length": 2,
+          //   "preWrapMode": 8,
+          //   "postWrapMode": 8
+          // },
+          "forceMax": 2000.0, //STRONK
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 1.15,//0.30 //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 75.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 250.0,
+          "m_AutoStabiliseStrength": 0.2,//0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 50.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy": {//RightB
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":5.25, "y":4, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy": {//LeftF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":2.75, "y":4, "z":6.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy": {//LeftB
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":2.75, "y":4, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+
+    //
+    //Anti-Rotation
+    //
+    "GameObject|m_HB_CoreR": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":90, "y":0, "z":270 },
+        "localPosition": { "x":4, "y":4, "z":4.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "gameObject": {
+          "layer": 20 //ID 524288
+        },
+        //"contactOffset": 0.00,
+        "enabled": true,
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 0.5,
+        "height": 7,
+        "direction": 0,
+        // "isTrigger": false
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy": {//tl
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.75, "y":5.25, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {//tr
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":6.25, "y":5.25, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {//bl
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.75, "y":2.75, "z":4.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {//br
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":6.25, "y":2.75, "z":4.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+
+    //Roll Helpers
+    "Reference|VEN_SteeringHoverSingle_111/boosterFront": {//
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":2, "y":4, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|m_BoosterRocketFlame_01": null,
+      "BoosterJet":{
+        "m_Force": 10000.0,
+        "m_BurnRate": 0.0,
+        "m_FireRateFalloff": 0.01,
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": false,
+        "m_AutoStabiliseStrength": 0.1,
+        // "m_TargetRigidBody": null,
+        "m_FireControl": false,
+      }
+    },
+    "Duplicate|boosterFront": {//
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":6, "y":4, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      //"GameObject|m_BoosterRocketFlame_01": null,
+    },
+    "Duplicate|boosterFront_copy": {//
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":2, "y":4, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      //"GameObject|m_BoosterRocketFlame_01": null,
+    },
+    "Duplicate|boosterFront_copy_copy": {//
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":6, "y":4, "z":4.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      //"GameObject|m_BoosterRocketFlame_01": null,
+    },
+
+    //SHARED HEALTH
+    "Reference|GSO_Repair_Bubble_111/_shield": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":4, "y":4, "z":4.5 }
+      }
+    },
+    "Reference|HE_Wing_Tip_121/_Pivot": { // Copy the moving part of the wing, also in the wing object. Except use the ID of the wing tip for demonstration purposes, and to flex my special needs:tm:
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 4, "y": 4, "z": -0.5 }, // Whoa
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 } // 
+      }
+    },
+    "Duplicate|_Pivot": { // Copy the moving part of the wing, also in the wing object. Except use the ID of the wing tip for demonstration purposes, and to flex my special needs:tm:
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 4, "y": 5, "z": -0.5 }, // Whoa
+        "localEulerAngles": { "x": 0, "y": 0, "z": 90 } // 
+      }
+    },
+    "Duplicate|_Pivot_copy": { // Copy the moving part of the wing, also in the wing object. Except use the ID of the wing tip for demonstration purposes, and to flex my special needs:tm:
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 4, "y": 3, "z": -0.5 }, // Whoa
+        "localEulerAngles": { "x": 0, "y": 0, "z": 270 } // 
+      }
+    },
+
+    // 3rd-person~
+
+    "GameObject|FirstPersonAnchor": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4, "y":7.5, "z":-8 } 
+      },
+      "Nuterra.BlockInjector.ModuleFirstPerson": {
+        // "_anchor": null,
+        "LockCursor": true,
+        "AdaptToMainRot": false,
+        "thisBlock": null,
+      }
+    },
+
+
+
+    //
+    // MODULES
+    //
+
+  "Reference|HE_Wing_Tip_121/ModuleWing.": {
+    "m_AttackAngleDamping": 10000.0,
+    "m_TrailMinVelocity": 14.0,
+    "m_TrailAlphaStrength": 0.02,
+    "m_TrailFadeSpeed": 0.1,
+    "m_Aerofoils": [
+      { // Every item in an array is copied to avoid reference corruption. Unless it is a value-array, in which it doesn't really matter
+        "trans": "_Pivot",
+        "flap": "_Pivot/Spinner.", // The period makes it look for a class or property
+        "liftStrength": 10,
+        "flapAngleRangeVisual": 5,
+        "flapAngleRangeActual": 5
+      }, 
+      { // The original array only had one item in it. The items below are copying from the last item in the source array
+        "trans": "_Pivot_copy", // Transforms duplicated from paths still have _copy
+        "flap": "_Pivot_copy/Spinner.",
+        "liftStrength": 5,
+        "flapAngleRangeVisual": 5,
+        "flapAngleRangeActual": 5
+      }, 
+      {
+        "trans": "_Pivot_copy_copy",
+        "flap": "_Pivot_copy_copy/Spinner.",
+        "liftStrength": 5,
+        "flapAngleRangeVisual": 5,
+        "flapAngleRangeActual": 5
+      }, 
+      // {
+      //   "trans": "m_HE_Wingtip_121_copy/_Pivot",
+      //   "flap": "m_HE_Wingtip_121_copy/_Pivot/Spinner.",
+      //   "liftStrength": 0.5,
+      //   "flapAngleRangeVisual": 8,
+      //   "flapAngleRangeActual": 8
+      // },
+    ],
+    // "m_FoilState": [],
+    "m_AverageLiftCoeff": 0.0,
+  },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "ModuleFuelTank": {//UNLIMITED FUEL
+      "m_Capacity": 100000.0,
+      "m_RefillRate": 100000.0,
+    },
+
+    // "ModuleTechController.": { //Let's-a-Control!
+    //   "m_PlayerInput": true,//
+    //   "m_ModuleType": 0,
+    //   // "HandlesPlayerInput": true
+    // },
+    // GYROs -Active
+    "Reference|VEN_SteeringHoverSingle_111/ModuleBooster.": {},
+
+    "ModulePowerGauge": {},
+    "ModuleVision": {
+      "visionConeAngle": 360.0,
+      "visionRange": 20.0,//Short so Manual Aiming yay
+      "m_Range": 0.0,
+      "m_PlaneCullMode": 0,
+      "m_ModuleType": 0,
+    },
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,//related to Trim Gyro - max allowed angle cone
+      "m_TrimAdjustSpeed": 0.0, //related to Trim Gyro
+      "m_UsePassive": 0, //Is this a passive gyro?
+      "m_UseActive": 1, //Is this an active gyro?
+      "m_ActiveSpeed": 10.0, //How forceful is the Gyro?
+      "m_ActiveStability": 0.2, //How much do we want to dampen the movement?
+      // "m_RotationAnimTransform": null, //idk
+      // "m_RotationAnimSpeed": 0.0, //How fast does the trippy gyro animation play?
+      // "m_RotationMinSpeed": 10.0, //Active Speed falloff point
+      // "m_RotationMaxSpeed": 60.0, //max speed for rotating back upright
+      "m_Trim": 0.0, //Starting trim
+      "m_HasTurnInput": false, //Is this a Reaction Wheel?
+      "m_HasDriveInput": false, //Will this do something if "W" is pressed?
+      "m_ControlTrim": 0.0, //idk - likely for Reaction Wheels/Controlled rotation
+      "m_ControlTrimTarget": 0.0 //idk - likely scrapped concept for enemy-based tech auto aiming for MTs
+    },
+    // "Reference|VEN_Cab_111/ModuleAIBot.": {
+    //   "m_AITypesEnabled": {},
+    //   "m_AimPos": {
+    //     "x": 0.0,
+    //     "y": 0.0,
+    //     "z": 0.0
+    //   },
+    //   "m_ModuleType": 0,
+    // },
+    //"ModuleStabiliser": null,
+    "Reference|GSO_Repair_Bubble_111/ModuleShieldGenerator.": {
+      "m_Radius": 14.0,//this x2
+      // "m_MaxScale": 14.0,//this x2
+      "m_EnergyConsumptionPerSec": 1, //Effcient, but small
+      "m_InitialChargeEnergy": 1,//You must kickstart it - Projectors take less to start, but more to maintain.
+      "m_InterpTimeOn": 0.1, //How fast the shield inflates
+      "m_InterpTimeOff": 0.1,//How fast the shield deflates
+      // "m_ParticleLife": 1.0,
+      // "m_ParticleSpeed": 10.0,
+      // "m_Repulsion": true,
+      // "m_RepelKick": 5.0,
+      // "m_RepelKickAngular": 5.0,
+      "m_EnergyConsumedPerDamagePoint": 1,// TONS
+      "m_Healing": true,
+      "m_HealingHeartbeatInterval": 0.5,//VEN is 0.75 - We want to keep those blocks alive
+      "m_MaxHealingPerHeartbeat": 2000.0, //VEN is 100 - Setting this to negative DENIES repairs, not deal damage
+      "m_EnergyConsumedPerPointHealed": 1, //TONS
+      "m_PowerUpDelay": 8,//Sloe enough to allow DEATH
+      "m_ChargingParticlesPrefab": null,
+      // "m_Shield": {
+      //   "m_Speed": 0.05,
+      //   "m_RotationAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_SteerAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_AutoSpin": false,
+      //   "m_SpinUpTime": 1.0,
+      //   "m_CurrentAngle": 0.0,
+      //   "m_CurrentAutoSpeed": 0.0,
+      //   "m_CurrentSpeedFraction": 0.0,
+      //   "m_SpinnerSound": null,
+      //   "m_SpinnerSoundOriginalPitch": 0.0,
+      //   "Speed": 0.05,
+      //   "SpeedFraction": 0.0,
+      //   "AtFullSpeed": false
+      // },
+      // "m_Projector": null,
+      // "m_RepulsorBulletTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_RepulsorTechTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_TargetScale": 0.0,
+      // "m_CurrentInterpCurve": null,
+      // "m_InterpStartTime": 0.0,
+      // "m_InterpDuration": 0.0,
+      // "m_InterpStartScale": 0.0,
+      // "m_InterpScaleMin": 0.0,
+      // "IsScaling": false,
+      // "CurrentScale": 0.0,
+      // "ShieldRadius": 3.0,
+      // "m_EnergyDeficit": 800.0,
+      // "m_EnergyDrain": 0.0,
+      // "m_HealingHeartbeatNextTime": 322.266449,
+      // "m_TimeWithoutEnergy": 2.3562026,
+      // "m_EnoughPower": false,
+      // "m_ChargingEffect": false,
+      // "m_State": 0,
+      // "m_PowerUpTimer": 5.0,
+      // "m_CachedCollisionFixedFrameCount": 0
+    },
+
+    //illegalTest -does not work
+    // "Tank": {
+    //   "constantAngularDragFactor": 1,//1
+    //   "antiGravConstantAngularDragFactor": 1,//1
+    //   "massScaleFactor": 0.1,//0.1
+    //   "inertiaTensorScaleFactor": 0.1,//1
+    //   "m_Team": 0,//auto-determined
+    // },
+
+
+
+    "ModuleAntiGravityEngine": {
+      "m_Radius": 14.0,
+      "m_StrengthAsGravityScale": 1.0,
+      "m_SubtractGravity": true,
+      "m_EnergyUsedPerFilledCellPerSecond": 0.1,
+      "m_SwitchedOn": false,
+      "m_HasPower": true,
+      "m_GravityTargetsDirty": false,
+      "m_GravityDelta": 0.0,
+      "m_GravityManipulationZoneDirty": true,
+      "m_GravityManipulationZone": {
+        "m_Position": {
+          "x": 4.0,
+          "y": 5.0,
+          "z": 4.0
+        },
+        "m_PositionIsLocal": true,
+        "m_Radius": 14,
+        "m_ManipulationAmount": -1.0
+      },
+      "m_LayerMask": 16640,
+      "m_ModuleType": 1,
+    },
+    "ModuleEnergyStore": {
+      "m_Capacity": 7500, //Max battery life/HITPOINTS
+      "m_EnergyGauges": null
+    },
+    "Reference|BF_Hover_Ring_Small_212/ModuleHover.": {
+      "m_HoverPower": 0.5,
+      "m_HoverSize": 0,
+      "m_ModuleType": 4,
+    },
+    "ModuleEnergy": {//Infinity Generator
+      "m_Priority": -100,
+      "m_OutputPerSecond": 10,//125- generation of Quantumflux
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": 0,//no noise.
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 0.0,
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      //"m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "Reference|GSO_Radar_111/ModuleRadar.": {},
+    "ModuleDamage": {
+      "m_ModuleType": 0,
+      // "m_DamageDetachFragility": 1.0,
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : 0, //What damage modifier the explosion does
+          "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          // "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius":11.5, //KA-BAM
+          "m_EffectRadiusMaxStrength": 10.0, 
+          "m_MaxDamageStrength": 50000, //This affects splash damage - will end almost all blocks in the game
+          "m_MaxImpulseStrength": -750 //How hard to push things, explosion force
+        },
+
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": {
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0.5,
+                "startSpeed": 20.0, //How far you want the particles to spread
+                "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2450.0,
+                  "rateOverTimeMultiplier": 0.2,
+                }
+              }
+            }
+          },
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionBright": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                // "startColor": {
+                //   "r": 0.6,
+                //   "g": 1.0,
+                //   "b": 0.6,
+                //   "a": 1.0
+                // },
+                "playbackSpeed": 0.5,
+                "startSize": 10,
+                "startSpeed": 15, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                }
+              }
+            }
+          }
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionDark": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "playbackSpeed": 0.5,
+                "startSize": 20,
+                "startSpeed": 20, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                }
+              }
+            }
+          }
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionSmoke": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 0.85
+                },
+                "playbackSpeed": 0.5,
+                "startSize": 30,
+                "startSpeed": 25, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "playbackSpeed": 0.75,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                }
+              }
+            }
+          }
+        },
+        "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Shockwave": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 125.0,
+                // "startRotation": 5.0,
+                // "startSpeed": 17.5, //How far you want the particles to spread
+                "startColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.6,
+                  "a": 1.0
+                },
+                "playbackSpeed": 0.50,
+                // "emissionRate": 25.0,
+                "maxParticles": 7,
+                "emission": {
+                  "rateMultiplier": 50.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  // "burst": {
+                  //   "count": 7,
+                  //   "maxCount": 7,
+                  //   "minCount": 7,
+                  // }
+                },
+              }
+            }
+          }
+        },
+        "Reference|HE_CannonTurret_Short_525.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+            "minParticleSize": 0.55,
+            "maxParticleSize": 0.55,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startDelay": 0.0,
+                "startColor": {
+                  "r": 0.4,
+                  "g": 0.6,
+                  "b": 0.8,
+                  "a": 0.75
+                },
+                "playbackSpeed": 0.65,
+                "gravityModifier": 0.0,//No gravity
+                "shape": {
+                  // "radiusMode": true,
+                  "shapeType": "Sphere",
+                  "arc": 360.0,
+                  "radius": 0.5,
+                  "radiusSpread": 5.0,
+                  "angle": 360.0,
+                  "length": 0.5,
+                  "randomDirectionAmount": 10.0,
+                },
+                "startSize": 80,
+                "startSpeed": 35,               //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                // "maxParticles": 750,
+                // "maxParticles": 0,
+                // "emission": {
+                //   "rateMultiplier": 50.0,
+                //   "rateOverTimeMultiplier": 0.2,
+                //   "burst": {
+                //     "count": 50,
+                //     //"cycleCount": 1,
+                //     "maxCount": 150,
+                //     "minCount": 100,
+                //     // "probability": 150,
+                //     // "repeatInterval": 150,
+                //     //"time": 0
+                //   }
+                // }
+                "shape": {
+                  "texture": {
+                    "mainTexture": "EPMCEnergyBall.png",
+                    // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                  }
+                },
+              }
+            }
+          }
+        },
+        "Duplicate|Sparks": { 
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":180, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+          },  //                  
+        },
+        "GameObject|Point light": {//Does work
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+          },  //                  
+          "UnityEngine.Light": {
+            "cookieSize": 4.0,
+            "spotAngle": 360.0,
+            "color": {
+              "r": 1.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            },
+            "colorTemperature": 1500000.0,
+            // "areaSize": 25.0,//2.0
+            "shadowStrength": 1.0,
+            "intensity": 5.5,//2.0
+            "bounceIntensity": 1.0,
+            "shadowCustomResolution": -1,
+            "shadowBias": 1.0,//0.5,
+            "shadowNormalBias": 1.0,
+            "shadowNearPlane": 0.2,
+            "renderMode": "ForcePixel",
+            //Auto, ForcePixel, ForceVertex
+            "type": "Directional",
+            //Spot, Directional, Point, Rectangle, Disc
+            "range": 175.0,
+            "flare": null
+          }, 
+          "FadeInOutLight": {
+            "StartDelay": 0.0,
+            "FadeInSpeed": 2.5,
+            "FadeOutDelay": 0.75,
+            "FadeOutSpeed": 1.25,
+            "FadeOutAfterCollision": true,
+            "UseHideStatus": true,
+          }
+        },
+        "Duplicate|Point light": {//Does work
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":180, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+          },  //                  
+          // "UnityEngine.Light": {
+          //   "cookieSize": 4.0,
+          //   "spotAngle": 360.0,
+          //   "color": {
+          //     "r": 1.0,
+          //     "g": 0.0,
+          //     "b": 0.0,
+          //     "a": 1.0
+          //   },
+          //   "colorTemperature": 0.0,
+          //   // "areaSize": 25.0,//2.0
+          //   "intensity": 9001.0,//2.0
+          //   "bounceIntensity": 1.0,
+          //   "shadowCustomResolution": -1,
+          //   "shadowBias": 0.5,
+          //   "shadowNormalBias": 1.0,
+          //   "shadowNearPlane": 0.2,
+          //   "renderMode": "ForcePixel",
+          //   //Auto, ForcePixel, ForceVertex
+          //   "type": "Directional",
+          //   //Spot, Directional, Point, Rectangle, Disc
+          //   "range": 175.0,
+          //   "flare": null
+          // }, 
+          // "FadeInOutLight": {
+          //   "StartDelay": 0.0,
+          //   "FadeInSpeed": 0.1,
+          //   "FadeOutDelay": 1.0,
+          //   "FadeOutSpeed": 2.0,
+          //   "FadeOutAfterCollision": true,
+          //   "UseHideStatus": true,
+          // }
+        }
+      }
+    },
+
+     //Snipebot
+    "ModuleDriveBot": {
+      "targetIdealRange": 80.0, //How far do we want to stay from the target? Far for sniping. Works best with unlimited-range weapon.
+      //AI freezes at 150
+      //within this range we turn "turnToleranceInner"
+      "turnToleranceOuter": 25.0, //How hard we steer when far from target
+      "turnToleranceInner": 45.0, //How hard we steer when close to target
+      "m_DefaultThrottle": 1.75, //How hard we press on the "W" key and other keys to illegally turn beyond the max
+      "poweredTurnInsideWheel": 0.05, //how much the wheels by the enemy slows by when turning
+      "waypointDistanceFullThrottle": 10.0, //If beyond this we move FAST
+      "turnAngleFullThrottle": 15.0, //Max safe angle to turn while pressing "W"
+      "waypointReachedTolerance": 15.0, //The location error the Tech can have before assuming that it is "close enough" to the target location
+      "waypointPlayerAngularBias": 25.0, //How hard we should turn in relation to the player when trying to flank them
+      "lookAroundAngleMin": 30.0, //idk
+      "lookAroundAngleMax": 45.0, //idk
+      "m_DefaultPatrolDistMin": 200.0, //Idle movement distance before engaging player
+      "m_DefaultPatrolDistMax": 1500.0, //Idle movement distance before FREEEZE
+      "patrolThrottle": 0.75, //Idle movements
+      "lookAroundPauseMin": 2.0, //Minimum time before moving randomly while idle
+      "lookAroundPauseMax": 8.0, //Maximum time before moving randomly while idle
+      "lookAroundThrottle": 0.6, //How hard we press "W" when idle
+      "lostTargetMemoryTime": 2.0, //How long we attempt to reach a location from where someone attacked us
+      "holdTargetDuration": 3.0, //Max time before we update our pursued target to the closest target in agro range
+      "stopCirclingTimer": -999999.0, //how long until we stop circling the target
+      "stopCirclingDelay": -2.0, //how long until we stop circling the target
+      "controlPriority": 100, //idk
+      "recoverTimeout": 3.0, //How long before we attempt to Build Beam(right self) again
+      "forceUnCapsizeTimeout": 5.0, //How longe before we give up on the Build Beam self-righting attempt
+      "capsizedMinSpeed": 1.0, //How slow we must be going in order to attempt Build Beam
+      "m_ThrottleD": 1.0, //Max Throttle Forwards/Backwards
+      "m_ThrottleT": 0.5, //Max Throttle Turning
+      "m_PatrolDistMin": 8.0, //Idle movement distance before engaging player
+      "m_PatrolDistMax": 500.0, //Idle movement distance before FREEEZE 
+      "m_CurrentState": "AIState_FaceTarget", //Idle movement distance before FREEEZE 
+      //"AIProcessorGetBehindTarget":{
+      //  "stopCirclingTimer": 10,
+      //},
+      // public enum StateType
+      // {
+      //   AIState_SumoCharge,
+      //   AIState_GetBehindTarget,
+      //   AIState_FaceTarget,
+      //   AIState_Waypoint,
+      //   AIState_LookAround,
+      //   AIState_RecoverCapsize,
+      //   AIState_WaitUntilSeen,
+      //   AIState_ChargeTarget,
+      //   None
+      // }
+      "sumoBoostOn": true, //Will hold shift to KILL ENEMY - not working atm
+      "attackTargetRadius": 1000,//When the AI will attack when possible targets are within this range
+      // "OnSpawn": {
+      // "hostileTarget": true, //ATTACK ON SPAWN
+      // "friendlyTarget": false, //Is this an ally of Player
+      // }, //
+    },
+  },
+}
+
+
+
+
+
+
+

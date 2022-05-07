@@ -1,0 +1,275 @@
+{
+  	"Name": "Better Future Tri-pronged Supervoid Ray",
+  	"ID": 1700129,
+  	"Faction": 7,
+  	"Category": 4,
+  	"Grade": 1,  
+  	"Price": 71010,
+  	"HP": 6000,
+  	"Mass": 30,
+	"Rarity": 2,
+"IconName": "Tri-pronged.png",
+  	"Description": "Fires Supervoidal energies at a target, causing massive damage. While each beam is more focused, the spinning nature of the mk2 cleaves through armor and targets with relative ease.",
+  
+  	"Recipe": "15, 15, 15, 15, 15, 15, 48, 48, 48, 48, 48, 48, 53, 53, 53, 53, 62, 62, 64,15, 15, 15, 15, 15, 15, 48, 48, 48, 48, 48, 48, 53, 53, 53, 53, 62, 62, 64",
+	"SupressBoxColliderFallback": true,
+  
+  	"BlockExtents":
+  { "x": 5, "y": 5, "z": 5 },
+  
+  
+  
+  
+ 
+  	"APs": [ 
+		{"x": 0,"y": -0.5,"z": 0},
+		{"x": 4,"y": -0.5,"z": 0},
+		{"x": 0,"y": -0.5,"z": 4},
+		{"x": 4,"y": -0.5,"z": 4},
+		{"x": 2,"y": -0.5,"z": 2},
+		
+		{"x": 0,"y": 4.5,"z": 0},
+		{"x": 4,"y": 4.5,"z": 0},
+		{"x": 0,"y": 4.5,"z": 4},
+		{"x": 4,"y": 4.5,"z": 4},
+		{"x": 2,"y": 4.5,"z": 2},
+		
+		{"x": -0.5,"y": 4,"z": 4},
+		{"x": 4.5,"y": 4,"z": 4},
+		{"x": -0.5,"y": 4,"z": 0},
+		{"x": 4.5,"y": 4,"z": 0},
+		
+		{"x": 0,"y": 4,"z": -0.5},
+		{"x": 0,"y": 4,"z": 4.5},
+		{"x": 4,"y": 4,"z": -0.5},
+		{"x": 4,"y": 4,"z": 4.5},
+		
+		{"x": -0.5,"y": 0,"z": 4},
+		{"x": 4.5,"y": 0,"z": 4},
+		{"x": -0.5,"y": 0,"z": 0},
+		{"x": 4.5,"y": 0,"z": 0},
+		
+		{"x": 0,"y": 0,"z": -0.5},
+		{"x": 0,"y": 0,"z": 4.5},
+		{"x": 4,"y": 0,"z": -0.5},
+		{"x": 4,"y": 0,"z": 4.5},
+		
+	],
+	"GamePrefabReference": "BF_Laser_Turret_313",
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [
+      {"SubOverrideName": "Barrel_Spinner",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "BF_Supervoid_Beam_emitter2.obj",
+      "ColliderMeshName": null,
+      "MeshMaterialName": "BF_Main"
+    },{
+			"MeshName": "BF_Supervoid_Beam_Base.obj",
+			"MeshMaterialName": "BF_Main",
+			"ColliderMeshName": "BF_Supervoid_Beam_Base.obj",
+			
+		  	"SubPosition": { "x": 2, "y": 2, "z": 2 },
+		}, {
+			"SubOverrideName": "_barrelStationary",
+			"MeshName": "BF_Supervoid_Beam_emitter.obj",
+			"MeshMaterialName": "BF_Main",
+			"ColliderMeshName": null,
+			"SubRotation": { "x": 0, "y": 0, "z": 0 },
+		  	"SubPosition": { "x": 0, "y": 0, "z": 0.5 },
+			"Layer": 8
+		}, {
+			"SubOverrideName": "_gimbalBase",
+			"SubPosition": { "x": 2, "y": 2, "z": 2 },
+			"MeshMaterialName": "BF_Main",
+			"MeshName": "BF_Supervoid_Beam_Gimbaler2.obj","SubScale":{ "x": 1, "y": 1, "z": 1 }
+		}, {
+			"SubOverrideName": "_gimbalElev",
+			"SubPosition": { "x": 0, "y": 0, "z": 0 },
+			"MeshMaterialName": "BF_Main",
+			"MeshName": "BF_Supervoid_Beam_Aimer.obj","SubScale":{ "x": 1, "y": 1, "z": 1 }
+		}, {
+			"SubOverrideName": "_barrel",
+			"SubPosition": { "x": 0, "y": 0, "z": 1.75 }
+		}, {
+			"SubOverrideName": "_beam",
+			"SubPosition": { "x": 0, "y": 0, "z": 0 }
+		}
+   	],
+   	"JSONBLOCK": {
+   		"ModuleWeapon": {
+   			"m_FireSFXType": 32,"m_RotateSpeed" : 100
+   		},
+   		"ModuleWeaponGun": {
+   			"m_DeploySFXType": 32
+   		},
+   		"GameObject|_gimbalBase": {
+		"GimbalAimer": { //Useful component - Horizontal Aiming
+          "rotationLimits": [-180, 180] //[-Left,+Right](Degrees)
+        },
+   			"GameObject|_gimbalElev": {
+			"GimbalAimer": { //Useful component - Vertical Aiming
+              "rotationLimits": [-30, 30] //[-Up,+Down](Degrees)
+            },
+   				"GameObject|_barrelStationary": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":2, "z":1.63539 } 
+      }},
+   				"GameObject|_barrel": {
+				 "GameObject|Barrel_Spinner": {
+				  "UnityEngine.Transform": {
+				   "localPosition": { "x": 0, "y": 0, "z": -1.1 }
+            }
+          },
+          "Spinner": {
+            "m_Speed": 0.6666667,
+            "Speed": 0.6666667,
+            "m_SpinUpTime": 1
+          },
+		  "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":1, "z":1.23539 } 
+      },
+   					"GameObject|_muzzleFlash": {
+   						"GameObject|_light": {
+   							"UnityEngine.Light": {
+              					"shadows": 0,
+   								"spotAngle": 0,
+						  		"color": { "r": 1.0, "g": 0.0, "b": 0.5, "a": 1.0 },
+						  		"range": 7.0,
+								"intensity": 1.0
+							}
+						}
+					},
+					"GameObject|_beam": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":1, "z":2 } 
+      },
+						"BeamWeapon": {
+						  	"m_Range": 0,
+						  	"m_DamagePerSecond": 0,
+						  	"m_DamageType": 7, //7 is plasma
+							"m_FadeOutTime": 1.1,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0 },
+									"startSize": 3,
+									"shape": {
+										"scale": { "x": 1, "y": 1, "z": 1 },
+										"rotation": { "x": 0, "y": 180, "z": 0 }
+									}
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0,
+							"endWidth": 0,
+							"numPositions": 2,
+							"positionCount": 2,
+							"textureMode": 1,
+							"numCapVertices": 8,
+							"material": {
+								"mainTexture": "BF_Suervoid_Ray.png"
+							}
+						}
+					},
+				},
+				"Duplicate|_barrel": {
+					"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },"GameObject|_beam": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0.9375, "z":2.66225 } 
+      },
+						"BeamWeapon": {
+						  	"m_Range": 150,
+						  	"m_DamagePerSecond": 1111,
+						  	"m_DamageType": 7, //7 is plasma
+							"m_FadeOutTime": 0.25,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.1, "b": 0.5, "a": 1.0 },
+									"startSize": 1,
+									"shape": {
+										"scale": { "x": 1, "y": 1, "z": 1 },
+										"rotation": { "x": 0, "y": 180, "z": 0 }
+									}
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0.5,
+							"endWidth": 0.5,
+							"numPositions": 5,
+							"positionCount": 1,
+							"textureMode": 2,
+							"numCapVertices": 8,
+							"material": {
+								"mainTexture": "BF_Supervoid_Ray.png"
+							}
+						}
+					}
+				},"Duplicate_Duplicate|_barrel": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },"GameObject|_beam": {"UnityEngine.Transform": { 
+        "localPosition": { "x":-0.811899, "y":-0.46875, "z":2.66225 } 
+      },
+						"BeamWeapon": {
+						  	"m_Range": 150,
+						  	"m_DamagePerSecond": 1111,
+						  	"m_DamageType": 7, //7 is plasma
+							"m_FadeOutTime": 0.25,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.1, "b": 0.5, "a": 1.0 },
+									"startSize": 1,
+									"shape": {
+										"scale": { "x": 1, "y": 1, "z": 1 },
+										"rotation": { "x": 0, "y": 180, "z": 0 }
+									}
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0.5,
+							"endWidth": 0.5,
+							"textureMode": 1,
+							"numCapVertices": 8,
+							"material": {
+								"mainTexture": "BF_Supervoid_Ray.png"
+							}
+						}
+					}
+				},"Duplicate_Duplicate_Duplicate|_barrel": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },"GameObject|_beam": {"UnityEngine.Transform": { 
+        "localPosition": { "x":0.811899, "y":-0.46875, "z":2.66225 } 
+      },
+						"BeamWeapon": {
+						  	"m_Range": 150,
+						  	"m_DamagePerSecond": 1111,
+						  	"m_DamageType": 7, //7 is plasma
+							"m_FadeOutTime": 0.25,
+							"Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.1, "b": 0.5, "a": 1.0 },
+									"startSize": 1,
+									"shape": {
+										"scale": { "x": 1, "y": 1, "z": 1 },
+										"rotation": { "x": 0, "y": 180, "z": 0 }
+									}
+								}
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"startWidth": 0.5,
+							"endWidth": 0.5,
+							"textureMode": 1,
+							"numCapVertices": 8,
+							"material": {
+								"mainTexture": "BF_Supervoid_Ray.png"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

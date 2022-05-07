@@ -1,0 +1,296 @@
+{
+  "Name": "GreenTech Starship Thruster",
+  "Description": "A powerful set of gimballed thrusters covering two different axis for better maneuvering large Techs.\n It is an atmospheric adaptation of a very similar model used in spacecrafts, for sublight speed navigation.",
+  "ID": 911198,
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 29196, 
+  "HP": 4000, 
+  "Mass": 8,
+  "CenterOfMass": {"x": 1.5, "y": 0.5, "z": 1},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 52, 52, 52, 52, 53, 53, 54, 54, 56, 56, 56, 56, 63, 63, 63",
+  "IconName": "GT_Starship_Thruster_Icon.png", 
+  "MeshName": "GT_Starship_Thruster.obj",
+  "ColliderMeshName": "GT_Starship_Thruster_Collider.obj",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    " xx ",
+    " xx "
+  ],
+  [
+    "xxxx",
+    "xxxx"
+  ]
+],
+  
+  "APs": [ 
+    {"x": 0, "y": 0, "z": 1.5},
+	  {"x": 1, "y": 0, "z": 1.5},
+    {"x": 2, "y": 0, "z": 1.5},
+	  {"x": 3, "y": 0, "z": 1.5},
+    {"x": 0, "y": 1, "z": 1.5},
+	  {"x": 1, "y": 1, "z": 1.5},
+    {"x": 2, "y": 1, "z": 1.5},
+	  {"x": 3, "y": 1, "z": 1.5}
+  ],
+  
+  "GamePrefabReference": "BF_Wing_Tail_532",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  },
+
+  "SubObjects": [
+    
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Wings_V",
+    "MeshName": "GT_Starship_Thruster_CenterJet.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "DestroyExistingRenderer": true,
+    "SubPosition": { "x":  0, "y": 0, "z": 0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Wings_H",
+  "MeshName": "GT_Starship_Thruster_SideJets.obj",
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  "DestroyExistingRenderer": true,
+  "SubPosition": { "x":  0, "y": 0, "z": 0},
+  "SubRotation": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }
+},
+{
+  "SubOverrideName": "_Pivot1",
+  "DestroyExistingRenderer": true,
+  "SubPosition": { "x":  1.5, "y": 0.5, "z": 1.01 }
+},
+{
+  "SubOverrideName": "_Pivot2",
+  "DestroyExistingRenderer": true,
+  "SubPosition": { "x":  1.5, "y": 0.5, "z": 0.9 }
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Base",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Arm_4",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Arm_3",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Arm_2",
+  "DestroyExistingRenderer": true
+},
+{
+  "SubOverrideName": "m_BF_Wing_Tail_332_Arm_1",
+  "DestroyExistingRenderer": true
+}
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot2": {
+      "GameObject|m_BF_Wing_Tail_332_Wings_V": {
+        "Reference|VEN_SteeringHover_Single_111/boosterFront": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": -0.75
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          "BoosterJet": {
+            "m_Force": 3600.0
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+              }
+            },
+            "GameObject|FX_HoverForce": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "startSizeMultiplier": 0.3
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|_Pivot1": {
+      "GameObject|m_BF_Wing_Tail_332_Wings_H": {
+        "Reference|VEN_SteeringHover_Single_111/boosterFront": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.34,
+              "y": 0.21,
+              "z": -0.33
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          },
+          "BoosterJet": {
+            "m_Force": 1100.0
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 90,
+                "z": 0
+              }
+            },
+            "GameObject|FX_HoverForce": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "startSizeMultiplier": 0.1
+                }
+              }
+            }
+          }
+        },
+        "Duplicate|boosterFront": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 1.34,
+              "y": -0.21,
+              "z": -0.33
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        },
+        "Duplicate|boosterFront_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -1.34,
+              "y": 0.21,
+              "z": -0.33
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        },
+        "Duplicate|boosterFront_copy_copy": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -1.34,
+              "y": -0.21,
+              "z": -0.33
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            }
+          }
+        }
+      }
+    },
+    "Reference|VEN_SteeringHover_Single_111/ModuleBooster.": {
+      "m_BoosterAudioType": 5
+    },
+    "ModuleWing": {
+      /* "m_Aerofoils": [{
+        "flapAngleRangeActual": 20, //How far the flap turns in terms of forces
+        "flapAngleRangeVisual": 20, //How far flap turns visually
+        "flapTurnSpeed": 8
+      }], */
+      "m_AttackAngleDamping": 0,
+      "m_TrailMinVelocity": 0,
+      "m_TrailAlphaStrength": 0,
+      "m_TrailFadeSpeed": 0,
+      "m_WingTrails": null,
+      "m_AverageLiftCoeff": 0.0
+    }
+  }
+}

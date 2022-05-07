@@ -1,0 +1,360 @@
+{
+  "Name": "GreenTech Geostatic Wheel",
+  "Description": "A wheel with strong attraction to the terrain, preventing Tech destabilization and unwanted flights.\nThe coils around the wheel acts as a powerful electrostatic generator, creating an effect akin to hovering but negative. Can be managed by hover control systems.",
+  "ID": 911194,
+  "PairedBlock": 911194,
+
+  "Faction": 0,
+  "Category": 3,
+  "Grade": 3, 
+  "Price": 6360, 
+  "HP": 1600, 
+  "Mass": 10.0,
+  "CenterOfMass": {"x": 0.5, "y": -1, "z": -0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 1, 1, 1, 3, 3, 3, 3, 43, 43, 44, 45, 45, 48, 48, 49", 
+  "IconName": "GT_Geostatic_Wheel_Icon.png", 
+
+  "Cells": [ 
+	{ "x": 0, "y": -1, "z": 0 },
+	{ "x": 0, "y": -1, "z": -1 },
+	{ "x": 0, "y": 0, "z": 0 },
+	{ "x": 0, "y": 0, "z": -1 },
+	{ "x": 0, "y": 1, "z": 0 },
+	{ "x": 0, "y": 1, "z": -1 },
+	{ "x": 0, "y": -2, "z": 0 },
+	{ "x": 0, "y": -2, "z": -1 },
+	{ "x": 0, "y": -3, "z": 0 },
+	{ "x": 0, "y": -3, "z": -1 },
+	{ "x": 1, "y": -1, "z": 0 },
+	{ "x": 1, "y": -1, "z": -1 },
+	{ "x": 1, "y": 0, "z": 0 },
+	{ "x": 1, "y": 0, "z": -1 },
+	{ "x": 1, "y": -3, "z": 0 },
+	{ "x": 1, "y": -3, "z": -1 },
+	{ "x": 1, "y": -2, "z": 0 },
+	{ "x": 1, "y": -2, "z": -1 },
+	{ "x": 2, "y": -1, "z": 0 },
+	{ "x": 2, "y": -1, "z": -1 },
+	{ "x": 2, "y": 0, "z": 0 },
+	{ "x": 2, "y": 0, "z": -1 },
+	{ "x": 2, "y": -3, "z": 0 },
+	{ "x": 2, "y": -3, "z": -1 },
+	{ "x": 2, "y": -2, "z": 0 },
+	{ "x": 2, "y": -2, "z": -1 }
+  ],
+  
+  "APs": [ 
+    {"x": 0, "y": 1.5, "z": 0},
+	{"x": 0, "y": 1.5, "z": -1},
+	{"x": -0.5, "y": 1, "z": 0},
+	{"x": -0.5, "y": 1, "z": -1},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": -1},
+	{"x": 0, "y": 1, "z": 0.5},
+    {"x": 0, "y": 1, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "GSO_Wheel_222",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_GSO_Wheel_222_Base",
+		"MeshName": "GT_Geostatic_Wheel_Base.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"MakeBoxCollider": true
+		/* "SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		} */
+	}, 
+	{
+		"SubOverrideName": "m_GSO_Wheel_222_Tyre",
+		"MeshName": "GT_Geostatic_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_GSO_Wheel_222_Suspension_A",
+		"MeshName": "GT_Geostatic_Wheel_Suspension.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		//"MakeBoxCollider": true,
+		/* "SubPosition": {
+			"x": 0.04,
+			"y": -2.23,
+			"z": -0.5
+		},
+		"SubRotation": {
+			"x": -90,
+			"y": -90,
+			"z": 0
+		} */
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 90
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_B",
+		"SubPosition": {
+			"x": 0.05,
+			"y": 0.034,
+			"z": -0.5
+		},
+		"SubRotation": {
+			"x": 90,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 1.25,
+			"y": -0.76,
+			"z": -0.5
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_A",
+		"SubPosition": {
+			"x": -1.25,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 270,
+			"y": 180,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 1.3,
+			"y": -1,
+			"z": -0.5
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"Reference|GSO_HoverJet_111/ModuleHover.": {},
+	"Reference|GSO_HoverJet_111/m_GSO_Hover_111_Jet/_hoverJet": {
+		"UnityEngine.Transform": {
+			"localPosition": {
+				"x": 1,
+				"y": -5.5,
+				"z": -0.5
+				},
+				"localEulerAngles": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+				},
+				"localScale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+				}
+			},
+		"GameObject|ParticleSystem_GSO_HoverPad": {
+			"UnityEngine.Transform": {
+				"localPosition": {"x": 0, "y": 0, "z": 0},
+				"localEulerAngles": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+				},
+			"UnityEngine.ParticleSystem": null,
+			"UnityEngine.ParticleSystemRenderer": null
+		},
+		"HoverJet": {
+			"jetRadius": 1.0,
+			"forceMax": -50000,
+			"forceRangeMax": 5,
+			"m_DampingScale": 0.001,
+			"m_MaxClimbDistance": 8,
+			"m_VectoredThrustMaxAngle": 0,
+			"m_VectoredThrustMaxForceAngle": 0
+		}
+	},
+	"GameObject|Suspension_Tyre": {
+		"Reference|GC_Hover_222/m_GC_Hover_222_Jet/_hoverJet": {
+			"UnityEngine.Transform": {
+				"localPosition": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+					},
+					"localEulerAngles": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+					},
+					"localScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+					}
+				},
+			"HoverJet": {
+				"forceMax": 0
+			},
+			"GameObject|ParticleSystem_GSO_HoverPad (1)": {
+				"UnityEngine.Transform": {
+					"localPosition": {"x": 0, "y": 0, "z": 0},
+					"localEulerAngles": {
+					  "x": 0.0,
+					  "y": 0.0,
+					  "z": 0.0
+					}
+					},
+					"UnityEngine.ParticleSystem": null,
+					"ParticleSystemRenderer": null,
+				"Reference|GC_SamSite_Charger_444/fx_Lightning":{
+					"UnityEngine.Transform": {
+						"localPosition": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+							},
+							"localEulerAngles": {
+							"x": 0,
+							"y": 0,
+							"z": 90
+							},
+							"localScale": {
+							"x": 0.35,
+							"y": 0.22,
+							"z": 0.35
+							}
+						},
+					"GameObject|Light_Point": null,
+						"UnityEngine.ParticleSystem": {
+						"startColor":{
+						"r": 1,
+						"g": 1,
+						"b": 1,
+						"a": 1.0
+						}
+						},
+						"UnityEngine.ParticleSystemRenderer": {
+						"material": {
+							//"mainTexture": "Thunder_Textures_2.png"
+						}
+					}
+				}
+			}
+		}
+	},
+	"GameObject|_wheel": {
+		"GameObject|m_GSO_Wheel_222_Tyre": {
+			"UnityEngine.CapsuleCollider": {
+				"center": {
+				  "x": 0,
+				  "y": 0,
+				  "z": 0
+				},
+				"radius": 0.8,
+				"height": 1,
+				"direction": 0
+			  }
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 12000,
+		   "torqueCurveMaxRpm": 280,
+		  "passiveBrakeMaxTorque": 15000,
+		   "reverseBrakeMaxRpm": 360,
+		   "basicFrictionTorque": 150.0,
+		   "fullCompressFrictionTorque": 300
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 5.0,
+					"gripFactorLat": 3.0
+				}
+			  },
+			"radius": 1.0,
+			"thicknessAngular": 40,
+			"suspensionSpring": 25000.0,
+			"suspensionDamper": 1000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 1.85,
+			"steerAngleMax": 18,
+			"steerSpeed": 1.5
+			//"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	},
+	"ModuleHover": {
+		"m_UseBoosterAudio": true,
+		"m_BoosterAudioType": 5
+	}
+ }
+}

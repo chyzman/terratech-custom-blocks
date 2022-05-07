@@ -1,0 +1,64 @@
+{
+  "Name": "GreenTech Tall Greenhouse Wall",
+  "Description": "A tall wall of see-through, bulletproof glass with a sturdy metallic frame.",
+  "ID": 911167, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4,
+  "Price": 2055,
+  "HP": 3000, 
+  "Mass": 3,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "7, 7, 7, 7, 7, 32, 32, 32, 32, 32, 32, 32, 32, 43, 43, 43, 43, 43, 45",  
+  "IconName": "GT_Tall_Greenhouse_Wall_Icon.png", 
+  "MeshName": "GT_Tall_Greenhouse_Wall.obj", 
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 4, "z": 3}, 
+  "APs": [
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 3.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 3.5, "z": 1},
+    {"x": 0, "y": -0.5, "z": 2},
+    {"x": 0, "y": 3.5, "z": 2},
+    {"x": 0, "y": 0, "z": 2.5},
+    {"x": 0, "y": 1, "z": 2.5},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 0, "y": 2, "z": 2.5},
+    {"x": 0, "y": 2, "z": -0.5},
+    {"x": 0, "y": 3, "z": 2.5},
+    {"x": 0, "y": 3, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Tall_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "RR_ClearPanel"
+    } */
+    {
+      "MeshName": "GT_Tall_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Tall_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Tall_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+  ]
+}

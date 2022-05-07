@@ -1,0 +1,124 @@
+{
+	"Name": "Better Future Cubic Rotating Anchor",
+	"Description": "An anchor that can spin around. Able to carry more than the GeoCorp Anchor and spin much faster than the venture one.", //You can make multiple lines with \n
+	"ID": 1700094, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 3434,
+	"HP": 5000,
+	"Mass": 5,
+"IconName":"Cube Anchor 2.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy,titanicalloy,", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 	
+        { "x": 1, "y": 0, "z": 0 }, 
+        { "x": 2, "y": 0, "z": 0 }, 
+        { "x": 3, "y": 0, "z": 0 }, 
+        { "x": 4, "y": 0, "z": 0 }, 
+		
+		{ "x": 0, "y": 0, "z": 1 }, 	
+        { "x": 1, "y": 0, "z": 1 }, 
+        { "x": 2, "y": 0, "z": 1 }, 
+        { "x": 3, "y": 0, "z": 1 }, 
+        { "x": 4, "y": 0, "z": 1 }, 
+		
+		{ "x": 0, "y": 0, "z": 2 }, 	
+        { "x": 1, "y": 0, "z": 2 }, 
+        { "x": 2, "y": 0, "z": 2 }, 
+        { "x": 3, "y": 0, "z": 2 }, 
+        { "x": 4, "y": 0, "z": 2 }, 
+		
+		{ "x": 0, "y": 0, "z": 3 }, 	
+        { "x": 1, "y": 0, "z": 3 }, 
+        { "x": 2, "y": 0, "z": 3 }, 
+        { "x": 3, "y": 0, "z": 3 }, 
+        { "x": 4, "y": 0, "z": 3 }, 
+		
+		{ "x": 0, "y": 0, "z": 4 }, 	
+        { "x": 1, "y": 0, "z": 4 }, 
+        { "x": 2, "y": 0, "z": 4 }, 
+        { "x": 3, "y": 0, "z": 4 }, 
+        { "x": 4, "y": 0, "z": 4 }, 
+		
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		
+		{ "z": -0.5, "y": 0, "x": 0 }, 
+		{ "z": 4.5, "y": 0, "x": 0 },
+		{ "z": -0.5, "y": 0, "x": 4 },
+		{ "z": 4.5, "y": 0, "x": 4 },
+		
+		{ "x": 0, "y": 0.5, "z": 0 }, 
+		{ "x": 4, "y": 0.5, "z": 0 },
+		{ "x": 0, "y": 0.5, "z": 4 },
+		{ "x": 4, "y": 0.5, "z": 4 },
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "HE_Anchor_Rotating_212",
+	"ReferenceOffset": { "x": 0.5, "y": 0, "z": 0 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"m_HE_Anchor_Rotating_212",
+	"DestroyExistingColliders": true,
+    "MeshName": "BF_5x5_Rotating_Anchor_Base.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName": "BF_5x5_Rotating_Anchor_Base.obj",
+    
+	"SubPosition":{"x":2,"y":0.1,"z":2},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	
+	},{
+    "SubOverrideName":"m_HE_AnchorRotating",
+	"DestroyExistingColliders": true,
+    "MeshName": "BF_5x5_Rotating_Anchor.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName": "BF_5x5_Rotating_Anchor.obj",
+    "SubPosition":{"x":2,"y":0,"z":2.5},
+	"SubScale":{"x":1,"y":1,"z":1},
+	}],"JSONBLOCK":{"ModuleAnchor":{"m_MaxAngularVelocity":360,"m_MaxTorque":1000000,"m_BrakeTorque":900000,"MaxAngVel":360,"MaxTorque":1000000,"BrakeTorque":900000,},
+		"GameObject|_anchor":{
+		 "GameObject|HEAnchorRotating": {
+		  "BlockAnchor":{
+		   "m_GroundPoint":{
+		    "localPosition": {
+            "x": 2.0,
+            "y": -2.5,
+            "z": 2.5,
+            "normalized": {
+              "x": 0.0,
+              "y": -1.0,
+              "z": 0.0,
+              "magnitude": 1.0,
+              "sqrMagnitude": 1.0
+            },
+            "magnitude": 2.128,
+            "sqrMagnitude": 4.528384
+          }},"m_SnapToleranceUp":1,"m_SnapToleranceDown":0.5}}}}
+	
+	
+	}

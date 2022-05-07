@@ -1,0 +1,251 @@
+{
+  "Name": "Old Star Heavy Iron Galleon Anchor",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! With Old Star's Advancements in Hover tech they needed a way to keep them from floating away. Fortunately Better Future knows how but there is no way we will work with them but, also fortunately we found a wrecked H.U.B.L.E. drone in the mountains with its Sky anchor free to grab and so. . . The Old Star Heavy Iron Galleon Anchor was created. With way more armor and capability that whatever Better Future's can do we can ensure you will stay where its anchored as only the strongest hits can dislodge our anchor from the ground!",
+  "ID": 300108,
+  
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 2,
+  "Price": 7782,
+  "HP": 2700,
+  "Mass": 9,
+
+  "Fragility": 0,
+  "Rarity": 2,
+  "DamageableType": 2,
+  "EmissionMode": 2,
+
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 50,52, 52, 54, 54, 56",
+  "IconName": "OS_HI_Galleon_Icon.png", 
+  
+  "Cells": [
+    {"x": 0, "y": 1, "z": 0},{"x": 1, "y": 1, "z": 0},
+    {"x": 0, "y": 0, "z": 0},{"x": 1, "y": 0, "z": 0},
+    {"x": 0, "y":-1, "z": 0},{"x": 1, "y":-1, "z": 0}
+
+  ],
+  
+  "APs": [ 
+      //top
+    {"x": 0, "y": 1.5, "z": 0},{"x": 1, "y": 1.5, "z": 0},
+    // thin sides
+    {"x": 1.5, "y": 1, "z": 0},{"x":-0.5, "y": 1, "z": 0},
+    {"x": 1.5, "y": 0, "z": 0},{"x":-0.5, "y": 0, "z": 0},
+    // thick sides
+    {"x": 0, "y": 1, "z":-0.5},{"x": 0, "y": 1, "z": 0.5},
+    {"x": 0, "y": 0, "z":-0.5},{"x": 0, "y": 0, "z": 0.5},
+    {"x": 1, "y": 1, "z":-0.5},{"x": 1, "y": 1, "z": 0.5},
+    {"x": 1, "y": 0, "z":-0.5},{"x": 1, "y": 0, "z": 0.5}
+  ],
+
+  "GamePrefabReference": "BF_Anchor_Sky_222", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  
+"SubObjects": [
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Base",
+        "MeshName": "OS_HI_Heavy_Anchor_Base.obj",
+        "ColliderMeshName": "OS_HI_Heavy_Anchor_Base.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName": "OST2.png",
+        "MeshEmissionTextureName": "OST3.png",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Hook",
+        "MeshName": "OS_HI_Heavy_Anchor_Inner.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName": "OST2.png",
+        "MeshEmissionTextureName": "OST3.png",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_A",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_B",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_C",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_D",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky_222_Anchor",
+        "MeshName": "OS_HI_Heavy_Anchor_UNDE.obj",
+        "ColliderMeshName": "OS_HI_Heavy_Anchor_UNDE.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName": "OST2.png",
+        "MeshEmissionTextureName": "OST3.png",
+        "DestroyExistingRenderer": true
+    },
+    {
+        "SubOverrideName": "m_BF_Anchor_Sky",
+        "MeshName": "OS_HI_Heavy_Anchor_DE.obj",
+        "ColliderMeshName": "OS_HI_Heavy_Anchor_DE.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName": "OST2.png",
+        "MeshEmissionTextureName": "OST3.png",
+        "DestroyExistingRenderer": true
+    }
+],
+"JSONBLOCK": {
+    "GameObject|_fire": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0,
+                "y":-0.5,
+                "z": 0
+            }
+        }
+    },
+    "GameObject|_anchor": {
+        "GameObject|Particle System": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "localScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            },
+            "UnityEngine.ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "duration": 5.0,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 5.0,
+                "startSpeed": 0.5,
+                "startSize": 0.4,
+                "startRotation": 0.0,
+                "startColor": {
+                    "r": 2,
+                    "g": 5,
+                    "b": 5.7,
+                    "a": 0.3
+                },
+                "startLifetime": 5.0,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 0,
+                "scalingMode": 1
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+                "alignment": 0,
+                "renderMode": 0,
+                "sortMode": 0,
+                "lengthScale": 2.0,
+                "velocityScale": 0.0,
+                "cameraVelocityScale": 0.0,
+                "normalDirection": 1.0,
+                "shadowBias": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.0,
+                "maxParticleSize": 0.5
+            }
+        },
+        "UnityEngine.Transform": {//beam effect
+            "localPosition": {
+                "x": 0.5,
+                "y":-0.5,
+                "z": 0.0
+            }
+        },
+        "GameObject|BFAnchorSky": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "GameObject|_healing": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            },
+            "GameObject|m_BF_Anchor_Sky": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            },
+            "GameObject|_beam": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                        "x": 0.0,
+                        "y": 1.2,
+                        "z": 0.0
+                    }
+                },
+                "LineRenderer": {
+                    "numPositions": 2,
+                    "startWidth": 0.25,
+                    "endWidth": 0.25,
+                    "textureMode": 1,
+                    "numCapVertices": 5,
+                    "startColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 0.8
+                    },
+                    "endColor": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1
+                    },
+                    "material": {
+                        "mainTexture": "Galleon_Anchor_Beam.png"
+                    }
+                }
+            },
+            "GameObject|_groundPoint": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            },
+            "BlockAnchor": {
+                "m_GroundPoint": "/_anchor/BFAnchorSky/_groundPoint",
+                "m_BeamPoint": "/_anchor/BFAnchorSky/_beam",
+                "m_SnapToleranceUp": 0.0,
+                "m_SnapToleranceDown": 50.0,
+                "m_SkyAnchorStrength": 5.0,
+                "m_SkyAnchorDamping": 1,
+                "m_IsSkyAnchor": true,
+                "m_SkyAnchorSpeed": 42.0,
+                "m_SkyAnchorRecoilForce": 0.0
+            }
+        }
+    }
+}
+}

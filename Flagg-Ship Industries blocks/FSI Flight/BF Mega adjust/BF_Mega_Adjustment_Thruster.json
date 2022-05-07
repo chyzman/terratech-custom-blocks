@@ -1,0 +1,204 @@
+{
+  "Name": "Better Future Mega Adjustment thruster",
+  "Description": "An extremely strong adjustment thruster that works in all directions and is flush enough to be a structural block. the strength of each booster is akin to a medium BF thruster.",
+  "ID": 1700226, 
+
+  "Faction": 7,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 23832, 
+  "HP": 2000, 
+  "Mass": 10,
+  "CenterOfMass": {"x": 2, "y": 2, "z": 2},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "32, 32, 32, 32, 32, 32, 43, 43, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 56, 56, 56, 56, 56, 56, 63", 
+  "IconName": "Mega-Adjustment_icon.png", 
+  "MeshName": "BF_Mega-adjust.obj",
+  "SupressBoxColliderFallback": false,
+  "MeshMaterialName":"BF_Main",
+  
+ 
+   "BlockExtents":{"x": 5,"y": 5, "z": 5}, 
+  
+   "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 }, 
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 }, 
+
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": 4.5 },
+		{ "x": 0, "y": 4, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": -0.5 } 
+
+					
+    ],
+  
+  "GamePrefabReference": "VEN_SteeringHover_Single_111",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 180, 
+    "y": 0, 
+    "z": 0  
+  },
+
+  "SubObjects": [
+  {
+    "SubOverrideName": "m_VEN_SteeringHoverSingle_111",
+    "DestroyExistingRenderer": true
+  }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|boosterFront": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2,
+          "y": 2,
+          "z": 1
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 90,
+          "z": 0
+         }
+       },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|FX_HoverForce": {
+           "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 0.2,
+            "playbackSpeed": 1,
+			"startColor":{
+          "r": 0,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+            "enableEmission": true,
+            "emissionRate": 10,
+            "startSpeed": 5,
+            "startSize": 1,
+            "startRotation": 0,
+            "startLifetime": 0.5,
+            "gravityModifier": 0.0,
+            "maxParticles": 200,
+            "simulationSpace": 0,
+            "scalingMode": 1,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "proceduralSimulationSupported": false
+          }
+      }
+    },
+      "BoosterJet": {
+        "m_Force": 10000.0
+      }
+    },
+    "Duplicate|boosterFront": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2,
+          "y": 2,
+          "z": 3
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": -90,
+          "z": 0
+         }
+       }
+    },
+    "Duplicate|boosterFront_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1,
+          "y": 2,
+          "z": 2
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 180,
+          "z": 0
+         }
+       }
+    },
+    "Duplicate|boosterFront_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 3,
+          "y": 2,
+          "z": 2
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       }
+    },
+    "Duplicate|boosterFront_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2,
+          "y": 1,
+          "z": 2
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": -90
+         }
+       }
+    },
+    "Duplicate|boosterFront_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2,
+          "y": 3,
+          "z": 2
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+         }
+       }
+    },
+    "ModuleBooster": {
+      "m_BoosterAudioType": 5
+    }  
+  }
+}

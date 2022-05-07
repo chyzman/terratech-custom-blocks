@@ -1,0 +1,340 @@
+
+{
+  "Name": "Hawkeye Jotnar FR22 Cruiser Engine",
+  "Description": "The FR22 is the flagship model of Black Labs new Jotnar class engine. This plasma engine takes ion propulsion technology to its logical conclusion by supporting the extreme thrust output needed by interstellar craft. This makes the Jotnar FR22 one of the most power-dense engines in existance.",
+  "ID": 117065,
+
+  "Faction": 5,
+  "Category": 8,
+  "Rarity": 2,
+  "Grade": 3,
+  "Price": 142362,
+  "HP": 6000,
+  "Mass": 32,
+
+  "Recipe":  {"50": 8, "52": 6, "54": 6, "56": 12, "58": 8, "63": 6, "64": 2},
+
+  "IconName": "HE_Jotnar_Cruiser_Engine.png",
+  "MeshName": null,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "Cells": [
+        {"x": 0, "y": 0, "z": -3},
+        {"x": 0, "y": 1, "z": -3},
+        {"x": 1, "y": 0, "z": -3},
+        {"x": 1, "y": 1, "z": -3}, 
+
+        {"x": 0, "y": 0, "z": -2},
+        {"x": 0, "y": 1, "z": -2},
+        {"x": 1, "y": 0, "z": -2},
+        {"x": 1, "y": 1, "z": -2},  
+
+        {"x": 0, "y": 0, "z": -1},
+        {"x": 0, "y": 1, "z": -1},
+        {"x": 1, "y": 0, "z": -1},
+        {"x": 1, "y": 1, "z": -1},    
+    
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": 1, "z": 0},
+        {"x": 1, "y": 0, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+
+        {"x": 0, "y": 0, "z": 1},
+        {"x": 0, "y": 1, "z": 1},
+        {"x": 1, "y": 0, "z": 1},
+        {"x": 1, "y": 1, "z": 1},
+
+        {"x": 0, "y": 0, "z": 2},
+        {"x": 0, "y": 1, "z": 2},
+        {"x": 1, "y": 0, "z": 2},
+        {"x": 1, "y": 1, "z": 2},
+
+        {"x": 0, "y": 0, "z": 3},
+        {"x": 0, "y": 1, "z": 3},
+        {"x": 1, "y": 0, "z": 3},
+        {"x": 1, "y": 1, "z": 3},
+
+        {"x": 0, "y": 0, "z": 4},
+        {"x": 0, "y": 1, "z": 4},
+        {"x": 1, "y": 0, "z": 4},
+        {"x": 1, "y": 1, "z": 4},
+  ],
+
+ "APs": [ 
+    { "x": 0,     "y": -0.5,    "z": -2  },
+    { "x": 1,     "y": -0.5,    "z": -2  },
+    { "x": 0,     "y": -0.5,    "z": -1  },
+    { "x": 1,     "y": -0.5,    "z": -1  },
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": 1,     "y": -0.5,    "z": 0  },
+    { "x": 0,     "y": -0.5,    "z": 1  },
+    { "x": 1,     "y": -0.5,    "z": 1  },
+    { "x": 0,     "y": -0.5,    "z": 2  },
+    { "x": 1,     "y": -0.5,    "z": 2  },
+    { "x": 0,     "y": -0.5,    "z": 3  },
+    { "x": 1,     "y": -0.5,    "z": 3  },
+
+    { "x": 0,     "y": 1.5,    "z": -2  },
+    { "x": 1,     "y": 1.5,    "z": -2  },
+    { "x": 0,     "y": 1.5,    "z": -1  },
+    { "x": 1,     "y": 1.5,    "z": -1  },
+    { "x": 0,     "y": 1.5,    "z": 0  },
+    { "x": 1,     "y": 1.5,    "z": 0  },
+    { "x": 0,     "y": 1.5,    "z": 1  },
+    { "x": 1,     "y": 1.5,    "z": 1  },
+    { "x": 0,     "y": 1.5,    "z": 2  },
+    { "x": 1,     "y": 1.5,    "z": 2  },
+    { "x": 0,     "y": 1.5,    "z": 3  },
+    { "x": 1,     "y": 1.5,    "z": 3  },
+    { "x": 0,     "y": 1.5,    "z": 4  },
+    { "x": 1,     "y": 1.5,    "z": 4  },
+
+    { "x": -0.5,     "y": 0,    "z": 1  },
+    { "x": 1.5,     "y": 0,    "z": 1  },
+    { "x": -0.5,     "y": 0,    "z": 2  },
+    { "x": 1.5,     "y": 0,    "z": 2  },
+    { "x": -0.5,     "y": 0,    "z": 3  },
+    { "x": 1.5,     "y": 0,    "z": 3  },
+
+    { "x": -0.5,     "y": 1,    "z": 0  },
+    { "x": 1.5,     "y": 1,    "z": 0  },
+    { "x": -0.5,     "y": 1,    "z": -1  },
+    { "x": 1.5,     "y": 1,    "z": -1  },
+  ],
+
+   "GamePrefabReference": "BF_IonDrive_Small_112",
+
+   "SubObjects":[
+     {
+      "SubOverrideName":         "m_BF_IonDrive_Small_112",
+         "MeshName":             "HE_Jotnar_Cruiser_Engine.obj",
+         "ColliderMeshName":     "HE_Jotnar_Cruiser_Engine_Collider.obj",
+         "SubPosition":          { "x": 0.5,  "y": 0.5,  "z": 0.5 },
+         "SubRotation":          { "x": 0, "y": 180, "z": 0 }
+      },
+      {
+        "SubOverrideName":       "m_BF_MotionEngine_Linear_112_SpinningPart",
+        "MeshName":              "HE_Jotnar_Cruiser_Engine_CCWSpinner.obj",
+        "MeshMaterialName":      "HE_Main",
+        "SubPosition":           { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation":           { "x": 0, "y": 180, "z": 0 }
+        },
+        {
+        "SubOverrideName":       "_Spindle_copy/m_BF_MotionEngine_Linear_112_SpinningPart",
+        "MeshName":              "HE_Jotnar_Cruiser_Engine_CCWSpinner.obj",
+        "MeshMaterialName":      "HE_Main",
+        "SubPosition":           { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation":           { "x": 0, "y": 0, "z": 0 }
+     },
+  ],
+   
+ "JSONBLOCK": {
+  "GameObject|_fanJet": {
+    "UnityEngine.Transform": {
+        "localPosition": { "x": 0.5, "y": 0.5, "z": -2 },
+      },
+    "FanJet": {
+       "force": 22000,
+       "backForce": 0,
+       "spinSpeed": 100.0,
+        }
+      },
+
+      "Reference|BF_MotionEngine_Linear_112/_Spindle":{
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 0.5, "y": 0.5, "z": 0.5 },
+          },
+        "Spinner": {
+         "m_Speed": 0.1,   
+        },
+      },
+      "Duplicate|_Spindle":{
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.5, "y": 0.5, "z": 0.85 },
+          "localRotation": { "x": 0, "y":180, "z": 0 }
+        },
+      },
+
+    "GameObject|fx_Trail": null,
+    "Reference|HE_JetEngine_112/_boostJet": {
+      "UnityEngine.Transform": {
+          "localScale": { "x": 0.8, "y": 0.8, "z": 0.8 },
+          "localPosition": { "x": -0.1, "y": -0.1, "z": -2 }
+      },
+      "BoosterJet": {
+          "m_Force": 0,
+          "m_ConsumesFuel": false
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+            "UnityEngine.ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "startSpeed": 100,
+                "startSize": 0.3,
+                "startRotation": 0,
+                "startLifetime": 0.035,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 0,
+                "scalingMode": 0,
+                "useAutoRandomSeed": false,
+                "shape": {
+                    "position": { "x": 0, "y": 0, "z": 2 },
+                    "angle": 0,
+                    "length": 2,
+                },
+                "collision": {
+                  "enabled": false
+                },
+                "startColor": {
+                  "r": 0.8,
+                  "g": 0.1,
+                  "b": 0.1,
+                  "a": 1.0
+              },
+                "sizeOverLifetime": {
+                    "size": {
+                        "mode": "curve",
+                        "curve": {
+                          "keys": [
+                            {
+                              "time": 0.0172413774,
+                              "value": 1.5,
+                              "weightedMode": 0,
+                              "tangentMode": 0
+                            },
+                            {
+                              "time": 0.9590517,
+                              "value": 0.75,
+                              "weightedMode": 0,
+                              "tangentMode": 0
+                            }
+                          ],
+                          "preWrapMode": 8,
+                          "postWrapMode": 8
+                        }
+                    }
+                },
+                "emission": {
+                    "rateOverTimeMultiplier": 500
+                }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+                "alignment": "Facing",
+                "renderMode": "Billboard",
+                "lengthScale": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.0,
+                "maxParticleSize": 50.0,
+                "material": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material."
+            }
+        },
+        "JetTrail": {
+            "initParticleSize": 0,
+            "randomScaleFactor" : 0
+        }
+      },
+    },
+    "Duplicate|_boostJet": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 0.8, "y": 0.8, "z": 0.8 },
+          "localPosition": { "x": 1.1, "y": -0.1, "z": -2 }
+        },
+    },
+    "Duplicate|_boostJet_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x": 0.8, "y": 0.8, "z": 0.8 },
+        "localPosition": { "x": 0.5, "y": 0.75, "z": -2 }
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+            "UnityEngine.ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "startSpeed": 100,
+                "startSize": 0.55,
+                "startRotation": 0,
+                "startLifetime": 0.075,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 0,
+                "scalingMode": 0,
+                "useAutoRandomSeed": false,
+                "shape": {
+                    "position": { "x": 0, "y": 0, "z": 2 },
+                    "angle": 0,
+                    "length": 2,
+                },
+                "collision": {
+                  "enabled": false
+                },
+                "startColor": {
+                  "r": 0.8,
+                  "g": 0.1,
+                  "b": 0.1,
+                  "a": 1.0
+              },
+                "sizeOverLifetime": {
+                    "size": {
+                        "mode": "curve",
+                        "curve": {
+                          "keys": [
+                            {
+                              "time": 0.0172413774,
+                              "value": 1.5,
+                              "weightedMode": 0,
+                              "tangentMode": 0
+                            },
+                            {
+                              "time": 0.9590517,
+                              "value": 0.75,
+                              "weightedMode": 0,
+                              "tangentMode": 0
+                            }
+                          ],
+                          "preWrapMode": 8,
+                          "postWrapMode": 8
+                        }
+                    }
+                },
+                "emission": {
+                    "rateOverTimeMultiplier": 500
+                }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+                "alignment": "Facing",
+                "renderMode": "Billboard",
+                "lengthScale": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.0,
+                "maxParticleSize": 50.0,
+                "material": "Reference|HE_PlasmaTeeth_311/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.material."
+            }
+        },
+        "JetTrail": {
+            "initParticleSize": 0,
+            "randomScaleFactor" : 0
+        }
+      },
+  },
+
+
+      "ModuleBooster": {
+        "m_UseBoostControls": true,
+        "m_UseDriveControls": true,
+        "jets": [ "/_boostJet/BoosterJet.", "/_boostJet_copy/BoosterJet.", "/_boostJet_copy_copy/BoosterJet."  ],
+        "m_BoosterAudioType": 3,
+      },
+
+
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Name": "Old Star Small Curved Corner Slope",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails. Now one can make more streamlined Old Star Techs with even more curves!",
+  "ID": 300083,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 600,
+  "Mass": 4,
+  "IconName": "OS_Small_Curved_Corner_icon.png",
+  "MeshName": "OS_Small_Curved_Corner.obj",
+  "Recipe": { // "ID": Count
+    "0": 10,
+    "1": 10,
+    "5": 5
+  },
+  "EmissionMode": 2,
+  "ColliderMeshName": "OS_Small_Curved_CornerC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+   // X is right and left, Y is up and down, and Z is forward and backward
+  "Cells":[
+    { "x": 0, "y": 0, "z": 0 }, { "x": 0, "y": 0, "z": 1 },{ "x": 1, "y": 0, "z": 0 },{ "x": 1, "y": 0, "z": 1 }
+  ],   
+  "APs": [ 
+ 
+    //Top
+    { "x": 0, "y": 0.5, "z": 0 }, 
+    // Right Face
+    { "x":-0.5, "y": 0, "z": 0 },{ "x":-0.5, "y": 0, "z": 1 },
+    // Bottom Face
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 1, "y": -0.5, "z": 0 },{ "x": 0, "y": -0.5, "z": 1 },
+    //Back
+    { "x": 1, "y": 0, "z": -0.5 },{ "x": 0, "y": 0, "z": -0.5 }
+  ]
+}

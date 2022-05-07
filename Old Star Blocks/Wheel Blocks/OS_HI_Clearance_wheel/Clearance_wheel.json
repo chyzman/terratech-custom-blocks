@@ -1,0 +1,156 @@
+{
+  "Name": "Old Star Heavy Iron Clearance Wheel",
+  "Description": "This here is how the Old Star do. In the mines it's Heavy Iron that takes over for the Old Star. These wheels help Heavy Iron techs keep thier footing over the rough ground they drive on and keep their techs from getting high centered. Note: Due to the mass and torque of the wheel, I recommend using it on a tech with relatively high weight as it will throw a light tech around.",
+  "ID": 300022, 
+  "Faction": 4, 
+  "Category": 3, 
+  "Grade": 2,
+  "Price": 5502, 
+  "HP": 1250, 
+  "Mass": 8.25,
+  "IconName":"Clearance Wheel Icon.png",
+  "MeshName":null, 
+  "CenterOfMass": {"x": 0.5, "y": -0.4, "z": 0.5},
+  "EmissionMode": 2,
+  "Recipe": { // "ID": Count
+    "0": 15,
+    "3": 18,
+    "43": 17
+  },
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+ // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [ 
+    //Top
+    {"x": 0,"y": 4.5,"z": 0}, {"x": 0,"y": 4.5,"z": 1},{"x": 0,"y": 4.5,"z": 2},
+    {"x": 1,"y": 4.5,"z": 0}, {"x": 1,"y": 4.5,"z": 1},{"x": 1,"y": 4.5,"z": 2},
+    
+    //Front
+    {"x": 0,"y": 4,"z": 2.5}, {"x": 1,"y": 4,"z": 2.5},
+
+    //Baack
+    {"x": 0,"y": 4,"z": -0.5},{"x": 1,"y": 4,"z":-0.5},
+
+    //Left
+    {"x":-0.5,"y": 4,"z": 0}, {"x":-0.5,"y": 4,"z": 1},{"x":-0.5,"y": 4,"z": 2},
+
+    //Right
+    {"x": 1.5,"y": 4,"z": 0}, {"x": 1.5,"y": 4,"z": 1},{"x":1.5,"y": 4,"z": 2}
+  ],
+  "CellMap": [
+   ["TT",
+    "TT",
+    "TT",
+    "TT",
+    "TT"],
+
+   ["TT",
+    "TT",
+    "TT",
+    "TT",
+    "TT"],
+
+   ["TT",
+    "TT",
+    "TT",
+    "TT",
+    "TT"]
+
+  ],
+  "PrefabReference": "GSO_Wheel_222",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": { "x": 1, "y": 5.0, "z": 0.5 },
+  "SubObjects": [ 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_B", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                      
+      "MakeBoxCollider": true, 
+      "MeshName": "HI_Upper.obj"
+    },
+    {
+      "OverrideName": "m_GSO_Wheel_222_Suspension_A", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,           
+      "MakeBoxCollider": true,            
+      "MeshName": "HI_Lower.obj"
+    }, 
+    {
+      "OverrideName": "m_GSO_Wheel_222_Tyre", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+
+      "ColliderMeshName": "HI_Wheel.obj",
+      "MeshName": "HI_Wheel.obj"
+    },
+    {
+      "OverrideName": "m_GSO_Wheel_222_Base", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+      "MeshName": "HI_Base Block.obj",
+      "MakeBoxCollider": true,
+      "Rotate": { "x":0, "y": 0, "z": 90 },   
+      "SubPosition": { "x":0, "y": 4, "z": 0 }     
+    }, 
+    {
+      "OverrideName": "Suspension_B",
+      "SubPosition": { "x":0.5, "y": 3.5, "z": 1 }
+    },
+    {
+      "OverrideName": "Suspension_A",
+      "SubPosition": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "OverrideName": "_wheel",
+      "SubPosition": { "x": 0.5, "y": 2, "z":  1}
+    }, 
+    {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 0, "y": -0.1, "z": 0}
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+  
+  //   // Torque Parameters
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 40000.0,
+			"torqueCurveMaxRpm": 300.0,
+			"passiveBrakeMaxTorque": 20000.0,
+			"reverseBrakeMaxRpm": 50.0,
+			"basicFrictionTorque": 100.0,
+			"fullCompressFrictionTorque": 500.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"radius": 1.5,
+			"thicknessAngular": 40,
+			"suspensionSpring": 20000.0,
+			"suspensionDamper": 500.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 1.0,
+			"steerAngleMax": 10.0,
+			"steerSpeed": 5.0
+		},
+		"Instantiate|tireProperties": {
+			"Instantiate|props": {
+			  "frictionScaleLong": 1.0,
+			  "frictionScaleLat": 1.0,
+			  "gripFactorLong": 3.0,
+			  "gripFactorLat": 2.0
+			}
+		   },
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.2,
+		"m_TurnOnSpotPower": 0.5,
+		"m_DustMinimumRPM": 10.0,
+		"Capacity": 4
+      }
+    }
+}

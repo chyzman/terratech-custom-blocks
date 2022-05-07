@@ -1,0 +1,222 @@
+// Helpful site for https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+  "Name": "Old Star Dynamite Mortar",
+  "Description": "Now this is how the Old Star do. The Dynamite Mortar lives up to its name by firing special sticks of dynamite in an arc or directly at whatever poor soul you're aiming at. The dynamite it fires have 2 fuses, One for any single impact and then a timed fuse. Both are very powerful and can deal decent knockback to whatever is caught in the blast range. Also we have zero idea how on what black magic everyone else does to make a SHELL 'Track' a target. Ya either Hit or Miss. But I guess you would rather not miss, huh?  ", //You can make multiple lines with \n
+  "ID": 300052, //A random ID that MUST be unique
+
+  "Faction": 4, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 7844, //The price is measured by sum of recipe value times 3
+  "HP": 2100, //A GSO one block has 250 health
+  "Mass": 12.0,
+  //"Fragility": 0.25, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all. For example, SCUs do not fall off when attacked
+  "DamageableType": 3, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+
+  "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 46, 46, 46, 46, 46, 46, 46, 46, 55, 55, 55, 55, 55, 55, 55, 55, 61, 61, 61, 61, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  "IconName": "Dynamite_Mortar_icon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if SubObjects is being used for it
+  "EmissionMode": 2,
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block (Width, Height, Length)
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    // Top
+    { "x": 0, "y": 2.5, "z": 0 },{ "x": 0, "y": 2.5, "z": 1 },
+    { "x": 2, "y": 2.5, "z": 0 },{ "x": 2, "y": 2.5, "z": 1 },
+
+    // Bottom
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 0, "y": -0.5, "z": 1 },
+    { "x": 2, "y": -0.5, "z": 0 },{ "x": 2, "y": -0.5, "z": 1 },
+
+    // Back
+    { "x": 0  , "y": 0, "z": -0.5 },{ "x": 0  , "y": 1, "z": -0.5 },{ "x": 0  , "y": 2, "z": -0.5 },
+    { "x": 2  , "y": 0, "z": -0.5 },{ "x": 2  , "y": 1, "z": -0.5 },{ "x": 2  , "y": 2, "z": -0.5 },
+
+    // Left
+    { "x": -0.5, "y": 0, "z": 0 }, { "x":-0.5, "y": 1, "z": 0 },{ "x": -0.5, "y": 2, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 1 }, { "x": -0.5, "y": 1, "z": 1 },{ "x": -0.5, "y": 2, "z": 1 },
+  
+    // Right
+    { "x": 2.5, "y": 0, "z": 0 }, { "x": 2.5, "y": 1, "z": 0 },{ "x": 2.5, "y": 2, "z": 0 },
+    { "x": 2.5, "y": 0, "z": 1}, { "x": 2.5, "y": 1, "z": 1 },{ "x": 2.5, "y": 2, "z": 1 }
+  ],
+
+  //OPTIONAL
+  "GamePrefabReference":            "HE_Cannon_Battleship(216)", //This is the part which gives abilities
+  "KeepReferenceRenderers":          true,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "SubObjects": [
+    {
+      "SubOverrideName":            "m_HE_CannonBattleship_216_body",
+      "MeshName":                   "Dynamite_Base.obj",
+      "ColliderMeshName":           "Dynamite_Base.obj",
+      "DestroyExistingRenderer":     true,
+      "DestroyExistingColliders":    true
+    },
+    {
+      "SubOverrideName":            "m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer":     true,
+      "DestroyExistingColliders":    true,
+      "MeshName":                   "Dynamite_Barrel.obj",
+      "ColliderMeshName":           "Dynamite_Barrel.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 1.1
+      }
+    },
+    {
+      "SubOverrideName":            "_gimbalBase",
+      "DestroyExistingRenderer":     true,
+      "MeshName":                   "Dynamite_Turret_2.obj",
+      "SubPosition": {
+        "x": 1.0,
+        "y": 0.5,
+        "z": 0.5
+      }
+    },
+    {
+      "SubOverrideName":            "_gimbalElev",
+      "DestroyExistingRenderer":    true,
+      "MeshName":                   "Dynamite_Turret.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_muzzleFlash",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 2.0
+      },
+      "SubScale": {
+        "x": 3,
+        "y": 3,
+        "z": 4
+      }
+    },
+    {
+      "SubOverrideName":            "_casingSpawn",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName":             "_bulletSpawn",
+      "SubPosition": {
+        "x":0,
+        "y":0,
+        "z":4
+      }
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 3.0
+    },
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": { //This is a component, and holds values
+        "rotationLimits": [-10, 10], //Modifications go here
+        "rotationAxis": 2 //Horizontal
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-55, 15], //Modifications go here
+          "rotationAxis": 1 //Verticle
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_RotateSpeed": 90 //Speed at which a weapon can aim at something
+    },
+    "FireData": {
+      "m_CasingEjectVariance": 0.6,
+      "m_CasingVelocity": 50,
+      "m_CasingEjectSpin": 15,
+      "m_KickbackStrength": 200,
+      "m_MuzzleVelocity": 50.0,
+      "m_BulletSpin": 350, 
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "Dynamite.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "OST1.png"
+          }
+        },
+        "WeaponRound": {
+          "m_Damage": 500
+        },
+        "UnityEngine.CapsuleCollider": { 
+            "gameObject": {
+              "layer": 8
+            },
+            "radius": 0.74,
+            "height": 1.0,
+            "direction": 2,
+            "center": { "x": 0, "y": 0, "z": 0 }
+        },
+        "Projectile": {
+            "m_ExplodeAfterLifetime": true,
+            "m_LifeTime": 3.0,
+            "m_DeathDelay": 1.0,
+            "m_ExplodeOnTerrain": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 20,
+              "m_MaxDamageStrength": 500,
+              "m_MaxImpulseStrength": 500
+            }, 
+            "GameObject|ExplosionSmoke": {
+               "UnityEngine.ParticleSystemRenderer": {
+                 "startSize": 14
+               }
+             },
+             "GameObject|ExplosionDark": {
+               "UnityEngine.ParticleSystemRenderer": {
+                 "startSize": 14
+               }
+             },
+             "GameObject|ExplosionLight": {
+               "UnityEngine.ParticleSystemRenderer": {
+                 "startSize": 14
+               }
+             }
+          }
+        }
+      }
+    }
+  }
+}

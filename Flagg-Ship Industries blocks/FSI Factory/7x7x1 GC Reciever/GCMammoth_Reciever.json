@@ -1,0 +1,190 @@
+{
+	"Name": "GeoCorp 'Mammoth' Reciever",
+	"Description": "A very large reciever to collect a ton of chunks, 280 of them, to be exact. It's heavilly armored and fairly heavy.",
+	"ID": 1700046, 	
+
+	"Faction": 2, 
+	"Category": 7, 
+	"Grade": 2, 
+	"Price": 101472,
+	"HP": 16000,
+	"Mass": 20.0,
+	
+	"Recipe":  "50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,54,", 
+
+	"IconName": "GCMammoth_Icon.png",
+	"MeshName": null, 
+	"MeshMaterialName": null,
+	
+	"Cells": [ 
+        { "x": 0, "y": 0, "z": 0 },
+        { "x": 0, "y": 0, "z": 1 },
+        { "x": 0, "y": 0, "z": 2 },
+        { "x": 0, "y": 0, "z": 3 },
+        { "x": 0, "y": 0, "z": 4 },
+        { "x": 0, "y": 0, "z": 5 },
+        { "x": 0, "y": 0, "z": 6 },
+
+        { "x": 1, "y": 0, "z": 0 },
+        { "x": 1, "y": 0, "z": 1 },
+        { "x": 1, "y": 0, "z": 2 },
+        { "x": 1, "y": 0, "z": 3 },
+        { "x": 1, "y": 0, "z": 4 },
+        { "x": 1, "y": 0, "z": 5 },
+        { "x": 1, "y": 0, "z": 6 },
+
+        { "x": 2, "y": 0, "z": 0 },
+        { "x": 2, "y": 0, "z": 1 },
+        { "x": 2, "y": 0, "z": 2 },
+        { "x": 2, "y": 0, "z": 3 },
+        { "x": 2, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 5 },
+        { "x": 2, "y": 0, "z": 6 },
+
+        { "x": 3, "y": 0, "z": 0 },
+        { "x": 3, "y": 0, "z": 1 },
+        { "x": 3, "y": 0, "z": 2 },
+        { "x": 3, "y": 0, "z": 3 },
+        { "x": 3, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 5 },
+        { "x": 3, "y": 0, "z": 6 },
+
+        { "x": 4, "y": 0, "z": 0 },
+        { "x": 4, "y": 0, "z": 1 },
+        { "x": 4, "y": 0, "z": 2 },
+        { "x": 4, "y": 0, "z": 3 },
+        { "x": 4, "y": 0, "z": 4 },
+        { "x": 4, "y": 0, "z": 5 },
+        { "x": 4, "y": 0, "z": 6 },
+
+        { "x": 5, "y": 0, "z": 0 },
+        { "x": 5, "y": 0, "z": 1 },
+        { "x": 5, "y": 0, "z": 2 },
+        { "x": 5, "y": 0, "z": 3 },
+        { "x": 5, "y": 0, "z": 4 },
+        { "x": 5, "y": 0, "z": 5 },
+        { "x": 5, "y": 0, "z": 6 },
+
+        { "x": 6, "y": 0, "z": 0 },
+        { "x": 6, "y": 0, "z": 1 },
+        { "x": 6, "y": 0, "z": 2 },
+        { "x": 6, "y": 0, "z": 3 },
+        { "x": 6, "y": 0, "z": 4 },
+        { "x": 6, "y": 0, "z": 5 },
+        { "x": 6, "y": 0, "z": 6 },		
+ 
+  
+    ],
+    "APs": [ 
+        { "x": 2, "y": 0, "z": -0.5 },
+        { "x": 3, "y": 0, "z": -0.5 },
+        { "x": 4, "y": 0, "z": -0.5 },
+        		
+    ],
+	
+	
+	"GamePrefabReference": "GC_Receiver_212",
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset": {"x": 3,"y": 0,"z": 0},
+	
+	"SubObjects": [ {
+    "SubOverrideName":"GCMammoth",
+	"DestroyExistingColliders": false,
+    "MeshName": "GCMammoth.obj",
+	"MeshMaterialName": "GC_Main",
+	"ColliderMeshName" : "GCMammoth.obj",
+	"SubPosition": {"x": 3,"y": 0,"z": 3},
+	} ],
+	
+	"JSONBLOCK": {
+    "NumStacks": 28,
+	"ModuleItemPickup": {
+    "m_PickupRange": 40.0, "PickupRange":40,
+    "m_PickupSortBuckets": 10},
+	"m_Pickup": {
+	"m_PickupSortBuckets": 10,
+	"PickupRange": 40,
+	"m_PickupRange": 40,
+	},
+    "ModuleItemHolder": {"PickupPriority":10,
+        "m_OverrideBasePositons": [
+          
+        { "x": 2, "y": 0, "z": 1 },
+        { "x": 4, "y": 0, "z": 1 },
+        { "x": 1, "y": 0, "z": 2 },
+        { "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 5 },
+        { "x": 4, "y": 0, "z": 5 },
+        { "x": 5, "y": 0, "z": 2 },
+        { "x": 5, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 2 },
+        { "x": 3, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 3 },
+        { "x": 4, "y": 0, "z": 3 },
+        { "x": 0, "y": 0, "z": 2 },
+        { "x": 0, "y": 0, "z": 3 },
+        { "x": 0, "y": 0, "z": 4 },
+        { "x": 6, "y": 0, "z": 2 },
+        { "x": 6, "y": 0, "z": 3 },
+        { "x": 6, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 },
+        { "x": 3, "y": 0, "z": 0 },
+        { "x": 4, "y": 0, "z": 0 },
+        { "x": 2, "y": 0, "z": 6 },
+        { "x": 3, "y": 0, "z": 6 },
+        { "x": 4, "y": 0, "z": 6 },
+        { "x": 1, "y": 0, "z": 1 },
+        { "x": 5, "y": 0, "z": 1 },
+        { "x": 1, "y": 0, "z": 5 },
+        { "x": 5, "y": 0, "z": 5 },
+     
+        ],
+		"ReleaseItemEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10
+		}
+		}
+		},
+	 "TakeItemEvent": {
+	 "m_DelegateList": {
+        "m_Delegates": {
+	 "Capacity": 10
+	 }
+	 }
+	 },
+	 "NumStacks": 28,
+	 
+    },
+	"ModuleItemHolderBeam": {
+	"m_PickupSortBuckets": 10,
+	"m_PickupRange": 40,
+	"PickupRange": 40,
+	"NumStacks": 28,
+	},
+	"SwitchableUpdater": {
+    "UpdateEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+		}
+		}
+		},
+		"Outline": {
+		"m_MeshData": {
+		"Capacity": 10,
+		}},
+		"SwitchableUpdater (1)": {
+        "FixedUpdateEvent": {
+        "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+        }
+        }
+		}
+		
+	  }
+	
+}

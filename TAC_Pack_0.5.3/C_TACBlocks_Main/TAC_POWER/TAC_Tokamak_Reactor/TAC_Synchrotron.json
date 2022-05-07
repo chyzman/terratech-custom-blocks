@@ -1,0 +1,559 @@
+{
+	"Name": "TAC Synchrotron Tokamak Battery",
+	"Description": "An EXTREMELY dense power storage for this scale that requires a huge burst of energy to kickstart, and it also has a passive drain which demands upkeep or smart planning. \n\nThis reactor offers incredible power capacity well beyond the scope of the traditional battery, but in a ring that forces it's actual energy to remain exposed just to keep the heat managable. \n\nAs such, it is advised to keep projectiles well away from the device as unintentional pestering may cause violent plasma detonations.  \nWithout power, it's perfectly safe so if you do hit that power deficit, your tech will not disintegrate. \n\nThe lead of this project, Dr Tank of the Ium Federation (and a group of assistants) were responsible for bringing the project to life.  After some freak accident with some local AIs, they broke off and left the project behind, complete but not tangable.  \n\nWhen TAC broke off from EFF in 22xx, they eventually found the resources to complete said project and it yielded considerable results. \nThe TAC dispatched a thank-you message to learn that Tank's Federation had spread since then, now it's own establishment as well.", //You can make multiple lines with \n
+	"ID": 584460, //A random ID that must be unique		
+
+  //Because this is a reactor, it should generate energy yes?  
+  //Well with the high-density energy storage already in place that would make it extremely powerful.
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 206220, //WHOA but it's DENSE AS LEAD with powa 
+	"HP": 10000, //TAC REACTOR Battery is 277.76 in 1 block volume
+  //TAC Battery is 450 in 1 block volume - VERY bulky, but is it worth the cost?
+	//BF Battery is 250 in 1 block volume
+	//HE Battery is 400 in 1 block volume
+	//GC Battery is 162 in a 1 block volume
+	//GC Battery is 1296 in a 8 block volume
+	//LK Battery is 1000 in a 1 block volume
+	//LK Battery is 2000 in a 2 block volume
+
+	"Mass": 108.0, //TAC REACTOR Battery IS 3 in 1 block volume, buffed because lack of APs make it hard to use nicely
+	//TAC Battery WAS 3.25 in 1 block volume, roughly between the BF and HE batteries
+	//BF Battery is 2.7 in 1 block volume
+	//HE Battery is 4 in 1 block volume
+	//LK Battery is 10 in 1 block volume
+
+  "Rarity": 2,//
+	
+
+	"IconName": "ReactorRefactor.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "46, 46, 46, 46, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 61, 61, 61, 61, 61, 61, 61, 61, 63, 63, 64, 64, 64, 64, 65, 65, 65, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+        // {
+        //   "name": "Titanic Alloy",
+        //   "id": 54
+        // },
+        // {
+        //   "name": "Rugged Fiblar",
+        //   "id": 52
+        // },
+        // {
+        //   "name": "Ion Pulse Cell",
+        //   "id": 56
+        // }
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+  //-36 blocks Volume
+  //to put that into perspective the Gluon Battery is 32 blocks Volume!
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//Bottom
+        { "x": 0, "y": -0.5, "z": 0 },
+        { "x": 1, "y": -0.5, "z": 0 },
+        { "x": 2, "y": -0.5, "z": 0 }, 
+        { "x": 0, "y": -0.5, "z": 1 }, 
+        { "x": 0, "y": -0.5, "z": 2 }, 
+        { "x": 0, "y": -0.5, "z": 3 }, 
+        { "x": 1, "y": -0.5, "z": 1 }, 
+        { "x": 1, "y": -0.5, "z": 3 }, 
+        { "x": 2, "y": -0.5, "z": 1 }, 
+        { "x": 2, "y": -0.5, "z": 2 }, 
+        { "x": 2, "y": -0.5, "z": 3 }, 
+    	//Top
+        { "x": 1, "y": 2.5, "z": 0 }, 
+        { "x": 1, "y": 2.5, "z": 2 }, 
+      //Side
+        { "x": -0.5, "y": 0, "z": 0 }, 
+        { "x": 2.5, "y": 0, "z": 0 }, 
+      //Back
+        { "x": 0, "y": 0, "z": -0.5 }, 
+        { "x": 1, "y": 0, "z": -0.5 }, 
+        { "x": 2, "y": 0, "z": -0.5 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 3,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "VEN_Shield_Bubble(111)",
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_VEN_Shield_111",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "TAC_TokamakBase.obj",
+	    "MeshTextureName": null,
+			"ColliderMeshName" : "TAC_TokamakBase.obj",
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "m_TAC_LED_5.obj",
+	    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	    "MeshTextureName": "m_TAC_Battery_LED_Power_1.png",
+	    // "MeshTextureName": "CirculatedBattery.png",
+      // "MeshMaterialName": "HE_Main"
+		},
+		// {
+	 //    "SubOverrideName":"m_HE_Battery_211_LEDs_copy",
+	 //    // "DestroySubReferenceRenderer": true,
+	 //    // "DestroyExistingColliders": true,
+	 //    "MeshName": "m_TAC_LED_5.obj",
+	 //    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    // "MeshTextureName": "CirculatedBattery.png",
+  //     "MeshMaterialName": "HE_Main"
+		// },
+  ],
+	
+	"JSONBLOCK": {
+		"GameObject|m_VEN_Shield_111":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":1.5 } 
+      },
+		},
+    "Reference|GC_Battery_424/GC_Battery_424/fx_Plasma":{// visuals
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0.5, "z":2 } 
+      },
+      "UnityEngine.MeshCollider":null,
+      "UnityEngine.MeshRenderer":null,
+      "UnityEngine.ParticleSystem": {//Dust effect
+        "main": {
+          "m_ParticleSystem": {
+            "startColor": {
+              "r": 0.45,
+              "g": 0.55,
+              "b": 1.0,
+              "a": 0.65
+            },
+            "startSize": 0.8,
+            // // "endSize": 15.0,
+            // "startSpeed": 2.5, //How far you want the particles to spread
+            // "emissionRate": 50.0,
+            // "maxParticles": 50,
+            // "emission": {
+            //   "burstCount": 1,
+            //   "rateMultiplier": 10.0,
+            //   "rateOverTimeMultiplier": 0.2,
+            //   "burst": {
+            //     "count": 10,
+            //     //"cycleCount": 1,
+            //     "maxCount": 10,
+            //     "minCount": 10,
+            //     // "probability": 150,
+            //     // "repeatInterval": 150,
+            //     //"time": 0
+            //   }
+            // }
+          }
+        }
+      },
+      "GameObject|fx_Lightning": {
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 0.45,
+                "g": 0.55,
+                "b": 1.0,
+                "a": 0.65
+              },
+              "startSize": 0.1,
+              // "endSize": 15.0,
+              // "startSpeed": 2.5, //How far you want the particles to spread
+              // "emissionRate": 50.0,
+              // "maxParticles": 50,
+              // "emission": {
+              //   "burstCount": 1,
+              //   "rateMultiplier": 10.0,
+              //   "rateOverTimeMultiplier": 0.2,
+              //   "burst": {
+              //     "count": 10,
+              //     //"cycleCount": 1,
+              //     "maxCount": 10,
+              //     "minCount": 10,
+              //     // "probability": 150,
+              //     // "repeatInterval": 150,
+              //     //"time": 0
+              //   }
+              // }
+            }
+          }
+        }
+      },
+      "GameObject|fx_Particles": {  
+        "UnityEngine.ParticleSystem": {// Spinning dot particles
+          "main": {
+            "m_ParticleSystem": {
+              "startColor": {
+                "r": 0.45,
+                "g": 0.55,
+                "b": 1.0,
+                "a": 0.35
+              },
+              "startSize": 0.25,
+              // // "endSize": 15.0,
+              "startSpeed": -0.15, //Controls height
+              // "emissionRate": 50.0,
+              // "maxParticles": 50,
+              // "emission": {
+              //   "burstCount": 1,
+              //   "rateMultiplier": 10.0,
+              //   "rateOverTimeMultiplier": 0.2,
+              //   "burst": {
+              //     "count": 10,
+              //     //"cycleCount": 1,
+              //     "maxCount": 10,
+              //     "minCount": 10,
+              //     // "probability": 150,
+              //     // "repeatInterval": 150,
+              //     //"time": 0
+              //   }
+              // }
+            }
+          }
+        }
+      }
+    },
+
+		"Reference|HE_Battery_211/m_HE_Battery_211_LEDs":{// Energy particle controller
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.9875, "z":0.5 },
+        // "localPosition": { "x":0.575, "y":1.25, "z":0.5 },
+        // "localScale": { "x":0.65, "y":2.15, "z":0.575 },
+        // "localEulerAngles": { "x":0, "y":90, "z":90 }
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 1.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.025,
+	      //       "y": 0.025,
+	      //     }
+	      //   }
+	      // },
+	    },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          "doubleSidedGI": false,
+          // "mainTexture": "m_TAC_Battery_LED_Power_1.png",
+          "mainTexture": {
+          	// "filterMode": "Bilinear", // Point, Bilinear
+          	"filterMode": "Point", // Point, Bilinear
+	          // "texelSize": {
+	          //   "x": 0.025,
+	          //   "y": 0.025,
+	          // },
+          },
+          "mainTexture": "m_TAC_Battery_LED_Power_1.png",//THIS MUST BE DIRECTLY BELOW  "mainTexture": {"filterMode": "Point"} OR IT WILL NOT WORK!
+          // },
+        }
+      },
+		},
+		"Duplicate|m_HE_Battery_211_LEDs":{//Reset the LEDs to Vanilla
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.01, "y":0.01, "z":0.01 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":0.9875, "z":0.5 },
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	    },
+      "UnityEngine.MeshRenderer": {
+        "material": {
+          // "anisoLevel": 9,
+          // "enableInstancing": true,
+          "doubleSidedGI": false,
+          // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+          // "mainTextureOffset": {"x":0.0, "y":0.0},
+          // "mainTextureScale": {"x":1, "y":1},
+          // "mipMapBias": 5.0,
+          // "wrapMode": false,
+          // "wrapModeU": false,
+          // "wrapModeV": false,
+          // "wrapModeW": false,
+          // "globalIlluminationFlags": 1,
+          // "mainTexture": "m_DefaultPower_1.png",
+          // "mainTexture": "m_TAC_Battery_LED_Power_2.png",
+          "mainTexture": {
+	          "filterMode": "Point",
+	          // "filterMode": "Bilinear",
+	        },
+          // "shaderKeywords": [
+          //   "_ALBEDO",
+          //   "_EMISSION",
+          //   "_NORMALMAP"
+          // ],
+        }
+      },
+		},
+    "GameObject|_shield": {
+      "UnityEngine.Transform": { 
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0.5, "z":2 }
+      },
+      "GameObject|_bubble": {
+        "Spinner": {
+          "m_Speed": 0.0,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.0,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        },
+        "GameObject|_bubbleBulletTrigger": {
+            "UnityEngine.BoxCollider": { //The actual collider
+              "isTrigger": true,
+              "enabled": true,
+              "center": {
+                "x": 0.0,
+                "y": 0.5,
+                "z": -0.5
+              },
+              "size": {
+                "x": 3.25,
+                "y": 3.25,
+                "z": 4.25
+              },
+            },
+          // "GameObject|_2ndCollider": {
+          //   "UnityEngine.Transform": {
+          //     "localPosition": { "x":0, "y":0.5, "z":-0.5 },
+          //     "localScale": { "x":3.25, "y":3.25, "z":4.25 },
+          //   },
+		        // "UnityEngine.BoxCollider": { //The actual collider
+          //     "gameObject": {
+          //       "layer": 21, 
+          //     },
+		        //   "isTrigger": true,
+		        //   "enabled": true,
+		        //   "center": {
+		        //     "x": 0.0,
+		        //     "y": 0.0,
+		        //     "z": 0
+		        //   },
+		        //   "size": {
+		        //     "x": 1,
+		        //     "y": 1,
+		        //     "z": 1
+		        //   },
+		        // },
+          // }
+        }
+      }
+    },
+
+		//Coding
+    "ModuleEnergy": {//
+      // "m_OutputEnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+      "m_Priority": -100,
+      "m_OutputPerSecond": 0.0,//Planned 110 passive drain, when running only requires 10
+      // // Draining drawback: Abandoned because this broke all batteries 
+      "m_OutputEnergyType": 0,//Energy. 1 is to generate fuel "Hydrocarbon" I think.
+      "m_OutputConditions": 0,//Always, no matter what, after the powerup.
+      "m_GeneratingSFXType": "GeothermalGenerator",//
+      "m_SequentialPowerUp": false,//we don't want the bubble delay thing
+      "m_PowerUpDelay": 0.1,
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 1.0,
+      "m_EnergyConsumptionPerSec": 10,// 4 GSO shield bubbles' worth of drain.
+      "m_InitialChargeEnergy": 21300.0,//Demands an entire waffle battery to kickstart
+      "m_EnergyConsumedPerDamagePoint": 12.5,// getting hit will ruin the charge
+      // "m_HealingHeartbeatInterval": 1.0,
+      // "m_MaxHealingPerHeartbeat": 150.0, 
+      // "m_EnergyConsumedPerPointHealed": 0.15,
+      "m_Healing": false,
+      "m_SequentialPowerUp": false,
+      "m_InterpTimeOn": 0.02, 
+      "m_InterpTimeOff": 0.1,// 
+      "m_PowerUpDelay": 0.1,//
+      "Instantiate|hitEffect": {
+        "Explosion": { //DAMAGE ON EACH HIT
+          "m_DamageType" : "Plasma",
+          "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          //"m_ExplosionType": "None", //What the explosion looks like
+          "m_EffectRadius": 6.5, //Death
+          "m_EffectRadiusMaxStrength": 3.25, 
+          "m_MaxDamageStrength": 200, //This affects splash damage - KILLS GSO 
+          "m_MaxImpulseStrength": 250, //How hard to push things, explosion force
+        },
+      	"Reference|GC_Battery_424/ModuleDamage.deathExplosion": {
+		      "UnityEngine.Transform": { 
+		        "localScale": { "x":1, "y":1, "z":1 },
+		        "localEulerAngles": { "x":0, "y":0, "z":0 },
+		        "localPosition": { "x":0, "y":0, "z":0 }
+		      },
+		      "GameObject|FX_Lightning": {
+            "UnityEngine.ParticleSystem": {
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.45,
+                    "g": 0.55,
+                    "b": 1.0,
+                    "a": 0.65
+                  },
+                  "startSize": 4.5,
+                  // "endSize": 15.0,
+                  // "startSpeed": 2.5, //How far you want the particles to spread
+                  // "emissionRate": 50.0,
+                  // "maxParticles": 50,
+                  // "emission": {
+                  //   "burstCount": 1,
+                  //   "rateMultiplier": 10.0,
+                  //   "rateOverTimeMultiplier": 0.2,
+                  //   "burst": {
+                  //     "count": 10,
+                  //     //"cycleCount": 1,
+                  //     "maxCount": 10,
+                  //     "minCount": 10,
+                  //     // "probability": 150,
+                  //     // "repeatInterval": 150,
+                  //     //"time": 0
+                  //   }
+                  // }
+                }
+              }
+            }
+          },
+		      "GameObject|FX_Shockwave": null,
+		      "GameObject|FX_Sparks": {
+            "UnityEngine.ParticleSystem": {//Dust effect
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.45,
+                    "g": 0.55,
+                    "b": 1.0,
+                    "a": 0.65
+                  },
+                  "startSize": 0.8,
+                  // // "endSize": 15.0,
+                  // "startSpeed": 2.5, //How far you want the particles to spread
+                  // "emissionRate": 50.0,
+                  // "maxParticles": 50,
+                  // "emission": {
+                  //   "burstCount": 1,
+                  //   "rateMultiplier": 10.0,
+                  //   "rateOverTimeMultiplier": 0.2,
+                  //   "burst": {
+                  //     "count": 10,
+                  //     //"cycleCount": 1,
+                  //     "maxCount": 10,
+                  //     "minCount": 10,
+                  //     // "probability": 150,
+                  //     // "repeatInterval": 150,
+                  //     //"time": 0
+                  //   }
+                  // }
+                }
+              }
+            },
+          },
+      		"GameObject|FX_Parts_A": null, //Remove GC particles
+      	}
+      },
+    },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+    "ModulePowerGauge": {},
+    "Reference|HE_Battery_211/ModuleEnergyStore.": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+    	"m_Capacity": 135900, //TAC REACTOR battery has 3775 m_Capacity in a volume of 1 block
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+    //TAC batteries (normal) have 1775 m_Capacity in a volume of 1 block
+
+    "ParticleManager.ModuleParticleManager": {//Additonal bonus effects with Sozin's mod installed
+      // "maxWeaponChargeTime" : -6.25, //
+      "needToCorrectDelay" : 6.25, //
+      // "Debug" : true, //
+
+      "Input": [
+        {
+          "m_system": "/fx_Plasma/ParticleSystem.",
+          "type": "Attach"
+        },
+        {
+          "m_system": "/fx_Plasma/fx_Lightning/ParticleSystem.",
+          "type": "Attach"
+        },
+        {
+          "m_system": "/fx_Plasma/fx_Particles/ParticleSystem.",
+          // "value": 0.8,//Delay before firing
+          "type": "Attach"
+        },
+      ]
+    },  
+
+    // 
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+	}
+}
+
+
+
+

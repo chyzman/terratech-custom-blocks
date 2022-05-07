@@ -1,0 +1,224 @@
+
+{
+  "Name": "Hawkeye Energized Plating",
+  "Description": "An enhanced version of the standard armor plating. Projecting a small energy shield to prevent direct hits from shells and explosives.",
+  "ID": 546320, 
+
+  "Faction": 5, 
+  "Category": 6, 
+  "Grade": 2,
+  "Price": 22041,
+  "HP": 8000,
+  "Mass": 4,
+  // no falloff
+  "Fragility": 0.0,
+  // Armor
+  "DamageableType": 1,
+  "CenterOfMass": {"x": 1.5, "y": 0.5, "z": -0.4},
+
+  //HE armor 52 53x2 54
+  //HE shield 52 56 61 66
+  "Recipe": "52, 52, 53, 53, 53, 53, 54, 54, 61, 66",
+  
+  "IconName": "HE_Energized_Plating_Icon.png",
+  "EmissionMode": 1, 
+  
+  "MeshName": "HE_Energized_Plating.obj", 
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": "HE_Energized_Plating_c.obj",
+  "SupressBoxColliderFallback": true,
+
+  "BlockExtents":
+  {
+    "x": 4,
+    "y": 2,
+    "z": 1
+  },
+
+  "APs": [
+  { "x": 0.0, "y": 0.0, "z":-0.5 },{ "x": 1.0, "y": 0.0, "z":-0.5 },{ "x": 2.0, "y": 0.0, "z":-0.5 },{ "x": 3.0, "y": 0.0, "z":-0.5 },
+  { "x": 0.0, "y": 1.0, "z":-0.5 },{ "x": 1.0, "y": 1.0, "z":-0.5 },{ "x": 2.0, "y": 1.0, "z":-0.5 },{ "x": 3.0, "y": 1.0, "z":-0.5 }
+  ],
+
+  "GamePrefabReference": 115, //GSO shield
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },  
+  
+  "SubObjects": [
+    {
+    "MakeBoxCollider": false,
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "SubScale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+    },
+  {
+    "SubOverrideName": "ExperimentalCorp_Base_Shield",
+    "DestroyExistingRenderer": true,
+    "DestroyExistingColliders": true
+  },
+  {
+    "SubOverrideName": "FXGSOShieldCharge(Clone)",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "FXGSOShieldCharge 1",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "_bubbleBulletTrigger"
+  },
+  {
+    "SubOverrideName": "ShieldSphereEdge",
+    "MeshName": "HE_Energized_Plating_Plate.obj",
+  },
+  {
+    "SubOverrideName": "ShieldSphereInner",
+    "MeshName": "HE_Energized_Plating_Frame.obj",
+    "MeshMaterialName": "FX_Teleporter_Distortion_Ring",
+  },
+  {
+    "SubOverrideName": "ShieldSphereOuter",
+    "MeshName": "HE_Energized_Plating_Pattern.obj",
+    //"MeshMaterialName": "ExplosionLaser",
+    "MeshMaterialName": "FX_Teleporter_Distortion_Ring",
+  }
+  ],
+  "JSONBLOCK": {
+    "GameObject|_shield": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          //"y": 0.5,
+          "y": 0.5,
+          "z": 1.5 //shield distance offset
+        },
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":100000 },
+              },
+          "UnityEngine.SphereCollider": {
+            "gameObject": {
+                "layer": 9, // (9) Cosmetic//Collides with nothing.
+            },
+            "radius": 0,
+            "isTrigger": true,
+            "enabled": true
+          },
+          "UnityEngine.BoxCollider": {
+            "gameObject": {
+                "layer": 21 // (21) ShieldBulletFilter //collides with bullets and shields
+            }, 
+            "isTrigger": true,
+            "enabled": true,
+            "center": { "x": 0, "y": 0, "z": -100000 },
+            "size": { "x": 8, "y": 6, "z": 3 }, 
+            // Z is shield thickness, if the shield thickness is not enough, high velocity shells will penetrate it
+            // Vanilla weapons can be protected with 3 blocks of thickness, but some mod weapons will penetrate
+            // e.g. TAC's PD Gun can't be prevented even with 4 blocks
+          }
+        },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|ShieldSphereEdge": { //panel
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0,
+                "maxColorComponent": 0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0 //?
+            }
+          },
+          "GameObject|ShieldSphereInner": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0,
+                  "maxColorComponent": 0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|ShieldSphereOuter": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0,
+                  "maxColorComponent": 0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.0
+        }
+      }
+    },
+    "ModuleShieldGenerator": {
+      "m_Radius": 1,
+      "m_PowerUpDelay": 0.1,
+      "m_EnergyConsumptionPerSec": 0.001,
+      "m_InitialChargeEnergy": 10.0,
+      "m_EnergyConsumedPerDamagePoint": 0.3
+    }
+  }
+}

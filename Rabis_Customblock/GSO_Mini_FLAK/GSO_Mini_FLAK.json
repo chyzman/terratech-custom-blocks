@@ -1,0 +1,286 @@
+{
+  "Name": "GSO Mini FLAK",
+  "Description": "Even a small, cheap AA gun is much better than nothing.", //You can make multiple lines with \n
+  "ID": 546385,
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 2976,
+  "HP": 220,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 2.0,
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+
+  "Recipe": "9, 9, 45, 45, 46, 46, ",
+
+  "DamageableType": 1,
+
+  "IconName": "GSO_Mini_FLAK.png", 
+  "MeshName": null, 
+  "MeshTextureName": null, 
+  "MeshMaterialName": "GSO_Main",
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": false, 
+  "Cells": [
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": 1}
+  ],
+  "APs": [  
+      {"x": 0,"y": -0.5,"z": 0}
+  ],
+
+
+  "GamePrefabReference": "GSO_Cannon_Turret_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [
+    { // base
+      "SubOverrideName": "GSO_Cannon_111_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "GSO_Mini_FLAK_base.obj",
+      "ColliderMeshName": "GSO_Mini_FLAK_base_c.obj",
+      "MeshMaterialName": "GSO_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    { // turret horizon
+      "SubOverrideName": "GSO_Cannon_111_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "GSO_Mini_FLAK_gimbal_h.obj",
+      "ColliderMeshName": "GSO_Mini_FLAK_gimbal_h_c.obj",
+      "MeshMaterialName": "GSO_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    { // turret vertical
+      "SubOverrideName": "GSO_Mini_FLAK_gimbal_v",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "GSO_Mini_FLAK_gimbal_v.obj",
+      "ColliderMeshName": "GSO_Mini_FLAK_gimbal_v_c.obj",
+      "MeshMaterialName": "GSO_Main",
+      "SubPosition": {"x": 0,"y": 0, "z": 0},
+    },
+    { // barrel
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "GSO_Mini_FLAK_barrel.obj",
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "GSO_Main",
+      "SubPosition": {"x": 0,"y": 0.0, "z": 0},
+    },
+
+    // ------------------ move game object position
+    { // gimbal H
+      "ObjectName": "_gimbalBase",
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    { // gimbal V
+      "ObjectName": "_gimbalElev",
+      "Position": {
+        "x": 0,
+        "y": -0.017693,
+        "z": 0.062894
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    { // barrel - vertical gimbal
+      "ObjectName": "_barrel",
+      "Position": {
+        "x": 0,
+        "y": -0.0, // up down
+        "z": -0.0 // front back
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    // bullet spawn point
+    {
+      "ObjectName": "_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.3
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    // muzzle flash
+    {
+      "ObjectName": "_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.3
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    // smoke
+    {
+      "ObjectName": "_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.3
+      },
+    },
+    // casing spawn point
+    {
+      "ObjectName": "_casingSpawn",
+      "Position": {
+        "x": -0.150625,
+        "y": -0.214171,
+        "z": -0.043331
+      },
+      "Rotation": {
+        "x": -135,
+        "y": 90,
+        "z": 0
+      }
+    },
+    
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase":{
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          0.0,
+          0.0
+        ],
+      },
+      "GameObject|_gimbalElev":{
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -75.0,
+            0.0
+          ],
+        },
+        "GameObject|GSO_Mini_FLAK_gimbal_v":{}
+      }
+    },
+
+  "ModuleWeapon": {
+    //"m_FireSFXType": "",
+    "m_PreventShootingTowardsFloor": false,
+    "m_ShotCooldown": 0.3,
+    "m_RotateSpeed": 130.0
+  },
+  "ModuleWeaponGun": {
+    "m_ShotCooldown": 0.25,
+    "m_CooldownVariancePct": 0.15,
+    "m_FiringData": null,
+    "m_BurstShotCount": 4,
+    "m_BurstCooldown": 3.0,
+  },
+  "WeaponAimMod.TimedFuseData": { // for Wapon Aim Mod
+    "randomOffset": 0.07
+  },
+  "FireData": {
+    "m_BulletSprayVariance":0.1,
+    "m_KickbackStrength": 200,
+    "m_MuzzleVelocity": 135,
+    "Instantiate|m_BulletPrefab": {
+      "WeaponRound": {
+        "m_Damage": 20
+      },
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+      "SmokeTrail": {
+        "riseSpeed": 0.1,
+        "updateSpeed": 0.1,
+      },
+      "LineRenderer": {
+        "startWidth": 0.2,
+        "endWidth": 0.1,
+        "widthMultiplier": 1.0,
+        "startColor": {
+          "r": 1.0,
+          "g": 0.6,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "endColor": {
+          "r": 0.7,
+          "g": 0.4,
+          "b": 0.0,
+          "a": 1.0
+        }
+      },
+      "Projectile": {
+        "m_ExplodeAfterLifetime": true,
+        "m_LifeTime": 2,
+        "m_ExplodeOnTerrain": true,
+        "m_IgnoreCollisionWithBarrel": true,
+        "Instantiate|m_Explosion": {
+          "Explosion": {
+            "m_ExplosionSize": 1,
+            "m_EffectRadius": 5,
+            "m_MaxDamageStrength": 100,
+            "m_MaxImpulseStrength": 150
+          },
+          "GameObject|Sparks":{
+            "UnityEngine.ParticleSystem": {
+              "maxParticles": 1000,
+              "startSpeed": 50.0,
+              "startSize": 0.3,
+              "startLifetime": 0.2,
+            }
+          },
+          "GameObject|ExplosionBright":{
+            "UnityEngine.ParticleSystem":{
+              "startSize": 10,
+            }
+          },
+          "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/ParticleSystem.": {},
+          "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/ParticleSystemRenderer.": {},
+          "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+            "ParticleSystem": {
+              "sizeOverLifetime": {
+                "sizeMultiplier": 0.175
+              }
+            }
+          }
+        }
+      }
+    },
+    "Instantiate|m_BulletCasingPrefab": {
+      "m_LifeTime": 1.0,
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0.7,
+          "y": 0.7,
+          "z": 0.7
+        }
+      }
+    },
+  }
+  }
+}
+
+

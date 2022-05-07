@@ -1,0 +1,681 @@
+{
+  "Name": "GreenTech Magnetar Railcannon",
+  "Description": "Guardian of the most valuable natural reserves in the known star systems, the Railcannon was designed to take down the mightiest pirate warships, safekeeping pristine lands from greedy prospectors.\nThe Magnetar projectile is an electronic device that creates a variable high voltage field, melting metals and burning other materials within range.",
+  
+  "ID": 911236,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 4,  
+  "Price": 50268,
+  "HP": 20000,
+  "Mass": 50,
+  "CenterOfMass": {"x": 2.5, "y": 1, "z": 2.5},
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  
+  "Recipe": "52, 52, 52, 52, 53, 53, 53, 53, 62, 62, 62, 62, 66, 66", 
+  
+  "IconName": "GT_Magnetar_Railcannon_Icon.png",
+  "EmissionMode": 1, 
+  
+  "BlockExtents":{"x": 6,"y": 5, "z": 6}, 
+  
+  "APs": [ 
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 3, "y": -0.5, "z": 0},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 3, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 4, "y": -0.5, "z": 1},
+
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 3, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 4, "y": -0.5, "z": 2},
+    {"x": 0, "y": -0.5, "z": 2},
+    {"x": 5, "y": -0.5, "z": 2},
+
+    {"x": 2, "y": -0.5, "z": 3},
+    {"x": 3, "y": -0.5, "z": 3},
+    {"x": 1, "y": -0.5, "z": 3},
+    {"x": 4, "y": -0.5, "z": 3},
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 5, "y": -0.5, "z": 3},
+
+    {"x": 2, "y": -0.5, "z": 5},
+    {"x": 3, "y": -0.5, "z": 5},
+    {"x": 2, "y": -0.5, "z": 4},
+    {"x": 3, "y": -0.5, "z": 4},
+    {"x": 1, "y": -0.5, "z": 4},
+    {"x": 4, "y": -0.5, "z": 4}
+  ],
+	
+  "GamePrefabReference": "GSO_Cannon_Megaton_LongBarrel_424", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_Magnetar_Railcannon_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Magnetar_Railcannon_Base_Collider.obj", 
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Turret",
+      "MeshName": "GT_Magnetar_Railcannon_Turret.obj", 
+      "ColliderMeshName": "GT_Magnetar_Railcannon_Turret_Collider.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Barrel_A",
+      "MeshName": "GT_Magnetar_Railcannon_Barrel.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Magnetar_Railcannon_Barrel_Collider.obj", 
+      "layer": 8
+    },
+    {
+      "SubOverrideName": "m_GSO_Megaton_Long_424_Barrel_B",
+      "MeshName": "GT_Magnetar_Railcannon_Barrel_Recoiler.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "ColliderMeshName": "GT_Magnetar_Railcannon_Projectile_Collider.obj", 
+      "layer": 29
+    },
+    {
+        "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+        "MeshName": "GT_Magnetar_Railcannon_Projectile.obj", 
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab/Damaging_Collider",
+      "layer": 29
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.5,
+          "y": 0,
+          "z": 2.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -180,
+          180
+        ]
+      },
+      "GameObject|m_GSO_Megaton_Long_424_Turret": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+         }
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 2.46,
+            "z": -0.46
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GameObject|_barrel": {
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+            },
+            "GameObject|m_GSO_Megaton_Long_424_Barrel_B": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+             "GameObject|_spindle":{
+              "GameObject|rotating_barrel":{
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                   },
+                   "localEulerAngles": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                   }
+                 }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+              "Spinner": {
+                "m_Speed": 0.3,
+                "m_RotationAxis": {
+                  "axis": 1
+                },
+                "m_SteerAxis": {
+                  "axis": 1
+                },
+                "m_AutoSpin": false,
+                "m_SpinUpTime": 2
+              }
+            },
+             "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 2.2
+                 },
+                 "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+               "ParticleSystem": { 
+                "startDelay": 0,
+                "loop": true,
+                "playOnAwake": true,
+                "duration": 1,
+                "playbackSpeed": 10,
+                "enableEmission": true,
+                "emissionRate": 0.5,
+                "startSpeed": 0.52,
+                "startSize": 1.5,
+                "startLifetime": 4,
+                "gravityModifier": 0.0,
+                "maxParticles": 100,
+                "simulationSpace": 0,
+                //"scalingMode": 2,
+                "sizeOverLifetime": { //Annoying module that manages size
+                  "enabled": false,
+                  "size": {
+                    "mode": 1,
+                    "curveMultiplier": 0.5
+                  },
+                  "sizeMultiplier": 1,
+                  "x": {
+                    "mode": 1,
+                    "curveMultiplier": 0.5
+                  },
+                  "xMultiplier": 1
+                },
+                "rotationOverLifetime": {
+                  "enabled": false
+                },
+                "colorOverLifetime": {
+                  "enabled": true,
+                  "color": {
+                    "mode": "TwoColors",
+                    "colorMin": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 0.8,
+                    "a": 0.1
+                    },
+                    "colorMax": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 0.1,
+                    "a": 0.5
+                    },
+                    "gradient": null,
+                    "gradientMin": null,
+                    "gradientMax": null
+                    }
+                }
+              },
+              "ParticleSystemRenderer": {
+                "alignment": 2,
+                "renderMode": 4,
+                "sortMode": 0,
+                "lengthScale": 2.0,
+                "velocityScale": 0.0,
+                "cameraVelocityScale": 0.0,
+                "normalDirection": 1.0,
+                "shadowBias": 0.0,
+                "sortingFudge": 0.0,
+                "minParticleSize": 0.0,
+                "maxParticleSize": 0.5,
+                "maskInteraction": 0,
+                "trailMaterial": null,
+                "enableGPUInstancing": false,
+                "allowRoll": true,
+                "mesh": {}
+              }
+            }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.ParticleSystem": {
+              "emissionRate": 0
+            }
+          },
+          "GameObject|_muzzleFlash": null,
+          "GameObject|_casingSpawn": null,
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 2.5
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "CannonBarrel": {
+            "m_FireSpinner": "/_gimbalBase/_gimbalElev/_barrel/_recoiler/m_GSO_Megaton_Long_424_Barrel_B/_spindle/Spinner."
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -12,
+            90
+          ]
+        }
+      }  
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/ParticleSystem_GSO_HoverPad/ParticleSystem.",
+          "type": "WeaponFiring"
+        }
+      ]
+    },
+      "ModuleWeapon": { 
+        "m_FireSFXType": 61,
+        "m_RotateSpeed": 30.0
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 3,
+        "m_CooldownVariancePct": 0.1,
+        "m_SeekingRounds": false
+      },
+      "FireData": null,
+      "Reference|HE_BombBay_113/Firedata.":{
+        "m_MuzzleVelocity": 150, //150
+        "m_CasingVelocity": 0.0,
+        "m_BulletSprayVariance": 0.01,
+        "m_BulletSpin": 0.0,
+        "m_CasingEjectVariance": 0.0,
+        "m_CasingEjectSpin": 0.0,
+        "m_KickbackStrength": 2000.0,
+        "Instantiate|m_BulletPrefab":{
+          "UnityEngine.MeshCollider": {
+            "material": {
+              "bounciness": 0.0,
+              "dynamicFriction": 1,
+              "staticFriction": 1,
+              "frictionCombine": 0,
+              "bounceCombine": 0,
+              "bouncyness": 0.0
+            }
+          },
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "Rigidbody": {
+            "drag": 0.6,
+            "angularDrag": 1,
+            "useGravity": true,
+            "centerOfMass": { "x":0, "y":0, "z":0 },
+            "collisionDetectionMode": 2
+          },
+          "SeekingProjectile": {
+          "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 50.0,
+          "m_TurnSpeed": 75,
+          "m_SeekType": 1,
+          "m_UpdateVisibleInterval": 0.1,
+          "m_ActivationDelay": 0.5,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": false,
+          "m_TargetingType" :  "RandomBlockOnVehicle"//"BestAimCabOrCentre"
+          },
+          "MissileProjectile": {
+              "Instantiate|m_SmokeTrailPrefab": null,
+              "m_ArmDelay": 0.1,
+              "m_DeathDelayNotArmed": 5
+          },
+          "UnityEngine.CapsuleCollider": null,
+          "ProjectileDamageOverTime": {
+              "DamageOverTime": 15000.0, // Base damage to apply per second
+              "MaxHits": 32, // How many colliders it can damage at once, will disperse Damage across all of them
+              "DamageType": 0, // A string or a numerical ID of the DamageType
+            
+              // DamageTouch for colliders or special trigger 'fields' that don't stick to their Target
+              // DamageStuck specifically damages the stuck parent and nothing else
+              // Overlap Chk can damage all targets within its field, stuck to or not
+            
+              "DamageTouch": true, // Damage while touching (not stuck to) an object. (Colliders, Triggers) (uses MaxHits / Dispersion)
+              "DamageStuck": false, // Damage the object it's stuck to. (Independent of MaxHits & dispersion; adds full damage)
+            
+              "OverlapRadius": 10, // Damage everything within this radius (includes stuck objects) (uses MaxHits / Dispersion)
+              "OverlapOffset": {"x": 0, "y": 0, "z": 0}, // Offset the overlap check's center
+            
+              // (1.0): Unmodified damage; (0.0): Deactivate multiplier; (-1.0): Heal by damage amount
+              "TeamMultiplier": 0, // The player (firing tech) and allies
+              "SceneryMultiplier": 1.0, // Rocks, trees, and gems. WARNING: stuck projectiles may be buggy, healing may break game
+              "DetachedMultiplier": 1.0 // Blocks that have fallen, can be given mercy for salvaging projectiles
+          },
+          "RandomAdditions.WeightedProjectile":{ // launch bowling balls but they actually have proper weight
+            "ProjectileMass": 100,        // The Mass you want the projectile to have
+            "CustomGravity": true,     // enable the parameters below - WARNING! breaks WeaponAimMod!
+            "CustomGravityFractionSpeed": true, // Slow down the projectile's speed so that it doesn't overaim too badly
+            "GravityAndSpeedScale": 1// The percent (1.0 is 100%) force gravity pulls down on this and the speed it travels at 
+            //so you can have dramatic super-heavy projectiles that move slow through the air
+        },
+          "WeaponRound": {
+              "m_Damage": 2000,
+              "DamageType": 0
+          },
+          "Projectile": {
+              "m_LifeTime": 60.0,
+              "m_ExplodeAfterLifetime": false,
+              "m_DeathDelay": 10,
+              "m_ExplodeOnTerrain": false,
+              "m_SingleImpact": false,
+              "m_RotateWithVelocity": false,
+              "m_IgnoreCollisionWithBarrel": true,
+              "m_StickOnContact": false,
+              "m_StickOnTerrain": false,
+              "m_ExplodeOnStick": false,
+              "m_HideProjectileOnStick": false,
+              "m_ImpactSFXType": 5,
+              "m_FlightSFXType": 1,
+              "m_GravityScale": 1,
+              "Instantiate|m_Explosion": null
+          },
+          "GameObject|m_HE_Bomb": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1.2,
+                "y": 1.2,
+                "z": 1.2
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "GameObject|_particles": null,
+          "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+            "GameObject|Light_Point": null,
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localScale": {
+                "x": 0.8,
+                "y": 0.8,
+                "z": 0.8
+              }
+             },
+             "UnityEngine.ParticleSystem": {
+              "startDelay": 0.2,
+              "emissionRate": 100.0,
+              "startSize": 2.4,
+              "colorOverLifetime": {
+                "enabled": true,
+                "color": {
+                  "mode": "TwoColors",
+                  "colorMin": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.8,
+                  "a": 0.0
+                  },
+                  "colorMax": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.2,
+                  "a": 0.08
+                  },
+                  "gradient": null,
+                  "gradientMin": null,
+                  "gradientMax": null
+                  }
+              },
+              "shape": {
+                "shapeType": "Sphere",
+                "radius": 1.0,
+                "radiusThickness": 1.0,
+                "scale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                "alignDirection": false,
+                "randomDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0
+              },
+              "sizeOverLifetime": {
+                "enabled": false
+              }
+                },
+                "UnityEngine.ParticleSystemRenderer": {
+                  "alignment": 0,
+                  "renderMode": 1,
+                "material": {
+                  "mainTexture": "Thunder_Textures.png"
+                }
+              }
+          },
+          "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+             },
+             "ParticleSystem": {
+             
+              "startDelay": 0,
+              "loop": true,
+              "playOnAwake": true,
+              "duration": 1,
+              "playbackSpeed": 1,
+              "enableEmission": true,
+              "emissionRate": 5,
+              "startSpeed": 0,
+              "startSize": 23,
+              "startLifetime": 1,
+              "gravityModifier": 0.0,
+              "maxParticles": 500,
+              "simulationSpace": 0,
+              //"scalingMode": 2,
+              "sizeOverLifetime": { //Annoying module that manages size
+                "enabled": false,
+                "size": {
+                  "mode": 1,
+                  "curveMultiplier": 0.5
+                },
+                "sizeMultiplier": 1,
+                "x": {
+                  "mode": 1,
+                  "curveMultiplier": 0.5
+                },
+                "xMultiplier": 1
+              },
+              "rotationOverLifetime": {
+                "enabled": true,
+                "y": { "constantMin": -90, "constantMax": 90 }
+              },
+              "colorOverLifetime": {
+                "enabled": true,
+                "color": {
+                  "mode": "TwoColors",
+                  "colorMin": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.8,
+                  "a": 0.0
+                  },
+                  "colorMax": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.1,
+                  "a": 0.1
+                  },
+                  "gradient": null,
+                  "gradientMin": null,
+                  "gradientMax": null
+                  }
+              }
+            },
+            "ParticleSystemRenderer": {
+              "alignment": 0,
+              "renderMode": 4,
+              "sortMode": 0,
+              "lengthScale": 2.0,
+              "velocityScale": 0.0,
+              "cameraVelocityScale": 0.0,
+              "normalDirection": 1.0,
+              "shadowBias": 0.0,
+              "sortingFudge": 0.0,
+              "minParticleSize": 0.0,
+              "maxParticleSize": 0.5,
+              "maskInteraction": 0,
+              "trailMaterial": null,
+              "enableGPUInstancing": false,
+              "allowRoll": true,
+              "mesh": {}
+            }
+          }
+        }
+      }
+  }			
+}

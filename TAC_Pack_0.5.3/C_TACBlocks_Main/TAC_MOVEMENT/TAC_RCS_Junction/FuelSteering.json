@@ -1,0 +1,296 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{ 
+  "Name": "TAC Reaction Adjustment Thruster",
+  "Description": "Small but VERY powerful steering hover that reaches up to 3x the power of an ordinary steering hover in steering at the cost of some booster fuel. \n\nThe TAC-RAT unit is commonly seen on heavy cruisers as a method of translation and control, and is also seen being used in dire cases where emergency landings must be performed.  It could technically be used in replacement of the average prop, although that's normally not advised as it guzzles fuel while doing so. \n\nThis is THE perfect compliment for your little AI buddies, apply them correctly and they will be zooming around in NO TIME!", //You can make multiple lines with \n
+  "ID": 584351, //A random ID that MUST be unique
+ 
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 14637,// Fairly pricy
+  "HP": 650,//VERY high health for a 1x1x1 steering hover. Explodes on death.
+  "Mass": 2.5,//HEAVY
+
+  "IconName": "BlockSteady.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 45, 47, 47, 47, 47, 51, 53, 53, 63", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //Thermo jet!? That's used in the 4x Redux Mega and Eagle Heavy boosters
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //bottom
+    { "x": 0, "y": -0.5, "z": 0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "VEN_Booster_Double_(211)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0.5, "y": 0.5, "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_Venture_BoosterDouble_211",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "RCSBlockAlt.obj",
+      "ColliderMeshName": "RCSBlockAlt.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Thruster Bells
+     "SubOverrideName": "_boostJet/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "SmolBoosterBellAlt.obj",
+      "ColliderMeshName": "SmolBoosterBellAlt.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Thruster Bells
+     "SubOverrideName": "_boostJet_copy/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "SmolBoosterBellAlt.obj",
+      "ColliderMeshName": "SmolBoosterBellAlt.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Thruster Bells
+     "SubOverrideName": "_boostJet_copy_copy/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "SmolBoosterBellAlt.obj",
+      "ColliderMeshName": "SmolBoosterBellAlt.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Thruster Bells
+     "SubOverrideName": "_boostJet_copy_copy_copy/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "SmolBoosterBellAlt.obj",
+      "ColliderMeshName": "SmolBoosterBellAlt.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Only way to safely override the graphics it seems
+      "SubOverrideName": "_boostJet/m_BoosterRocketFlame_R/ParticleSystemBoosterRocketFlame",
+      "MeshTextureName": "ExhaustParticles.png",
+      "MakeBoxCollider": false,
+      // "SubPosition": {
+      //   "x": 0,
+      //   "y": 0.0,
+      //   "z": 1.5
+      // }
+    },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-0.5, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": null
+    },
+    "GameObject|m_Venture_BoosterDouble_211": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":-0.5, "z":0 } 
+      }
+    },
+    "GameObject|_boostJet": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.6, "y":0.6, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":-0.575 } 
+      },
+      "Reference|GSO_Block_111/GSO_Block_111": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.35, "y":0.35, "z":0.225 },
+          "localPosition": { "x":0, "y":0, "z":0.30 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+      },
+      "GameObject|m_BoosterRocketFlame_R": null,
+      "GameObject|m_BoosterRocketFlame_L": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":1.75, "z":1.75 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0.075 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 0.2,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 10.0,
+            "startSize": 0.75,
+            "startRotation": 1.7,
+            "startLifetime": 0.3,
+            "gravityModifier": 0.0,
+            "maxParticles": 0,
+            "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            // "time": 0.2,
+            // "randomSeed": 2994554321,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false,
+          },
+        }
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1750.0,//a normal steering hover can only reach up to 600 m_Force
+        //This power is counterbalanced by the thruster's mass, and the fuel consumption
+        "m_ConsumesFuel": true,
+        "m_BurnRate": 2.5, //Decent
+        "m_FireRateFalloff": 0.1,//Super Responsive
+        "m_DetachedForceFactor": 0.01,
+        "m_AutoStabiliseStrength": 0.1,
+        "m_TargetRigidBody": null,
+        "m_Trails": [],
+        "m_FireControl": false,
+        "m_FireStrengthCurrent": 0.0,
+        "m_LocalBoostDirection": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "IsFiring": false,
+        "BurnRate": 15.0,
+        "ConsumesFuel": true,
+        "FireRateCurrent": 0.0
+      }
+    },
+    "Duplicate|_boostJet": {//more thrusters
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.6, "y":0.6, "z":1 },
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":-0.575, "y":0, "z":0 } 
+      },
+    },
+    "Duplicate|_boostJet_copy": {//more thrusters
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.6, "y":0.6, "z":1 },
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0.575 } 
+      },
+    },
+    "Duplicate|_boostJet_copy_copy": {//more thrusters
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.6, "y":0.6, "z":1 },
+        "localEulerAngles": { "x":0, "y":270, "z":0 },
+        "localPosition": { "x":0.575, "y":0, "z":0 } 
+      },
+    },
+
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        // "m_UseBoostControls": true,
+        "m_UseBoostControls": false,
+        "m_UseDriveControls": true,
+        "m_IsFiringSteer": true,
+        // "m_IsRocketBooster": true,
+        "m_IsRocketBooster": false,//Turned it off to get SFX back
+        "m_BoosterAudioType": 6,
+        // BoosterType
+        // {
+        //   GSOMegaBooster,
+        //   GSOBoosterJet,
+        //   VENBooster,
+        //   HERocketJet,
+        //   BFBooster
+        // }
+
+        // for engines that run on [WASD] rather than [Shift]
+        // BoosterEngineType
+        // {
+        //   Propeller,
+        //   LargeRotor,
+        //   MediumRotor,
+        //   RotorFan,
+        //   Fan,
+        //   SteeringHover,
+        //   IonDrive
+        // }
+
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+  }
+}

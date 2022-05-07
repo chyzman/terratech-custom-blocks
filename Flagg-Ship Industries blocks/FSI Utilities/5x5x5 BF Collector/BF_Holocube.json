@@ -1,0 +1,398 @@
+{
+	"Name": "Better Future Holocube Collector",
+	"Description": "A large collector for the 5x5 series. Has a protective cover to keep chunks from being damaged",
+	"ID": 1700095, 	
+
+	"Faction": 7, 
+	"Category": 5, 
+	"Grade": 2, 
+	"Price": 27180,
+	"HP": 5000,
+	"Mass": 10.0,
+	"IconName": "Holocube.png",
+	"Recipe":  "45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,48,48,48,48,48,54,54,54,54,54,54,54,54,54,54,56,56,56,56,56", 
+
+	
+	"MeshName": null, 
+	"MeshMaterialName": null,
+	
+	"Cells":[ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+        { "x": 2, "y": 0, "z": 0 }, 
+		{ "x": 2, "y": 0, "z": 1 },
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 3, "y": 0, "z": 1 },
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },	
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 1, "y": 1, "z": 0 }, 
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+        { "x": 2, "y": 1, "z": 0 }, 
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+        { "x": 3, "y": 1, "z": 0 }, 
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },	
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 1 },
+		{ "x": 4, "y": 1, "z": 2 },
+		{ "x": 4, "y": 1, "z": 3 },
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 2 },
+		{ "x": 0, "y": 2, "z": 3 },
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 1, "y": 2, "z": 0 }, 
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 2 },
+		{ "x": 1, "y": 2, "z": 3 },
+		{ "x": 1, "y": 2, "z": 4 },
+        { "x": 2, "y": 2, "z": 0 }, 
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 2 },
+		{ "x": 2, "y": 2, "z": 3 },
+		{ "x": 2, "y": 2, "z": 4 },
+        { "x": 3, "y": 2, "z": 0 }, 
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 2 },
+		{ "x": 3, "y": 2, "z": 3 },
+		{ "x": 3, "y": 2, "z": 4 },	
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 1 },
+		{ "x": 4, "y": 2, "z": 2 },
+		{ "x": 4, "y": 2, "z": 3 },
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 1 },
+		{ "x": 0, "y": 3, "z": 2 },
+		{ "x": 0, "y": 3, "z": 3 },
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 1, "y": 3, "z": 0 }, 
+		{ "x": 1, "y": 3, "z": 1 },
+		{ "x": 1, "y": 3, "z": 2 },
+		{ "x": 1, "y": 3, "z": 3 },
+		{ "x": 1, "y": 3, "z": 4 },
+        { "x": 2, "y": 3, "z": 0 }, 
+		{ "x": 2, "y": 3, "z": 1 },
+		{ "x": 2, "y": 3, "z": 2 },
+		{ "x": 2, "y": 3, "z": 3 },
+		{ "x": 2, "y": 3, "z": 4 },
+        { "x": 3, "y": 3, "z": 0 }, 
+		{ "x": 3, "y": 3, "z": 1 },
+		{ "x": 3, "y": 3, "z": 2 },
+		{ "x": 3, "y": 3, "z": 3 },
+		{ "x": 3, "y": 3, "z": 4 },	
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 1 },
+		{ "x": 4, "y": 3, "z": 2 },
+		{ "x": 4, "y": 3, "z": 3 },
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },
+		{ "x": 0, "y": 4, "z": 3 },
+		{ "x": 0, "y": 4, "z": 4 },		
+        { "x": 1, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 1 },
+		{ "x": 1, "y": 4, "z": 2 },
+		{ "x": 1, "y": 4, "z": 3 },
+		{ "x": 1, "y": 4, "z": 4 },
+        { "x": 2, "y": 4, "z": 0 }, 
+		{ "x": 2, "y": 4, "z": 1 },
+		{ "x": 2, "y": 4, "z": 2 },
+		{ "x": 2, "y": 4, "z": 3 },
+		{ "x": 2, "y": 4, "z": 4 },
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 3, "y": 4, "z": 1 },
+		{ "x": 3, "y": 4, "z": 2 },
+		{ "x": 3, "y": 4, "z": 3 },
+		{ "x": 3, "y": 4, "z": 4 },	
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+		{ "x": 4, "y": 4, "z": 3 },
+		{ "x": 4, "y": 4, "z": 4 },
+		
+		
+		
+		
+		
+
+		
+    ],
+  
+    "APs": [ 
+        { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 1 }, 
+		{ "x": 0, "y": -0.5, "z": 2 }, 
+		{ "x": 0, "y": -0.5, "z": 3 }, 
+		{ "x": 0, "y": -0.5, "z": 4 }, 
+		
+        { "x": 1, "y": -0.5, "z": 0 }, 
+		{ "x": 1, "y": -0.5, "z": 1 }, 
+		{ "x": 1, "y": -0.5, "z": 2 }, 
+		{ "x": 1, "y": -0.5, "z": 3 }, 
+		{ "x": 1, "y": -0.5, "z": 4 }, 
+		
+        { "x": 2, "y": -0.5, "z": 0 }, 
+		{ "x": 2, "y": -0.5, "z": 1 }, 
+		{ "x": 2, "y": -0.5, "z": 2 }, 
+		{ "x": 2, "y": -0.5, "z": 3 }, 
+		{ "x": 2, "y": -0.5, "z": 4 }, 
+		
+        { "x": 3, "y": -0.5, "z": 0 }, 
+		{ "x": 3, "y": -0.5, "z": 1 }, 
+		{ "x": 3, "y": -0.5, "z": 2 }, 
+		{ "x": 3, "y": -0.5, "z": 3 }, 
+		{ "x": 3, "y": -0.5, "z": 4 }, 
+		
+        { "x": 4, "y": -0.5, "z": 0 }, 
+		{ "x": 4, "y": -0.5, "z": 1 }, 
+		{ "x": 4, "y": -0.5, "z": 2 }, 
+		{ "x": 4, "y": -0.5, "z": 3 }, 
+		{ "x": 4, "y": -0.5, "z": 4 }, 
+		
+		
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 1 }, 
+		{ "x": -0.5, "y": 0, "z": 2 }, 
+		{ "x": -0.5, "y": 0, "z": 3 }, 
+		{ "x": -0.5, "y": 0, "z": 4 }, 
+		
+        { "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 1, "y": 0, "z": -0.5 }, 
+		{ "x": 2, "y": 0, "z": -0.5 }, 
+		{ "x": 3, "y": 0, "z": -0.5 }, 
+		{ "x": 4, "y": 0, "z": -0.5 }, 
+		
+        { "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 1 }, 
+		{ "x": 4.5, "y": 0, "z": 2 }, 
+		{ "x": 4.5, "y": 0, "z": 3 }, 
+		{ "x": 4.5, "y": 0, "z": 4 }, 
+		
+        { "x": 0, "y": 0, "z": 4.5 }, 
+		{ "x": 1, "y": 0, "z": 4.5 }, 
+		{ "x": 2, "y": 0, "z": 4.5 }, 
+		{ "x": 3, "y": 0, "z": 4.5 }, 
+		{ "x": 4, "y": 0, "z": 4.5 }, 
+    ],
+	
+	
+	"GamePrefabReference": "GC_TractorPad_414",
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset": {"x": 3,"y": 0,"z": 0},
+	
+	"SubObjects": [ {
+    "SubOverrideName":"BF_Holocube",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Holocube_Collector.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Holocube_Collector.obj",
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField1",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_1.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField2",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_2.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField3",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_3.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField4",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_4.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField5",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_5.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},
+	},{
+    "SubOverrideName":"BF_CubeField6",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_1.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},"SubScale":{"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"BF_CubeField7",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_2.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},"SubScale":{"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"BF_CubeField8",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_3.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},"SubScale":{"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"BF_CubeField9",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_4.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},"SubScale":{"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"BF_CubeField10",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Field_5.obj",
+    "MeshMaterialName": "BF_Receiver_Forcefield",
+	"ColliderMeshName" : null,
+	"SubPosition": {"x": 2,"y": 0,"z": 2},"SubScale":{"x": 0.9,"y": 0.9,"z": 0.9}
+	}],
+	
+	"JSONBLOCK": {
+	"ModuleItemPickup": {
+    "m_PickupRange": 40.0, "PickupRange":40,"m_Priority":5,
+    "m_PickupSortBuckets": 25,},
+    "ModuleItemHolder": {"PickupPriority":5, "Acceptance":2,"m_AcceptFlags":2,"m_Flags":85,
+        "m_OverrideBasePositons": [
+          
+		{ "x": 0, "y": 0.5, "z": 0 },
+		{ "x": 1, "y": 0.5, "z": 0 },
+		{ "x": 2, "y": 0.5, "z": 0 },
+		{ "x": 3, "y": 0.5, "z": 0 },
+		{ "x": 4, "y": 0.5, "z": 0 },
+		
+		{ "x": 0, "y": 0.5, "z": 1 },
+		{ "x": 1, "y": 0.5, "z": 1 },
+		{ "x": 2, "y": 0.5, "z": 1 },
+		{ "x": 3, "y": 0.5, "z": 1 },
+		{ "x": 4, "y": 0.5, "z": 1 },
+		
+		{ "x": 0, "y": 0.5, "z": 2 },
+		{ "x": 1, "y": 0.5, "z": 2 },
+		{ "x": 2, "y": 0.5, "z": 2 },
+		{ "x": 3, "y": 0.5, "z": 2 },
+		{ "x": 4, "y": 0.5, "z": 2 },
+		
+		{ "x": 0, "y": 0.5, "z": 3 },
+		{ "x": 1, "y": 0.5, "z": 3 },
+		{ "x": 2, "y": 0.5, "z": 3 },
+		{ "x": 3, "y": 0.5, "z": 3 },
+		{ "x": 4, "y": 0.5, "z": 3 },
+		
+		{ "x": 0, "y": 0.5, "z": 4 },
+		{ "x": 1, "y": 0.5, "z": 4 },
+		{ "x": 2, "y": 0.5, "z": 4 },
+		{ "x": 3, "y": 0.5, "z": 4 },
+		{ "x": 4, "y": 0.5, "z": 4 },
+		
+		
+		
+        ],
+		"ReleaseItemEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10
+		}
+		}
+		},
+	 "TakeItemEvent": {
+	 "m_DelegateList": {
+        "m_Delegates": {
+	 "Capacity": 10
+	 }
+	 }
+	 },
+	 "NumStacks": 25,
+	 
+    },
+	"ModuleItemHolderBeam": {"m_BeamBaseHeight":0.45,"m_HeightIncrementScale": 0.4,"m_BeamStrength": 1000.0,
+	"m_PickupSortBuckets": 10,
+	"m_PickupRange": 40,
+	"PickupRange": 40,
+	"NumStacks": 25,
+	},
+	"SwitchableUpdater": {
+    "UpdateEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+		}
+		}
+		},
+		"Outline": {
+		"m_MeshData": {
+		"Capacity": 10,
+		}},
+		"SwitchableUpdater (1)": {
+        "FixedUpdateEvent": {
+        "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+        }
+        }
+		}
+    ,
+	  }
+	
+}

@@ -1,0 +1,205 @@
+{
+	"Name": "TAC Phase Plug",
+	"Description": "A mighty Phase Foam plug that lets you receive effective charge from your local outlet at almost melee distance. \n\nThere is widespread crticism for using outdated technology to charge things.  Why even bother with plugs anymore with all this wireless charging?  You just have to exist in the room to charge your phone and it'd be fine. \nBut here's the problem, your Tech isn't exactly a phone and your base isn't being productive with that one silo missing the required resources.  It is this very reason we bring back the mighty plug, despite its cumbersome nature of having to get close to the power supply. \n\n\nUsing unstable Ionic Wrap Foil dipped in a vat of cyrogenically liquidated Proxima Dark and Olastic Bricks and then set to dry by excited, Pulverised Luxite, it results in a stable, yet unstable compound called Phase Foam that retains its shape but also can phase through other objects while still being perfectly capable of transferring mass electric charges given direct contact with a properly structured conductive output.", //You can make multiple lines with \n
+	"ID": 584284, //A random ID that must be unique		
+
+	"Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 3, //The grade minus one
+	"Price": 18633, //Fairly affordable, but that's because plugs are an older technology.
+	"HP": 1250, //Very strong plug health pool as requested by Fireflywater
+	//BF Battery is 250 in 1 block volume
+	//HE Battery is 400 in 1 block volume
+	//GC Battery is 162 in a 1 block volume
+	//GC Battery is 1296 in a 8 block volume
+	//LK Battery is 1000 in a 1 block volume
+	//LK Battery is 2000 in a 2 block volume
+
+	"Mass": 2.0, //TAC Battery IS 3 in 1 block volume
+	//TAC Battery WAS 3.25 in 1 block volume, roughly between the BF and HE batteries
+	//BF Battery is 2.7 in 1 block volume
+	//HE Battery is 4 in 1 block volume
+	//LK Battery is 10 in 1 block volume
+	
+
+	"IconName": "EnergyEater.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "11, 11, 11, 11, 32, 32, 32, 32, 44, 45, 48, 48, 49, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+	//Remember, this is just a plug.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+    	//back
+        { "x": 0, "y": 0, "z": -0.5 }, 
+    ],
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+	
+	
+	"GamePrefabReference": "HEBattery(211)",
+	"KeepReferenceRenderers": true,
+	"DeathExplosionReference":"HE_Block_111",//Non lethal
+	
+	"SubObjects": [ 
+		{
+	    "SubOverrideName":"m_HE_Battery_211_Base",
+	    "DestroySubReferenceRenderer": true,
+	    "DestroyExistingColliders": true,
+	    "MeshName": "PlugBase.obj",
+	    "MeshTextureName": null,
+      "MakeBoxCollider": false,
+			// "ColliderMeshName" : "PlugBase.obj",
+      "MeshMaterialName": "HE_Main"
+		},
+		{
+	    "SubOverrideName":"m_HE_Battery_211_LEDs",
+	    // "DestroySubReferenceRenderer": true,
+	    // "DestroyExistingColliders": true,
+	    "MeshName": "PlugLEDs.obj",
+		},
+		{
+	    "SubOverrideName":"m_HE_Block_111",
+	    "DestroyExistingRenderer": true,
+	    "DestroyExistingColliders": false,
+		},
+		// {
+	 //    "SubOverrideName":"m_HE_Battery_211_LEDs_copy",
+	 //    // "DestroySubReferenceRenderer": true,
+	 //    // "DestroyExistingColliders": true,
+	 //    "MeshName": "m_TAC_LED_5.obj",
+	 //    // "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    "MeshTextureName": "m_TAC_Battery_LED_Power_2.png",
+	 //    // "MeshTextureName": "CirculatedBattery.png",
+  //     "MeshMaterialName": "HE_Main"
+		// },
+		{
+	    "SubOverrideName":"m_Core",
+	    "MeshName": "GlowOctagon.obj",
+	    "MeshTextureName": null,
+      "MeshMaterialName": "Mat_Pickup_Resource_RodiusCapsule",
+		},
+  ],
+	
+	"JSONBLOCK": {
+  	"Reference|HE_Block_111/m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":0.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0, "z":-0.25 } 
+      },
+  	},
+		"GameObject|m_HE_Battery_211_Base":{
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.0, "y":0, "z":-0.5 } 
+      },
+	    "GameObject|m_Core": {
+	      "UnityEngine.Transform": {
+	        "localScale": { "x":1, "y":1, "z":1 },
+	        "localEulerAngles": { "x":0, "y":0, "z":0 },
+	        "localPosition": { "x":0, "y":0, "z":0 } 
+	      }
+	    },
+		},
+		"GameObject|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":-0.5 } 
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 3,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.025,
+	      //       "y": 0.025,
+	      //     }
+	      //   }
+	      // },
+	    },
+		},
+		"Duplicate|m_HE_Battery_211_LEDs":{
+      "UnityEngine.Transform": {
+	      "localScale": { "x":0.0, "y":0.0, "z":0.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":-0.25 } 
+      },
+	    "EnergyGauge": {
+	      "m_GradationWeightZero": 1,
+	      "m_GradationWeightBlink": 12,
+	      "m_GradationWeightSolid": 12,
+	      // "m_GradationWeightBlink": 12,
+	      // "m_GradationWeightSolid": 12,
+	      "m_BlinkSpeed": 4.0,
+	      // "m_BlinkSpeed": 4.0,
+	      "m_ReadoutAdjustDamper": 0.2,
+	      // "m_ReadoutAdjustDamper": 0.2,
+	      "m_NumLeds": 5,//Does change, need to change texture as well
+	      "m_UseCachedMaterials": true, //Will this inherit visuals from another battery?
+	      "m_UseCachedMaterials": false, //Will this inherit visuals from another battery?
+	      "m_NumLit": 0,
+	      // "m_BlinkSpeedActual": 10.0,
+	      "m_powerLevel": 1.0,
+	      // "m_LocalMat": {
+	      //   "mainTexture": {
+	      //     "texelSize": {
+	      //       "x": 0.025,
+	      //       "y": 0.025,
+	      //     }
+	      //   }
+	      // },
+	    },
+		},
+
+		//Coding
+    "Damageable": {
+      "m_DamageableType": 1,//Armor because outside
+    },
+    "ModuleEnergyStore": {
+      // "m_EnergyType": "Electric",//"Electric" - standard, "Hydrocarbon" - unused
+	    // "m_EnergyGauges": [],
+    	"m_Capacity": 1250, //TAC batteries have 1775 m_Capacity in a volume of 1 block 
+	    "SpareCapacity": 1250.0
+    	//Will not transfer charge correctly if it's too small
+    },
+    //BF batteries have 1875 m_Capacity in a volume of 1 block
+    //HE, GC batteries have 1750 m_Capacity in a volume of 1 block
+    //GSO, VEN batteries have 1500 m_Capacity in a volume of 1 block
+    //LK batteries have 3500 m_Capacity in a volume of 1 block
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy, even more so for plugs since it is MANDATORY for them to exist outside the Tech.
+    },
+	}
+}
+
+
+
+

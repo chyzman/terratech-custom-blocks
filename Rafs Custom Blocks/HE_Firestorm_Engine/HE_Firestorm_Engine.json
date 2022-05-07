@@ -1,0 +1,468 @@
+{
+  "Name": "Hawkeye Firestorm Engine",
+  "Description": "A powerful engine capable of overdriving the mechanical systems of guns in order to boost fire rate; at the cost of destabilizing projectiles and causing loss of accuracy.",
+  "ID": 910692, 
+
+  "Faction": 5, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 104766,
+  "HP": 10000,
+  "Mass": 60,
+  "CenterOfMass": {"x": 1.5, "y": 1, "z": 3},
+
+  "IconName": "HE_Firestorm_Engine_Icon.png",
+  
+  "Recipe": "49, 49, 49, 49, 49, 49, 49, 49, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57, 61, 61, 61, 61, 61, 61, 66, 66", 
+  
+  "EmissionMode": 2,
+
+  "CellMap":
+	[
+		[
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "xxxx",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "    ",
+      "xxxx",
+      "xxxx",
+      "xxxx"
+    ],
+    [
+      "    ",
+      " xx ",
+      " xx ",
+      "xxxx"
+    ],
+    [
+      "    ",
+      " xx ",
+      " xx ",
+      " xx "
+    ]
+  ],
+
+  "APs": [
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 2, "y": -0.5,"z": 0},
+    {"x": 0, "y": -0.5,"z": 1},
+    {"x": 1, "y": -0.5,"z": 1},
+    {"x": 2, "y": -0.5,"z": 1},
+    {"x": 3, "y": -0.5,"z": 1},
+    {"x": 0, "y": -0.5,"z": 2},
+    {"x": 1, "y": -0.5,"z": 2},
+    {"x": 2, "y": -0.5,"z": 2},
+    {"x": 3, "y": -0.5,"z": 2},
+    {"x": 0, "y": -0.5,"z": 3},
+    {"x": 1, "y": -0.5,"z": 3},
+    {"x": 2, "y": -0.5,"z": 3},
+    {"x": 3, "y": -0.5,"z": 3},
+    {"x": 0, "y": -0.5,"z": 4},
+    {"x": 1, "y": -0.5,"z": 4},
+    {"x": 2, "y": -0.5,"z": 4},
+    {"x": 3, "y": -0.5,"z": 4},
+    {"x": 1, "y": -0.5,"z": 6},
+    {"x": 2, "y": -0.5,"z": 6}
+  ],
+
+  "GamePrefabReference": "GSO_FixedDrill_112",
+  "KeepReferenceRenderers": false,
+  "DeathExplosionReference": "GSO_BigBertha_845", 
+  
+  "SubObjects": [
+  	{
+    	"MeshName": "HE_Firestorm_Engine.obj",
+      "MeshMaterialName": "HE_Main",
+      "ColliderMeshName": "HE_Firestorm_Engine_Collider.obj"
+    },
+    {
+      "SubOverrideName": "Gear_Main",
+      "MeshName": "HE_Firestorm_Engine_Gear_Main.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_1",
+      "MeshName": "HE_Firestorm_Engine_Gear_1.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_2",
+      "MeshName": "HE_Firestorm_Engine_Gear_2.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_3",
+      "MeshName": "HE_Firestorm_Engine_Gear_3.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_4",
+      "MeshName": "HE_Firestorm_Engine_Gear_4.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_5",
+      "MeshName": "HE_Firestorm_Engine_Gear_5.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Gear_6",
+      "MeshName": "HE_Firestorm_Engine_Gear_6.obj",
+      "MeshMaterialName": "HE_Main"
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWeaponGun.m_ShotCooldown", 
+        "ModuleWeaponGun.m_WeaponModule.m_ShotCooldown", 
+        "ModuleWeaponGun.m_BurstCooldown",
+        "ModuleWeaponGun.m_FiringData.m_BulletSprayVariance"],
+      "m_Strength": [0.5,0.5,0.5, 1.6],
+      "m_AddAfter": [0, 0, 0, 0.25],
+      "m_NeedsToBeAnchored": [false, false, false ,false]
+    },
+    /*"FFW_TT_BuffBlock.ModuleBuff": {
+      "m_BuffType": ["WeaponCooldown","WeaponSpread"],
+      //"WeaponCooldown", "WeaponRotation", "WeaponSpread", "WeaponVelocity", "DrillDps"
+      //"WheelsRpm", "WheelsBrake", "WheelsTorque", "WheelsGrip", "WheelsSuspension"
+      //"HoverForce", "HoverRange", "HoverDamping", "BoosterBurnRate"
+      //"ItemPickupRange", "ItemProSpeed"
+      "m_Strength": [0.5, 1.6],
+      "m_AddAfter": [0, 0.25],
+      "m_NeedsToBeAnchored": [false, false]
+    },*/
+    "Reference|BF_Laser_Turret_313/ModuleWeapon.":{
+      "m_FireSFXType": 0
+    },
+    "Reference|BF_Laser_Turret_313/ModuleWeaponGun.":{},
+    "Reference|BF_Laser_Turret_313/TargetAimer.":{},
+    "Reference|BF_Laser_Turret_313/FireData.":{},
+    "Reference|BF_Laser_Turret_313/_gimbalElev":{
+      "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 4, "z": 0 }  
+          },
+      "GimbalAimer": {
+        "rotationLimits": [-0.1, 0.1] 
+      },
+      "GameObject|_barrel": {
+        "Spinner": {
+          "m_Speed": 0.0
+        },
+          "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 0, "z": 0 }  
+          },
+           "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": -4.1, "z": 0 }  
+              },
+            "GameObject|_light": null,
+            "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 2.8, "y": 2.6553, "z": 0.698 } ,
+                 "localScale": {
+                  "x": 0.06,
+                  "y": 0.06,
+                  "z": 0.06
+                }
+               },
+              "ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 25.0,
+                "startSpeed": 0.0,
+                "startSize": 0.6,
+                "startColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 0.5
+                },
+                "startLifetime": 1.8,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 1,
+                "scalingMode": 2
+              },
+              "ParticleSystemRenderer": {
+                "material": "Mat_FX_Smoke_Dark"
+              }
+            },
+            "Duplicate|FX_Smoker_Steam":{
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 1.5,
+                  "y": 2.655,
+                  "z": 0.052
+                 }
+               }
+            },
+            "Duplicate|FX_Smoker_Steam_copy":{
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.198, "y": 2.6553, "z": 0.698 }
+               }
+            }
+           },
+           "GameObject|_beam": {
+						"UnityEngine.Transform": { 
+							"localPosition": { "x": 0, "y": 0, "z": 0 }  
+						  },
+						"BeamWeapon": {
+                "m_Range": 0,
+                "m_DamagePerSecond": 0
+              },
+            "UnityEngine.LineRenderer": {
+                "startWidth": 0,
+                "endWidth": 0
+            }
+          }
+      }
+    },
+    "GameObject|spindle_main": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.365,
+          "z": 1.19
+         }
+       },  
+      "GameObject|Gear_Main": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         } 
+      },
+      "Spinner": {
+        "m_Speed": 0.8,
+        "m_RotationAxis": {
+          "axis": 1
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 1
+      }
+    },
+    "GameObject|_spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 1.21,
+          "z": 0
+         }
+       },
+      "GameObject|m_GSO_Drill_112_DrillBit": {  
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         },        
+        "GameObject|spindle_1": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_1": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             } 
+          },
+          "Spinner": {
+            "m_Speed": 1.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        },
+        "GameObject|spindle_2": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_2": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "Spinner": {
+            "m_Speed": 1.0,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        },
+        "GameObject|spindle_3": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_3": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "Spinner": {
+            "m_Speed": 0.8,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        },
+        "GameObject|spindle_4": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_4": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "Spinner": {
+            "m_Speed": 0.6,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        },
+        "GameObject|spindle_5": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_5": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "Spinner": {
+            "m_Speed": 0.4,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        },
+        "GameObject|spindle_6": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|Gear_6": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          },
+          "Spinner": {
+            "m_Speed": 0.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_SpinUpTime": 1
+          }
+        }
+      },
+      "Spinner": {
+        "m_Speed": 0,
+        "m_SpinUpTime": 0
+      }
+    },
+    "ModuleDrill": {
+	  "m_SFXType": 30//30
+  	}
+  }
+}

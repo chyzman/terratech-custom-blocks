@@ -1,0 +1,256 @@
+// Mobile Scrapper
+{
+  "Name": "Reticule Research Un-Refinery",
+  "Description": "What is this? Refined resources into unrefined resources? What the hell was Reticle Research thinking when they made this?\n\nSeriously, how is this machine turning the fibron back into wood? What's happening inside?",
+  "ID": 546352, 
+
+  "Faction": 3,//GSO, because that determines that you can get it in GSO Grade 3 or 4
+  //Changed to hawkeye to allow the mobility to be used
+  "Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 1,
+  "Price": 31185,
+  "Rarity": 2,
+  "HP": 8000,
+  "Mass": 12,
+
+  "IconName": "RR_UnRefinery.png",
+  "MeshName": null,
+
+  "Recipe": "45, 45, 45, 45, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 62, 64, ",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "RR_Main",
+  "ColliderMeshName": null,
+
+  "CellMap": [ // Slices of the block's cell occupancy, from back to front
+    // Any character placement that is not a space will be filled as a cell
+    [
+      "   ",
+      "00 ",
+      "00 ",
+    ],
+    [
+      "000",
+      "000",
+      "000",
+    ],
+    [
+      "000",
+      "000",
+      "000",
+    ],
+    [
+      " 0 ",
+      "000",
+      "000",
+    ],
+  ],
+
+  "APs": [
+    { "x":0, "y":-0.5, "z":0 },{ "x":1, "y":-0.5, "z":0 },
+    { "x":0, "y":-0.5, "z":2 },{ "x":1, "y":-0.5, "z":2 },{ "x":2, "y":-0.5, "z":2 },
+    { "x":1, "y":-0.5, "z":3 },
+
+
+    { "x":-0.5, "y":0, "z":0 },{ "x":1.5, "y":0, "z":0 },
+    { "x":0, "y":0, "z":-0.5 },
+    { "x":1, "y":0, "z":-0.5 },
+  ],
+
+
+  "GamePrefabReference": "BF_Refinery_222", 
+  "KeepReferenceRenderers": true,
+  //"DeathExplosionReference":"",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Base", // decoration
+      "MeshName": "RR_UnRefinery.obj",
+      "DestroyExistingColliders": true,
+      "ColliderMeshName": "RR_UnRefinery_c.obj",
+      "MeshMaterialName": "RR_Main",
+      "SubPosition": {
+        "x": -1,
+        "y": 0,
+        "z": -1
+      },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": 0, // Yaw
+        "z": 0 // Roll
+      }
+    },
+
+    {
+      "SubOverrideName": "RR_UnRefinery_spin", // decoration
+      "MeshName": "RR_UnRefinery_spin.obj",
+      "MeshMaterialName": "RR_Main",
+      "SubPosition": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+    },
+
+    //-------- remove 
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_A",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_C",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Door_D",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Antenna",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Arrow_1_On",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_BF_Refinery_222_Arrow_1_Off",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "BF_Anchor",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "_groundPoint",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+  ],
+
+  "Deserializer": {
+
+    "ModuleRecipeProvider": { // gsorefinery gsocomp3
+      "m_RecipeListNames": [
+        {
+          "name": "gsorefinery",
+          "inverted": true // Flip the recipe to scrap instead of craft
+        },
+      ],
+    },
+
+    "ModuleAnchor": null,
+
+    "GameObject|RR_UnRefinery_spin": { // decoration
+      "Spinner": {
+        "m_AutoSpin": true,
+        "m_Speed": 0.06,
+        "m_RotationAxis": {
+          "axis": 1
+        }
+      }
+    },
+
+    // ---------------Smoke
+    
+    "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.260015,
+          "y": 1.71602,
+          "z": 1.56511
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.015,
+          "y": 0.015,
+          "z": 0.015
+        }
+      },
+      "ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 1.5,
+        "enableEmission": true,
+        "emissionRate": 50.0,
+        "startSpeed": 0.1,
+        "startSize": 0.4,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.1
+        },
+        "startLifetime": 2,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "material": "Mat_FX_Smoke_Dark"
+      }
+    },
+    "Duplicate|FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.74662,
+          "y": 1.71602,
+          "z": 1.56511
+        },
+      },
+    },
+    "Duplicate|FX_Smoker_Steam_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.0,
+          "y": 1.71602,
+          "z": 2.85829
+        },
+      },
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/FX_Smoker_Steam/ParticleSystem.",
+          "type": "Attach"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam_copy/ParticleSystem.",
+          "type": "Attach"
+        },
+        {
+          "m_system": "/FX_Smoker_Steam_copy_copy/ParticleSystem.",
+          "type": "Attach"
+        },
+      ]
+    },
+
+
+
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "Name": "Better Future Block Bed",
+  "Description": "Using Borrowed tech used by GreenTech, this block collector has a large collection radius and capacity. Can hold up to 100 blocks",
+  "ID": 1700145,
+  "Faction": 7, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 2484, 
+  "HP": 1500, 
+  "Mass": 2,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 5, 7, 32, 43, 43, 56",  
+  "IconName": "Block Collector.png", 
+  "MeshName": "BF_Block_Collector.obj", 
+  "SupressBoxColliderFallback": true,
+  
+  "MeshMaterialName":"BF_Main",
+  
+  "BlockExtents":
+  {
+    "x": 5,
+    "y": 1,
+    "z": 5
+  },
+  
+   "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": -0.5, "y": 0, "z": 3},
+	{"x": -0.5, "y": 0, "z": 4},
+	
+	{"x": 4.5, "y": 0, "z": 0},
+	{"x": 4.5, "y": 0, "z": 1},
+	{"x": 4.5, "y": 0, "z": 2},
+	{"x": 4.5, "y": 0, "z": 3},
+	{"x": 4.5, "y": 0, "z": 4},
+	
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 2, "y": 0, "z": -0.5},
+	{"x": 3, "y": 0, "z": -0.5},
+	{"x": 4, "y": 0, "z": -0.5},
+	
+	{"x": 0, "y": 0, "z": 4.5},
+	{"x": 1, "y": 0, "z": 4.5},
+	{"x": 2, "y": 0, "z": 4.5},
+	{"x": 3, "y": 0, "z": 4.5},
+	{"x": 4, "y": 0, "z": 4.5},
+	
+	
+	
+	
+  ],
+  
+  "GamePrefabReference": "BF_Collector_111", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0.5
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName":"m_BF_Collector_111",
+      "DestroyExistingRenderer": true
+    },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 2, "y": 0, "z": 2 },
+  "SubScale": { "x": 5, "y": 1, "z": 5 }
+  }
+  
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {"NumStacks": 5,
+      "m_CapacityPerStack": 10,
+      "m_AcceptFlags": 1,
+      "m_OverrideBasePositons": [
+	  { "x": 2, "y":0.5 , "z": 2 },
+	  { "x": 0.888889, "y":0.5 , "z": 0.888889 },
+	  { "x": 0.888889, "y":0.5 , "z": 3.111111 },
+	  { "x": 3.111111, "y":0.5 , "z": 0.888889 },
+	  { "x": 3.111111, "y":0.5 , "z": 3.111111 }]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 1.0,
+    "m_BeamStrength": 800.0,
+    "m_HeightIncrementScale": 2.0
+  },
+  "ModuleItemPickup": {
+    "m_PickupRange": 50.0,
+    "m_Priority": 5
+  }
+  }			
+}

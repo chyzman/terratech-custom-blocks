@@ -1,0 +1,69 @@
+{
+  "Name": "Venture Cluster Overcharger",
+  "Description": "A small power station which not only stores a considerable amount of energy, also coordinates the power distribution in a single large cluster, managing to overcharge small batteries.\nDoes not work well with medium and large batteries, resulting in capacity loss.",
+  "ID": 910697, 
+
+  "Faction": 4, 
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 17175,
+  "HP": 2400,
+  "Mass": 10,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 1},
+
+  "IconName": "VEN_Cluster_Overcharger_Icon.png",
+  
+  "Recipe": "5, 5, 5, 5, 52, 52, 52, 52, 60, 62, 62" ,
+  
+  "EmissionMode": 2,
+
+  "BlockExtents":{"x": 2,"y": 2, "z": 3},
+
+  "APs": [
+    {"x": 0, "y": -0.5,"z": 0},
+    {"x": 0, "y": -0.5,"z": 1},
+    {"x": 1, "y": -0.5,"z": 0},
+    {"x": 1, "y": -0.5,"z": 1},
+    {"x": 0, "y": -0.5,"z": 2},
+    {"x": 1, "y": -0.5,"z": 2},
+    {"x": 0, "y": 0,"z": -0.5},
+    {"x": 1, "y": 0,"z": -0.5},
+    {"x": 0, "y": 0,"z": 2.5},
+    {"x": 1, "y": 0,"z": 2.5},
+    {"x": -0.5, "y": 0,"z": 0},
+    {"x": -0.5, "y": 0,"z": 1},
+    {"x": -0.5, "y": 0,"z": 2},
+    {"x": 1.5, "y": 0,"z": 0},
+    {"x": 1.5, "y": 0,"z": 1},
+    {"x": 1.5, "y": 0,"z": 2}
+  ],
+
+  "GamePrefabReference": "VEN_Battery_111",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  //"DeathExplosionReference": "VEN_FuelPod_111", 
+  
+  "SubObjects": [
+  	{
+      "SubOverrideName": "m_VEN_Battery_111",
+    	"MeshName": "VEN_Cluster_Overcharger.obj",
+      "MeshMaterialName": "VEN_Main",
+      "ColliderMeshName": "VEN_Cluster_Overcharger_Collider.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+        "SubOverrideName": "m_VEN_Battery_111_LED_5",
+      "MeshName": "VEN_Cluster_Overcharger_LED.obj",
+        "SubPosition": { "x": 0, "y": 0, "z": 0}
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": ["ModuleEnergyStore.m_Capacity"],
+      "m_Strength": [0.5],
+      "m_AddAfter": [1050],
+      "m_NeedsToBeAnchored": [false]
+    },
+    "ModuleEnergyStore": {"m_Capacity": 34000}
+  }
+}

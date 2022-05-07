@@ -1,0 +1,60 @@
+{
+  "Name": "Old Star Inner Curved Slope Block",
+  "Description": "This here is how the Old Star do. This small aesthetic block was carved so your tech can have more sreamlines slopes.",
+  "ID": 300169,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 666,
+  "HP": 350,
+  "Mass": 0.5,
+  "IconName": "OS_Inner_Curved_Slope_Block_Icon.png",
+  "MeshName": "OS_Inner_Curved_Slope_Block.obj",
+  "ColliderMeshName": "OS_Inner_Curved_Slope_Block.obj",
+  "Recipe": [
+    { "0": "10" },
+    { "5": "2" },
+    { "7": "2" },
+    { "43": "1" }
+  ],
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "APsOnlyAtBottom": false,
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    }
+  ]
+}

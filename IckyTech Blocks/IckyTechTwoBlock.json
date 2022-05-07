@@ -1,0 +1,118 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "IckyTech Two Wide Block",
+  "Description": "The slightly less basic component of IckyTech constructs. This one is wide.", //You can make multiple lines with \n
+  "ID": 404002, //A random ID that MUST be unique
+  
+  //This should no longer be necessary
+  //"IDNetHex": "4ff30da9fd33fff4", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 0, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 0, //The desired grade minus one
+  "Price": 20000,
+  "HP": 10000,
+  "Mass": 16,
+
+  "IconName": null, //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "IckyTechTwoBlock.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 43, 43, 43, 43, 43, 43, 43, 43, 54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 43, 43, 43, 43, 43, 43, 43, 43", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": "IckyTech.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "GlossTextureName": "IckyTechShine.png",
+
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+	/*  EITHER  */
+
+	/*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 2,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+
+  /*    
+  
+  //OPTIONAL
+	"GamePrefabReference": null, //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "": false, //Disable creation of BoxCollider. This is for 
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ {
+    "SubOverrideName":"name_of_sub_in_game",
+    "DestroySubReferenceRenderer": false,
+    "MeshName": null,
+    "ColliderMeshName": null,
+    "MeshTextureName": null,
+    "MeshMaterialName": null,
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+  }, {
+    "SubOverrideName":"Sub GameObject", //This line can be omitted (or set not to a valid subobject of the prefab) to create a new gameobject child.
+    "DestroySubReferenceRenderer": false,
+    "MeshName": null,
+    "ColliderMeshName": null,
+    "MeshTextureName": null,
+    "MeshMaterialName": null,
+    "SubPosition": { "x": 0, "y": 0, "z": 0 }
+  } ]
+	
+  */
+
+  //For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  //OPTIONAL
+  /*
+  
+  //Example to make a drill very powerful
+  "JSONBLOCK": {
+    "ModuleDrill": {
+      "damagePerSecond": 1000000
+    }
+  }
+
+  //Example to change travel distance of a projectile
+  "JSONBLOCK": {
+    "FireData": {
+      "m_MuzzleVelocity": 2.1
+    }
+  }
+
+  //You can access children of gameobjects as you access components. And in those children, modify their components or go deeper
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        //Modifications go here
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+        //Modifications go here
+      }
+    }
+  }
+
+  //Note: Any component or gameobject which cannot be found will be created.
+  //A gameobject can be created without specifying a name, such as "GameObject": {}
+  //This is an old module which has recently been brought to life. It is not recommended for normal use, but brings much more capability. If you have any problems, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed.
+
+  */
+}

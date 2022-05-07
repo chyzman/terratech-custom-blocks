@@ -1,0 +1,293 @@
+{
+	"Name": "GeoCorp Truckbed Collector",
+	"Description": "A large collector that can also store a lot. It can also stack with itself on the front or back.",
+	"ID": 1700047, 	
+
+	"Faction": 2, 
+	"Category": 5, 
+	"Grade": 2, 
+	"Price": 27180,
+	"HP": 5000,
+	"Mass": 10.0,
+	
+	"Recipe":  "45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,48,48,48,48,48,54,54,54,54,54,54,54,54,54,54,56,56,56,56,56", 
+
+	"IconName": "GC_Truckbed_icon.png",
+	
+	"MeshName": null, 
+	"MeshMaterialName": null,
+	
+	"Cells":[
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },
+		{ "x": 0, "y": 0, "z": 5 },
+		{ "x": 0, "y": 0, "z": 6 },
+		{ "x": 0, "y": 0, "z": 7 },
+		
+		{ "x": 1, "y": 0, "z": 2 },
+		{ "x": 1, "y": 0, "z": 3 },
+		{ "x": 1, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 5 },
+		{ "x": 1, "y": 0, "z": 6 },
+		{ "x": 1, "y": 0, "z": 7 },
+		
+		{ "x": 2, "y": 0, "z": 2 },
+		{ "x": 2, "y": 0, "z": 3 },
+		{ "x": 2, "y": 0, "z": 4 },
+		{ "x": 2, "y": 0, "z": 5 },
+		{ "x": 2, "y": 0, "z": 6 },
+		{ "x": 2, "y": 0, "z": 7 },
+		
+		{ "x": 3, "y": 0, "z": 2 },
+		{ "x": 3, "y": 0, "z": 3 },
+		{ "x": 3, "y": 0, "z": 4 },
+		{ "x": 3, "y": 0, "z": 5 },
+		{ "x": 3, "y": 0, "z": 6 },
+		{ "x": 3, "y": 0, "z": 7 },
+		
+		
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 0, "y": 1, "z": 2 },
+		{ "x": 0, "y": 1, "z": 3 },
+		{ "x": 0, "y": 1, "z": 4 },
+		{ "x": 0, "y": 1, "z": 5 },
+		{ "x": 0, "y": 1, "z": 6 },
+		{ "x": 0, "y": 1, "z": 7 },
+		{ "x": 0, "y": 1, "z": 8 },
+		
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 2 },
+		{ "x": 1, "y": 1, "z": 3 },
+		{ "x": 1, "y": 1, "z": 4 },
+		{ "x": 1, "y": 1, "z": 5 },
+		{ "x": 1, "y": 1, "z": 6 },
+		{ "x": 1, "y": 1, "z": 7 },
+		{ "x": 1, "y": 1, "z": 8 },
+		
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 2 },
+		{ "x": 2, "y": 1, "z": 3 },
+		{ "x": 2, "y": 1, "z": 4 },
+		{ "x": 2, "y": 1, "z": 5 },
+		{ "x": 2, "y": 1, "z": 6 },
+		{ "x": 2, "y": 1, "z": 7 },
+		{ "x": 2, "y": 1, "z": 8 },
+		
+		{ "x": 3, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 2 },
+		{ "x": 3, "y": 1, "z": 3 },
+		{ "x": 3, "y": 1, "z": 4 },
+		{ "x": 3, "y": 1, "z": 5 },
+		{ "x": 3, "y": 1, "z": 6 },
+		{ "x": 3, "y": 1, "z": 7 },
+		{ "x": 3, "y": 1, "z": 8 },
+		
+		
+		{ "x": 0, "y": 2, "z": 0 },
+		{ "x": 0, "y": 2, "z": 1 },
+		{ "x": 0, "y": 2, "z": 8 },
+		{ "x": 0, "y": 2, "z": 9 },
+		
+		{ "x": 1, "y": 2, "z": 0 },
+		{ "x": 1, "y": 2, "z": 1 },
+		{ "x": 1, "y": 2, "z": 8 },
+		{ "x": 1, "y": 2, "z": 9 },
+		
+		{ "x": 2, "y": 2, "z": 0 },
+		{ "x": 2, "y": 2, "z": 1 },
+		{ "x": 2, "y": 2, "z": 8 },
+		{ "x": 2, "y": 2, "z": 9 },
+		
+		{ "x": 3, "y": 2, "z": 0 },
+		{ "x": 3, "y": 2, "z": 1 },
+		{ "x": 3, "y": 2, "z": 8 },
+		{ "x": 3, "y": 2, "z": 9 },
+		
+		{ "x": 0, "y": 3, "z": 0 },
+		{ "x": 0, "y": 3, "z": 9 },
+		
+		{ "x": 1, "y": 3, "z": 0 },
+		{ "x": 1, "y": 3, "z": 9 },
+		
+		{ "x": 2, "y": 3, "z": 0 },
+		{ "x": 2, "y": 3, "z": 9 },
+		
+		{ "x": 3, "y": 3, "z": 0 },
+		{ "x": 3, "y": 3, "z": 9 },
+		
+		
+		{ "x": 0, "y": 4, "z": 0 },
+		{ "x": 0, "y": 4, "z": 9 },
+		
+		{ "x": 1, "y": 4, "z": 0 },
+		{ "x": 1, "y": 4, "z": 9 },
+		
+		{ "x": 2, "y": 4, "z": 0 },
+		{ "x": 2, "y": 4, "z": 9 },
+		
+		{ "x": 3, "y": 4, "z": 0 },
+		{ "x": 3, "y": 4, "z": 9 },
+		
+		
+	
+		],
+  
+    "APs": [ 
+        { "x": -0.5, "y": 0, "z": 3 },
+        { "x": -0.5, "y": 0, "z": 4 },
+        { "x": -0.5, "y": 0, "z": 5 },
+        { "x": -0.5, "y": 0, "z": 6 },
+        { "x": -0.5, "y": 1, "z": 3 },
+        { "x": -0.5, "y": 1, "z": 6 },
+        { "x": -0.5, "y": 1, "z": 7 },
+        { "x": -0.5, "y": 1, "z": 8 },
+        { "x": -0.5, "y": 1, "z": 2 },
+        { "x": -0.5, "y": 1, "z": 1 },
+        		
+		{ "x": 3.5, "y": 0, "z": 3 },
+        { "x": 3.5, "y": 0, "z": 4 },
+        { "x": 3.5, "y": 0, "z": 5 },
+        { "x": 3.5, "y": 0, "z": 6 },
+        { "x": 3.5, "y": 1, "z": 3 },
+        { "x": 3.5, "y": 1, "z": 6 },
+        { "x": 3.5, "y": 1, "z": 7 },
+        { "x": 3.5, "y": 1, "z": 8 },
+        { "x": 3.5, "y": 1, "z": 2 },
+        { "x": 3.5, "y": 1, "z": 1 },
+        
+    ],
+	
+	
+	"GamePrefabReference": "GC_TractorPad_414",
+	"KeepReferenceRenderers": false,
+	"ReferenceOffset": {"x": 3,"y": 0,"z": 0},
+	
+	"SubObjects": [ {
+    "SubOverrideName":"GCtruckbed",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "GC_Truckbed.obj",
+	"MeshMaterialName": "GC_Main",
+	"ColliderMeshName" : "GCTB_PadR.obj",
+	"SubPosition": {"x": 1.5,"y": 0,"z": 4.5},
+	},{
+    "SubOverrideName":"GCCol1",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "null",
+	"ColliderMeshName" : "GCTB_PadL.obj",
+	"SubPosition": {"x": 1.5,"y": 0,"z": 4.5},
+	},{
+    "SubOverrideName":"GCCol2",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "null",
+	"ColliderMeshName" : "GCTB_wallR.obj",
+	"SubPosition": {"x": 1.5,"y": 0,"z": 4.5},
+	},{
+    "SubOverrideName":"GCCol3",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "null",
+	"ColliderMeshName" : "GCTB_wallL.obj",
+	"SubPosition": {"x": 1.5,"y": 0,"z": 4.5},
+	}],
+	
+	"JSONBLOCK": {
+	"ModuleItemPickup": {
+    "m_PickupRange": 25.0, "PickupRange":25,"m_Priority":5,
+    "m_PickupSortBuckets": 32,},
+    "ModuleItemHolder": {"PickupPriority":5, "Acceptance":2,"m_AcceptFlags":2,"m_Flags":85,
+        "m_OverrideBasePositons": [
+          
+		{ "x": 0, "y": 0.5, "z": 3 },
+		{ "x": 1, "y": 0.5, "z": 3 },
+		{ "x": 2, "y": 0.5, "z": 3 },
+		{ "x": 3, "y": 0.5, "z": 3 },
+		
+		{ "x": 0, "y": 0.5, "z": 2 },
+		{ "x": 1, "y": 0.5, "z": 2 },
+		{ "x": 2, "y": 0.5, "z": 2 },
+		{ "x": 3, "y": 0.5, "z": 2 },
+		
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 1 },
+		{ "x": 2, "y": 1, "z": 1 },
+		{ "x": 3, "y": 1, "z": 1 },
+		
+		{ "x": 0, "y": 0, "z": 4 },
+		{ "x": 1, "y": 0, "z": 4 },
+		{ "x": 2, "y": 0, "z": 4 },
+		{ "x": 3, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 0, "z": 5 },
+		{ "x": 1, "y": 0, "z": 5 },
+		{ "x": 2, "y": 0, "z": 5 },
+		{ "x": 3, "y": 0, "z": 5 },
+		
+		{ "x": 0, "y": 0.5, "z": 6 },
+		{ "x": 1, "y": 0.5, "z": 6 },
+		{ "x": 2, "y": 0.5, "z": 6 },
+		{ "x": 3, "y": 0.5, "z": 6 },
+		
+		{ "x": 0, "y": 0.5, "z": 7 },
+		{ "x": 1, "y": 0.5, "z": 7 },
+		{ "x": 2, "y": 0.5, "z": 7 },
+		{ "x": 3, "y": 0.5, "z": 7 },
+		
+		{ "x": 0, "y": 1, "z": 8 },
+		{ "x": 1, "y": 1, "z": 8 },
+		{ "x": 2, "y": 1, "z": 8 },
+		{ "x": 3, "y": 1, "z": 8 },
+		
+        ],
+		"ReleaseItemEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10
+		}
+		}
+		},
+	 "TakeItemEvent": {
+	 "m_DelegateList": {
+        "m_Delegates": {
+	 "Capacity": 10
+	 }
+	 }
+	 },
+	 "NumStacks": 32,
+	 
+    },
+	"ModuleItemHolderBeam": {
+	"m_PickupSortBuckets": 10,
+	"m_PickupRange": 40,
+	"PickupRange": 40,
+	"NumStacks": 32,
+	},
+	"SwitchableUpdater": {
+    "UpdateEvent": {
+      "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+		}
+		}
+		},
+		"Outline": {
+		"m_MeshData": {
+		"Capacity": 10,
+		}},
+		"SwitchableUpdater (1)": {
+        "FixedUpdateEvent": {
+        "m_DelegateList": {
+        "m_Delegates": {
+		"Capacity": 10,
+		}
+        }
+        }
+		}
+    ,
+	  }
+	
+}

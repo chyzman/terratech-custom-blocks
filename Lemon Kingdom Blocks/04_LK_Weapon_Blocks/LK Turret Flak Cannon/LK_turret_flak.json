@@ -1,0 +1,380 @@
+/*
+Description: A highly accurate turret with a homing projectile.
+Pros:   High projectile speed, fast turn speed and projectile also tracks targets quickly
+Cons:   Projectile is useless in close range. Heavy, expensive with a high recoil. 
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Flak Turret",
+    "Description":          "An anchorable, heavily armored anti-aircraft cannon that fires gyrojets. It's very accurate, but it has a lot of recoil.\n\n\"Dr. Spirit, a freelance engineer, invented a compact Quantum Computer using Lemon Kingdom technology just so his coffee mug can deliver itself to him without spilling. As thanks, he sold his invention back to the kingdom for a fair price.\"",
+
+    "ID": 419048,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 104922,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:     Main Body: 48 Titanic Alloy, 4 Plubonic Alloy
+                Gun:       4 Blast Caps 
+                Shell:     2 Z4 Explosives, 2 Thermo Jet, 2 Proxima Dark, 2 Seed AI
+
+    Note:       Flak Turret uses 48 Cells
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 48, "53": 4, 
+        // Gun
+        "46": 4, 
+        // Shell
+        "55": 2,  "63": 2, "66": 2, "65": 2
+    },
+      
+    "IconName":                   "LK_turret_flak_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                 // Name of the block's mesh                                        
+    "MeshColliderName":           null,                 // Name of the block's collider.
+    "NoBoxCollider":              false,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 19200,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons (300/cell for Missile weapons)
+                            // 300/cell = Wheels, Generators & Electronics
+                            // 750/cell = Rotors (Exclude the propeller blades)
+
+    "Mass": 192.0,          // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "Cells": [ 
+        
+        // Y Layer 0
+                                    { "x": 1, "y": 0, "z": 0 }, { "x": 2, "y": 0, "z": 0 }, { "x": 3, "y": 0, "z": 0 }, { "x": 4, "y": 0, "z": 0 },
+        { "x": 0, "y": 0, "z": 1 }, { "x": 1, "y": 0, "z": 1 }, { "x": 2, "y": 0, "z": 1 }, { "x": 3, "y": 0, "z": 1 }, { "x": 4, "y": 0, "z": 1 }, { "x": 5, "y": 0, "z": 1 },
+        { "x": 0, "y": 0, "z": 2 }, { "x": 1, "y": 0, "z": 2 }, { "x": 2, "y": 0, "z": 2 }, { "x": 3, "y": 0, "z": 2 }, { "x": 4, "y": 0, "z": 2 }, { "x": 5, "y": 0, "z": 2 },
+        { "x": 0, "y": 0, "z": 3 }, { "x": 1, "y": 0, "z": 3 }, { "x": 2, "y": 0, "z": 3 }, { "x": 3, "y": 0, "z": 3 }, { "x": 4, "y": 0, "z": 3 }, { "x": 5, "y": 0, "z": 3 },
+        { "x": 0, "y": 0, "z": 4 }, { "x": 1, "y": 0, "z": 4 }, { "x": 2, "y": 0, "z": 4 }, { "x": 3, "y": 0, "z": 4 }, { "x": 4, "y": 0, "z": 4 }, { "x": 5, "y": 0, "z": 4 },
+                                    { "x": 1, "y": 0, "z": 5 }, { "x": 2, "y": 0, "z": 5 }, { "x": 3, "y": 0, "z": 5 }, { "x": 4, "y": 0, "z": 5 },
+        
+        
+        // Y Layer 1
+        { "x": 0, "y": 1, "z": 0 }, { "x": 1, "y": 1, "z": 0 }, { "x": 2, "y": 1, "z": 0 }, { "x": 3, "y": 1, "z": 0 }, { "x": 4, "y": 1, "z": 0 }, { "x": 5, "y": 1, "z": 0 },
+        { "x": 0, "y": 1, "z": 1 }, { "x": 1, "y": 1, "z": 1 }, { "x": 2, "y": 1, "z": 1 }, { "x": 3, "y": 1, "z": 1 }, { "x": 4, "y": 1, "z": 1 }, { "x": 5, "y": 1, "z": 1 },
+        { "x": 0, "y": 1, "z": 2 }, { "x": 1, "y": 1, "z": 2 }, { "x": 2, "y": 1, "z": 2 }, { "x": 3, "y": 1, "z": 2 }, { "x": 4, "y": 1, "z": 2 }, { "x": 5, "y": 1, "z": 2 },
+        { "x": 0, "y": 1, "z": 3 }, { "x": 1, "y": 1, "z": 3 }, { "x": 2, "y": 1, "z": 3 }, { "x": 3, "y": 1, "z": 3 }, { "x": 4, "y": 1, "z": 3 }, { "x": 5, "y": 1, "z": 3 },
+        { "x": 0, "y": 1, "z": 4 }, { "x": 1, "y": 1, "z": 4 }, { "x": 2, "y": 1, "z": 4 }, { "x": 3, "y": 1, "z": 4 }, { "x": 4, "y": 1, "z": 4 }, { "x": 5, "y": 1, "z": 4 },
+        { "x": 0, "y": 1, "z": 5 }, { "x": 1, "y": 1, "z": 5 }, { "x": 2, "y": 1, "z": 5 }, { "x": 3, "y": 1, "z": 5 }, { "x": 4, "y": 1, "z": 5 }, { "x": 5, "y": 1, "z": 5 },
+        
+        //Y Layer 2
+        { "x": 0, "y": 2, "z": 0 }, { "x": 1, "y": 2, "z": 0 }, { "x": 2, "y": 2, "z": 0 }, { "x": 3, "y": 2, "z": 0 }, { "x": 4, "y": 2, "z": 0 }, { "x": 5, "y": 2, "z": 0 },
+        { "x": 0, "y": 2, "z": 1 }, { "x": 1, "y": 2, "z": 1 }, { "x": 2, "y": 2, "z": 1 }, { "x": 3, "y": 2, "z": 1 }, { "x": 4, "y": 2, "z": 1 }, { "x": 5, "y": 2, "z": 1 },
+        { "x": 0, "y": 2, "z": 2 }, { "x": 1, "y": 2, "z": 2 }, { "x": 2, "y": 2, "z": 2 }, { "x": 3, "y": 2, "z": 2 }, { "x": 4, "y": 2, "z": 2 }, { "x": 5, "y": 2, "z": 2 },
+        { "x": 0, "y": 2, "z": 3 }, { "x": 1, "y": 2, "z": 3 }, { "x": 2, "y": 2, "z": 3 }, { "x": 3, "y": 2, "z": 3 }, { "x": 4, "y": 2, "z": 3 }, { "x": 5, "y": 2, "z": 3 },
+        { "x": 0, "y": 2, "z": 4 }, { "x": 1, "y": 2, "z": 4 }, { "x": 2, "y": 2, "z": 4 }, { "x": 3, "y": 2, "z": 4 }, { "x": 4, "y": 2, "z": 4 }, { "x": 5, "y": 2, "z": 4 },
+        { "x": 0, "y": 2, "z": 5 }, { "x": 1, "y": 2, "z": 5 }, { "x": 2, "y": 2, "z": 5 }, { "x": 3, "y": 2, "z": 5 }, { "x": 4, "y": 2, "z": 5 }, { "x": 5, "y": 2, "z": 5 },
+       
+        //Y Layer 3
+                                    { "x": 1, "y": 3, "z": 0 }, { "x": 2, "y": 3, "z": 0 }, { "x": 3, "y": 3, "z": 0 }, { "x": 4, "y": 3, "z": 0 },
+        { "x": 0, "y": 3, "z": 1 }, { "x": 1, "y": 3, "z": 1 }, { "x": 2, "y": 3, "z": 1 }, { "x": 3, "y": 3, "z": 1 }, { "x": 4, "y": 3, "z": 1 }, { "x": 5, "y": 3, "z": 1 },
+        { "x": 0, "y": 3, "z": 2 }, { "x": 1, "y": 3, "z": 2 }, { "x": 2, "y": 3, "z": 2 }, { "x": 3, "y": 3, "z": 2 }, { "x": 4, "y": 3, "z": 2 }, { "x": 5, "y": 3, "z": 2 },
+        { "x": 0, "y": 3, "z": 3 }, { "x": 1, "y": 3, "z": 3 }, { "x": 2, "y": 3, "z": 3 }, { "x": 3, "y": 3, "z": 3 }, { "x": 4, "y": 3, "z": 3 }, { "x": 5, "y": 3, "z": 3 },
+        { "x": 0, "y": 3, "z": 4 }, { "x": 1, "y": 3, "z": 4 }, { "x": 2, "y": 3, "z": 4 }, { "x": 3, "y": 3, "z": 4 }, { "x": 4, "y": 3, "z": 4 }, { "x": 5, "y": 3, "z": 4 },
+                                    { "x": 1, "y": 3, "z": 5 }, { "x": 2, "y": 3, "z": 5 }, { "x": 3, "y": 3, "z": 5 }, { "x": 4, "y": 3, "z": 5 },
+        
+        //Y Layer 4
+                                                                { "x": 2, "y": 4, "z": 0 }, { "x": 3, "y": 4, "z": 0 }, 
+                                    { "x": 1, "y": 4, "z": 1 }, { "x": 2, "y": 4, "z": 1 }, { "x": 3, "y": 4, "z": 1 }, { "x": 4, "y": 4, "z": 1 }, 
+        { "x": 0, "y": 4, "z": 2 }, { "x": 1, "y": 4, "z": 2 }, { "x": 2, "y": 4, "z": 2 }, { "x": 3, "y": 4, "z": 2 }, { "x": 4, "y": 4, "z": 2 }, { "x": 5, "y": 4, "z": 2 },
+        { "x": 0, "y": 4, "z": 3 }, { "x": 1, "y": 4, "z": 3 }, { "x": 2, "y": 4, "z": 3 }, { "x": 3, "y": 4, "z": 3 }, { "x": 4, "y": 4, "z": 3 }, { "x": 5, "y": 4, "z": 3 },
+                                    { "x": 1, "y": 4, "z": 4 }, { "x": 2, "y": 4, "z": 4 }, { "x": 3, "y": 4, "z": 4 }, { "x": 4, "y": 4, "z": 4 }, 
+                                                                { "x": 2, "y": 4, "z": 5 }, { "x": 3, "y": 4, "z": 5 }, 
+        
+        //Y Layer 5
+                                    { "x": 1, "y": 5, "z": 1 }, { "x": 2, "y": 5, "z": 1 }, { "x": 3, "y": 5, "z": 1 }, { "x": 4, "y": 5, "z": 1 },
+                                    { "x": 1, "y": 5, "z": 2 }, { "x": 2, "y": 5, "z": 2 }, { "x": 3, "y": 5, "z": 2 }, { "x": 4, "y": 5, "z": 2 },
+                                    { "x": 1, "y": 5, "z": 3 }, { "x": 2, "y": 5, "z": 3 }, { "x": 3, "y": 5, "z": 3 }, { "x": 4, "y": 5, "z": 3 },
+                                    { "x": 1, "y": 5, "z": 4 }, { "x": 2, "y": 5, "z": 4 }, { "x": 3, "y": 5, "z": 4 }, { "x": 4, "y": 5, "z": 4 },
+   
+    ],
+
+    "APs": [ 
+        // Bottom APs
+        { "x": 2, "y": -0.5, "z": 3.0 }, { "x": 3, "y": -0.5, "z": 3.0 },
+        { "x": 2, "y": -0.5, "z": 2.0 }, { "x": 3, "y": -0.5, "z": 2.0 },
+      ],
+
+    // Advanced Settings
+    "PrefabReference":  "56", // GSO Megaton Cannon Block ID
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 2.5, "y": -0.5, "z": 2.5 },
+
+    
+    "SubObjects":[
+        // Replace the original meshes with new ones
+        {
+            "ObjectName":                   "m_GSO_MegatonCannon_222_Base",
+            "MeshName":                     "LK_turret_flak_base.obj",    
+            "ColliderMeshName":             "LK_turret_flak_base_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 2.5, "y": -0.5, "z": 2.5 },
+        },
+
+        {
+            "ObjectName":                   "m_GSO_MegatonCannon_222_Turret",
+            "MeshName":                     "LK_turret_flak_mount.obj",    
+            "ColliderMeshName":             "LK_turret_flak_mount_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+        },
+        {
+            "ObjectName":                   "m_GSO_MegatonCannon_222_Barrel_B",
+            "MeshName":                     "LK_turret_flak_barrel.obj",    
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Scale":                        { "x": 0.125, "y": 0.125, "z": 0.125 },
+        },
+        {
+            "ObjectName":                   "m_GSO_MegatonCannon_222_Barrel_A",
+            "MeshName":                     "LK_turret_flak_barrel_base.obj",    
+            "ColliderMeshName":             "LK_turret_flak_barrel_base_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+        },
+
+        // Add a spinning barrel vent
+        {
+            "ObjectName":                   "Barrel_Spinner",
+            "MeshName":                     "LK_turret_flak_barrel_spinner.obj",    
+            "Position":                     { "x": 0, "y": 0, "z": 0.052 },
+            "Scale":                        { "x": 0.125, "y": 0.125, "z": 0.125 }
+        },
+
+        // Move the other components to their proper places
+        {
+            "ObjectName":                   "_gimbalBase",
+            "Position":                     { "x": 2.5, "y": -0.12, "z": 2.5 },
+        },
+        {
+            "ObjectName":                   "_gimbalElev",
+            "Position":                     { "x": 0, "y": 1.1, "z": -2.12 },
+        },       
+        {
+            "ObjectName":                   "_barrel",
+            "Position":                     { "x": 0, "y": 0.15, "z": 1.1 },
+            "Scale":                        { "x": 8, "y": 8, "z": 8 },
+        },
+        {
+            "ObjectName":                   "_bulletSpawn",
+            "Position":                     { "x": 0, "y": 0.0, "z": 0.5 },
+        }, 
+        {
+            "ObjectName":                   "_muzzleFlash",
+            "Position":                     { "x": 0, "y": 0.0, "z": 0.5 },
+            "Scale":                        { "x": 0.25, "y": 0.25, "z": 0.25 },
+        },  
+        {
+            "ObjectName":                   "_casingSpawn",
+            "Position":                     { "x": 0, "y": 0.1, "z": -0.3 },
+        },  
+        
+        {
+            "ObjectName":                   "FireData.m_BulletPrefab/m_GSO_MiniMissile",
+            "MeshName":                     "LK_turret_flak_projectile.obj",
+            "TextureName":                  "LK_tex_1.png",
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 }
+        },
+
+        // Replace the anchor objects
+        {
+            "ObjectName":                   "m_GC_Anchor_Fixed_A",
+            "MeshName":                     "LK_turret_flak_anchor.obj",
+            "ColliderMeshName":             "LK_cannon_flak_anchor_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                   { "x": 0, "y": 0, "z": 0},
+        },
+        {
+            "ObjectName":                   "m_GC_Anchor_Fixed_B",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "m_GC_Anchor_Fixed_C",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_anchor",
+            "Position":                   { "x": 2.5, "y": -0.5, "z": 2.5 },
+            "DestroyExistingColliders":     true,
+        },
+        
+    ],
+
+    "Deserializer":{
+        "GameObject|_gimbalBase": {
+            "GimbalAimer": { "rotationLimits": [0, 0] },
+            "GameObject|_gimbalElev": {
+                "GimbalAimer": { "rotationLimits": [0, -60] },
+
+                "GameObject|_barrel": {
+                    "GameObject|Barrel_Spinner":{
+                        "Spinner":{
+                            "m_Speed": 1.0,                         // Dictates the speed of the rotation
+                            "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+                            "m_RotationAxis":   { "axis": 2 },
+                        }
+                    }
+                }
+            }
+        },
+        "Reference|241/_anchor":{
+
+        },
+
+        /********** ModuleWeapon **********/
+        "ModuleWeapon":{
+            "m_RotateSpeed":            100.0,      // Dictates the speed of the gun's rotation whenever it aims at a target.
+            "m_FireSFXType":            75,         // Dictates the sound used when firing
+                                                    // 4  = GSO 3-Pounder Cannon
+                                                    // 6  = GSO Megaton Cannon
+                                                    // 18 = HE Cruise Missile
+                                                    // 64 = GSO Gigaton Cannon
+                                                    // 75 = HE MK3 Battleship Cannon
+                                                    // 77 = GSO Big Bertha Cannon
+        },
+
+        // Gun Attributes
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 4.0,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+            "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+            "m_SeekingRounds": true,                // Dictates whether the projectiles fired by this weapon will home toward targets
+        },
+        
+        "FireData": {
+            "m_MuzzleVelocity":             500.0,   // Dictates the projectile's speed. The higher the value, the faster it will travel.
+            "m_KickbackStrength":           5000.0,  // Dictates the strength of the recoil when firing the gun
+
+            //*******************************//
+            "m_BulletPrefab": "Reference|649/FireData.m_BulletPrefab",
+            "Instantiate|m_BulletPrefab": {
+                "UnityEngine.Transform": {
+                    "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                },
+
+                "GameObject|_boostJet":{
+                    "BoosterJet": {
+                        "m_Force":              0.15,       // Dictates the speed of the missile. The higher the value, the faster it becomes.
+                    }
+                },
+
+                //********** SeekingProjectile: Used mainly by missiles; this is where the missile propulsion behaviors are. **********//
+                "MissileProjectile": {
+                    "m_MaxBoosterLifetime":         2.0,    // This parameter is related to "BoosterJet" m_force: This dictates the amount of time the missile will propel itself before it falls to the ground.
+                                                            // This is disabled if set to 0
+                    "m_BoosterActivationDelay":     0.0,    // Dictates the delay before "BoosterJet" m_force is activated. 
+                    "m_ArmDelay": 0.1,                      // Dicates the time it takes for the missile to arm itself.
+                },
+
+                //********** SeekingProjectile: Used mainly by missiles; this is where the main missile AI behaviors are. **********//
+                "SeekingProjectile": {
+                    "m_VisionConeAngle":                90.0,          // Dictates how wide the missile will search a target in front of it. A higher value allows it to home onto targets regardless of the angle it's fired  
+                    "m_VisionRange":                    400.0,         // Dictates how far the target is before the missile can start homing into it. 
+                    "m_TurnSpeed":                      2000.0,        // Dictates how fast the missile turns in midair. The higher the value, the faster it will turn.
+                },
+                "Projectile": {
+                    "m_Damage": 0,
+                    "m_LifeTime": 10.0,
+                    "m_Explosion": "Reference|902/ModuleDamage.deathExplosion", // HE Z4 Explosive
+                    "Instantiate|m_Explosion": {
+                        "Explosion": {
+                            "m_EffectRadius": 8.0,                  // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                            "m_EffectRadiusMaxStrength": 4.0,       
+                            "m_MaxDamageStrength": 1300.0,          // The splash damage done
+                            "m_MaxImpulseStrength": 500.0,          // The strength of the knockback done by the explosion
+                            "m_DamageType": 3,
+                        }
+                    }
+                },
+
+            }
+
+        },
+
+        "ModuleDrill":{},
+
+
+        "ModuleAnchor": {
+            "m_ForceHorizontal": true,                      // Dictates whether the anchor will anchor itself into a flat angle. If set to false, it will follow the direction of the ground it anchors into.
+            
+            // Rotating Anchor Attributes
+            "m_MaxAngularVelocity":         0.0,            // Dictates the rotatiion speed for the anchor. For Static/Fixed Anchors, set this attribute to 0
+
+            "m_MaxTorque":                  0.0,            // Dictates the rotation strength of the anchor. The higher this value is, the more blocks it can carry without losing speed.
+                                                            //For Static/Fixed Anchors, set this attribute to 0
+            
+            "m_BrakeTorque":                1000.0,         // Dictates the amount of strength applied onto the anchor when it stops moving.                                                  
+                                                            // For Static/Fixed Anchors, set this attribute to 1000    
+            
+            // Sky Anchor Behavior Attributes
+            "m_IsSkyAnchor": false,                         // If set to true, the anchor will act like a physically reactive sky anchor.
+        },
+    }
+
+
+
+
+
+}

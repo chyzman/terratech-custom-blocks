@@ -1,0 +1,502 @@
+{
+  "Name": "Boson Wheel",
+  "Description": "Large wheel designed to carry some of the heaviest of techs and weapons *warning due to the size any item touching the wheel or dropped onto it will be destroyed, works well against other techs and rocks*",
+  "ID": 620007, 
+
+  "Faction": 5,
+  "Category": 3, 
+  "Grade": 3, 
+  "Price": 60334, 
+  "HP": 34000, 
+  "Mass": 84,
+  "CenterOfMass": {"x": 0.0, "y": -1, "z": 0.5},
+  
+  "Fragility": 1,
+  "DamageableType": 1,
+  "Rarity": 2,
+
+  "Recipe":  {"53": 6, "54": 6, "47": 2, "57":2, "63": 1},
+  "IconName": "Boson_Wheel.png", 
+  "MeshName": null, 
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": null,
+ 
+  "Cells":[
+  {"x": -1, "y": 0,"z": 0},
+  {"x": 0, "y": 0,"z": 0},
+  {"x": 1, "y": 0,"z": 0},
+  {"x": 2, "y": 0,"z": 0},
+
+  {"x": -1, "y": 1,"z": 0},
+  {"x": 0, "y": 1,"z": 0},
+  {"x": 1, "y": 1,"z": 0},
+  {"x": 2, "y": 1,"z": 0},
+
+  {"x": -1, "y": -1,"z": 0},
+  {"x": 0, "y": -1,"z": 0},
+  {"x": 1, "y": -1,"z": 0},
+  {"x": 2, "y": -1,"z": 0},
+
+  {"x": -1, "y": 2,"z": 0},
+  {"x": 0, "y": 2,"z": 0},
+  {"x": 1, "y": 2,"z": 0},
+  {"x": 2, "y": 2,"z": 0},
+
+  {"x": -1, "y": -2,"z": 0},
+  {"x": 0, "y": -2,"z": 0},
+  {"x": 1, "y": -2,"z": 0},
+  {"x": 2, "y": -2,"z": 0},
+
+  {"x": -1, "y": 3,"z": 0},
+  {"x": 0, "y": 3,"z": 0},
+  {"x": 1, "y": 3,"z": 0},
+  {"x": 2, "y": 3,"z": 0},
+
+  {"x": -1, "y": -3,"z": 0},
+  {"x": 0, "y": -3,"z": 0},
+  {"x": 1, "y": -3,"z": 0},
+  {"x": 2, "y": -3,"z": 0},
+
+  {"x": -1, "y": 4,"z": 0},
+  {"x": 0, "y": 4,"z": 0},
+  {"x": 1, "y": 4,"z": 0},
+  {"x": 2, "y": 4,"z": 0},
+
+  {"x": -1, "y": 0,"z": 1},
+  {"x": 0, "y": 0,"z": 1},
+  {"x": 1, "y": 0,"z": 1},
+  {"x": 2, "y": 0,"z": 1},
+
+  {"x": -1, "y": 1,"z": 1},
+  {"x": 0, "y": 1,"z": 1},
+  {"x": 1, "y": 1,"z": 1},
+  {"x": 2, "y": 1,"z": 1},
+
+  {"x": -1, "y": -1,"z": 1},
+  {"x": 0, "y": -1,"z": 1},
+  {"x": 1, "y": -1,"z": 1},
+  {"x": 2, "y": -1,"z": 1},
+
+  {"x": -1, "y": 2,"z": 1},
+  {"x": 0, "y": 2,"z": 1},
+  {"x": 1, "y": 2,"z": 1},
+  {"x": 2, "y": 2,"z": 1},
+
+  {"x": -1, "y": -2,"z": 1},
+  {"x": 0, "y": -2,"z": 1},
+  {"x": 1, "y": -2,"z": 1},
+  {"x": 2, "y": -2,"z": 1},
+
+  {"x": -1, "y": 3,"z": 1},
+  {"x": 0, "y": 3,"z": 1},
+  {"x": 1, "y": 3,"z": 1},
+  {"x": 2, "y": 3,"z": 1},
+
+  {"x": -1, "y": -3,"z": 1},
+  {"x": 0, "y": -3,"z": 1},
+  {"x": 1, "y": -3,"z": 1},
+  {"x": 2, "y": -3,"z": 1},
+
+  {"x": -1, "y": 4,"z": 1},
+  {"x": 0, "y": 4,"z": 1},
+  {"x": 1, "y": 4,"z": 1},
+  {"x": 2, "y": 4,"z": 1},
+
+  {"x": -1, "y": 0,"z": -1},
+  {"x": 0, "y": 0,"z": -1},
+  {"x": 1, "y": 0,"z": -1},
+  {"x": 2, "y": 0,"z": -1},
+
+  {"x": -1, "y": 1,"z": -1},
+  {"x": 0, "y": 1,"z": -1},
+  {"x": 1, "y": 1,"z": -1},
+  {"x": 2, "y": 1,"z": -1},
+
+  {"x": -1, "y": -1,"z": -1},
+  {"x": 0, "y": -1,"z": -1},
+  {"x": 1, "y": -1,"z": -1},
+  {"x": 2, "y": -1,"z": -1},
+
+  {"x": -1, "y": 2,"z": -1},
+  {"x": 0, "y": 2,"z": -1},
+  {"x": 1, "y": 2,"z": -1},
+  {"x": 2, "y": 2,"z": -1},
+
+  {"x": -1, "y": -2,"z": -1},
+  {"x": 0, "y": -2,"z": -1},
+  {"x": 1, "y": -2,"z": -1},
+  {"x": 2, "y": -2,"z": -1},
+
+  {"x": -1, "y": 3,"z": -1},
+  {"x": 0, "y": 3,"z": -1},
+  {"x": 1, "y": 3,"z": -1},
+  {"x": 2, "y": 3,"z": -1},
+
+  {"x": -1, "y": -3,"z": -1},
+  {"x": 0, "y": -3,"z": -1},
+  {"x": 1, "y": -3,"z": -1},
+  {"x": 2, "y": -3,"z": -1},
+
+  {"x": -1, "y": 4,"z": -1},
+  {"x": 0, "y": 4,"z": -1},
+  {"x": 1, "y": 4,"z": -1},
+  {"x": 2, "y": 4,"z": -1},
+
+  {"x": -1, "y": 0,"z": 2},
+  {"x": 0, "y": 0,"z": 2},
+  {"x": 1, "y": 0,"z": 2},
+  {"x": 2, "y": 0,"z": 2},
+
+  {"x": -1, "y": 1,"z": 2},
+  {"x": 0, "y": 1,"z": 2},
+  {"x": 1, "y": 1,"z": 2},
+  {"x": 2, "y": 1,"z": 2},
+
+  {"x": -1, "y": -1,"z": 2},
+  {"x": 0, "y": -1,"z": 2},
+  {"x": 1, "y": -1,"z": 2},
+  {"x": 2, "y": -1,"z": 2},
+
+  {"x": -1, "y": 2,"z": 2},
+  {"x": 0, "y": 2,"z": 2},
+  {"x": 1, "y": 2,"z": 2},
+  {"x": 2, "y": 2,"z": 2},
+
+  {"x": -1, "y": -2,"z": 2},
+  {"x": 0, "y": -2,"z": 2},
+  {"x": 1, "y": -2,"z": 2},
+  {"x": 2, "y": -2,"z": 2},
+
+  {"x": -1, "y": 3,"z": 2},
+  {"x": 0, "y": 3,"z": 2},
+  {"x": 1, "y": 3,"z": 2},
+  {"x": 2, "y": 3,"z": 2},
+
+  {"x": -1, "y": -3,"z": 2},
+  {"x": 0, "y": -3,"z": 2},
+  {"x": 1, "y": -3,"z": 2},
+  {"x": 2, "y": -3,"z": 2},
+
+  {"x": -1, "y": 4,"z": 2},
+  {"x": 0, "y": 4,"z": 2},
+  {"x": 1, "y": 4,"z": 2},
+  {"x": 2, "y": 4,"z": 2},
+
+  {"x": -1, "y": 0,"z": -2},
+  {"x": 0, "y": 0,"z": -2},
+  {"x": 1, "y": 0,"z": -2},
+  {"x": 2, "y": 0,"z": -2},
+
+  {"x": -1, "y": 1,"z": -2},
+  {"x": 0, "y": 1,"z": -2},
+  {"x": 1, "y": 1,"z": -2},
+  {"x": 2, "y": 1,"z": -2},
+
+  {"x": -1, "y": -1,"z": -2},
+  {"x": 0, "y": -1,"z": -2},
+  {"x": 1, "y": -1,"z": -2},
+  {"x": 2, "y": -1,"z": -2},
+
+  {"x": -1, "y": 2,"z": -2},
+  {"x": 0, "y": 2,"z": -2},
+  {"x": 1, "y": 2,"z": -2},
+  {"x": 2, "y": 2,"z": -2},
+
+  {"x": -1, "y": -2,"z": -2},
+  {"x": 0, "y": -2,"z": -2},
+  {"x": 1, "y": -2,"z": -2},
+  {"x": 2, "y": -2,"z": -2},
+
+  {"x": -1, "y": 3,"z": -2},
+  {"x": 0, "y": 3,"z": -2},
+  {"x": 1, "y": 3,"z": -2},
+  {"x": 2, "y": 3,"z": -2},
+
+  {"x": -1, "y": -3,"z": -2},
+  {"x": 0, "y": -3,"z": -2},
+  {"x": 1, "y": -3,"z": -2},
+  {"x": 2, "y": -3,"z": -2},
+
+  {"x": -1, "y": 4,"z": -2},
+  {"x": 0, "y": 4,"z": -2},
+  {"x": 1, "y": 4,"z": -2},
+  {"x": 2, "y": 4,"z": -2},
+
+  {"x": -1, "y": 0,"z": 3},
+  {"x": 0, "y": 0,"z": 3},
+  {"x": 1, "y": 0,"z": 3},
+  {"x": 2, "y": 0,"z": 3},
+
+  {"x": -1, "y": 1,"z": 3},
+  {"x": 0, "y": 1,"z": 3},
+  {"x": 1, "y": 1,"z": 3},
+  {"x": 2, "y": 1,"z": 3},
+
+  {"x": -1, "y": -1,"z": 3},
+  {"x": 0, "y": -1,"z": 3},
+  {"x": 1, "y": -1,"z": 3},
+  {"x": 2, "y": -1,"z": 3},
+
+  {"x": -1, "y": 2,"z": 3},
+  {"x": 0, "y": 2,"z": 3},
+  {"x": 1, "y": 2,"z": 3},
+  {"x": 2, "y": 2,"z": 3},
+
+  {"x": -1, "y": -2,"z": 3},
+  {"x": 0, "y": -2,"z": 3},
+  {"x": 1, "y": -2,"z": 3},
+  {"x": 2, "y": -2,"z": 3},
+
+  {"x": -1, "y": 3,"z": 3},
+  {"x": 0, "y": 3,"z": 3},
+  {"x": 1, "y": 3,"z": 3},
+  {"x": 2, "y": 3,"z": 3},
+
+  {"x": -1, "y": -3,"z": 3},
+  {"x": 0, "y": -3,"z": 3},
+  {"x": 1, "y": -3,"z": 3},
+  {"x": 2, "y": -3,"z": 3},
+
+  {"x": -1, "y": 4,"z": 3},
+  {"x": 0, "y": 4,"z": 3},
+  {"x": 1, "y": 4,"z": 3},
+  {"x": 2, "y": 4,"z": 3}, 
+
+  {"x": -1, "y": 0,"z": -3},
+  {"x": 0, "y": 0,"z": -3},
+  {"x": 1, "y": 0,"z": -3},
+  {"x": 2, "y": 0,"z": -3},
+
+  {"x": -1, "y": 1,"z": -3},
+  {"x": 0, "y": 1,"z": -3},
+  {"x": 1, "y": 1,"z": -3},
+  {"x": 2, "y": 1,"z": -3},
+
+  {"x": -1, "y": -1,"z": -3},
+  {"x": 0, "y": -1,"z": -3},
+  {"x": 1, "y": -1,"z": -3},
+  {"x": 2, "y": -1,"z": -3},
+
+  {"x": -1, "y": 2,"z": -3},
+  {"x": 0, "y": 2,"z": -3},
+  {"x": 1, "y": 2,"z": -3},
+  {"x": 2, "y": 2,"z": -3},
+
+  {"x": -1, "y": -2,"z": -3},
+  {"x": 0, "y": -2,"z": -3},
+  {"x": 1, "y": -2,"z": -3},
+  {"x": 2, "y": -2,"z": -3},
+
+  {"x": -1, "y": 3,"z": -3},
+  {"x": 0, "y": 3,"z": -3},
+  {"x": 1, "y": 3,"z": -3},
+  {"x": 2, "y": 3,"z": -3},
+
+  {"x": -1, "y": -3,"z": -3},
+  {"x": 0, "y": -3,"z": -3},
+  {"x": 1, "y": -3,"z": -3},
+  {"x": 2, "y": -3,"z": -3},
+
+  {"x": -1, "y": 4,"z": -3},
+  {"x": 0, "y": 4,"z": -3},
+  {"x": 1, "y": 4,"z": -3},
+  {"x": 2, "y": 4,"z": -3},
+
+  {"x": -1, "y": 0,"z": 4},
+  {"x": 0, "y": 0,"z": 4},
+  {"x": 1, "y": 0,"z": 4},
+  {"x": 2, "y": 0,"z": 4},
+
+  {"x": -1, "y": 1,"z": 4},
+  {"x": 0, "y": 1,"z": 4},
+  {"x": 1, "y": 1,"z": 4},
+  {"x": 2, "y": 1,"z": 4},
+
+  {"x": -1, "y": -1,"z": 4},
+  {"x": 0, "y": -1,"z": 4},
+  {"x": 1, "y": -1,"z": 4},
+  {"x": 2, "y": -1,"z": 4},
+
+  {"x": -1, "y": 2,"z": 4},
+  {"x": 0, "y": 2,"z": 4},
+  {"x": 1, "y": 2,"z": 4},
+  {"x": 2, "y": 2,"z": 4},
+
+  {"x": -1, "y": -2,"z": 4},
+  {"x": 0, "y": -2,"z": 4},
+  {"x": 1, "y": -2,"z": 4},
+  {"x": 2, "y": -2,"z": 4},
+
+  {"x": -1, "y": 3,"z": 4},
+  {"x": 0, "y": 3,"z": 4},
+  {"x": 1, "y": 3,"z": 4},
+  {"x": 2, "y": 3,"z": 4},
+
+  {"x": -1, "y": -3,"z": 4},
+  {"x": 0, "y": -3,"z": 4},
+  {"x": 1, "y": -3,"z": 4},
+  {"x": 2, "y": -3,"z": 4},
+
+  {"x": -1, "y": 4,"z": 4},
+  {"x": 0, "y": 4,"z": 4},
+  {"x": 1, "y": 4,"z": 4},
+  {"x": 2, "y": 4,"z": 4}
+  ],
+
+  "APs": [ 
+    {"x": -1.5, "y": 4, "z": 0},
+    {"x": -1.5, "y": 4,"z": 1},
+    {"x": -1.5, "y": 3, "z": 0},
+    {"x": -1.5, "y": 3,"z": 1},
+    {"x": -1.5, "y": 2, "z": 0},
+    {"x": -1.5, "y": 2,"z": 1},
+    {"x": -1.5, "y": 4,"z": 4},
+    {"x": -1.5, "y": 3,"z": 4},
+    {"x": -1.5, "y": 2,"z": 4},
+    {"x": -1.5, "y": 4,"z": -3},
+    {"x": -1.5, "y": 3,"z": -3},
+    {"x": -1.5, "y": 2,"z": -3},
+	{"x": 2, "y": 3,"z": 4.5},
+    {"x": 2, "y": 3, "z": -3.5},
+	{"x": 2, "y": 2,"z": 4.5},
+    {"x": 2, "y": 2, "z": -3.5},
+	{"x": -1, "y": 3,"z": 4.5},
+    {"x": -1, "y": 3, "z": -3.5},
+	{"x": -1, "y": 2,"z": 4.5},
+    {"x": -1, "y": 2, "z": -3.5},
+
+  ],
+  
+  "GamePrefabReference": "GC_Wheel_Metal_332",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "Suspension_A",
+        "SubPosition": {	"x": -0.5, "y": 0,	"z": 0},
+        "SubRotation": {	"x": 0,	"y": 0,	"z": 0}
+    },
+    {
+		"SubOverrideName": "m_GeoCorp_WheelMetal_223_Suspension_A",
+        "MeshName": "Boson_Suspension.obj",
+		"MeshMaterialName": "MAT_BF_SkyAnchor_Beam",
+		"ColliderMeshName": "Boson_Suspension_Collider.obj",
+        "SubPosition": {	"x": 0,	"y": 0,	"z": 0},
+        "SubRotation": {	"x": -90,	"y": 180,	"z": 0}
+    },
+    {
+		"SubOverrideName": "Suspension_B",
+        "MeshName": null,
+        "SubPosition": {	"x": 0,	"y": 4,	"z": 0.5},
+        "SubRotation": {	"x": 0,	"y": 0,	"z": 0}
+    },
+    {
+        "SubOverrideName": "_wheel",
+        "SubPosition": {	"x": 0,	"y": 0,	"z": 0.5},
+        "SubRotation": {	"x": 0,	"y": 0, "z": 0}
+    },
+    {
+		"SubOverrideName": "GeoCorp_Wheel_Metal_223_A",
+        "MeshName": "Boson_Wheel.obj",
+		"MeshTextureName": "Ellydium 1purp.png", 
+		"MeshGlossTextureName": "Ellydium 2.png", 
+		"MeshEmissionTextureName": "Ellydium 3.png",
+		"ColliderMeshName": "Boson_Wheel_Collider.obj",
+        "SubPosition": {	"x": 0,	"y": 0,	"z": 0},
+        "SubRotation": {	"x": 0,	"y": 0, "z": 0}
+    },
+    {
+		"SubOverrideName": "m_GeoCorp_WheelMetal_223_Base",
+        "MeshName": "Boson_Frame.obj",
+		"MeshTextureName": "Ellydium 1purp.png", 
+		"MeshGlossTextureName": "Ellydium 2.png", 
+		"MeshEmissionTextureName": "Ellydium 3.png",
+		"ColliderMeshName": "Boson_Frame_Collider.obj",
+        "SubPosition": {	"x": 0,	"y": 0.5,	"z": 0.5},
+        "SubRotation": {	"x": 0,	"y": 0, "z": 0}
+    },
+	{
+          "ObjectName":               "meleeCollider",    
+          "ColliderMeshName":         "Boson_Melee_Collider.obj",
+          "Layer":                    14
+        }
+
+  ],
+"Deserializer":{
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":3, "y":3, "z":3.5 }
+        },
+
+        "GameObject|meleeCollider":{
+          "UnityEngine.MeshCollider": {},
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":-3, "z":0}
+          },
+        },
+  
+      },
+  
+ 
+    "ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 800000,
+		   "torqueCurveMaxRpm": 65,
+		  "passiveBrakeMaxTorque": 100000,
+		   "reverseBrakeMaxRpm": 100,
+		   "basicFrictionTorque": 800,
+		   "fullCompressFrictionTorque": 5000
+		},
+		"m_UseTireTracks": false,
+		"m_WheelTrackType": 2,              
+		  "m_AudioType": 4,
+		"m_WheelParams": {
+		"Instantiate|tireProperties": {
+					"Instantiate|props": {
+						"frictionScaleLong": 1.0,
+						"frictionScaleLat": 1.0,
+						"gripFactorLong": 8.0,
+						"gripFactorLat": 2.5
+					}
+				  },
+			"radius": 3.60,
+			"thicknessAngular": 20,
+			"suspensionSpring": 160000.0,
+			"suspensionDamper": 500.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 2,
+			"steerAngleMax": 15,
+			"steerSpeed": 3
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+        "m_DustMinimumRPM": 20.0,
+        "m_WheelGeometry": {
+            "LongLength": 1,
+            "IsFixedSize": true,
+            "IsReadOnly": false,
+            "IsSynchronized": false,
+            "SyncRoot": "/m_WheelGeometry",
+            "Length": 1,
+            "Rank": 1
+          },
+		  
+	},
+	"ModuleDrill":{
+        "activeColliders": [                                            // The list of colliders the weapon will use. This is required for the melee weapon to function
+          "_wheel/meleeCollider/MeshCollider."              // Use the collider from above
+        ], 
+        "impactDamageMultiplier": 1000.0,          // Dictates the damage the weapon deals when hitting an enemy.
+        "damagePerSecond": 1000.0,                // Dictates the damage this weapon deals per second.
+        "m_DamageType": 4,                      // Dictates the damage type that the weapon will deal
+  
+        "scaleHitParticles": 1.0                // Dictates the size of the particles emitted when the weapon hits something. (Somehow doesn't work)
+      },
+     }
+}

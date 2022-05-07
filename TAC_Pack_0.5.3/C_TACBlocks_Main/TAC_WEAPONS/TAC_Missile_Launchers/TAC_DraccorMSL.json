@@ -1,0 +1,653 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Draccor Hyperspeed Missile System",
+  "Description": "This launches a series of GottaGoFast missiles that somewhat hit their mark. \n\nThey go fast and weigh enough that they can deal decent damage against shields. \n\nYou can make sure that any unwanted aircraft stay out of your airspace with this thing handy, lest they get struck down stupendously fast. \n\nThe maker's last name is Draccor as in \"Dra-ccor\", not \"Drac-cor\". This has absolutely nothing to do with dragons, although there was one time where actual live, <b>ferocious</b> dragons stopped at the TAC HQ for a nice tea party, but ENOUGH of that!  \n\nThis works really well as a undersea torpedoe launcher, as the missiles have more than enough power to push through the water.\n\n\nWhen you are impatient and want the toast fast, use this and not the Zorg.", //You can make multiple lines with \n
+  "ID": 584226, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 38730,
+  "HP": 5000,//Takes up 12 area
+  "Mass": 14.0,//Heavy
+
+  "IconName": "LudicrousSpeedGO.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 47, 47, 52, 52, 53, 53, 55, 55, 57, 57, 65, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Back
+     { "x": 0, "y": 2.5, "z": 0 },
+     { "x": 0, "y": 2.5, "z": 1 },
+     { "x": 1, "y": 2.5, "z": 0 },
+     { "x": 1, "y": 2.5, "z": 1 },
+     //Bottom
+     { "x": 0, "y": 1, "z": -0.5 },
+     { "x": 1, "y": 1, "z": -0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 3,
+    "z": 2 //Massive, for now
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_CruiseMissile(121)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base Model
+     "SubOverrideName": "m_HE_CruiseMissile_113_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACDraccorVLRS.obj",
+      "ColliderMeshName": "TACDraccorVLRS.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_TAC_VLRS_Hatch1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_TAC_VLRS_Hatch2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+
+    //DEBUG
+    // { //Making that hatch that disappears when firing
+    //  "SubOverrideName": "Hatch1",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    // { //Making that hatch that disappears when firing
+    //  "SubOverrideName": "b_HatchTarget1",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACGreebleGear.obj",
+    //   "MeshTextureName": null,
+    //   "MakeBoxCollider": false,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    { //Removal
+     "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+  ],
+	
+  //
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1, "y":0.5, "z":0.5 }
+      }
+    },
+    "GameObject|m_HE_CruiseMissile_113_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1   },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0.5 }
+      },
+    }, //Back to GameObject
+    "GameObject|_barrel": null,
+    "Reference|HE_CannonBattleship_216/_gimbalBase/_gimbalElev/_barrel": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":0.0, "z":0.5 }
+      },
+      "GameObject|_bulletSpawn": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "GameObject|_muzzleFlash": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":2 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "GameObject|_smoke": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "GameObject|_recoiler": {
+        // "UnityEngine.Transform": {
+        //   "localScale": { "x":1, "y":1, "z":1 },
+        //   "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //   "localPosition": { "x":0, "y":0, "z":0 }
+        // },
+        "GameObject|m_HE_CannonBattleship_216_barrel": {//Reusing as Bone holder
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|b_StretchTarget1": {//FollowSuspension bone for missiles
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+          },
+          "GameObject|b_HatchTarget1": {//FollowSuspension bone for Hatches
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-1.35, "z":0 }
+            },
+          }
+        }
+      }
+    },
+    "Duplicate|_barrel": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.85, "y":0.0, "z":0.5 }
+      },
+    },
+
+
+    //Prevent model bugging when using FollowSuspension!
+    "GameObject|SuspensionUp": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":3.5, "z":0.5 }
+      }
+    },
+    "GameObject|SuspensionU2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":3.5, "z":0.5 }
+      }
+    },
+
+    //FollowSuspension Animations
+    //- Missile Regrowth
+    "GameObject|StretchMissile1": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile1": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":0.0, "z":0.0 }
+      },
+    },
+    "GameObject|StretchMissile2": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile2": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.85, "y":0.0, "z":0.0 }
+      },
+    },
+
+    //Hatch Movement
+    "GameObject|Hatch1": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch1": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+    "GameObject|Hatch2": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.85, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch2": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "DeliveryCannon", //Firing noise
+      "m_LimitedShootAngle": 120,
+      "m_RotateSpeed" : 150.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": { // Another component
+      //"UnityEngine.Transform": {"localScale": { "x":6, "y":6, "z":6 }}, //Bigger for placeholder - broken as it crashes the game
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      //"m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      "m_ShotCooldown" : 1.0, //This is the cooldown between every burst shot.
+      "m_ResetBurstOnInterrupt" : false,
+      "m_CooldownVariancePct" : 0.24, 
+      "m_BurstShotCount" : 2, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 3.5, //3 seconds between bursts.
+      // "m_BurstCooldown" : 0.5, //1 seconds between bursts.
+      //"m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      "m_HasCooldownAnim" : false, //Doesn't change anything
+      "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 100, //YEET the missile before booster, FAST
+      //"m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      //"m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 1.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }, //{ "x":1.5, "y":1.5, "z":4 }
+          "localEulerAngles": { "x":0, "y":0, "z":0},
+        },
+        "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+        },     
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+          },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "TACMissile.obj"
+          },
+          // "UnityEngine.MeshRenderer": {
+          //   "material": {
+          //     "mainTexture": "HE_Main"
+          //   }
+          // },   
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "radius": 0.15,
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "height": 1.75,
+          // "direction": 2
+        },
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.5, "y":0.5, "z":0.5 }, //{ "x":1.5, "y":1.5, "z":4 }
+            "localPosition": { "x":0, "y":0, "z":-0.6 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "BoosterJet": {
+            "m_Force": 0.25,
+            //"m_BurnRate": 60.0,
+            //"m_FireRateFalloff": 3.0,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          }
+        },
+        /*
+        "GameObject|_subProp": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 }, //{ "x":1.5, "y":1.5, "z":4 }
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+        },
+        "RandomAdditions.GravitateProjectile":{ // Add a special movement effect to your projectile
+            "WorldGravitateDirection":  {"x": 0, "y": 1, "z": 0}, // Gravitate direction
+            "GravitatePosition":        {"x": 0, "y": 0, "z": 0}, // Center of the gravitation
+            "WorldGravitateStrength": 0.01,        // Force of the gravitation
+
+            "WorldAugmentedDragEnabled": true, // Should this projectile slow down faster? (WARNING! MESSES WITH AIMING WEAPONS!)
+            "WorldAugmentedDragStrength": 0.2,    // The strength of the drag effect  [MULTIPLIER!]
+
+            //-----------------------------------------------------------------------------
+            "MovementDampening": 100,            // Dampener for the operations below
+
+            "WorldHeightBiasEnabled": true,    // Should this float at a set altitude?
+            "WorldHeightBias": 24,               // The height to float at
+
+            "AffectedByWater": false,           // Should this projectile act differently in water?
+            "WaterDepth": 1,                    // The depth to float at in relation to water (overrides WorldHeightBias)
+            "WaterDepthSeekingStrength": 1,     // The strength we should try to enforce the depth  [MULTIPLIER!]
+        },
+        "RandomAdditions.TorpedoProjectile": {
+          "SubmergedThrust" : 0.5,                //Thrust to apply underwater
+          "ThrustUntilProjectileDeath" : true,   //Should we thrust until we explode?
+        }, 
+        */
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Impact", //What damage modifier the weapon does - To raid shielded Techs
+          "m_Damage": 250, //was 200 //Damage for successful projectile contact hit
+        },
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : "AnimCrateOpen",//"AnimCrateOpen",
+        },
+        // Make sure to add a new GameObject with the name "_subProp" and position it to where 
+        //   the thrust should be if it isn't using a missile reference.
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_LifeTime": 4.0, //Time before BOOM
+          //"m_DeathDelay": 0.25,
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel" : true,
+          "m_StickOnContact" : false,
+          "m_ExplodeOnStick" : false,
+          "m_HideProjectileOnStick": false,
+          "m_SingleImpact" : false, // The Bees are Relentless and will continuously deal damge while in the Enemy
+          "m_CanHaveGravity" : false,
+          //"m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          "m_ImpactSFXType" : "Mortar", //BAM
+          // "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+          //"m_Trail" : {"startWidth": 3},
+          //"m_Explosion": null
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+            "m_DamageType" : "Impact", //What damage modifier the explosion does
+            //"m_ExplosionSize": 0, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+            //"m_ExplosionType": "Fuel", //What the explosion looks like
+            "m_EffectRadius": 4, //blop
+            "m_EffectRadiusMaxStrength": 3, 
+            "m_MaxDamageStrength": 125, //This affects splash damage
+            "m_MaxImpulseStrength": 175 //How hard to push things, explosion force -YEET
+         
+            },
+            "GameObject|Sparks": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.4,
+                    // "startSpeed": 15.0, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 250,
+                    // "emission": {
+                    //   "rateMultiplier": 250.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 250,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 250,
+                    //     "minCount": 200,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.4,
+                    "startSpeed": 0.125, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 50,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 150,
+                    //     "minCount": 100,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // }
+                    // "shape": {
+                    //   "texture": {
+                    //     "mainTexture": "Sparks",
+                    //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    //   }
+                    // },
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.4,
+                    "startSpeed": 0.25, //How far you want the particles to spread
+                    // "startSpeed": 15, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 50,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 150,
+                    //     "minCount": 100,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // }
+                    "shape": {
+                      "texture": {
+                        "mainTexture": "Sparks",
+                        "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                      }
+                    },
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.4,
+                    "startSpeed": 0.5, //How far you want the particles to spread
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 50,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 150,
+                    //     "minCount": 100,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // }
+                    // "shape": {
+                    //   "texture": {
+                    //     "mainTexture": "Sparks",
+                    //     "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                    //   }
+                    // },
+                  }
+                }
+              }
+            },
+          }
+        },
+        "SeekingProjectile": {
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          "m_ActivationDelay": 0.05, //How long before we aim at the target?
+          "m_VisionRange": 150, //How far can we see targets?
+          "m_VisionConeAngle": 180, //How wide can we see targets?
+          // "m_TurnSpeed": 90 // How strong the turn is towards the enemy
+          "m_TurnSpeed": 145 // How strong the turn is towards the enemy
+        },
+        "MissileProjectile": {
+          "m_UsesGravity" : false,
+          "m_ArmDelay" : 0.1,
+          "m_BoosterActivationDelay" : 0,
+          "m_DeathDelayNotArmed" : 0.10,
+          "m_MaxBoosterLifetime" : 4.75 // How long till the Bees run outta juice
+        }
+      }
+    } ,
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns - armored doors
+    },
+  }
+}

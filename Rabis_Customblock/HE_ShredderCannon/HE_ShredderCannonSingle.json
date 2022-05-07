@@ -1,0 +1,663 @@
+{
+  "Name": "Hawkeye N420-75 Barghest",
+  "Description": "The Barghest is a modified version of the N420RC CIWS with the autocannon replaced by a 75mm rapid-fire cannon. This weapon provides high DPS with fewer bullets, so it will extend the life of your Video card. \n\n\n\n\n\nIf you're interested in N420RC CIWS, check out my mod from the forum!", //You can make multiple lines with \n
+  "ID": 546379, //A random ID that MUST be unique
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 133188,
+  "HP": 7500,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 42,
+  "CenterOfMass": {"x": 2, "y": 0.7, "z": 2},
+
+  "Recipe": "45, 45, 46, 46, 46, 46, 49, 49, 49, 49, 49, 49, 49, 49, 51, 51, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 56, 56, 56, 56, 56, 56, 56, 56, 57, 57, 57, 57, 61, 61, 61, 61, 61, 61, 62, 62, ",
+  "DamageableType": 1,
+
+  "IconName": "HE_ShredderCannonSingle.png", 
+  "MeshName": null, 
+  "MeshTextureName": null, 
+  "MeshMaterialName": null,
+  "ColliderMeshName": "HE_ShredderCannon_DummyCollider.obj",
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  //"Bounciness": 0.1, //A value between 0 and 1, how much it bounces back from a collision
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "BlockExtents": {
+    "x": 5,
+    "y": 3,
+    "z": 6
+  },
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+      {"x": 2,"y": -0.5,"z": 2}
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "HE_CannonBattleship_216", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)", 3
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "SubObjects": [
+    // ----------- mesh replace
+    { // base
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_ShredderCannon_base.obj",
+      "ColliderMeshName": "HE_ShredderCannon_base_c.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+    },
+    { // turret Horizon
+      "SubOverrideName": "HE_ShredderCannon_turret_H",
+      //"MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_ShredderCannon_turret_H.obj",
+      "ColliderMeshName": "HE_ShredderCannon_turret_H_c.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+    },
+    { // turret Vertical
+      "SubOverrideName": "HE_ShredderCannon_turret_V",
+      //"MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_ShredderCannon_turret_V.obj",
+      "ColliderMeshName": "HE_ShredderCannon_turret_V_c.obj",
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+    },
+    { // barrel
+      "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      //"MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_ShredderCannon_barrel_single.obj",
+      "ColliderMeshName": "HE_ShredderCannon_barrel_single_c.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+            "SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+    {
+      "ObjectName": "/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_ShredderCannon_barrel_single.obj",
+      "ColliderMeshName": "HE_ShredderCannon_barrel_single_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+            "SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+    {
+      "ObjectName": "/_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_ShredderCannon_barrel_single.obj",
+      "ColliderMeshName": "HE_ShredderCannon_barrel_single_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "/_barrel_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MeshName": "HE_ShredderCannon_barrel_single.obj",
+      "ColliderMeshName": "HE_ShredderCannon_barrel_single_c.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    { // barrel shroud
+      "SubOverrideName": "HE_ShredderCannon_barrel_single_shroud_1",
+      "MeshName": "HE_ShredderCannon_barrel_single_shroud.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+    { // barrel shroud
+      "SubOverrideName": "HE_ShredderCannon_barrel_single_shroud_2",
+      "MeshName": "HE_ShredderCannon_barrel_single_shroud.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+    { // barrel shroud
+      "SubOverrideName": "HE_ShredderCannon_barrel_single_shroud_3",
+      "MeshName": "HE_ShredderCannon_barrel_single_shroud.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      //"SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+    { // barrel shroud
+      "SubOverrideName": "HE_ShredderCannon_barrel_single_shroud_4",
+      "MeshName": "HE_ShredderCannon_barrel_single_shroud.obj",
+      "MeshMaterialName": "HE_Main",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      //"SubRotation": {"x": 0,"y": 0,"z": 180},
+    },
+
+    { // cosmetic camera
+      "SubOverrideName": "HE_ShredderCannon_Camera",
+      //"MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "HE_ShredderCannon_Camera.obj",
+      "ColliderMeshName": "HE_ShredderCannon_Camera.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+
+    // ------------------ move game object position
+    { // camera
+      "ObjectName": "HE_ShredderCannon_Camera",
+      "Position": {
+        "x": 0.034023,
+        "y": 1.32924,
+        "z": 1.29691
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    { // gimbal H
+      "ObjectName": "_gimbalBase",
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    { // gimbal V
+      "ObjectName": "_gimbalElev",
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0.776225,
+        "z": -0.197451
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+
+  { // barrel - vertical gimbal center  Z:0.776225 Y:0.197451    in blender
+    "ObjectName": "_barrel",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": 1.34801,
+      "y": -0.56483, // up down
+      "z": 0.525047 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": -1.34801,
+      "y": -0.56483, // up down
+      "z": 0.525047 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": 1.34801,
+      "y": 0.413344, // up down
+      "z": -0.03673 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+  {
+    "ObjectName": "_barrel_copy_copy_copy",
+    "DestroyExistingColliders": true,
+    "Position": {
+      "x": -1.34801,
+      "y": 0.413344, // up down
+      "z": -0.03673 // front back
+    },
+    "Rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+  },
+
+    // casing spawn point
+    {
+      "ObjectName": "_casingSpawn",
+      "Position": {
+        "x": 0.500057,
+        "y": 0.246633,
+        "z": 0.141565
+      },
+      "Rotation": {
+        "x": -135,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_casingSpawn",
+      "Position": {
+        "x": -0.500057,
+        "y": 0.246633,
+        "z": 0.141565
+      },
+      "Rotation": {
+        "x": -45,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_casingSpawn",
+      "Position": {
+        "x": 0.500057,
+        "y": 0.246633,
+        "z": 0.141565
+      },
+      "Rotation": {
+        "x": -135,
+        "y": -90,
+        "z": 0
+      }
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_casingSpawn",
+      "Position": {
+        "x": -0.500057,
+        "y": 0.246633,
+        "z": 0.141565
+      },
+      "Rotation": {
+        "x": -45,
+        "y": -90,
+        "z": 0
+      }
+    },
+
+    // ------ Only the following sections need to be changed ------
+    // bullet spawn point - same value for all
+    {
+      "ObjectName": "_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 7
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 7
+      },
+      "Rotation": {"x": 0,"y": 0,"z": 0},
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_bulletSpawn",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 7
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+    },
+
+    // muzzle flash - same value for all
+    {
+      "ObjectName": "_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_muzzleFlash",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+
+    // smoke - Same position as muzzle flash  - same value for all
+    {
+      "ObjectName": "_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+    {
+      "ObjectName": "_gimbalBase/_gimbalElev/_barrel_copy_copy_copy/_smoke",
+      "Position": {
+        "x": 0,
+        "y": 0.0,
+        "z": 5.8
+      },
+    },
+
+
+  ],
+
+  "Deserializer": {
+    "GameObject|_gimbalBase": {
+      "GameObject|HE_ShredderCannon_turret_H":{
+        "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+          "gameObject": {"layer": 8,},
+        },
+      },
+      "GameObject|HE_ShredderCannon_Camera": { // cosmetic camera
+        "GimbalAimer": {
+          "rotationLimits": [
+            10,
+            -89
+          ],
+          "rotationAxis": 1
+        },
+      },
+          "GameObject|_gimbalElev": {
+            "GameObject|HE_ShredderCannon_turret_V": {
+              "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+                "gameObject": {
+                  "layer": 8,
+                },
+              },
+            },
+            "GimbalAimer": { // gimbal vertical
+              "rotationLimits": [
+                10,
+                -85
+              ],
+              "rotationAxis": 1
+            },
+            "GameObject|_barrel": {
+              "GameObject|HE_ShredderCannon_barrel_single_shroud_1":{},
+              "GameObject|_muzzleFlash": {
+                "UnityEngine.Transform": {
+                  "localScale": {
+                    "x": 1.2,
+                    "y": 1.2,
+                    "z": 1.2
+                  },
+                },
+                "GameObject|_muzzleFlashAnim":{
+                  "UnityEngine.Light": {
+                    "colorTemperature": 6570.0,
+                    //"range": 3.5,
+                  }
+                },
+                /*"Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+                  "UnityEngine.ParticleSystem": {
+                    "sizeOverLifetime": {
+                      "sizeMultiplier": 0.05
+                    },
+                    "startColor": {
+                      "r": 0.2,
+                      "g": 0.4,
+                      "b": 0.7,
+                      "a": 1.0
+                    }
+                  },
+                  "UnityEngine.ParticleSystemRenderer": {
+                    //"renderMode": 0,
+                    //"alignment": 2,
+                    //"normalDirection": 0,
+                    "material": "FX_Teleporter_Distortion",
+                    "shadowCastingMode": 0
+                  },
+                },*/
+              },
+            },
+            "Duplicate|_barrel": {
+              "GameObject|HE_ShredderCannon_barrel_single_shroud_2": {},
+            },
+            "Duplicate|_barrel_copy": {
+              "GameObject|HE_ShredderCannon_barrel_single_shroud_3": {},
+            },
+            "Duplicate|_barrel_copy_copy": {
+              "GameObject|HE_ShredderCannon_barrel_single_shroud_4": {},
+            },
+            },
+        
+      "GimbalAimer": {
+        "rotationLimits": [
+          180.0,
+          -180.0
+        ],
+      }
+    },
+  // ----------------- fire data
+  "ModuleWeapon": {
+    "m_FireSFXType": "16",
+    "m_PreventShootingTowardsFloor": false,
+    "m_ShotCooldown": 0.0,
+    "m_RotateSpeed": 100.0
+  },
+  "ModuleWeaponGun": {
+    //"m_FireControlMode": "AllAtOnce",
+    "m_ShotCooldown": 0.9,
+    "m_FiringData": null,
+    "m_DeploySFXType": 77,
+  },
+  "FireData": {
+    "m_BulletSprayVariance": 0.03,
+    "m_KickbackStrength": 1800,
+    "Instantiate|m_BulletCasingPrefab": {
+      "m_LifeTime": 1.0,
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      },
+    },
+    "m_MuzzleVelocity": 300, // 300
+    "WeaponRound": {
+      "m_DamageType": 1, // standard
+    },
+    "Instantiate|m_BulletPrefab": {
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+      },
+      "Rigidbody":{
+        //"useGravity": false,
+      },
+      "Projectile": {
+        "m_LifeTime": 3,
+        "Instantiate|m_Explosion": {
+          "Explosion": {
+            "m_ExplosionSize": 0.5,
+            "m_EffectRadius": 2, //10
+            "m_EffectRadiusMaxStrength": 1, //5
+            "m_MaxDamageStrength": 40, //250
+            "m_MaxImpulseStrength": 3 //250
+          },
+          "GameObject|Sparks":{
+            "UnityEngine.ParticleSystem":{
+              "startLifetime": 0.2,
+            }
+          },
+          "GameObject|ExplosionSmoke":null,
+          "GameObject|ExplosionDark":null,
+          "GameObject|ExplosionBright":null,
+          "GameObject|Point light":null,
+        },
+        "m_ImpactSFXType": 4,
+      },
+      "WeaponRound": {
+        "m_Damage": 2100
+      },
+      "SmokeTrail": {
+        "numberOfPoints": 15.0, // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+        // Do not decrease this too much as it will begin to act strangely.
+        "spread": 2.25, // Dictates how erratic the trail is.
+        "riseSpeed": 0.1, // Dictates how fast the trail rises. This will make the trail act more like a smoke
+        "updateSpeed": 0.15, // DIctates the speed of the trail.
+      },
+      // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+      "LineRenderer": {
+        "startWidth": 0.4,
+        "endWidth": 0.1,
+        "widthMultiplier": 1.0,
+        // The color at the start of the trail
+        "startColor": {
+          "r": 1.0,
+          "g": 0.6,
+          "b": 0.5,
+          "a": 1.0
+        },
+        // The color at the end of the trail
+        "endColor": {
+          "r": 1.0,
+          "g": 0.4,
+          "b": 0.3,
+          "a": 1.0
+        }
+      },
+      "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": {
+        "UnityEngine.ParticleSystem": {
+          "startLifetime": 0.1,
+          "main": {
+            "m_ParticleSystem": {
+              "startSize": 0.7
+            },
+            "startColor": {
+              "mode": "Color",
+              "color": {
+                "r": 0.8,
+                "g": 0.3,
+                "b": 0.2,
+                "a": 1.0
+              }
+            }
+          }
+        }
+      },
+      "Duplicate|FX_SemiCircle": {
+        "UnityEngine.ParticleSystem": {
+          "startLifetime": 0.01,
+          "main": {
+            "m_ParticleSystem": {
+              "startSize": 1.0
+            }
+          }
+        }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "height": 4.0, // how long
+        "radius": 0.1,
+        "direction": 2, // 0=x 1=y 2=z
+        "center": { "x": 0.0, "y": 0.0, "z": 2.0 },
+        //"gameObject": { "layer": 29 }, // Shield piercing
+      },
+    }
+  }
+
+  }
+}
+

@@ -1,0 +1,44 @@
+/*
+This is a minor basic block meant for closing gaps and as a finish for most LK Techs. Decorative, but tough.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Inner Corner Battlement Block",
+    "Description":          "This inverted cornered variant of the Battlement block can be used to connect other Battlement blocks. This one has more room to take cover in.\n\n\"Knight companies however, despite strategic and materiel superiority, must be prepared to operate with the mindset that the enemy has the regional advantage. When the enemy realizes some form of imbalance, whether in terms of firepower, technological or strategic disparity, it will adjust to exploit LK weaknesses.\"\n\n-- Infantry Field Manual",
+
+    "ID": 419020,
+    "Faction": 2,           
+    "Category": 2,          
+    "Grade": 3,         
+
+    "Price": 4608,       
+    "Recipe":  "54, 54, 54, 53, 53, 53, 7, 7, 7",
+	
+    "IconName":                   "LK_innerCorner_battlement_block_icon.png",                          
+    "MeshName":                   "LK_innerCorner_battlement_block.obj",                                            
+    "ColliderMeshName":           "LK_innerCorner_battlement_block_col.obj",    
+    "SupressBoxColliderFallback": false,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    null,
+
+    // Basic Block HP Values
+    "HP": 1500,            
+    "Mass": 7.5,             
+
+    "DamageableType": 1,   
+    "Fragility": 0.0,       
+    
+    // Block Dimensions
+    "Cells":    
+    [
+        { "x": 0, "y": 0, "z": 0 }, { "x": 1, "y": 0, "z": 0 }, { "x": 1, "y": 0, "z": 1 }
+    ],
+
+    "APs": 
+    [ 
+        {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 1.0 } 
+    
+    ]
+}

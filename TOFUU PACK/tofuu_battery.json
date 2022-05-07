@@ -1,0 +1,58 @@
+// Helpful site https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+    "Name": "Tofuu Cell",
+    "Description": "Sweet & Spicy sauce held in a tofuu vessel. This can hold excess energy for later use, like a battery...",
+    "ID": 99991,
+
+    "Faction": 6, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+    "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+    "Grade": 0, //The desired grade minus one
+    "Price": 100, //The price is measured by sum of recipe value times 3
+    "HP": 500,
+    "Mass": 2,
+
+    //"Recipe": "1, 2",
+
+    "IconName": null,
+    //"MeshName": "tofuu_battery.obj",
+    "MeshTextureName": "tofuu_tex.png",
+    "MeshGlossTextureName": "tofuu_tex_2.png",
+    "MeshEmissionTextureName": null,
+    //"MeshMaterialName": "BF_Main",
+
+    "SupressBoxColliderFallback": true,
+
+    "BlockExtents":
+    {
+        "x": 1,
+        "y": 2,
+        "z": 1
+    },
+
+    //"APsOnlyAtBottom": false,
+    "APs": [{"x": 0,"y": -0.5,"z": 0},{"x": 0,"y": 1.5,"z": 0}],
+    "GamePrefabReference": "BF_Battery_112",
+    "KeepReferenceRenderers": true,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "SubObjects": [
+        { // This is the start of a subobject modifier item
+            "SubOverrideName": "m_BF_Battery_112_Main", //This line can be omitted (or set to not a valid subobject of the prefab) to create a new gameobject child.
+            "DestroyExistingRenderer": true,
+            "DestroyExistingColliders": true,
+            "MakeBoxCollider": true,
+            "MeshName": "tofuu_battery.obj",
+            "SubPosition": { "x": 0, "y": 0, "z": 0 },
+        }, {
+            "SubOverrideName": "m_BF_Battery_112_LEDs",
+            "MeshName": "tofuu_battery_led.obj",
+            "SubPosition": { "x": 0, "y": 0, "z": 0 },
+        }
+    ],
+    "JSONBLOCK": {
+        "ModuleEnergyStore": { "m_Capacity": 3000 }
+    }
+}

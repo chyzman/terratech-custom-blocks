@@ -1,0 +1,105 @@
+{
+  "Name": "GreenTech Block Collector Bed",
+  "Description": "A special collector that hold blocks instead of chunks, in a very tall stack. An alternative to the messy magnets, will let blocks go if there are scrappers or SCUs in range to pick it.\n Can hold up to 15 blocks.",
+  "ID": 911055,
+  "Faction": 0, 
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 2484, 
+  "HP": 800, 
+  "Mass": 5,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 5, 7, 32, 43, 43, 56",  
+  "IconName": "GT_Block_Collector_Bed_Icon.png", 
+  "MeshName": "GT_Block_Collector_Bed.obj", 
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+  
+   "APs": [ 
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": -0.5, "y": 0, "z": 0 },
+	{ "x": -0.5, "y": 0, "z": 1 },
+	{ "x": 1.5, "y": 0, "z": 0 },
+	{ "x": 1.5, "y": 0, "z": 1 },
+	{ "x": 0, "y": 0, "z": -0.5 },
+	{ "x": 1, "y": 0, "z": -0.5 },
+	{ "x": 0, "y": 0, "z": 1.5 },
+	{ "x": 1, "y": 0, "z": 1.5 }
+  ],
+  
+  "GamePrefabReference": "BF_Collector_111", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0,
+    "z": 0.5
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName":"m_BF_Collector_111",
+      "DestroyExistingRenderer": true
+    },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": 0, "z": -0.45 },
+  "SubScale": { "x": 1.6, "y": 0.8, "z": 0.1 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": 0, "z": 1.45 },
+  "SubScale": { "x": 1.6, "y": 0.8, "z": 0.1 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": -0.45, "y": 0, "z": 0.5 },
+  "SubScale": { "x": 0.1, "y": 0.8, "z": 1.6 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 1.45, "y": 0, "z": 0.5 },
+  "SubScale": { "x": 0.1, "y": 0.8, "z": 1.6 }
+  },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": -0.45, "z": 0.5 },
+  "SubScale": { "x": 1.6, "y": 0.1, "z": 1.6 }
+  }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 15,
+      "m_AcceptFlags": 1,
+      "m_OverrideBasePositons": [{ "x": 0.5, "y": -0.18, "z": 0.5 }],
+      "m_OverrideAPConnections": [ { "indices": [4, 5, 6, 7, 8, 9, 10, 11] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 2.0,
+    "m_BeamStrength": 800.0,
+    "m_HeightIncrementScale": 2.0
+  },
+  "ModuleItemPickup": {
+    "m_PickupRange": 30.0,
+    "m_Priority": 5
+  }
+  }			
+}

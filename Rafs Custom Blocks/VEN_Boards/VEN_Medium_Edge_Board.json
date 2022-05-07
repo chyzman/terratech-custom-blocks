@@ -1,0 +1,192 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Venture Medium Edge Board",
+  "Description": "A stylish Venture board that can add some extra sleekness to your Tech. These light boards are made of very resistant fibers, and can take some hits.", //You can make multiple lines with \n
+  "ID": 910584, //A random ID that MUST be unique
+
+  "Faction": 4, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 0, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 1, //The desired grade minus one
+  "Price": 1215,
+  "HP": 900,
+  "Mass": 0.15,
+
+  "IconName": "VEN_Medium_Edge_Board_Icon.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "VEN_Medium_Edge_Board.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "fibronchunk, fibronchunk, fibronchunk, luxiancrystal, luxiancrystal, fibreplating, fibreplating, fibreplating, ruggedfiblar, ruggedfiblar", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "VEN_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GC_Main", "VEN_Main", "BF_Main", and "HE_Main",. This material flashes and everything!
+
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if SubObjects is being used for it
+
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //Units in the grid space to be occupied
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  /*  OR  */
+
+  /*  EITHER  */
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+  /*  OR  */
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "BlockExtents": and "APsOnlyAtBottom":
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "VEN_Block_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, //Shift the subobjects of the block prefab by x, y and z
+  "JSONBLOCK": {
+    "Damageable": {
+        "DamageableType": 1    
+    }
+}
+  /*
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, //Rotate the subobjects of the block prefab
+  */
+
+  // Sub Objects can modify existing sub gameobjects on a prefab reference. Properties can be omitted as necessary
+  /*
+  "SubObjects": [
+    { // This is the start of a subobject modifier item
+      "SubOverrideName": "m_CORP_Block_SubObject", //This line can be omitted (or set to not a valid subobject of the prefab) to create a new gameobject child.
+      "DestroyExistingRenderer": false,
+      "DestroyExistingColliders": false,
+      "MeshName": null,
+      "MakeBoxCollider": false,
+      "ColliderMeshName": null,
+      "MeshTextureName": null,
+      "MeshMaterialName": null,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0, // Pitch
+        "y": 0, // Yaw
+        "z": 0  // Roll
+      }
+    }, // You can add as many items as needed for your block
+    {
+      "SubOverrideName": "SubGameObject/CommonName", // For target subobjects with shared names, a number or parent subobject name can be used to target the right one
+      "DestroyExistingRenderer": false,
+      "MeshName": null,
+      "ColliderMeshName": null,
+      "MeshMaterialName": null,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+  */
+
+  //For great control of a block without creating a C# mod, such a system exists that you can modify the Hierarchy, and variables, of one.
+  //OPTIONAL
+  /*
+  //Example to make a drill very powerful
+  "JSONBLOCK": {               
+    "ModuleDrill": {
+      "damagePerSecond": 1000000
+    }
+  }
+
+  //Example to change travel distance of a projectile
+  "JSONBLOCK": {
+    "FireData": {
+      "m_MuzzleVelocity": 2.1
+    }
+  }
+
+  //You can access children of gameobjects as you access components. And in those children, modify their components or go deeper
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {        //When a property name starts with GameObject|, it means it is a subobject. Which holds more subobjects, or components
+      "GimbalAimer": {                 //This is a component, and holds values
+        "rotationLimits": [-90, 90]//Modifications go here
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+        "rotationLimits": [-90, 90]//Modifications go here
+      }
+    }
+  }
+
+  //You can even modify damage caused from bullets
+  "JSONBLOCK": {
+    "ModuleWeapon": {
+      "m_RotateSpeed" : 15
+    },
+    "FireData": {
+      "Instantiate|m_BulletPrefab": { //Instantiating duplicates the object in the property to make it unique from the prefab. Enters the subobject rather than component
+        "WeaponRound": {              //Hence why the component type is used. Can be combined with more subobject exploration or components for more control 
+          "m_Damage": 10000,
+        },
+        "Projectile": {               //Use if the projectile is an explosion
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 1,
+              "m_EffectRadius": 4,
+              "m_MaxDamageStrength": 1000,
+              "m_MaxImpulseStrength": 1000
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // There are a LOT of things that can be modified, but to learn of them would require a dumper tool/mod, or decompiler.
+  */
+  //Note: Any component or gameobject which cannot be found will be created.
+  //A gameobject can be created without specifying a name, such as "GameObject": {}
+  //This is an old module which has recently been brought to life. It is not recommended for normal use, but brings much more capability. 
+  //If you have any problems, recommendations, or seek for guidance, ask on the Forum or official TerraTech Discord (discord.gg/terratechgame)
+
+  //It may be necessary to examine the hierarchy of the block you wish to base your block on. You can do that by pressing backslash with your mouse on top of that block, with the Control Blocks mod installed.
+}

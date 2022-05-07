@@ -1,0 +1,291 @@
+// This is a 3-Pounder Gatling gun meant to reaplce the typical 3-Pounder Cannon stacking on smaller Techs.
+// Pros: Fires 30 3-Pounder shells in rapid succession. Very satisfying to listen to.
+//       Longer range than a regular 3-Pounder Cannon
+//       Well-armored
+// Cons: Heavy, expansive and has a long reload time.
+{
+    // Basic Block Information
+    "Name":                 "LK Esquire R30 Turret",
+    "Description":          "A dependable gun designed to fight moderately fast ground and air Techs, this rotary cannon spews 30 3-Pounder shells before reloading. \n\n Easy to repair, rearm and maintain, the Lemon Militum's knights are fond of the \"Triple-Three-Thirty\"; just wear ear protection when it fires.",
+
+    "ID": 419012,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 23856,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+
+    // Recipe:    Body:   8 Titanic Alloy, 4 Plubonic Alloy
+    //            Gun:    6 Blast Caps
+    //            Rotor:  2 Ion Pulse Cell, 1 Coffman Cell
+    "Recipe":  "54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 46, 46, 46, 46, 46, 46, 56, 56, 62", 	
+	
+    "IconName":                   "LK_esquire_turret_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                 // Name of the block's mesh                                        
+    "ColliderMeshName":           null,                                 // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.tga",
+    "MeshEmissionTextureName":    "LK_tex_3.png",
+
+    // Basic Block HP Values
+    "HP": 3200,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 32,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 2,"y": 2, "z": 2 },
+
+    "APs": [
+        // Bottom APs
+        {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 0.0 },
+        {"x": 0.0, "y": -0.5, "z": 1.0 }, {"x": 1.0, "y": -0.5, "z": 1.0 }
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "HE_MiniGun_Large_525",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 0.5, "y": 0.0, "z": 0.5 },
+    
+    "SubObjects":[
+      {
+        "SubOverrideName":              "m_HE_MiniGun_313_Base",
+        "DestroyExistingRenderer":      true,       
+        "DestroyExistingColliders":     true,
+        "MeshName":                     "LK_esquire_turret_turret_base.obj",
+        "ColliderMeshName":             "LK_esquire_turret_col_turret_base.obj",
+        "SubPosition":                  { "x": 0.0, "y": 0, "z": 0.0 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },
+      
+      { 
+        "SubOverrideName":              "m_HE_MiniGun_313_RotatingPart_A", 
+        "DestroyExistingRenderer":      true,     
+        "DestroyExistingColliders":     true,
+        "MeshName":                     "LK_esquire_turret_turret_body.obj",
+        "ColliderMeshName":             "LK_esquire_turret_col_turret_body.obj",
+        "SubPosition":                  { "x": -0.5, "y": 0, "z": -0.5 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },
+
+      {
+        "SubOverrideName":              "m_HE_MiniGun_313_RotatingPart_B", 
+        "DestroyExistingRenderer":      true,                             
+        "DestroyExistingColliders":     true,
+        "MeshName":                     "LK_esquire_turret_barrel_body.obj",
+        "ColliderMeshName":             "LK_esquire_turret_col_barrel_body.obj",
+        "SubPosition":                  { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },
+
+      {
+        "SubOverrideName":              "m_HE_MiniGun_Barrel", 
+        "DestroyExistingRenderer":      true,      
+        "DestroyExistingColliders":     true,
+        "MeshName":                     "LK_esquire_turret_barrel_end.obj",
+        "ColliderMeshName":             null,
+        "SubPosition":                  { "x": 0, "y": 0, "z": 0 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },
+
+      {
+        "SubOverrideName":              "_spawnBullet", 
+        "SubPosition":                  { "x": 0, "y": -0.15, "z": 1.2 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },
+
+      { 
+        "SubOverrideName":              "_smoke",
+        "SubPosition":                  { "x": 0, "y": -0.15, "z": 1.2 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      },     
+
+      { 
+        "SubOverrideName":              "_muzzleFlash", 
+        "SubPosition":                  { "x": 0, "y": -0.15, "z": 1.2 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  {"x": 0, "y": 0,"z": 0 }
+      }, 
+
+      { // _spawnCasing Objects are rotation-dependent; their orientation will dictate the direction of the casing ejection
+        "SubOverrideName":              "_spawnCasing",
+        "SubPosition":                  { "x": 0, "y": 1, "z": -0.5 },
+        "SubScale":                     { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":                  { "x": -45, "y": 180,"z": 0 }
+      },
+    ],
+
+    "Deserializer":{
+      "GameObject|m_HE_MiniGun_313_Base":{
+        "GameObject|_gimbalBase":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0.5, "y": 0, "z": 0.5 }
+          },
+          "GimbalAimer": { "rotationLimits": [0, 0] },
+
+          "GameObject|m_HE_MiniGun_313_RotatingPart_A":{
+            "GameObject|_gimbalElev":{
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 0.5, "z": 0.15 }
+              },
+              "GimbalAimer": { "rotationLimits": [0, -45] },
+
+              "GameObject|_barrel":{
+                "UnityEngine.Transform": {
+                  "localPosition": { "x": 0.0, "y": -0.13, "z": 0.4 }
+                },
+
+                "GameObject|_spindle":{
+                  "Spinner": {
+                    "m_Speed": 3.0,                         // Dictates the speed of the rotation
+                    "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+
+                                                            // Mileage varies between blocks, but in general, any block that has a spinning component 
+                                                            // will have this module and will work.
+
+                    "m_SpinUpTime": 1.5,                    // Dictates the amount of time required for the object to spin in full speed
+                    "m_CurrentAngle": 0.0,                  // Dictates the starting angle of the object when spawned into the world
+                    "m_CurrentAutoSpeed": 0.0,
+                    "m_CurrentSpeedFraction": 0.0,
+                    "m_SpinnerSound": null,
+                    "m_SpinnerSoundOriginalPitch": 0.0,
+                    "AtFullSpeed": false            
+                  },
+                }
+              }
+            }
+          }
+        }
+      },
+
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 0.1,                  // The length of paus between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0,             // Dictates how random the length of pause between shots.
+
+        "m_BurstShotCount": 30,                 // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                // A non-zero, integer value will dictate the number of shots fired.
+                                                // The pause uses the value in m_BurstCooldown
+
+        "m_BurstCooldown": 3.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                // This is automatically disabled when m_BurstShotCount is set to 0
+
+        "m_ResetBurstOnInterrupt":  true,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                // Only applies when m_BurstShotCount is NOT set to 0
+
+        "m_ResetFiringTAfterNotFiredFor": 10.0, // Dictates the amount of time required for the block to reset its firing sequence. 
+                                                // Weapons that use m_BurstShotCount will reset its count when this is active
+                                                // This will only work if m_ResetBurstOnInterrupt is true
+
+        "m_FireControlMode": 1,                 // Dictates how the guns will fire
+                                                //  0 =   The guns will fire one at a time
+                                                //  1 =   All guns will fire at the same time
+
+
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home in toward targets
+
+
+
+        "m_RegisterWarningAfter": 1.0,
+
+        "m_HasSpinUpDownAnim": false,
+        "m_HasCooldownAnim": false,
+        "m_CanInterruptSpinUpAnim": false,
+        "m_CanInterruptSpinDownAnim": false,
+        "m_SpinUpAnimLayerIndex": 0,
+        "m_DeploySFXType": 0,
+        "OnAudioTickUpdate": null,
+        "m_NumCannonBarrels": 1,
+        },
+        
+        // Reference the 3-Pounder cannon's shell data here
+        "Reference|GSO_Cannon_Turret(111)/FireData.":{
+          "m_MuzzleVelocity": 100.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+          "m_KickbackStrength": 100.0,            // Dictates the strength of the recoil when firing the gun
+          "m_BulletSprayVariance": 0.05,          // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+
+          "m_CasingVelocity": 10.0,               
+          "m_BulletSpin": 0.0,
+          "m_CasingEjectVariance": 0.3,
+          "m_CasingEjectSpin": 50.0,
+          "Instantiate|m_BulletPrefab": {
+            "WeaponRound": {
+              "m_Damage": 350
+            }
+          }
+        },
+
+        "ModuleWeapon": {
+          "m_AutoFire": false,                      // If set to true, this weapon will automatically fire at targets
+          "m_AimType": 0,                           // If set to 0, the gun will rotate according to its gimbal limits. If set to 1, it will not rotate.
+          "m_RotateSpeed": 50.0,                   // Dictates the speed of the gun's rotation whenever it aims at a target.
+          "m_ChangeTargetInteval": 0.5,
+  
+          "m_PreventShootingTowardsFloor": false,
+          "m_DeployOnHasTarget": false,
+          "m_LimitedShootAngle": 90.0,
+          "m_FireSFXType": 6,                       // Dictates the sound used when firing
+                                                    // 6  = GSO Megaton Cannon
+                                                    // 64 = GSO Gigaton Cannon
+                                                    // 77 = GSO Big Bertha Cannon
+  
+          "m_TargetAimer": {
+            "m_ChangeTargetTimeout": 0.0,
+            "m_ChangeTargetInteval": 0.5,
+          },
+  
+          "m_RemoteShotFiredPending": 0,
+          "m_HasTargetInFiringCone": false,
+          "FireControl": false,
+          "AimControl": 0,
+  
+          "DisableTargetAimer": false,
+        },
+
+    }
+
+}

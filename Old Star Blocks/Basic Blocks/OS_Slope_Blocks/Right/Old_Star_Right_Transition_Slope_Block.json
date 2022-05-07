@@ -1,0 +1,35 @@
+{
+  "Name": "Old Star Right Transition Slope Block",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails. It's a slope block to smooth out spots where other slop blocks meet on our techs that use the main slope blocks.",
+  "ID": 300025,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 550,
+  "HP": 300,
+  "Mass": 1,
+  "IconName": "OS_Right_Transition_Slope_icon.png",
+  "MeshName": "Right_Transition_Slope.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ", 	
+  "EmissionMode": 2,
+  "ColliderMeshName": "Right_Transition_SlopeC.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 2},   
+  "APs": [ 
+  //Bottom
+  {"x": 0, "y": -0.5, "z": 0},{"x": 0, "y": -0.5, "z": 1},
+  //Side
+	{"x":-0.5, "y": 0, "z": 0},{"x":-0.5, "y": 0, "z": 1},
+	//Back
+  {"x": 0, "y": 0, "z": -0.5},{"x": 0, "y": 0, "z": 1.5},
+  //Top
+  {"x": 0, "y": 0.5, "z": 0}
+  ]
+}

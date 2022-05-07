@@ -1,0 +1,194 @@
+
+{
+  "Name": "IEC Luxite Cultivation Plant",
+  "Description": "To meet the IEC’s Luxite demand, crystal growth experts have developed a farm that can automatically produce Luxite outcrops at a decent rate. Artificial sun allows the Luxite outcrops to grow efficiently.",
+  "ID": 100513,
+
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 10407, 
+
+  "HP": 500, 
+  "Mass": 0.85,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0, 
+
+  "Recipe":  "5, 5, 5, 5, 5, 7, 7, 7, 8, 8, 8, 32, 32, 32, 32, 32, 49, 49, 49, 54",
+  "IconName": "IEC_LuxiteFarmIcon.png", 
+  "MeshName": "IEC Meth Farm.obj", 
+
+  "MeshTextureName": "IEC Textures.png",    
+
+  "Cells": [
+    { "x": 0,    "y": 0, "z": 0    },
+    { "x": -1,    "y": 0, "z": 0    },
+    { "x": -2,    "y": 0, "z": 0    },
+    { "x": 0,    "y": 0, "z": -1    },
+    { "x": -1,    "y": 0, "z": -1    },
+    { "x": -2,    "y": 0, "z": -1    },
+    { "x": 0,    "y": 0, "z": -2    },
+    { "x": -1,    "y": 0, "z": -2    },
+    { "x": -2,    "y": 0, "z": -2    },
+    { "x": 0,    "y": 0, "z": -3    },
+    { "x": -1,    "y": 0, "z": -3    },
+    { "x": -2,    "y": 0, "z": -3    },
+    { "x": 0,    "y": 1, "z": 0    },
+    { "x": -1,    "y": 1, "z": 0    },
+    { "x": -2,    "y": 1, "z": 0    },
+    { "x": 0,    "y": 1, "z": -1    },
+    { "x": -1,    "y": 1, "z": -1    },
+    { "x": -2,    "y": 1, "z": -1    },
+    { "x": 0,    "y": 1, "z": -2    },
+    { "x": -1,    "y": 1, "z": -2    },
+    { "x": -2,    "y": 1, "z": -2    },
+    { "x": 0,    "y": 1, "z": -3    },
+    { "x": -1,    "y": 1, "z": -3    },
+    { "x": -2,    "y": 1, "z": -3    },
+    { "x": 0,    "y": 2, "z": 0    },
+    { "x": -1,    "y": 2, "z": 0    },
+    { "x": -2,    "y": 2, "z": 0    },
+    { "x": 0,    "y": 2, "z": -1    },
+    { "x": -1,    "y": 2, "z": -1    },
+    { "x": -2,    "y": 2, "z": -1    },
+    { "x": 0,    "y": 2, "z": -2    },
+    { "x": -1,    "y": 2, "z": -2    },
+    { "x": -2,    "y": 2, "z": -2    },
+    { "x": 0,    "y": 2, "z": -3    },
+    { "x": -1,    "y": 2, "z": -3    },
+    { "x": -2,    "y": 2, "z": -3    },
+  ],
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ //I hate doing AP's so much
+    { "x": 0,    "y": -0.5, "z": 0    }, 
+    { "x": 0.5,  "y": 0,    "z": 0    },
+    { "x": 0,    "y": 0,    "z": 0.5  },
+    { "x": 0,    "y": -0.5, "z": -1    }, 
+    { "x": 0.5,  "y": 0,    "z": -1    },
+    { "x": 0,    "y": 0,    "z": -1.5  },
+    { "x": 0,    "y": -0.5, "z": -2    }, 
+    { "x": 0.5,  "y": 0,    "z": -2    },
+    { "x": 0,    "y": 0,    "z": -2.5  },
+    { "x": 0,    "y": -0.5, "z": -3    }, 
+    { "x": 0.5,  "y": 0,    "z": -3    },
+    { "x": 0,    "y": 0,    "z": -3.5 },
+    { "x": -1,    "y": -0.5, "z": 0    }, 
+    { "x": -1,    "y": 0,    "z": 0.5  },
+    { "x": -1,    "y": -0.5, "z": -1    }, 
+    { "x": -1,    "y": 0,    "z": -1.5  },
+    { "x": -1,    "y": -0.5, "z": -2    }, 
+    { "x": -1,    "y": 0,    "z": -2.5  },
+    { "x": -1,    "y": -0.5, "z": -3    }, 
+    { "x": -1,    "y": 0,    "z": -3.5 },
+    { "x": -2,    "y": -0.5, "z": 0    }, 
+    { "x": -2.5,  "y": 0,    "z": 0    },
+    { "x": -2,    "y": 0,    "z": 0.5  },
+    { "x": -2,    "y": -0.5, "z": -1    },  
+    { "x": -2.5,  "y": 0,    "z": -1    },
+    { "x": -2,    "y": 0,    "z": -1.5  },
+    { "x": -2,    "y": -0.5, "z": -2    }, 
+    { "x": -2.5,  "y": 0,    "z": -2    },
+    { "x": -2,    "y": 0,    "z": -2.5  },
+    { "x": -2,    "y": -0.5, "z": -3    }, 
+    { "x": -2.5,  "y": 0,    "z": -3    },
+    { "x": -2,    "y": 0,    "z": -3.5 },
+  ],   
+  "GamePrefabReference": "GSO_Autominer_324", //Reference the GSO autominer for the resource generating functionality
+	"KeepRenderers": false,
+	"KeepColliders": false,
+  "SubObjects"  : [
+    {
+			"SubOverrideName":          "m_ItemSpawnPosition", //From my testing, this does nothing
+			"SubPosition":              { "x": 4, "y": 0, "z": 3 },
+			"SubRotation":              { "x": 0,"y": 90,"z": 0 }
+    },
+    {
+      "SubOverrideName": "Grass", //Grass, needs to be a subobject because of the texture
+      "MeshName": "Grass.obj",
+      "MeshTextureName": "Grass.png",
+      "SubPosition": { "x": -2,    "y": 0,    "z": -3  }
+    },
+    {
+      "SubOverrideName": "Luxian", //Same thing here, needs to be a subobject because of the material
+      "MeshName": "Luxite Outcrops.obj",
+      "MeshMaterialName": "Scenery_ALL",
+      "SubPosition": { "x": -2,    "y": 0,    "z": -3  }
+    },
+    {
+      "SubOverrideName": "Dome", //Again, needs to be a subobject because of the material
+      "MeshName": "D O M E.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "SubPosition": { "x": -1,    "y": 1.45,    "z": -2  }
+    },
+    {
+      "SubOverrideName": "GSO_Anchor", //Anchor objects
+      "MeshName": "IEC Meth Farm Anchor.obj",
+      "MeshTextureName": "IEC Textures.png",
+      "SubPosition":  { "x": 0,    "y": 0,    "z": -3  },
+      "SubRotation":  { "x": 0,    "y": 180,    "z": 0  },
+      "ColliderMeshName": "IEC Anchor Collider.obj",
+      "DestroyExistingRenderer":      true,
+      "DestroyExistingColliders":     true
+      
+    },
+  {
+      "SubOverrideName":                   "_anchor",
+      "Position":                   { "x": 0, "y": 0, "z": 0 },
+      "DestroyExistingColliders":     true
+  }
+  ],
+  "JSONBLOCK": {
+    "GameObject|m_ItemSpawnPosition": {},
+    "ModuleItemProducer": {//Autominer module
+      "m_CompatibleChunkTypes": [ //32 is the Luxian chunk ID
+        32
+      ],
+      "m_OperationMode": 1, //1 = inf production when anchored
+      "m_SecPerItemProduced": 27.5,//how long till we spew out chunk
+      "m_MinDispenseInterval": 27.5,//minimum time between chunks
+      //"m_ItemSpawnTransform": {},
+      // "m_ItemSpawnEffect": null,
+      // "m_DialAnimationName": "Dial",
+      // "m_DialAnimatorLayer": 1,
+      // "m_ProduceWhileUnloaded": true,
+      //“m_ResourceSiphonPoint": {},
+      //“m_TargetResourceReservoir": {},
+      // "m_IsProducing": true,
+      // "m_ProduceTime": 23.90637,
+      // "m_LastDispenseTime": 11847.9248,
+      // "m_NumQueuedUpItems": 0,
+      // "k_IsProducingAnimatorBool": {},
+    },
+            "ModuleAnchor": { //Anchor stats
+              "m_ForceHorizontal": true,                          
+              "m_MaxAngularVelocity":         0.0,         
+              "m_MaxTorque":                  0.0,                        
+              "m_BrakeTorque":                1000.0, //For fixed anchors, set this to 1000
+              "m_AnchorHeight": 100,                                               
+              "m_IsSkyAnchor": false ,
+              "m_SnapToleranceUp":3,
+              "m_SnapToleranceDown":6,
+              "m_GroundPoint":{
+                "localPosition": {
+                    "x": 0.0,
+                    "y": -3.5,
+                    "z": 0.0,
+                    "normalized": {
+                      "x": 0.0,
+                      "y": -1.0,
+                      "z": 0.0,
+                      "magnitude": 1.0,
+                      "sqrMagnitude": 1.0
+                    },
+                    "magnitude": 2.128,
+                    "sqrMagnitude": 4.528384
+                  }}                
+          }
+
+}
+}       
+  

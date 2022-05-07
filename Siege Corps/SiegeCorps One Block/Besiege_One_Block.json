@@ -1,0 +1,41 @@
+{
+  "Name": "SiegeCorps One Block",
+  "Description": "From a time long ago, TerraTech building styles were used, but under the name, \"Besiege\". A time where things were customizable, weapons were manually controlled, and techs were known only as war machines. This artifact is still in use as a one block, although old and wooden, it is still tough... \n\nCommemoration of the game Besiege having its full release.",
+  "ID": 5000501, 
+
+  "Faction": 0, 
+  "Category": 2, 
+  "Grade": 2, 
+  "Price": 378, 
+  "HP": 500, 
+  "Mass": 1,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1,1,1,1,1,5,5,5",   
+  "IconName": "startblock_thumbnail.png",                       
+    "MeshName":                   "singlewoodscaled.obj",         // Name of the block's mesh           
+	"ColliderMeshName":           "singlewoodscaled.obj",
+    "MeshTextureName":            "woodmetal_png.png",
+    "MeshGlossTextureName":       "Black.png",
+    "MeshEmissionTextureName":    "Black.png",
+	
+      "DestroyExistingRenderer": true,
+  "SupressBoxColliderFallback": false,
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0}
+  ],
+  "GamePrefabReference": 3,
+  "KeepReferenceRenderer": false, 
+  "KeepReferenceColliders": false,
+  "ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+}

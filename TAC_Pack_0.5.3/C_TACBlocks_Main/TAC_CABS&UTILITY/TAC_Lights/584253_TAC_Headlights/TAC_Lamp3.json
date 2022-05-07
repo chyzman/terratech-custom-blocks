@@ -1,0 +1,179 @@
+{
+  "Name": "TAC Retro Headlamp",
+  "Description": "Good cars call for good lights.  Getting into an accident is nasty, so treat your good car with good lights.  Light it or Bite it! \n\n~Paid for by the TAC Teriticon City Department of Motor Vehicles. \n\n\nSimple, bright lights so you don't get lost in the darkness and get eaten by a swarm of Cullers.",
+  "ID": 584253, 
+
+  "Faction": 5,
+  "Category": 5,
+  "Grade": 3,
+  "Price": 5556,
+  "Rarity": 2,
+  "HP": 1000,//Slightly better than average, since this is 2 blocks and TAC one blocks have 450 HP
+  "Mass": 2,
+
+  "IconName": "DejaVu.png",
+  "MeshName": null,
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 44, 44, 45, 45, 53, 53, 53, 54, 54",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": "HE_Main",
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [
+    //Bottom APs
+    { "x":0, "y":-0.5, "z":0 },
+    { "x":1, "y":-0.5, "z":0 },
+    //Top APs
+    { "x":0, "y":0.5, "z":0 },
+    { "x":1, "y":0.5, "z":0 },
+    //Side APs
+    { "x":0, "y":0, "z":-0.5 },
+    { "x":1, "y":0, "z":-0.5 },
+    { "x":-0.5, "y":0, "z":0 },
+    { "x":1.5, "y":0, "z":0 },
+  ],
+
+
+  "GamePrefabReference": "GC_Light_Strip(211)", 
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GC_striplight",
+      "MakeBoxCollider": true,
+      "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACLight.obj",
+      // "ColliderMeshName": "TACRotatingAnchor.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Geometry": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":0 }
+      },
+      // "GameObject|aCol": {
+      //   "UnityEngine.Transform": {
+      //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+      //     "localPosition": { "x":0, "y":0, "z":0 }
+      //   },
+      //   "UnityEigine.BoxCollider": {
+      //     "center": {
+      //       "x": 0.0,
+      //       "y": 0.0,
+      //       "z": 0.0
+      //     },
+      //     "extents": {
+      //       "x": 0.5,
+      //       "y": 0.25,
+      //       "z": 0.5
+      //     }
+      //   }
+      // },
+      "GameObject|m_GC_striplight": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":0.325 }
+        },
+      }
+    },
+    "GameObject|Lights": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":0 }
+      },
+      "GameObject|GC_striplight_Light_02": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":-0.5, "y":0, "z":0 }
+        },
+        "UnityEngine.Light": {
+          "spotAngle": 60.0,
+          "color": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 0.9,
+            "a": 1.0
+          },
+          // "colorTemperature": 6570.0,
+          "intensity": 1.0,//2.0
+          "bounceIntensity": 1.0,
+          "shadowCustomResolution": -1,
+          "shadowBias": 0.5,
+          "shadowNormalBias": 1.0,
+          "shadowNearPlane": 0.2,
+          "range": 125.0,
+          "flare": null
+        }
+      },
+      "GameObject|GC_striplight_Light_01": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0.5, "y":0, "z":0 }
+        },
+        "UnityEngine.Light": {
+          "spotAngle": 60.0,
+          "color": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 0.9,
+            "a": 1.0
+          },
+          // "colorTemperature": 6570.0,
+          "intensity": 1.0,//2.0
+          "bounceIntensity": 1.0,
+          "shadowCustomResolution": -1,
+          "shadowBias": 0.5,
+          "shadowNormalBias": 1.0,
+          "shadowNearPlane": 0.2,
+          "range": 125.0,
+          "flare": null
+        }
+      }
+    },
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.05,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleLight": {
+      // "m_Lights": [],
+      "m_RotateSpeed": 0.0,
+      // "DelayLightsOnAction": {},
+      // "DelayLightsOffAction": {},
+      "m_TargetAimer": null,
+      "m_Target": null,
+      // "m_DelayedOnOffEvent": {
+      //   "node": null,
+      //   "action": null,
+      //   "IsSet": false,
+      //   "TimeRemaining": 0.0
+      // }
+    },
+  }
+}

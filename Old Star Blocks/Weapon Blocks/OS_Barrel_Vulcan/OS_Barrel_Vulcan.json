@@ -1,0 +1,1001 @@
+{
+  "Name": "Old Star Barrel Vulcan",
+  "Description": "Now this is how the Old Star do. The Barrel Vulcan houses eight individual rifles that fire in sequence for maximum fire rate. With this many guns on one weapon a light tech will get tossed around by the knock back produced by this weapon, so its best used for defending your land on an anchored tech or on heavy assault techs. Keep in mind, with that much fire power this weapon is fairly volatile with its gunpowder if compromised.",
+  "ID": 300172,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 15930,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 55, 55, 55, 55, 55, 55, 55, 57",
+  "IconName": "OS_Barrel_Vulcan_icon.png",
+  "SupressBoxColliderFallback": true,
+
+  // Basic Block HP Values
+  "HP": 1200,
+  "Mass": 14.5,
+  "CenterofMass": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.5
+  },
+  "DamageableType": 0,
+  // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+  // 0    = Standard
+  // 1    = Armor
+  // 2    = Rubber
+  // 3    = Volatile
+  // 4    = Shield
+  // 5    = Wood
+  // 6    = Rock
+  "Fragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+  "EmissionMode": 2,
+  // Block Dimensions
+  "BlockExtents": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+  // Advanced Settings
+  "GamePrefabReference": "VEN_MGun_Medium_121",
+  "KeepReferenceRenderers": true, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Base", //base
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_BV_Base.obj",
+      "ColliderMeshName": "OS_BV_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_RotatingBase", //horizontal
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_BV_Horizontal.obj",
+      "ColliderMeshName": "OS_BV_Horizontal.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Gun",
+      "MeshName": "OS_BV_Verticle.obj",
+      "ColliderMeshName": "OS_BV_Verticle.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Barrel_1",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Barrel_2",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Barrel_3",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "m_Venture_Oozee_121_Barrel_4",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "_barrel1_copy/_recoiler/m_Venture_Oozee_121_Barrel_1",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "_barrel2_copy/_recoiler/m_Venture_Oozee_121_Barrel_2",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "_barrel3_copy/_recoiler/m_Venture_Oozee_121_Barrel_3",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "_barrel4_copy/_recoiler/m_Venture_Oozee_121_Barrel_4",
+      "MeshName": "OS_BV_Gun.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    }
+  ],
+
+  "Deserializer": {
+    "ModuleDamage": {
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+      // Borrow a clean projectile explosion for this block's death
+      // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          "m_EffectRadius": 20, // Outer radius, damage is 0 to max
+          "m_EffectRadiusMaxStrength": 15, // Inner radius, damage is at max within here
+          "m_ExplosionSize": 2, // 2: Large
+          "m_MaxDamageStrength": 1500, // 
+          "m_MaxImpulseStrength": 200, // 
+          "DoDamage": false
+        },
+        "GameObject|Sparks": { // Flying sparks
+          "ParticleSystem": {
+            "startSpeed": 20.0,
+            "startSize": 5,
+            "startLifetime": 4,
+            "gravityModifier": 0.5,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionSmoke": { // Smog
+          "ParticleSystem": {
+            "startDelay": 0.1,
+            "startSpeed": 100,
+            "startSize": 170,
+            "startLifetime": 7,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionDark": { // It looks like weird biscuits
+          "ParticleSystem": {
+            "startDelay": 0.2,
+            "startSpeed": 60,
+            "startSize": 8,
+            "startLifetime": 2,
+            "gravityModifier": 0.05,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|ExplosionBright": { // The glow
+          "ParticleSystem": {
+            "startSpeed": 40,
+            "startSize": 70,
+            "startLifetime": 3,
+            "gravityModifier": -0.2,
+            "maxParticles": 1000
+          }
+        },
+        "GameObject|Point light": { // The light that catches all on fire
+          "UnityEngine.Light": {
+            "intensity": 50.0,
+            "range": 34.0
+          },
+          "FadeInOutLight": {
+            "StartDelay": 0.0,
+            "FadeInSpeed": 0.5,
+            "FadeOutDelay": 0.0,
+            "FadeOutSpeed": 1
+          }
+        } // The actual glow
+      }
+    },
+    "GameObject|_gimbalBase": {
+      "GameObject|_gimbalElev": {
+        "GameObject|_barrel4": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_4": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.23,
+              "z": 1.0
+            }
+          }
+        },
+        "GameObject|_barrel3": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_3": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.17,
+              "y": 0.17,
+              "z": 1.0
+            }
+          }
+        },
+        "GameObject|_barrel2": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_2": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.23,
+              "y": 0.0,
+              "z": 1.0
+            }
+          }
+        },
+        "GameObject|_barrel1": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_1": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.17,
+              "y": -0.17,
+              "z": 1.0
+            }
+          }
+        },
+        "Duplicate|_barrel1": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_1": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -0.17,
+              "y": 0.17,
+              "z": 1.0
+            }
+          }
+        },
+        "Duplicate|_barrel2": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_2": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -0.23,
+              "y": 0.0,
+              "z": 1.0
+            }
+          }
+        },
+        "Duplicate|_barrel3": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_3": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": -0.17,
+              "y": -0.17,
+              "z": 1.0
+            }
+          }
+        },
+        "Duplicate|_barrel4": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_Venture_Oozee_121_Barrel_4": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": -0.23,
+              "z": 1.0
+            }
+          }
+        },
+        "GameObject|m_Venture_Oozee_121_Gun": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -90.0,
+            25.0
+          ],
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.6,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|m_Venture_Oozee_121_RotatingBase": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": -0.4,
+            "z": 0.0
+          }
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          0.0,
+          0.0
+        ]
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.0,
+          "z": 0.5
+        }
+      }
+    },
+    "GameObject|m_Venture_Oozee_121_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 120.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.2,
+      "m_FireSFXType": 66
+
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.2,
+      "m_ResetBurstOnInterrupt": true,
+      "m_ResetFiringTAfterNotFiredFor": 1.0,
+      "m_DeploySFXType": 0,
+      "m_NumCannonBarrels": 3,
+      "m_ShotTimer": 0.0,
+      "m_ModuleType": 0,
+      "SFXType": 0
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 90.0,
+      "m_CasingVelocity": 15.0,
+      "m_BulletSprayVariance": 0.2,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.5,
+      "m_CasingEjectSpin": 50.0,
+      "m_KickbackStrength": 30.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_DamageType": "Bullet",
+          "m_Damage": 157
+        }
+      }
+    }
+  }
+}

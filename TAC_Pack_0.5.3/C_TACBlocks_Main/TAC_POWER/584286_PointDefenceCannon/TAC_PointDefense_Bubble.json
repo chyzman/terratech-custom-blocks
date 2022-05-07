@@ -1,0 +1,684 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC EPMC Defense Matrix",
+  "Description": "Shoots EPMC beams to intercept and destroy projectiles on the spot [visuals broken atm]. \nThis consumes power to block threats unlike the Interceptor gun. \n\nDue to the way this operates, it's effective at denying explosions, but doesn't fare too well against lasers and plasma like ordinary shields. \nAt best you should only use this shield when survival is absolutely nesseary, as it's power drain while under attack is significant compared to normal shields. \n\nAfter several failed attempts to stretch Venture's Endeavor Shield bubble, we resorted to the so-called \"mystical\" EPMC technology to help us defend against explosions instead.  What we ended up with was far less efficient, but boasted more bubble.", //You can make multiple lines with \n
+  "ID": 584286, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 112890, //deny explodo
+  "HP": 2500,//WEAK
+  "Mass": 40.0,//Heavy, 5 mass per block consumed
+
+  "IconName": "BlastShield.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "49, 49, 49, 49, 49, 49, 49, 49, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 65, 65, 66, 66, 66",
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom
+    { "x":0, "y":-0.5, "z":0 },
+    { "x":1, "y":-0.5, "z":0 },
+    { "x":0, "y":-0.5, "z":3 },
+    { "x":1, "y":-0.5, "z":3 },
+    //Back
+    { "x":0, "y":0, "z":-0.5 },
+    { "x":1, "y":0, "z":-0.5 },
+    //Top
+    { "x":0, "y":0.5, "z":0 },
+    { "x":1, "y":0.5, "z":0 },
+    { "x":0, "y":0.5, "z":3 },
+    { "x":1, "y":0.5, "z":3 },
+    //Front
+    { "x":0, "y":0, "z":3.5 },
+    { "x":1, "y":0, "z":3.5 },
+    //Sides
+    { "x":-0.5, "y":0, "z":0 },
+    { "x":-0.5, "y":0, "z":3 },
+    { "x":1.5, "y":0, "z":0 },
+    { "x":1.5, "y":0, "z":3 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 1,
+    "z": 4 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "VEN_Shield_Bubble(111)",//(was VEN_FuelTank(212))VERY explosive. - Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true, //Placeholder for now
+	"ReferenceOffset": { "x": 0.5, "y": 0, "z": 1.5 }, //Shift the subobjects of the block prefab by x, y and z
+
+  "KeepColliders": true,
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_VEN_Shield_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_EPMCShield.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "_bubbleBulletTrigger",
+      //"layer": 21
+      // "MeshName": "TAC_IsoBubbleLargeOuter.obj",
+    },
+    // {
+    //   "MakeBoxCollider": true,
+    //   "SubOverrideName": "_2ndCollider",
+    //   //"layer": 21
+    //   "MeshName": "TAC_IsoBubbleLargeOuter.obj",
+    // },
+    // { //Shield
+    //   "SubOverrideName": "_bubbleBulletTrigger",
+    //   // "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": false,
+    //   // "MeshName": "TAC_IsoBubbleLargeOuter.obj",
+    //   "ColliderMeshName": "TAC_IsoBubbleLargeColliderscale.obj",
+    //   "MakeBoxCollider": false,
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    { //Outer Shield Texture
+      "SubOverrideName": "ShieldSphereEdge",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleLargeOuterEPMC.obj",
+    },
+    { //Outer Shield Texture2
+      "SubOverrideName": "ShieldSphereEdge/ShieldSphereOuter",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleLargeOuterEPMC.obj",
+    },
+    { //Inner Shield Texture
+      "SubOverrideName": "ShieldSphereEdge_copy",
+      "DestroySubReferenceRenderer": true,
+      "MeshName": "TAC_IsoBubbleLargeInnerEPMC.obj",
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|FXGSOShieldCharge(Clone)": { //The Bubble Charging effect
+      "GameObject|FXGSOShieldCharge 1": {
+      }
+    },
+    "GameObject|aCol": {
+      "UnityEngine.SphereCollider": {
+        "radius": 0.0,
+        "center": { "x": 1, "y": 1, "z": 1.0 },
+      }
+    },
+    "GameObject|_shield": { //The actual Shield
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          // "UnityEngine_SphereCollider": { //Cannot change directly, "ModuleShieldGenerator" overrules this
+          //   "radius": 0.5
+          // },
+          "SphereCollider": {//Where the Explosions Happen
+            "radius": 0,
+            "isTrigger": false,
+            // "center": {//Send it to timbuktu - This doesn't work...
+            //   "x": 999999.0,
+            //   "y": 999999.0,
+            //   "z": 999999.0
+            // },
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":100000 },
+            // "localScale": { "x":1, "y":1, "z":1 },
+          },
+          "UnityEngine.SphereCollider": {
+            "gameObject": {
+              "layer": 9, //ID 524288Layers:
+                // (0) Default//Collides with normal things
+                // (1) TransparentFX //Bypasses Shields, hits self
+                // (2) Ignore Raycast//Raycasts cannot detect, hits self
+                // (3) 
+                // (4) Water//
+                // (5) UI//No collision
+                // (6) 
+                // (7) 
+                // (8) Tank //Bypasses shields, collides with self
+                // (9) Cosmetic//Collides with nothing.
+                // (10) Bullet //normal projectile
+                // (11) Container //Crates, Collides with nothing.
+                // (12) Shield //Clips through shields, collides with self
+                // (13) Terrain //
+                // (14) TankIgnoreTerrain //Ignores terrain, hits self
+                // (15) Scenery //normal
+                // (16) Pickup //normal
+                // (17) Trigger //No collision
+                // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+                // (19) 3D UI //No collision
+                // (20) WheelSuspension // normal
+                // (21) ShieldBulletFilter //collides with bullets and shields
+                // (22) TerrainCollidingParticles
+                // (23) ShieldTechFilter //collides with Techs
+                // (24) TerrainOnly //idk
+                // (25) RenderImageForPrefab
+                // (26) SceneryCoarse
+                // (27) Landmarks
+                // (28) 
+                // (29) 
+                // (30) 
+                // (31) 
+            },
+            "isTrigger": true,//Doing this breaks the explosion controller
+            "enabled": true,//Doing this breaks the explosion controller
+
+            "radius": 0.0,
+            // "center": { "x": 1, "y": 1, "z": 1.0 },
+          },
+          // "BoxCollider": { //The actual collider
+          //   "isTrigger": true,
+          //   "enabled": true,
+          //   "center": {
+          //     "x": 0.0,
+          //     "y": 0.0,
+          //     "z": 0
+          //   },
+          //   "size": {
+          //     "x": 1,
+          //     "y": 1,
+          //     "z": 1
+          //   },
+          // },
+          // "GameObject|_2ndCollider": {
+            // "UnityEngine.Transform": {
+            //   "localPosition": { "x":0, "y":0, "z":0 },
+            //   "localScale": { "x":1, "y":1, "z":1 },
+            // },
+            "UnityEngine.CapsuleCollider": {
+              "gameObject": {
+                "layer": 21, //ID 524288Layers:
+                  // (0) Default//Collides with normal things
+                  // (1) TransparentFX //Bypasses Shields, hits self
+                  // (2) Ignore Raycast//Raycasts cannot detect, hits self
+                  // (3) 
+                  // (4) Water//
+                  // (5) UI//No collision
+                  // (6) 
+                  // (7) 
+                  // (8) Tank //Bypasses shields, collides with self
+                  // (9) Cosmetic//Collides with nothing.
+                  // (10) Bullet //normal projectile
+                  // (11) Container //Crates, Collides with nothing.
+                  // (12) Shield //Clips through shields, collides with self
+                  // (13) Terrain //
+                  // (14) TankIgnoreTerrain //Ignores terrain, hits self
+                  // (15) Scenery //normal
+                  // (16) Pickup //normal
+                  // (17) Trigger //No collision
+                  // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+                  // (19) 3D UI //No collision
+                  // (20) WheelSuspension // normal
+                  // (21) ShieldBulletFilter //collides with bullets and shields
+                  // (22) TerrainCollidingParticles
+                  // (23) ShieldTechFilter //collides with Techs
+                  // (24) TerrainOnly //idk
+                  // (25) RenderImageForPrefab
+                  // (26) SceneryCoarse
+                  // (27) Landmarks
+                  // (28) 
+                  // (29) 
+                  // (30) 
+                  // (31) 
+              },
+              "isTrigger": true,
+              "enabled": true,
+              "radius": 0.5,
+              "height": 0.0,
+              "center": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -100000.0
+              },
+            // }
+          }
+        },
+        "GameObject|_bubbleCollider": {
+          "SphereCollider": {
+            "radius": 0,
+            "isTrigger": false
+          }
+        },
+        "GameObject|ShieldSphereEdge": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+          },
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              // "mainTexture": "LED_BeamBlockG.png",
+              "color": {
+                "r": 0.9,
+                "g": 0.6,
+                "b": 0.1,
+                "a": 0.1,
+                "maxColorComponent": 2.0
+              },
+              // "color": {
+              //   "r": 0.9,
+              //   "g": 0.65,
+              //   "b": 0.1,
+              //   "a": 0.25,
+              //   "maxColorComponent": 2.0
+              // },
+            }
+          },
+          "GameObject|ShieldSphereOuter": {
+            "UnityEngine.Transform": {
+              // "localScale": { "x":0, "y":0, "z":0 },
+            },
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                // "mainTexture": "LED_BeamBlockG.png",
+                "color": {
+                  "r": 0.9,
+                  "g": 0.6,
+                  "b": 0.1,
+                  "a": 0.1,
+                  "maxColorComponent": 2.0
+                },
+                // "color": {
+                //   "r": 0.9,
+                //   "g": 0.65,
+                //   "b": 0.1,
+                //   "a": 0.25,
+                //   "maxColorComponent": 2.0
+                // },
+              }
+            },
+          },
+          "GameObject|ShieldSphereInner": null,//Not Color-editable
+        },
+        "Duplicate|ShieldSphereEdge": { //Recolor Yellow-orange
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.0, "z":0.0 },
+            "localEulerAngles": { "x":0.0, "y":0.0, "z":0.0 },
+            "localScale": { "x":1, "y":1, "z":1 },
+          },
+          "GameObject|ShieldSphereOuter": null,
+          "GameObject|ShieldSphereInner": null,
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              // "mainTexture": "LED_BeamBlockG.png",
+              "color": {
+                "r": 0.9,
+                "g": 0.6,
+                "b": 0.1,
+                "a": 0.1,
+                "maxColorComponent": 2.0
+              },
+              // "color": {
+              //   "r": 0.9,
+              //   "g": 0.65,
+              //   "b": 0.1,
+              //   "a": 0.25,
+              //   "maxColorComponent": 2.0
+              // },
+            }
+          },
+        },
+        "Spinner": {
+          "m_Speed": 0.0,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 1.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.0,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+      "GameObject|_projector": {
+        "GameObject|_particles4": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles3": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles2": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        },
+        "GameObject|_particles1": {
+          "GameObject|sfx_PowerUnitSpray": {
+          }
+        }
+      }
+    },
+    "GameObject|m_VEN_Shield_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":1.5 } 
+      },
+    },
+
+    "ModuleShieldGenerator": {
+      "m_Radius": 22.5,// nerfed from 35.0
+      // "m_MaxScale": 20.0,
+      "m_EnergyConsumptionPerSec": 2.5, //Low passive drain
+      "m_InitialChargeEnergy": 5000,//You must kickstart it - EPMC web takes loads to start up.
+      "m_InterpTimeOn": 0.02, 
+      "m_InterpTimeOff": 1.00,// 
+      // "m_ParticleLife": 1.0,
+      // "m_ParticleSpeed": 10.0,
+      // "m_Repulsion": true,
+      // "m_RepelKick": 5.0,
+      // "m_RepelKickAngular": 5.0,
+      "m_EnergyConsumedPerDamagePoint": 1.0,//Destroy explosions 
+      //-  IMPORTANT: NOT SHIELD DAMAGE TYPE, TAKES ENTIRELY BASE DAMAGE, NO REDUCTIONS OTHER THAN ABOVE
+
+      "m_Healing": false,
+      "m_HealingHeartbeatInterval": 0.75,
+      "m_MaxHealingPerHeartbeat": 100.0,
+      "m_EnergyConsumedPerPointHealed": 0.1,
+      "m_PowerUpDelay": 1.0,// long delay to prevent abuse
+      "m_MinTechForce": 50.0,
+      "m_MaxTechForce": 100.0,
+      "Instantiate|hitEffect": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":-100000 }  
+        },
+        // "Reference|VEN_Shield_111/_shield/_bubble/ShieldSphereOuter/ShieldSphereInner": {
+          // "UnityEngine.Transform": {
+          //   "localScale": { "x":1.0, "y":1.0, "z":3.0 },
+          //   "localEulerAngles": { "x":0, "y":0, "z":0 },
+          //   "localPosition": { "x":0, "y":0, "z":0 } 
+          // },
+        // },
+        // "UnityEngine.SphereCollider": {
+        //   "gameObject": {
+        //     "layer": 21 //ID 524288Layers:
+        //       // (0) Default//Collides with normal things
+        //       // (1) TransparentFX //Bypasses Shields, hits self
+        //       // (2) Ignore Raycast//Raycasts cannot detect, hits self
+        //       // (3) 
+        //       // (4) Water//
+        //       // (5) UI//No collision
+        //       // (6) 
+        //       // (7) 
+        //       // (8) Tank //Bypasses shields, collides with self
+        //       // (9) Cosmetic//Collides with nothing.
+        //       // (10) Bullet //normal projectile
+        //       // (11) Container //Crates, Collides with nothing.
+        //       // (12) Shield //Clips through shields, collides with self
+        //       // (13) Terrain //
+        //       // (14) TankIgnoreTerrain //Ignores terrain, hits self
+        //       // (15) Scenery //normal
+        //       // (16) Pickup //normal
+        //       // (17) Trigger //No collision
+        //       // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+        //       // (19) 3D UI //No collision
+        //       // (20) WheelSuspension // normal
+        //       // (21) ShieldBulletFilter //collides with bullets and shields
+        //       // (22) TerrainCollidingParticles
+        //       // (23) ShieldTechFilter //collides with Techs
+        //       // (24) TerrainOnly //idk
+        //       // (25) RenderImageForPrefab
+        //       // (26) SceneryCoarse
+        //       // (27) Landmarks
+        //       // (28) 
+        //       // (29) 
+        //       // (30) 
+        //       // (31) 
+        //   },
+        //   "radius": 7.5,
+        //   "center": { "x": 0, "y": 0, "z": 0 },
+        // },
+        "FollowTransform": {//Follow the actual spawn
+          "m_TransformToFollow": "/_shield",
+          "m_FollowOrientation": false,
+        },
+        "GameObject|Shockwave": null,
+        "GameObject|ShieldSparks": {
+          // "UnityEngine.ParticleSystem": {
+          //   "main": {
+          //     "m_ParticleSystem": {
+          //       "startSize": 35.0,
+          //       "startRotation": 5.0,
+          //       "startSpeed": 0.0, //How far you want the particles to spread
+          //       "startColor": {
+          //         "r": 0.0,
+          //         "g": 0.0,
+          //         "b": 1.0,
+          //         "a": 0.75
+          //       },
+          //       // "emissionRate": 25.0,
+          //       "maxParticles": 1,
+          //       "emission": {
+          //         "rateMultiplier": 50.0,
+          //         "rateOverTimeMultiplier": 0.2,
+          //         "burst": {
+          //           "count": 1,
+          //           "maxCount": 1,
+          //           "minCount": 1,
+          //         }
+          //       },
+          //       // "duration": 8.0,
+          //       "playbackSpeed": 1.0,
+          //       "shape": {
+          //         // "meshScale": 1.0,
+          //         "randomDirection": true,
+          //         // "enabled": true,
+          //         // "shapeType": 4,
+          //         "randomDirectionAmount": 4.5,
+          //         "sphericalDirectionAmount": 17.6,
+          //         "randomPositionAmount": 0.0,
+          //       },
+          //       "rotationOverLifetime": {
+          //         "enabled": true,
+          //         "xMultiplier": 1.0,
+          //         "yMultiplier": 0.0,
+          //         "zMultiplier": 0.0,
+          //         "separateAxes": false
+          //       },
+          //       // "randomizeRotationDirection": 90.0,
+          //       "startRotationMultiplier": 1.0,
+          //       "startRotationXMultiplier": 1.0,
+          //       "startRotationYMultiplier": 1.0,
+          //       "startRotationZMultiplier": 1.0,
+          //       "flipRotation": 90.0,
+          //     }
+          //   },
+          // }
+          "Reference|HE_Laser_Zeus_222.FireData.m_BulletPrefab/Line": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0  },
+              "localScale": { "x":1.0, "y":1.0, "z":-17.5 },
+              "localEulerAngles": { "x":180, "y":0, "z":0 },
+            },
+            "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0.5  },
+                "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 5,
+                    "startSpeed": 0.5, //How far you want the particles to spread
+                    "startColor": {
+                      "r": 1.0,
+                      "g": 1.0,
+                      "b": 0.4,
+                      "a": 1.0
+                    },
+                    // "duration": 2.0,
+                    "playbackSpeed": 0.5,
+                    // "emissionRate": 25.0,
+                    // "maxParticles": 750,
+                    // "emission": {
+                    //   "rateMultiplier": 20.0,
+                    //   // "rateOverTimeMultiplier": 0.2,
+                    //   "burst": {
+                    //     "count": 20,
+                    //     //"cycleCount": 1,
+                    //     "maxCount": 20,
+                    //     "minCount": 8,
+                    //     // "probability": 150,
+                    //     // "repeatInterval": 150,
+                    //     //"time": 0
+                    //   }
+                    // },
+                  }
+                }
+              },
+            },
+            "UnityEngine.CapsuleCollider": null,
+            "UnityEngine.LineRenderer": {
+              "numPositions": 2,
+              "startWidth": 0.05,
+              "endWidth": 0.2,
+              "widthMultiplier": 1.0,
+              "numCornerVertices": 0,
+              "numCapVertices": 0,
+              "useWorldSpace": false,
+              "loop": false,
+              "positionCount": 2,
+              "shadowBias": 0.0,
+              "generateLightingData": false,
+              "textureMode": 0,
+              "alignment": 0,
+              // "widthCurve": {
+              //   "m_Ptr": {
+              //     "value": 7657173712
+              //   },
+              //   "keys": {
+              //     "LongLength": 2,
+              //     "IsFixedSize": true,
+              //     "IsReadOnly": false,
+              //     "IsSynchronized": false,
+              //     "SyncRoot": "/Line/widthCurve/keys",
+              //     "Length": 2,
+              //     "Rank": 1
+              //   },
+              //   "length": 2,
+              //   "preWrapMode": 8,
+              //   "postWrapMode": 8
+              // },
+              "castShadows": false,
+              "motionVectors": true,
+              "useLightProbes": false,
+              // "bounds": {
+              //   "center": {
+              //     "x": 0.0,
+              //     "y": 0.0,
+              //     "z": 10
+              //   },
+              //   "size": {
+              //     "x": 1.0,
+              //     "y": 1.0,
+              //     "z": 20.0
+              //   },
+              //   "extents": {
+              //     "x": 0.5,
+              //     "y": 0.5,
+              //     "z": 1.0
+              //   },
+              //   "min": {
+              //     "x": -0.5,
+              //     "y": -0.5,
+              //     "z": 2.5
+              //   },
+              //   "max": {
+              //     "x": 0.5,
+              //     "y": 0.5,
+              //     "z": 4.5
+              //   }
+              // },
+            },
+          },
+        },
+      },
+      // "m_Shield": {
+      //   "m_Speed": 0.05,
+      //   "m_RotationAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_SteerAxis": {
+      //     "axis": 1
+      //   },
+      //   "m_AutoSpin": false,
+      //   "m_SpinUpTime": 1.0,
+      //   "m_CurrentAngle": 0.0,
+      //   "m_CurrentAutoSpeed": 0.0,
+      //   "m_CurrentSpeedFraction": 0.0,
+      //   "m_SpinnerSound": null,
+      //   "m_SpinnerSoundOriginalPitch": 0.0,
+      //   "Speed": 0.05,
+      //   "SpeedFraction": 0.0,
+      //   "AtFullSpeed": false
+      // },
+      // "m_Projector": null,
+      // "m_RepulsorBulletTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_RepulsorTechTrigger": {
+      //   "radius": 0.5
+      // },
+      // "m_TargetScale": 0.0,
+      // "m_CurrentInterpCurve": null,
+      // "m_InterpStartTime": 0.0,
+      // "m_InterpDuration": 0.0,
+      // "m_InterpStartScale": 0.0,
+      // "m_InterpScaleMin": 0.0,
+      // "m_EnergyDeficit": 800.0,
+      // "m_EnergyDrain": 0.0,
+      // "m_HealingHeartbeatNextTime": 322.266449,
+      // "m_TimeWithoutEnergy": 2.3562026,
+      // "m_EnoughPower": false,
+      // "m_ChargingEffect": false,
+      // "m_State": 0,
+      // "m_PowerUpTimer": 5.0,
+      // "m_CachedCollisionFixedFrameCount": 0
+    },
+    "Damageable": {//Modify the base stats
+      "m_DamageableType": 0, // Takes base damage, no reductions or additions
+      "m_AoEDamageBlockPercent": 0.0,//Shotgun attacks can go through this shield!
+    },
+  }
+}

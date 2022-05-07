@@ -1,0 +1,494 @@
+{
+  "Name": "GreenTech Electrocharge Mortar",
+  "Description": "Launches power cells that will give multiple electrical discharges when in contact with any surface.\nThe technology for recycling batteries into biodegradable power cells became so common and cheap that suddenly it was a weapon. It uses its own separated solar power to charge each cell.",
+  
+  "ID": 911125,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 3,  
+  "Price": 7464,
+  "HP": 2000,
+  "Mass": 8,
+  "CenterOfMass": {"x": 0, "y": 0.5, "z": 1},
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 0,
+  
+  "Recipe": "3, 5, 5, 7, 7, 43, 43, 46, 48, 48, 56, 56" , 
+  
+  "IconName": "GT_Electrocharge_Mortar_Icon.png",
+  "EmissionMode": 1, 
+  
+  "Cells": [ 
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 0, "y": 1, "z": 2 },
+    { "x": 0, "y": 2, "z": 1 },
+    { "x": 0, "y": 2, "z": 2 }
+  ],
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 0, "y": -0.5, "z": 2}
+  ],
+	
+  "GamePrefabReference": "GSO_Cannon_Turret_111", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_Battery_111",
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_Electrocharge_Mortar_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Electrocharge_Mortar_Base_Collider_A.obj"
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Mount",
+      "MeshName": "GT_Electrocharge_Mortar_Turret.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Electrocharge_Mortar_Turret_Collider.obj"
+    },
+    {
+      "SubOverrideName": "GSO_Cannon_111_Barrel",
+      "MeshName": "GT_Electrocharge_Mortar_Barrel.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Electrocharge_Mortar_Barrel_Collider.obj"
+    },
+    {
+      "SubOverrideName": "m_GSO_Drill_112_DrillBit",
+      "MeshName": "GT_Electrocharge_Mortar_Belt.obj", 
+      "MeshMaterialName": "GSO_TankTrack"
+    },
+    {
+      "SubOverrideName": "Batteries",
+      "MeshName": "GT_Electrocharge_Mortar_Batteries.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "layer": 29
+    },
+    {
+        "SubOverrideName": "FireData.m_BulletPrefab/m_HE_Bomb",
+        "MeshName": "GT_Electrocharge_Mortar_Projectile.obj", 
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubScale": {
+        "x": 1.1,
+        "y": 1.1,
+        "z": 1.1
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "MeshName": "GT_Electrocharge_Mortar_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Electrocharge_Mortar_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Electrocharge_Mortar_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Electrocharge_Mortar_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "Reference|GSO_FixedDrill_112/_spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0.445,
+          "z": 1.03
+         }
+       },
+       "GameObject|Batteries":{
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 5,
+            "y": 0,
+            "z": 0
+           }
+         }
+       },
+       "GameObject|m_GSO_Drill_112_DrillBit": {  
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         }
+        },
+         "Spinner": {
+          "m_Speed": 0.2,
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+        "m_AutoSpin": false,
+        "m_SpinUpTime": 0
+        }  
+    },
+    "Reference|GSO_FixedDrill_112/ModuleDrill.": {
+      "m_SFXType": 0,
+     "damagePerSecond": 0
+    },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1.56,
+          "z": 1.3
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -180,
+          180
+        ]
+      },
+      "GameObject|GSO_Cannon_111_Mount": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0.03,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           }
+         }
+      },
+      "GameObject|_gimbalElev": {
+        "GameObject|_barrel": {
+           "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+          "GameObject|GSO_Cannon_111_Barrel": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          }
+        },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0.35,
+              "z": 0.16
+             },
+             "localEulerAngles": {
+              "x": -65,
+              "y": 0,
+              "z": 0
+             }
+           },
+          "GameObject|_smoke": {
+            "UnityEngine.ParticleSystem": {
+              "startSize": 0
+            }
+          },
+          "GameObject|_muzzleFlash": null,
+          "GameObject|_casingSpawn": null,
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             }
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -0.01,
+            0.01
+          ]
+        }
+        }
+        
+      },
+
+      "ModuleWeapon": { 
+        "m_FireSFXType": 5,
+        "m_RotateSpeed": 100.0
+      },
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 0.6,
+        "m_CooldownVariancePct": 0.00,
+        "m_SeekingRounds": true
+      },
+      "FireData": null,
+      "Reference|HE_BombBay_113/Firedata.":{
+        "m_MuzzleVelocity": 35,
+        "m_CasingVelocity": 0.0,
+        "m_BulletSprayVariance": 0.0,
+        "m_BulletSpin": 0.0,
+        "m_CasingEjectVariance": 0.0,
+        "m_CasingEjectSpin": 0.0,
+        "m_KickbackStrength": 20.0,
+        "Instantiate|m_BulletPrefab":{
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "WeaponRound": { 
+            "m_DamageType" : 2, 
+            "m_Damage": 100
+          },
+          "Rigidbody": {
+            "drag": 0.0,
+            "angularDrag": 0.01,
+            "useGravity": true,
+            "centerOfMass": { "x":0, "y":0, "z":0 },
+            "mass": 100,
+            "collisionDetectionMode": 2
+          },
+          "SeekingProjectile": {
+            "m_VisionConeAngle": 360.0,
+          "m_VisionRange": 30.0,
+          "m_TurnSpeed": 50,
+          "m_SeekType": 1,
+          "m_UpdateVisibleInterval": 0.1,
+          "m_ActivationDelay": 0.5,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": false,
+          "m_TargetingType" : "BestAimCabOrCentre"
+            },
+            "MissileProjectile": {
+              "Instantiate|m_SmokeTrailPrefab": null,
+              "m_ArmDelay": 0.5,
+              "m_DeathDelayNotArmed": 5
+            },
+            "Projectile": {
+              "m_LifeTime": 60.0,
+              "m_ExplodeAfterLifetime": true,
+              "m_DeathDelay": 5,
+              "m_ExplodeOnTerrain": true,
+              "m_SingleImpact": false,
+              "m_RotateWithVelocity": false,
+              "m_IgnoreCollisionWithBarrel": true,
+              "m_StickOnContact": false,
+              "m_StickOnTerrain": false,
+              "m_ExplodeOnStick": false,
+              "m_HideProjectileOnStick": false,
+              "m_ImpactSFXType": 8,
+              "m_FlightSFXType": 1,
+              "m_GravityScale": 0.1,
+              "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_EffectRadius": 3.0,
+                "m_EffectRadiusMaxStrength": 1.0,
+                "m_MaxDamageStrength": 100.0,
+                "m_MaxImpulseStrength": 50.0,
+                "m_DamageType": 2,
+                "m_ExplosionType": 0
+              },
+              "GameObject|Sparks": null,
+              "Reference|GC_Battery_424/ModuleDamage.deathExplosion/FX_Lightning": {
+                "UnityEngine.Transform": {
+                },
+                "UnityEngine.ParticleSystem": {
+                      "startSpeed": 2,
+                      "startSize":1,
+                      "maxParticles": 6,
+                      "startColor":{
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 0.5,
+                        "a": 0.8
+                      }
+                }
+              },
+              "GameObject|ExplosionSmoke": null,
+              "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+                "UnityEngine.ParticleSystemRenderer": {
+                    "renderMode": 2
+                },
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startLifetime": 0.5,
+                      "playbackSpeed": 1,
+                      "startSpeed": 0,
+                      "startSize": 15,
+                      "startColor":{
+                        "r": 0.45,
+                        "g": 1.0,
+                        "b": 0.3,
+                        "a": 0.5
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionDark":  null,
+              "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Sparks": {
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "maxParticles": 20,
+                      "startSpeed": 6,
+                      "startSize": 0.6,
+                      "startLifetime": 0.2,
+                      "gravityModifier": 0,
+                      "startColor":{
+                        "r": 0.8,
+                        "g": 1.0,
+                        "b": 0.5,
+                        "a": 1.0
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionBright":  null,
+              "GameObject|Point light": null
+            }
+          },
+          "UnityEngine.CapsuleCollider": {
+            "center": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "radius": 0.16,
+            "height": 0.4,
+            "direction": 2,
+            "material": {
+              "bounciness": 1.0,
+              "dynamicFriction": 0.6,
+              "staticFriction": 0.6,
+              "frictionCombine": 0,
+              "bounceCombine": 1,
+              "bouncyness": 1.0
+            }
+          },
+          "GameObject|m_HE_Bomb": {
+          },
+          "GameObject|_particles": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "GameObject|SmokeTrail": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              },
+              "LineRenderer": {
+                "startColor":{
+                  "r": 0.9,
+                  "g": 1.0,
+                  "b": 0.8,
+                  "a": 0.05
+                },
+                "endColor":{
+                  "r": 0.9,
+                  "g": 1.0,
+                  "b": 0.8,
+                  "a": 0.01
+                },
+                "numPositions": 2,
+                "startWidth": 0.3,
+                "endWidth": 0.1,
+                "widthMultiplier": 1.0,
+                "numCornerVertices": 0,
+                "numCapVertices": 0
+              },
+              "SmokeTrail": {
+                "numberOfPoints": 5,
+                "updateSpeed": 0.07,
+                "riseSpeed": 0.1,
+                "spread": 0.1
+              }
+            }
+          }
+        }
+      }
+  }			
+}

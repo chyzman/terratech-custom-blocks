@@ -1,0 +1,345 @@
+{
+  "Name": "Old Star Rifled Wing",
+  "Description": "Now this is how Old Star do.The Rifled Wing is a Mostly standard wing exept for having a powerfull Auto Cannon mounted in it. Due to the mounted weapon this wing wont provide as much lift as other wings due to the added weight.",
+  "ID": 300150,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 3,
+  "Price": 28143,
+  "HP": 1500,
+  "Mass": 6,
+  "Recipe": "47, 52, 52, 57, 62, 66, 66",
+  "IconName": "OS_Wing_Rifle_Icon.png",
+  "EmissionMode": 2,
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "BlockExtents": {
+    "x": 3,
+    "y": 1,
+    "z": 3
+  },
+  "APs": [
+    //sides
+    {
+      "x": 2.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 2.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+
+    //center 
+    {
+      "x": 1,
+      "y": 0.5,
+      "z": 2
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 2
+    }
+
+  ],
+
+  "GamePrefabReference":          "VEN_Wing_Middle_312",
+  "ReferenceOffset":              { "x": 0, "y": 0, "z": 1.15 },
+  "KeepRenderers":                true,
+  "KeepColliders":                true,
+
+  "MeshTextureName":              "OST1.png",
+  "MeshGlossTextureName":         "OST2.png",
+  "MeshEmissionTextureName":      "OST3.png",
+
+  "SubObjects": [
+    {
+      "ObjectName": "m_VEN_Wing_Middle_312_Base",
+      "MeshName": "OS_Center_Wing_Weapon.obj",
+      "ColliderMeshName": "OS_Center_Wing_Weapon.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "Position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "Rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_Wing_Middle_312_Flap",
+      "MeshName": "OS_Center_Wing_Flap.obj",
+      "ColliderMeshName": "OS_Center_Wing_Flap.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_MGun_112_Barrel",
+      "MeshName": "OS_Center_Wing_WeaponBarrel1.obj",
+      "ColliderMeshName": null,
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_MGun_112_Mount",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubScale": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_MGun_112_Body",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubScale": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_MGun_112_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubScale": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+
+    "Reference|VEN_MGun_112/_gimbalBase": {
+      "GameObject|_gimbalElev": {
+        "GameObject|_barrel": {
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.3
+              }
+            }
+          },
+          "GameObject|_spawnCasing": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_spawnBullet": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "GameObject|_light": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.2
+                }
+              }
+            },
+            "GameObject|_muzzleFlashAnim": {
+              "GameObject|m_MuzzleFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.2
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.2
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.2
+              }
+            }
+          },
+          "GameObject|_recoiler": {
+            "GameObject|m_VEN_MGun_112_Barrel": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.02,
+              "z": 0.0
+            }
+          }
+        },
+        "GameObject|m_VEN_MGun_112_Body": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localScale": {
+              "x": 0.01,
+              "y": 0.01,
+              "z": 0.01
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -3.0,
+            3.0
+          ]
+        }
+      },
+      "GameObject|m_VEN_MGun_112_Mount": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localScale": {
+            "x": 0.01,
+            "y": 0.01,
+            "z": 0.01
+          }
+        }
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.0,
+          "y": 0.0,
+          "z": 2.0
+        }
+      },
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -3.0,
+          3.0
+        ]
+      }
+    },
+    "GameObject|m_VEN_MGun_112_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.01,
+          "y": 0.01,
+          "z": 0.01
+        }
+      }
+    },
+
+    "Reference|VEN_MGun_112/ModuleWeapon.": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 100.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.1,
+      "m_FireSFXType": 66
+    },
+    "Reference|VEN_MGun_112/ModuleWeaponGun.": {
+      "m_ShotCooldown": 0.05,
+      "m_CooldownVariancePct": 0.05,
+      "m_FireControlMode": 0
+    },
+    "Reference|VEN_MGun_112/FireData.": {
+      "m_MuzzleVelocity": 180.0,
+      "m_CasingVelocity": 0.0,
+      "m_BulletSprayVariance": 0.01,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.3,
+      "m_CasingEjectSpin": 50.0,
+      "m_KickbackStrength": 5.0
+    }
+
+  }
+}

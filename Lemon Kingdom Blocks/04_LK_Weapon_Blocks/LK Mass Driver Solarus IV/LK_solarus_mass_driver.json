@@ -1,0 +1,1555 @@
+/*      
+Description:    A massive EM weapon meant for planetary strategic use. 
+Pros:           Unparalleled damage with a large explosion radius. High HP.
+Cons:           Requires both power and resources to fire. Extremely expensive to build, also very heavy.
+
+Project Team:   Potato, Aceba1, Rafs, Shido. I thank you all for contributing to this block.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Solarus IV Mass Driver",
+    "Description":          "A massive railgun-gauss hybrid artillery designed to take out spacecraft and large Tech formations. It can also deliver precious resources into orbit for larger crusades. Firing it requires ammunition.\n\n It can consume the following as ammunition: \n\n Raw and refined Fibron, Titania, Plumbia, Fibre Plating, Rugged Fiblar, Titanic Alloy, Hardened Titanic, Plubonic Greebles, and Plubonic Alloy.",
+
+    "ID": 419021,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = ExP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to x + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 5714844,       // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+
+    /*
+    The resources/components needed to make this block. For the full ID Resource/Component list, 
+    please refer to the Terratech Wiki.
+
+    Recipe:     Main Body:          1366 Titanic Alloy, 6 Plubonic Alloy
+                Forge:              144 Gluon Beam, 144 Thermo Jet
+                Capacitor Bank:     64 Coffman Cells
+                EM Assembly:        168 Dervish Gel, 168 Ion Pulse Cell
+                Electronics:        16 Seed A.I, 32 Mother Brain
+    */
+    "Recipe" : {
+        // Main Body
+        "54" : 1366, "53" : 8,
+        // Forge
+        "64" : 144, "63" : 144,
+        // Capacitor Bank
+        "62" : 64,
+        // EM Assembly
+        "61" : 168, "56" : 168,
+        // Electronics
+        "65": 32, "60" : 64
+    },
+    
+    "IconName":                   "LK_solarus_mass_driver_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                      // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                      // Name of the block's collider.
+    "NoBoxCollider":              false,                                     // When set to false, this enables the block to create a box collider when no custom mesh collider is assigned.
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+    "EmissionMode": 1,          // Enables emissive materials to work and changes its behavior
+                                // 0    = No override
+                                // 1    = Glow
+                                // 2    = Glow at night
+                                // 3    = Glow when anchored
+
+    // Basic Block Values
+    "HP": 524287,           // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+
+                            // The proper HP for this block is 546400, but the game cannot handle such a high value and it becomes indestructible...
+                            // Through testing, the highest working value appears to be 2^19-1 (aka 524287)
+                            
+    "Mass": 5464,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility":  0,          // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    "Friction":         0.6,        // The friction of the block
+    
+    // Block Dimensions
+    // There are 1366 cells
+    "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                            // Any character placement that is not a space will be filled as a cell
+        [ // Z Layer 0
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "   xx   ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "   xx   "
+        ],
+        [ // Z Layer 1
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "   xx   "
+        ],
+        [ // Z Layer 2
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 3
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 4
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 5       
+            "  xxxx  ",
+            "xxxxxxxx",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "  xxxx  "
+        ],
+        [ // Z Layer 6
+            "  xxxx  ",
+            "xxxxxxxx",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "  xxxx  "
+        ],
+        [ // Z Layer 7
+            "  xxxx  ",
+            "xxxxxxxx",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "  xxxx  "
+        ],
+        [ // Z Layer 8
+            "  xxxx  ",
+            "xxxxxxxx",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "  xxxx  "
+        ],
+        [ // Z Layer 9
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 10
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 11
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 12
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 13
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 14
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 15
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 16
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 17
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 18
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 19
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "  xxxx  "
+        ],
+        [ // Z Layer 20
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 21
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 22
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 23
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 24
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 25
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 26
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 27
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 28
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 29
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 30
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ],
+        [ // Z Layer 31
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "  xxxx  ",
+            "        "
+        ]
+    ],
+    
+    "APs": [
+        // Back APs
+        {"x": 2, "y": 2, "z": -0.5}, {"x": 5, "y": 2, "z": -0.5},
+
+        // Top APs
+        {"x": 3, "y": -0.5, "z": 9}, {"x": 4, "y": -0.5, "z": 9},
+
+        // Bottom APs
+        {"x": 3, "y": 9.5, "z": 9}, {"x": 4, "y": 9.5, "z": 9},
+    ],
+
+
+  
+    //Edit the block's meshes here
+    "SubObjects":[
+
+        // Remove the Reference's colliders and mesh
+        {     
+            "ObjectName" :                "m_GSO_BigBertha_548_Base",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true
+        },        
+        {     
+            "ObjectName" :                "_gimbalBase/_gimbalElev/m_GSO_BigBertha_548_RotatingPart",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true
+        }, 
+        {     
+            "ObjectName" :                "_gimbalBase/_gimbalElev/_barrel/_recoiler/m_GSO_BigBertha_548_ShockAbsorber",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true
+        },
+        {     
+            "ObjectName" :                "_gimbalBase/_gimbalElev/_barrel/_recoiler/m_GSO_BigBertha_548_Barrel",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true
+        },
+
+        // Box Colliders, as defined in the Blender file in order
+        {   // #1
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 0,     "z": 4},
+            "Scale":    {"x": 2,    "y": 1,     "z": 9}
+        },{ // #2
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 1.5,   "z": 1},
+            "Scale":    {"x": 4,    "y": 2,     "z": 3}
+        },{ // #3
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 6.75,  "z": 1},
+            "Scale":    {"x": 4,    "y": 1.5,     "z": 3}
+        },{ // #4
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 4.25,  "z": 2.2},
+            "Scale":    {"x": 2.5,  "y": 3.5,   "z": 3}
+        },{ // #5
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 4.7,   "z": 0.4},
+            "Scale":    {"x": 2.2,  "y": 2.6,   "z": 0.6}
+        },{ // #6
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 5.1,   "z": 0.2},
+            "Scale":    {"x": 1.9,  "y": 1.8,   "z": 0.6}
+        },{ // #7
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 4.5,   "z": 8.5},
+            "Scale":    {"x": 4,    "y": 8,     "z": 12}
+        },{ // #8
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 8.95,  "z": 2.5},
+            "Scale":    {"x": 3.5,  "y": 0.9,   "z": 3.3}
+        },{ // #9
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 8.95,  "z": 6.4 },
+            "Scale":    {"x": 3.5,  "y": 0.9,   "z": 3.3}
+        },{ // #10
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 7.5,   "z": 0.5},
+            "Scale":    {"x": 4,    "y": 1.4,   "z": 1.4},
+            "Rotation": {"x": -45,  "y": 0,     "z": 0}
+        },{ // #11
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 8,     "z": 1.5},
+            "Scale":    {"x": 4,    "y": 1,     "z": 2}
+        },{ // #12
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 9,     "z": 9.1},
+            "Scale":    {"x": 4,    "y": 1,     "z": 1.2}
+        },{ // #13
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 0,     "z": 9.1},
+            "Scale":    {"x": 4,    "y": 1,     "z": 1.2}
+        },{ // #14
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 0,     "z": 11.5},
+            "Scale":    {"x": 1.7,  "y": 1,     "z": 3}
+        },{ // #15
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 9,     "z": 11.5},
+            "Scale":    {"x": 1.7,  "y": 1,     "z": 3}
+        },{ // #16
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 0.4,   "z": 12.4},
+            "Scale":    {"x": 4,    "y": 0.8,   "z": 5.4}
+        },{ // #17
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 8.6,   "z": 12.4},
+            "Scale":    {"x": 4,    "y": 0.8,   "z": 5.4}
+        },{ // #18
+            "MakeBoxCollider": true,
+            "Position": {"x": 1.5,  "y": 2.35,  "z": 11.1},
+            "Scale":    {"x": 2,    "y": 2.3,   "z": 15.2}
+        },{ // #19
+            "MakeBoxCollider": true,
+            "Position": {"x": 1.5,  "y": 6.65,  "z": 11.1},
+            "Scale":    {"x": 2,    "y": 2.3,   "z": 15.2}
+        },{ // #20
+            "MakeBoxCollider": true,
+            "Position": {"x": 5.5,  "y": 2.35,  "z": 11.1},
+            "Scale":    {"x": 2,    "y": 2.3,   "z": 15.2}
+        },{ // #21
+            "MakeBoxCollider": true,
+            "Position": {"x": 5.5,  "y": 6.65,  "z": 11.1},
+            "Scale":    {"x": 2,    "y": 2.3,   "z": 15.2}
+        },{ // #22
+            "MakeBoxCollider": true,
+            "Position": {"x": 1,    "y": 4.5,   "z": 6.6},
+            "Scale":    {"x": 1,    "y": 2,     "z": 3.5}
+        },{ // #23
+            "MakeBoxCollider": true,
+            "Position": {"x": 6,    "y": 4.5,   "z": 6.6},
+            "Scale":    {"x": 1,    "y": 2,     "z": 3.5}
+        },{ // #24
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 7.25,  "z": 22.4},
+            "Scale":    {"x": 2,    "y": 1.15,  "z": 18}
+        },{ // #25
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.3,  "y": 7.1,   "z": 22.4},
+            "Scale":    {"x": 1,    "y": 1.3,   "z": 18},
+            "Rotation": {"x": 0,    "y": 0,     "z": 45}
+        },{ // #26
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.7,  "y": 7.1,   "z": 22.4},
+            "Scale":    {"x": 1,    "y": 1.3,   "z": 18},
+            "Rotation": {"x": 0,    "y": 0,     "z": -45}
+        },{ // #27
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.5,  "y": 6.35,  "z": 19.6},
+            "Scale":    {"x": 0.6,  "y": 1.7,   "z": 12.2}
+        },{ // #28
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.5,  "y": 6.35,  "z": 19.6},
+            "Scale":    {"x": 0.6,  "y": 1.7,   "z": 12.2}
+        },{ // #29
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.5,  "y": 6.45,  "z": 25.9},
+            "Scale":    {"x": 0.6,  "y": 1.1,   "z": 1.6},
+            "Rotation": {"x": -45,  "y": 0,     "z": 0}
+        },{ // #30
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.5,  "y": 6.45,  "z": 25.9},
+            "Scale":    {"x": 0.6,  "y": 1.1,   "z": 1.6},
+            "Rotation": {"x": -45,  "y": 0,     "z": 0}
+        },{ // #31
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.6,  "y": 6.75,  "z": 23.4},
+            "Scale":    {"x": 0.8,  "y": 0.8,   "z": 16}
+        },{ // #32
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.4,  "y": 6.75,  "z": 23.4},
+            "Scale":    {"x": 0.8,  "y": 0.8,   "z": 16}
+        },{ // #33
+            "MakeBoxCollider": true,
+            "Position": {"x": 5.1,  "y": 6.1,   "z": 21.75},
+            "Scale":    {"x": 0.6,  "y": 1,     "z": 1.7}
+        },{ // #34
+            "MakeBoxCollider": true,
+            "Position": {"x": 5.1,  "y": 2.9,   "z": 21.75},
+            "Scale":    {"x": 0.6,  "y": 1,     "z": 1.7}
+        },{ // #35
+            "MakeBoxCollider": true,
+            "Position": {"x": 1.9,  "y": 6.1,   "z": 21.75},
+            "Scale":    {"x": 0.6,  "y": 1,     "z": 1.7}
+        },{ // #36
+            "MakeBoxCollider": true,
+            "Position": {"x": 1.9,  "y": 2.9,   "z": 21.75},
+            "Scale":    {"x": 0.6,  "y": 1,     "z": 1.7}
+        },{ // #37
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.6,  "y": 2.25,  "z": 23.4},
+            "Scale":    {"x": 0.8,  "y": 0.8,   "z": 16}
+        },{ // #38
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.4,  "y": 2.25,  "z": 23.4},
+            "Scale":    {"x": 0.8,  "y": 0.8,   "z": 16}
+        },{ // #39
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.7,  "y": 1.9,   "z": 22.4},
+            "Scale":    {"x": 1,    "y": 1.3,   "z": 18},
+            "Rotation": {"x": 0,    "y": 0,     "z": 45}
+        },{ // #40
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.3,  "y": 1.9,   "z": 22.4},
+            "Scale":    {"x": 1,    "y": 1.3,   "z": 18},
+            "Rotation": {"x": 0,    "y": 0,     "z": -45}
+        },{ // #41
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 1.75,  "z": 22.4},
+            "Scale":    {"x": 2,    "y": 1.15,  "z": 18}
+        },{ // #42
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.5,  "y": 2.65,  "z": 19.6},
+            "Scale":    {"x": 0.6,  "y": 1.7,   "z": 12.2}
+        },{ // #43
+            "MakeBoxCollider": true,
+            "Position": {"x": 4.5,  "y": 2.55,  "z": 25.9},
+            "Scale":    {"x": 0.6,  "y": 1.1,   "z": 1.6},
+            "Rotation": {"x": 45,   "y": 0,     "z": 0}
+        },{ // #44     
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.5,  "y": 2.65,  "z": 19.6},
+            "Scale":    {"x": 0.6,  "y": 1.7,   "z": 12.2}
+        },{ // #45
+            "MakeBoxCollider": true,
+            "Position": {"x": 2.5,  "y": 2.55,  "z": 25.9},
+            "Scale":    {"x": 0.6,  "y": 1.1,   "z": 1.6},
+            "Rotation": {"x": 45,   "y": 0,     "z": 0}
+        },{ // #46
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 8,     "z": 16.5},
+            "Scale":    {"x": 2,    "y": 1,     "z": 4}
+        },{ // #47
+            "MakeBoxCollider": true,
+            "Position": {"x": 3.5,  "y": 1,     "z": 16.5},
+            "Scale":    {"x": 2,    "y": 1,     "z": 4}
+        },
+
+        // The following pieces will not move unless stated otherwise:
+        {     
+            "ObjectName" :                "body_A1",
+            "MeshName":                   "LK_solarus_mass_driver_body_A1.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+        },
+        {     
+            "ObjectName" :                "body_A2",
+            "MeshName":                   "LK_solarus_mass_driver_body_A1.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": 180  }
+        },
+        {     
+            "ObjectName" :                "body_B",
+            "MeshName":                   "LK_solarus_mass_driver_body_B.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 }
+        },
+
+        {     
+            "ObjectName" :                "engine_1",
+            "MeshName":                   "LK_solarus_mass_driver_engine_1.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        }, 
+        {     
+            "ObjectName" :                "engine_2",
+            "MeshName":                   "LK_solarus_mass_driver_engine_1.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": 3.2 }
+        }, 
+
+        {     
+            "ObjectName" :                "breech",
+            "MeshName":                   "LK_solarus_mass_driver_breech.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        },     
+
+        {     
+            "ObjectName" :                "loader_end",
+            "MeshName":                   "LK_solarus_mass_driver_breech_end.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        },     
+
+        {     
+            "ObjectName" :                "loader_mid",
+            "MeshName":                   "LK_solarus_mass_driver_breech_mid.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        },     
+
+        {     
+            "ObjectName" :                "loader_base",
+            "MeshName":                   "LK_solarus_mass_driver_breech_base.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        },     
+
+        {     
+            "ObjectName" :                "cargo_1",
+            "MeshName":                   "LK_solarus_mass_driver_cargo_1.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": -0.5 },
+        },   
+        {     
+            "ObjectName" :                "cargo_2",
+            "MeshName":                   "LK_solarus_mass_driver_cargo_1.obj",
+            "Position":                   { "x": 3.5, "y": -0.5, "z": 3.4 },
+        },   
+
+        {     
+            "ObjectName" :                "recoil_base1",
+            "MeshName":                   "LK_solarus_mass_driver_recoil_base.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+        },
+
+        {     
+            "ObjectName" :                "recoil_base2",
+            "MeshName":                   "LK_solarus_mass_driver_recoil_base.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": 180  }
+        },
+
+        {     
+            "ObjectName" :                "recoil_mid1",
+            "MeshName":                   "LK_solarus_mass_driver_recoil_mid.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+        },
+
+        {     
+            "ObjectName" :                "recoil_mid2",
+            "MeshName":                   "LK_solarus_mass_driver_recoil_mid.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": -0.5 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": 180  }
+        },
+
+        // The following pieces will move
+        {     
+            "ObjectName" :                "barrel_A1",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_A.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_A1_plate",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_A_plate.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+
+        {     
+            "ObjectName" :                "barrel_A2",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_A.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },
+        {     
+            "ObjectName" :                "barrel_A2_plate",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_A_plate.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },
+
+        {     
+            "ObjectName" :                "barrel_B1",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_B1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_B2",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_B1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },
+        {     
+            "ObjectName" :                "barrel_B1_plate",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_B1_plate.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_B2_plate",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_B1_plate.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },
+
+        {     
+            "ObjectName" :                "barrel_C1",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_C2",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },        
+        {     
+            "ObjectName" :                "barrel_C1_plate1",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1_plate1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_C1_plate2",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1_plate2.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+        },
+        {     
+            "ObjectName" :                "barrel_C2_plate1",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1_plate1.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },           
+        {     
+            "ObjectName" :                "barrel_C2_plate2",
+            "MeshName":                   "LK_solarus_mass_driver_barrel_C1_plate12.obj",
+            "Position":                   { "x": 0, "y": 0, "z": -3.1},//-15.5 },
+            "Rotation":                   { "x": 0, "y": 0, "z": 180   }
+        },   
+
+
+        // Add the spinners
+        {     
+            "ObjectName" :                "spinner_A1",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerA.obj",
+            "Position":                   { "x": -0.49, "y": 0.426, "z": 0.37 },
+        },  
+        {     
+            "ObjectName" :                "spinner_B1",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerB.obj",
+            "Position":                   { "x": -0.49, "y": 0.426, "z": 0.37 },
+        },
+        {     
+            "ObjectName" :                "spinner_A2",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerA.obj",
+            "Position":                   { "x": 0.49, "y": 0.426, "z": 0.37 },
+        },  
+        {     
+            "ObjectName" :                "spinner_B2",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerB.obj",
+            "Position":                   { "x": 0.49, "y": 0.426, "z": 0.37 },
+        },  
+        {     
+            "ObjectName" :                "spinner_A3",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerA.obj",
+            "Position":                   { "x": -0.49, "y": -0.426, "z": 0.37 },
+        },  
+        {     
+            "ObjectName" :                "spinner_B3",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerB.obj",
+            "Position":                   { "x": -0.49, "y": -0.426, "z": 0.37 },
+        },   
+        {     
+            "ObjectName" :                "spinner_A4",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerA.obj",
+            "Position":                   { "x": 0.49, "y": -0.426, "z": 0.37 },
+        },  
+        {     
+            "ObjectName" :                "spinner_B4",
+            "MeshName":                   "LK_solarus_mass_driver_spinnerB.obj",
+            "Position":                   { "x": 0.49, "y": -0.426, "z": 0.37 },
+        },
+        
+        // Weapon Limiter Gauges
+        {
+            "ObjectName" :                "gaugeBase",
+            "MeshName":                   "LK_solarus_mass_driver_gaugeBar.obj"
+        }, {
+            "ObjectName" :                "resourceGauge1",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripA.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.91 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": 11  }
+        }, {
+            "ObjectName" :                "resourceGauge2",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripA.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.91 }
+        }, {
+            "ObjectName" :                "resourceGauge3",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripA.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.91 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": -11   }
+        }, {
+            "ObjectName" :                "energyGauge1",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripB.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.78 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": -11   }
+        }, {
+            "ObjectName" :                "energyGauge2",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripB.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.78 }
+        }, {
+            "ObjectName" :                "energyGauge3",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripB.obj",
+            "Position":                   { "x": 3.5, "y": 4.5, "z": 1.78 },
+            "Rotation":                   { "x": 0,   "y": 0,   "z": 11   }
+        }, {
+            "ObjectName" :                "energyGaugeLED",
+            "MeshName":                   "LK_solarus_mass_driver_gauge_stripC.obj"
+        }
+    ],
+
+    // Advanced Settings
+    "PrefabReference":      "475", // GSO Big Bertha Block ID
+    "KeepRenderers":        true,  // Keep the renderers, specifically the muzzle flash
+    "KeepColliders":        false, // Remove the colliders
+    "PrefabPosition":       { "x": 3.5, "y": 0, "z": 0 },
+
+    "Deserializer":{
+        // Gauge preparation
+        "GameObject|resourceGauge1": {},
+        "GameObject|resourceGauge2": {},
+        "GameObject|resourceGauge3": {},
+        "GameObject|resourceGaugeLED": {
+            "GameObject|energyGaugeLED": {}
+        },
+        "GameObject|energyGauge1": {},
+        "GameObject|energyGauge2": {},
+        "GameObject|energyGauge3": {},
+        
+        "GameObject|energyGaugeParticles": {
+            "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+                "GameObject|Light_Point": null,
+                "ParticleSystem": {
+                    "startSize": 1.5,
+                    "startSpeed": 2,
+                    "startLifetime": 0.8,
+                    "startColor":{ "r": 0.4, "g": 0.8, "b": 1.0, "a": 1.0 },
+
+                    "shape": {
+                      "shapeType": 5,
+                      "randomDirectionAmount": 1000,
+                      "alignToDirection": true,
+                      "meshRenderer": null,
+                      "normalOffset": 0,
+                      "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "scale": { "x": 2, "y": 1, "z": 15 }
+                    },
+                    "emission": {
+                      "rateOverTimeMultiplier": 100.0
+                    }
+                },
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 3.5, "y": 6.2, "z": 20 },
+                    "localScale": { "x": 1, "y": 1, "z": 1},
+                    "localEulerAngles": { "x": 0, "y": 0, "z": 0}
+                }
+            },
+            "Duplicate|fx_Lightning": {
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 3.5, "y": 2.8, "z": 20 }
+                }
+            }
+        },
+
+        // Weapon limiters. This gun needs both energy and resource chunks to work.
+        // Note: 'Continuous weapons' are flamethrowers or beam weapons
+        "ModuleConsumeResourceToShell": {
+            "MaxValue":         1.5,// How many bullets this thing can store at a time 
+                                    // (For continuous weapons, how many seconds of fuel)
+            "HolderCapacity":   1,  // How many chunks each chunk holder can have at a time
+
+            "InputStacks": [        // Stacks are what hold the chunks, this defines that information
+                {                                   // Left stack
+                    "Position":         {"x": 2, "y": 2, "z": 0},   // Position of the stack, where the chunks are held
+
+                    "ConsumePosition":  {"x": 2, "y": 1, "z": 0.1}, // The exact position that the chunks will animate towards
+
+                    "APIndices": [0]                                // The array of AP indexes that this stack can get chunks from. 
+                                                                    // Can be null or removed to have it use the nearest APs
+                }, 
+                {                                   // Right stack
+                    "Position":         {"x": 5, "y": 2, "z": 0},   // 
+                    "ConsumePosition":  {"x": 5, "y": 1, "z": 0.1}, // 
+                    "APIndices": [1]                                // 
+                }
+            ],
+            // Optionally can use "InputStack": { "Position":, "ConsumePosition" }...
+
+            "AcceptedChunks": [     // The resource chunks (by ID) that this can consume
+                0,  // Fibrewood Chunk
+                1,  // Fibron Chunk
+                4,  // Plumbite Ore
+                5,  // Plumbia Ingot
+                6,  // Titanite Ore
+                7,  // Titania Ingot
+                43, // Fibre Plating
+                52, // Rugged Fiblar
+                45, // Hardened Titanic
+                54  // Titanic Alloy
+            ],
+            "ValuePerChunk": [      // The ammunition value of each chunk, in the order of "AcceptedChunks"
+                0.005,      // Fibrewood Chunk ( Requires 200 )
+                0.008,      // Fibron Chunk ( Requires 125 )
+                
+                0.01,       // Plumbite Ore (Requires 100 )
+                0.01,       // Plumbia Ingot    ( Requires 100 )
+                
+                0.0125,     // Titanite Ore     ( Requires 80)
+                0.02,       // Titania Ingot    ( Requires 50:     Primary resource, use as reference.)
+                
+                0.0125,       // Fibre Plating  ( Requires 80 )
+                0.02,       // Rugged Fiblar    ( Requires 50 )
+                
+                0.025,      // Hardened Titanic ( Requires 40 )
+                0.05        // Titanic Alloy    ( Requires 20 )
+            ],
+
+            "CustomGauges": [        // Optional animatable transform, not required for limiter to function
+                /*
+                "GaugeObject": "nameOrPathToSubobject",     // < This is specifically for weapon limiter serialization! It does not exist otherwise!
+                
+                // Very important, comment or delete animation properties not intended to be used!
+                
+                "PositionMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Y = 0,
+                "PositionMax": {"x": 0, "y": 1, "z": 0},    // 100%  :  Y = 1,
+
+                "ScaleMin": {"x": 1, "y": 1, "z": 0},       // 0%    :  Z = 0.0,
+                "ScaleMax": {"x": 1, "y": 1, "z": 1},       // 100%  :  Z = 1.0,
+
+                "RotationMin": {"x": 0, "y": 0, "z": 0},    // 0%    :  Roll = 0,
+                "RotationMax": {"x": 0, "y": 0, "z": 720},  // 100%  :  Roll = 720 (rolled twice),
+
+                "ColorMin": {"r": 1.0, "g": 0.0, "b": 0.0}, // 0%    :  Color = Red,
+                "ColorMax": {"r": 0.0, "g": 1.0, "b": 0.0}, // 100%  :  Color = Green,
+
+                "EnableAbove": 0.1,                         // 10%   :  Enable           (<10%   :  Disable),
+                "ParticlesAbove": 0.333,                    // 33.3% :  Play particles   (<33.3% :  Stop particles), 
+
+                "Dampen": 0.7,                              // Smoothen changes with a value between 0.0 and 1.0
+                                                            // 0%    :  Off              (100%   :  Cannot move),
+
+                // The values below are for converting the raw input to a value between 0.0 and 1.0 for the above
+
+                "MinValue": 0.5,                            // The lower end of the raw value to lerp by    (Alt: MinEnergy),
+                "MaxValue": 2.0,                            // The higher end of the raw value to lerp by   (Alt: MaxEnergy),
+                */
+
+                {
+                    "GaugeObject": "resourceGauge1",
+                    "MinValue": 0.0,
+                    "MaxValue": 0.5,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                }, {
+                    "GaugeObject": "resourceGauge2",
+                    "MinValue": 0.5,
+                    "MaxValue": 1,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                }, {
+                    "GaugeObject": "resourceGauge3",
+                    "MinValue": 1.0,
+                    "MaxValue": 1.5,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                }, {
+                    "GaugeObject": "resourceGaugeLED",
+                    "MinValue": 0.0,
+                    "MaxValue": 2.0,
+                    "EnableAt": 0.5  // Ratio of Min & Max, 0 to 1
+                }
+            ]
+        },
+
+        "ModuleConsumeEnergyToShell": {
+            "EnergyCost":           1000,   // How much energy is needed to fire one round 
+                                            // (For continuous weapons, how much energy per second)
+            "EnergyCapacity":       1000,   // How much energy this block can hold
+                                            
+            // The two below are intended for flamethrowers and beam weapons
+            "LowestPermittedEnergy": 50,    // The minimum amount of energy that can be left in a system 
+                                            // (Useful for continuous weapons: Don't drain all energy)
+            "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                            // (Useful for continuous weapons: Prevents studdering effect)
+
+            "CustomGauges": [                // Optional animatable transform
+                {
+                    "GaugeObject": "energyGauge1",
+                    "MinValue": 50,
+                    "MaxValue": 1050,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                }, {
+                    "GaugeObject": "energyGauge2",
+                    "MinValue": 1050,
+                    "MaxValue": 2050,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                }, {
+                    "GaugeObject": "energyGauge3",
+                    "MinValue": 2050,
+                    "MaxValue": 3050,
+                    "ScaleMin": {"x": 1, "y": 1, "z": 0},
+                    "ScaleMax": {"x": 1, "y": 1, "z": 1},
+                    "Dampen": 0.2
+                },{
+                    "GaugeObject": "energyGaugeLED",
+                    "MinValue": 0,
+                    "MaxValue": 1000,
+                    "EnableAt": 1       // Ratio of Min & Max, 0 to 1
+                }, {
+                    "GaugeObject": "energyGaugeParticles",
+                    "MinValue": 0,
+                    "MaxValue": 2100,
+                    "ParticlesAt": 0.5  // Ratio of Min & Max, 0 to 1
+                }
+            ]
+        },
+
+        // Change the gun placements
+        "GameObject|_gimbalBase":{
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 3.5, "y": 4.5, "z": 15 }
+            },
+            "GimbalAimer": {
+                "rotationLimits": [0, 0], 
+                "rotationAxis": 1          
+            },
+            "GameObject|_gimbalElev":{
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 0, "y": 0, "z": 0 }
+                },
+                "GimbalAimer": {
+                    "rotationLimits": [0, 0], 
+                    "rotationAxis": 1          
+                },
+                "GameObject|_barrel": {
+                    "UnityEngine.Transform": {
+                        "localPosition": { "x": 0, "y": 0, "z": 0 },
+                        "localScale": { "x": 5, "y": 5, "z": 5}
+                    },
+                    "GameObject|_recoiler": {
+                        "GameObject|m_GSO_BigBertha_548_ShockAbsorber": {
+                            "GameObject|barrel_B1":{},
+                            "GameObject|barrel_B2":{},
+                            "GameObject|barrel_B1_plate":{},
+                            "GameObject|barrel_B2_plate":{},
+
+                            "GameObject|spinner_A1":{
+                                "Spinner": {
+                                    "m_Speed": -0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                  }
+                            },
+                            "GameObject|spinner_B1":{
+                                "Spinner": {
+                                    "m_Speed": 0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_A2":{
+                                "Spinner": {
+                                    "m_Speed": -0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_B2":{
+                                "Spinner": {
+                                    "m_Speed": 0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_A3":{
+                                "Spinner": {
+                                    "m_Speed": -0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_B3":{
+                                "Spinner": {
+                                    "m_Speed": 0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_A4":{
+                                "Spinner": {
+                                    "m_Speed": -0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            },
+                            "GameObject|spinner_B4":{
+                                "Spinner": {
+                                    "m_Speed": 0.3,
+                                    "m_RotationAxis": { "axis": 2 },
+                                    "m_SpinUpTime": 0.2
+                                }
+                            }
+                        },
+
+                        "GameObject|m_GSO_BigBertha_548_Barrel": {
+                            // Because of how the deserializer works, these new objects will automatically be scaled 1:1 with the world, despite the parent being scaled differently
+                            "GameObject|barrel_C1": {},
+                            "GameObject|barrel_C1_plate1": {},
+                            "GameObject|barrel_C1_plate2": {},
+                            "GameObject|barrel_C2": {},
+                            "GameObject|barrel_C2_plate1": {},
+                            "GameObject|barrel_C2_plate2": {},
+                            "GameObject|barrel_A1": {},
+                            "GameObject|barrel_A1_plate": {},
+                            "GameObject|barrel_A2": {},
+                            "GameObject|barrel_A2_plate": {},
+                        }
+                    }
+                }
+            }
+        },
+        "ModuleDrill":{},                           // An empty ModuleDrill to spin the spinners
+
+        "ModuleWeapon": {
+            "m_AutoFire": false,                    // If set to true, this weapon will automatically fire at targets
+            "m_AimType": 1,
+            "m_RotateSpeed": 0,                     // Dictates the speed of the gun's rotation whenever it aims at a target.
+            "m_ChangeTargetInteval": 0.0,
+      
+            "m_PreventShootingTowardsFloor": false,
+            "m_DeployOnHasTarget": false,
+            "m_LimitedShootAngle": 90.0,
+        },
+
+        "ModuleWeaponGun": {
+            "m_ShotCooldown":        0.1,            // The length of pause between shots. A higher value lengthens the pause and vice versa.
+            "m_CooldownVariancePct": 0.00,          // Dictates how random the length of pause between shots.
+
+            "m_BurstShotCount":      0,             // Dictates that this block will be firing in bursts before applying a pause. A zero value here disables this behavior.
+                                                    // A non-zero, integer value will dictate the number of shots fired.
+                                                    // The pause uses the value in m_BurstCooldown
+
+            "m_BurstCooldown": 0.0,                 // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                    // This is automatically disabled when m_BurstShotCount is set to 0
+
+            "m_ResetBurstOnInterrupt": false,       // Dictates whether the gun will automatically reload the gun when it stops firing. 
+                                                    // Only applies when m_BurstShotCount is NOT set to 0
+
+            "m_FireControlMode": 1,                 // Dictates how the guns will fire
+                                                    //  0 =   The guns will fire one at a time
+                                                    //  1 =   All guns will fire at the same time
+
+
+            "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward target
+        },
+        "FireData": {
+            // Projectile Attibutes
+            "m_BulletSprayVariance": 0.0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+            "m_BulletSpin":          0.0,             // Dictates the amount of spin the projectile makes while travelling
+            
+            "m_MuzzleVelocity":      1000.0,          // Dictates the projectile's speed. The higher the value, the faster it will travel. 
+                                                      // Any value beyond 200 will make the projectile clip through blocks unless its collider is big enough
+
+            "m_KickbackStrength":    1000000,         // Dictates the strength of the recoil when firing the gun
+            
+            // Casing Attributes
+            "m_CasingVelocity": 0,//25.0,             // Dictates the speed of the casing ejected. 
+            "m_CasingEjectVariance": 0.0,             // Dictates the amount of random movement applied onto the casing's movement. Add some for a more beautiful ejection
+            "m_CasingEjectSpin": 0.0,                 // Dictates how much the casing spins when ejected
+            
+            "Instantiate|m_BulletCasingPrefab": null, // Might want to edit this
+
+            "Instantiate|m_BulletPrefab": {
+                "UnityEngine.MeshFilter": {
+                    "sharedMesh": "LK_solarus_mass_driver_projectile.obj"
+                },
+                "UnityEngine.MeshRenderer": {
+                    "material": {
+                      "mainTexture": "LK_tex_1.png"
+                    }
+                },
+                "Projectile":{
+                    "m_LifeTime": 2.0,                  // Wait 2 seconds before vanishing
+                    "m_ExplodeAfterLifetime": false,    // Don't explode after vanishing 
+                    "Instantiate|m_Explosion": {        // Make a new instance of an otherwise referenced object
+                        "Explosion": {
+                            "m_EffectRadius": 300,              // Outer radius, damage is 0 to max
+                            "m_EffectRadiusMaxStrength": 256,   // Inner radius, damage is at max within here
+                            "m_ExplosionSize": 2,               // 2: Large
+                            "m_MaxDamageStrength": 2000000000,  // 2 billion damage
+                            "m_MaxImpulseStrength": 2000000     // 2 million kick
+                        },                                      // Damager data
+                        
+                        "Reference|8/ModuleDamage.deathExplosion/Fx_Explosion_Shockwave": { // Duplicate the shockwave from a cab
+                                // 8 is the ID of GSO_Cab_111. We could use the block's name instead,
+                                // but if an update changes the name, the reference will break
+                            "UnityEngine.Transform": { "localPosition": {"x":0, "y":10, "z":0} }, // Good habit to reset the position of referenced objects, they might hide very far away (or under the ground)
+                            "ParticleSystem": {         // Shockwave
+                                "startDelay": 0,    // The shockwave should come before the smoke
+                                "startSize": 2500,  // Make it huge
+                                "startLifetime": 2  // Size over Lifetime = Speed
+                            }
+                        },
+                        "GameObject|Sparks": {          // Flying sparks
+                            "ParticleSystem": {
+                                "startSpeed": 60.0,
+                                "startSize": 15,
+                                "startLifetime": 15,
+                                "gravityModifier": 0.5,
+                                "maxParticles": 1000
+                            }
+                        }, "Duplicate|Sparks": {},      // More sparks  
+                        "GameObject|ExplosionSmoke": {  // Smog
+                            "ParticleSystem": {
+                                "startDelay": 0.25,
+                                "startSpeed": 300,
+                                "startSize": 500,
+                                "startLifetime": 30,
+                                "gravityModifier": 0.0,
+                                "maxParticles": 1000
+                            }
+                        }, "Duplicate|ExplosionSmoke": { // More smog
+                            "ParticleSystem": {
+                                "startDelay": 0.5,
+                                "startSpeed": 800,
+                                "startSize": 500
+                            }
+                        }, 
+                        "GameObject|ExplosionDark": {   // It looks like weird biscuits
+                            "ParticleSystem": {
+                                "startDelay": 0.5,
+                                "startSpeed": 200,
+                                "startSize": 320,
+                                "startLifetime": 8,
+                                "gravityModifier": 0.05,
+                                "maxParticles": 1000
+                            }
+                        }, 
+                        "GameObject|ExplosionBright": { // The glow
+                            "ParticleSystem": {
+                                "startSpeed": 120,
+                                "startSize": 350,
+                                "startLifetime": 13,
+                                "gravityModifier": -0.2,
+                                "maxParticles": 1000
+                            }
+                        }, "Duplicate|ExplosionBright": {}, // More glow
+                        "GameObject|Point light": {     // The light that catches all on fire
+                            "UnityEngine.Light": {
+                                "intensity": 600.0,
+                                "range": 256.0
+                            },
+                            "FadeInOutLight": {
+                                "StartDelay": 0.0,
+                                "FadeInSpeed": 2,
+                                "FadeOutDelay": 0.0,
+                                "FadeOutSpeed": 5.5
+                            }
+                        } // The actual glow
+                    }
+                },
+                "ProjectileMoneyOnVanish": {            // This will give money when the projectile exceeds the defined lifetime without exploding
+                    //  Name           #Ammo $Base $Total
+                    //
+                    //  Wood            200   6     1200
+                    //  R_Wood          125   9     1125
+                    //  Plumbite        100   18    1800
+                    //  R_Plumbite      100   27    2700
+                    //  Titanite        80    20    1600
+                    //  R_Titanite      50    30    1500
+                    //  FibrePlating    80    48    3840
+                    //  RuggedFiblar    50    94    4700
+                    //  HardenedTitanic 40    111   4440
+                    //  TitanicAlloy    20    252   5040
+                    
+                    "Money": 5040 // The only parameter, holding the highest possible value of the projectile
+                },
+                "Rigidbody": {
+                    "drag": 0.0,
+                    "angularDrag": 0.05,
+                    "mass": 0.0001,
+                    "useGravity": false  // Dictates whether the projectile uses gravity. Default is true
+                },
+
+                // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+               "UnityEngine.CapsuleCollider": {
+                    "gameObject": {
+                        "layer": 12       // Shield - allows piercing 
+                    },
+                },
+
+                "UnityEngine.LineRenderer": {
+                    "numCapVertices": 3, // How many vertices to round the ends with
+                    "widthMultiplier": 6 // The line behind the projectile
+                }
+            }
+        },
+        "ModuleDamage": {
+            "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+                                                            // Borrow a clean projectile explosion for this block's death
+                                                            // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+            "Instantiate|deathExplosion": {             // Instantiate after referencing to modify
+                "Explosion": {
+                    "m_EffectRadius": 64,               // Outer radius, damage is 0 to max
+                    "m_EffectRadiusMaxStrength": 32,    // Inner radius, damage is at max within here
+                    "m_ExplosionSize": 2,               // 2: Large
+                    "m_MaxDamageStrength": 2000,        // 
+                    "m_MaxImpulseStrength": 200,        // 
+                    "DoDamage": false
+                },
+                "GameObject|Sparks": {          // Flying sparks
+                    "ParticleSystem": {
+                        "startSpeed": 20.0,
+                        "startSize": 5,
+                        "startLifetime": 4,
+                        "gravityModifier": 0.5,
+                        "maxParticles": 1000
+                    }
+                },
+                "GameObject|ExplosionSmoke": {  // Smog
+                    "ParticleSystem": {
+                        "startDelay": 0.1,
+                        "startSpeed": 100,
+                        "startSize": 200,
+                        "startLifetime": 7,
+                        "gravityModifier": 0.0,
+                        "maxParticles": 1000
+                    }
+                },
+                "GameObject|ExplosionDark": {   // It looks like weird biscuits
+                    "ParticleSystem": {
+                        "startDelay": 0.2,
+                        "startSpeed": 60,
+                        "startSize": 8,
+                        "startLifetime": 2,
+                        "gravityModifier": 0.05,
+                        "maxParticles": 1000
+                    }
+                }, 
+                "GameObject|ExplosionBright": { // The glow
+                    "ParticleSystem": {
+                        "startSpeed": 40,
+                        "startSize": 100,
+                        "startLifetime": 3,
+                        "gravityModifier": -0.2,
+                        "maxParticles": 1000
+                    }
+                },
+                "GameObject|Point light": {     // The light that catches all on fire
+                    "UnityEngine.Light": {
+                        "intensity": 50.0,
+                        "range": 64.0
+                    },
+                    "FadeInOutLight": {
+                        "StartDelay": 0.0,
+                        "FadeInSpeed": 0.5,
+                        "FadeOutDelay": 0.0,
+                        "FadeOutSpeed": 1
+                    }
+                } // The actual glow
+            }
+        }
+    },
+                                       
+    //"DeathExplosionReference": ""      // A block "name" or ID to borrow the block's death explosion from
+                                                        // (Currently: Venture Rapid Cannon)
+                                                        // This runs BEFORE the deserializer, so this can be used in combination with "ModuleDamage": { "Instantiate|deathExplosion": { ... } }
+}

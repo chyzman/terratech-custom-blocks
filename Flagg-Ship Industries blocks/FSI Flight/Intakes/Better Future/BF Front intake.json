@@ -1,0 +1,46 @@
+{
+	"Name": "Better Future Front-facing intake",
+	"Description": "An inline, sleek intake. goes well on the front of any smooth surface and collects any air in front of it.", 
+	"ID": 1700092, 		
+	"IDNetHex": "5322f86dfba408ec", 
+"IconName": "Intake BF.png",
+	"Faction": 7,
+	"Category": 8, 
+	"Grade": 2, 
+	"Price": 5009,
+	"HP": 250,
+	"Mass": 1.875,
+	"Recipe": "zeropointsplitter,blastcaps,blastcaps,fuelinjector,olasticbrick,olasticbrick",
+
+
+	"Cells": [ 
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 }
+	],
+	"APs": [ 
+	
+		{ "x": 0, "y": 0, "z": -0.5 },	
+		{ "x": 0.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 0 },	
+		{ "x": 0, "y": -0.5, "z": 0},
+		{ "x": 0, "y": 0.5, "z": 0},
+		{ "x": 0.5, "y": 0, "z": 1 },
+		{ "x": -0.5, "y": 0, "z": 1 },	
+		{ "x": 0, "y": -0.5, "z": 1},
+		{ "x": 0, "y": 0.5, "z": 1},
+	],
+	"SubObjects": [ {
+		"SubOverrideName":"Front-Intake",
+		"DestroyExistingColliders": true,
+		"MeshName": "BF_Front_Intake.obj",
+		"ColliderMeshName": "BF_Front_Intake.obj",
+		"MeshMaterialName": "BF_Main",
+		"SubPosition":{"x":0,"y":0,"z":1},
+		"SubScale":{"x":1,"y":1,"z":1}
+	
+	}],
+	"GamePrefabReference": "VENFuelPod(111)", 
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 1 },
+	"JSONBLOCK":{"ModuleFuelTank":{
+				 "m_Capacity":10,"m_RefillRate":20}}
+}

@@ -1,0 +1,186 @@
+{
+	"Name": "Better Future XL Sky anchor",
+	"Description": "Nicknamed the 'Guardian's Foot,' This Extra Large Sky anchor has a much higher anchor height, and a faster deploy speed, at the cost of high recoil.", //You can make multiple lines with \n
+	"ID": 1700230, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 116112,
+	"HP": 15000,
+	"Mass": 86.4,
+"IconName": "Guardian-Foot-Icon.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 50,50,50,50,50,50,50,50,52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, " ,	
+	
+	
+	
+	
+	
+	
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"BlockExtents":{ "x": 5, "y": 5, "z": 5 }, 
+    "APs": [ //The location of APs on the block. For use with "Cells"
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 0, "z": 0 },
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		
+		{ "z": -0.5, "y": 0, "x": 0 }, 
+		{ "z": 4.5, "y": 0, "x": 0 },
+		{ "z": -0.5, "y": 0, "x": 4 },
+		{ "z": 4.5, "y": 0, "x": 4 },
+		
+		{ "x": -0.5, "y": 4, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 4 },
+		
+		{ "z": -0.5, "y": 4, "x": 0 }, 
+		{ "z": 4.5, "y": 4, "x": 0 },
+		{ "z": -0.5, "y": 4, "x": 4 },
+		{ "z": 4.5, "y": 4, "x": 4 },
+		
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 4, "y": 4.5, "z": 0 },
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "BF_Anchor_Sky_222",
+	"ReferenceOffset": { "x": 1.5, "y": 2, "z": 1.5 },
+	
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"m_BF_Anchor_Sky_222_Base",
+    "MeshName": "Anchor_Housing.obj",
+    "MeshMaterialName": "BF_Main",
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"ColliderMeshName":"Anchor_Housing.obj"
+	},{"SubOverrideName":"m_BF_Anchor_Sky_222_Clamp_A",
+	
+    "MeshName": "Anchor_ClampA.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+	},{"SubOverrideName":"m_BF_Anchor_Sky_222_Clamp_C",
+	
+    "MeshName": "Anchor_ClampC.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+	},{"SubOverrideName":"m_BF_Anchor_Sky_222_Clamp_B",
+	
+    "MeshName": "Anchor_ClampD.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+	},{"SubOverrideName":"m_BF_Anchor_Sky_222_Clamp_D",
+	
+    "MeshName": "Anchor_ClampB.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+	},{
+    "SubOverrideName":"m_BF_Anchor_Sky_222_Anchor",
+	
+    "MeshName": "Anchor_Cover.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	},{
+    "SubOverrideName":"m_BF_Anchor_Sky",
+	
+    "MeshName": "Anchor_Hook.obj",
+    "MeshMaterialName": "BF_Main",
+    "SubPosition":{"x":0,"y":0,"z":0},
+	}],
+	"JSONBLOCK": {
+	 
+	 "GameObject|_anchor": {
+	  "GameObject|BFAnchorSky": {
+	   "GameObject|_beam": {
+	    "LineRenderer": {
+          "startWidth": 1.0,
+          "endWidth": 1.0,
+          "widthMultiplier": 3.0,"textureMode": 0,
+          
+          "alignment": 0,
+		  "material": {
+								"mainTexture": "Anchor_Beam.png"
+							}
+          }},
+	   "BlockAnchor": { 
+	    "m_SnapToleranceUp": 2.0,
+        "m_SnapToleranceDown": 292.6,
+        "m_SkyAnchorStrength": 1.0,
+        "m_SkyAnchorDamping": 1.0,
+        "m_IsSkyAnchor": true,
+        "m_SkyAnchorSpeed": 250.0,
+        "m_SkyAnchorRecoilForce": 10,}},
+	  "GameObject|Particle System": {
+	  
+	   "UnityEngine.Transform": {
+            "localScale": { "x":10, "y":10, "z":10 },
+            "localEulerAngles": { "x":0, "y":0, "z":0, "w":1 },
+            "localPosition": { "x":0, "y":0, "z":0} 
+          },
+          "UnityEngine.ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 5.0,
+        "playbackSpeed": 1,
+        "enableEmission": true,
+        "emissionRate": 10.0,
+        "startSpeed": 3,
+        "startSize": 0.05,
+		"startColor":{
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        },
+        "startRotation": 0.0,
+        "startRotation3D": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "startLifetime": 4.0,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 0,
+        "scalingMode": 2,
+        "automaticCullingEnabled": false,
+        "isPlaying": false,
+        "isEmitting": false,
+        "isStopped": true,
+        "isPaused": false,
+        "particleCount": 0,
+        "time": 0.0,
+        "randomSeed": 0,
+        "useAutoRandomSeed": true,
+		
+        "proceduralSimulationSupported": false,
+          },
+		   "ParticleSystemRenderer": {"minParticleSize": 0.01,
+        "maxParticleSize": 0.01,}}},
+		"ModuleAnchor": {
+   
+    "m_BrakeTorque": 2500.0,
+   
+    "BrakeTorque": 2500.0,
+   
+  }}
+	
+	
+	}

@@ -1,0 +1,35 @@
+{
+  "Name": "Hawkeye Small T Bracket",
+  "Description": "A small T bracket from Hawkeye Black Labs",
+  "ID": 117041,
+
+  "Faction": 5,
+  "Category": 0,
+  "Rarity": 0,
+  "Grade": 0,
+  "Price": 399,
+  "HP": 250,
+  "Mass": 0.5,
+  "DamageableType": 1, 
+
+  "Recipe": "5, 7, 7, 32, 32",
+
+  "IconName": "HE_Small_T_Bracket.png",
+  "MeshName": "HE_Small_T_Bracket.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_Small_T_Bracket_Collider.obj",
+
+  "Cells":[
+  {"x": 0, "y": 0, "z": 0},
+  ],
+
+  "APs": [ 
+    { "x": 0,     "y": 0,    "z": -0.5  },
+    { "x": 0.5,     "y": 0,    "z": 0  },
+    { "x": 0,     "y": 0,    "z": 0.5  },
+  ],
+
+   "GamePrefabReference": "HE_Bracket_111"
+}

@@ -1,0 +1,348 @@
+/*
+This is the smallest tank treads available for LK.
+
+Pros:   Very durable tank treads with a high grip thanks to the double-wide tank treads.
+Cons:   Heavy, expensive, and very slow (around 19-20 mph)
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Small Landship Track",
+    "Description":          "This gigantic, heavily-armored track is designed for large mobile bases, capable of climbing most mountains and cross rugged terrain. However, it's very slow and is even slower on flat ground.\n\n\"I found the original blueprint of this behemoth within the forgotten backlog of the guild's archives. Whoever designed this must be a madman, as mating a V12 battleship engine with a missile crawler will surely tear it apart without the electronics my team have designed for it.\"\n\n - Gregory Rook, Guildsman, Note #58",
+
+    "ID": 419014,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 3,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 1164084,       // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:     Main Body:    288 Titanic Alloy, 10 Plubonic Alloy
+                Electronics:  12 Mother Brain, 20 Sensory Transmitter
+                Engine:       92 Thermo Jet (23*4 Blocks worth of tank treads), 160 Ion Pulse Cell
+    */
+    "Recipe" : {
+      // Main Body
+      "54": 288,
+      "53": 10,
+      // Electronics
+      "60": 12,
+      "51": 20,
+      // Engine
+      "56": 160,
+      "63": 92
+    },
+
+    "IconName":                   "LK_small_landship_track_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                       // Name of the block's mesh                                        
+    "ColliderMeshName":           null,                                       // Name of the block's collider.
+    "SupressBoxColliderFallback": false,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    "LK_tex_3.png",
+
+    // Basic Block HP Values
+    "HP": 86400,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 576,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 4,"y": 6, "z": 12 },
+
+    "APs": [
+      // Back APs
+      {"x": 1.0, "y": 3.0, "z": -0.5 }, {"x": 2.0, "y": 3.0, "z": -0.5 },
+
+      // Top APs
+      {"x": 1.0, "y": 5.5, "z": 2.0 },  {"x": 2.0, "y": 5.5, "z": 2.0 },
+      {"x": 1.0, "y": 5.5, "z": 7.0 },  {"x": 2.0, "y": 5.5, "z": 7.0 },
+
+      // Side APs
+      {"x": -0.5, "y": 3.0, "z": 5.0 }, {"x": -0.5, "y": 3.0, "z": 6.0 }, 
+      {"x":  3.5, "y": 3.0, "z": 5.0 }, {"x":  3.5, "y": 3.0, "z": 6.0 }      
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "GC_Tracks_238",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 2.5, "y": 2.0, "z": 7.0 },
+    
+    "SubObjects":[
+      /*
+        Change the transforms of wheels and tracks
+        Root Bones can be individually moved using SubObject commands, but scaling will be inherited from the parent bone 
+        by the children bone(s) much like regular DCCs.
+      */
+
+      //b_Wheel_00 is the parent bone, every other bones are its children.
+      {
+        "SubOverrideName":            "b_Wheel_00",
+        "SubPosition":                { "x": 0, "y": 2.5, "z": 3.3 },
+        "SubRotation":                { "x": -14,   "y": 0,   "z": 0    },
+        "SubScale":                   { "x": 2, "y": 1.75, "z": 1.55 }
+      },
+
+      //  The children bones below cannot be moved using SubPosition due to it being hardcoded in-game to be constrained with wheel objects. 
+      //  However, they can be scaled and rotated.
+      {
+        "SubOverrideName":            "b_Wheel_05",
+        "SubRotation":                { "x": -43,   "y": 0,    "z": 0    },
+        "SubScale":                   { "x": 1,    "y": 1.25, "z": 1.45 }
+      },
+      {
+        "SubOverrideName":            "b_Wheel_04",
+        "SubRotation":                { "x": -20,  "y": 0,    "z": 0    },
+        "SubScale":                   { "x": 1,    "y": 1.25, "z": 2.5  }
+
+      },
+      {
+        "SubOverrideName":            "b_Wheel_03",
+        "SubRotation":                { "x": 0,   "y": 0,     "z": 0    },
+        "SubScale":                   { "x": 1,   "y": 1.25,  "z": 2.5  }
+
+      },
+      {
+        "SubOverrideName":            "b_Wheel_02",
+        "SubRotation":                { "x": 0,   "y": 0,     "z": 0    },
+        "SubScale":                   { "x": 1,   "y": 1.25,  "z": 2.5  }
+      },
+
+      { // This is the back of the tank tread
+        "SubOverrideName":            "b_Wheel_01",
+        "SubRotation":                { "x": 5,   "y": 0,     "z": 0    },
+        "SubScale":                   { "x": 1,   "y": 1.25,  "z": 1.5  }
+      },
+
+      // Change the position of the wheels
+      {
+        "SubOverrideName":            "_wheel_01",
+        "SubPosition":                { "x": 1.5, "y": 1.75,   "z": 1    }
+      },
+      {
+        "SubOverrideName":            "_wheel_02",
+        "SubPosition":                { "x": 1.5, "y": 1.75,   "z": 3.25 }
+      },
+      {
+        "SubOverrideName":            "_wheel_03",
+        "SubPosition":                { "x": 1.5, "y": 1.75,   "z": 5.5  } 
+      },
+      {
+        "SubOverrideName":            "_wheel_04",
+        "SubPosition":                { "x": 1.5, "y": 1.75,   "z": 7.75 }
+      },
+      {
+        "SubOverrideName":            "_wheel_05",
+        "SubPosition":                { "x": 1.5, "y": 3.75,   "z": 10   }
+      },
+
+      //Add guide wheels. Due to the tracks can't be used as reference (they're not exportable), manually adjust these wheels here instead
+      {
+        "MeshName":                   "LK_small_landship_track_wheel_B.obj",
+        "SubPosition":                { "x": 1.5, "y": 2.2,   "z": 1.65  }
+      },
+      {
+        "MeshName":                   "LK_small_landship_track_wheel_B.obj",
+        "SubPosition":                { "x": 1.5, "y": 3.35,   "z": 6.2 }
+      },
+      {
+        "MeshName":                   "LK_small_landship_track_wheel_B.obj",
+        "SubPosition":                { "x": 1.5, "y": 2.8,   "z": 3.8 }
+      },
+      {
+        "MeshName":                   "LK_small_landship_track_wheel_B.obj",
+        "SubPosition":                { "x": 1.5, "y": 3.9,   "z": 8.4  }
+      },
+
+      // Delete the track's main body
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Body",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+      },
+
+      // Replace the main body with this one
+      {
+      "MeshName":                   "LK_small_landship_track_body.obj",
+      "ColliderMeshName":           "LK_small_landship_track_col_body.obj",
+      "SubPosition":                { "x": 0, "y": 0,   "z": 0  }
+      },
+      
+      // Replace the track texture with a custom one
+      {
+        "SubOverrideName": "m_GC_Tracks_238_Tracks",         
+        "MeshTextureName": "LK_tex_tracks.png"
+      },
+
+      // Replace the wheels
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Wheel_01",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "MeshName":                   "LK_small_landship_track_wheel_A.obj",
+        "ColliderMeshName":           "LK_small_landship_track_col_wheel_A.obj"
+      },
+  
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Wheel_02",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "MeshName":                   "LK_small_landship_track_wheel_A.obj",
+        "ColliderMeshName":           "LK_small_landship_track_col_wheel_A.obj"
+      },
+
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Wheel_03",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "MeshName":                   "LK_small_landship_track_wheel_A.obj",
+        "ColliderMeshName":           "LK_small_landship_track_col_wheel_A.obj"
+      },
+
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Wheel_04",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "MeshName":                   "LK_small_landship_track_wheel_A.obj",
+        "ColliderMeshName":           "LK_small_landship_track_col_wheel_A.obj"
+      },
+
+      {
+        "SubOverrideName":            "m_GC_Tracks_238_Wheel_05",
+        "DestroyExistingRenderer":    true,
+        "DestroyExistingColliders":   true,
+        "MeshName":                   "LK_small_landship_track_wheel_A.obj",
+        "ColliderMeshName":           "LK_small_landship_track_col_wheel_A.obj"
+      }
+    ],
+
+    "Deserializer":{
+      "GameObject|m_GC_Tracks_238_Body":{
+        "GameObject|m_GC_Tracks_238_Tracks":{
+          "TankTrack": {
+            "trackSpeed": 0.002,                  // Dictates the animation speed of the tracks - purely visual, does not affect the block's performance.
+          }
+        }
+      },
+
+      // Torque Parameters
+      "ModuleWheels": {
+        "m_TorqueParams": {
+          "torqueCurveMaxTorque":       5000000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                                      // A high torque value is good for offroad wheels.
+
+          "torqueCurveMaxRpm":          65.0,         //  Dictates the speed of the wheel. A higher number is faster. 
+                                                      // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+          "passiveBrakeMaxTorque":      1000000.0,    // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+          "reverseBrakeMaxRpm":         1000000.0,    // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+          "basicFrictionTorque":        1000.0,       // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+          "fullCompressFrictionTorque": 100.0         // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+        },
+        
+        // Aesthetic parameters
+        "m_UseTireTracks":              true,         // Enables the wheel to leave tire tracks
+        "m_WheelTrackType":             2,            // Changes the tracks the wheel leaves behind
+        "m_AudioType":                  4,            // Changes the sound of the wheels when running
+                                                      // 1 = Heavy GeoCorp wheels
+        "m_TireTrackWidth":             10000,        // Does not work; supposedly, it should be able to change the width of the tire tracks.
+        
+        
+        "m_DustMinimumRPM":             5.0,          // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+                                                      // This is related to "torqueCurveMaxRpm"
+        
+        "m_TracksMinSpeed":             5.0,
+        "m_TracksMaxSpeed":             20.0,
+
+        "m_PrevTrackType":              0,
+        "m_TracksSkidSpeed":            0.1,
+        "m_TracksMaxSkidSpeed": 1.0,
+
+        "m_HasWheelParticles": false,
+
+        "m_DriveTurnPower": 1.0,
+        "m_DriveTurnBrake": 0.3,
+        "m_DriveTurnDifferential": 1.0,
+        "m_TurnOnSpotPower": 1.0,
+
+        "m_WheelParams":{
+          // Basic Wheel parameters
+          "radius":                     1.16,     // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+          "steerAngleMax":              0.0,      // Dictates how much the wheel is able to turn.
+          "steerSpeed":                 0,        // Dictates the time it takes for the wheel to fully go into turning position.
+          "thicknessAngular":           50,       // Dictates the width of the tire tracks
+
+          // Tire Parameters
+          "Instantiate|tireProperties":{
+            "Instantiate|props":{
+              "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+              "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+              "gripFactorLong": 20.0,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+              "gripFactorLat": 20.0                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+            }
+          },
+
+          // Suspension parameters
+          "suspensionSpring":           1000000.0,  // Dictates the amount of bounciness of the suspension's spring. 
+                                                    // It also affects the wheel's ability to carry weight.
+
+          "suspensionDamper":           5000.0,     // This tells the suspension how much the springiness will be dampened. 
+                                                    // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+          "maxSuspensionAcceleration":  100000.0,
+          "suspensionQuadratic":        true,
+          "suspensionTravel":           1.9,       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+          
+ 
+          "m_wheels": {
+            "m_DriveTurnPower": 1.0,
+            "m_DriveTurnBrake": 0.1,
+            "m_DriveTurnDifferential": 0.8,
+            "m_TurnOnSpotPower": 1.0,
+            "Capacity": 10,
+          },
+        }
+      }
+
+
+    }
+   
+
+}

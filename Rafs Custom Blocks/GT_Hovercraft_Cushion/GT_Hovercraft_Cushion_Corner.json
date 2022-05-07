@@ -1,0 +1,185 @@
+{
+	"Name": "GreenTech Hovercraft Cushion Corner",
+	"ID": 911040,
+	"Faction": 0,
+	"Category": 8,
+	"Grade": 2,
+	"IconName": "GT_Hovercraft_Cushion_Corner_Icon.png",
+	"Price": 873,
+	"HP": 1500,
+	"Mass": 3,
+	"DamageableType": 2,
+	"Friction": 0,
+	"CenterOfMass": {"x": 0.35, "y": 0.5, "z": 0.35},
+
+	"Description": "Inflatable airbag that provides a frictionless travel for your Tech.",
+	
+	"Recipe":  "1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 5, 7, 11", 
+	"SupressBoxColliderFallback": true,
+
+	"BlockExtents":
+	{
+		"x": 2,
+		"y": 2,
+		"z": 2
+	},
+	"APs": [
+	{
+		"x": 0,
+		"y": 1.5,
+		"z": 0
+	},
+    {
+		"x": 1,
+		"y": 1.5,
+		"z": 0
+	},
+	{
+		"x": 0,
+		"y": 1.5,
+		"z": 1
+	},
+	{
+		"x": -0.5,
+		"y": 1,
+		"z": 0
+	},
+	{
+		"x": -0.5,
+		"y": 1,
+		"z": 1
+	},
+	{
+		"x": 0,
+		"y": 1,
+		"z": -0.5
+	},
+	{
+		"x": 1,
+		"y": 1,
+		"z": -0.5
+	}
+    ],
+
+	"GamePrefabReference": "GSO_Track_112",
+	"KeepRenderers": false, // Keep the block's renderers
+	"KeepColliders": false, // Keep the block's colliders
+	"ReferenceOffset": {
+		"x": 0.5,
+		"y": 0,
+		"z": 0.5
+	  },
+
+	"SubObjects": [{
+			"SubOverrideName": "m_GSO_Track_112_Base",
+			"MeshName": "GT_Hovercraft_Cushion_Corner.obj",
+			"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+			"ColliderMeshName": "GT_Hovercraft_Cushion_Corner_Collider.obj",
+			"SubRotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"SubPosition": {
+				"x": -0.5,
+				"y": 0.5,
+				"z": -0.5
+			}
+		}, {
+			"SubOverrideName": "Suspension_1_A",
+			"MeshName": "GT_Hovercraft_Cushion_Corner_Cushion.obj",
+			"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"SubScale": { "x": 1, "y": 1.2, "z": 1 },
+			"SubRotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"SubPosition": {
+				"x": -0.5,
+				"y": -1.6,
+				"z": -0.5
+			}
+		},
+		{"SubOverrideName": "_wheel_1",
+			"SubRotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+		"SubPosition": {
+				"x": 0,
+				"y": 1.9,
+				"z": 0
+			}
+		},
+		{"SubOverrideName": "_wheel_2",
+			"SubRotation": {
+				"x": 0,
+				"y": 90,
+				"z": 0
+			},
+			"SubPosition": {
+					"x": 0,
+					"y": 1.9,
+					"z": 0
+				}
+			}
+	],
+	"JSONBLOCK": {
+		"GameObject|GSO_Track_112": {
+		"GameObject|m_GSO_Track_112_Treads": {
+			"TankTrack": {
+				"enabled": false
+			}
+		},
+		"GameObject|b_Wheel_1": {
+		"GameObject|Suspension_1_A": {
+			"FollowSuspension": null,
+		}
+	}
+	},
+		  
+		  "ModuleWheels": {
+			"m_TorqueParams": {
+			 "torqueCurveMaxTorque": 0.1,
+			   "torqueCurveMaxRpm": 2000,
+			  "passiveBrakeMaxTorque": 0.1,
+			   "reverseBrakeMaxRpm": 0.1,
+			   "basicFrictionTorque": 0.1,
+			   "fullCompressFrictionTorque": 0.1
+			},
+			"m_UseTireTracks": false,
+			//"m_WheelTrackType": 0,              
+			  "m_AudioType": 0,
+			"m_WheelParams": {
+				"Instantiate|tireProperties": {
+					"Instantiate|props": {
+						"frictionScaleLong": 0.01,
+						"frictionScaleLat": 0.01,
+						"gripFactorLong": 0.01,
+						"gripFactorLat": 0.01
+					}
+				  },
+				"radius": 1.5,
+				"thicknessAngular": 55.0,
+				"suspensionSpring": 20000.0,
+				"suspensionDamper": 500.0,
+				"maxSuspensionAcceleration": 15.0,
+				"suspensionQuadratic": true,
+				"suspensionTravel": 0.2,
+				"steerAngleMax": 0,
+				"steerSpeed": 0.1
+			},
+			 "m_DriveTurnPower": 1000.0,
+			 "m_DriveTurnBrake": 0.1,
+			 "m_DriveTurnDifferential": 0,
+			 "m_TurnOnSpotPower": 1000.0,
+			 "m_DustMinimumRPM": 1
+		}
+	}
+}

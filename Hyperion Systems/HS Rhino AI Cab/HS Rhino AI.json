@@ -1,0 +1,134 @@
+       
+{
+  "Name": "Hyperion Systems Rhino AI Cab",
+  "Description": "A bulky and robust cab, sporting highly sophisticated tactical AI systems.",
+  "ID": 100058,
+
+  "Faction": 7,
+  "Category": 1,
+  "Grade": 2,
+  "Price": 325, 
+
+  "HP": 1500, 
+  "Mass": 2.0,
+
+  "Fragility": 0, 
+  "DamageableType": 1, 
+  "Rarity": 0, 
+
+  "Recipe": "7,7,43", 
+  "IconName": "HSRhinoIcon.png",
+  "MeshName": "HS Rhino AI.obj",
+  
+  "MeshTextureName": "HS textures.png",     
+  
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5}
+  ],
+  "Deserializer":{
+    "ModuleTechController": {
+        "m_PlayerInput": false,
+    },
+
+    //----- Module Vision: Usually seen on cabs so they can "see" targets and aim their weapons at a specific range. -----//
+    "ModuleVision": {
+        "visionConeAngle":  360.0,  // Dictates the "vision" cone provided by this block. The cone is aimed at the front of the block. 
+                                    // When an enemy is within this cone angle, weapons attached on the Tech will begin to aim at it. By default value is 360
+
+        "visionRange":      400,    // Dictates how far the Tech detects enemies. 
+                                    // 900 is the maximum reasonable value considering draw and render distance, any more is simply overkill as the game will despawn enemies at a certain distance. 
+    },
+
+
+    //----- Module AI Bot: This is used by A.I. Modules. Place this on a block to turn it into an A.I. module. -----//
+    "ModuleAIBot": {
+        "m_AITypesEnabled":         ["Harvest", "Idle", "Escort"],
+        "m_AimPos":                 { "x": 0.0,"y": 0.0,"z": 0.0 },
+    },
+
+
+    //---------- ModuleDriveBot: This is used both by Player Cabs and A.I. Modules. This will dictate their behavior when not piloted by the player (such as being an enemy) ----------//
+    // So far, Enemy AI behavior is simply that it will move behind the enemy.
+    "ModuleDriveBot": {
+
+        // Combat Attributes: Note that the following attributes only work on enemies
+
+        "targetIdealRange":         100.0,                      // While attacking the enemy, this dictates how far the AI will position itself relative to its target. 
+                                                                // The higher the value, the farther it will try to stay away from its target.
+
+        "turnToleranceOuter":       45.0,                       // While attacking the enemy, this value dictates the angle of leeway the A.I. can make relative to its target. Sensible values range from 20-45.                   
+        "turnToleranceInner":       20.0,           
+
+        // Navigation Attributes: Note that the following attributes only work on enemies
+
+        "m_DefaultThrottle":        0.01,                       // Dictates the driving speed this A.I. This is a percentile value: 0.0 to 1.0 works here.
+
+        "poweredTurnInsideWheel": 0.2,  //
+
+        "turnAngleFullThrottle":    10.0,                       // Dictates the maximum angle needed to throttle by using m_DefaultThrottle. 
+                                                                // The higher the value, the more flexible it can be when turning around. Sensible values are around 45.0
+        
+        
+        // Uncatalogued Attributes
+        "waypointDistanceFullThrottle": 0.1,
+
+        "waypointReachedTolerance": 2.0,
+        "waypointPlayerAngularBias": 45.0,
+       
+
+
+        "lookAroundAngleMin": 30.0,
+        "lookAroundAngleMax": 180.0,   
+
+        "m_DefaultPatrolDistMin": 5.0,
+        "m_DefaultPatrolDistMax": 15.0,
+        "patrolThrottle": 0.01,
+        "lookAroundPauseMin": 0.25,
+        "lookAroundPauseMax": 0.5,
+        "lookAroundThrottle": 0.5,
+        
+        "lostTargetMemoryTime": 3.0,
+        "holdTargetDuration": 0.5,
+        "stopCirclingDelay": 2.0,
+        "controlPriority": 50,
+
+        "debugReportThrottle": 0.0, //
+        
+        "recoverTimeout": 0.0, //
+        "forceUnCapsizeTimeout": 0.0, //
+        "capsizedMinSpeed": 1.5,
+        "m_ThrottleD": 1.0,
+        "m_ThrottleT": 1.0,
+        "m_PatrolDistMin": 5.0,
+        "m_PatrolDistMax": 15.0,
+        "lookAroundWaitDecay": 0.0,
+        "lookAroundState": 0,
+        "lostTargetChaseDecay": 0.0,
+        "holdTargetCountdown": 0.0,
+        "stopCirclingTimer": 0.0,
+        
+        "attackTargetRadius": 0.0,          // Warning, do not touch this attribute as it can cause a crash
+        
+        "recoverTime": 0.0,
+        "forceUnCapsizeTime": 0.0,
+        "sumoBoostOn": false,
+    },
+
+}
+
+
+
+
+
+}       
+      

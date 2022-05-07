@@ -1,0 +1,263 @@
+{
+  "Name": "GeoCorp Dynamite Hatch",
+  "Description": "A container that releases a detonating charge with long fuse, which uses the most recent technology in explosives to deliver a powerful blast.",
+  "ID": 910180, 
+
+  "Faction": 2, 
+  "Category": 4, 
+  "Grade": 2, 
+  "Price": 15255, 
+  "HP": 2000,
+  "Mass": 8,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+
+  "Recipe":  "45, 45, 45, 45, 54, 54, 55, 61, 61",
+  "IconName": "GC_Dynamite_Icon.png", 
+  "EmissionMode": 1, 
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+  {"x": 0, "y": 1.5, "z": 0},
+	{"x": 0, "y": 1.5, "z": 1},
+	{"x": 1, "y": 1.5, "z": 0},
+  {"x": 1, "y": 1.5, "z": 1},
+  {"x": 0, "y": 0, "z": -0.5},
+  {"x": 0, "y": 1, "z": -0.5},
+  {"x": 1, "y": 0, "z": -0.5},
+  {"x": 1, "y": 1, "z": -0.5}
+  ],
+
+  "GamePrefabReference": "HE_BombBay_113", 
+  "KeepRenderers": true,
+  "Keepcolliders": false,
+  "DeathExplosionReference": "HE_Mortar_232",
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 1.35,
+    "z": 1.50
+  }, 
+  "ReferenceRotationOffset": {
+    "x": 55, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  },
+  "ReferenceScale": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+ 
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "MeshName": "GC_Dynamite_Base.obj",
+      "MeshMaterialName": "GC_Main"
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Door_R",
+      "MeshName": "GC_Dynamite_Door_R.obj",
+      "MeshMaterialName": "GC_Main",
+      "SubPosition": { "x": -0.7, "y": -1, "z": -0.04}
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Door_L",
+      "MeshName": "GC_Dynamite_Door_L.obj",
+      "MeshMaterialName": "GC_Main",
+      "SubPosition": { "x": 0.7, "y": -1, "z": -0.04}
+    },
+    {
+      "SubOverrideName": "_spawnBulletL",
+      "SubPosition": { "x": 0.7, "y": -1, "z": 0.5}
+    },
+    {
+      "SubOverrideName": "m_HE_BombBay_113_Bomb",
+      "MeshName": "GC_Dynamite_Bomb.obj",
+      "MeshMaterialName": "GC_Main",
+      "SubPosition": { "x": 0.0, "y": -1, "z": 0.5},
+	    "SubScale": { "x": 1.2, "y": 1.2, "z": 1.2 }
+    },
+
+    {"ColliderMeshName": "GC_Dynamite_Collider_1.obj"},
+    {"ColliderMeshName": "GC_Dynamite_Collider_2.obj"},
+    {"ColliderMeshName": "GC_Dynamite_Collider_3.obj"},
+    {"ColliderMeshName": "GC_Dynamite_Collider_4.obj"},
+    {"ColliderMeshName": "GC_Dynamite_Collider_5.obj"},
+    {"ColliderMeshName": "GC_Dynamite_Collider_6.obj"}
+  ],
+
+  "Deserializer": {
+    
+    "ModuleWeapon": { 
+      "m_FireSFXType": 33
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 2.0,
+      "m_SeekingRounds": false,
+      "m_BurstShotCount": 0.0,
+      "m_BurstCooldown": 0.0,
+      "m_CooldownVariancePct": 0.0
+    },
+    "FireData": {
+      "m_BulletSprayVariance": 0.0,
+      "m_MuzzleVelocity": 5.0,
+      "m_KickbackStrength": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|_particles": null,
+        "GameObject|CentreOfMass": {
+          "Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "GameObject|m_HE_Bomb": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.2, "y":1.2, "z":1.2 }
+          },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "GC_Dynamite_Bomb.obj"
+          },
+          "UnityEngine.MeshRenderer": {
+            "material": "GC_Main"
+            }
+        },
+        "SeekingProjectile": null,
+        "MissileProjectile": {
+          "m_UsesGravity" : true,
+          "m_MaxBoosterLifetime" : 0
+        },
+
+        "WeaponRound": { 
+          "m_Damage": 0
+        },
+        "Rigidbody": {
+          "drag": 0.8,
+          "angularDrag": 0.05,
+          "mass": 2.0,
+          "useGravity": true
+        },
+        "Projectile": { 
+          "m_LifeTime": 5, 
+          "m_DeathDelay": 2,
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": false,
+          "m_IgnoreCollisionWithBarrel" : true,
+          "m_CanHaveGravity" : true,
+          "m_GravityScale" : 0.1,
+          "m_StickOnTerrain" : false,
+          "m_ImpactSFXType" : 0,
+            "Instantiate|m_Explosion": {
+              "Explosion": {
+                "m_ExplosionType": 4,
+                "m_DamageType" : 7,
+                "m_EffectRadius":15,
+                "m_EffectRadiusMaxStrength": 10, 
+                "m_MaxDamageStrength": 4000, 
+                "m_MaxImpulseStrength": 500
+              },
+              "GameObject|Sparks": { 
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startSize": 1,
+                      "startSpeed": 15.0,
+                      "emissionRate": 25.0,
+                      "maxParticles": 750,
+                      "emission": {
+                        "rateMultiplier": 2450.0,
+                        "rateOverTimeMultiplier": 0.2,
+                        "burst": {
+                          "count": 750,
+                          "maxCount": 650,
+                          "minCount": 400
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionBright": { 
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startSize": 20,
+                      "startSpeed": 20,
+                      "maxParticles": 750,
+                      "emission": {
+                        "rateMultiplier": 2650.0,
+                        "rateOverTimeMultiplier": 0.2,
+                        "burst": {
+                          "count": 650,
+                          "maxCount": 600,
+                          "minCount": 500
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionDark": { 
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startSize": 35,
+                      "startSpeed": 30,
+                      "maxParticles": 750,
+                      "emission": {
+                        "rateMultiplier": 2650.0,
+                        "rateOverTimeMultiplier": 0.2,
+                        "burst": {
+                          "count": 650,
+                          "maxCount": 600,
+                          "minCount": 500
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|ExplosionSmoke": { 
+                "UnityEngine.ParticleSystem": {
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startSize": 40,
+                      "startSpeed": 25,
+                      "maxParticles": 750,
+                      "emission": {
+                        "rateMultiplier": 2650.0,
+                        "rateOverTimeMultiplier": 0.2,
+                        "burst": {
+                          "count": 650,
+                          "maxCount": 600,
+                          "minCount": 500
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "UnityEngine.BoxCollider": {
+              "center": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "size": {
+                "x": 0.9,
+                "y": 0.9,
+                "z": 0.9
+              }
+          }
+      }
+    }
+  }			
+ 
+}

@@ -1,0 +1,86 @@
+{
+  "Name": "GreenTech Nose Light",
+  "Description": "A beak shaped Leaf block with a powerful headlight for night expeditions.",
+  "ID": 911207, 
+
+  "Faction": 0, 
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 828, 
+  "HP": 1200, 
+  "Mass": 3.5,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "1, 1, 5, 5, 7, 7, 9, 32, 32, 32", 
+
+  "IconName": "GT_Nose_Light_Icon.png", 
+  "MeshName": "GT_Nose_Light.obj", 
+  "ColliderMeshName": "GT_Nose_Light_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 1, "z": 2},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_Light_Fixed_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "JSONBLOCK": {
+    "GameObject|Lights": {
+      "Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.4,
+          "z": 1.0
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GameObject|GSO_Fixed Light_Spotlight": {
+        "Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "UnityEngine.Light":{
+          "color": {
+            "r": 0.6,
+            "g": 1.0,
+            "b": 0.3,
+            "a": 1.0
+          },
+          "intensity": 1.5,
+          "range": 150.0,
+          "spotAngle": 80.0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "Name": "B.F. & COUGER V.O.B - Extension Structure",
+  "Description": "A support structure that serves as an armor plate to protect the auxiliary booster.",
+  "ID": 546392,
+  "Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP|RR = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2,
+  "Price": 9864,
+  "HP": 6000, // roughly
+  // structure
+  // m3 * 3
+  // 7.16m3
+  // *3 = 68.22
+  "Mass": 21.48,
+  "CenterOfMass": {
+    "x": 2.0,
+    "y": 2.0,
+    "z": 1.9
+  },
+  "Fragility": 0.0, //no fall off
+  "DamageableType": 1, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  // armor block, strong against explosion
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+  "EmissionMode": 1,
+  // Rugged Fiblar  14
+  // Plubonic Alloy 2
+  // Titanic Alloy  6
+  "Recipe": "52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 54, 54, 54, 54, 54, 54, ",
+  "IconName": "BF_VOB_s3_sub_support.png",
+  "MeshName": "BF_VOB_sub_support.obj",
+  //"ColliderMeshName": "BF_VOB_sub_support.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": true,
+  //"Friction": 0.6, //A value between 0 and 1, the slowdown of rubbing objects
+  //"StaticFriction": 0.6, //A value between 0 and 1, how much it sticks to a surface when it is stopped
+  "Bounciness": 0.0, //A value between 0 and 1, how much it bounces back from a collision
+  "MeshTextureName": null,
+  "MeshMaterialName": "BF_Main",
+  "CellMap": [ // Slices of the block's cell occupancy, from back to front
+    // Any character placement that is not a space will be filled as a cell
+    [ // Z 0 end point
+      "0   ",
+      "   0",
+      "   0",
+      "   0",
+      "0   ",
+    ],
+    [ // Z 1
+      "0   ",
+      " 000",
+      "   0",
+      " 000",
+      "0   ",
+    ],
+    [ // Z 2
+      "0   ",
+      " 000",
+      "   0",
+      " 000",
+      "0   ",
+    ],
+    [ // Z 3
+      "0   ",
+      " 000",
+      "   0",
+      " 000",
+      "0   ",
+    ],
+  ],
+  "APs": [
+    {"x": -0.5,"y": 0,"z": 0},
+    {"x": -0.5,"y": 4,"z": 0},
+
+    {"x": 2.5,"y": 2,"z": 2},
+
+    {"x": -0.5,"y": 0,"z": 3},
+
+    {"x": -0.5,"y": 4,"z": 3},
+    {"x": 2.5,"y": 2,"z": 3},
+  ],
+  "GamePrefabReference": "BF_Block_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "DeathExplosionReference": "BF_Block_111",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 90 // Roll
+  },
+  "SubObjects": [
+    // colliders setting ----------------------------------------------------------------
+    // Mesh Collider
+    { // ---------- c1
+      "ColliderMeshName": "BF_VOB_s3_sub_support_c1.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { // 
+      "ColliderMeshName": "BF_VOB_s3_sub_support_c1.obj",
+      "SubPosition": {"x": 0,"y": 4,"z": 0},
+      "SubScale": {"x": 1,"y": -1,"z": 1}
+    },
+    { // ---------- c2
+      "ColliderMeshName": "BF_VOB_s3_sub_support_c2.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    { // ---------- c3
+      "ColliderMeshName": "BF_VOB_s3_sub_support_c3.obj",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 1,"y": 1,"z": 1}
+    },
+    // Primitive Collider
+    // !!!!------ Don't forget to swap the Y and Z ------!!!!
+    { // 
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": -0.34312,"y": 0,"z": 0},
+      "SubScale": {"x": 0.31376,"y": 0.26906,"z": 0.425105}
+    },
+    { // 
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": -0.34312,"y": 0,"z": 3},
+      "SubScale": {"x": 0.31376,"y": 0.26906,"z": 0.425105}
+    },
+    { // 
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": -0.34312,"y": 4,"z": 0},
+      "SubScale": {"x": 0.31376,"y": 0.26906,"z": 0.425105}
+    },
+    { // 
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": -0.34312,"y": 4,"z": 3},
+      "SubScale": {"x": 0.31376,"y": 0.26906,"z": 0.425105}
+    },
+  ],
+
+  "JSONBLOCK": {
+
+    "Reference|VEN_FuelPod_111/ModuleFuelTank.": { // fuel tank
+      "m_Capacity": 300000.0,
+      "m_RefillRate": 300,
+    },
+
+  }
+
+}

@@ -1,0 +1,49 @@
+/*
+Description: This is a two block long armor plate
+Pros:   High HP with lots of APs
+Cons:   Heavy and expensive
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Two Armor Plate",
+    "Description":          "An armor plate that's two blocks long. It won't detach when damaged and is very durable. \n\n\"Prospectors squabble for scraps in far-flung worlds merely to satisfy their corporate overlords. This galactic sector heaves under its own chaos - any more and it will buckle. We intend to fix that. \"",
+
+    "ID":                   419030,           
+    "Faction":              2,           
+    "Category":             2,         
+    "Rarity":               2,            
+    "Grade":                3,             
+    "Price":                9108,        
+    "Recipe" :              { "54": 4, "52": 2, "53": 8 },
+      
+    "IconName":             "LK_two_armor_plate_icon.png",                 
+    "MeshName":             "LK_two_armor_plate_body.obj",                                                    
+    "MeshColliderName":     "LK_two_armor_plate_body_col.obj",                
+    "NoBoxCollider":        false,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                   1500,          
+    "Mass":                 10,         
+    "DamageableType":       1,   
+    "DetachFragility":      0.0, 
+
+    // Block Dimensions
+    "BlockExtents":         { "x": 2, "y": 1,"z": 1 },
+
+    "APs": [ 
+        {"x": -0.5, "y" : 0, "z": 0}, {"x": 1.5, "y" : 0, "z": 0},
+        {"x": 0, "y" : 0.5, "z": 0}, {"x": 1, "y" : 0.5, "z": 0},
+        {"x": 0, "y" : -0.5, "z": 0}, {"x": 1, "y" : -0.5, "z": 0},
+        {"x": 0, "y" : 0, "z": -0.5}, {"x": 1, "y" : 0, "z": -0.5},
+    ],
+
+
+
+
+
+
+}

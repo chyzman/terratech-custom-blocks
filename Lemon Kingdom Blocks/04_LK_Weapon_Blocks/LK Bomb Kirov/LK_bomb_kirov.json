@@ -1,0 +1,355 @@
+/*
+Description: This is a bomb bay containing 3 bombs that fire in sequence.
+
+Pros:   Powerful with a large blast radius
+
+Cons:   Heavy, expensive and isn't armored
+
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Kirov Bomb Bay",
+    "Description":          "A heavy bomb bay holding 3 nuclear-grade bombs commonly equipped by heavy airships and bomber planes. While powerful and durable, it's heavy and lacks armor.\n\n\"An Alexander Kirov design, this bomb bay uses ingenious systems to quickly reload itself on the fly, such as a miniature SCU directly connected to a friendly ordnance site, a favorite amongst endurance pilots.\"",
+
+    "ID": 419057,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 4,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 96588,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:   Main Body: 16 Titanic Alloy, 16 Rugged Fiblar, 4 Plubonic Alloy
+              Bombs:     3 Seed AI, 15 Z4 Explosives, 3 Dervish Gel
+    */
+    "Recipe" : { 
+      //Main Body
+      "54": 16, "52": 16, "53": 4,
+      // Bombs
+      "55": 15, "61": 3, "65": 3 
+    },
+      
+    "IconName":                   "LK_bomb_kirov_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   null,                                     // Name of the block's mesh                                        
+    "MeshColliderName":           null,                                     // Name of the block's collider.
+    "NoBoxCollider":              false,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 12800,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 128.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 0,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 4,"z": 4 },
+
+    "APs": [ 
+        // Top APs
+        { "x": 0, "y": 3.5, "z": 0 }, { "x": 1, "y": 3.5, "z": 0 },
+        { "x": 0, "y": 3.5, "z": 3 }, { "x": 1, "y": 3.5, "z": 3 },
+    ],
+
+  
+    // Advanced Settings
+    "PrefabReference":  "650", // HE Paladin Bomb Block ID
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0.5, "y": 0, "z": 2.5 },
+
+    
+    "SubObjects":[
+      // Main Block
+      {
+        "ObjectName":                 "body",
+        "MeshName":                   "LK_bomb_kirov_body.obj",
+        "MeshColliderName":           "LK_bomb_kirov_body_col.obj",
+        "Position":                   { "x": 0.5, "y": -0.5, "z": 1.5 }
+      },
+    
+      // Delete unnecessary meshes
+      {
+        "ObjectName":                 "_barrel_1/_recoiler/m_HE_BombBay_113_Base",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_R",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_L",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      /////
+      {
+        "ObjectName":                 "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_R",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_L",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      /////
+      {
+        "ObjectName":                 "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_R",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_L",
+        "DestroyExistingRenderer":      true,
+        "DestroyExistingColliders":     true,
+      },
+
+      // Replace the fake bombs with new ones
+      {
+        "ObjectName":                 "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+        "MeshName":                   "LK_bomb_kirov_projectile.obj",
+        "Rotation":                     {"x": -90, "y": 0, "z": 0 },
+        "TextureName":                  "LK_tex_1.png",
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+        "MeshName":                   "LK_bomb_kirov_projectile.obj",
+        "Rotation":                     {"x": -90, "y": 0, "z": 0 },
+        "TextureName":                  "LK_tex_1.png",
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy_copy/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb",
+        "MeshName":                   "LK_bomb_kirov_projectile.obj",
+        "Rotation":                     {"x": -90, "y": 0, "z": 0 },
+        "TextureName":                  "LK_tex_1.png",
+      },
+
+      // Move the bomb spawning positions
+      {
+        "ObjectName":                 "_barrel_1",
+        "Position":                   { "x": 0.5, "y": 0.25, "z": 0.85 }
+      },
+      {
+        "ObjectName":                 "_barrel_1_copy",
+        "Position":                   { "x": 0.5, "y": 1.3, "z": 0.85 }
+      },     
+      {
+        "ObjectName":                 "_barrel_1_copy_copy",
+        "Position":                   { "x": 0.5, "y": 2.35, "z": 0.85 }
+      }
+    ],
+
+    "Deserializer":{
+      "GameObject|_barrel_1":{},
+      "Duplicate|_barrel_1":{},
+      "Duplicate|_barrel_1_copy":{},    
+
+      /********** ModuleWeapon **********/
+      "ModuleWeapon": {
+        "m_RotateSpeed": 0,                       // Dictates the speed of the gun's rotation whenever it aims at a target.
+        "m_LimitedShootAngle": 0.0,
+        "m_FireSFXType": 18,                      // Dictates the sound used when firing
+                                                  // 9 Venture Oozee SMG
+                                                  // 11 Hawkeye SMG
+      },
+
+      /********** ModuleWeaponGun **********/
+      "ModuleWeaponGun": {
+        "m_ShotCooldown":         1.0,            // The length of paus between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct":  0.00,           // Dictates how random the length of pause between shots.
+
+
+        "m_BurstShotCount": 3,
+        "m_BurstCooldown": 6.0,                   // The amount of time used to reload when using burst firing - a higher value lengthens reload time. 
+                                                  // This is automatically disabled when m_BurstShotCount is set to 0
+
+        "m_FireControlMode": 0,                   // Dictates how the guns will fire
+                                                  //  0 =   The guns will fire one at a time
+                                                  //  1 =   All guns will fire at the same time
+        "m_NumCannonBarrels": 3,                  // The number of barrels this gun has.
+      },
+ 
+      "FireData":{
+        "Instantiate|m_BulletPrefab": {
+          "GameObject|m_HE_Bomb":{
+            "UnityEngine.Transform": { "localRotation": { "x": 0, "y": 0.0, "z": 0} },
+            
+            "UnityEngine.MeshFilter": {
+              "sharedMesh": "LK_bomb_kirov_projectile.obj"
+            },
+            "UnityEngine.MeshRenderer": {
+                "material": {
+                    "mainTexture": "LK_tex_1.png"
+                }
+            },
+          },
+
+          // Shorten the collider so it doesn't destroy itself when firing
+          "CapsuleCollider": {
+            "height": 3.5,
+            "center": { "x": 0.0,"y": 0.0,"z": 1.0 },
+          },
+          "GameObject|_particles":{
+            "UnityEngine.Transform": { "localPosition": { "x": 0.0, "y": 0.0, "z": 0.1 } },
+            
+            "GameObject|SmokeTrail":{
+              // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+              "LineRenderer": {
+                // The color at the start of the trail
+                "startColor": { "r": 1.0, "g": 0.3, "b": 0.0, "a": 1.0 },
+
+                // The color at the end of the trail
+                "endColor":   { "r": 1.0, "g": 0.5, "b": 0.0, "a": 1.0 }
+              }
+            }
+          },
+
+          "Projectile": {
+            "m_Damage":                         10,             // The damage of the bullet when directly hitting a block
+            "m_ExplodeAfterLifetime":           true,           // If set to true, the bullet will explode when despawning
+            "m_IgnoreCollisionWithBarrel":      true,           // If set to true, the bullet will ignore any collisions for a set period. Useful for complex-shaped barrels
+            
+            "m_DeathDelay": 0.0,                                // Dictates the amount of time the bullet lives after it hits a target before it despawns. 
+                                                                // Default is 0.0: the bullet will despawn after hitting an object.
+
+            "m_ExplodeOnTerrain": true,                         // If set to true, the bullet will explode when it hits terrain 
+
+            "Instantiate|m_Explosion": {
+                "Explosion": {
+                    "m_EffectRadiusMaxStrength":    14.0,       // Dictates the damage type of the explosion
+                    "m_EffectRadius":               20.0,       // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                    "m_MaxDamageStrength":          9000.0,     // The splash damage done
+                    "m_MaxImpulseStrength":         500.0,      // The strength of the knockback done by the explosion
+                    
+                    "m_DamageType":                 3,          // The type of damage the explosion will inflict
+                },
+
+                // Smoke FX
+                "Reference|8/ModuleDamage.deathExplosion/FX_Explosion_Shockwave": { 
+                  "UnityEngine.Transform": { "localPosition": {"x":0, "y":1, "z":0} }, 
+                  "ParticleSystem": {         
+                      "startDelay": 0,       
+                      "startSize": 100,      
+                      "startLifetime": 0.75 
+                  }
+                },
+                "GameObject|Sparks": {
+                  "ParticleSystem": {
+                    "startSpeed": 50.0,
+                    "startSize": 0.1,
+                    "startLifetime": 3,
+                    "gravityModifier": 0.5,
+                    "maxParticles": 250
+                  }
+                },
+                "GameObject|ExplosionSmoke": {
+                  "ParticleSystem": {
+                    "startDelay": 0.25,         // The amount of time before the particle starts playing
+                    "startSpeed": 50,           // The initial travelling speed of the particle: this will depend on the particle
+                    "startSize": 75,            // The initial size of the particle.
+                    "startLifetime": 5,         // The duration of each particle's existence.  
+                    "maxParticles": 1000        // The number of particles spawned when it exists. For game performance's sake, keep this to a minimum
+                  }
+                },
+                
+                "GameObject|ExplosionDark": {
+                  "ParticleSystem": {
+                    "startDelay": 0.2,         // The amount of time before the particle starts playing
+                    "startSpeed": 5,           // The initial travelling speed of the particle: this will depend on the particle
+                    "startSize": 80,            // The initial size of the particle.
+                    "startLifetime": 4,         // The duration of each particle's existence.  
+                    "maxParticles": 1000        // The number of particles spawned when it exists. For game performance's sake, keep this to a minimum
+                  }
+                },
+               
+                "GameObject|ExplosionBright": {
+                  "ParticleSystem": {
+                    "startDelay": 0.0,         // The amount of time before the particle starts playing
+                    "startSpeed": 1,           // The initial travelling speed of the particle: this will depend on the particle
+                    "startSize": 40,            // The initial size of the particle.
+                    "startLifetime": 3,         // The duration of each particle's existence.  
+                    "maxParticles": 1000        // The number of particles spawned when it exists. For game performance's sake, keep this to a minimum
+                  }
+                },
+                
+                "GameObject|Point light": {
+                  "UnityEngine.Light": {
+                    "intensity": 100.0,
+                    "range": 20.0
+                  },
+                },
+
+            }
+
+          },
+        }
+
+      }
+
+      
+    }
+
+
+
+
+
+}

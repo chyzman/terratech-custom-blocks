@@ -1,0 +1,310 @@
+{
+  "Name": "Better Future Momentum Engine",
+  "Description": "The Momentum Engine uses self contained hover repulsion technology in alternating directions in order to spin, generating angular momentum.",
+  "ID": 910952, 
+
+  "Faction": 7,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 18282,
+  "HP": 1000,
+  "Mass": 4,
+
+  "IconName": "BF_Momentum_Engine_Icon.png", 
+  "MeshName": "BF_Momentum_Engine.obj", 
+
+  "Recipe": "17, 17, 17, 17, 52, 52, 52, 59, 59, 63",
+
+
+  "MeshMaterialName": "BF_Main", 
+
+  "ColliderMeshName": "BF_Momentum_Engine_Collider.obj",
+  "SupressBoxColliderFallback": true, 
+  
+  "Cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1
+    },
+	
+  ],
+ 
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0.5,
+      "z": 1
+    }
+  ],
+
+  
+  "GamePrefabReference": "GSO_HoverJet_111", 
+  "KeepReferenceRenderers": false,
+  
+  
+  "SubObjects": [{
+    "SubOverrideName": "m_HoverTrigger_A",
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": -0.3,
+      "y": 0,
+      "z": 1.3
+    },
+    "SubScale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    }
+  }, 
+  {"SubOverrideName": "m_HoverTrigger_B",
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": 1.3,
+      "y": 0,
+      "z": -0.3
+    },
+    "SubScale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    }
+  },
+  {"SubOverrideName": "m_HoverTrigger_C",
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": 1.3,
+      "y": 0,
+      "z": 1.3
+    },
+    "SubScale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    }
+  },
+  {"SubOverrideName": "m_HoverTrigger_D",
+    "MakeBoxCollider": true,
+    "SubPosition": {
+      "x": -0.3,
+      "y": 0,
+      "z": -0.3
+    },
+    "SubScale": {
+      "x": 0.4,
+      "y": 0.4,
+      "z": 0.4
+    }
+  },
+  { "SubOverrideName": "m_GSO_Hover_111_Jet",
+    "SubPosition": {
+      "x": 0.5,
+      "y": 0,
+      "z": -0.23
+    },
+    "SubRotation": {
+      "x": 0, // Pitch
+      "y": 0, // Yaw
+      "z": -90 // Roll
+    }
+  },
+  {"SubOverrideName": "m_GSO_Hover_111_Jet_copy",
+    "SubPosition": {
+      "x": 1.23,
+      "y": 0,
+      "z": 0.5
+    },
+    "SubRotation": {
+      "x": 90, // Pitch
+      "y": 0, // Yaw
+      "z": 0 // Roll
+    }
+  },
+  {"SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy",
+    "SubPosition": {
+      "x": 0.5,
+      "y": 0,
+      "z": 1.23
+    },
+    "SubRotation": {
+      "x": 0, // Pitch
+      "y": 0, // Yaw
+      "z": 90 // Roll
+    }
+  },
+  {"SubOverrideName": "m_GSO_Hover_111_Jet_copy_copy_copy",
+    "SubPosition": {
+      "x": -0.23,
+      "y": 0,
+      "z": 0.5
+    },
+    "SubRotation": {
+      "x": -90, // Pitch
+      "y": 0, // Yaw
+      "z": 0 // Roll
+    }
+  } 
+  ],
+
+  "JSONBLOCK": {
+  "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.5, "y":0, "z":0.5 } 
+      },
+    },
+    "GameObject|m_HoverTrigger_A": {
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 // Layer Wheel
+        }
+      }
+    },
+	"GameObject|m_HoverTrigger_B": {
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 // Layer Wheel
+        }
+      }
+    },
+	"GameObject|m_HoverTrigger_C": {
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 // Layer Wheel
+        }
+      }
+    },
+	"GameObject|m_HoverTrigger_D": {
+      "UnityEngine.Transform": {
+        "gameObject": {
+          "layer": 20 // Layer Wheel
+        }
+      }
+    },  
+	  "GameObject|m_GSO_Hover_111_Jet": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+	  "HoverJet": {
+          "m_VectoredThrustMaxAngle": 0,
+		  "m_VectoredThrustMaxForceAngle": 0,
+        },
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_GSO_Hover_111_Jet": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|_hoverJet": {
+	  "HoverJet": {
+          "m_VectoredThrustMaxAngle": 0,
+		  "m_VectoredThrustMaxForceAngle": 0,
+        },
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_GSO_Hover_111_Jet_copy": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+	  "HoverJet": {
+          "m_VectoredThrustMaxAngle": 0,
+		  "m_VectoredThrustMaxForceAngle": 0,
+        },
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    },
+    "Duplicate|m_GSO_Hover_111_Jet_copy_copy": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+	  "HoverJet": {
+          "m_VectoredThrustMaxAngle": 0,
+		   "m_VectoredThrustMaxForceAngle": 0,
+        },
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|p_Hover": {
+          "UnityEngine.Transform": { 
+            "localPosition": { "x":0, "y":0, "z":0 }
+          }
+        }
+      }
+    }
+  }
+}

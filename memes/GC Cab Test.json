@@ -1,0 +1,68 @@
+{
+  "Name": "GeoCorp <color=red><b>DESPACITO</b></color> Cab",
+  "Description": "THERE IS NO STOPPING THE <color=red><b>DESPACITO</b></color> CAB",
+  "ID": 934342,
+
+  "Faction": 2,
+  "Category": 1,
+  "Grade": 0,
+  "Rarity": 2,
+  "Price": 1449,
+  "Health": 1220,
+  "Mass": 4.6,
+
+  "BlockExtents": { "x": 2, "y": 3, "z": 1 },
+  "APs": [
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 1, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 1, "z": -0.5 }
+  ],
+
+  "Recipe": "7,7,7,7,7,7,9,13,1,1,1,1,1,1,1,3,3,32,32",
+  "GamePrefabReference": "GC_Cab_221",
+  "KeepRenderers": true, // Keep the block's renderers
+  "KeepColliders": true, // Keep the block's colliders
+
+  "SubObjects": [ {
+      "SubOverrideName": "Geometry",
+      "SubPosition": { "x": 1, "y": 2, "z": 0 } // Move light strip to top of block
+    }, {
+      "SubOverrideName": "Lights",
+      "SubPosition": { "x": 1, "y": 2, "z": 0 } // Move light strip to top of block
+    }, {
+      "SubOverrideName": "_barrel",
+      "SubPosition": { "x": -0.1, "y": -1.3, "z": 0.2 }, // Move beam so that it is in front of the left flap
+      "SubRotation": { "x": 90, "y": 0, "z": 0 } // Cab animation is rotated weird, fix that here
+    } ],
+  
+  "Deserializer": {
+    "ModuleWeapon": { // Base weapon class
+      "m_ShotCooldown": 0.001,
+      "m_FireSFXType": 32
+     },
+    "ModuleWeaponGun": { // Make beam continuous like normal plasma beam
+      "m_ShotCooldown": 0.001
+    },
+
+    // Now we start the GameObject Referencing
+    "Reference|GC_Light_Strip_211/Geometry": { }, // Get the light strip's model
+    "Reference|GC_Light_Strip_211/Lights": { }, // Get the light strip's lights
+    "GameObject|GeoCorp_Cab_Mobile": {
+      "GameObject|m_GC_Cab_212_Cab": {
+        "Reference|GC_PlasmaCutter_222/_barrel": { } // Put a plasma beam on a moving part of this block
+      }
+    },
+    // There are other ways to reference
+		"ModuleDamage": { // Copy the death explosion of a fuel tank
+      //"deathExplosion": "Reference|GSO_FuelTank_222.ModuleDamage.deathExplosion", // This just replaces the explosion with the value on this path
+      "Instantiate|deathExplosion": { // Why replace the explosion, when we can ADD to the explosion
+        "Reference|GSO_FuelTank_222.ModuleDamage.deathExplosion": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+          }
+        }
+      }
+		}
+  }
+}

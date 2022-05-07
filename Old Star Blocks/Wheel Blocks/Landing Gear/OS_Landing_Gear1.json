@@ -1,0 +1,150 @@
+{
+  "Name": "Old Star Straight Landing Gear",
+  "Description": "Now this is how Old Star do. With Old Star Taking to the skies they needed lighter weight wheels that do not take too much space and keep aircraft from landing on thier hulls. With similar capabilites to the Caster Wheels, the Old Star's landing gear will ensure you can land your aircraft safely.",
+  "ID": 300163,
+  "Faction": 4,
+  "Category": 3,
+  "Grade": 2,
+  "Price": 2886,
+  "HP": 1000,
+  "Mass": 6.25,
+  "IconName": "Old_Star_Landing_Gear_icon.png",
+  "MeshName": null,
+  "EmissionMode": 2,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 5, 5, 43, 43, 47, 47 ",
+
+
+  "DamageableType": 2,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [
+    {
+      "x": 0.0,
+      "y": 0.5,
+      "z": 0.0
+    }
+  ],
+  "Cells": [
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": -1.0,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": -2.0,
+      "z": 0.0
+    }
+  ],
+
+  "PrefabReference": "VEN_Wheel_LandingGear_111",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "OverrideName": "m_VEN_Wheel_LandingGear_111_Axle",
+      "MeshName": "OS_Landing_Gear_Strut.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "OverrideName": "m_VEN_Wheel_LandingGear_111_Tyre",
+      "ColliderMeshName": "OS_Landing_Gear_Wheel.obj",
+      "MeshName": "OS_Landing_Gear_Wheel.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "OverrideName": "m_VEN_Wheel_LandingGear_111_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_Landing_Gear_Base.obj",
+      "ColliderMeshName": "OS_Landing_Gear_Base.obj"
+    },
+    {
+      "ObjectName": "_wheel",
+      "Position": {
+        "x": 0,
+        "y": -0.9,
+        "z": 0
+      }
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|_sparksLocator": { //Where the sparks fly when the wheel is overloaded
+      "x": 0.5,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "GameObject|CentreOfMass": { //This determines the Center of Mass
+      "x": 0.0,
+      "y": 0.5,
+      "z": 0.0
+    },
+    //   // Torque Parameters
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 10000.0, // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+        // A high torque value is good for offroad wheels.
+
+        "torqueCurveMaxRpm": 510.0, //  Dictates the speed of the wheel. A higher number is faster. 
+        // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+        "passiveBrakeMaxTorque": 4200.0, // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+        "reverseBrakeMaxRpm": 150.0, // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+        "basicFrictionTorque": 200.0, // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+        "fullCompressFrictionTorque": 200.0 // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+      },
+
+      // Aesthetic parameters
+      "m_UseTireTracks": true, // Enables the wheel to leave tire tracks
+      "m_WheelTrackType": 0, // Changes the tracks the wheel leaves behind
+      "m_AudioType": 4, // Changes the sound of the wheels when running
+      // 1 = Heavy GeoCorp wheels
+      "m_TireTrackWidth": 5, // Does not work; supposedly, it should be able to change the width of the tire tracks.
+
+
+      "m_DustMinimumRPM": 5.0, // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+      // This is related to "torqueCurveMaxRpm"
+      "m_DriveTurnPower": 10.0,
+      "m_DriveTurnBrake": 0.3,
+      "m_DriveTurnDifferential": 1.0,
+      "m_TurnOnSpotPower": 50.0,
+
+      "m_WheelParams": {
+        // Basic Wheel parameters
+        "radius": 0.45, // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+        "steerAngleMax": 25.0, // Dictates how much the wheel is able to turn.
+        "steerSpeed": 2, // Dictates the time it takes for the wheel to fully go into turning position.
+        "thicknessAngular": 41.1, // Dictates the width of the tire tracks
+        // Tire Parameters
+        "Instantiate|tireProperties": {
+          "Instantiate|props": {
+            "frictionScaleLong": 1.0, // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+            "frictionScaleLat": 1.0, // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+            "gripFactorLong": 1.5, // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+            "gripFactorLat": 1.5 // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+          }
+        },
+
+        // Suspension parameters
+        "suspensionSpring": 1000.0, // Dictates the amount of bounciness of the suspension's spring. 
+        // It also affects the wheel's ability to carry weight.
+        "suspensionDamper": 200.0, // This tells the suspension how much the springiness will be dampened. 
+        // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+        "maxSuspensionAcceleration": 15.0,
+        "suspensionQuadratic": false,
+        "suspensionTravel": 0.3 // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+      }
+    }
+  }
+}

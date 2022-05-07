@@ -1,0 +1,183 @@
+// This is the main energy-based projector for LK.
+// Pros: It combines both a shield and repair bubble into one block, saving space. It also has a large projection radius
+// Cons: It's heavy, expensive and uses up a lot of power. 
+{
+    // Basic Block Information
+    "Name":                 "LK Iron Rind Shield-Repair Projector",
+    "Description":          "This block is both a shield projector and a repair projector rolled into one. Designed for cities and military bases, its large radius can easily replace multiple shields and repair bubbles at once, saving precious space. However, it requires a lot of power to run.",
+
+    "ID": 419010,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 6,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 127368,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    
+    // Body:                      8 Rugged Fiblar, 8 Titanic Alloy, 20 Plubonic Alloy
+    // Shield/Repair Projector:   4 Coffman Cell, 2 Thermo Jet, 6 Proxima Dark
+    "Recipe":  "54, 54, 54, 54, 54, 54, 54, 54, 52, 52, 52, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 62, 62, 62, 62, 63, 63, 66, 66, 66, 66, 66, 66",	
+	
+    "IconName":                   "LK_Iron_Rind_Projector_icon.png",       // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_Iron_Rind_Projector_body.obj",       // Name of the block's mesh                                        
+    "ColliderMeshName":           "LK_Iron_Rind_Projector_col.obj",        // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    null,
+
+    // Basic Block HP Values
+    "HP": 8000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 96,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 0,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 2,"y": 4, "z": 2 },
+
+    "APs": [
+        // Bottom APs
+        {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 0.0, "y": -0.5, "z": 1.0 },
+        {"x": 1.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 1.0 },
+
+        // Bottom Ring APs
+        {"x": 0.0, "y": 0.0, "z": 1.5 }, {"x": 1.0, "y": 0.0, "z": 1.5 }, 
+        {"x": 0.0, "y": 0.0, "z": -0.5 }, {"x": 1.0, "y": 0.0, "z": -0.5 },
+        {"x": -0.5, "y": 0.0, "z": 0.0 }, {"x": -0.5, "y": 0.0, "z": 1.0 },
+        {"x": 1.5, "y": 0.0, "z": 0.0 }, {"x": 1.5, "y": 0.0, "z": 1.0 },
+
+        // Top Ring APs
+        {"x": 0.0, "y": 3.0, "z": 1.5 }, {"x": 1.0, "y": 3.0, "z": 1.5 }, 
+        {"x": 0.0, "y": 3.0, "z": -0.5 }, {"x": 1.0, "y": 3.0, "z": -0.5 },
+        {"x": -0.5, "y": 3.0, "z": 0.0 }, {"x": -0.5, "y": 3.0, "z": 1.0 },
+        {"x": 1.5, "y": 3.0, "z": 0.0 }, {"x": 1.5, "y": 3.0, "z": 1.0 }
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "555",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 0.5, "y": 1.5, "z": 0.5 },
+    
+    "SubObjects":[
+      {
+        // Remove the shield body
+        "SubOverrideName": "m_HE_Shield_111_Base",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true
+      }
+    ],
+
+    "JSONBLOCK":{
+      "ModuleShieldGenerator": {
+        // Basic Attributes
+        "m_Radius": 30.0,                       // Dictates the bubble's projection radius. HE Shields have a value of 15.0
+        "m_EnergyConsumptionPerSec": 50.0,      // Dictates the amount energy value used per second. 
+        "m_InitialChargeEnergy": 4000.0,        // Dictates the amount of energy used before the block can start up.
+        "m_PowerUpDelay": 10.0,                 // Dictates the amount of time for the block to project its bubble
+
+        // Shield Attribute
+        "m_Repulsion": true,                    // Disables or Enables this block's ability to absorb projectiles (e.g. bullets & missiles). 
+                                                // This is set to "true" for shield blocks.
+
+        "m_EnergyConsumedPerDamagePoint": 0.5,  // Dictates how much the shield uses up for every damage point it deflects.
+
+        // Healing Attributes
+        "m_Healing": true,                      // If set to true, the shield will heal any block inside it
+        "m_HealingHeartbeatInterval": 4.0,      // Dictates how fast the repair bubble will "pulse". 
+                                                // Lowering this value will make it quicker, and vice versa.
+
+        "m_MaxHealingPerHeartbeat": 5000,       // Dictates the amount of HP healed per "pulse".
+        "m_EnergyConsumedPerPointHealed": 0.25, // Dictates the amount of energy this block will use for every point of HP it heals. 
+
+        // Animation Attributes
+        "m_InterpTimeOn": 2.0,                  // Dictates how fast the bubble fully projects.
+        "m_InterpTimeOff": 2.0,                 // Dictates how fast the bubble shuts down when out of power/disabled.
+
+        // Non-functional/Minute Attributes
+        "m_ParticleLife": 1.0,              
+        "m_ParticleSpeed": 100.0,            
+        "m_RepelKick": 5.0,                    
+        "m_RepelKickAngular": 5.0,             
+        "m_MinTechForce": 50.0,                
+        "m_MaxTechForce": 100.0,                  
+        "m_EnergyDeficit": 0.0,
+        "m_EnergyDrain": 0.0,
+        "m_HealingHeartbeatNextTime": 179.753769,
+        "m_TimeWithoutEnergy": 0.0,
+        "m_EnoughPower": true,
+        "m_ChargingEffect": false,
+        "m_State": 2,
+        "m_PowerUpTimer": 0.0,
+        "m_CachedCollisionFixedFrameCount": 0,
+        "IsPowered": true,
+
+        // Hardcoded Attributes
+        "m_ShieldBulletTriggerEvent": {
+          "m_OnTriggerEventCallback": {}
+        },
+        "m_TechTriggerEvent": {
+          "m_OnTriggerEventCallback": {}
+        },
+
+        "m_PowerOnShieldSfxEvent": {
+          "m_EventPath": "event:/OldAssets/GSO_ShieldUP",
+          "EventPath": "event:/OldAssets/GSO_ShieldUP"
+        },
+        "m_PowerOffShieldSfxEvent": {
+          "m_EventPath": "event:/OldAssets/GSO_ShieldDOWN",
+          "EventPath": "event:/OldAssets/GSO_ShieldDOWN"
+        }
+      },
+
+      "ModuleEnergy": {
+        "m_Priority": 20,
+        "m_OutputPerSecond": 0.0,                // Dictates the amount of power this block produces per second.
+        "m_OutputEnergyType": 0,                 // Dictates the type of energy it will use/give.
+                                                 // 0 = Battery Energy
+                                                 // 1 = Fuel
+        "m_OutputConditions": 3,                 // 
+        "m_SequentialPowerUp": false,            // Dictates whether it should power up one at a time with other blocks
+        "m_PowerUpDelay": 0.0                    // Dictates the time delay when powering up. 
+      },
+
+    }
+
+}

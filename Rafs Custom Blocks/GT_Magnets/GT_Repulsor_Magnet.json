@@ -1,0 +1,146 @@
+{
+  "Name": "GreenTech Repulsor Magnet",
+  "Description": "This device provides clearance when roaming through debris, instantly repelling loose blocks in a wide arc in front of it.",
+  "ID": 911195, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 2322, 
+  "HP": 3000, 
+  "Mass": 10,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 0,
+
+  "Recipe":  "5, 5, 5, 7, 7, 7, 13, 13, 43, 43, 48",
+  "IconName": "GT_Repulsor_Magnet_Icon.png", 
+  "MeshName": "GT_Magnet_Base.obj",
+  "ColliderMeshName": "GT_Magnet_Base_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 4,"y": 1, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 1, "y": 0.5, "z": 0},
+    {"x": 2, "y": 0.5, "z": 0},
+    {"x": 3, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 2, "y": 0, "z": -0.5},
+    {"x": 3, "y": 0, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "GSO_ScrapMagnet_Mini_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+	  "MeshName": "GT_Magnet_Orange.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 40,
+      "m_AcceptFlags": -3
+    },
+    "ModuleItemHolderMagnet": {
+      "m_Strength": -8000.0,
+      "m_PowerDecayMassThreshold": 24.0,
+      "m_DropRadiusVsPickup": 1.4,
+      "m_DropAfterMinTime": 1.0,
+      "m_DropUnstuckAfterTime": 4.0,
+      "m_DropOnDamageThreshold": 300.0,
+      "m_GluePeriod": 0.1,
+      "m_SettlingSpeedThreshold": 0.2,
+      /* "Instantiate|m_WaitingParticlesPrefab": {
+        "startColor": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.1,
+          "a": 1.0
+        }
+      },
+      "Instantiate|m_PullingParticlesPrefab": {
+        "startColor": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.1,
+          "a": 1.0
+        }
+      },
+      "Instantiate|m_GluedParticlesPrefab": {
+        "startColor": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.1,
+          "a": 1.0
+        }
+      }, */
+      "m_OnlineSFXType": 52
+    },
+    "GameObject|PickUpRadiusForward": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "right": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "up": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+         "forward": {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        "name": "PickUpRadiusForward"
+       }
+    },
+    "ModuleItemPickup": {
+      "m_PickupRange": 30.0,
+      "m_PickupSortBuckets": 4,
+      "m_VisionRefreshInterval": 1.0,
+      "m_AcceptNeutral": false,
+      "m_PrePickupPeriod": 4.0,
+      "m_PickupAfterMinInterval": 0.1,
+      "m_HandoverAfterMinInterval": 0.5,
+      "m_SFXPickupItem": 53,
+      "m_SFXContentionLoop": 52,
+      "m_PickUpRadiusAngle": 120.0,
+      "m_PickUpRadiusFwd": "PickUpRadiusForward"
+    }
+  }
+}

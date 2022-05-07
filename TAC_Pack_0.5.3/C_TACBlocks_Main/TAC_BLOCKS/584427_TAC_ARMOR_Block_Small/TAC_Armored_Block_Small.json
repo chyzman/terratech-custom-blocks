@@ -1,0 +1,160 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Small Heavy Armor Block",
+  "Description": "Moderate mass, high health, INSANE cost. \nAn armor block that has actually more than just attachment points on the bottom, and a very steadfast demeanor on holding its ground. Just don't crash into anything as that will ruin the compression dampener. \n\nBuild with armor, and make an armor tanks tanks tanks and armor tanks tanks tanks armor tanks.", //You can make multiple lines with \n
+  "ID": 584427, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 5136, //    //HE block cost is 573 with times 3 multiplier. BF block cost is 768 with times 3 multiplier.
+  "HP": 1950, //Normal TAC Block is 450 - Heavy armor density is 650 compared to HE's 1000
+  "Mass": 4.0, //Normal HE Block is 1.5
+  //4 blocks in a 3 block area
+
+  "IconName": "ElongatedOne.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  //"MeshName": "TACOneBlock.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "44, 44, 45, 45, 44, 44, 45, 45, 44, 44, 45, 45, 44, 44, 45, 45", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //No bonus here as well...
+        // {
+        //   "name": "Hardened Titanic",
+        //   "id": 45,
+        //   "count": 1
+        // }
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "TACOneBlock.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top Face has none
+    //Bottom Face
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 2, "y": -0.5, "z": 0 },
+    //Sides
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": 2.5, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 2, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 0.5 },
+    { "x": 1, "y": 0, "z": 0.5 },
+    { "x": 2, "y": 0, "z": 0.5 }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 1,
+    "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GCArmourPlate(421)
+	"GamePrefabReference": "HE_Block_Alt_01_(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,  
+	"ReferenceOffset": { "x":1, "y":0, "z":0 }, //Shift the subobjects of the block prefab by x, y and z 
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+      "SubOverrideName": "m_HE_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACHeavyArmorSmall.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main"
+    },
+  // { //Tracks Model
+  //  "SubOverrideName": "m_AP0",
+  //   "DestroySubReferenceRenderer": true,
+  //   "DestroyExistingColliders": true,
+  //   "MakeBoxCollider": false,
+  //   "MeshName": "HE_AP",
+  //   "MeshMaterialName": "HE_Main",
+  //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+  // },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Vanilla armor blocks are just awful. This will make the actually heavy armor stay until the bitter end.
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+    "Damageable": {
+      "m_DamageableType": 1,//was 6 //What damage multiplier this runs by
+      // "m_HealingOrigin": null,
+      "m_AoEDamageBlockPercent": 1.0, //Blocks shotguns
+      // was "m_AoEDamageBlockPercent": 0.8,
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false,
+    },
+    // TAC Armoring
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.75,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": true,     // Should the multipliers be used?
+      //----- DamagableMultipliers -----
+        "Standard":     1,      // Standard multiplier
+        "Bullet":       0.75,      // Bullet multiplier
+        "Energy":       0.75,      // Energy multiplier
+        "Explosive":    0.5,    // Explosive multiplier
+        "Impact":       4,      // Impact multiplier - YEOUCH
+        "Fire":         2,      // Fire multiplier
+        "Cutting":      1,      // Cutting multiplier
+        "Plasma":       0.75,      // Plasma multiplier
+      //--------------------------------
+    },
+    // "GameObject|m_AP0": {
+    //   "UnityEngine.Transform": {
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localPosition": { "x":0, "y":0, "z":0 } 
+    //   }
+    // },
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,523 @@
+{
+  "Name": "GreenTech Tornado Hover",
+  "Description": "An odd creation of the weather research department, the Tornado Hover creates a rotating collumn of air to generate propulsion above the ground. A sophisticated ion-pressure modulator can be activated to create even more powerful funneled winds, flinging debris around and ripping trees and Techs apart.",
+  "ID": 911118, 
+
+  "Faction": 0, 
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 40008, 
+  "HP": 12000, 
+  "Mass": 40,
+  "CenterOfMass": {"x": 3.5, "y": 0.5, "z": 3.5},
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 0,
+
+  "Recipe":  "52, 52, 52, 52, 52, 52, 52, 52, 52, 52, 57, 57, 57, 57, 62, 66, 66",   
+  "IconName": "GT_Tornado_Hover_Icon.png",
+ 
+  "CellMap":
+	[
+		[
+      " xxxxxx ",
+      "  xxxx  "
+		],
+    [
+      "xxxxxxxx",
+      " xxxxxx "
+    ],
+    [
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    [
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    [
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    [
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ],
+    [
+      "xxxxxxxx",
+      " xxxxxx "
+    ],
+    [
+      " xxxxxx ",
+      "  xxxx  "
+		]
+  ],   
+  "APs": [ 
+    {"x": 0, "y": 1.5, "z": 3},
+    {"x": 0, "y": 1.5, "z": 4},
+    {"x": 1, "y": 1.5, "z": 1},
+    {"x": 1, "y": 1.5, "z": 2},
+    {"x": 1, "y": 1.5, "z": 3},
+    {"x": 1, "y": 1.5, "z": 4},
+    {"x": 1, "y": 1.5, "z": 5},
+    {"x": 1, "y": 1.5, "z": 6},
+    {"x": 2, "y": 1.5, "z": 1},
+    {"x": 2, "y": 1.5, "z": 2},
+    {"x": 2, "y": 1.5, "z": 3},
+    {"x": 2, "y": 1.5, "z": 4},
+    {"x": 2, "y": 1.5, "z": 5},
+    {"x": 2, "y": 1.5, "z": 6},
+    {"x": 3, "y": 1.5, "z": 0},
+    {"x": 3, "y": 1.5, "z": 1},
+    {"x": 3, "y": 1.5, "z": 2},
+    {"x": 3, "y": 1.5, "z": 3},
+    {"x": 3, "y": 1.5, "z": 4},
+    {"x": 3, "y": 1.5, "z": 5},
+    {"x": 3, "y": 1.5, "z": 6},
+    {"x": 3, "y": 1.5, "z": 7},
+    {"x": 4, "y": 1.5, "z": 0},
+    {"x": 4, "y": 1.5, "z": 1},
+    {"x": 4, "y": 1.5, "z": 2},
+    {"x": 4, "y": 1.5, "z": 3},
+    {"x": 4, "y": 1.5, "z": 4},
+    {"x": 4, "y": 1.5, "z": 5},
+    {"x": 4, "y": 1.5, "z": 6},
+    {"x": 4, "y": 1.5, "z": 7},
+    {"x": 5, "y": 1.5, "z": 1},
+    {"x": 5, "y": 1.5, "z": 2},
+    {"x": 5, "y": 1.5, "z": 3},
+    {"x": 5, "y": 1.5, "z": 4},
+    {"x": 5, "y": 1.5, "z": 5},
+    {"x": 5, "y": 1.5, "z": 6},
+    {"x": 6, "y": 1.5, "z": 1},
+    {"x": 6, "y": 1.5, "z": 2},
+    {"x": 6, "y": 1.5, "z": 3},
+    {"x": 6, "y": 1.5, "z": 4},
+    {"x": 6, "y": 1.5, "z": 5},
+    {"x": 6, "y": 1.5, "z": 6},
+    {"x": 7, "y": 1.5, "z": 3},
+    {"x": 7, "y": 1.5, "z": 4}
+  ],
+  
+  "GamePrefabReference": "GC_Hover_222",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  
+  "SubObjects": [ 
+      {
+       "MeshName": "GT_Tornado_Hover.obj",
+       "ColliderMeshName": "GT_Tornado_Hover_Collider.obj",
+       "MeshTextureName": "GreenTech 1.png", 
+       "MeshGlossTextureName": "GreenTech 2.png", 
+       "MeshEmissionTextureName": "GreenTech 3.png"
+      },
+      {
+        "SubOverrideName": "m_GC_Hover_222_Jet",
+        "MeshName": "GT_Tornado_Hover_Gimbal.obj",
+        "ColliderMeshName": "GT_Tornado_Hover_Gimbal_Collider.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png"
+      },
+      {
+        "SubOverrideName": "Rotor",
+        "MeshName": "GT_Tornado_Hover_Rotor.obj",
+        "MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png"
+      }
+    ],
+	
+	"JSONBLOCK": {
+    "GameObject|m_GC_Hover_222_Jet": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 3.5, "y": 1.2, "z": 3.5},
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+        },
+        "GameObject|Rotor_Spinner": {
+          "UnityEngine.Transform": {
+            "localPosition": {"x": 0, "y": 0, "z": 0},
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+            },
+          "Spinner": {
+            "m_Speed": 1,
+            "m_RotationAxis": {
+              "axis": 1
+            },
+            "m_SteerAxis": {
+              "axis": 1
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 5
+          },
+          "GameObject|Rotor": {
+            "UnityEngine.Transform": {
+              "localPosition": {"x": 0, "y": 0, "z": 0},
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+              }
+          }
+        },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": {
+          "localPosition": {"x": 0, "y": 0, "z": 0},
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+          },
+       "GameObject|ParticleSystem_GSO_HoverPad (1)": {
+        "UnityEngine.Transform": {
+        "localPosition": {"x": 0, "y": -5, "z": 0},
+        "localEulerAngles": {
+          "x": 90.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+        },
+        "UnityEngine.ParticleSystem": null,
+        "ParticleSystemRenderer": null,
+       
+        "Reference|BF_Laser_Turret_313/_gimbalBase":{
+          "UnityEngine.Transform": { 
+            "localPosition": { "x": 0, "y": 0, "z": 0 },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }  
+            },
+          "GimbalAimer": {
+            "rotationLimits": [-20, 20] 
+          },
+          "GameObject|_gimbalElev": {
+          "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": 0, "z": 0 },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }  
+              },
+          "GimbalAimer": {
+            "rotationLimits": [-20, 20] 
+          },
+          "GameObject|_barrel": {
+            "Spinner": null,          
+              "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": 0, "z": 0 },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }     
+              },
+               "GameObject|_muzzleFlash": {
+                "GameObject|_light": null
+               },
+               "GameObject|_beam": {
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x": 0, "y": 0, "z": 0 },
+                  "localEulerAngles": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }  
+                  },
+                "BeamWeapon": {
+                  "m_Range": 100,
+                  "m_DamagePerSecond": 2000,
+                  "m_DamageType": 0, //7 is plasma
+							    "m_FadeOutTime": 5,
+                    "Instantiate|m_HitParticlesPrefab": {
+                      /* "ParticleSystem": null,
+                      "ParticleSystemRenderer": null,
+                        "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam/ParticleSystem.": {
+                          
+                          "startDelay": 0.0,
+                          "loop": true,
+                          "playOnAwake": true,
+                          "playbackSpeed": 5.0,
+                          "enableEmission": true,
+                          "emissionRate": 150.0,
+                          "startSpeed": 0.15,
+                          "startSize": 10,
+                          "startColor": {
+                            "r": 1,
+                            "g": 0.7,
+                            "b": 0.5,
+                            "a": 0.03
+                          },
+                          "startLifetime": 32,
+                          "gravityModifier": 0.0,
+                          "maxParticles": 100000,
+                          "simulationSpace": 0,
+                          "scalingMode": 2,
+                          "shape": {
+                            "box": {
+                              "x": 1.0,
+                              "y": 1.0,
+                              "z": 1.0
+                            },
+                            "meshScale": 0.01
+                          }
+                        
+                        },
+                        "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam/ParticleSystemRenderer.": {
+                          "material": "Mat_FX_Smoke_Dark"
+                        } */
+                      "Spinner": {
+                        "m_Speed": 1,
+                        "m_RotationAxis": {
+                          "axis": 1
+                        },
+                        "m_SteerAxis": {
+                          "axis": 1
+                        },
+                        "m_AutoSpin": true,
+                        "m_SpinUpTime": 5
+                      },
+                      "ParticleSystem": {
+                        "startSize": 0
+                      },
+                      "ParticleSystemRenderer": {
+                        "material": null
+                      },
+                      "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+                        "UnityEngine.Transform": {
+                          "localPosition": {"x": 0, "y": -1, "z": 0} ,
+                           "localScale": {
+                            "x": 0.5,
+                            "y": 0.5,
+                            "z": 0.5
+                          },
+                          "localEulerAngles": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                          }
+                         },
+                        "ParticleSystem": {
+                          "startDelay": 0.0,
+                          "loop": true,
+                          "playOnAwake": true,
+                          "playbackSpeed": 5.0,
+                          "enableEmission": true,
+                          "emissionRate": 100.0,
+                          "startSpeed": 0.15,
+                          "startSize": 10,
+                          "startColor": {
+                            "r": 1,
+                            "g": 0.7,
+                            "b": 0.5,
+                            "a": 0.15
+                          },
+                          "startLifetime": 32,
+                          "gravityModifier": 0.0,
+                          "maxParticles": 100000,
+                          "simulationSpace": 0,
+                          "scalingMode": 2
+                        },
+                        "ParticleSystemRenderer": {
+                          "material": "Mat_FX_Smoke_Dark"
+                        }
+                      }
+                    }
+                  },
+                "UnityEngine.LineRenderer": {
+                  "startWidth": 0,
+                  "endWidth": 0
+                }
+              }
+          },
+          "Duplicate|_barrel": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0.0, "y": 0.0, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              },
+            "GameObject|_beam": {
+              "UnityEngine.Transform": { 
+                "localPosition": { "x": 0, "y": 0, "z": 0 }  
+                },
+              "BeamWeapon": {
+                "m_Range": 80,
+                  "m_DamagePerSecond": 0,
+                  "m_FadeOutTime": 0.2,
+                  "Instantiate|m_HitParticlesPrefab": {
+                    "GameObject|explosion": {
+                    "UnityEngine.Transform": { 
+                      "localPosition": { "x": 0, "y": 0, "z": -5 }  
+                      },
+                    "Explosion": {
+                      "m_DamageType" : 3,
+                      "m_EffectRadius":10,
+                      "m_EffectRadiusMaxStrength": 9, 
+                      "m_MaxDamageStrength": 0, 
+                      "m_MaxImpulseStrength": -1500
+                    }
+                  }
+                  } 
+              },
+              "UnityEngine.LineRenderer": {
+                "startWidth": 0,
+                "endWidth": 0
+              }
+            }
+          },
+          "Duplicate|_barrel_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0.0, "y": 3, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              },
+            "GameObject|_beam": {
+              "UnityEngine.Transform": { 
+                "localPosition": { "x": 0, "y": 0, "z": 0 }  
+                },
+              "BeamWeapon": {
+                "m_Range": 80,
+                  "m_DamagePerSecond": 800,
+                  "m_FadeOutTime": 1,
+                  "Instantiate|m_HitParticlesPrefab": {
+                    "GameObject|explosion": null,
+                    "ParticleSystem": null,
+                    "ParticleSystemRenderer": null
+                  }
+              },
+              "UnityEngine.LineRenderer": {
+                "startWidth": 0,
+                "endWidth": 0
+              }
+            }
+          },
+         
+          "Duplicate|_barrel_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 3, "y": 0, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": -3, "y": 0, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 2, "y": 2, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 2, "y": -2, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": -2, "y": -2, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": -2, "y": 2, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          },
+          "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0.0, "y": -3, "z": 0 } ,
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }   
+              }
+          }
+        }
+        }  
+       },
+       "HoverJet": {
+        "jetRadius": 4.0,
+        "forceMax": 150000.0,
+        "forceRangeMax": 30.0,
+        "m_DampingScale": 0.05,
+        "m_MaxClimbDistance": 40.0,
+        "m_VectoredThrustMaxAngle": 6,
+        "m_VectoredThrustMaxForceAngle": 6,
+        "m_HoverPowerMin": 0.0,
+        "m_HoverPowerMax": 2.0
+       } 
+     }  
+     },
+     "Reference|BF_Laser_Turret_313/ModuleWeapon.":{
+      "m_FireSFXType": 0
+    },
+    "Reference|BF_Laser_Turret_313/ModuleWeaponGun.":{
+      "m_ShotCooldown" : 0.01,
+      "m_ResetBurstOnInterrupt" : true,
+      "m_CooldownVariancePct" : 0
+    },
+    "Reference|BF_Laser_Turret_313/TargetAimer.":{},
+    "Reference|BF_Laser_Turret_313/FireData.":{},
+    "ModuleHover": {
+      "m_AutoEnableSpinnersOnAttach": true,
+      "m_UseBoosterAudio": true,
+      "m_BoosterAudioType": 3,
+      "m_Spinners": ["/m_GC_Hover_222_Jet/Rotor_Spinner/Spinner."]
+    }
+	}
+}

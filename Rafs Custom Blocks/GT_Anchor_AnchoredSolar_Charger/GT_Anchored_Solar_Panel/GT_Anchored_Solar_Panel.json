@@ -1,0 +1,219 @@
+{
+  "Name": "GreenTech Anchored Solar Panel",
+  "Description": "A design inspired by nature, this solar panel not only generates energy very efficiently, it also makes bases and techs look a little more lush.",
+  "ID": 911139, 
+
+  "Faction": 0, 
+  "Category": 6, 
+  "Grade": 4, 
+  "Price": 12372, 
+  "HP": 1500, 
+  "Mass": 6,
+  "CenterOfMass": {"x": 1.5, "y": 0, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "15, 15, 15, 15, 15, 15, 32, 32, 43, 43, 43, 43, 56, 56, 56, 56",  
+  "IconName": "GT_Anchored_Solar_Panel_Icon.png", 
+  "MeshName": "GT_Anchored_Solar_Panel_Base.obj", 
+  "ColliderMeshName": "GT_Anchored_Solar_Panel_Base_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  
+  "CellMap":
+	[
+		[
+			"xxxx",
+			"xxxx",
+			"xxxx",
+			"    "
+    ],
+    [
+			"xxxx",
+			"xxxx",
+			"xxxx",
+			" xx "
+    ],
+    [
+			"xxxx",
+			"xxxx",
+			"xxxx",
+			" xx "
+    ],
+    [
+			"xxxx",
+			"xxxx",
+			"xxxx",
+			"    "
+    ]
+  ],  
+  "APs": [ 
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 2, "y": -0.5, "z": 2}
+  ],
+
+  "GamePrefabReference": "GSO_SolarGen_141",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 1.5,
+    "y": 0,
+    "z": 1.5
+  },
+
+  "SubObjects": [
+    /* {
+      "SubOverrideName": "m_GSO_SolarGen_141_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_C_R",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_C_L",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_B_L",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_B_R",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_A_R",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_A_L",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_D_R",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_GSO_SolarGen_141_Panel_D_L",
+      "DestroyExistingRenderer": true
+    },
+  {
+    "SubOverrideName": "GSO_Anchor",
+    "MeshName": "GT_Anchored_Solar_Panel_Anchor.obj",
+    "ColliderMeshName": "GT_Anchored_Solar_Panel_Anchor_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  }, */
+  {
+    "SubOverrideName": "m_GSO_SolarGen_141_Pole_A",
+    "MeshName": "GT_Anchored_Solar_Pole_A.obj",
+    "ColliderMeshName": "GT_Anchored_Solar_Pole_A_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName": "m_GSO_SolarGen_141_Pole_B",
+    "MeshName": "GT_Anchored_Solar_Pole_B.obj",
+    "ColliderMeshName": "GT_Anchored_Solar_Pole_B_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName": "m_GSO_SolarGen_141_Pole_C",
+    "MeshName": "GT_Anchored_Solar_Pole_C.obj",
+    "ColliderMeshName": "GT_Anchored_Solar_Pole_C_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName": "m_GSO_SolarGen_141_Pole_D",
+    "MeshName": "GT_Anchored_Solar_Pole_D.obj",
+    "ColliderMeshName": "GT_Anchored_Solar_Pole_D_Collider.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+  }
+  /* {
+    "SubOverrideName": "Charger",
+    "MeshName": "GT_Anchored_Solar_Panel_Charger.obj",
+    "MeshMaterialName":"Mat_Pickup_Resource_RodiusCapsule"
+  } */
+],
+  
+  "JSONBLOCK": {
+    "GameObject|_anchor": null,
+     /*  "GameObject|GSOAnchorFixed": {
+        "GameObject|GSO_Anchor": {
+          /* "GameObject|Charger": {},
+          "Reference|GC_SamSite_Charger_444/_bubble":{},
+          "Reference|GC_SamSite_Charger_444/_electricArc":{
+            "LineRenderer": {
+              "numPositions": 2,
+              "startWidth": 0.2,
+              "endWidth": 0.2,
+              "widthMultiplier": 12.0,
+              "numCornerVertices": 0,
+              "numCapVertices": 0
+            },
+            "startColor": {
+              "r": 0.8,
+              "g": 1,
+              "b": 0.9,
+              "a": 0.8
+            },
+            "endColor": {
+              "r": 0.8,
+              "g": 1,
+              "b": 0.9,
+              "a": 0.8
+            }
+          }       
+        },
+        "GameObject|_groundPoint": {
+          "Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": -1.3,
+              "z": 0.0
+            }
+          }
+        },
+        "BlockAnchor": {
+          "m_SnapToleranceUp": 1.4,
+          "m_SnapToleranceDown": 2.0
+        }
+      }
+    }, */
+    "ModuleAnchor":null,
+    "ModuleEnergy": {
+      "m_OutputPerSecond": 1000,
+      /* "m_OutputEnergyType": 0,
+      "m_OutputConditions": 2,
+      "m_SequentialPowerUp": false, */
+      "m_PowerUpDelay": 3.0,
+      "m_GeneratingSFXType": 0
+    }
+    /* "Reference|GC_SamSite_Charger_444/ModuleRemoteCharger.": {
+      "m_EnergyType": 0,
+      "m_ChargingRadius": 20.0,
+      "m_PowerTransferPerArc": 1200.0,
+      "m_ArcFiringInterval": 1.0
+    },
+    "Reference|GC_SamSite_Charger_444/ModulePlacementZoneEffect.": {
+      "m_Radius": 20.0 
+    } */
+  }
+}

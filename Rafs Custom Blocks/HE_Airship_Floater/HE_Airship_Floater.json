@@ -1,0 +1,64 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+
+{
+  "Name": "Hawkeye Airship Floater",
+  "Description": "When attached to a Tech, this tank pumps out all air inside to create vacuum, which decreases the block density and makes it float.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.",
+  "ID": 910605, 
+
+  "Faction": 5, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 32364,
+  "HP": 20000,
+  "Mass": 40,
+
+  "IconName": "HE_Airship_Floater_Icon.png",
+  "MeshName": "HE_Airship_Floater.obj", 
+  
+  "Recipe":  "43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 57, 57, 57, 57" ,
+  
+  "MeshMaterialName": "HE_Main", 
+  "SupressBoxColliderFallback": true,
+  "ColliderMeshName": "HE_Airship_Floater.obj",  
+
+   "BlockExtents": 
+  {
+    "x": 4,
+    "y": 4,
+    "z": 8
+  },
+  
+  "APs": [ 
+    {"x": 1,"y": -0.5,"z": 0},
+	{"x": 1,"y": -0.5,"z": 1},
+	{"x": 1,"y": -0.5,"z": 2},
+	{"x": 1,"y": -0.5,"z": 3},
+	{"x": 1,"y": -0.5,"z": 4},
+	{"x": 1,"y": -0.5,"z": 5},
+	{"x": 1,"y": -0.5,"z": 6},
+	{"x": 1,"y": -0.5,"z": 7},
+	{"x": 2,"y": -0.5,"z": 0},
+	{"x": 2,"y": -0.5,"z": 1},
+	{"x": 2,"y": -0.5,"z": 2},
+	{"x": 2,"y": -0.5,"z": 3},
+	{"x": 2,"y": -0.5,"z": 4},
+	{"x": 2,"y": -0.5,"z": 5},
+	{"x": 2,"y": -0.5,"z": 6},
+	{"x": 2,"y": -0.5,"z": 7},
+  ],
+
+  "GamePrefabReference": "HE_Block_Alt_01_111",
+  "KeepReferenceRenderers": false, 
+  
+  "JSONBLOCK": {
+  "MotionBlocks.ModuleFloater": {
+//  "MinHeight": -85,
+    "MaxHeight": 500,
+    "MaxStrength": 800,
+    "VelocityDampen": 2
+}
+    
+  }
+}

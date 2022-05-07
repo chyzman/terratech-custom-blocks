@@ -1,0 +1,101 @@
+{
+  "Name": "GreenTech Turbo Tube Conveyor",
+  "Description": "A very long tube conveyor section that safely carries resources inside at four times the current speed.",
+
+  "ID": 911094,
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 150,
+  "HP": 1000,
+  "Mass": 3.2,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 32",  
+  "IconName": "GT_Turbo_Tube_Conveyor_Belt_Icon.png",
+  
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 4
+  },
+  
+   "APs": [
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 3.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 0, "y": -0.5, "z": 2 },
+    { "x": 0, "y": -0.5, "z": 3 }
+  ],
+
+  "GamePrefabReference": "GSO_Conveyor_111", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "MeshName": "GT_Turbo_Tube_Conveyor_Belt_Base.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "MeshName": "GT_Turbo_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Turbo_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Turbo_Tube_Conveyor_Belt_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.5, "z": 1.5 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 3.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0.5, "z": 1.5 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 3.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 1.5 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 3.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": -0.5, "y": 0, "z": 1.5 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 3.8}
+    }
+  ],
+
+ "JSONBLOCK": {
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0, "y": -0.51, "z": 1.5 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.01,
+    "m_BeamStrength": 500.0
+  }
+  }			
+}

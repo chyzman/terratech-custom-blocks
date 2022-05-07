@@ -1,0 +1,43 @@
+{
+  "Name": "GreenTech Recycled Block Corner",
+  "Description": "A corner version of the Recycled Block, with a strip of processed fibrewood for added durability, covered in heat resistant resin.",
+  "ID": 911017, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 1038, 
+  "HP": 1000, 
+  "Mass": 3.5,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe":  "1, 5, 5, 5, 7, 7, 9, 9, 32, 32",  
+  "IconName": "GT_Recycled_Block_Corner_Icon.png", 
+  "MeshName": "GT_Recycled_Block_Corner.obj", 
+   "ColliderMeshName": "GT_Recycled_Block_Corner_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 1, "z": 2},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1},
+	{"x": 1, "y": 0.5,"z": 0},
+	{"x": 1, "y": 0.5, "z": 1},
+	{"x": 1.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 0, "z": 1},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5},
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+}

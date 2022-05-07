@@ -1,0 +1,82 @@
+{
+  "Name": "Hawkeye Knife Wing Type A",
+  "Description": "This Black Labs designed jet fighter wing has dramatic lift capacity and aggressive steering. It can be used as a right or left wing, or a rudder.",
+  "ID": 117031, 
+
+  "Faction": 5,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 1662, 
+  "HP": 1000, 
+  "Mass": 3.5,
+  "CenterOfMass": {"x": 0.5, "y": 0.0, "z": 1.5},
+  
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 2,
+
+  "Recipe":  "7, 7, 7, 11, 11, 43, 43, 52, 52",
+  "IconName": "HE_Knife_Wing_A.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+ 
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 1, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 1},
+
+    {"x": 0, "y": 0, "z": 2},
+    {"x": 1, "y": 0, "z": 2},
+    {"x": 0, "y": 0, "z": 3},
+  ],
+  
+  "APs": [ 
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": -0.5, "y": 0, "z": 3},
+
+  ],
+  
+  "GamePrefabReference":   "BF_Wing_Medium_Outside_413",
+  "ReferenceOffset":        { "x": -1, "y": 0, "z": 1 },
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+
+  "SubObjects": [
+    {
+    "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Base",
+    "MeshName":            "HE_Knife_Wing_A.obj",
+    "ColliderMeshName":    "HE_Knife_Wing_Collider_A.obj",
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 180 },
+    "MeshMaterialName":    "HE_Main",
+    },  
+    {
+    "SubOverrideName":     "_Pivot",
+    "SubPosition":         { "x": 1,  "y": 0,  "z": 0.1 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 },
+    },
+    {
+    "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Wing",
+    "MeshName":            "HE_Knife_Wing_Aileron.obj",
+    "ColliderMeshName":    null,
+    "SubPosition":         { "x": 0,  "y": 0,  "z": -0.1 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 },
+    "MeshMaterialName":    "HE_Main",
+    },
+  ],
+
+  "Deserializer": {
+    "GameObject|SmokeTrail": {
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 1.4, "y": 0, "z": 0 },
+            "localRotation": { "x": 0, "y":0, "z": 0 }
+          },
+    }
+
+  }
+}

@@ -1,0 +1,842 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Gridpoint Block",
+  "Description": "Moderate mass, high health, INSANE cost. \nThis is the biggest variant of the TAC Bendpoint Block. \nThis complex bracket-like construct can shrug off the explosions from the meanest legal Main Cannons the Offworld has to offer, but remember that this block does not provide a solid defense as it has gaps that may allow attacks to get through. It's also paper when it comes to dealing with those f*bron trees. \n\nThis block is very durable vs explosions, just beware of bullets, heavy impacts, and things that slice. \n<b>The price only gets worse from here on.</b> \n\n \n\nThis is the most overkill bracket in the game.", //You can make multiple lines with \n
+  "ID": 584277, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 47952, //  //HE block cost is 573 with times 3 multiplier. BF block cost is 768 with times 3 multiplier. This block is a whopping 11988!
+  //Say goodbye to your wallet - cost efficiency is absolute garbage
+  "HP": 10400,//5200 //Normal TAC Block is 450 - 1300 HP in one block? Damn that's dense 
+  "Mass": 6.0, //Normal TAC Block is 1.0
+
+  "IconName": "StructuralElement.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  //"MeshName": "TACOneBlock.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45", // Separate chunk names or IDs with a comma. Not case sensitive.
+        // {
+        //   "name": "Hardened Titanic",
+        //   "id": 45,
+        //   "count": 1
+        // }
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": "HE_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "TACOneBlock.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    //
+
+    {
+      "x": 1,
+      "y": 0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": 1.5
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    //
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    //
+    {
+      "x": 0,
+      "y": 1,
+      "z": 1.5
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "z": -0.5
+    },
+
+    {
+      "x": 1,
+      "y": 1.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 1.5,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 0
+    },
+    {
+      "x": 1.5,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 1
+    }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_Block_Alt_01_(111)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,  
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, //Shift the subobjects of the block prefab by x, y and z 
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Scale all the subobjects of the block prefab by the origin
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Tracks Model
+     "SubOverrideName": "m_AP0",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP3",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP4",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP5",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP6",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP7",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //
+    { //Tracks Model
+     "SubOverrideName": "m_AP8",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP9",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP10",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP11",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP12",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP13",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP14",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP15",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //
+    { //Tracks Model
+     "SubOverrideName": "m_AP16",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP17",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP18",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP19",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP20",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP21",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP22",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Tracks Model
+     "SubOverrideName": "m_AP23",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACBendpointLong.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    //Selection and Collision
+    "GameObject|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 0.3,
+          "z": 1.0
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 0.3,
+          "z": 0.3
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 0.3,
+          "z": 1.0
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 0.3,
+          "z": 0.3
+        }
+      }
+    },
+    //Vertical
+    "Duplicate|m_HE_Block_111_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 1.0,
+          "z": 0.3
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0.5, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 1.0,
+          "z": 0.3
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0.5, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 1.0,
+          "z": 0.3
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0.5, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 1.0,
+          "z": 0.3
+        }
+      }
+    },
+    //Top layer
+    "GameObject|m_HE_Block_111_copy_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":1, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 0.3,
+          "z": 1.0
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":1, "z":0 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 0.3,
+          "z": 0.3
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":0.5 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 0.3,
+          "y": 0.3,
+          "z": 1.0
+        }
+      }
+    },
+    "Duplicate|m_HE_Block_111_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":1, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 0.3,
+          "z": 0.3
+        }
+      }
+    },
+    //THE VISUALS
+    //Forwards ones
+    "GameObject|m_AP0": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP1": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP2": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":1 } 
+      }
+    },
+    "GameObject|m_AP3": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":1 } 
+      }
+    },
+    //Sideways ones
+    "GameObject|m_AP4": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP5": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x":0, "y":0, "z":1 } 
+      }
+    },
+    "GameObject|m_AP6": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":1, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP7": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":1, "y":0, "z":1 } 
+      }
+    },
+    //Vertical ones
+    "GameObject|m_AP8": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP9": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP10": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP11": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":0 } 
+      }
+    },
+    "GameObject|m_AP12": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":1, "z":1 } 
+      }
+    },
+    "GameObject|m_AP13": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":1 } 
+      }
+    },
+    "GameObject|m_AP14": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":1 } 
+      }
+    },
+    "GameObject|m_AP15": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":0, "z":1 } 
+      }
+    },
+    //Top layer
+    "GameObject|m_AP16": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP17": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP18": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":1, "z":1 } 
+      }
+    },
+    "GameObject|m_AP19": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 },
+        "localPosition": { "x":1, "y":1, "z":1 } 
+      }
+    },
+    //Sideways ones
+    "GameObject|m_AP20": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x":0, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP21": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x":0, "y":1, "z":1 } 
+      }
+    },
+    "GameObject|m_AP22": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":1, "y":1, "z":0 } 
+      }
+    },
+    "GameObject|m_AP23": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":1, "y":1, "z":1 } 
+      }
+    },
+
+
+    "Damageable": {
+      "m_DamageableType": 4, //What damage multiplier this runs by
+      // "m_HealingOrigin": null,
+      "m_AoEDamageBlockPercent": 0.0,//was 0.2//Explosions pass through this
+      //
+      // "destroyOnDeath": false,
+      // "damageThresholdEvent": null,
+      // "m_NextThreshold": 0.0,
+      // "m_InvulnerableEndTime": -1.0,
+      // "m_Invulnerable": false,
+    },
+
+    // TAC Bendpoint - Tortoise Hunker Armor
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": true,     // Should the multipliers be used?
+      //----- DamagableMultipliers -----
+        "Standard":     1,      // Standard multiplier
+        "Bullet":       1,      // Bullet multiplier
+        "Energy":       1,      // Energy multiplier
+        "Explosive":    0.5,      // Explosive multiplier
+        "Impact":       2,      // Impact multiplier
+        "Fire":         1,      // Fire multiplier
+        "Cutting":      1,      // Cutting multiplier
+        "Plasma":       1,      // Plasma multiplier
+      //--------------------------------
+    },
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.025, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      // More rigid than the normal one block.
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+  }
+}
+
+
+
+
+
+
+

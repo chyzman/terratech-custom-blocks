@@ -1,0 +1,153 @@
+{
+  "Name": "GreenTech Voyager Cab",
+  "Description": "A rugged and robust GreenTech cab designed to withstand any harsh enivornment, and make mobile repairs if necessary. Comes with a built-in radar to locate exotic biomes!",
+  "ID": 911211,
+
+  "Faction": 0, 
+  "Category": 1, 
+  "Grade": 2, 
+  "Price": 2055, 
+  "HP": 1000, 
+  "Mass": 2.5,
+  "CenterOfMass": {"x": 0.0, "y": -0.1, "z": 0.3},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "3, 3, 5, 5, 7, 7, 9, 32, 43, 43, 48",   
+  "IconName": "GT_Voyager_Cab_Icon.png", 
+  "MeshName": "GT_Voyager_Cab.obj",
+  "ColliderMeshName": "GT_Long_Leaf_Block_Collider.obj",
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  
+  "SupressBoxColliderFallback": true,
+ 
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5}
+  ],       
+  "GamePrefabReference": "GSO_Light_Fixed_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  
+  "SubObjects": [
+    {
+      "SubOverrideName": "Voyager_Radar",
+      "MeshName": "GT_Voyager_Cab_Radar.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png",          
+      "SubPosition": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+    }
+   }
+  ],
+  "JSONBLOCK": {
+    "Reference|GSO_Regen_111/_shield": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.0, "y":-0.3, "z":0.0 }     
+      }
+     },
+    "Reference|GSO_Regen_111/ModuleShieldGenerator.": {
+      "m_Radius": 0.5,
+      "m_EnergyConsumptionPerSec": 1,
+      "m_InitialChargeEnergy": 1.0,
+      "m_EnergyConsumedPerDamagePoint": 0.1,
+      "m_HealingHeartbeatInterval": 1.0,
+      "m_MaxHealingPerHeartbeat": 150.0, 
+      "m_EnergyConsumedPerPointHealed": 0.15,
+      "m_Healing": true,
+      "m_PowerUpDelay": 1.0,
+      "m_ChargingParticlesPrefab": null
+    },
+
+    "GameObject|Lights": {
+      "GameObject|GSO_Fixed Light_Spotlight": {
+        "Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+      "UnityEngine.Light":{
+        "color": {
+          "r": 0.6,
+          "g": 1.0,
+          "b": 0.3,
+          "a": 1.0
+        },
+        "intensity": 0.8,
+        "range": 60
+      }
+    }
+
+    },
+      "GameObject|_spindle":{
+         "UnityEngine.Transform": {
+          "localPosition": {
+            "x": -0.25,
+            "y": 0.48,
+            "z": -0.25
+           }, 
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+           }
+          },
+          "GameObject|Voyager_Radar":{},
+      "Spinner": {
+        "m_Speed": 0.2,
+        "m_RotationAxis": {
+          "axis": 1
+        }
+      }
+    },
+    "ModuleEnergy": {
+      "m_OutputPerSecond": 3,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 2,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 0.0,
+      "m_GeneratingSFXType": 1
+        },
+      "ModuleLight": {},
+      "ModuleEnergyStore": {"m_Capacity": 1500},
+
+      "Reference|GSO_Cab_111/ModuleTechController.": {},
+      "Reference|GSO_Cab_111/ModuleVision.": {},
+      "Reference|GSO_Cab_111/ModuleFuelTank.": {},
+      "Reference|GSO_Cab_111/ModuleAIBot.": {},
+      "Reference|GSO_Cab_111/ModuleDriveBot.": {},
+
+      "Reference|GSO_Radar_111/ModuleRadar.": {}
+      }
+    }
+

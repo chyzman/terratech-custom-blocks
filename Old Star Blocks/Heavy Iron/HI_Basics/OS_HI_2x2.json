@@ -1,0 +1,33 @@
+{
+  "Name": "Old Star Heavy Iron 2x2 Block",
+  "Description": "When it comes to mining and armor Old Star's subdivision 'Heavy Iron' takes over! Heavy Iron's basic building blocks have 3 times the health compared to the rest of Old Star to deal with the amount of stress the blocks take in the mines. Due to this they also have 3 times the weight. Tho this isn't much when comparing Old Star in general to everyone elses blocks.",
+  "ID": 300035,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 1440,
+  "HP": 1800,
+  "Mass": 6,
+  "IconName": "OS_HI_2x2_Block_Icon.png",
+  "MeshName": "HI_2x2.obj",
+  "Recipe":  [
+      {"0": "10"},
+      {"5":  "4"},
+      {"7":  "4"},
+      {"43": "4"}
+], 	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  }, 
+  "APsOnlyAtBottom": false
+}

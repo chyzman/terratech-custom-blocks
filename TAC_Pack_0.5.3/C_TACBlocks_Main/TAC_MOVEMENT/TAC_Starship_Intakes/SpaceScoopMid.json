@@ -1,0 +1,396 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Middle Waft Intake",
+  "Description": "Intakes are safer than compressors, but require quite the headroom to operate normally. \nThis one has a built-in fan that compresses fuel on going where it's pointed or when boosting.  So like the Compressor, if you eat all your fuel before it can regenerate properly, you WILL stall. \n\nBased on technology formerly designed by <b>FSI</b>, this intake is like the passive intakes, but the difference is that these only work while actively boosting, does not generate when not moving.", //You can make multiple lines with \n
+  "ID": 584430, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 21423,// 
+  "HP": 3750,//Not that big
+  "Mass": 6,//0
+
+  "IconName": "TAC_VentStraight.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "47, 47, 47, 47, 47, 47, 49, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 57, 57",
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Bottom
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    //Back
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    //Left
+    { "x": -0.5, "y": 0, "z": 0 },
+    //Right
+    { "x": 1.5, "y": 0, "z": 0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    // "x": 2,
+    // "y": 2,
+    // "z": 1
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+  "CellMap": [            // Slices of the block's cell occupancy, from back to front
+                        // Any character placement that is not a space will be filled as a cell
+    [ // Z Layer 0
+      "II",
+      "II",
+    ],    
+    [ // Z Layer 1
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 2
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 3
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 4
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 5
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 6
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 7
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 8
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 9
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 10
+      "XX",
+      "  ",
+    ],  
+    [ // Z Layer 11
+      "XX",
+      "  ",
+    ],  
+  ],
+
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "VEN_Booster_Double_(211)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	//"ReferenceOffset": { "x": 0.5, "y": 0., "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_Venture_BoosterDouble_211",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TAC_Intake.obj",
+      "ColliderMeshName": "TAC_Intake.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|aCol": null,
+    "GameObject|m_Venture_BoosterDouble_211": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":270, "y":270, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0 } 
+      }
+    },
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":0 } 
+      }
+    },
+
+
+
+
+
+
+    //The boosterjets - disabling visuals...
+    "GameObject|_boostJet": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":-0.375 } 
+      },
+      "GameObject|m_BoosterRocketFlame_R": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "playOnAwake": false,
+            "maxParticles": 0,
+          },
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_L": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":2.45, "z":2.45 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          // "UnityEngine.ParticleSystem": {
+          //   "playOnAwake": false,
+          //   "maxParticles": 0,
+          // },
+            // "GameObject|FX_ChargeParticles2": {
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              // "sortMode": 0,
+              // "minParticleSize": 0.05,
+              "maxParticleSize": 0.15,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "startSpeed": {
+                "curveMin": -2,
+                "curveMax": -2,
+              }, //How far you want the particles to spread
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.75,
+                    "g": 1.0,
+                    "b": 0.25,
+                    "a": 0.5
+                  },
+                  "playOnAwake": true,
+                  "startDelay": 0.0,//Delay
+                  "startLifetime": 1.00,
+                  "startRotation": 0.0,
+                  "playbackSpeed": 1.0,
+                  //
+                  "ringBufferMode": null,
+                  "scalingMode": null,
+                  "useUnscaledTime": false,
+                  "prewarm": false,
+                  // "startRotation": 0.0,
+                  // "playbackSpeed": 0.5,
+                  //
+                  "gravityModifier": 0.0,//No gravity
+                  "loop": true, //Charging the beam
+                  "startSize": 0.25,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "emissionRate": 125.0,
+                  "emitterVelocityMode": 1,
+                  "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                  "maxParticles": 0,
+                  "useAutoRandomSeed": false,
+                  "textureSheetAnimation": null,
+                  "subEmitters": {
+                    "enabled": false,
+                  },
+                  "proceduralSimulationSupported": false,
+                  "sizeBySpeed": {
+                    "enabled": true,
+                    "size": {
+                      "m_Mode": 1,
+                      "m_CurveMultiplier": 1.0,
+                      "m_CurveMin": null,
+                      "m_CurveMax": null,
+                      "m_ConstantMin": 1.0,
+                      "m_ConstantMax": 1.0,
+                      "mode": 1,
+                      "curveMultiplier": 1.0,
+                      "curveMin": null,
+                      "constantMax": 0.0,
+                      "constantMin": 0.0,
+                      "constant": 0.0
+                    },
+                    "sizeMultiplier": 2.0,
+                    "xMultiplier": 2.0,
+                    "yMultiplier": 2.0,
+                    "zMultiplier": 2.0,
+                    "separateAxes": false
+                  },
+                  "customData": {
+                    "enabled": false
+                  },
+                  "velocityOverLifetime": {
+                    "enabled": true,
+                    "xMultiplier": 0.0,
+                    "yMultiplier": 0.0,
+                    "zMultiplier": 0.0,
+                    "orbitalXMultiplier": 0.0,
+                    "orbitalYMultiplier": 0.0,
+                    "orbitalZMultiplier": 0.0,
+                    "orbitalOffsetXMultiplier": 0.0,
+                    "orbitalOffsetYMultiplier": 0.0,
+                    "orbitalOffsetZMultiplier": 0.0,
+                    "radialMultiplier": 1.0,
+                    "speedModifierMultiplier": -2.5,
+                    "space": 0
+                  },
+                  "forceOverLifetime": {
+                    "enabled": false,
+                  },
+                  "externalForces": {
+                    "enabled": false,
+                  },
+                  "noise": {
+                    "enabled": false,
+                  },
+                  "emission": {
+                    "type": 0,
+                    "rateMultiplier": 100.0,
+                    "enabled": true,
+                    "rateOverTimeMultiplier": 100.0,
+                    "rateOverDistanceMultiplier": 0.0,
+                    "burstCount": 0
+                  },
+                  "shape": {
+                    "enabled": true,
+                    "shapeType": 0,
+                    "meshShapeType": 0,
+                    "meshScale": 1.0,
+                    "radius": 2.0,
+                    "radiusMode": 0,
+                    "radiusSpread": 0.0,
+                    "angle": 0.0,
+                    "length": 0,
+                    "arcMode": 0,
+                    "randomDirectionAmount": 0.0,
+                    "sphericalDirectionAmount": 0.0,
+                    "randomPositionAmount": 0.0,
+                    "randomDirection": false,
+                    "randomDirectionAmount": 0.0,
+                  }
+                }
+              }
+            },
+        }
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 0.1,//weak
+        "m_BurnRate": -22.5, //MAKES fuel, but only forwards
+        "m_FireRateFalloff": 3.0,//
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": true,
+        "m_AutoStabiliseStrength": 0.1,
+        "m_TargetRigidBody": null,
+        "m_Trails": [],
+        "m_FireControl": false,
+        "m_FireStrengthCurrent": 0.0,
+        "m_LocalBoostDirection": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "IsFiring": false,
+        "BurnRate": 15.0,
+        "ConsumesFuel": true,
+        "FireRateCurrent": 0.0
+      }
+    },
+
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        "m_BoosterAudioType": 4,
+        "m_UseBoostControls": true,//generate fuel WHEN DOING ANY BOOST
+        "m_UseDriveControls": true,
+        // BoosterType
+        // {
+        //   GSOMegaBooster,
+        //   GSOBoosterJet,
+        //   VENBooster,
+        //   HERocketJet,
+        //   BFBooster
+        // }
+
+    },
+
+    "Reference|GSO_Cab_111/ModuleFuelTank.": {//Penalty for running out of fuel. - Less than compressor because ambient winds help
+      "m_Capacity": 50.0,
+      "m_RefillRate": 0.01,
+    },
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Damageable": {
+      "m_DamageableType": 1, //Armored
+      "m_AoEDamageBlockPercent": 0.0,//Shotguns go right through this
+    },
+  }
+}

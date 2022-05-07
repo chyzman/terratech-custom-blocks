@@ -1,0 +1,131 @@
+
+{
+  "Name": "Old Star 'DawnStar' Radial Engine",
+  "Description": "Now this is new to Old Star. This massive engine can put out some serious power compared to the little Horizon Engine as this is for those who need to get somewhere quickly and/or need real POWER. With four solid Fibron blades powered by our latest engine design she will get it done! Mind the prop though, the wood cutter has great pride in his design and would hate to know that someone broke it.",
+  "ID": 300090,
+
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 3,
+  "Price": 28143,
+  "HP": 1500,
+  "Mass": 9,
+  "Recipe":  "47, 52, 52, 57, 62, 66, 66",
+  "IconName": "Radial_Icon.png",
+  "MeshName": null,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "EmissionMode": 2,
+  "ColliderMeshName": null,
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "CellMap": [
+     ["        ",
+      "        ",
+      "   TT   ",
+      "  TTTT  ",
+      "  TTTT  ",
+      "   TT   ",
+      "        ",
+      "        "],
+     
+     ["        ",
+      "        ",
+      "  TTTT   ",
+      "  TTTT  ",
+      "  TTTT  ",
+      "  TTTT  ",
+      "        ",
+      "        "],
+
+     ["  TTTT  ",
+      " TTTTTT ",
+      "TTTTTTTT",
+      "TTTTTTTT",
+      "TTTTTTTT",
+      "TTTTTTTT",
+      " TTTTTT ",
+      "  TTTT  "],
+
+     ["        ",
+      "        ",
+      "        ",
+      "   TT   ",
+      "   TT   ",
+      "        ",
+      "        ",
+      "        "]
+  ], 
+
+ "APs": [ 
+    { "x": 4,"y": 4,"z": -0.5  }, { "x": 4, "y": 3,"z": -0.5  },
+    { "x": 3,"y": 4,"z": -0.5  }, { "x": 3, "y": 3,"z": -0.5  }
+  ],
+
+   "GamePrefabReference": "HE_GyroProp_313",
+   "KeepRenderers": false,
+   "KeepColliders": false,                     // SeTTTTTTTTing this to false will remove any mesh instances the original block will be spawning with the modded block
+   "PrefabPosition":                   { "x": 3.5, "y": 3.5, "z": -2.0 },
+
+
+   "SubObjects":[
+    {
+      "SubOverrideName": "m_HE_GyroProp_313",
+         "MeshName": "Radial_Engine.obj",
+         "ColliderMeshName": "Radial_Engine.obj",
+         "SubPosition": { "x": 3,  "y": 3,  "z": 0 },
+         "SubRotation": { "x": 0, "y": 0, "z": 0 }
+     },
+    {
+      "SubOverrideName": "m_HE_GyroProp_rotors",
+         "MeshName": "Radial_Engine_Propeller.obj",
+         "ColliderMeshName": "Radial_Engine_Propeller.obj",
+         "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+         "SubRotation": { "x": 0, "y": 0, "z": 0 }
+     },
+     {
+     "SubOverrideName": "_spinner",
+         "SubPosition": { "x": 3.5,  "y": 3.5,  "z": 2 },
+         "SubRotation": { "x": 0, "y": 0, "z": 0 }
+   }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_fanJet": {
+      "FanJet": {
+        "force": 9550.0,
+        "backForce": 1450.0,
+        "spinDelta": 2.4,
+        "spinSpeed": 900.0,
+        "detachedForceFactor": 0.4
+      }
+    },
+    "GameObject|_spinner": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 180.5,
+          "m_AutoSpin": false,
+
+          "m_SpinUpTime": 1.5,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0,
+          "m_CurrentSpeedFraction": 0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": null,
+          "AtFullSpeed": false
+
+        },
+        "GameObject|m_HE_GyroProp_rotors": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

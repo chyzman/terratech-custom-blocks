@@ -1,0 +1,147 @@
+{
+  "Name": "GreenTech Filtering Tube Section",
+  "Description": "A filtering section for separating the flow of resources.",
+
+  "ID": 911101,
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3,
+  "Price": 399,
+  "HP": 250,
+  "Mass": 0.8,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 13, 32",  
+  "IconName": "GT_Filtering_Tube_Section_Icon.png",
+  
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  
+   "APs": [
+    { "x": 0, "y": 0, "z": 0.5 },
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": -0.5, "z": 0 }
+  ],
+
+  "GamePrefabReference": "GSO_Filter_111", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName":"Conveyor_Filter_01",
+      "MeshName": "GT_Filtering_Tube_Section_Base.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": {
+        "x": -4,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "MeshName": "GT_Filtering_Tube_Section_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge",
+      "SubPosition": {
+        "x": -4,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "MeshName": "GT_Filtering_Tube_Section_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubPosition": {
+        "x": -4,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "MeshName": "GT_Filtering_Tube_Section_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubPosition": {
+        "x": -4,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName":"GreenLight",
+      "MeshName": "GT_Filtering_Tube_Section_GLight.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName":"RedLight",
+      "MeshName": "GT_Filtering_Tube_Section_RLight.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	    "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": -0.5, "z": 0 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 0.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0, "y": 0.5, "z": 0 },
+      "SubScale": { "x": 0.8, "y": 0.01, "z": 0.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 0 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 0.8}
+    },
+    {
+      "MakeBoxCollider": true,
+      "SubPosition": { "x": -0.5, "y": 0, "z": 0 },
+      "SubScale": { "x": 0.01, "y": 0.8, "z": 0.8}
+    }
+  ],
+
+ "JSONBLOCK": {
+   "GameObject|GreenLight":{
+    "UnityEngine.Transform": { 
+      "localScale":  { "x": 0, "y": 0, "z": 0 },
+      "active": false }
+   },
+   "GameObject|RedLight":{
+    "UnityEngine.Transform": { 
+      "localScale":  { "x": 0, "y": 0, "z": 0 },
+      "active": false }
+   },
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0, "y": -0.51, "z": 0 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.01,
+    "m_BeamStrength": 500.0
+  },
+  "ModuleItemFilter": {
+    "m_PushArrowPrefab":"GreenLight",
+    "m_PullArrowPrefab":"RedLight"
+  }
+  }			
+}

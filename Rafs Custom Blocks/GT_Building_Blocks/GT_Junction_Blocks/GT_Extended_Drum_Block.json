@@ -1,0 +1,48 @@
+{
+  "Name": "GreenTech Extended Drum Block",
+  "Description": "A drum block with a long wooden composite support.",
+  "ID": 911182,
+
+  "Faction": 0, 
+  "Category": 0,
+  "Grade": 3, 
+  "Price": 1770,
+  "HP": 2400,
+  "Mass": 5,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 5, 5, 5, 5, 7, 7, 7, 7, 9, 9, 9, 32, 32, 32, 32",
+  "IconName": "GT_Extended_Drum_Block_Icon.png", 
+  "MeshName": "GT_Extended_Drum_Block.obj", 
+  "ColliderMeshName": "GT_Extended_Drum_Block_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png",
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":
+  {
+    "x": 4,
+    "y": 1,
+    "z": 2
+  },
+  
+  "APs": [ 
+    {"x": 2,"y": 0.5,"z": 0},
+    {"x": 2,"y": 0.5,"z": 1},
+    {"x": 3,"y": 0.5,"z": 0},
+    {"x": 3,"y": 0.5,"z": 1},
+    {"x": 2,"y": -0.5,"z": 0},
+    {"x": 2,"y": -0.5,"z": 1},
+    {"x": 3,"y": -0.5,"z": 0},
+    {"x": 3,"y": -0.5,"z": 1},
+    {"x": -0.5,"y": 0,"z": 0},
+    {"x": -0.5,"y": 0,"z": 1}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

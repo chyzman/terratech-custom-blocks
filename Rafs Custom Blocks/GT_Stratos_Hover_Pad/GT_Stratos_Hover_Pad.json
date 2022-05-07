@@ -1,0 +1,89 @@
+{
+  "Name": "GreenTech Stratos Hover Pad",
+  "Description": "Commonly used in atmospheric monitoring equipment and polution filtering drones, the Stratos Hover Pad systems focus 100% on reaching the highest height as possible. As such, it almost lacks any steering steering.",
+  "ID": 911060, 
+
+  "Faction": 0, 
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 10494, 
+  "HP": 2600, 
+  "Mass": 12,
+  "CenterOfMass": {"x": 1.5, "y": 0.5, "z": 1.5},
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "11, 11, 32, 32, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 63",   
+  "IconName": "GT_Stratos_Hover_Pad_Icon.png",
+  "SupressBoxColliderFallback": false,
+ 
+  "BlockExtents":{"x": 4,"y": 1, "z": 4},   
+  "APs": [ 
+    {"x": 0, "y": 0.5, "z": 1},
+    {"x": 0, "y": 0.5, "z": 2},
+    {"x": 1, "y": 0.5, "z": 1},
+    {"x": 1, "y": 0.5, "z": 2},
+    {"x": 2, "y": 0.5, "z": 1},
+    {"x": 2, "y": 0.5, "z": 2},
+    {"x": 3, "y": 0.5, "z": 1},
+    {"x": 3, "y": 0.5, "z": 2},
+    {"x": 1, "y": 0.5, "z": 0},
+    {"x": 2, "y": 0.5, "z": 0},
+    {"x": 1, "y": 0.5, "z": 3},
+	  {"x": 2, "y": 0.5, "z": 3}
+  ],
+  
+  "GamePrefabReference": "GC_Hover_222",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  
+  "SubObjects": [ 
+      {
+      "SubOverrideName":"m_GC_Hover_222_Base",
+      "MeshName": "GT_Stratos_Hover_Pad.obj",
+      "ColliderMeshName": "GT_Stratos_Hover_Pad_Collider.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": { "x": 0, "y": 0, "z": 0 }
+      },
+      {
+        "SubOverrideName": "m_GC_Hover_222_Jet",
+        "DestroyExistingRenderer": true,
+        "SubPosition": { "x": 1.5, "y": 0.2, "z": 1.5}
+      }
+    ],
+	
+	"JSONBLOCK": {
+    "GameObject|m_GC_Hover_222_Jet": {
+      "GameObject|_hoverJet": {
+       "GameObject|ParticleSystem_GSO_HoverPad (1)": {
+        "UnityEngine.ParticleSystem": {
+          "startSize": 2.5,
+          "duration": 1,
+          "maxParticles": 5,
+          "startLifetime": 1.5,
+          "emissionRate": 2.0
+          //"startColor": { "r": 1.0, "g": 1.0, "b": 1.0, "a": 1.0 }
+        }
+       },
+       "HoverJet": {
+        "forceMax": 50000.0,
+        "forceRangeMax": 40.0,
+        "m_DampingScale": 0.05,
+        "m_MaxClimbDistance": 20.0,
+        "m_VectoredThrustMaxAngle": 1,
+        "m_VectoredThrustMaxForceAngle": 1
+       } 
+     }  
+     }
+	}
+}

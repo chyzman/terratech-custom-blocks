@@ -1,0 +1,75 @@
+{
+  "Name": "Youkai Large HLI Battery",
+  "Description": "This larger variant of the Youkai is very energy dense, even more so than strapping 3 HLIs together, but it is very heavy and expensive.",
+  "ID": 19086, 
+
+  "Faction": 1, 
+  "Category": 6, 
+  "Grade": 4, 
+  "Price": 15684, 
+  "HP": 3500, 
+  "Mass": 20,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "45, 45, 45, 45, 54, 54, 54, 54, 62, 62",  
+  "IconName": "YK_Battery_Large.png",
+  
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture.png", 
+ 
+  "BlockExtents":{"x": 2,"y": 1, "z": 3},   
+  "APs": [ 
+  {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": 0.5,"z": 0},
+	{"x": 0, "y": 0.5,"z": 2},
+	{"x": 1, "y": 0.5, "z": 2},
+	{"x": 0, "y": -0.5, "z": 2},
+	{"x": 1, "y": -0.5, "z": 2},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+  {"x": 1.5, "y": 0, "z": 1},
+  {"x": -0.5, "y": 0, "z": 2},
+	{"x": 1.5, "y": 0, "z": 2},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 0, "z": 2.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": 2.5},
+  ],
+
+  
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GCBattery(222)",
+  
+  "SubObjects": [ 
+    {
+    "SubOverrideName":"GC_Battery_222",
+    "MeshName": "YK_Battery_Large.obj",
+	"MeshTextureName": "YK_Texture 1.png", 
+	"MeshGlossTextureName": "YK_Texture 2.png", 
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+    "ColliderMeshName": "YK_Battery_Large_Collider.obj",
+	},
+	{
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "YK_Battery_Large_LEDs.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 13000}
+	}
+}

@@ -1,0 +1,795 @@
+
+{
+    "Name":                 "Hawkeye Ragnarok 3x100 MJ Railcannon Battery",
+    "Description":          "The Ragnarok is the pinnacle of Black Labs railgun technology. This enormous triple turret brings apocalyptic destruction on any battlefield. However, like its destructive potential, its thirst for energy is unmatched.",
+
+    "ID": 117068,
+
+    "Faction": 5,        
+
+    "Category": 4,        
+    "Rarity": 2,
+    "Grade": 4,             
+    "Price": 239454,        
+  
+    "Recipe":  {"45": 30, "53": 24, "54": 30, "56": 12, "61": 6, "62":12, "64": 6},	
+	
+    "IconName":                   "HE_Ragnarok_Railcannon_Battery.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "HP": 121000,                            
+    "Mass": 352,
+
+    "DamageableType": 0,    
+    "Fragility": 1,
+    
+    "CellMap": [
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "           00           ",
+       "           00           ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "          0000          ",
+       "          0000          ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "         000000         ",
+       "         000000         ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "         000000         ",
+       "         000000         ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "          0000          ",
+       "          0000          ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "           00           ",
+       "           00           ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "000000000000000000000000",
+       "000000000000000000000000",
+       "                        ",
+       "                        ",
+   ],
+   [
+       " 0000000000000000000000 ",
+       " 0000000000000000000000 ",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "  00000000000000000000  ",
+       "  00000000000000000000  ",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "   000000000000000000   ",
+       "   000000000000000000   ",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "    0000000000000000    ",
+       "    0000000000000000    ",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "     00000000000000     ",
+       "     00000000000000     ",
+       "                        ",
+       "                        ",
+   ],
+   [
+       "      000000000000      ",
+       "      000000000000      ",
+       "                        ",
+       "                        ",
+   ],
+    ],
+
+    "APs": [
+        {"x": 9, "y": -0.5, "z": 6 },
+        {"x": 10, "y": -0.5, "z": 6 },
+        {"x": 11, "y": -0.5, "z": 6 },
+        {"x": 12, "y": -0.5, "z": 6 },
+        {"x": 13, "y": -0.5, "z": 6 },
+        {"x": 14, "y": -0.5, "z": 6 },
+
+        {"x": 9, "y": -0.5, "z": 5 },
+        {"x": 10, "y": -0.5, "z": 5 },
+        {"x": 11, "y": -0.5, "z": 5 },
+        {"x": 12, "y": -0.5, "z": 5 },
+        {"x": 13, "y": -0.5, "z": 5 },
+        {"x": 14, "y": -0.5, "z": 5 },
+
+        {"x": 11, "y": -0.5, "z": 4 },
+        {"x": 12, "y": -0.5, "z": 4 },
+        {"x": 11, "y": -0.5, "z": 3 },
+        {"x": 12, "y": -0.5, "z": 3 },
+
+        {"x": 11, "y": -0.5, "z": 7 },
+        {"x": 12, "y": -0.5, "z": 7 },
+        {"x": 11, "y": -0.5, "z": 8 },
+        {"x": 12, "y": -0.5, "z": 8 },
+
+        {"x": 11, "y": 1, "z": 8.5 },
+        {"x": 12, "y": 1, "z": 8.5 },
+        {"x": 11, "y": 0, "z": 8.5 },
+        {"x": 12, "y": 0, "z": 8.5 },
+
+        {"x": 11, "y": 1, "z": 2.5 },
+        {"x": 12, "y": 1, "z": 2.5 },
+        {"x": 11, "y": 0, "z": 2.5 },
+        {"x": 12, "y": 0, "z": 2.5 },
+
+        {"x": 14.5, "y": 1, "z": 6 },
+        {"x": 14.5, "y": 1, "z": 5 },
+        {"x": 14.5, "y": 0, "z": 6 },
+        {"x": 14.5, "y": 0, "z": 5 },
+
+        {"x": 8.5, "y": 1, "z": 6 },
+        {"x": 8.5, "y": 1, "z": 5 },
+        {"x": 8.5, "y": 0, "z": 6 },
+        {"x": 8.5, "y": 0, "z": 5 },
+
+    ],
+
+    "GamePrefabReference":    "HE_Cannon_Battleship_216",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 11.5, "y": 1.5, "z": 5.5 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_HE_CannonBattleship_216_body", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Mount.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Mount_Collider.obj",
+      },
+      { 
+        "SubOverrideName":          "Turret", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Turret.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Turret_Collider.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "Trunnion1", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Trunnion.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Trunnion.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "Trunnion2", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Trunnion.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Trunnion.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "Trunnion3", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Trunnion.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Trunnion.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_gimbalElev", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+      },
+      { 
+        "SubOverrideName":          "_gimbalElev_copy", 
+      },
+      { 
+        "SubOverrideName":          "_gimbalElev_copy_copy", 
+      },
+      { 
+        "SubOverrideName":          "m_HE_CannonBattleship_216_barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Barrel.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Barrel_Collider.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_gimbalElev_copy/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Barrel.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Barrel.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_gimbalElev_copy_copy/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Barrel.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Ragnarok_Barrel.obj",
+        "SubPosition":              { "x": 0, "y": -1.15, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "m_BF_MotionEngine_Linear_112_SpinningPart", 
+        "MeshName":                 "HE_Ragnarok_Upper_Spinner.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+      },
+      { 
+        "SubOverrideName":          "_Spindle_copy/m_BF_MotionEngine_Linear_112_SpinningPart", 
+        "MeshName":                 "HE_Ragnarok_Lower_Spinner.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubRotation":              { "x": 0, "y": 0, "z": 180}
+      },
+      { 
+        "SubOverrideName":          "PistonB2_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston2.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": 5.13 },
+        "SubRotation":              { "x": 0, "y": 90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "PistonA2_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston1.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": -1.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "PistonB1_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston2.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": 5.13 },
+        "SubRotation":              { "x": 0, "y": 90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "PistonA1_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston1.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": -1.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "PistonB3_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston2.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": 5.13 },
+        "SubRotation":              { "x": 0, "y": 90, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "PistonA3_model", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Ragnarok_Elevator_Piston1.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": 0, "y": -0.44, "z": -1.5 },
+        "SubRotation":              { "x": 0, "y": -90, "z": 0 }
+      },
+   ],
+
+    "JSONBLOCK": {   
+ 
+        "Reference|BF_MotionEngine_Linear_112/_Spindle":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 11.5, "y": 1.5, "z": 5.5 },
+              "localRotation": { "x": 0, "y": 0, "z": 0 }
+             },
+            "Spinner": {
+             "m_Speed": 0.2,  
+             "m_RotationAxis": {
+                "axis": 1
+              },
+            "m_SteerAxis": {
+                "axis": 1
+              }, 
+            },
+          },
+        "Duplicate|_Spindle":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 11.5, "y": 1.5, "z": 5.5 },
+              "localRotation": { "x": 0, "y": 0, "z": 180 }
+             },
+            "Spinner": {
+             "m_Speed": 0.2, 
+             "m_RotationAxis": {
+                "axis": 1
+              },
+            "m_SteerAxis": {
+                "axis": 1
+              },   
+            },
+          },
+          "GameObject|Suspension_Up": {
+            "UnityEngine.Transform": {
+                "localEulerAngles": { "x":0, "y":0, "z":0 },
+                "localPosition": { "x":11.5, "y":10, "z":5.5 },
+                "localScale": { "x":1, "y":1, "z":1 }
+              },
+            }, 
+       //*********** Cannon Layout Hierarchy ************
+
+        "GameObject|_gimbalBase": {
+            "GimbalAimer": {
+              "rotationLimits": [-89, 89]
+            },
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 11.5, "y": 1.5, "z": 5.5 },
+            },  
+            "GameObject|Turret":{},
+            "GameObject|_gimbalElev": {
+                "GimbalAimer": {
+                  "rotationLimits": [-35, 4] //elevator degree limits are backwards. This means +35 degrees to -4 degrees.
+                },
+                "UnityEngine.Transform": {
+                  "localPosition": { "x": 0, "y": 1.15, "z": -0.5 },
+                }, 
+                "GameObject|TrunnionPivot":{ //The hinge for the pistons
+                    "UnityEngine.Transform": {
+                        "localPosition": { "x": 0, "y": -0.7, "z": 5.6 },
+                      },
+                  },
+                "GameObject|Trunnion2":{},
+                "GameObject|_barrel": {
+                    "GameObject|_smoke": {
+                      "UnityEngine.Transform": {
+                        "localScale": { "x": 3, "y": 3, "z": 3 },
+                        "localPosition": { "x": 0, "y": 0, "z": 12 }
+                      },
+                        "ParticleSystem": {
+                            "startSize":            0.5,
+                            "startLifetime":        1.0,
+                            "emissionRate":         300,
+                            "duration":             5.0,
+                            "sizeOverLifetime": {
+                                "xMultiplier": 10.0,
+                                "yMultiplier": 1.0, 
+                                "zMultiplier": 1.0,
+                            },
+                        },
+                    },
+                    "GameObject|_muzzleFlash": {
+                      "UnityEngine.Transform": {
+                        "localScale": { "x": 2, "y": 2, "z": 4 },
+                        "localPosition": { "x": 0, "y": 0, "z": 12 }
+                      }
+                    },
+                  },
+            },
+            "Duplicate|_gimbalElev":{
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 1.75, "y": 1.15, "z": -0.5 },
+                  }, 
+                  "GameObject|Trunnion1":{},
+            },
+            "Duplicate|_gimbalElev_copy":{
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": -1.75, "y": 1.15, "z": -0.5 },
+                  }, 
+                  "GameObject|Trunnion3":{},
+            },
+
+            // Elevator Piston - Barrel 2 - Suspension works by aligning a gameobject between two points.
+            "GameObject|TurretPivot2":{
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0.3, "z": 1.6 },
+                "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+              }, 
+            },
+        
+            "GameObject|Elevator_Piston2":{ //this is the half of the piston "connected" to the elevator
+                "GameObject|PistonB2":{
+                    "GameObject|PistonB2_model":{},
+                    "UnityEngine.Transform": {
+                        "localPosition": { "x": 0, "y": 0, "z": 0 },
+                        "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                    }, 
+                    "FollowSuspension": { //Follow Suspenion provides the direction that Elevator_Piston2 will point towards. It can rotate around this point and move toward/away from it.
+                        "m_TargetWheelTrans": "/_gimbalBase/TurretPivot2", //TurretPivot2 is the gameobject that FollowSuspension is looking at. In this case TurretPivot2 is an empty GameObject which rides on the turret gimbal.
+                        "m_TargetUpTrans": "/Suspension_Up",
+                        "m_KeepOriginalRotationOffset": false,
+                        "m_ScaleToMatchDistance": false,
+                    }
+                },
+                "FollowTransform": { // FollowTransform provides the "anchor point" around which the Elevator_Piston2 can rotate. 
+                    "m_TransformToFollow": "/_gimbalBase/_gimbalElev/TrunnionPivot", //This path determines the "anchor point". Elevator_Piston2 can rotate around this point, but the distance stays fixed.
+                    "m_FollowOrientation": false,
+                }
+            }, 
+
+            "GameObject|Elevator_PistonA2":{ //The Elevator_PistonA2 is the other half of the piston - the one "connected" do the gimbal
+              "GameObject|PistonA2":{ //The references work the same way as above, but in reverse. This time we want the distance to TurretPivot2 to be fixed to create the visual effect we're going for.  
+                  "GameObject|PistonA2_model":{},
+                  "UnityEngine.Transform": {
+                     "localPosition": { "x": 0, "y": 0, "z": 0 },
+                     "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                  }, 
+                "FollowSuspension": {
+                    "m_TargetWheelTrans": "/_gimbalBase/_gimbalElev/TrunnionPivot",
+                    "m_TargetUpTrans": "/Suspension_Up",
+                    "m_KeepOriginalRotationOffset": false,
+                    "m_ScaleToMatchDistance": false,
+                }
+              },
+              "FollowTransform": {
+                "m_TransformToFollow": "/_gimbalBase/TurretPivot2",
+                "m_FollowOrientation": false,
+              }
+          },
+
+        // Elevator Piston - Barrel 1 - rinse and repeat above for barrel 1
+          "GameObject|TurretPivot1":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": 1.75, "y": 0.3, "z": 1.6 },
+              "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+            }, 
+          },        
+          "GameObject|Elevator_Piston1":{
+              "GameObject|PistonB1":{
+                  "GameObject|PistonB1_model":{},
+                  "UnityEngine.Transform": {
+                      "localPosition": { "x": 0, "y": 0, "z": 0 },
+                      "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                  }, 
+                  "FollowSuspension": {
+                      "m_TargetWheelTrans": "/_gimbalBase/TurretPivot1",
+                      "m_TargetUpTrans": "/Suspension_Up",
+                      "m_KeepOriginalRotationOffset": false,
+                      "m_ScaleToMatchDistance": false,
+                  }
+              },
+              "FollowTransform": {
+                  "m_TransformToFollow": "/_gimbalBase/_gimbalElev_copy/TrunnionPivot",
+                  "m_FollowOrientation": false,
+              }
+          }, 
+
+          "GameObject|Elevator_PistonA1":{
+            "GameObject|PistonA1":{
+                "GameObject|PistonA1_model":{},
+                "UnityEngine.Transform": {
+                  "localPosition": { "x": 0, "y": 0, "z": 0 },
+                  "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                }, 
+              "FollowSuspension": {
+                  "m_TargetWheelTrans": "/_gimbalBase/_gimbalElev_copy/TrunnionPivot",
+                  "m_TargetUpTrans": "/Suspension_Up",
+                  "m_KeepOriginalRotationOffset": false,
+                  "m_ScaleToMatchDistance": false,
+              }
+            },
+            "FollowTransform": {
+              "m_TransformToFollow": "/_gimbalBase/TurretPivot1",
+              "m_FollowOrientation": false,
+            }
+        },
+      // Elevator Piston - Barrel 3 - rinse and repeat above for barrel 3
+          "GameObject|TurretPivot3":{
+            "UnityEngine.Transform": {
+              "localPosition": { "x": -1.75, "y": 0.3, "z": 1.6 },
+              "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+            }, 
+          }, 
+          
+          "GameObject|Elevator_Piston3":{
+              "GameObject|PistonB3":{
+                  "GameObject|PistonB3_model":{},
+                  "UnityEngine.Transform": {
+                      "localPosition": { "x": 0, "y": 0, "z": 0 },
+                      "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                  }, 
+                  "FollowSuspension": {
+                      "m_TargetWheelTrans": "/_gimbalBase/TurretPivot3",
+                      "m_TargetUpTrans": "/Suspension_Up",
+                      "m_KeepOriginalRotationOffset": false,
+                      "m_ScaleToMatchDistance": false,
+                  }
+              },
+              "FollowTransform": {
+                  "m_TransformToFollow": "/_gimbalBase/_gimbalElev_copy_copy/TrunnionPivot",
+                  "m_FollowOrientation": false,
+              }
+          },
+
+          "GameObject|Elevator_PistonA3":{
+            "GameObject|PistonA3":{
+                "GameObject|PistonA3_model":{},
+                "UnityEngine.Transform": {
+                  "localPosition": { "x": 0, "y": 0, "z": 0 },
+                  "localEulerAngles":{ "x": 0, "y": 0, "z": 0 },
+                }, 
+              "FollowSuspension": {
+                  "m_TargetWheelTrans": "/_gimbalBase/_gimbalElev_copy_copy/TrunnionPivot",
+                  "m_TargetUpTrans": "/Suspension_Up",
+                  "m_KeepOriginalRotationOffset": false,
+                  "m_ScaleToMatchDistance": false,
+              }
+            },
+            "FollowTransform": {
+              "m_TransformToFollow": "/_gimbalBase/TurretPivot3",
+              "m_FollowOrientation": false,
+            }
+        },
+
+        },    
+
+      "ModuleVision": {
+            "visionConeAngle": 360.0,
+            "visionRange": 750,
+            "m_Range": 800
+        },
+
+      "ModuleWeaponGun": {
+        "m_FireControlMode": "AllAtOnce", //Fires all "burst" barrels at once on one tap of Spacebar
+        "m_FiringData": null,
+        "m_BurstShotCount": 3,
+        "m_BurstCooldown": 6,
+        "m_ResetBurstOnInterrupt": true,
+        "m_NumCannonBarrels": 3,
+        "m_ShotCooldown": 4,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0,          // Dictates how random the length of pause between shots.
+        "m_SeekingRounds": false,               // Dictates whether the projectiles fired by this weapon will home toward targets     
+        },
+
+      "FireData": {
+                "m_MuzzleVelocity": 1000.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+                "m_KickbackStrength": 200.0,            // Dictates the strength of the recoil when firing the gun
+                "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+                "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+    
+                
+                /********** Bullet Prefab **********/
+                "Instantiate|m_BulletPrefab": {
+                    "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+                        "ParticleSystem": {
+                            "startSize":    2.5,
+                            "duration":     5.0,
+                            "emissionRate": 2000.0,
+                        }
+                    },
+    
+                    "Rigidbody":{
+                        "useGravity": false
+                    },
+    
+                    // Change the Capsule collider's rigidbody layer so the bullet pierces shields
+                   "UnityEngine.CapsuleCollider": {
+                      "height": 10.0,
+                      "radius": 0.25,
+                      "direction": 2,
+                      "center": { "x": 0.0, "y": 0.0, "z": 5 },
+                      "gameObject": {
+                            "layer": 29    
+                       },
+                    },
+    
+                    // This is the bullet's white trail. 
+                    "SmokeTrail":{
+                        "numberOfPoints":   20.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                                    // Do not decrease this too much as it will begin to act strangely.
+    
+                        "spread":           0.0,   // Dictates how erratic the trail is.
+                        "riseSpeed":        0.0,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+                        "updateSpeed":      300,  // Dictates the speed of the trail.
+                    },
+    
+                    // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+                    "LineRenderer": {
+                        "startWidth": 1,
+                        "endWidth": 0.4,
+                        "widthMultiplier": 1.0,
+                        
+                        // The color at the start and end of the trail
+                        "startColor":   { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 },
+                        "endColor":     { "r": 0.0, "g": 0.3, "b": 1.0, "a": 1.0 }
+                    },
+                  
+                    "Projectile":{
+                        "m_Damage": 0,                  // The damage of the bullet when directly hitting a block
+                        "m_LifeTime": 5.0,                  // The duration of the bullet's existence before despawning
+                        "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                        "m_IgnoreCollisionWithBarrel": true,
+                        "Instantiate|m_Explosion": {
+                            "Explosion": {
+                                "m_ExplosionType": 3,                    // Dictates the damage type of the explosion
+                                "m_EffectRadiusMaxStrength": 5.25,
+                                "m_EffectRadius": 7,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                                "m_MaxDamageStrength":      4000.0,        // The splash damage done
+                                "m_MaxImpulseStrength":     400.0       // The strength of the knockback done by the explosion
+                            },
+                            "GameObject|Sparks": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 1.0
+                                    },
+                                    "startSize": 7,
+                                    "startSpeed": 10.0,
+                                    "emissionRate": 100.0,
+                                    "maxParticles": 750,
+                                    "emission": {
+                                      "rateMultiplier": 2450.0,
+                                      "rateOverTimeMultiplier": 0.2,
+                                      "burst": {
+                                        "count": 750,
+                                        "maxCount": 650,
+                                        "minCount": 400
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionBright": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 1.0
+                                    },
+                                   // "maxParticles": 1500,
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionDark": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startColor":{
+                                      "r": 0.1,
+                                      "g": 0.2,
+                                      "b": 1,
+                                      "a": 0.5
+                                    },
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionSmoke": {
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                              }
+                            } 
+                        }
+                    }
+                },
+    
+                "Instantiate|m_BulletCasingPrefab": null       
+          
+        },
+
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        "m_RotateSpeed": 10.0, 
+        "m_ChangeTargetInteval": 0.5,
+
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 90.0,
+
+        "m_FireSFXType": 77,
+
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+
+      },
+      "ModuleConsumeEnergyToShell": {
+        "EnergyCost":           4000,   // How much energy is needed to fire one round 
+                                        // (For continuous weapons, how much energy per second)
+        "EnergyCapacity":       12000,   // How much energy this block can hold
+                                        
+        // The two below are intended for flamethrowers and beam weapons
+        "LowestPermittedEnergy": 0,    // The minimum amount of energy that can be left in a system 
+                                        // (Useful for continuous weapons: Don't drain all energy)
+        "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                        // (Useful for continuous weapons: Prevents studdering effect)
+    },
+  }   
+}

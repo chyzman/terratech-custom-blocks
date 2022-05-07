@@ -1,0 +1,96 @@
+{
+  "Name": "Old Star Top Wing Spacer",
+  "Description": "This here is how the Old Star do. The wing Spacers are made to string together wings to whatever you need them attached to in a more streamlined fasion. provides a slight amount of lift as well.",
+  "ID": 300154,
+  "Faction": 4,
+  "Category": 8,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 650,
+  "Mass": 0.75,
+  "IconName": "OS_Top_Wing_Spacer_icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Wing_Mini_311",
+  "ReferenceScale": {
+    "x": 0.3,
+    "y": 0.1,
+    "z": 0.3
+  },
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 3
+  },
+  "APsOnlyAtBottom": false,
+  "APs": [
+    //sides
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+    //bottom
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 2
+    }
+  ],
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSOMiniWing311",
+      "MeshName": "OS_Top_Wing_Spacer.obj",
+      "ColliderMeshName": "OS_Top_Wing_Spacer.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1.0,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "JSONBLOCK": {
+    "ModuleWing": {
+    }
+  }
+}

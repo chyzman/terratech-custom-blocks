@@ -1,0 +1,231 @@
+{
+  "Name": "GreenTech Discovery Wheel",
+  "Description": "Inspired by the vanguard of space exploration rovers, the Discovery Wheel is a great choice for delving into unknown terrain, knowing you will be able to return, eventually.",
+  "ID": 911128, 
+  "PairedBlock": 911128,
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 3, 
+  "Price": 5001, 
+  "HP": 1500, 
+  "Mass": 8.0,
+  "CenterOfMass": {"x": 1.2, "y": 1.8, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 3, 3, 3, 3, 43, 43, 44, 45, 47, 49", 
+  "IconName": "GT_Discovery_Wheel_Icon.png", 
+
+  "Cells": [ 
+	{ "x": 0, "y": 2, "z": 0 },
+	{ "x": 0, "y": 2, "z": 1 },
+	{ "x": 0, "y": 3, "z": 0 },
+	{ "x": 0, "y": 3, "z": 1 },
+	{ "x": 1, "y": 2, "z": 0 },
+	{ "x": 1, "y": 2, "z": 1 },
+	{ "x": 2, "y": 2, "z": 0 },
+	{ "x": 2, "y": 2, "z": 1 },
+	{ "x": 3, "y": 2, "z": 0 },
+	{ "x": 3, "y": 2, "z": 1 },
+	{ "x": 1, "y": 1, "z": 0 },
+	{ "x": 1, "y": 1, "z": 1 },
+	{ "x": 2, "y": 1, "z": 0 },
+	{ "x": 2, "y": 1, "z": 1 },
+	{ "x": 3, "y": 1, "z": 0 },
+	{ "x": 3, "y": 1, "z": 1 },
+	{ "x": 1, "y": 0, "z": 0 },
+	{ "x": 1, "y": 0, "z": 1 },
+	{ "x": 2, "y": 0, "z": 0 },
+	{ "x": 2, "y": 0, "z": 1 },
+	{ "x": 3, "y": 0, "z": 0 },
+	{ "x": 3, "y": 0, "z": 1 }
+  ],
+  
+  "APs": [ 
+    {"x": 0, "y": 3.5, "z": 0},
+	{"x": 0, "y": 3.5, "z": 1},
+	{"x": -0.5, "y": 3, "z": 0},
+	{"x": -0.5, "y": 3, "z": 1},
+	{"x": -0.5, "y": 2, "z": 0},
+	{"x": -0.5, "y": 2, "z": 1},
+	{"x": 0, "y": 3, "z": 1.5},
+    {"x": 0, "y": 3, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "VEN_Wheel_211",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Base",
+		"MeshName": "GT_Discovery_Wheel_Base.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"MakeBoxCollider": true,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}, 
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Tyre",
+		"MeshName": "GT_Discovery_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Suspension",
+		"MeshName": "GT_Discovery_Wheel_Suspension.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": -0.1,
+			"z": 0.65
+		},
+		"SubRotation": {
+			"x": 180,
+			"y": -90,
+			"z": 40
+		}
+	},
+	{
+		//"MeshName": "origincube.obj",
+		"SubOverrideName": "Suspension",
+		"SubPosition": {
+			"x": 0.2,
+			"y": 2.28,
+			"z": 0.5
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 2.5,
+			"y": 1.3,
+			"z": 0.5
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Up",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|m_VEN_Wheel_211_Tyre": {
+			"UnityEngine.CapsuleCollider": {
+				"center": {
+				  "x": 0,
+				  "y": 0,
+				  "z": 0
+				},
+				"radius": 0.8,
+				"height": 0.8,
+				"direction": 0
+			  }
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 7000,
+		   "torqueCurveMaxRpm": 400,
+		  "passiveBrakeMaxTorque": 7000,
+		   "reverseBrakeMaxRpm": 300,
+		   "basicFrictionTorque": 150.0,
+		   "fullCompressFrictionTorque": 300
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 4.0,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 1.0,
+			"thicknessAngular": 36,
+			"suspensionSpring": 15000.0,
+			"suspensionDamper": 500.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.8,
+			"steerAngleMax": 30,
+			"steerSpeed": 2
+			//"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

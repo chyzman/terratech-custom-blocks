@@ -1,0 +1,290 @@
+{
+    "Name":                 "Old Star Firebug Flamethrower",
+    "Description":          "Now this is how the Old Star do.The Firebug is what the Old Star use for the weekly weed control,pest maintenence and occationally used as a deterrent for pesky theives.",
+    "ID": 300062,
+    "Faction": 4,
+    "Category": 4,
+    "Grade": 2,
+    "Price": 23604, 
+    "Recipe": {
+      "0": 10, 
+      "11": 4, 
+      "49": 4,
+      "63": 2 
+    },
+    "IconName":                   "OS_Firebug_icon.png",            
+    "MeshName":                   null,                                                                         
+    "ColliderMeshName":           null,                                 
+    "SupressBoxColliderFallback": true,
+
+
+
+    // Basic Block HP Values
+    "HP": 1200,             
+                            
+    "Mass": 2,             
+    "CenterofMass": {"x": 0.5,"y": 0,"z": 0.5},
+    "DamageableType": 3,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    "EmissionMode": 2,
+    // Block Dimensions
+    "BlockExtents":{"x": 2,"y": 1, "z": 2}, 
+  
+    "APs": [ 
+      {"x": 0, "y": -0.5, "z": 0},{"x": 0, "y": -0.5, "z": 1},
+      {"x": 1, "y": -0.5, "z": 0},{"x": 1, "y": -0.5, "z": 1}      
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "VEN_FlameThrower_121",
+    "KeepReferenceRenderers": false,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 1.0, "y": 0.0, "z": 0.0 },
+    
+    "SubObjects": [
+      {
+        "SubOverrideName":          "m_VEN_FlameThrower_121_Base",
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "OS_FireBug_Base.obj",
+        "ColliderMeshName":         "OS_FireBug_Base.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName":"OST2.png",
+        "MeshEmissionTextureName":"OST3.png",
+        "SubRotation":              {"x": 0,"y": 0,  "z": 0},
+        "SubPosition":              {"x": 0.0,"y": 0,  "z": 0.0}
+      },
+      {
+        "SubOverrideName":          "m_VEN_FlameThrower_121_RotatingPart",
+        "MeshName":                 "OS_FireBug_Turret.obj", 
+        "ColliderMeshName":         "OS_FireBug_Turret.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName":"OST2.png",
+        "MeshEmissionTextureName":"OST3.png",
+        "SubScale":                 { "x": 1, "y": 1, "z": 1},
+        "SubRotation":              {"x": 0,"y": 0,  "z": 0},
+        "SubPosition":              {"x":-0.5,"y": 0,"z":-0.5}  
+      },    
+
+      {
+        "SubOverrideName":          "m_VEN_FlameThrower_121_Barrel",
+        "MeshName":                 "OS_FireBug_Tip.obj",
+        "DestroyExistingColliders": true,
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName":"OST2.png",
+        "MeshEmissionTextureName":"OST3.png",
+        "SubScale":                 { "x": 1, "y": 1, "z": 1},
+        "SubRotation":              {"x": 0,"y": 0,"z": 0},
+        "SubPosition":              {"x":-0.5,"y": 0.0,"z":-1.5 }  
+      },
+      {
+        "SubOverrideName":          "FXFlameThrower",
+        "SubRotation":              {"x": 0,"y": 0,"z": 0},
+        "SubPosition":              {"x":0.0,"y": 0,"z": 0.5},
+
+      },
+      {
+        "SubOverrideName":          "_gimbalHorizontal",
+        "SubPosition":              {"x": 0.5,"y": 0,"z": 0.5}
+      },
+      {
+        "SubOverrideName":          "_gimbalVertical",
+        "SubRotation":              {"x": 0,"y": 0,"z": 0},
+        "SubPosition":              {"x": 0.0,"y": 0.0,"z": 0.5 }
+      },
+      {
+        "SubOverrideName":          "Flint_Wheel",
+        "MeshName":                 "OS_FireBug_Wheel.obj", 
+        "ColliderMeshName":         "OS_FireBug_Wheel.obj",
+        "MeshTextureName": "OST1.png",
+        "MeshGlossTextureName":"OST2.png",
+        "MeshEmissionTextureName":"OST3.png",
+        "SubPosition":              { "x": 0.0, "y": 0.0, "z": 0.0}
+       }
+    ],
+
+    "Deserializer":{
+      "ModuleDamage": {
+        "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //"FireData.m_BulletPrefab/Projectile.m_Explosion",
+                                                        // Borrow a clean projectile explosion for this block's death
+                                                        // Could point to this block's projectile explosion here (commented above) and Instantiate below
+
+        "Instantiate|deathExplosion": {             // Instantiate after referencing to modify
+            "Explosion": {
+                "m_EffectRadius": 8,               // Outer radius, damage is 0 to max
+                "m_EffectRadiusMaxStrength": 4,    // Inner radius, damage is at max within here
+                "m_ExplosionSize": 2,               // 2: Large
+                "m_MaxDamageStrength": 700,        // 
+                "m_MaxImpulseStrength": 200,        // 
+                "DoDamage": true
+            },
+            "GameObject|Sparks": {          // Flying sparks
+                "ParticleSystem": {
+                    "startSpeed": 20.0,
+                    "startSize": 5,
+                    "startLifetime": 4,
+                    "gravityModifier": 0.5,
+                    "maxParticles": 1000
+                }
+            },
+            "GameObject|ExplosionSmoke": {  // Smog
+                "ParticleSystem": {
+                    "startDelay": 0.1,
+                    "startSpeed": 100,
+                    "startSize": 200,
+                    "startLifetime": 7,
+                    "gravityModifier": 0.0,
+                    "maxParticles": 1000
+                }
+            },
+            "GameObject|ExplosionDark": {   // It looks like weird biscuits
+                "ParticleSystem": {
+                    "startDelay": 0.2,
+                    "startSpeed": 60,
+                    "startSize": 8,
+                    "startLifetime": 2,
+                    "gravityModifier": 0.05,
+                    "maxParticles": 1000
+                }
+            }, 
+            "GameObject|ExplosionBright": { // The glow
+                "ParticleSystem": {
+                    "startSpeed": 40,
+                    "startSize": 100,
+                    "startLifetime": 3,
+                    "gravityModifier": -0.2,
+                    "maxParticles": 1000
+                }
+            },
+            "GameObject|Point light": {     // The light that catches all on fire
+                "UnityEngine.Light": {
+                    "intensity": 50.0,
+                    "range": 64.0
+                },
+                "FadeInOutLight": {
+                    "StartDelay": 0.0,
+                    "FadeInSpeed": 0.5,
+                    "FadeOutDelay": 0.0,
+                    "FadeOutSpeed": 1
+                }
+            } // The actual glow
+        }
+    },
+        "GameObject|_gimbalHorizontal": {
+            "GimbalAimer": {
+                "rotationAxis": 2,
+                "rotationLimits": [-180.0,180.0]
+            },
+            "GameObject|_spindle":{
+                "GameObject|Flint_Wheel":{
+                  "UnityEngine.Transform": {
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0},
+                     "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+                   }
+                },
+                "UnityEngine.Transform": {
+                  "localPosition": { "x": 0.0, "y": 0.1, "z":-0.5},
+                   "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0}
+                 },
+                "Spinner": {
+                  "m_Speed": 0.55,
+                  "m_RotationAxis": {
+                  "axis": 0
+                     },
+                  "m_SteerAxis": {
+                    "axis": 0
+                     },
+                  "m_AutoSpin": true,
+                  "m_SpinUpTime": 0.1,
+                  "m_CurrentAngle": 0.0,                
+                  "m_CurrentAutoSpeed": 0.0,
+                  "m_CurrentSpeedFraction": 0.0,
+                  "m_SpinnerSound": null,
+                  "m_SpinnerSoundOriginalPitch": 0.0,
+                  "AtFullSpeed": false 
+                    }
+                  },
+                  "GameObject|_gimbalVertical": {
+                    "GimbalAimer": {
+                        "rotationAxis": 1,
+                        "rotationLimits": [-35.0,20]
+                    }
+                }      
+            },   
+        "ModuleWeapon": {
+            "m_AimType": 0,
+            "m_RotateSpeed": 120.0,
+            "m_ChangeTargetInteval": 0.5,
+            "m_AutoFire": false,
+            "m_PreventShootingTowardsFloor": false,
+            "m_DeployOnHasTarget": false,
+            "m_LimitedShootAngle": 90.0,
+            "m_ShotCooldown": 0.0,
+            "m_FireSFXType": 26,
+            "<FireControl>k__BackingField": false,
+            "<AimControl>k__BackingField": 0,
+            "<DisableTargetAimer>k__BackingField": false,
+            "OnAudioTickUpdate": null,
+            "m_TargetAimer": null,
+            "m_WeaponComponent": null,
+            "m_TargetAimDirectionLocal": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "m_TargetPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+        },
+        "ModuleWeaponFlamethrower": {
+           "m_FirePos": "/_gimbalHorizontal/_gimbalVertical/FirePoint",
+            "m_MaxFlameLength": 50.0,
+            "m_DPS": 500.0,
+            "m_DamageType": 6,
+            "m_ExtendTime": 0.25,
+            "m_RetractTime": 0.05,
+            "m_Particles": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": false,
+                "playbackSpeed": 4.0,
+                "enableEmission": true,
+                "emissionRate": 100.0,
+                "startSpeed": 12.0,
+                "startSize": 2,
+                "startLifetime": 0.7,
+                "gravityModifier": 0.07,
+                "maxParticles": 20000,
+                "scalingMode": 2,
+                "time": 0.0,
+                "randomSeed": 0,
+                "useAutoRandomSeed": false,
+                "startColor": {
+                    "r": 0.92,
+                    "g": 0.94,
+                    "b": 1,
+                    "a": 0.15
+                },
+                "trails": {
+                    "enabled": true
+                }
+            },
+            "m_TipLight": {
+                "intensity": 10,
+                "range": 10
+            },
+            "m_JetLight": {
+                "intensity": 10,
+                "range": 10
+            }
+      }
+    }
+}

@@ -1,0 +1,76 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "O.B. Dark Energy Light Transport pipe (Straight)",
+  "Description": "A Cheap, easy to make Transport pipe to transport Dark Energy. Being Cheap, it can't transport much, up to 250 units",
+  "ID": 1700160, 
+
+  "Faction": 7, 
+  "Category": 6, 
+  "Grade": 3, 
+  "Price": 100,
+  "HP": 400,
+  "Mass": 1,
+
+  "MeshName": null,
+
+  "Recipe":  "1",
+ 
+  "MeshTextureName": null,
+  "ColliderMeshName": null,
+
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	
+  ],
+
+  
+  "GamePrefabReference": "GSO_Block_Half_111", 
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, 
+  "SubObjects": [{
+    "SubOverrideName":"Base",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "Small Dark Energy Pipe.obj",
+	"MeshTextureName": "Our Benefactors 1.png", 
+    "MeshGlossTextureName": "Our Benefactors 2.png", 
+    "MeshEmissionTextureName": "Our Benefactors 3.png",
+	"ColliderMeshName" : "Small Dark Energy Pipe.obj",
+	"SubPosition": {"x": 0,"y": 0,"z": 0},
+	"SubRotation": {"x": 90,"y": 0,"z": 0},
+	},{
+    "SubOverrideName":"Wall",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "Small Dark Energy Pipe window.obj",
+	"MeshMaterialName":"MAT_FX_MuzzleFlash_Blue",
+	"ColliderMeshName" : "Small Dark Energy Pipe.obj",
+	"SubPosition": {"x": 0,"y": 0,"z": 0},
+	"SubRotation": {"x": 90,"y": 0,"z": 0},
+	}]
+} 
+
+  

@@ -1,0 +1,84 @@
+{
+	"Name": "TAC Escape Hatch",
+	"Description": "Press X to jettison the armor for emergency escape. \nDon't worry, it should not be too much of a loss. I think. \n\n\n\nDoes f-bron even have value these days anymore!? <b>WOOD IS BETTER THAN IT FOR F-B</b>~", 
+	"ID": 584231, 		
+
+	"Faction": 5,
+	"Category": 5, 
+	"Grade": 3, 
+	"Price": 3854,//3854x3=11562 //Cheap for a TAC block.
+	"HP": 8500, //8000 //Bonus 500 health
+	"Mass": 24,//Heavier because F*bron. //Was 16
+
+	"Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 43, 43, 43, 43, 46",//
+	//Finally something to put all that useless f*bron to good use
+	"IconName": "BoomDoor.png", 
+	// "MeshName": null, 
+	// "MeshMaterialName": null, 
+	// "ColliderMeshName": null, 
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 4,
+    "z": 4 
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+	"APs": [
+		//Bottom
+		{ "x": 0, "y": -0.5, "z": 0 },
+		{ "x": 0, "y": -0.5, "z": 1 },
+		{ "x": 0, "y": -0.5, "z": 2 },
+		{ "x": 0, "y": -0.5, "z": 3 },
+		//Top
+		{ "x": 0, "y": 3.5, "z": 0 },
+		{ "x": 0, "y": 3.5, "z": 1 },
+		{ "x": 0, "y": 3.5, "z": 2 },
+		{ "x": 0, "y": 3.5, "z": 3 },
+		//Side
+		{ "x": 0.5, "y": 0, "z": 1 },
+		{ "x": 0.5, "y": 0, "z": 2 },
+		{ "x": 0.5, "y": 3, "z": 1 },
+		{ "x": 0.5, "y": 3, "z": 2 },
+	],
+	"GamePrefabReference": "GC_Exploder(221)", 
+  	"KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+
+	"SubObjects": [
+		{
+		  "SubOverrideName": "m_GC_Exploder_221",
+		  "MakeBoxCollider": true,
+		  "DestroyExistingRenderer": true,
+		  "MeshName": "TACJettisonHatchExploder.obj",
+		  // "ColliderMeshName": "TAC_FAB.obj",
+		  "MeshMaterialName": "HE_Main",
+		}
+	],
+
+	"JSONBLOCK": {
+		"GameObject|m_GC_Exploder_221": {
+    	"UnityEngine.Transform": {
+	    	// "localScale": { "x": 2, "y": 1, "z": 1 },
+	    	"localPosition": { "x": 1.5, "y": 1.5, "z": 1.5 }
+	    }
+    },
+	  "Damageable": {
+	    "m_DamageableType": 5,
+	    //Condensed f*bron armoring. Avoid fire at all costs
+	    "m_AoEDamageBlockPercent": 1.0,//Block shotguns
+	  },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Popping off in the middle of a fight will really ruin your day
+      // "m_ExplodeCountdownTimer": 0.0, //How long till the block commits die
+      // "m_HealOnDetach": false, //Does this block heal when it is detached?
+      // "m_HealOnDetachPercent": 0.0, //How much it heals when detached
+      // "m_DamageDetachMeter": 0.0, //idk
+      // "m_DamageDetachMeterTimestamp": 0.0, //idk
+    },
+	  "ModuleDetachableLink": {
+	    "m_DetachQueued": false,
+	    //"m_TechNamer": null
+	  },
+	}
+}

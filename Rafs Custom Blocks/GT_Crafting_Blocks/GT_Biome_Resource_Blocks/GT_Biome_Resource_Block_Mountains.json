@@ -1,0 +1,82 @@
+{
+  "Name": "GreenTech Mountains Resource Block",
+  "Description": "A container of compacted resources commonly found in the Mountains biome. This block contains 10 Rodian Capsule and 10 Luxian Crystal.",
+  "ID": 911228,
+
+  "Faction": 0,
+  "Category": 7, 
+  "Grade": 2,
+  "Price": 3180, 
+  "HP": 250,
+  "Mass": 4,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32",  
+  "IconName": "GT_Biome_Resource_Block_Mountains_Icon.png", 
+  
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 2,
+    "z": 1
+  },
+  
+  "APs": [ 
+	{"x": 0,"y": -0.5,"z": 0},
+	{"x": 1,"y": -0.5,"z": 0},
+	{"x": 0,"y": 1.5,"z": 0},
+	{"x": 1,"y": 1.5,"z": 0}
+  ],
+  
+  "GamePrefabReference": "GSO_TB_Fibron_221", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  }, 
+  "SubObjects": [
+    {
+      "MeshName": "GT_Biome_Resource_Block_Base.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Biome_Resource_Block_Base_Collider.obj"
+    },
+    {
+      "MeshName": "GT_Biome_Resource_Block_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Biome_Resource_Block_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Biome_Resource_Block_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Biome_Resource_Block_Mountains.obj",
+      "MeshMaterialName": "Resources_All_01"
+    }
+  ],
+
+ "JSONBLOCK": {
+  }			
+}

@@ -1,0 +1,112 @@
+{
+  "Name": "Old Star Cooled Silo",
+  "Description": "Now this is how the Old Star do. After discovering how collection beams work the design team at old star developed how to use them in our techs but removed the anchor to add a cooling fan to keep the silo cooled.",
+  "ID": 300051,
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 2,
+  "Price": 471,
+  "HP": 2000,
+  "Mass": 16,
+  "IconName": "OS_Silo_Icon.png",
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe":  "45, 32, 32",  
+
+  "BlockExtents": 
+  {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+   "APs": [
+     //Bottom
+    { "x": 0.0, "y":-0.5, "z": 0.0 },{ "x": 0.0, "y":-0.5, "z": 1.0 },
+    { "x": 1.0, "y":-0.5, "z": 0.0 },{ "x": 1.0, "y":-0.5, "z": 1.0 },
+    //Sides
+    { "x": 1.5, "y": 0.0, "z": 0.0 },{ "x":-0.5, "y": 0.0, "z": 0.0 },
+    { "x": 1.5, "y": 0.0, "z": 1.0 },{ "x":-0.5, "y": 0.0, "z": 1.0 },
+    //front-back
+    { "x": 0.0, "y": 0.0, "z": 1.5 },{ "x": 1.0, "y": 0.0, "z": 1.5 },
+    { "x": 0.0, "y": 0.0, "z":-0.5 },{ "x": 1.0, "y": 0.0, "z":-0.5 }
+  ],
+
+  "GamePrefabReference": "VEN_Silo_212",
+  "MeshName": null,
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+  "SubObjects": [
+    {  
+    "SubOverrideName": "m_VEN_Silo_212",
+    "DestroyExistingRenderer": true,
+    "DestroyExistingColliders": true,
+    "MakeBoxCollider": true,
+    "MeshName": "OS_Silo_Base.obj",
+    "ColliderMeshName": "OS_Silo_Base.obj",
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName":"OST2.png",
+    "MeshEmissionTextureName":"OST3.png",
+      "SubPosition": { "x": 1.0, "y": 0.0, "z": 0.0}
+    },
+    {
+    "SubOverrideName": "Silo_Fan",
+    "MeshName": "OS_Silo_Fan.obj", 
+    "MeshTextureName": "OST1.png",
+    "MeshGlossTextureName":"OST2.png",
+    "MeshEmissionTextureName":"OST3.png",
+    "SubPosition": { "x": 0.0, "y": 0.0, "z": 0.0}
+       }    
+  ],
+
+  "JSONBLOCK": {
+    "ModuleAnchor": null,                       
+    "GameObject|CentreOfMass": {
+        "UnityEngine.Transform": { 
+            "localPosition": { "x": 0.5, "y": 0.0, "z": 0.5 } 
+        }
+    },
+"GameObject|VEN_Silo_212":{
+    "GameObject|_spindle":{
+        "Spinner": {
+            "m_Speed": 1.0,
+            "m_RotationAxis": {
+              "axis": 1
+            },
+            "m_SteerAxis": {
+              "axis": 1
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 0.1,
+            "m_CurrentAngle": 0.0,                
+            "m_CurrentAutoSpeed": 0.0,
+            "m_CurrentSpeedFraction": 0.0,
+            "m_SpinnerSound": null,
+            "m_SpinnerSoundOriginalPitch": 0.0,
+            "AtFullSpeed": false 
+        },
+        "GameObject|Silo_Fan":{      
+            "UnityEngine.Transform": {
+              "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+              "localEulerAngles": {"x": 0.0,"y": 0.0,"z": 0.0} 
+             }
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {"x": 0.5,"y": 0.0,"z": 0.5},
+            "localEulerAngles": {"x": 0.0,"y": 0.0,"z": 0.0} 
+           }
+        }
+      },
+      "ModuleItemStore": {"m_Capacity": 55},
+      "ModuleItemHolder": {
+          "m_OverrideBasePositons": [
+              { "x": 0, "y": 0, "z": 0 },{ "x": 0, "y": 0, "z": 1 },
+                          { "x": 0.5, "y": 0, "z": 0.5 },
+              { "x": 1, "y": 0, "z": 0 },{ "x": 1, "y": 0, "z": 1 }   
+          ]
+      }
+    }
+  }

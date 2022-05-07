@@ -1,0 +1,182 @@
+{
+  "Name": "Youkai Nuclear Kinetic Dynamo",
+  "Description": "This large reactor generates using an internal kinetic dynamo and other nuclear gizmos to power things day or night, but due to it's extremely volatile nature, devastation shall follow if it explodes.",
+  "ID": 19083, 
+
+  "Faction": 0, 
+  "Category": 6, 
+  "Grade": 4, 
+  "Price": 34458,
+  "HP": 5250, 
+  "Mass": 45,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 1},
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "45, 45, 45, 45, 45, 45, 45, 45, 53, 53, 57, 57, 59, 59, 59, 59, 59, 59",
+  "IconName": "YK_Reactor.png", 
+  "SupressBoxColliderFallback": false,
+ 
+  "BlockExtents":{"x": 2,"y": 2, "z": 3},   
+  "APs": [ 
+  {"x": 0, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 2},
+	{"x": 1, "y": -0.5, "z": 2},
+  {"x": 0, "y": 1.5, "z": 0},
+	{"x": 1, "y": 1.5, "z": 0},
+	{"x": 0, "y": 1.5, "z": 2},
+	{"x": 1, "y": 1.5, "z": 2},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": 1.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": 1.5, "y": 0, "z": 2},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 0, "z": 2.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": 2.5},
+	{"x": 0, "y": 1, "z": -0.5},
+	{"x": 0, "y": 1, "z": 2.5},
+	{"x": 1, "y": 1, "z": -0.5},
+	{"x": 1, "y": 1, "z": 2.5},
+	{"x": -0.5, "y": 1, "z": 0},
+	{"x": 1.5, "y": 1, "z": 0},
+	{"x": -0.5, "y": 1, "z": 2},
+	{"x": 1.5, "y": 1, "z": 2}
+  ],
+  "GamePrefabReference": "GSO_Radar_111",
+  "DeathExplosionReference": "GCBattery(222)",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+  "SubObjects": [ 
+    {
+      "ObjectName": "_spindle",
+      "MeshName": "YK_Reactor_Core.obj",
+      "ColliderMeshName": null,
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+      "SubPosition": {"x": 0.5, "y": 0.5, "z": 1}
+    },
+    {
+        "ObjectName": "Reactor_Base",
+        "MeshName": "YK_Reactor.obj",
+        "ColliderMeshName": "YK_Reactor.obj",
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png"
+      }
+    ],
+	
+
+  "JSONBLOCK": {
+    "GameObject|_spindle": {
+      "Spinner": {
+        "m_AutoSpin":true,
+        "m_SpinUpTime": 10,
+        "Speed": 0.6,
+        "m_Speed": 0.6,
+        "m_RotationAxis": {
+            "axis": 2
+          },
+        "m_SteerAxis": {
+            "axis": 2
+          }
+     }
+    },
+    "ModuleDamage": {
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion",
+
+      "Instantiate|deathExplosion": {   
+          "Explosion": {
+            "m_EffectRadius": 10.0,
+            "m_EffectRadiusMaxStrength": 5.0,
+            "m_MaxDamageStrength": 250.0,
+            "m_MaxImpulseStrength": 250.0,
+            "m_DamageType": 3,
+            "m_ExplosionType": 0,
+            "m_ExplosionSize": 1,  
+              "DoDamage": true
+          },
+          "GameObject|Sparks": { 
+              "UnityEngine.ParticleSystem": {
+                "shape": {
+                  "shapeType": "Sphere",
+                },
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor":{
+                      "r": 0.4,
+                      "g": 1,
+                      "b": 0.4,
+                      "a": 1.0
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "shape": {
+                  "shapeType": "Sphere",
+                },
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor":{
+                      "r": 0.4,
+                      "g": 1,
+                      "b": 0.4,
+                      "a": 1.0
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "shape": {
+                  "shapeType": "Sphere",
+                },
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor":{
+                      "r": 0.4,
+                      "g": 1,
+                      "b": 0.4,
+                      "a": 0.5
+                    }
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": {
+              "UnityEngine.ParticleSystem": {
+                "shape": {
+                  "shapeType": "Sphere",
+                }
+              }
+            }
+      }
+  },
+  "ModuleRadar": {
+    "m_Priority": 0,
+    "m_MiniMapType": 0,
+    "m_Range": 150.0,
+    "m_Dishes": [],
+    "m_MiniMap": null,
+    "m_ModuleType": 0,
+    "MiniMapType": 0,
+    "Range": 150.0,
+    },
+    "ModuleEnergy": {
+        "m_Priority": -10,
+        "m_OutputPerSecond": 45,
+        "m_OutputEnergyType": 0,
+        "m_GeneratingSFXType": null,
+        "m_OutputConditions": 0,
+        "m_SequentialPowerUp": false,
+        "m_PowerUpDelay": 0,
+      },
+      "ModuleSpinOnAttach": {}
+	}
+}

@@ -1,0 +1,635 @@
+{
+  "Name": "GSO Heavy Missile",
+  "Description": "A very large missile. It's so big that it's mobility is poor and it's speed is slow, but it's big anyway!", //You can make multiple lines with \n
+  "ID": 546397, //A random ID that MUST be unique
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 4, //The desired grade minus one
+  "Price": 61236,
+  "HP": 1200,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 32,
+  "CenterOfMass": {"x": 0.5, "y": -0.5, "z": 0},
+
+  "Recipe": "45, 45, 45, 45, 47, 47, 47, 47, 55, 55, 55, 55, 57, 57, 57, 57, 60, 60, 60, 60, 65, 65, ",
+  "DamageableType": 1,
+
+  "IconName": "GSO_Large_AShM_Launcher.png", 
+  "MeshName": null, 
+  //"MeshTextureName": "_texAnimTest_A.png",
+  //"MeshEmissionTextureName": "_texAnimTest_E.png",
+  "MeshMaterialName": null,
+  "EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  //"ColliderMeshName": "_texAnimTest.obj",
+  "SupressBoxColliderFallback": false, 
+  /*"BlockExtents": {
+    "x": 2,
+    "y": 2,
+    "z": 7
+  },*/
+
+  //Fix SCU bug
+  //It's a pain but it's the only solution
+  "Cells": [
+    //{"x": 0,"y": -1,"z": -3},{"x": 1,"y": -1,"z": -3},
+    {"x": 0,"y": -1,"z": -2},{"x": 1,"y": -1,"z": -2},
+    {"x": 0,"y": -1,"z": -1},{"x": 1,"y": -1,"z": -1},
+    {"x": 0,"y": -1,"z": 0},{"x": 1,"y": -1,"z": 0},
+    {"x": 0,"y": -1,"z": 1},{"x": 1,"y": -1,"z": 1},
+    {"x": 0,"y": -1,"z": 2},{"x": 1,"y": -1,"z": 2},
+    {"x": 0,"y": -1,"z": 3},{"x": 1,"y": -1,"z": 3},
+
+    {"x": 0,"y": 0,"z": -3},{"x": 1,"y": 0,"z": -3},
+    {"x": 0,"y": 0,"z": -2},{"x": 1,"y": 0,"z": -2},
+    {"x": 0,"y": 0,"z": -1},{"x": 1,"y": 0,"z": -1},
+    {"x": 0,"y": 0,"z": 0},{"x": 1,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": 1},{"x": 1,"y": 0,"z": 1},
+    {"x": 0,"y": 0,"z": 2},{"x": 1,"y": 0,"z": 2},
+    {"x": 0,"y": 0,"z": 3},{"x": 1,"y": 0,"z": 3},
+
+    //{"x": 0,"y": 1,"z": -3},{"x": 1,"y": 1,"z": -3},
+    {"x": 0,"y": 1,"z": -2},{"x": 1,"y": 1,"z": -2},
+    {"x": 0,"y": 1,"z": -1},{"x": 1,"y": 1,"z": -1},
+    {"x": 0,"y": 1,"z": 0},{"x": 1,"y": 1,"z": 0},
+    {"x": 0,"y": 1,"z": 1},{"x": 1,"y": 1,"z": 1},
+    {"x": 0,"y": 1,"z": 2},{"x": 1,"y": 1,"z": 2},
+    {"x": 0,"y": 1,"z": 3},{"x": 1,"y": 1,"z": 3},
+
+    //{"x": 0,"y": 1,"z": -3},{"x": 1,"y": 1,"z": -3},
+    //{"x": 0,"y": 1,"z": -2},{"x": 1,"y": 1,"z": -2},
+    //{"x": 0,"y": 2,"z": -1},{"x": 1,"y": 2,"z": -1},
+    {"x": 0,"y": 2,"z": 0},{"x": 1,"y": 2,"z": 0},
+    {"x": 0,"y": 2,"z": 1},{"x": 1,"y": 2,"z": 1},
+    {"x": 0,"y": 2,"z": 2},{"x": 1,"y": 2,"z": 2},
+    {"x": 0,"y": 2,"z": 3},{"x": 1,"y": 2,"z": 3},
+  ],
+  "APs": [
+      {"x": 0,"y": -1.5,"z": -2},{"x": 1,"y": -1.5,"z": -2},
+      {"x": 0,"y": -1.5,"z": 2},{"x": 1,"y": -1.5,"z": 2},
+  ],
+
+  "GamePrefabReference": "BF_Laser_Gatling_423",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "GSO_Large_AShM_Launcher_base",
+      "MeshName": "GSO_Large_AShM_Launcher_base.obj",
+      //"ColliderMeshName": "GSO_Large_AShM_Launcher_base.obj",
+      "MeshMaterialName": "GSO_Main",
+      "MakeSphereCollider": false,
+    },
+    {
+      "SubOverrideName": "GSO_Large_AShM_Launcher_barrel",
+      "MeshName": "GSO_Large_AShM_Launcher_barrel.obj",
+      //"ColliderMeshName": "GSO_Large_AShM_Launcher_barrel.obj",
+      "MeshMaterialName": "GSO_Main",
+      "MakeSphereCollider": false,
+    },
+
+    {
+      "SubOverrideName": "GSO_Large_AShM_Launcher_hatch",
+      "MeshName": "GSO_Large_AShM_Launcher_hatch2.obj",
+      "MeshMaterialName": "GSO_Main",
+    },
+    {
+      "SubOverrideName": "/_barrel_copy/GSO_Large_AShM_Launcher_hatch",
+      "MeshName": "GSO_Large_AShM_Launcher_hatch2.obj",
+      "MeshMaterialName": "GSO_Main",
+    },
+    {
+      "SubOverrideName": "/_barrel_copy_copy/GSO_Large_AShM_Launcher_hatch",
+      "MeshName": "GSO_Large_AShM_Launcher_hatch2.obj",
+      "MeshMaterialName": "GSO_Main",
+    },
+    {
+      "SubOverrideName": "/_barrel_copy_copy_copy/GSO_Large_AShM_Launcher_hatch",
+      "MeshName": "GSO_Large_AShM_Launcher_hatch2.obj",
+      "MeshMaterialName": "GSO_Main",
+    },
+
+
+    {
+      "SubOverrideName": "Piston_baseToBarrel",
+      "MeshName": "GSO_Large_AShM_Launcher_piston1.obj",
+      "MeshMaterialName": "GSO_Main",
+      "MakeSphereCollider": false,
+    },
+    {
+      "SubOverrideName": "Piston_barrelToBase",
+      "MeshName": "GSO_Large_AShM_Launcher_piston2.obj",
+      "MeshMaterialName": "GSO_Main",
+      "MakeSphereCollider": false,
+    },
+
+
+
+
+    // Primitive Collider
+    { // base 1
+      "SubOverrideName": "col_1",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0.5,"y": -0.425367,"z": 1.0},
+      "SubScale": {"x": 0.904908,"y": 0.074631,"z": 0.38953}
+    },
+    { // base 2
+      "SubOverrideName": "col_2",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0.5,"y": -0.425367,"z": 5.0},
+      "SubScale": {"x": 0.904908,"y": 0.074631,"z": 0.38953}
+    },
+    { // barrel
+      "SubOverrideName": "col_3",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0.0,"y": 1.05197,"z": 2.31119},
+      "SubScale": {"x": 2.0,"y": 1.85005,"z": 5.35057}
+    },
+
+
+    // Remove existing mesh
+    // Even if KeepRenderers is set to false, the meshes of GameObjects in other blocks that reference it don't seem to disappear
+    // It's a pain but you need to delete everything you don't need
+    {
+      "SubOverrideName": "m_RR_StickyBomb_223_AmmoBarrel",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "m_RR_StickyBomb_223_Barrel_1",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "m_RR_StickyBomb_223_Barrel_2",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    { // _copy
+      "SubOverrideName": "_barrel_copy/_recoiler/m_RR_StickyBomb_223_AmmoBarrel",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1/m_RR_StickyBomb_223_Barrel_2",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    { // _copy_copy
+      "SubOverrideName": "_barrel_copy_copy/_recoiler/m_RR_StickyBomb_223_AmmoBarrel",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1/m_RR_StickyBomb_223_Barrel_2",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    { // _copy_copy_copy
+      "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/m_RR_StickyBomb_223_AmmoBarrel",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/m_RR_StickyBomb_223_Barrel_1/m_RR_StickyBomb_223_Barrel_2",
+      "DestroyExistingRenderer": true,"DestroyExistingColliders": true,
+    },
+
+
+
+
+    { // Missile
+      "SubOverrideName": "FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile",
+      "MeshName": "GSO_Large_AShM_Launcher_missile.obj",
+      "MeshMaterialName": "GSO_Main"
+    },
+    {"SubOverrideName": "FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_Small_A",
+    "DestroyExistingRenderer": true,},
+    {"SubOverrideName": "FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_Small_B",
+    "DestroyExistingRenderer": true,},
+    {"SubOverrideName": "FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_BigA",
+    "DestroyExistingRenderer": true,},
+    {"SubOverrideName": "FireData.m_BulletPrefab/m_HE_CruiseMissile_113_Missile/m_HE_CruiseMissile_113_Missile_Wing_Big_B",
+    "DestroyExistingRenderer": true,},
+
+  ],
+
+  "Deserializer": {
+    // for FollowSuspension -----------------------------
+    "GameObject|SuspensionUp": { // ??? 
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      }
+    },
+    "GameObject|_PistionPivot_base_globalOffset":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      },
+      "GameObject|_PistionPivot_base":{ // piston's FollowSuspension Target 
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.5, "y":-0.263152, "z":4.74575 }
+        },
+      },
+    },
+
+    // base ------------------------
+    "GameObject|_baseCollider":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      },
+      "GameObject|col_1":{
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.BoxCollider": { //Give it Grabbable colliders
+        "gameObject": {"layer": 8,},
+      },
+    },
+    "GameObject|col_2": {
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.BoxCollider": { //Give it Grabbable colliders
+        "gameObject": {"layer": 8,},
+      },
+    },
+    },
+    "GameObject|GSO_Large_AShM_Launcher_base_globalOffset":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      },
+      "GameObject|GSO_Large_AShM_Launcher_base":{
+        "UnityEngine.Transform": {
+          //"localEulerAngles": { "x":0, "y":0, "z":0 },
+          //"localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.0 }
+        },
+      },
+  },
+
+    // BF_Laser_Gatling_423 GameObject -----------------------------------------------------------------------------
+    "GameObject|BF_Laser_Gatling_423":{
+      // b_RotatingPart offset
+      // +0.5 X
+      // -0.34859 Y (Z in blender
+      // -1 Z (Y in blender
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        //"localPosition": { "x":-0.5, "y":0.34859, "z":-1},
+        "localPosition": { "x":-0.5, "y":-0.65141, "z":-4}, // b_RotatingPart animation offset
+        //"localEulerAngles": { "x":0, "y":0, "z":0 },
+      },
+      "GameObject|b_RotatingPart":{
+        "UnityEngine.Transform": {
+          //"localEulerAngles": { "x":0, "y":0, "z":0 },
+          //"localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "GameObject|_gimbalBase": null, // Remove existing barrel
+      },
+    },
+
+    // barrel's FollowTransform Target -----------------------------------------------------------------------------
+    "GameObject|_killRotation": { // Remove the rotation of the animation for target GameObject
+      "FollowTransform": { // 
+        "m_TransformToFollow": "/b_RotatingPart",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|_targetOffset":{
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.5, "y":-0.0, "z":2.7 }
+        },
+        "GameObject|_barrelTarget":{
+          "UnityEngine.Transform": {
+            // This is pivot point offset, align the Y axis with the pivot position
+            "localPosition": { "x":0, "y":-0.252223, "z":0 }
+          },
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        }
+      },
+    },
+
+    // new barrel -----------------------------------------------------------------------------
+    "GameObject|GSO_Large_AShM_Launcher_barrel_globalOffset":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      },
+      "GameObject|GSO_Large_AShM_Launcher_barrel": {
+        "UnityEngine.Transform": {
+          //"localEulerAngles": { "x":0, "y":0, "z":0 },
+          //"localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0.5, "y":-0.252321, "z":0.995589 }
+        },
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        // FollowSuspension  base to barrel -----------------------------------------------------------------------------
+        "FollowSuspension": {
+          "m_TargetWheelTrans": "/_barrelTarget",
+          "m_TargetUpTrans": "/SuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+        },
+        "GameObject|col_3": {
+          "UnityEngine.BoxCollider": { //Give it Grabbable colliders
+            "gameObject": {"layer": 8,},
+          },
+        },
+        "GameObject|_PistionPivot_barrel":{ // piston's FollowSuspension Target 
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.214424, "z":2.27012 }
+          },
+        },
+        "Reference|EXP_StickyBomb_223/_gimbalBase/_gimbalElev/_barrel":{
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.442942, "y":1.42345, "z":4.99843 }
+          },
+          "GameObject|SuspensionUpHatch": { // ??? 
+            //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+            "UnityEngine.Transform": {
+              "localScale": {"x": 1,"y": 1,"z": 1},
+              "localPosition": { "x":0, "y":-4, "z":-4.04289 },
+              "localEulerAngles": {"x": 45,"y": 0,"z": 0},
+            }
+          },
+          "GameObject|_recoiler":{
+            "UnityEngine.Transform": {
+              // To flat
+              // convert circular motion into linear motion
+              "localScale": {"x": 0,"y": 1,"z": 1},
+              "localPosition": { "x":0, "y":0, "z":-0.04289 },
+              "localEulerAngles": {"x": 45,"y": 0,"z": 0},
+            },
+            "GameObject|m_RR_StickyBomb_223_AmmoBarrel":{
+              "UnityEngine.Transform": {
+                // Initial rotation angle before the rotation animation is played
+                "localEulerAngles": {"x": 0,"y": 0,"z": -60},
+                // Edit the position of the Y axis to adjust the amount of movement
+                // Set to minus to reverse the direction of movement
+                "localPosition": { "x":0, "y":1, "z":0 }
+              },
+              "GameObject|_resetAngle":{
+                "UnityEngine.Transform": {
+                  "localEulerAngles": {"x": 0,"y": 0,"z": 60},
+                  "localPosition": { "x":0, "y":0, "z":0 }
+                },
+                "GameObject|_hatchTarget":{
+                  "UnityEngine.Transform": {
+                    // Inverted number of m_RR_StickyBomb_223_AmmoBarrel's localPosition
+                    "localPosition": { "x":0, "y":-1, "z":0 }
+                  },
+                  //----------------------------------------------
+                  //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+                  //----------------------------------------------
+                },
+              }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.ParticleSystem": {
+              "playbackSpeed": 1.0,
+              "startLifetime": 0.3,
+              "startSpeed": 5.0,
+              "startSize": 0.5,
+              "emissionRate": 500.0,
+              "gravityModifier": -0.1,
+              "shape": {
+                "radius": 0.25,
+              },
+              "sizeOverLifetime": {
+                "enabled": true,
+                "size": {
+                  //"curveMultiplier": 3,
+                }
+              },
+              "startColor": {
+                "r": 0.9,
+                "g": 0.9,
+                "b": 0.9,
+                "a": 0.1
+              }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "lengthScale": 8.0,
+              "isVisible": true,
+              "material": "SnowMedium"
+            },
+          },
+          "GameObject|_spawnBullet":{
+            "UnityEngine.Transform": {
+              "localPosition": {"x": 0.0,"y": 0,"z": -2},
+            },
+          },
+          // FollowSuspension  barrel to base -----------------------------------------------------------------------------
+          "GameObject|GSO_Large_AShM_Launcher_hatch": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0.0, "y":0.399219, "z":-0.04289 }
+            },
+            "FollowSuspension": {
+              "m_TargetWheelTrans": "/_hatchTarget", // base side target
+              "m_TargetUpTrans": "/SuspensionUpHatch",
+              "m_KeepOriginalRotationOffset": false,
+              "m_ScaleToMatchDistance": false,
+            },
+          },
+        },
+
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": {"localPosition": {"x":-0.442942, "y":1.42345, "z":4.99843}},
+          "GameObject|_recoiler":{
+            "GameObject|b_RotatingPart_A":{
+              "UnityEngine.Transform": {
+                "localPosition": {"x": -0.397346,"y": 0,"z": -0.040632},
+                "localEulerAngles": {"x": -90,"y": 90,"z": 0} //
+              },
+            }
+          }
+        },
+        "Duplicate|_barrel_copy": {
+          "UnityEngine.Transform": {"localPosition": {"x":0.442942, "y":0.537565, "z":4.99843}},
+          "GameObject|_recoiler":{
+            "GameObject|b_RotatingPart_A":{
+              "UnityEngine.Transform": {
+                "localPosition": {"x": 0.397346,"y": 0,"z": -0.040632},
+                "localEulerAngles": {"x": 90,"y": 90,"z": 0} //
+              },
+            }
+          }
+        },
+        "Duplicate|_barrel_copy_copy": {
+          "UnityEngine.Transform": {"localPosition": {"x":-0.442942, "y":0.537565, "z":4.99843}},
+          "GameObject|_recoiler":{
+            "GameObject|b_RotatingPart_A":{
+              "UnityEngine.Transform": {
+                "localPosition": {"x": -0.397346,"y": 0,"z": -0.040632},
+                "localEulerAngles": {"x": -90,"y": 90,"z": 0} //
+              },
+            }
+          }
+        },
+        
+
+        // FollowSuspension  barrel to base -----------------------------------------------------------------------------
+        "GameObject|Piston_barrelToBase": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.214424, "z":2.27012 }
+          },
+          "FollowSuspension": {
+            "m_TargetWheelTrans": "/_PistionPivot_base", // base side target
+            "m_TargetUpTrans": "/SuspensionUp",
+            "m_KeepOriginalRotationOffset": false,
+            "m_ScaleToMatchDistance": false,
+          },
+        },
+      },
+    },
+
+    // FollowSuspension  base to barrel -----------------------------------------------------------------------------
+    "GameObject|Piston_baseToBarrel_globalOffset":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.0, "y":-1.0, "z":-3.0 }
+      },
+      "GameObject|Piston_baseToBarrel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.5, "y":-0.263152, "z":4.74575 }
+        },
+        "FollowSuspension": {
+          "m_TargetWheelTrans": "/_PistionPivot_barrel", // barrel side target
+          "m_TargetUpTrans": "/SuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+      },
+    },
+
+    // ModuleDamage (death explosion) -----------------------------------------------------------------------------
+    "ModuleDamage": {
+      // NuterraSteam doesn't seem to be able to load deathExplosion... for now
+      "deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //reference bigbertha
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          // Not a lot of damage, but the explosion radius is large
+          "m_EffectRadius": 10, // Outer radius, damage is 0 to max
+          "m_EffectRadiusMaxStrength": 5, // Inner radius, damage is at max within here
+          "m_ExplosionSize": 2,
+          //"m_MaxDamageStrength": 350,
+          //"m_MaxImpulseStrength": 6500,
+          //"DoDamage": false
+        },
+      }
+    },
+
+    // FireData -----------------------------------------------------------------------------
+    "ModuleWeapon": {
+      "m_FireSFXType": 17,
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 5,//5
+      "m_CooldownVariancePct": 0.07,
+      "m_FireControlMode": 0,
+      "m_BurstShotCount": 4,
+      "m_BurstCooldown": 8.0,
+      "m_NumCannonBarrels": 4,
+      "m_ResetBurstOnInterrupt": false,
+      "m_SeekingRounds": true,
+    },
+    "Reference|HE_CruiseMissile_121/FireData.":{
+      "m_MuzzleVelocity": 35, //30
+      "Instantiate|m_BulletPrefab":{
+        "WeaponRound": {
+          "m_Damage": 1250
+        },
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2.5 },
+            "localPosition": { "x":0, "y":0, "z": -1.5 }
+          },
+          "BoosterJet": {
+            //"m_Force": 0.013,
+            "m_Force": 0.010,
+            //"m_BurnRate": 60.0,
+            //"m_FireRateFalloff": 3.0,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          },
+          "GameObject|m_BoosterRocketFlame_01":{
+          }
+        },
+        "GameObject|_smokeTrailTrans":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z": -2 }
+          },
+        },
+        "GameObject|_particles":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z": -2 }
+          },
+        },
+        "Projectile": {
+          "m_LifeTime": 7.5,
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "m_ImpactSFXType": "Mortar",
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_EffectRadius": 10.0,
+              "m_EffectRadiusMaxStrength": 7.5,
+              "m_MaxDamageStrength": 250,
+              "m_MaxImpulseStrength": 150,
+            },
+            "GameObject|ExplosionBright": {
+              "UnityEngine.ParticleSystem": {
+                "startSpeed": 5.0,
+                "startSize": 30.0,
+                "startLifetime": 1.6,
+              },
+            },
+            "GameObject|Sparks": {
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0.5,
+                    "startSpeed": 80.0,
+                  }
+                },
+                "shape":{
+                  "shapeType": 0,
+                }
+              }
+            },
+            "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+              "ParticleSystem": {
+                "sizeOverLifetime": {
+                  "sizeMultiplier": 0.25
+                }
+              }
+            },
+          },
+        },
+        "SeekingProjectile": {
+          "m_TargetingType": "RandomBlockOnVehicle",
+          "m_ActivationDelay": 0.6,
+          "m_VisionRange": 500,
+          "m_VisionConeAngle": 360,
+          "m_TurnSpeed": 36
+        },
+        "MissileProjectile": {
+          "m_UsesGravity": false,
+          "m_ArmDelay": 0.25,
+          "m_BoosterActivationDelay": 0.0,
+          "m_DeathDelayNotArmed": 0.25,
+          "m_MaxBoosterLifetime": 7.5,
+        }
+      }
+    }
+  }
+}
+

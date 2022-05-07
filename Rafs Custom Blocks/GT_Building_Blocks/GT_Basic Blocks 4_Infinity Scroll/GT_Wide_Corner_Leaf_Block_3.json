@@ -1,0 +1,74 @@
+{
+  "Name": "GreenTech Wide Corner Leaf Block Three",
+  "Description": "The Leaf Block is an armored version of the Recycled Block, trading some APs and fire immunity for a special protective structure that halves most sources of damage, including impacts.",
+  "ID": 911171, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2607, 
+  "HP": 5000, 
+  "Mass": 14,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe": "5, 5, 5, 5, 5, 9, 9, 9, 32, 32, 32, 52, 52, 54",
+  "IconName": "GT_Wide_Corner_Leaf_Block_3_Icon.png", 
+  "MeshName": "GT_Wide_Corner_Leaf_Block_3.obj", 
+  "ColliderMeshName": "GT_Wide_Corner_Leaf_Block_3_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+
+  "CellMap":
+  [
+	[
+    "xxxx"
+  ],
+  [
+    "xxxx"
+  ],
+  [
+    "xxxx"
+  ],
+  [
+    "xxx "
+  ]
+  ],  
+
+   "APs": [ 
+  {"x": 0, "y": -0.5, "z": 0},
+  {"x": 0, "y": -0.5, "z": 1},
+  {"x": 1, "y": -0.5, "z": 0},
+  {"x": 1, "y": -0.5, "z": 1},
+  {"x": 2, "y": -0.5, "z": 0},
+  {"x": 0, "y": -0.5, "z": 2},
+  {"x": 2, "y": -0.5, "z": 1},
+  {"x": 1, "y": -0.5, "z": 2},
+  {"x": 2, "y": -0.5, "z": 2},
+  {"x": 0, "y": -0.5, "z": 3},
+  {"x": 3, "y": -0.5, "z": 0},
+  {"x": 0, "y": 0.5, "z": 0},
+  {"x": 1, "y": 0.5, "z": 0},
+  {"x": 0, "y": 0.5, "z": 1},
+  {"x": 1, "y": 0.5, "z": 1},
+  {"x": 2, "y": 0.5, "z": 0},
+  {"x": 0, "y": 0.5, "z": 2},
+	{"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+  {"x": 0, "y": 0, "z": -0.5},
+  {"x": 1, "y": 0, "z": -0.5},
+  {"x": -0.5, "y": 0, "z": 2},
+  {"x": 2, "y": 0, "z": -0.5},
+
+  {"x": -0.5, "y": 0, "z": 3},
+  {"x": 3, "y": 0, "z": -0.5}
+  ],
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

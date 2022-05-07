@@ -1,0 +1,78 @@
+{
+  "Name": "Old Star Center Wing",
+  "Description": "Now this is new to Old Star. The Center wing is the wing used in the Center of the left and right wings. Why else did we call it the 'CENTER' wing huh?",
+  "ID": 300093, 
+  "Faction": 4,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3915, 
+  "HP": 500, 
+  "Mass": 1.5,
+  "CenterOfMass": {"x": 1, "y": 0.0, "z": 1.0},
+  "Fragility": 1,
+  "DamageableType": 0,
+  "Rarity": 1,
+  "Recipe":  "7, 7, 11, 43, 52",
+  "IconName": "OS_Center_Wing.png", 
+  "EmissionMode": 2,
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+  "BlockExtents":{"x": 3,"y": 1, "z": 3},
+  "APs": [ 
+    //sides
+    {"x": 2.5, "y": 0, "z": 1},{"x": 2.5, "y": 0, "z": 2},
+    {"x": -0.5,"y": 0, "z": 1},{"x": -0.5,"y": 0, "z": 2},
+
+    //center 
+    {"x": 1, "y":  0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 2}
+
+  ],
+  
+  "GamePrefabReference":   "VEN_Wing_Middle_312",
+  "ReferenceOffset":        { "x": 0, "y": -0.02, "z": 1.15 },
+  "KeepRenderers":         false,
+  "KeepColliders":         false,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "SubObjects": [
+    {
+    "SubOverrideName":     "m_VEN_Wing_Middle_312_Base",
+    "MeshName":            "Center_Wing.obj",
+    "ColliderMeshName":    "Center_Wing.obj",
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    },  
+    {
+    "SubOverrideName":     "_Pivot",
+    "SubPosition":         { "x": 1,  "y": 0,  "z": 2 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+    "SubOverrideName":     "m_VEN_Wing_Middle_312_Flap",
+    "MeshName":           "Center_Wing_Flap.obj",
+    "ColliderMeshName":    null,
+    "SubPosition":         { "x": 0,  "y": 0,  "z": 0 },
+    "SubRotation":         { "x": 0, "y": 0, "z": 0 }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_Pivot": {
+       "GameObject|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": -1.38, "y":0, "z": 0 }
+           }
+        },
+        "Duplicate|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 0.38, "y":0, "z": 0 }  
+            }
+       }
+    }
+  }
+}

@@ -1,0 +1,535 @@
+{
+  // Basic Block Information
+  "Name": "GSO Relic Turrent",
+  "Description": "Kay Vee 2? What in the world is that? This turret was made based on old frame found burried in a mountainside alond with a few shells so we know what its ammo was and remade it.",
+  "ID": 300130, // This is the Block ID; it must be unique
+
+  "Faction": 1, // Tells TT what Corporation this block belongs to.
+  // 1 or 0   = GSO
+  // 2        = GeoCorp
+  // 3        = EXP
+  // 4        = Venture
+  // 5        = HawkEye
+  // 6        = Special (Decorative)
+  // 7        = Better Future
+
+  "Category": 4,
+
+  "Grade": 3,
+  "Price": 23856,
+  "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 46, 46, 46, 46, 46, 46, 56, 56, 62",
+
+  "IconName": "Relic_Turret_Icon.png", // Name of the block's icon. This will be used in the UI screen                            
+  "MeshName": null, // Name of the block's mesh                                        
+  "ColliderMeshName": null, // Name of the block's collider.
+  "SupressBoxColliderFallback": true,
+
+  "MeshMaterialName": "GSO_Main",
+
+  // Basic Block HP Values
+  "HP": 3200, // A GSO one block has 250 health
+  // LK Stats:
+  // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+  // 400/cell = Weapons
+  // 300/cell = Wheels
+
+  "Mass": 15, // LK Standard Blocks have 2.5 mass per cell,
+  // LK Cabs have 5 mass per cell
+  // LK Weapons have 4 mass per cell
+  // LK Wheels have 2 mass per cell
+
+  "DamageableType": 1, // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+  // 0    = Standard
+  // 1    = Armor
+  // 2    = Rubber
+  // 3    = Volatile
+  // 4    = Shield
+  // 5    = Wood
+  // 6    = Rock
+  "Fragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+  // Block Dimensions
+  "BlockExtents": //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 10,
+    "y": 3,
+    "z": 10
+  },
+
+  "APs": [
+    // Bottom APs
+    {
+      "x": 4.0,
+      "y": -0.5,
+      "z": 4.0
+    },
+    {
+      "x": 5.0,
+      "y": -0.5,
+      "z": 4.0
+    },
+    {
+      "x": 4.0,
+      "y": -0.5,
+      "z": 5.0
+    },
+    {
+      "x": 5.0,
+      "y": -0.5,
+      "z": 5.0
+    },
+    //Top
+    {
+      "x": 4.0,
+      "y": 2.5,
+      "z": 4.0
+    },
+    {
+      "x": 5.0,
+      "y": 2.5,
+      "z": 4.0
+    },
+    {
+      "x": 4.0,
+      "y": 2.5,
+      "z": 5.0
+    },
+    {
+      "x": 5.0,
+      "y": 2.5,
+      "z": 5.0
+    }
+  ],
+
+  // Advanced Settings
+  "GamePrefabReference": "HE_Cannon_Turret_Short_525",
+  "KeepReferenceRenderers": false, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 4.5,
+    "y": 0.0,
+    "z": 4.0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_CannonTurret_Short_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "KV_Turrent_Base.obj",
+      "ColliderMeshName": "KV_Turrent_Basee.obj",
+      "SubPosition": {
+        "x": 4.0,
+        "y": 0,
+        "z": 4.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_HE_CannonTurret_Short_Turret",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "KV_Turrent.obj",
+      "ColliderMeshName": "KV_Turrent.obj",
+      "SubPosition": {
+        "x": -0.5,
+        "y": 0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_HE_CannonTurret_Short_GunMantlet",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "KV_Gun_Base.obj",
+      "ColliderMeshName": "KV_Gun_Base.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_HE_CannonTurret_Short_Barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "KV_Gun.obj",
+
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "_muzzleFlash",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+      { // _spawnCasing Objects are rotation-dependent; their orientation will dictate the direction of the casing ejection
+        "SubOverrideName": "_spawnCasing",
+        "SubPosition": {
+          "x": 0,
+          "y": 0.7,
+          "z": -0.7
+        },
+        "SubScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "SubRotation": {
+          "x": -45,
+          "y": 180,
+          "z": 0
+        }
+      }
+  ],
+
+  "Deserializer": {
+    //Horizontal aim
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationLimits": [ 0, 0 ]
+      },
+      "UnityEngine.Transform": {
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localPosition": {
+          "x": 4.5,
+          "y": -0.05,
+          "z": 4.5
+        }
+      },
+      "GameObject|m_HE_CannonTurret_Short_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      //Verticle aim
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [ 10, -30 ]
+        },
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 1.35,
+            "z": 2
+          }
+        },
+        "GameObject|m_HE_CannonTurret_Short_GunMantlet": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 180,
+              "w": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0.0
+            }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "GameObject|m_HE_CannonTurret_Short_Barrel": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": -0.33,
+                  "z": -1.0
+                }
+              }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 5,
+                "y": 5,
+                "z": 5
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 3.5
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 3.5
+              }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0.0,
+                "z": 2.8
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 3.0, // The length of paus between shots. A higher value lengthens the pause and vice versa.
+      "m_CooldownVariancePct": 0, // Dictates how random the length of pause between shots.
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0,
+
+      "m_ResetBurstOnInterrupt": false,
+      "m_ResetFiringTAfterNotFiredFor": 0.0,
+      "m_FireControlMode": 1,
+      "m_SeekingRounds": false,
+      "m_RegisterWarningAfter": 1.0,
+      "m_HasSpinUpDownAnim": false,
+      "m_HasCooldownAnim": false,
+      "m_CanInterruptSpinUpAnim": false,
+      "m_CanInterruptSpinDownAnim": false,
+      "m_SpinUpAnimLayerIndex": 0,
+      "m_DeploySFXType": 0,
+      "OnAudioTickUpdate": null,
+      "m_NumCannonBarrels": 1
+    },
+
+    // Reference the 3-Pounder cannon's shell data here
+    "Reference|HE_Cannon_Battleship_(216)/FireData.": {
+      "m_MuzzleVelocity": 280.0, // Dictates the projectile's speed. The higher the value, the faster it will travel.
+      "m_KickbackStrength": 200.0, // Dictates the strength of the recoil when firing the gun
+      "m_BulletSprayVariance": 0.35, // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+      "m_CasingVelocity": 40.0,
+      "m_BulletSpin": 20.0,
+      "m_CasingEjectVariance": 0.3,
+      "m_CasingEjectSpin": 50.0,
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "KV_Bullet.obj"
+        },
+        "UnityEngine.MeshRenderer": {
+          "material": {
+            "mainTexture": "GSO_texture1.png"
+          }
+        },
+        "WeaponRound": {
+          "m_Damage": 1580
+        }
+      }
+    },
+
+    "ModuleWeapon": {
+      "m_AutoFire": false, // If set to true, this weapon will automatically fire at targets
+      "m_AimType": 0, // If set to 0, the gun will rotate according to its gimbal limits. If set to 1, it will not rotate.
+      "m_RotateSpeed": 50.0, // Dictates the speed of the gun's rotation whenever it aims at a target.
+      "m_ChangeTargetInteval": 0.3,
+
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_FireSFXType": 77, // Dictates the sound used when firing
+      // 6  = GSO Megaton Cannon
+      // 64 = GSO Gigaton Cannon
+      // 77 = GSO Big Bertha Cannon
+
+      "Projectile": {
+        "Instantiate|m_Explosion": {
+          "Explosion": {
+            "m_ExplosionSize": 10,
+            "m_EffectRadius": 10,
+            "m_MaxDamageStrength": 950,
+            "m_MaxImpulseStrength": 500
+          },
+          "GameObject|ExplosionSmoke": {
+            "UnityEngine.ParticleSystemRenderer": {
+              "startSize": 14
+            }
+          },
+          "GameObject|ExplosionDark": {
+            "UnityEngine.ParticleSystemRenderer": {
+              "startSize": 14
+            }
+          },
+          "GameObject|ExplosionLight": {
+            "UnityEngine.ParticleSystemRenderer": {
+              "startSize": 14
+            }
+          }
+        }
+      },
+
+      "m_TargetAimer": {
+        "m_ChangeTargetTimeout": 0.0,
+        "m_ChangeTargetInteval": 0.5
+      },
+
+      "m_RemoteShotFiredPending": 0,
+      "m_HasTargetInFiringCone": false,
+      "FireControl": false,
+      "AimControl": 0,
+
+      "DisableTargetAimer": false
+    }
+
+  }
+
+    }
+  

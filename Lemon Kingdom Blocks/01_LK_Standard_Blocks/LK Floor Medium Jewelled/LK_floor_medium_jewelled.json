@@ -1,0 +1,47 @@
+/*
+Description:    A medium jewelled floor tile
+Pros:           Smooth colliders make it a good fit for ramps and flooring.
+                Decent HP for its size and doesn't fall off
+Cons:           Fragile by LK standards
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Medium Jewelled Floor Tile",
+    "Description":          "This medium-sized floor tile has a jewel on it for showing off your wealth! It's also smooth enough for Techs to around on. \n\n\"Build thine techs large and mighty, and His Zestiness shall make thee the same! All Hail the Lemon Kingdom!\"\n\n-- Sir Laectus the Tart",
+
+    "ID":                   419075,    
+
+    "Faction":              2,      
+    "Category":             2,        
+    "Rarity":               2,           
+    "Grade":                3,             
+    "Price":                4386,         
+    
+    // Recipe: 4 Rugged Fiblar, 4 Plubonic Alloy, 4 Titania Ingot, 2 Luxite Ingot
+    "Recipe" : { "52": 4, "53": 4, "7": 4, "32": 2 },
+      
+    "IconName":             "LK_floor_medium_jewelled_icon.png",        // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":             "LK_floor_medium_jewelled.obj",             // Name of the block's mesh                                        
+    "MeshColliderName":     "LK_floor_medium_jewelled_col.obj",         // Name of the block's collider.
+    "NoBoxCollider":        true,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                   400,                     
+    "Mass":                 4,              // Floor Tiles = 2 per cell
+    "DamageableType":       6,              
+    "DetachFragility":      0.0, 
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 1,"z": 2 },
+
+    "APs": [ 
+        // Front Face
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 0, "y": -0.5, "z": 1 },
+        { "x": 1, "y": -0.5, "z": 0 }, { "x": 1, "y": -0.5, "z": 1 },
+    ]
+
+}

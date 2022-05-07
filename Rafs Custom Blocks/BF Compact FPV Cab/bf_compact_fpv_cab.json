@@ -1,0 +1,214 @@
+{
+    "Name": "Better Future Compact FPV Cab",
+    "Description": "A nice small BF cab, featuring a built in camera that you can look through.\nRight click and drag to look and Cycle views with R (and backwards with Shift held down)",
+    "ID": 9003,
+
+    "Faction": 7, 
+    "Category": 1,
+    "Grade": 0, 
+    "Price": 1449,
+    "HP": 350,
+    "Mass": 0.6,
+    "CenterOfMass": {"x": 0, "y": -0.45, "z": 0},
+
+    "Recipe": "43, 48, 52",
+
+    "IconName": "BF_FPV_Cab_Icon.png",
+    "MeshName": "BF_FPV_Cab.obj",
+    "MeshMaterialName": "BF_Main",
+    "ColliderMeshName": "BF_FPV_Cab_Collider.obj",
+
+    "BlockExtents":
+    {
+        "x": 1,
+        "y": 1,
+        "z": 1
+    },
+
+    "APs": [
+        {"x": 0, "y": -0.5, "z": 0},
+        {"x": -0.5, "y": 0, "z": 0},
+        {"x": 0.5, "y": 0, "z": 0},
+        {"x": 0, "y": 0, "z": -0.5}
+    ],
+    "GamePrefabReference": "GSO_Cab_111",
+    "KeepRenderers": true, 
+    "KeepColliders": false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "SubObjects": [
+        {
+            "SubOverrideName": "m_GSO_Cab_111_Base",
+            "DestroyExistingRenderer": true
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_1",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Tire.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_2",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Tire.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_3",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Tire.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Tyre_4",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Tire.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Gun_Lf",
+            "DestroyExistingRenderer": true
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Gun_Rt",
+            "DestroyExistingRenderer": true
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Flap_1",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Flap_1.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Flap_2",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Flap_2.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Flap_3",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Flap_3.obj"
+        }, {
+            "SubOverrideName": "m_GSO_Cab_111_Flap_4",
+            "MeshMaterialName": "BF_Main",
+            "MeshName": "BF_FPV_Cab_Flap_4.obj"
+        }, {
+            "SubOverrideName": "ViewProp",
+            "DestroyExistingRenderer": true,
+            "SubPosition": { "x": 0, "y": 0.3, "z": 0 },
+            "SubScale": { "x": 1, "y": 1, "z": 1 }
+        }
+    ],
+    "JSONBLOCK": {
+        "GameObject|_spotlight": {
+            "UnityEngine.Light": {
+                "color": {
+                  "r": 0.95,
+                  "g": 0.95,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+            }
+        },
+        "GameObject|_gimbalBase_R": null,
+        "GameObject|_gimbalBase_L": null,
+        "Reference|BF_Cab_212/_gimbalBase_R": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "x": 0.33,
+                    "y": -0.35,
+                    "z": 0.2
+                }
+            },
+            "GameObject|_gimbalElev": {
+                "GameObject|_barrel": {
+                  "GameObject|_muzzleFlash": {
+                    "GameObject|_light": {
+                        "Light": {
+                            "intensity": 2,
+                            "range": 1.0
+                        }
+                    }
+                  }
+                }
+            }
+        },
+        "Reference|BF_Cab_212/_gimbalBase_L": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                    "x": -0.33,
+                    "y": -0.35,
+                    "z": 0.2
+                }
+            },
+            "GameObject|_gimbalElev": {
+                "GameObject|_barrel": {
+                  "GameObject|_muzzleFlash": {
+                    "GameObject|_light": {
+                        "Light": {
+                            "intensity": 2,
+                            "range": 1.0
+                        }
+                    }
+                  }
+                }
+            }
+        },
+        "GameObject|ViewProp": {
+            "Nuterra.BlockInjector.ModuleFirstPerson": { }
+        },
+        "ModuleWeaponGun": null,
+        "ModuleWeapon": null,
+        "FireData": null,
+        "Reference|BF_Cab_212/ModuleWeaponGun.":{
+            "m_ShotCooldown": 0.3
+        },
+        "Reference|BF_Cab_212/ModuleWeapon.":{},
+        "Reference|BF_Cab_212/FireData.":{
+            "m_MuzzleVelocity": 50.0,
+            "Instantiate|m_BulletPrefab": {
+                "GameObject|Line": {
+                    "UnityEngine.LineRenderer": {
+                        "startWidth": 0.02,
+                        "endWidth": 0.08
+                    }
+                },
+                "LaserProjectile": {
+                    "m_Damage": 20
+                },
+                "WeaponRound": {
+                    "m_Damage": 20
+                }
+            }
+        },
+        "ModuleWheels": {
+            "m_TorqueParams": {
+                "torqueCurveMaxTorque": 150.0,
+                "torqueCurveMaxRpm": 700.0,
+                "passiveBrakeMaxTorque": 30.0,
+                "reverseBrakeMaxRpm": 30.0,
+                "basicFrictionTorque": 0.0,
+                "fullCompressFrictionTorque": 10.0
+              },
+              "m_UseTireTracks": true,
+              "m_WheelTrackType": 0,              
+                "m_AudioType": 0,
+              "m_WheelParams": {
+                "radius": 0.19,
+                "thicknessAngular": 35,
+                "suspensionSpring": 50.0,
+                "suspensionDamper": 10.0,
+                "maxSuspensionAcceleration": 15.0,
+                "suspensionQuadratic": true,
+                "suspensionTravel": 0.03,
+                "steerAngleMax": 3.0,
+                "steerSpeed": 2.0
+              },
+              "m_DriveTurnPower": 1.0,
+              "m_DriveTurnBrake": 0.5,
+              "m_DriveTurnDifferential": 1.0,
+              "m_TurnOnSpotPower": 1.0,
+              "m_DustMinimumRPM": 20.0
+        },
+        "ModuleFuelTank": {
+            "m_Capacity": 35.0
+        },
+        "Reference|BF_Gyro_AllAxis_Passive_111/ModuleGyro":{
+    "m_UsePassive": 1,
+    "m_PassiveStrength": {
+      "x": 800.0,
+      "y": 800.0,
+      "z": 800.0
+    }
+        }
+    }
+}

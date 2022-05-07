@@ -1,0 +1,34 @@
+{
+  "Name": "GreenTech Small Hardwood Plate",
+  "Description": "An armour plate of dense resin treated hardwood, capable of absorbing impacts and resisting high stress.",
+  "ID": 911064, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 2, 
+  "Price": 810, 
+  "HP": 700, 
+  "Mass": 0.3,
+  "CenterOfMass": {"x": 0, "y": 0, "z": -0.4},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 3, 3, 43, 43, 45",  
+  "IconName": "GT_Small_Armour_Plate_Icon.png", 
+  "MeshName": "GT_Small_Armour_Plate.obj", 
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},   
+  "APs": [
+	{"x": 0, "y": 0, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_ArmourPlate_Small_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

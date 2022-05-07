@@ -1,0 +1,152 @@
+
+{
+    "Name": "Hawkeye Heavy Airship Gyro",
+    "Description": "This Black Labs gyro is designed to support very large techs; airships in particular. In addition to its colossal gyroscopic force, it also supports tuneable pitch control.",
+    "ID": 117102,
+  
+    "Faction": 5,
+    "Category": 5,
+    "Rarity": 2,
+    "Grade": 2,
+    "Price": 34122,
+    "HP": 6600,
+    "Mass": 12,
+  
+    "Recipe": "54, 54, 54, 54, 57, 57, 57, 57, 63, 63, 66",
+  
+    "IconName": "HE_Airship_Gyro.png",
+    "MeshName": null,
+  
+    "MeshMaterialName": "HE_Main",
+  
+    "ColliderMeshName": null,
+  
+    "Cells": [
+        { "x": 0, "y": 0,"z": -1 },
+        { "x": 0, "y": 0,"z": 0 },
+        { "x": 0, "y": 0,"z": 1 },
+
+        { "x": 0, "y": 1,"z": -1 },
+        { "x": 0, "y": 1,"z": 0 },
+        { "x": 0, "y": 1,"z": 1 },
+
+        { "x": 1, "y": 1,"z": -1 },
+        { "x": 1, "y": 1,"z": 0 },
+        { "x": 1, "y": 1,"z": 1 },
+
+        { "x": 1, "y": 0,"z": -1 },
+        { "x": 1, "y": 0,"z": 0 },
+        { "x": 1, "y": 0,"z": 1 },
+    ],
+
+  
+    "APs": [ 
+      { "x": 0,  "y": -0.5,  "z": 1  },
+      { "x": 0,  "y": -0.5,  "z": -1  },
+      { "x": 1,  "y": -0.5,  "z": 1  },
+      { "x": 1,  "y": -0.5,  "z": -1  },
+
+      { "x": 0,  "y": 1.5,  "z": 1  },
+      { "x": 0,  "y": 1.5,  "z": -1  },
+      { "x": 1,  "y": 1.5,  "z": 1  },
+      { "x": 1,  "y": 1.5,  "z": -1  },
+
+      { "x": -0.5,  "y": 0,  "z": 1  },
+      { "x": -0.5,  "y": 0,  "z": -1  },
+      { "x": -0.5,  "y": 1,  "z": 1  },
+      { "x": -0.5,  "y": 1,  "z": -1  },
+
+      { "x": 1.5,  "y": 0,  "z": 1  },
+      { "x": 1.5,  "y": 0,  "z": -1  },
+      { "x": 1.5,  "y": 1,  "z": 1  },
+      { "x": 1.5,  "y": 1,  "z": -1  },
+
+      { "x": 0,  "y": 0,  "z": 1.5  },
+      { "x": 1,  "y": 0,  "z": 1.5  },
+      { "x": 0,  "y": 1,  "z": 1.5  },
+      { "x": 1,  "y": 1,  "z": 1.5  },
+
+      { "x": 0,  "y": 0,  "z": -1.5  },
+      { "x": 1,  "y": 0,  "z": -1.5  },
+      { "x": 0,  "y": 1,  "z": -1.5  },
+      { "x": 1,  "y": 1,  "z": -1.5  },
+    ],
+    
+    "GamePrefabReference": "BF_Gyro_SingleAxis_Trim_Active_221",
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+
+    "SubObjects": [
+    {
+        "SubOverrideName": "m_BF_Gyro_SingleAxis_Trim_Active_221_Base",
+        "DestroyExistingRenderer": true,
+        "SubPosition": { "x": 0.5,  "y": 0.5,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    {
+        "SubOverrideName": "Geometry",
+        "SubPosition": { "x": 0.5,  "y": 0.5,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 },    
+        "DestroyExistingRenderer": true, 
+    },
+    {
+        "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Base",
+        "DestroyExistingRenderer": true,
+        "MeshName": "HE_Airship_Gyro_Frame.obj",
+        "MeshColliderName": "HE_Airship_Gyro_Collider.obj",
+        "MeshMaterialName": "HE_Main",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    {
+        "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Sphere",
+        "DestroyExistingRenderer": true,
+        "MeshName": "HE_Airship_Gyro_Core.obj",
+        "MeshMaterialName": "HE_Main",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    {
+        "SubOverrideName": "b_GC_Gyro_AllAxis_Active_222_Spindle_B",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    {
+        "SubOverrideName": "b_GC_Gyro_AllAxis_Active_222_Spindle_A",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    {
+        "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Ring_B",
+        "DestroyExistingRenderer": true,
+        "MeshName": "HE_Airship_Gyro_SpinnerInner.obj",
+        "MeshMaterialName": "HE_Main",   
+    },
+    {
+        "SubOverrideName": "m_GC_Gyro_AllAxis_Active_222_Ring_A",
+        "DestroyExistingRenderer": true,
+        "MeshName": "HE_Airship_Gyro_SpinnerOuter.obj",
+        "MeshMaterialName": "HE_Main",   
+    },
+    {
+        "SubOverrideName": "m_BF_Gyro_SingleAxis_Trim_Active_221_Gyro",
+        "DestroyExistingRenderer": true,
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 }    
+    },
+    ],
+
+    "JSONBLOCK":{
+        "Reference|GC_Gyro_AllAxis_Active_222/Geometry":{
+
+        },
+        "Reference|GC_Gyro_AllAxis_Active_222/ModuleGyro.": {
+            "m_ActiveSpeed": 450.0,
+            "m_TrimPitchMax": 60.0,
+            "m_TrimAdjustSpeed": 2.0,
+        },
+        "Reference|GC_Gyro_AllAxis_Active_222/ModuleAnimator.":{
+        }
+    }
+
+  }

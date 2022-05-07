@@ -1,0 +1,237 @@
+{
+  "Name": "GreenTech Beam Anchor",
+  "Description": "A compact anchor with a projected beam that clings to the terrain, bonding the Tech with it like a strong cord of light.",
+  "ID": 911138,
+  
+  "Faction": 0,
+  "Category": 7,
+  "Grade": 3, 
+  "Price": 3267,
+  "HP": 500,
+  "Mass": 1.5,
+
+  "Fragility": 0,
+  "Rarity": 0,
+  "DamageableType": 1,
+  "EmissionMode": 1,
+
+  "Recipe": "5, 7, 32, 32, 43, 50", 
+  "IconName": "GT_Beam_Anchor_Icon.png", 
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": 0.5, "z": 0}
+  ],
+
+  "GamePrefabReference": "BF_Anchor_Sky_222", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  
+  "SubObjects": [
+    {
+      "MeshName": "GT_Beam_Anchor.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Beam_Anchor_Collider.obj"
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Hook",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_A",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_B",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_C",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Clamp_D",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky_222_Anchor",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_BF_Anchor_Sky",
+      "DestroyExistingRenderer": true
+    }
+  ],
+
+ "JSONBLOCK": {
+  "GameObject|_fire": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0,
+        "y": -0.4,
+        "z": 0
+      }
+    }
+  },
+  "GameObject|_anchor": {
+    "GameObject|Particle System": {
+      /* "Spinner": {
+        "m_Speed": 2.0,
+        "m_SpinUpTime": 0.1,
+        "m_RotationAxis": {
+          "axis": 2
+        },
+        "m_SteerAxis": {
+          "axis":2
+        },
+      "m_AutoSpin": true
+      }, */
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": -0.1
+         },
+         "localScale":{
+          "x": 1,
+          "y": 1,
+          "z": 1
+         }
+       },
+      "UnityEngine.ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 5.0,
+        "playbackSpeed": 1.0,
+        "enableEmission": true,
+        "emissionRate": 5.0,
+        "startSpeed": 0.5,
+        "startSize": 0.4,
+        "startRotation": 0.0,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 0.7,
+          "a": 0.3
+        },
+        "startLifetime": 5.0,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 0,
+        "scalingMode": 1
+      },
+      "UnityEngine.ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 0,
+        "sortMode": 0,
+        "lengthScale": 2.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5
+      }
+    },
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 0.0,
+        "y": -0.4,
+        "z": 0.0
+      }
+    },
+    "GameObject|BFAnchorSky": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GameObject|_healing": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|m_BF_Anchor_Sky": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      },
+      "GameObject|_beam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "LineRenderer": {
+          "numPositions": 2,
+          "startWidth": 0.25,
+          "endWidth": 0.25,
+          "textureMode": 0,
+          "numCapVertices": 5,
+          "startColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.8
+          },
+          "endColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.8
+          },
+          "material": {
+            "mainTexture": "Anchor_Beam_Yellow.png"
+          }
+        }
+      },
+      "GameObject|_groundPoint": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": -0.07,
+            "z": 0.0
+          }
+        }
+      },
+      "BlockAnchor": {
+        "m_GroundPoint": "/_anchor/BFAnchorSky/_groundPoint",
+        "m_BeamPoint": "/_anchor/BFAnchorSky/_beam",
+        "m_SnapToleranceUp": 1.0,
+        "m_SnapToleranceDown": 20.0,
+        "m_SkyAnchorStrength": 5.0,
+        "m_SkyAnchorDamping": 1,
+        "m_IsSkyAnchor": true,
+        "m_SkyAnchorSpeed": 200.0,
+        "m_SkyAnchorRecoilForce": 2.0
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,97 @@
+
+{
+  "Name": "Hyperion Systems Medium Hover",
+  "Description": "A quite powerful hover pad for its medium size. A common sight on most HS hoverships.",
+  "ID": 100034,
+
+  "Faction": 7,
+  "Category": 8,
+  "Grade": 2,
+  "Price": 750, 
+  "CenterOfMass": {"x": 0.5, "y": 0, "z": 0.5},      
+
+  "HP": 500, 
+  "Mass": 1.0,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0, 
+
+  "Recipe": "7, 7",
+  "IconName": "HSMediumHoverIcon.png", 
+
+  "MeshTextureName": "HS textures.png",       
+  
+  "BlockExtents": {
+    "x": 2,
+    "y": 1,
+    "z": 2
+  },
+
+  "APsOnlyAtBottom": false, 
+ 
+  "APs": [ 
+    { "x": 0,    "y": 0.5,  "z": 0    },
+    { "x": 1,    "y": 0.5,  "z": 0    },
+    { "x": 0,    "y": 0.5,  "z": 1    },
+    { "x": 1,    "y": 0.5,  "z": 1    }
+  ],
+  "GamePrefabReference" : "GSO_HoverJet_111",
+  "ReferenceOffset" : {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": false,
+  "KeepColliders": true,
+  
+  "SubObjects" : [
+    {
+      "SubOverrideName": "m_GSO_HoverJet_111_Base",
+      "MeshName": "HS Medium Hover Base.obj",
+      "ColliderMeshName": "HS Medium Hover Collider.obj",     
+      "MeshTextureName": "HS textures.png",
+      "SubPosition": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "SubOverrideName": "m_GSO_Hover_111_Jet",
+      "MeshName": "HS Medium Hover Pad.obj",
+      "MeshTextureName": "HS textures.png",
+      "DestroyExistingRenderer": false,
+      "SubPosition": { "x": 0.5, "y": 0, "z": 0.5}      
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|m_GSO_Hover_111_Jet": {
+      "GameObject|_hoverJet": {
+       "GameObject|ParticleSystem_GSO_HoverPad": {
+        "UnityEngine.ParticleSystem": {
+          "startSize": 1.7,   
+          "duration": 1,
+          "maxParticles": 5,
+          "startLifetime": 1.5,
+          "emissionRate": 2.5,
+          "startColor": { "r": 1.0, "g": 0.0, "b": 0.0, "a": 100000.0 }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0.0, "y": -0.3, "z": 0.0,}
+
+        }
+       },
+       "HoverJet": {
+        "forceMax": 5000,
+        "forceRangeMax": 3.5,
+        "maxForceAngle": 25,
+        "m_DampingScale": 0.05,
+        "m_MaxClimbDistance": 20.0,
+        "m_VectoredThrustTransform": "/m_GSO_Hover_111_Jet",
+        "m_VectoredThrustMaxAngle": 22.5,
+        "m_VectoredThrustAnglePerSecond": 4.0,
+        "m_VectoredThrustMaxForceAngle": 25
+       }
+     }  
+     }
+	}
+}
+
+         

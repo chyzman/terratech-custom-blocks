@@ -1,0 +1,92 @@
+{
+  "Name": "Old Star Flywheel Gyro",
+  "Description": "Now this is how the Old Star do. Using some spare metal the design team put a dense flywheel inside to assist help keep techs from Old Star techs from toppling. This one acts passivly to keep techs from toppiling.",
+  "ID": 300101,
+  "Faction": 4,
+  "Grade": 2,
+  "Price": 2319, //GSO's is 4326
+  "HP": 1500,
+  "Category": 5,
+  "Mass": 8,
+  "IconName": "OS_flywheel_Icon.png",
+  "MeshName": null,
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 53, 53, 53, 53, 54, 54, 57, 57, 57, 57, 60",
+"Cells":[
+    { "x": 0.0,"y": 0.0,"z": 0.0 }, { "x": 0.0,"y": 0.0,"z": 1.0 },
+    { "x": 0.0,"y": 1.0,"z": 0.0 }, { "x": 0.0,"y": 1.0,"z": 1.0 }
+
+],
+  "APsOnlyAtBottom": false,
+  "APs":[
+    //Sides
+    { "x": 0.5,"y": 0.0,"z": 1.0 }, { "x": 0.5,"y": 0.0,"z": 0.0 },
+    { "x":-0.5,"y": 0.0,"z": 1.0 }, { "x":-0.5,"y": 0.0,"z": 0.0 },
+    //Bottom
+    { "x": 0.0,"y":-0.5,"z": 1.0 }, { "x": 0.0,"y":-0.5,"z": 0.0 },
+    //Front
+    { "x": 0.0,"y": 0.0,"z": 1.5 }
+  ],
+  "Fragility": 0,
+  "DamageableType": 0,
+  "EmissionMode": 2,
+  "GamePrefabReference": "BF_Gyro_SingleAxis_Active(112)",
+  "KeepReferenceRenderers": true, 
+	"ReferenceOffset": { "x":0, "y":0, "z":0 }, 
+
+  
+  "SubObjects": [ 
+    { //Base
+        "SubOverrideName": "m_BF_Gyro_SingleAxis_Active_112__Base",
+         "DestroySubReferenceRenderer": true,
+         "DestroyExistingColliders": true,
+         "MeshName": "OS_FlyWheel_Base.obj",
+         "MakeBoxCollider": true,
+         "MeshTextureName": "OST1.png",
+         "MeshGlossTextureName":"OST2.png",
+         "MeshEmissionTextureName":"OST3.png"
+       },
+       { //Rotator
+        "SubOverrideName": "m_BF_Gyro_SingleAxis_Active_112_Gyro",
+         "DestroySubReferenceRenderer": true,
+         "DestroyExistingColliders": true,
+         "MeshName": "OS_FlyWheel.obj",
+         "ColliderMeshName": "OS_FlyWheel.obj",
+         "MakeBoxCollider": false,
+         "MeshTextureName": "OST1.png",
+         "MeshGlossTextureName":"OST2.png",
+         "MeshEmissionTextureName":"OST3.png",
+         "SubRotation": { "x":0, "y":90, "z":0 },
+         "SubPosition": { "x":0, "y":0.6, "z":0.3 }
+       }
+
+  ],
+  "JSONBLOCK": {
+    "GameObject|CentreOfMass": {
+         "UnityEngine.Transform": { 
+           "localPosition": { "x":0.5, "y":0.5, "z":0.5 } 
+         }
+       },
+  "ModuleGyro": {
+    "m_TrimPitchMax": 0.0,
+    "m_TrimAdjustSpeed": 0.0,
+    "m_UseActive": 0,
+    "m_UsePassive": 1,
+    "m_PassiveStrength": {
+        "x": 2100.0,
+        "y": 2100.0,
+        "z": 2100.0,
+    "m_ActiveSpeed": 350.0,
+    "m_ActiveStability": 0.21,
+    "m_RotationAnimSpeed": 30.0,
+    "m_RotationMinSpeed": 10.0,
+    "m_RotationMaxSpeed": 350.0,
+    "m_Trim": 0.0,
+    "m_HasTurnInput": false,
+    "m_HasDriveInput": false,
+    "m_ControlTrim": 0.0,
+    "m_ControlTrimTarget": 0.0,
+    "Trim": 0.0
+   }
+  }
+}
+}

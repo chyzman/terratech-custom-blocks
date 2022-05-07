@@ -1,0 +1,199 @@
+{
+  "Name": "Youkai Antitheus Bubble Projector",
+  "Description": "Projects a bubble which deals lots of damage to anything in its range and can phase through shields. Parts for this weapon were reportedly stolen from the GreenTech corporation. \r\n\r\nThis weapon deploys a field of contained... something... Particles within the field scorch anything they touch and some say that there is also strange plasma that can destroy things at a molecular level and it's origin is unknown.",
+  "ID": 19025, //A random ID that MUST be unique
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 4, //The desired grade minus one
+  "Price": 8646, //The price is measured by sum of recipe value times 3
+  "HP": 1150, //A GSO one block has 250 health
+  "Mass": 7,
+  "Rarity": 2,
+  "Fragility": 0.15,
+  "DamageableType": 1,
+  
+  "Recipe": "45, 45, 45, 45, 47, 47, 47, 58",
+  
+  "IconName": "YK_Demon_Bubble.png",
+  "MeshName": "YK_Demon_Bubble.obj",
+  
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+  
+ "Cells": [
+
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": -1, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 1, "y": 1, "z": 0 },
+    { "x": -1, "y": 1, "z": 0 }
+
+  ],
+  
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": -1, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": -1, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": -1.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": -1, "y": 0, "z": 0.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 1, "y": 0, "z": 0.5}
+  ],
+  "GamePrefabReference": "GSO_Shield_111", 
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 0.5,
+    "z": 0.5
+  },
+  "DeathExplosionReference": "GSO_Battery_111",
+  
+  "SubObjects": [
+    
+	{
+      "SubOverrideName": "ExperimentalCorp_Base_Shield",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge(Clone)",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "FXGSOShieldCharge 1",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "_shield",
+      "SubPosition": { "x": 0.0, "y": 5.85, "z": 0},
+      "SubScale": { "x": 1.0, "y": 1.0, "z": 1.0 }
+
+    },
+    {
+      "SubOverrideName": "_bubbleCollider",
+      "layer": 14
+    },
+    {
+      "SubOverrideName": "ShieldSphereOuter",
+      "DestroyExistingRenderer": false
+      //"MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    },
+    {
+      "SubOverrideName": "ShieldSphereOInner",
+      "DestroyExistingRenderer": false
+      //"MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    },
+    {
+      "SubOverrideName": "ShieldSphereOuter/ShieldSphereOuter",
+      "DestroyExistingRenderer": false
+      //"MeshMaterialName": "MAT_BF_Zone_ZeroPoint"
+    }
+    
+  ],
+
+ 
+
+  
+  
+  "JSONBLOCK": {
+    "GameObject|_shield": {
+      "GameObject|_bubble": {
+        "GameObject|_bubbleTechTrigger": {
+          "SphereCollider": {
+          }
+        },
+        "GameObject|_bubbleBulletTrigger": {
+          "SphereCollider": {
+            "enabled": false
+          }
+        },
+        "GameObject|_bubbleCollider": {
+            "SphereCollider": {
+              "isTrigger": true,
+              "enabled": true
+            }
+        },
+        "GameObject|ShieldSphereOuter": {
+          "UnityEngine.MeshRenderer": {
+            "material": {
+              "color": {
+                "r": 0.5,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+              }
+            }
+          },
+          "GameObject|ShieldSphereInner": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 1.0
+                }
+              }
+            }
+          },
+          "GameObject|ShieldSphereOuter": {
+            "UnityEngine.MeshRenderer": {
+              "material": {
+                "color": {
+                  "r": 1.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 0.5	
+                }
+              }
+            }
+          }
+        },
+      "Spinner": {
+        "m_Speed": 0.05
+      }
+    }
+  },
+    "ModuleShieldGenerator": {
+      "m_Radius": 10.0,
+      "m_EnergyConsumptionPerSec": 3.5,
+      "m_InitialChargeEnergy": 300.0,
+      "m_PowerUpDelay": 4.5,
+      "Instantiate|m_ChargingParticlesPrefab": {
+        "startSize": 10,
+        "startColor": {
+          "r": 0.25,
+          "g": 0.0,
+          "b": 1.0,
+          "a": 0.5
+        }
+      }
+  },
+  "ModuleDrill": {
+    "activeColliders": ["_bubbleCollider/SphereCollider."],
+    "m_Blade": "_bubbleCollider/Transform.gameObject",
+    "m_Vibrations": "_bubbleCollider/Transform.gameObject",
+    "impactDamageMultiplier": 1.0,
+    "damagePerSecond": 250.0,
+    "m_SpinOnCollisionDuration": 1,
+    "m_DamageType": 3
+  },
+  "ModuleDrill": {
+    "activeColliders": ["_bubbleCollider/SphereCollider."],
+    "m_Blade": "_bubbleCollider/Transform.gameObject",
+    "m_Vibrations": "_bubbleCollider/Transform.gameObject",
+    "impactDamageMultiplier": 1.0,
+    "damagePerSecond": 250.0,
+    "m_SpinOnCollisionDuration": 1,
+    "m_DamageType": 7
+  }
+  }			
+}

@@ -1,0 +1,167 @@
+{
+  "Name": "GreenTech Gaia Omniwheel",
+  "Description": "A huge spherical omniwheel magnetized to a support, for 'riding around the world' in any direction you feel like.",
+  "ID": 911083, 
+  "PairedBlock": 911083, 
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 4, 
+  "Price": 20967, 
+  "HP": 15000, 
+  "Mass": 40,
+  "CenterOfMass": {"x": 1.5, "y": 2, "z": 1.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 62, 63",
+  "IconName": "GT_Gaia_Omniwheel_Icon.png",
+  "SupressBoxColliderFallback": true,
+  
+  "BlockExtents":
+	{
+		"x": 4,
+		"y": 5,
+		"z": 4
+	},
+  
+  "APs": [
+	{"x": 1, "y": 4.5,"z": 0},
+	{"x": 2, "y": 4.5, "z": 0},
+	{"x": 1, "y": 4.5,"z": 3},
+	{"x": 2, "y": 4.5, "z": 3},
+	{"x": 0, "y": 4.5,"z": 1},
+	{"x": 0, "y": 4.5, "z": 2},
+	{"x": 3, "y": 4.5,"z": 1},
+	{"x": 3, "y": 4.5, "z": 2},
+	{"x": 1, "y": 4.5,"z": 1},
+	{"x": 1, "y": 4.5, "z": 2},
+	{"x": 2, "y": 4.5,"z": 1},
+	{"x": 2, "y": 4.5, "z": 2}
+  ],
+  
+  "GamePrefabReference": "EXP_Wheel_Omni_122",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"MeshName": "GT_Gaia_Omniwheel.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Gaia_Omniwheel_Collider.obj",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_RR_Wheel_Omni_122_Tyre",
+		"MeshName": "OmniTireLarge.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Gaia_Omniwheel_Tire_Collider.obj",
+		"SubScale": { 
+			"x": 0.75,
+			"y": 0.75,
+			"z": 0.75
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 1.5,
+			"y": 2.3,
+			"z": 1.5
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	/*"GameObject|_wheel_1": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":-0.5, "y":1.0, "z":0.3 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			}
+		  }
+		}
+	},*/
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 100000.0,
+			"torqueCurveMaxRpm": 220.0,
+			"passiveBrakeMaxTorque": 200000.0,
+			"reverseBrakeMaxRpm": 200.0,
+			"basicFrictionTorque": 200.0,
+			"fullCompressFrictionTorque": 2000.0
+		},
+
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 2.5
+					
+				}
+			  },
+			"radius": 2,
+			"thicknessAngular": 30,
+			"suspensionSpring": 55000.0,
+			"suspensionDamper": 1000.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.6,
+			"steerAngleMax": 45.0,
+			"steerSpeed": 10.0,
+			"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.5,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

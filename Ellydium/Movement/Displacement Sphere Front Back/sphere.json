@@ -1,0 +1,128 @@
+
+{
+  "Name": "Displacement Sphere Frontal and Rear",
+  "Description": "The Displacement sphere is a highly advanced thruster that can work as well backwards as it does forwards",
+  "ID": 620026,
+
+  "Faction": 5,
+  "Category": 8,
+  "Grade": 3,
+  "Price": 105055,
+  "HP": 440,
+  "Mass": 8,
+
+  "Recipe":  {},
+
+  "IconName": "DisSpherefr.png",
+  "MeshName": null,
+
+       "MeshTextureName": "Ellydium 1blue.png", 
+      "MeshGlossTextureName": "Ellydium 2.png", 
+      "MeshEmissionTextureName": "Ellydium 3.png",
+
+  "CellMap": [             
+        [ // Z Layer 0
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 1
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 2
+			"xxx",
+            "xxx",
+            "xxx",
+
+        ],
+		[ // Z Layer 3
+			"   ",
+            "   ",
+            "   ",
+
+        ],
+		[ // Z Layer 4
+			"   ",
+            " x ",
+            "   ",
+
+        ],
+		[ // Z Layer 5
+			"   ",
+            " x ",
+            "   ",
+
+        ],[ // Z Layer 6
+			"   ",
+            " x ",
+            "   ",
+
+        ],
+    ],
+
+ "APs": [ 
+    { "x": 1,     "y": 1,    "z": 6.5  }
+
+  ],
+
+  "GamePrefabReference": "BF_IonDrive_Small_112", 
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 1,
+    "y": 1,
+    "z": 4.5
+  },
+
+   "SubObjects":[
+     {
+      "SubOverrideName":         "m_BF_IonDrive_Small_112",
+         "MeshName":             "DisplacementSphere.obj",
+         "ColliderMeshName":     "DisplacementSphere_col.obj",
+         "SubPosition":          { "x": 1,  "y": 1,  "z": 4.5 },
+         "SubRotation":          { "x": 0, "y": 180, "z": 0 }
+      },
+  ],
+   
+ "JSONBLOCK": {
+  "GameObject|_fanJet": {
+    "UnityEngine.Transform": {
+        "localPosition": { "x": 1, "y": 1, "z": 2 },
+      },
+    "FanJet": {
+       "force": 10500,
+       "backForce": 10500,
+       "spinSpeed": 1.0,
+        }
+      },
+      "ModuleBooster":{
+        "m_BoosterAudioType": 3,
+      },
+    "GameObject|fx_Trail":{
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 1, "y": 1, "z": 1 },
+          },
+        "TrailRenderer": {
+            "time": 0.3,
+            "startWidth": 2,
+            "startColor":   { "r": 0.5, "g": 0, "b": 0.8, "a": 0.8	 },
+            "endColor":     { "r": 0.3, "g": 0, "b": 0.6, "a": 0.5 }
+        },
+    },
+    "Duplicate|fx_Trail":{
+        "UnityEngine.Transform": {
+            "localPosition": { "x": 1, "y": 1, "z": 1 },
+          },
+        "TrailRenderer": {
+            "time": 0.5,
+            "startWidth": 2.5,
+            "startColor":   { "r": 0, "g": 0.7, "b": 0.7, "a": 0.8 },
+            "endColor":     { "r": 0, "g": 0.3, "b": 0.3, "a": 0.5 }
+        },
+    },
+  }
+}

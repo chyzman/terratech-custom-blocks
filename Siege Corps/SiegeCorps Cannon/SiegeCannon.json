@@ -1,0 +1,124 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+
+// Helpful site for https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+  "Name": "SiegeCorps Cannon",
+  "Description": "An ancient cannon, making reloading take forever. However, when it hits...", //You can make multiple lines with \n
+  "ID": 5000504, //A random ID that MUST be unique
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 4, //The desired grade minus one
+  "Price": 16653, //The price is measured by sum of recipe value times 3
+  "HP": 9001, //A GSO one block has 250 health
+  "Mass": 90.0,
+  "Fragility": 1.0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all. For example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "CenterOfMass": {"x": 0.002824, "y": -0.2795, "z": -0.40219},
+  "Recipe": "PlumbiaIngot, GluonBeam, DervishGel", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  "IconName": "startblock_thumbnail.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "cannonscaledandrotated.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  /*  EITHER  */
+  "MeshTextureName": "cannontex_png.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "Black.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "Black.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+  "ColliderMeshName": "cannonscaledandrotated.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if SubObjects is being used for it
+
+  // In TerraTech,	X is +right and -left, Y is +up and -down, and Z is +forward and -backward
+  // In Blender, 	X is -right and +left, Y is -forward and +backward, and Z is +up and -down
+	"Cells":
+	[
+		{"x":1,"y":0,"z":-2},		
+		{"x":1,"y":0,"z":-1},
+		{"x":1,"y":0,"z":0},
+		{"x":1,"y":0,"z":1},
+		{"x":1,"y":0,"z":2},
+		{"x":1,"y":0,"z":3},
+		{"x":1,"y":1,"z":-2},		
+		{"x":1,"y":1,"z":-1},
+		{"x":1,"y":1,"z":0},
+		{"x":1,"y":1,"z":1},
+		{"x":1,"y":1,"z":2},
+		{"x":1,"y":1,"z":3},
+		{"x":0,"y":0,"z":-2},		
+		{"x":0,"y":0,"z":-1},
+		{"x":0,"y":0,"z":0},
+		{"x":0,"y":0,"z":1},
+		{"x":0,"y":0,"z":2},
+		{"x":0,"y":0,"z":3},
+		{"x":0,"y":1,"z":-2},		
+		{"x":0,"y":1,"z":-1},
+		{"x":0,"y":1,"z":0},
+		{"x":0,"y":1,"z":1},
+		{"x":0,"y":1,"z":2},
+		{"x":0,"y":1,"z":3},
+		{"x":-1,"y":0,"z":-2},		
+		{"x":-1,"y":0,"z":-1},
+		{"x":-1,"y":0,"z":0},
+		{"x":-1,"y":0,"z":1},
+		{"x":-1,"y":0,"z":2},
+		{"x":-1,"y":0,"z":3},
+		{"x":-1,"y":1,"z":-2},		
+		{"x":-1,"y":1,"z":-1},
+		{"x":-1,"y":1,"z":0},
+		{"x":-1,"y":1,"z":1},
+		{"x":-1,"y":1,"z":2},
+		{"x":-1,"y":1,"z":3},
+	],
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+  "GamePrefabReference": 684, //This is the part which gives the stick its weapon abilities
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": { // move the barrel and body in one shot
+    "x": -0.5,
+    "y": 0.5,
+    "z": -1.5
+  },
+  "SubObjects": [ //This might stop the stick crashing the game
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true
+    }
+  ],
+  "JSONBLOCK": { //This bit makes the weapon work
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 3.0
+    },
+    "ModuleWeapon": {
+      "m_RotateSpeed" : 0 // lock turret
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 250.0,
+      "Instantiate|m_BulletPrefab": { 
+        "WeaponRound": {              
+          "m_Damage": 4000
+        },
+        "Projectile": {               
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 0,
+              "m_EffectRadius": 0.5,
+              "m_MaxDamageStrength": 5000,
+              "m_MaxImpulseStrength": 5000
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+
+{
+  "Name": "IEC Medium Armor Plate",
+  "Description": "A strong and lightweight armor plate for keeping your tech's critical systems safe.",
+  "ID": 100529,
+
+  "Faction": 0,
+  "Category": 0,
+  "Grade": 2,
+  "Price": 1974, 
+
+  "HP": 750, 
+  "Mass": 1,
+
+  "Fragility": 1.0, 
+  "DamageableType": 0, 
+  "Rarity": 0, 
+
+  "Recipe": "5,8,54,5,8,54",
+  "IconName": "IEC_MediumArmorIcon.png", 
+  "MeshName": "IEC Medium Armor Plate.obj", 
+  "MakeBoxCollider": true,
+  "MeshTextureName": "IEC Textures.png", 
+  "BlockExtents": {
+    "x": 2,
+    "y": 1,
+    "z": 1
+  },
+
+  "APsOnlyAtBottom": true, 
+}                

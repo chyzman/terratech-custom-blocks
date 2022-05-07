@@ -1,0 +1,48 @@
+/*
+Description:    A large 4x4 armor plate.
+Pros:           High HP and doesn't detach
+Cons:       Heavy and expensive
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Large Armor Plate",
+    "Description":          "The largest available armor plate for the Lemon Kingdom. It doesn't have a lot of APs, but its durability is worth it.\n\n\"Those who do not understand our ways think us as tyrants. A fair observation. But would you rather live like rabble? Or live with a purpose under our banner? Many think us their saviors, afterall.\"\n\n--Sir Laectus the Tart",
+
+    "ID":                   419032,
+    "Faction":              2,
+    "Category":             2,
+    "Rarity":               2,      
+    "Grade":                3, 
+    "Price":                36984,
+    "Recipe" :              { "54": 32, "52": 16, "53": 12 },
+      
+    "IconName":             "LK_large_armor_plate_icon.png",                     
+    "MeshName":             "LK_large_armor_plate_body.obj",                                         
+    "MeshColliderName":     "LK_large_armor_plate_body_col.obj",
+    "NoBoxCollider":        true,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+
+    // Basic Block Values
+    "HP":                   12000,
+    "Mass":                 80,
+    "DamageableType":       1, 
+    "DetachFragility":      0.0,
+
+    // Block Dimensions
+    "BlockExtents":         { "x": 4, "y": 4,"z": 1 },
+
+    "APs": [ 
+        // Top and Bottom APs
+        { "x": 0, "y" : -0.5, "z" : 0 }, { "x": 3, "y" : -0.5, "z" : 0 },
+        { "x": 0, "y" : 3.5, "z" : 0 }, { "x": 3, "y" : 3.5, "z" : 0 },
+        // Left and Right APs
+        { "x": -0.5, "y" : 0, "z" : 0 }, { "x": -0.5, "y" : 3, "z" : 0 },    
+        { "x": 3.5, "y" : 0, "z" : 0 }, { "x": 3.5, "y" : 3, "z" : 0 }, 
+        // Back APs
+        { "x": 0, "y" : 0, "z" : -0.5 }, { "x": 3, "y" : 0, "z" : -0.5 },
+        { "x": 0, "y" : 3, "z" : -0.5 }, { "x": 3, "y" : 3, "z" : -0.5 },
+    ],
+}

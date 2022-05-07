@@ -1,0 +1,69 @@
+{
+  "Name": "Better Future Crystal Matrix Battery",
+  "Description": "Created using a newly discovered exotic crystal of rumored alien origin, this heavy, dense, and durable battery is the greatest of Better Future yet!",
+  "ID": 11235813,
+  
+
+
+  "Faction": 7,
+  "Category": 6, 
+  "Grade": 4, 
+  "Price": 75000,
+  "HP": 950,
+  "Mass": 32,
+
+  "IconName": "MatrixBatteryPrev.png",
+
+  "MeshName": "MatrixBattery.obj",
+
+  "Recipe": "54,54,54,62,62,62",
+
+  "MeshTextureName": null,
+  "MeshMaterialName": "BF_Main",
+
+
+ "ColliderMeshName": null,
+
+	"Cells": [
+		{ "x": 0, "y": 0, "z": 0 },
+		{ "x": 1, "y": 0, "z": 0 },
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 1, "y": 0, "z": 1 },
+		
+		{ "x": 0, "y": 1, "z": 0 },
+		{ "x": 1, "y": 1, "z": 0 },
+		{ "x": 0, "y": 1, "z": 1 },
+		{ "x": 1, "y": 1, "z": 1 }
+	],
+	"APs": [
+		{ "x": 0, "y": -0.5, "z": 0 },
+		{ "x": 1, "y": -0.5, "z": 0 },
+		{ "x": 0, "y": -0.5, "z": 1 },
+		{ "x": 1, "y": -0.5, "z": 1 },
+		
+		{ "x": 0, "y": 1.5, "z": 0 },
+		{ "x": 1, "y": 1.5, "z": 0 },
+		{ "x": 0, "y": 1.5, "z": 1 },
+		{ "x": 1, "y": 1.5, "z": 1 }
+	],
+	"GamePrefabReference": "GCBattery(222)",
+		"KeepReferenceRenderers": true,
+		"SubObjects": 
+		[
+      {
+        "ColliderMeshName": "MatrixBattery.obj",
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "BF_Main",
+        "MeshName": "MatrixBattery.obj",
+        "SubOverrideName": "GC_Battery_222"
+      },
+      {
+        "MeshName": "MatrixBatteryLED.obj",
+        "SubOverrideName": "_energyGauge"
+      }
+		],
+"JSONBLOCK": 
+	{
+		"ModuleEnergyStore": {"m_Capacity": 22000}
+	}
+}

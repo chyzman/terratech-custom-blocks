@@ -1,0 +1,964 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Inline Streamfold Compressor",
+  "Description": "Fuel Compressors rely off of supercompressing gasses from the atmosphere along with the existing fuel onboard the Tech. The end product is more fuel, allowing for sustained flight! \n\nMake sure you have enough of these.  Once this runs out of reserve fuel, it WILL stall. \n\nCompressors only function at half maximum capacity if prompted to go forwards or backwards.  Additionally holding the booster button makes it compress at full strength. \n\nJust don't let it be hit or the consequences will be <b>SEVERE!</b>", //You can make multiple lines with \n
+  "ID": 584357, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 97986,// What, you thought this would be CHEEAP???
+  "HP": 3750,//WHAT!? you were expecting this to survive?!?! -Damage type volatile
+  "Mass": 18,//12
+
+  "IconName": "CompressedKompress.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "9,9,9,9,9,9,11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 53, 53, 53, 53, 54, 54, 54, 56, 56, 57, 57, 57, 57, 57, 57, 57, 57, 58, 58, 63, 63, 65, 66, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  //"MeshMaterialName": "GSO_Main", //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ //"ColliderMeshName": "HEJetEngine.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Front
+    { "x": 0, "y": 0, "z": 3.5 },
+    { "x": 1, "y": 0, "z": 3.5 },
+    { "x": 0, "y": 1, "z": 3.5 },
+    { "x": 1, "y": 1, "z": 3.5 },
+    //Back
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 1, "z": -0.5 },
+    { "x": 1, "y": 1, "z": -0.5 },
+    //Left
+    { "x": -0.5, "y": 0, "z": 1 },
+    { "x": -0.5, "y": 1, "z": 1 },
+    { "x": -0.5, "y": 0, "z": 2 },
+    { "x": -0.5, "y": 1, "z": 2 },
+    //Right
+    { "x": 1.5, "y": 0, "z": 1 },
+    { "x": 1.5, "y": 1, "z": 1 },
+    { "x": 1.5, "y": 0, "z": 2 },
+    { "x": 1.5, "y": 1, "z": 2 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 4
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+//GSO_Fan_(221)
+//m_GSO_Fan_Base_212
+//_spinner/m_GSO_Fan_Blades_212
+
+//m_BF_IonDrive_Small_(112)
+	"GamePrefabReference": "VEN_Booster_Double_(211)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	//"ReferenceOffset": { "x": 0.5, "y": 0., "z": 2 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base
+     "SubOverrideName": "m_Venture_BoosterDouble_211",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "CompressorBase.obj",
+      "ColliderMeshName": "CompressorBase.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //GREEEBLES
+    {  
+      "SubOverrideName": "m_GreebleTank1",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank2",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank3",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank4",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank5",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank6",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank7",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_GreebleTank8",
+      "MeshName": "TACGreebleTank.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    //
+    // -COMPRESSOR-
+    //
+    {  
+      "SubOverrideName": "m_CompressorCore",
+      "MeshName": "CompressorCoreSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressInnerRot",
+      "MeshName": "CompressorInnerSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressMidRot",
+      "MeshName": "CompressorMidSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+    {  
+      "SubOverrideName": "m_CompressOuterRot",
+      "MeshName": "CompressorOuterSpinner.obj",
+      "MeshMaterialName": "HE_Main",
+    },
+
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|aCol": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1 } 
+      },
+      "UnityEngine.BoxCollider": {
+        "extents": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.5
+        }
+      }
+    },
+    "GameObject|m_Venture_BoosterDouble_211": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 } 
+      }
+    },
+    "GameObject|GreebleCenter": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 } 
+      },
+      //Front
+      "GameObject|m_GreebleTank1": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0.8, "y":0.65, "z":1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank2": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0.8, "y":-0.65, "z":1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank3": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":-0.8, "y":0.65, "z":1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank4": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":-0.8, "y":-0.65, "z":1.475 } 
+        }
+      },
+      //Back
+      "GameObject|m_GreebleTank5": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0.8, "y":0.65, "z":-1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank6": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0.8, "y":-0.65, "z":-1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank7": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":-0.8, "y":0.65, "z":-1.475 } 
+        }
+      },
+      "GameObject|m_GreebleTank8": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1.25, "y":1.25, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":-0.8, "y":-0.65, "z":-1.475 } 
+        }
+      },
+    },
+
+    "GameObject|m_CompressorCore": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.1, "y":1.1, "z":2.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 } 
+      },
+      "UnityEngine.Light": {
+        "cookieSize": 4.0,
+        "spotAngle": 360.0,
+        "color": {
+          "r": 1.0,
+          "g": 0.1,
+          "b": 0.3,
+          "a": 1.0
+        }, 
+        "intensity": 8.5,//2.0
+        "bounceIntensity": 1.0, 
+        "renderMode": "Auto", 
+        //Auto, ForcePixel, ForceVertex
+        "type": "Point",
+        //Spot, Directional, Point, Rectangle, Disc
+        "range": 1.0,
+        // "flare": null
+      },
+      "GameObject|m_CompressInnerRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.90,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressMidRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1.25 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": -0.75,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+      "GameObject|m_CompressOuterRot": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Spinner": {
+          "m_Speed": 0.3,
+          "m_RotationAxis": { "axis": 2 },
+          "m_SteerAxis": { "axis": 0 },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.0,
+        },
+      },
+    },
+
+
+
+
+
+
+    //The boosterjets - disabling most visuals...
+    "GameObject|_boostJet": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 } 
+      },
+      "GameObject|m_BoosterRocketFlame_R": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "playOnAwake": false,
+            "maxParticles": 0,
+          },
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_L": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":2.45, "z":2.45 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          // "UnityEngine.ParticleSystem": {
+          //   "playOnAwake": false,
+          //   "maxParticles": 0,
+          // },
+            // "GameObject|FX_ChargeParticles2": {
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              // "sortMode": 0,
+              // "minParticleSize": 0.05,
+              "maxParticleSize": 0.15,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "startSpeed": {
+                "curveMin": -2,
+                "curveMax": -2,
+              }, //How far you want the particles to spread
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.75,
+                    "g": 1.0,
+                    "b": 0.25,
+                    "a": 0.5
+                  },
+                  "playOnAwake": true,
+                  "startDelay": 0.0,//Delay
+                  "startLifetime": 1.00,
+                  "startRotation": 0.0,
+                  "playbackSpeed": 1.0,
+                  //
+                  "ringBufferMode": null,
+                  "scalingMode": null,
+                  "useUnscaledTime": false,
+                  "prewarm": false,
+                  // "startRotation": 0.0,
+                  // "playbackSpeed": 0.5,
+                  //
+                  "gravityModifier": 0.0,//No gravity
+                  "loop": true, //Charging the beam
+                  "startSize": 0.25,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "emissionRate": 125.0,
+                  "emitterVelocityMode": 1,
+                  "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                  "maxParticles": 500,
+                  "useAutoRandomSeed": false,
+                  "textureSheetAnimation": null,
+                  "subEmitters": {
+                    "enabled": false,
+                  },
+                  "proceduralSimulationSupported": false,
+                  "sizeBySpeed": {
+                    "enabled": true,
+                    "size": {
+                      "m_Mode": 1,
+                      "m_CurveMultiplier": 1.0,
+                      "m_CurveMin": null,
+                      "m_CurveMax": null,
+                      "m_ConstantMin": 1.0,
+                      "m_ConstantMax": 1.0,
+                      "mode": 1,
+                      "curveMultiplier": 1.0,
+                      "curveMin": null,
+                      "constantMax": 0.0,
+                      "constantMin": 0.0,
+                      "constant": 0.0
+                    },
+                    "sizeMultiplier": 2.0,
+                    "xMultiplier": 2.0,
+                    "yMultiplier": 2.0,
+                    "zMultiplier": 2.0,
+                    "separateAxes": false
+                  },
+                  "customData": {
+                    "enabled": false
+                  },
+                  "velocityOverLifetime": {
+                    "enabled": true,
+                    "xMultiplier": 0.0,
+                    "yMultiplier": 0.0,
+                    "zMultiplier": 0.0,
+                    "orbitalXMultiplier": 0.0,
+                    "orbitalYMultiplier": 0.0,
+                    "orbitalZMultiplier": 0.0,
+                    "orbitalOffsetXMultiplier": 0.0,
+                    "orbitalOffsetYMultiplier": 0.0,
+                    "orbitalOffsetZMultiplier": 0.0,
+                    "radialMultiplier": 1.0,
+                    "speedModifierMultiplier": -2.5,
+                    "space": 0
+                  },
+                  "forceOverLifetime": {
+                    "enabled": false,
+                  },
+                  "externalForces": {
+                    "enabled": false,
+                  },
+                  "noise": {
+                    "enabled": false,
+                  },
+                  "emission": {
+                    "type": 0,
+                    "rateMultiplier": 100.0,
+                    "enabled": true,
+                    "rateOverTimeMultiplier": 100.0,
+                    "rateOverDistanceMultiplier": 0.0,
+                    "burstCount": 0
+                  },
+                  "shape": {
+                    "enabled": true,
+                    "shapeType": 0,
+                    "meshShapeType": 0,
+                    "meshScale": 1.0,
+                    "radius": 2.0,
+                    "radiusMode": 0,
+                    "radiusSpread": 0.0,
+                    "angle": 0.0,
+                    "length": 0,
+                    "arcMode": 0,
+                    "randomDirectionAmount": 0.0,
+                    "sphericalDirectionAmount": 0.0,
+                    "randomPositionAmount": 0.0,
+                    "randomDirection": false,
+                    "randomDirectionAmount": 0.0,
+                  }
+                }
+              }
+            },
+        }
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1.0,//weak
+        "m_BurnRate": -37.5, //MAKES fuel
+        "m_FireRateFalloff": 3.0,//
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": true,
+        "m_AutoStabiliseStrength": 0.1,
+        "m_TargetRigidBody": null,
+        "m_Trails": [],
+        "m_FireControl": false,
+        "m_FireStrengthCurrent": 0.0,
+        "m_LocalBoostDirection": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "IsFiring": false,
+        "BurnRate": 15.0,
+        "ConsumesFuel": true,
+        "FireRateCurrent": 0.0
+      }
+    },
+
+    "Duplicate|_boostJet": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":0.1, "y":0.1, "z":0.1 },
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        "localPosition": { "x":0.5, "y":0.5, "z":1.5 } 
+      },
+      "GameObject|m_BoosterRocketFlame_R": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          "UnityEngine.ParticleSystem": {
+            "playOnAwake": false,
+            "maxParticles": 0,
+          },
+        }
+      },
+      "GameObject|m_BoosterRocketFlame_L": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":2.45, "z":2.45 },
+          "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+          // "UnityEngine.ParticleSystem": {
+          //   "playOnAwake": false,
+          //   "maxParticles": 0,
+          // },
+            // "GameObject|FX_ChargeParticles2": {
+            "UnityEngine.ParticleSystemRenderer": {
+              // "alignment": 0,
+              "renderMode": 0,
+              // "sortMode": 0,
+              // "minParticleSize": 0.05,
+              "maxParticleSize": 0.15,
+              "motionVectorGenerationMode": 1,
+            },
+            "UnityEngine.ParticleSystem": {
+              "startSpeed": {
+                "curveMin": -2,
+                "curveMax": -2,
+              }, //How far you want the particles to spread
+              "main": {
+                "m_ParticleSystem": {
+                  "startColor": {
+                    "r": 0.75,
+                    "g": 1.0,
+                    "b": 0.25,
+                    "a": 0.5
+                  },
+                  "playOnAwake": true,
+                  "startDelay": 0.0,//Delay
+                  "startLifetime": 1.00,
+                  "startRotation": 0.0,
+                  "playbackSpeed": 1.0,
+                  //
+                  "ringBufferMode": null,
+                  "scalingMode": null,
+                  "useUnscaledTime": false,
+                  "prewarm": false,
+                  // "startRotation": 0.0,
+                  // "playbackSpeed": 0.5,
+                  //
+                  "gravityModifier": 0.0,//No gravity
+                  "loop": true, //Charging the beam
+                  "startSize": 0.25,
+                  "startSpeed": 1.0, //How far you want the particles to spread
+                  "emissionRate": 125.0,
+                  "emitterVelocityMode": 1,
+                  "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+                  "maxParticles": 500,
+                  "useAutoRandomSeed": false,
+                  "textureSheetAnimation": null,
+                  "subEmitters": {
+                    "enabled": false,
+                  },
+                  "proceduralSimulationSupported": false,
+                  "sizeBySpeed": {
+                    "enabled": true,
+                    "size": {
+                      "m_Mode": 1,
+                      "m_CurveMultiplier": 1.0,
+                      "m_CurveMin": null,
+                      "m_CurveMax": null,
+                      "m_ConstantMin": 1.0,
+                      "m_ConstantMax": 1.0,
+                      "mode": 1,
+                      "curveMultiplier": 1.0,
+                      "curveMin": null,
+                      "constantMax": 0.0,
+                      "constantMin": 0.0,
+                      "constant": 0.0
+                    },
+                    "sizeMultiplier": 2.0,
+                    "xMultiplier": 2.0,
+                    "yMultiplier": 2.0,
+                    "zMultiplier": 2.0,
+                    "separateAxes": false
+                  },
+                  "customData": {
+                    "enabled": false
+                  },
+                  "velocityOverLifetime": {
+                    "enabled": true,
+                    "xMultiplier": 0.0,
+                    "yMultiplier": 0.0,
+                    "zMultiplier": 0.0,
+                    "orbitalXMultiplier": 0.0,
+                    "orbitalYMultiplier": 0.0,
+                    "orbitalZMultiplier": 0.0,
+                    "orbitalOffsetXMultiplier": 0.0,
+                    "orbitalOffsetYMultiplier": 0.0,
+                    "orbitalOffsetZMultiplier": 0.0,
+                    "radialMultiplier": 1.0,
+                    "speedModifierMultiplier": -2.5,
+                    "space": 0
+                  },
+                  "forceOverLifetime": {
+                    "enabled": false,
+                  },
+                  "externalForces": {
+                    "enabled": false,
+                  },
+                  "noise": {
+                    "enabled": false,
+                  },
+                  "emission": {
+                    "type": 0,
+                    "rateMultiplier": 100.0,
+                    "enabled": true,
+                    "rateOverTimeMultiplier": 100.0,
+                    "rateOverDistanceMultiplier": 0.0,
+                    "burstCount": 0
+                  },
+                  "shape": {
+                    "enabled": true,
+                    "shapeType": 0,
+                    "meshShapeType": 0,
+                    "meshScale": 1.0,
+                    "radius": 2.0,
+                    "radiusMode": 0,
+                    "radiusSpread": 0.0,
+                    "angle": 0.0,
+                    "length": 0,
+                    "arcMode": 0,
+                    "randomDirectionAmount": 0.0,
+                    "sphericalDirectionAmount": 0.0,
+                    "randomPositionAmount": 0.0,
+                    "randomDirection": false,
+                    "randomDirectionAmount": 0.0,
+                  }
+                }
+              }
+            },
+        }
+      },
+      "GameObject|Effector": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":180, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        }
+      },
+      "BoosterJet": {
+        "m_Force": 1.0,//weak
+        "m_BurnRate": -37.5, //MAKES fuel
+        "m_FireRateFalloff": 3.0,//
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": true,
+        "m_AutoStabiliseStrength": 0.1,
+        "m_TargetRigidBody": null,
+        "m_Trails": [],
+        "m_FireControl": false,
+        "m_FireStrengthCurrent": 0.0,
+        "m_LocalBoostDirection": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "IsFiring": false,
+        "BurnRate": 15.0,
+        "ConsumesFuel": true,
+        "FireRateCurrent": 0.0
+      }
+    },
+    "ModuleBooster": { //Component for boosters? - Can modify, but not a lot other than visuals...
+      // "m_ConsumesFuel" : false, //not set yet
+        "m_BoosterAudioType": 4,
+        "m_UseBoostControls": true,//generate fuel WHEN DOING ANY BOOST
+        "m_UseDriveControls": true,
+        // BoosterType
+        // {
+        //   GSOMegaBooster,
+        //   GSOBoosterJet,
+        //   VENBooster,
+        //   HERocketJet,
+        //   BFBooster
+        // }
+
+    },
+
+    "Reference|GSO_Cab_111/ModuleFuelTank.": {//Penalty for running out of fuel.
+      "m_Capacity": 60.0,
+      "m_RefillRate": 0.01,
+    },
+
+
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : "Plasma", //What damage modifier the explosion does
+          "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius": 7.5, //KA-BAM
+          "m_EffectRadiusMaxStrength": 6.0, 
+          "m_MaxDamageStrength": 500, //This affects splash damage
+          //For reference, the heccin Kompress deals 150, baby damage compared to this.
+          // What makes this EVEN WORSE is that it's a heccing plasma detonation that deal 2x against ARMOR, which TAC is mostly composed of!
+          //so basically 1000 FREAKING DAMAGE
+          "m_MaxImpulseStrength": 500 //How hard to push things, explosion force
+        },
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : " IntroExplosionHuge",
+        },
+        "GameObject|NoiseStacker1": {
+          "PlayAudioLoop": { //Component
+            "m_SFXType" : " IntroExplosionHuge",
+          },
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0.0, "y":0.0, "z":0.0 } 
+          },
+        },
+        // "GameObject|NoiseStacker2": {
+        //   "PlayAudioLoop": { //Component
+        //     "m_SFXType" : " IntroExplosionHuge",
+        //   },
+        //   "UnityEngine.Transform": {
+        //     "localPosition": { "x":0.0, "y":0.0, "z":0.0 } 
+        //   },
+        // },
+        // "GameObject|NoiseStacker3": {
+        //   "PlayAudioLoop": { //Component
+        //     "m_SFXType" : " IntroExplosionHuge",
+        //   },
+        //   "UnityEngine.Transform": {
+        //     "localPosition": { "x":0.0, "y":0.0, "z":0.0 } 
+        //   },
+        // },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": {
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0.5,
+                "startSpeed": 20.0, //How far you want the particles to spread
+                "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2450.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 750,
+                    //"cycleCount": 1,
+                    "maxCount": 650,
+                    "minCount": 400,
+                    // "probability": 150,
+                    // "repeatInterval": 150,
+                    //"time": 0
+                  }
+                }
+              }
+            }
+          },
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionBright": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                // "startColor": {
+                //   "r": 0.6,
+                //   "g": 1.0,
+                //   "b": 0.6,
+                //   "a": 1.0
+                // },
+                "startSize": 10,
+                "startSpeed": 15, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 650,
+                    "maxCount": 600,
+                    "minCount": 500,
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionDark": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 20,
+                "startSpeed": 20, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 650,
+                    "maxCount": 600,
+                    "minCount": 500,
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/ExplosionSmoke": { 
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.0,
+                  "g": 0.0,
+                  "b": 0.0,
+                  "a": 0.85
+                },
+                "startSize": 30,
+                "startSpeed": 25, //How far you want the particles to spread
+                // "emissionRate": 25.0,
+                "maxParticles": 750,
+                "duration": 6.5,
+                "playbackSpeed": 0.75,
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 650,
+                    "cycleCount": 1,
+                    "maxCount": 600,
+                    "minCount": 500,
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+          "UnityEngine.Transform": {
+            // "localScale": { "x":0.2, "y":0.2, "z":0.2 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0},
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 1.0,
+                  "g": 0.4,
+                  "b": 0.2,
+                  "a": 0.915
+                },
+                "startSize": 200,
+                // "loop": false, //Happens during flight
+                // "endSize": 15.0,
+                "playbackSpeed": 0.25,
+                "startSpeed": 0, //How far you want the particles to spread
+                "emissionRate": 50.0,
+                "maxParticles": 100,
+                "emission": {
+                  "burstCount": 1,
+                  "rateMultiplier": 0.1,
+                  "rateOverTimeMultiplier": 0.1,
+                },
+              }
+            },
+          },
+        },
+        "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Shockwave": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 125.0,
+                // "startRotation": 5.0,
+                // "startSpeed": 17.5, //How far you want the particles to spread
+                "startColor": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.6,
+                  "a": 1.0
+                },
+                "duration": 10.0,
+                "playbackSpeed": 0.50,
+                // "emissionRate": 25.0,
+                "maxParticles": 7,
+                "emission": {
+                  "rateMultiplier": 50.0,
+                  "rateOverTimeMultiplier": 0.2,
+                  "burst": {
+                    "count": 7,
+                    "maxCount": 7,
+                    "minCount": 7,
+                  }
+                },
+              }
+            }
+          }
+        },
+      },
+    },
+    "Damageable": {
+      "m_DamageableType": 3, 
+      "m_AoEDamageBlockPercent": 0.1,//Does not stop shotguns as well
+    },
+  }
+}

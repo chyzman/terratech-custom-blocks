@@ -1,0 +1,166 @@
+{
+  "Name": "Old Star Heavy Iron Rugged Wheel",
+  "Description": "Now this is how Old Star do. The Rugged Wheel is what Heavy Iron use in more flat terrain to get arround. The tire is made from a very soild rubber mixture that can REALLY take a beating. Only downside is that its flamable so keep it away from any fire and i mean the bullet kind as well.",
+  "ID": 300037, 
+  "Faction": 4, 
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 852, 
+  "HP": 3000, 
+  "Mass": 6.25,
+  "IconName":"Old_Star_Rugged_wheel_icon.png",
+  "MeshName":null, 
+  "EmissionMode": 2,
+  "Recipe": { // "ID": Count
+    "0": 10,
+    "3": 10,
+    "43": 10
+  },
+
+  "DamageableType": 2,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+  // 0    = Standard
+  // 1    = Armor
+  // 2    = Rubber
+  // 3    = Volatile
+  // 4    = Shield
+  // 5    = Wood
+  // 6    = Rock
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+ // X is right and left, Y is up and down, and Z is forward and backward
+  "APs": [ 
+    //back
+    {"x": 0.0,"y": 1.0,"z":-0.5},{"x": 1.0,"y": 1.0,"z":-0.5},
+    {"x": 0.0,"y": 2.0,"z":-0.5},{"x": 1.0,"y": 2.0,"z":-0.5},
+    //sides
+    {"x":-0.5,"y": 1.0,"z": 0.0},{"x": 1.5,"y": 1.0,"z": 0.0},
+    {"x":-0.5,"y": 2.0,"z": 0.0},{"x": 1.5,"y": 2.0,"z": 0.0}
+  ],
+  "CellMap": [
+    ["TT",
+     "TT",
+     "  "],
+ 
+    ["TT",
+     "TT",
+     "  "],
+
+    ["TT",
+     "TT",
+     "TT"],     
+
+    ["TT",
+     "TT",
+     "TT"],     
+
+    ["TT",
+     "TT",
+     "TT"]
+ 
+   ],
+
+  "PrefabReference": "VEN_Wheel_Single_D_224",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [ 
+   {
+      "OverrideName": "m_VEN_Wheel_Single_D_224_Suspension", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,           
+      "MakeBoxCollider": true,         
+      "SubRotation": { "x": 0.0, "y": 0.0, "z": 0.0 },    
+      "MeshName": "OS_Rugged_Strut.obj"
+      //"SubPosition": { "x":-0.7, "y": 0, "z": 0 }, 
+    }, {
+      "OverrideName": "m_VEN_Wheel_Single_D_224_Tyre", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,                       
+      "ColliderMeshName": "OS_Rugged_wheel.obj",
+      "MeshName": "OS_Rugged_wheel.obj",
+      "SubPosition": { "x": 0.0, "y": 0, "z": 0 }
+    }, {
+      "OverrideName": "m_VEN_Wheel_Single_D_224_Base", 
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,  
+      "ColliderMeshName": "OS_Rugged_Wheel_Base.obj",  
+      "SubPosition": { "x":0.0, "y": 1.0, "z": 0.0 },
+      "SubRotation": { "x": 180.0, "y": 0.0, "z": 180.0 },           
+      "MeshName": "OS_Rugged_Wheel_Base.obj"     
+    }, {
+      "OverrideName": "Suspension_B",
+      //connects to base block
+      "SubPosition": { "x": 0.5, "y": 0.5, "z":-0.1}
+      
+    }, {
+      "OverrideName": "Suspension_A",
+      //connects to wheel
+      "SubRotation": { "x": 0.0, "y":-180.0, "z": 0.0},
+      "SubPosition": { "x": 0.5, "y": -0.6, "z": 3.0 }
+    }, {
+      "OverrideName": "_wheel",
+      "SubPosition": { "x": 0.5, "y": 0.8, "z": 3.0 }
+    }, {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 0.8, "y": -1, "z":  0.5}
+    },
+    {
+      "SubOverrideName": "Suspension_Up",
+      "SubPosition": {"x": 0,"y": 0,"z": 0},     
+      "SubRotation": {"x": 0,"y": 0,"z": 0}
+    }
+  ],
+  "JSONBLOCK": { //Root GameObject
+     "GameObject|_sparksLocator": {//Where the sparks fly when the wheel is overloaded
+       "x": 0.5,
+       "y": 0.0,
+       "z": 0.0
+     },
+     "GameObject|CentreOfMass": {//This determines the Center of Mass
+       "x": 0.5,
+       "y": 0.0,
+       "z": 0.5
+     },
+  //   // Torque Parameters
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 5000,
+		   "torqueCurveMaxRpm": 1000,
+		  "passiveBrakeMaxTorque": 1000,
+		   "reverseBrakeMaxRpm":500,
+		   "basicFrictionTorque": 1000.0,
+		   "fullCompressFrictionTorque": 1000
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 4.0,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 1.3,
+			"thicknessAngular": 15,
+			"suspensionSpring": 7500.0,
+			"suspensionDamper": 200.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 7.5,
+			"steerSpeed": 2
+		},
+		"m_DriveTurnPower": 0.5,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+    "m_DustMinimumRPM": 20.0,
+    "Capacity": 4
+	}
+     }
+}

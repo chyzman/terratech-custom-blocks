@@ -1,0 +1,227 @@
+{
+  "Name": "Youkai FHEL Type Laser",
+  "Description": "The Youkai Focused High Energy Type Laser, or FHEL, is a strong laser device capable of burning through armor and blocks with ease, but it is quite large and expensive.",
+  "ID": 19082,
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 3,
+  "Price": 39732,
+  "HP": 2250,
+  "Mass": 1,
+  "IconName": "YK_Beam.png",
+  "Recipe": "45, 45, 45, 45, 45, 45, 48, 48, 56, 62, 62, 64, 64, 64, 64",
+
+  "MeshTextureName":            "YK_Texture 1.png",
+  "MeshGlossTextureName":       "YK_Texture 2.png", 
+
+  "ColliderMeshName": "YK_Beam_Base.obj",
+  "SupressBoxColliderFallback": false,
+
+  "BlockExtents": 
+  {
+    "x": 4,
+    "y": 2,
+    "z": 4
+  },
+  "APs": [
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 2, "y": -0.5, "z": 1},
+    {"x": 2, "y": -0.5, "z": 2},
+  ],
+
+  "GamePrefabReference": "BF_Laser_Turret_313",
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "ObjectName": "Body",
+      "MeshName": "YK_Beam_Body.obj",
+      "SubPosition": {
+        "x": -1.5,
+        "y": -0.61,
+        "z": -1.5
+      }
+    },
+    {
+      "ObjectName": "Gimbal",
+      "MeshName": "YK_Beam_Gimbal.obj",
+      "SubPosition": {
+        "x": -1.5,
+        "y": -0.61,
+        "z": -1.5
+      }
+    },
+    {
+    "SubOverrideName": "m_BF_Laser_Turret_313",
+    "MeshName": "YK_Beam_Base.obj",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  }, 
+  {
+    "SubOverrideName": "_gimbalBase",
+    "SubPosition": {
+      "x": 1.5,
+      "y": 0.61,
+      "z": 1.5
+    }
+  }, {
+    "SubOverrideName": "_gimbalElev",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  }, {
+    "SubOverrideName": "_barrel",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0.6
+    }
+  }, {
+    "SubOverrideName": "_beam",
+    "SubPosition": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  }],
+  "JSONBLOCK": {
+    "ModuleWeapon": {
+      "m_RotateSpeed": 100.0
+    },
+    "GameObject|_gimbalBase": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+        },
+      "GameObject|Gimbal": {
+        },
+      "GimbalAimer": {
+        "rotationLimits": [-180, 180],
+        "aimClampMaxPercent": 1000
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-25.0, 25.0],
+          "aimClampMaxPercent": 1
+        },
+        "GameObject|Body": {
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 5.5
+             }
+            },
+            "GameObject|_muzzleFlash": {
+              "GameObject|_light": {
+                "UnityEngine.Light": {
+                       "shadows": 1,
+                  "spotAngle": 93.1,
+                 "color": { "r": 1.0, "g": 0.0, "b": 0.1, "a": 1.0 },
+                 "range": 2.0,
+               "intensity": 5.5
+             }
+            }
+          },
+          "GameObject|_beam": {
+            "BeamWeapon": {
+              "m_DamagePerSecond": 2500,
+              "m_Range": 75,
+              "Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.0, "b": 0.1, "a": 1.0 },
+									"startSize": 1
+								}
+							}
+            },
+            "UnityEngine.LineRenderer": {
+              "numPositions": 4,
+              "positionCount": 4,
+              "startWidth": 0.25,
+              "endWidth": 0.25,
+              "numCapVertices": 8,
+              "material": {
+                "mainTexture": "Beam.png"
+              },
+              "startColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1,
+                "maxColorComponent": 1.0
+              },
+              "endColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1,
+                "maxColorComponent": 1.0
+              }
+            }
+          }
+        },
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 1
+             }
+            },
+          "GameObject|_beam": {
+            "BeamWeapon": {
+              "m_DamagePerSecond": 2500,
+              "m_Range": 75,
+              "Instantiate|m_HitParticlesPrefab": {
+								"UnityEngine.ParticleSystem": {
+									"startColor": { "r": 1.0, "g": 0.1, "b": 0.1, "a": 1.0 },
+									"startSize": 1
+								}
+							}
+            },
+            "UnityEngine.LineRenderer": {
+              "numPositions": 2,
+              "positionCount": 2,
+              "startWidth": 0.4,
+              "endWidth": 0.4,
+              "numCapVertices": 8,
+              "material": {
+                "mainTexture": "Beam.png"
+              },
+              "startColor": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.1,
+                "a": 1,
+                "maxColorComponent": 1.0
+              },
+              "endColor": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.1,
+                "a": 1,
+                "maxColorComponent": 1.0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

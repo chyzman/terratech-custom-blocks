@@ -1,0 +1,44 @@
+{
+  "Name": "Venture to Old Star Transition Block",
+  "Description": "A transition block to blend Old Star and Venture together",
+  "ID": 300134,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Rarity": 0,
+  "Price": 486,
+  "HP": 550,
+  "Mass": 1.5,
+  "IconName": "OS_VEN_Icon.png",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5, 7",
+  "EmissionMode": 2, 
+  "GamePrefabReference": "VEN_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+  "APsOnlyAtBottom": false,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_Block_112",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_VEN_2.obj",
+      "ColliderMeshName": "OS_VEN_2.obj",
+      "MeshMaterialName": "VEN_Main"
+    },
+    {
+      "ObjectName": "OS_Half",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_VEN_1.obj",
+      "ColliderMeshName": "OS_VEN_1.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    }
+  ]
+}

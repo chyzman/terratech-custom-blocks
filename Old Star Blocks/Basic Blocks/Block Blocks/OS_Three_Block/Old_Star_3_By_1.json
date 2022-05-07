@@ -1,0 +1,30 @@
+{
+  "Name": "Old Star 3 by 1",
+  "Description": "This here is how the Old Star do. Just 2 planks of nicely cut Fibron Wood held together with a few metal bands and nails.   Now THIS long peice of wood is good for building up a wagon better than that there 2 by 1 but not by much. But it can take a better beating than it for sure! Also not by much.",
+
+  "ID": 300010,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 150,
+  "Mass": 0.75,
+  "IconName": "3_by_1_icon.png",
+  "MeshName": "Old_Star_Three_Block.obj",
+  "ColliderMeshName": "Old_Star_Three_BlockC.obj",
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, ",
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 3
+  },
+  "APsOnlyAtBottom": false
+}

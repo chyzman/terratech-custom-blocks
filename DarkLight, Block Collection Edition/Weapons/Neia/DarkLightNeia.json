@@ -1,0 +1,265 @@
+{
+  "Name": "DarkLight Neia Medium Cannon",
+  "Description": "We stole a Megaton and retrofitted it into this weapon. A plasma grade fat cannon that works well as secondaries to the larger weaponry.\nThis thing also costed us a camera, it shot one during the picturing process.\n\nThere appears to have been 'concerns' about the name of the weaponry, mainly with Avians. These concerns are to be completely disregarded as crippling insanity from them.\n\n\n\nThe crafting recipe is literally just, o n e.",
+                 //You can make multiple lines with \n
+  "ID": 2000079, 
+                 //Anywhere between 2,000,000 and 2,004,999 should do for DarkLight Blocks
+
+  "Faction": 7, 
+                 //GSO = 1|0, GC = 2, EXP|RR = 3, VEN = 4, HK = 5, Special = 6, BF = 7
+  "Category": 4, 
+                 //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, 
+                 //The desired grade -1, DL 1
+  "Price": 32890, 
+                 //The price is measured by sum of recipe value times 5 for DarkLight in particular, these are VERY costly bois but they do have good things for their higher natural cost
+  "HP": 3500, //oh no
+                 //A BF one block has 300 health, HK has 400 and 1.5 weight
+  "Mass": 34.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 1.0},
+
+  "Fragility": 0.8, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all, for example, SCUs do not fall off when attacked
+  "DamageableType": 0, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 0, // Common = 0, Uncommon = 1, Rare = 2
+
+  "Recipe": "52, 53, 54, 55, 59, 66,", // Separate chunk names or IDs with a comma. DarkLight does not use resources in craft, only components.
+  "IconName": "DLNeia.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "DarkLight1.png", //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  "MeshGlossTextureName": "DarkLight2.png", //Black white transparency image for the shine. Opaque black looks like rough plastic or rubber, Opaque white looks like glossed mirror.
+  "MeshEmissionTextureName": "DarkLight3.png", //Texture like the first, except is for illumination of parts of the model for things like night. Black is "off", the brighter it is the more it shows. Think LEDs
+
+  //"EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 2,
+    "z": 3
+  },
+
+  "APs": [
+    { "x": 0,    "y": -0.5,    "z": 0   },
+    { "x": 0,    "y": -0.5,    "z": 1   },
+    { "x": 1,    "y": -0.5,    "z": 0   },
+    { "x": 1,    "y": -0.5,    "z": 1   }
+  ],
+
+  "GamePrefabReference": "GSO_Cannon_Medium_222", //Megaton
+  "KeepRenderers": false, 
+  "KeepColliders": false, 
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_MegatonCannon_222_Base",
+      "MeshName": "DLNeiaBase.obj",
+      "ColliderMeshName": "DLNeiaBaseCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    {
+      "SubOverrideName": "_gimbalBase",
+      "MeshName": "DLNeiaHorizontal.obj",
+      "ColliderMeshName": "DLNeiaHorizontalCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      }
+    },
+
+    {
+      "SubOverrideName": "_gimbalElev",
+      "MeshName": "DLNeiaVertical.obj",
+      "ColliderMeshName": "DLNeiaVerticalCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0.78,
+        "z": -0.32
+      }
+    },
+
+    {
+      "SubOverrideName": "_barrel",
+      "MeshName": "DLNeiaBarrel.obj",
+      "ColliderMeshName": "DLNeiaBarrelCollider.obj",
+      "MeshTextureName": "DarkLight1.png", 
+      "MeshGlossTextureName": "DarkLight2.png", 
+      "MeshEmissionTextureName": "DarkLight3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.1,
+        "z": 1.4
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+
+    "GameObject|_gimbalBase": {
+      //"UnityEngine.Transform": { "localPosition": { "x": 0.5, "y": 0, "z": 0.5 } },
+
+      "GimbalAimer": {
+        "rotationLimits": [-30, 30]
+      },
+
+      "GameObject|_gimbalElev": {
+        //"UnityEngine.Transform": { "localPosition": { "x": 0.5, "y": 0.78, "z": 0.12 } },
+
+        "GimbalAimer": {
+          "rotationLimits": [-45, 10]
+        },
+
+        "GameObject|_barrel": {
+          //"UnityEngine.Transform": { "localPosition": { "x": 0.5, "y": 0.8, "z": 1.6 } },
+
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.8 }
+            }
+          },
+
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.75 }
+            }
+          },
+
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0.85 }
+            }
+          }
+        }
+      }
+    },
+
+    "ModuleWeapon": {
+      "m_RotateSpeed" : 15
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown" : 3.0
+    },
+
+    "FireData": {
+      "m_MuzzleVelocity": 115,
+      "m_BulletSprayVariance": 0,
+      "m_BulletSpin": 0,
+      "m_KickbackStrength": 500,
+
+      "Instantiate|m_BulletPrefab": {
+
+        "WeaponRound": {
+          "m_DamageType" : "Plasma",
+          "m_Damage": 1000
+        },
+
+        "LineRenderer": {            
+          "startColor": { "r": 1.0, "g": 0, "b": 1.0, "a": 1.0 },
+         
+          "endColor":   { "r": 0.2, "g": 0, "b": 1.0, "a": 1.0 }
+        },
+
+        "Projectile": {
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_DamageType" : "Plasma",
+              "m_ExplosionSize": 1,
+              "m_EffectRadius": 8,
+              "m_EffectRadiusMaxStrength": 0.5,
+              "m_MaxDamageStrength": 500,
+              "m_MaxImpulseStrength": 600
+            },
+            //i stole it from baser which stole it from arcis, what will steal this from neia?
+            "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.4,
+                      "g": 0.1,
+                      "b": 0.8,
+                      "a": 0.75
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            }, //Explosion Bright
+            "GameObject|ExplosionFlash": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.4,
+                      "g": 0.1,
+                      "b": 0.8,
+                      "a": 1.0
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            }, //Explosion Flash
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.7,
+                      "g": 0.0,
+                      "b": 0.8,
+                      "a": 1.0
+                    } //Color
+                  } //ParticleSystem but m
+                } //main
+              } //Particle System
+            } //Explosion Smonk
+          }
+        }
+      }
+    }
+  }
+}

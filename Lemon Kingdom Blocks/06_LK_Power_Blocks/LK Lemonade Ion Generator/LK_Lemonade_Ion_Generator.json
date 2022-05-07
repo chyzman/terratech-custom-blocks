@@ -1,0 +1,246 @@
+// This is the "basic" LK Reactor. It will passively make its own power for a Tech it's attached to. Credits to Liccflag for this meme reactor.
+{
+    // Basic Block Information
+    "Name":                 "LK Lemonade Ion Generator",
+    "Description":          "A large, lemon-powered generator. While weaker than a set of solar panels of the same size, it will generate power no matter what as long as it's attached on a Tech.",
+
+    "ID": 419008,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 6,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 303936,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    // Recipe:  Base: 144 Titanite Alloys, 24 Plubonic Greebles
+    //          Power: 72 Ion Pulse Cells
+    //          Casing: 12 Hard Light Drives
+    //          Motors: 4 Thermo Jets
+
+    "Recipe":  "54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 57, 57, 57, 57",	
+
+    "IconName":                   "LK_Lemonade_Ion_Generator_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_Lemonade_Ion_Generator_base.obj",         // Name of the block's mesh                                        
+    "ColliderMeshName":           "LK_Lemonade_Ion_Generator_base_col.obj",     // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    "LK_tex_3.png",
+
+    // Basic Block HP Values
+    "HP": 38400,            // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels & Generators
+                            
+    "Mass": 384,            // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "Cells": [ //Units in the grid space to be occupied
+    {"x": 1, "y": 0, "z": 0 }, {"x": 2, "y": 0, "z": 0 }, {"x": 3, "y": 0, "z": 0 }, {"x": 4, "y": 0, "z": 0 },
+    {"x": 0, "y": 0, "z": 1 }, {"x": 1, "y": 0, "z": 1 }, {"x": 2, "y": 0, "z": 1 }, {"x": 3, "y": 0, "z": 1 }, {"x": 4, "y": 0, "z": 1 }, {"x": 5, "y": 0, "z": 1 },
+    {"x": 0, "y": 0, "z": 2 }, {"x": 1, "y": 0, "z": 2 }, {"x": 2, "y": 0, "z": 2 }, {"x": 3, "y": 0, "z": 2 }, {"x": 4, "y": 0, "z": 2 }, {"x": 5, "y": 0, "z": 2 },
+    {"x": 0, "y": 0, "z": 3 }, {"x": 1, "y": 0, "z": 3 }, {"x": 2, "y": 0, "z": 3 }, {"x": 3, "y": 0, "z": 3 }, {"x": 4, "y": 0, "z": 3 }, {"x": 5, "y": 0, "z": 3 },
+    {"x": 0, "y": 0, "z": 4 }, {"x": 1, "y": 0, "z": 4 }, {"x": 2, "y": 0, "z": 4 }, {"x": 3, "y": 0, "z": 4 }, {"x": 4, "y": 0, "z": 4 }, {"x": 5, "y": 0, "z": 4 },
+    {"x": 1, "y": 0, "z": 5 }, {"x": 2, "y": 0, "z": 5 }, {"x": 3, "y": 0, "z": 5 }, {"x": 4, "y": 0, "z": 5 },
+ 
+    {"x": 1, "y": 1, "z": 0 }, {"x": 2, "y": 1, "z": 0 }, {"x": 3, "y": 1, "z": 0 }, {"x": 4, "y": 1, "z": 0 },
+    {"x": 0, "y": 1, "z": 1 }, {"x": 1, "y": 1, "z": 1 }, {"x": 2, "y": 1, "z": 1 }, {"x": 3, "y": 1, "z": 1 }, {"x": 4, "y": 1, "z": 1 }, {"x": 5, "y": 1, "z": 1 },
+    {"x": 0, "y": 1, "z": 2 }, {"x": 1, "y": 1, "z": 2 }, {"x": 2, "y": 1, "z": 2 }, {"x": 3, "y": 1, "z": 2 }, {"x": 4, "y": 1, "z": 2 }, {"x": 5, "y": 1, "z": 2 },
+    {"x": 0, "y": 1, "z": 3 }, {"x": 1, "y": 1, "z": 3 }, {"x": 2, "y": 1, "z": 3 }, {"x": 3, "y": 1, "z": 3 }, {"x": 4, "y": 1, "z": 3 }, {"x": 5, "y": 1, "z": 3 },
+    {"x": 0, "y": 1, "z": 4 }, {"x": 1, "y": 1, "z": 4 }, {"x": 2, "y": 1, "z": 4 }, {"x": 3, "y": 1, "z": 4 }, {"x": 4, "y": 1, "z": 4 }, {"x": 5, "y": 1, "z": 4 },
+    {"x": 1, "y": 1, "z": 5 }, {"x": 2, "y": 1, "z": 5 }, {"x": 3, "y": 1, "z": 5 }, {"x": 4, "y": 1, "z": 5 },
+
+    {"x": 1, "y": 2, "z": 0 }, {"x": 2, "y": 2, "z": 0 }, {"x": 3, "y": 2, "z": 0 }, {"x": 4, "y": 2, "z": 0 },
+    {"x": 0, "y": 2, "z": 1 }, {"x": 1, "y": 2, "z": 1 }, {"x": 2, "y": 2, "z": 1 }, {"x": 3, "y": 2, "z": 1 }, {"x": 4, "y": 2, "z": 1 }, {"x": 5, "y": 2, "z": 1 },
+    {"x": 0, "y": 2, "z": 2 }, {"x": 1, "y": 2, "z": 2 }, {"x": 2, "y": 2, "z": 2 }, {"x": 3, "y": 2, "z": 2 }, {"x": 4, "y": 2, "z": 2 }, {"x": 5, "y": 2, "z": 2 },
+    {"x": 0, "y": 2, "z": 3 }, {"x": 1, "y": 2, "z": 3 }, {"x": 2, "y": 2, "z": 3 }, {"x": 3, "y": 2, "z": 3 }, {"x": 4, "y": 2, "z": 3 }, {"x": 5, "y": 2, "z": 3 },
+    {"x": 0, "y": 2, "z": 4 }, {"x": 1, "y": 2, "z": 4 }, {"x": 2, "y": 2, "z": 4 }, {"x": 3, "y": 2, "z": 4 }, {"x": 4, "y": 2, "z": 4 }, {"x": 5, "y": 2, "z": 4 },
+    {"x": 1, "y": 2, "z": 5 }, {"x": 2, "y": 2, "z": 5 }, {"x": 3, "y": 2, "z": 5 }, {"x": 4, "y": 2, "z": 5 },
+
+    {"x": 1, "y": 3, "z": 0 }, {"x": 2, "y": 3, "z": 0 }, {"x": 3, "y": 3, "z": 0 }, {"x": 4, "y": 3, "z": 0 },
+    {"x": 0, "y": 3, "z": 1 }, {"x": 1, "y": 3, "z": 1 }, {"x": 2, "y": 3, "z": 1 }, {"x": 3, "y": 3, "z": 1 }, {"x": 4, "y": 3, "z": 1 }, {"x": 5, "y": 3, "z": 1 },
+    {"x": 0, "y": 3, "z": 2 }, {"x": 1, "y": 3, "z": 2 }, {"x": 2, "y": 3, "z": 2 }, {"x": 3, "y": 3, "z": 2 }, {"x": 4, "y": 3, "z": 2 }, {"x": 5, "y": 3, "z": 2 },
+    {"x": 0, "y": 3, "z": 3 }, {"x": 1, "y": 3, "z": 3 }, {"x": 2, "y": 3, "z": 3 }, {"x": 3, "y": 3, "z": 3 }, {"x": 4, "y": 3, "z": 3 }, {"x": 5, "y": 3, "z": 3 },
+    {"x": 0, "y": 3, "z": 4 }, {"x": 1, "y": 3, "z": 4 }, {"x": 2, "y": 3, "z": 4 }, {"x": 3, "y": 3, "z": 4 }, {"x": 4, "y": 3, "z": 4 }, {"x": 5, "y": 3, "z": 4 },
+    {"x": 1, "y": 3, "z": 5 }, {"x": 2, "y": 3, "z": 5 }, {"x": 3, "y": 3, "z": 5 }, {"x": 4, "y": 3, "z": 5 },
+    ],
+    "APs": [
+      // Bottom APs
+      {"x": 1.0, "y": -0.5, "z": 2.0 }, {"x": 1.0, "y": -0.5, "z": 3.0 },
+      {"x": 2.0, "y": -0.5, "z": 1.0 }, {"x": 2.0, "y": -0.5, "z": 2.0 }, {"x": 2.0, "y": -0.5, "z": 3.0 }, {"x": 2.0, "y": -0.5, "z": 4.0 },
+      {"x": 3.0, "y": -0.5, "z": 1.0 }, {"x": 3.0, "y": -0.5, "z": 2.0 }, {"x": 3.0, "y": -0.5, "z": 3.0 }, {"x": 3.0, "y": -0.5, "z": 4.0 },
+      {"x": 4.0, "y": -0.5, "z": 2.0 }, {"x": 4.0, "y": -0.5, "z": 3.0 },
+
+      // Side APs
+      {"x": 2.0, "y":  0.0, "z": 5.5 }, {"x": 3.0, "y":  0.0, "z": 5.5 },
+      {"x": 2.0, "y":  0.0, "z": -0.5}, {"x": 3.0, "y":  0.0, "z": -0.5},
+      {"x": -0.5, "y":  0.0, "z": 2.0 }, {"x": -0.5, "y":  0.0, "z": 3.0 },
+      {"x": 5.5, "y":  0.0, "z": 2.0 }, {"x": 5.5, "y":  0.0, "z": 3.0 },
+      
+      // Top APs
+      {"x": 2.0, "y": 3.5, "z": 2.0 }, {"x": 2.0, "y": 3.5, "z": 3.0 },
+      {"x": 3.0, "y": 3.5, "z": 2.0 }, {"x": 3.0, "y": 3.5, "z": 3.0 }
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "GSO_Radar_111",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 2.5, "y": 0.0, "z": 2.5 },
+    
+    "SubObjects":[
+        // In this case, this block will be using the GSO Radar as it's one of the few blocks that spin passively.
+      {
+        // Remove the original base mesh
+        "SubOverrideName": "m_GSO_Radar_111_Base",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+      },
+      {
+        // Change the position of the object that spins
+        "SubOverrideName": "_spindle",
+        "SubRotation": { "x": 0.0, "y": 0.0, "z": 0 },
+        "SubPosition": { "x": 2.5, "y": 0.0, "z": 2.5 }
+      },
+
+      { 
+        // Place the "Glass" mesh
+        "SubOverrideName": "m_GSO_Radar_111_Dish",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "HE_Shield_Edge",
+        "MeshName": "LK_Lemonade_Ion_Generator_glass.obj",
+        "SubRotation": { "x": -90.0, "y": 0, "z": 0 },
+        "SubPosition": { "x": 0, "y": 0.275, "z": 0 }
+      },
+
+      {
+        // Place the case chassis
+        "SubOverrideName": "_spindle/m_GSO_Radar_111_Dish_copy",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshName": "LK_Lemonade_Ion_Generator_lemonCase.obj",
+        "ColliderMeshName": "LK_Lemonade_Ion_Generator_case_col.obj",
+        "SubRotation": { "x": -90.0, "y": 0, "z": 0 },
+        "SubPosition": { "x": 0, "y": 0.275, "z": 0 }
+      },
+
+      {
+        // Place the Lemons
+        "SubOverrideName": "_spindle/m_GSO_Radar_111_Dish_copy_copy",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "SPE_Lemon",
+        "MeshName": "LK_Lemonade_Ion_Generator_lemons.obj",
+        "SubRotation": { "x": -90.0, "y": 0, "z": 0 },
+        "SubPosition": { "x": 0, "y": 0.275, "z": 0 }
+      },
+
+      {
+        // And finally, place the "Water"
+        "SubOverrideName": "_spindle/m_GSO_Radar_111_Dish_copy_copy_copy",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshMaterialName": "Mat_BoosterRocketFlame",
+        "MeshName": "LK_Lemonade_Ion_Generator_water.obj",
+        "SubRotation": { "x": -90.0, "y": 0, "z": 0 },
+        "SubPosition": { "x": 0, "y": 0.275, "z": 0 }
+      }
+    ],
+
+    "JSONBLOCK":{
+      "GameObject|_spindle": {
+        "GameObject|m_GSO_Radar_111_Dish": {},
+        "Duplicate|m_GSO_Radar_111_Dish": {},       
+        "Duplicate|m_GSO_Radar_111_Dish_copy": {}, 
+        "Duplicate|m_GSO_Radar_111_Dish_copy_copy": {}, 
+
+        "Spinner": {
+          "m_Speed": 0.05,
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 0.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.2,                          // This does nothing
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        }
+      },
+
+      "ModuleEnergy": {
+        "m_Priority": -100,
+        "m_OutputPerSecond": 270,                // The amount is based on a GSO Solar Panel's output, adjusted for size, then reduced to only 10%
+        "m_OutputEnergyType": 0,                 // Dictates the type of energy it will use/give.
+                                                 // 0 = Battery Energy
+                                                 // 1 = Fuel
+        "m_OutputConditions": 0,                 // 
+        "m_SequentialPowerUp": false,            // Dictates whether it should power up one at a time with other blocks
+        "m_PowerUpDelay": 0.0                    // Dictates the time delay when powering up. 
+      },
+
+      // This is to prevent the generator from acting as a radar
+      "ModuleRadar": {
+        "m_Priority": -10,
+        "m_MiniMapType": 0,
+        "m_Range": 0.0,
+        "m_Dish": {
+          "m_Speed": 0.0,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 0.0,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "Speed": 0.2,
+          "SpeedFraction": 0.0,
+          "AtFullSpeed": false
+        },
+        "Range": 0.0
+      }
+    }
+
+}

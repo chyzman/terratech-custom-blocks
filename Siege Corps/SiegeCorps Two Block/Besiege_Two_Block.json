@@ -1,0 +1,45 @@
+{
+  "Name": "SiegeCorps Two Block",
+  "Description": "From a time long ago, TerraTech building styles were used, but under the name, \"Besiege\". A time where things were customizable, weapons were manually controlled, and techs were known only as war machines. This artifact is still in use as a two block, although old and wooden, it is still tough... \n\nCommemoration of the game Besiege having its full release.",
+  "ID": 5000502, 
+
+  "Faction": 0, 
+  "Category": 2, 
+  "Grade": 3, 
+  "Price": 756, 
+  "HP": 1000, 
+  "Mass": 2,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1,1,1,1,1,5,5,5,1,1,1,1,1,5,5,5",   
+  "IconName": "startblock_thumbnail.png",                       
+    "MeshName":                   "doublewoodscaled.obj",         // Name of the block's mesh           
+	"ColliderMeshName":           "doublewoodscaled.obj",
+    "MeshTextureName":            "woodmetal_png.png",
+    "MeshGlossTextureName":       "Black.png",
+    "MeshEmissionTextureName":    "Black.png",
+	
+      "DestroyExistingRenderer": true,
+  "SupressBoxColliderFallback": false,
+ 
+ "Cells":[{"x": 0,"y": 0,"z": 0},{"x": 0,"y": 0,"z": -1}],
+  "APs": [ 
+      {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0, "y": 0, "z": -1.5},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 0},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 0, "y": -0.5, "z": -1},
+    {"x": 0, "y": 0.5, "z": -1},
+    {"x": -0.5, "y": 0, "z": -1},
+    {"x": 0.5, "y": 0, "z": -1}
+  ],
+  "GamePrefabReference": 4,
+  "KeepReferenceRenderer": false, 
+  "KeepReferenceColliders": false,
+  "ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+}

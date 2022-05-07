@@ -1,0 +1,152 @@
+{
+  "Name": "Old Star Smoke Stack",
+  "Description": "This here is how the Old Star do. A whole lot of Smoke comes out this from it's internal furnace to show just how much power your tech can have.",
+
+  "ID": 300043,
+  "Faction": 4,
+  "Category": 6,
+  "Grade": 3,
+  "Price": 7692,
+  "HP": 2000,
+  "Mass": 4,
+  "IconName": "Smoker_icon.png",
+  "MeshName": "Smoker.obj",
+  "Recipe":{
+    "43": 4,
+    "45": 4,
+    "53": 4,
+    "54": 4
+  }, 
+  "EmissionMode": 2,
+  "DeathExplosionReference": "HE_CruiseMissile_121",
+  "MakeBoxCollider": true, 
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DamageableType": 2,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+  "APs": [
+// Bottom Face
+{ "x": 0, "y": -0.5, "z": 0 },
+
+//Left
+{ "x": 0.5, "y": 1, "z": 0 },
+{ "x": 0.5, "y": 0, "z": 0 },
+
+//Right
+{ "x": -0.5, "y": 1, "z": 0 },
+{ "x": -0.5, "y": 0, "z": 0 },
+
+//Front
+{ "x": 0, "y": 1, "z": -0.5 }, 
+{ "x": 0, "y": 0, "z": -0.5 },
+
+//Back
+{ "x": 0, "y": 1, "z": 0.5 }, 
+{ "x": 0, "y": 0, "z": 0.5 }
+
+                            ],
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 5,
+    "z": 1
+  }, 
+  "APsOnlyAtBottom": false,
+
+  "JSONBLOCK":{
+    "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0.0,
+                "y": 4.8,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            }
+        },
+        "ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 25.0,
+            "startSpeed": 0.0,
+            "startSize": 0.6,
+            "startColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.5
+            },
+            "startLifetime": 3.8,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000,
+            "simulationSpace": 1,
+            "scalingMode": 2
+        },
+        "ParticleSystemRenderer": {
+            "material": "Mat_FX_Smoke_Dark"
+        }
+    },
+    "Duplicate|FX_Smoker_Steam": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0.0,
+                "y": 4.8,
+                "z": 0.0
+            }
+        }
+    },
+    "Duplicate|FX_Smoker_Steam_copy": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0.0,
+                "y": 4.8,
+                "z": 0.0
+            }
+        }
+    },
+    "Duplicate|FX_Smoker_Steam_copy_copy": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0.0,
+                "y": 4.8,
+                "z": 0.0
+            }
+        }
+    },
+    "Duplicate|FX_Smoker_Steam_copy_copy_copy": {
+        "UnityEngine.Transform": {
+            "localPosition": {
+                "x": 0.0,
+                "y": 4.8,
+                "z": 0.0
+            }
+        }
+    },
+    "ModuleEnergy": {
+        "m_Priority": -100,
+        "m_OutputPerSecond": 150,                // The amount is based on a GSO Solar Panel's output, adjusted for size, then reduced to only 10%
+        "m_OutputEnergyType": 0,                 // Dictates the type of energy it will use/give.
+                                                 // 0 = Battery Energy
+                                                 // 1 = Fuel
+        "m_OutputConditions": 0,                 // 
+        "m_SequentialPowerUp": false,            // Dictates whether it should power up one at a time with other blocks
+        "m_PowerUpDelay": 0.0                    // Dictates the time delay when powering up. 
+      }
+  }
+}

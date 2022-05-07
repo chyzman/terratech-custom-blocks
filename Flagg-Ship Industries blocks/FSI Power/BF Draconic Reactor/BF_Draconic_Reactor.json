@@ -1,0 +1,1485 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+{
+  "Name": "Better Future Draconic reactor",
+  "Description": "The Draconic reactor is one of, if not, <b>the</b> most powerful power generators ever created. It uses an off-world material known as 'Draconium' to fuel it. The offworld versions are very bare-bones, with usually very little protection measures, as when it failed, it blew up on the spot with a massive radius. We've taken measures to ensure the safety of not just the tech, but the terrain when it fails.\n\nWhen it fails, the resulting unstable mess gets teleported to a barren world to go off. \n\n While the power output of the reactor is massive, it also requires a massive amount of power to even start, at least 12 GeoCorp mega reactor batteries to fully charge. once charged, it'll take a minute to spool up before it'll make power. the power output is absolutely massive ",
+  "ID": 1700053,
+
+  "Faction": 7, 
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 9762750,
+  "HP": 100000,
+  "Mass": 1000000,
+  "IconName": "BF_DE_Icon.png", 
+  "MeshName": null,
+  "Recipe":  "49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+			  49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+			  49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+			  49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66,
+			  49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 49, 50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,50,54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 56, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66, 66
+			  ", 	
+	
+	
+	
+	
+	
+	  
+  "MeshMaterialName": null, 
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 15,
+    "y": 15,
+    "z": 15
+  },
+  "APs": 
+  [ //The location of APs on the block. For use with "Cells"
+        { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 14 },
+		{ "x": -0.5, "y": 14, "z": 0 },
+		{ "x": -0.5, "y": 14, "z": 14 },
+		{ "x": 14.5, "y": 0, "z": 0 }, 
+		{ "x": 14.5, "y": 0, "z": 14 },
+		{ "x": 14.5, "y": 14, "z": 0 },
+		{ "x": 14.5, "y": 14, "z": 14 },
+		
+		{ "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 14 },
+		{ "x": 0, "y": 14.5, "z": 0 },
+		{ "x": 0, "y": 14.5, "z": 14 },
+		{ "x": 14, "y": -0.5, "z": 0 }, 
+		{ "x": 14, "y": -0.5, "z": 14 },
+		{ "x": 14, "y": 14.5, "z": 0 },
+		{ "x": 14, "y": 14.5, "z": 14 },
+		
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 14.5 },
+		{ "x": 0, "y": 14, "z": -0.5 },
+		{ "x": 0, "y": 14, "z": 14.5 },
+		{ "x": 14, "y": 0, "z": -0.5 }, 
+		{ "x": 14, "y": 0, "z": 14.5 },
+		{ "x": 14, "y": 14, "z": -0.5 },
+		{ "x": 14, "y": 14, "z": 14.5 },
+		
+		
+		{ "x": 5, "y": 5, "z": 14.5 },
+		{ "x": 6, "y": 5, "z": 14.5 },
+		{ "x": 7, "y": 5, "z": 14.5 },
+		{ "x": 8, "y": 5, "z": 14.5 },
+		{ "x": 9, "y": 5, "z": 14.5 },
+		
+		{ "x": 5, "y": 6, "z": 14.5 },
+		{ "x": 6, "y": 6, "z": 14.5 },
+		{ "x": 7, "y": 6, "z": 14.5 },
+		{ "x": 8, "y": 6, "z": 14.5 },
+		{ "x": 9, "y": 6, "z": 14.5 },
+		
+		{ "x": 5, "y": 7, "z": 14.5 },
+		{ "x": 6, "y": 7, "z": 14.5 },
+		{ "x": 7, "y": 7, "z": 14.5 },
+		{ "x": 8, "y": 7, "z": 14.5 },
+		{ "x": 9, "y": 7, "z": 14.5 },
+		
+		{ "x": 5, "y": 8, "z": 14.5 },
+		{ "x": 6, "y": 8, "z": 14.5 },
+		{ "x": 7, "y": 8, "z": 14.5 },
+		{ "x": 8, "y": 8, "z": 14.5 },
+		{ "x": 9, "y": 8, "z": 14.5 },
+		
+		{ "x": 5, "y": 9, "z": 14.5 },
+		{ "x": 6, "y": 9, "z": 14.5 },
+		{ "x": 7, "y": 9, "z": 14.5 },
+		{ "x": 8, "y": 9, "z": 14.5 },
+		{ "x": 9, "y": 9, "z": 14.5 },
+		
+		
+		{ "x": 5, "y": 5, "z": -0.5 },
+		{ "x": 6, "y": 5, "z": -0.5 },
+		{ "x": 7, "y": 5, "z": -0.5 },
+		{ "x": 8, "y": 5, "z": -0.5 },
+		{ "x": 9, "y": 5, "z": -0.5 },
+		
+		{ "x": 5, "y": 6, "z": -0.5 },
+		{ "x": 6, "y": 6, "z": -0.5 },
+		{ "x": 7, "y": 6, "z": -0.5 },
+		{ "x": 8, "y": 6, "z": -0.5 },
+		{ "x": 9, "y": 6, "z": -0.5 },
+		
+		{ "x": 5, "y": 7, "z": -0.5 },
+		{ "x": 6, "y": 7, "z": -0.5 },
+		{ "x": 7, "y": 7, "z": -0.5 },
+		{ "x": 8, "y": 7, "z": -0.5 },
+		{ "x": 9, "y": 7, "z": -0.5 },
+		
+		{ "x": 5, "y": 8, "z": -0.5 },
+		{ "x": 6, "y": 8, "z": -0.5 },
+		{ "x": 7, "y": 8, "z": -0.5 },
+		{ "x": 8, "y": 8, "z": -0.5 },
+		{ "x": 9, "y": 8, "z": -0.5 },
+		
+		{ "x": 5, "y": 9, "z": -0.5 },
+		{ "x": 6, "y": 9, "z": -0.5 },
+		{ "x": 7, "y": 9, "z": -0.5 },
+		{ "x": 8, "y": 9, "z": -0.5 },
+		{ "x": 9, "y": 9, "z": -0.5 },
+		
+		
+		
+		
+		
+		{ "x": -0.5, "y": 5, "z": 5 },
+		{ "x": -0.5, "y": 5, "z": 6 },
+		{ "x": -0.5, "y": 5, "z": 7 },
+		{ "x": -0.5, "y": 5, "z": 8 },
+		{ "x": -0.5, "y": 5, "z": 9 },
+		
+		{ "x": -0.5, "y": 6, "z": 5 },
+		{ "x": -0.5, "y": 6, "z": 6 },
+		{ "x": -0.5, "y": 6, "z": 7 },
+		{ "x": -0.5, "y": 6, "z": 8 },
+		{ "x": -0.5, "y": 6, "z": 9 },
+		
+		{ "x": -0.5, "y": 7, "z": 5 },
+		{ "x": -0.5, "y": 7, "z": 6 },
+		{ "x": -0.5, "y": 7, "z": 7 },
+		{ "x": -0.5, "y": 7, "z": 8 },
+		{ "x": -0.5, "y": 7, "z": 9 },
+		
+		{ "x": -0.5, "y": 8, "z": 5 },
+		{ "x": -0.5, "y": 8, "z": 6 },
+		{ "x": -0.5, "y": 8, "z": 7 },
+		{ "x": -0.5, "y": 8, "z": 8 },
+		{ "x": -0.5, "y": 8, "z": 9 },
+		
+		{ "x": -0.5, "y": 9, "z": 5 },
+		{ "x": -0.5, "y": 9, "z": 6 },
+		{ "x": -0.5, "y": 9, "z": 7 },
+		{ "x": -0.5, "y": 9, "z": 8 },
+		{ "x": -0.5, "y": 9, "z": 9 },
+		
+		
+		{ "x": 14.5, "y": 5, "z": 5 },
+		{ "x": 14.5, "y": 5, "z": 6 },
+		{ "x": 14.5, "y": 5, "z": 7 },
+		{ "x": 14.5, "y": 5, "z": 8 },
+		{ "x": 14.5, "y": 5, "z": 9 },
+		
+		{ "x": 14.5, "y": 6, "z": 5 },
+		{ "x": 14.5, "y": 6, "z": 6 },
+		{ "x": 14.5, "y": 6, "z": 7 },
+		{ "x": 14.5, "y": 6, "z": 8 },
+		{ "x": 14.5, "y": 6, "z": 9 },
+		
+		{ "x": 14.5, "y": 7, "z": 5 },
+		{ "x": 14.5, "y": 7, "z": 6 },
+		{ "x": 14.5, "y": 7, "z": 7 },
+		{ "x": 14.5, "y": 7, "z": 8 },
+		{ "x": 14.5, "y": 7, "z": 9 },
+		
+		{ "x": 14.5, "y": 8, "z": 5 },
+		{ "x": 14.5, "y": 8, "z": 6 },
+		{ "x": 14.5, "y": 8, "z": 7 },
+		{ "x": 14.5, "y": 8, "z": 8 },
+		{ "x": 14.5, "y": 8, "z": 9 },
+		
+		{ "x": 14.5, "y": 9, "z": 5 },
+		{ "x": 14.5, "y": 9, "z": 6 },
+		{ "x": 14.5, "y": 9, "z": 7 },
+		{ "x": 14.5, "y": 9, "z": 8 },
+		{ "x": 14.5, "y": 9, "z": 9 },
+		
+		
+		
+		
+		{ "x": 6, "y": -0.5, "z": 6 },
+		{ "x": 6, "y": -0.5, "z": 7 },
+		{ "x": 6, "y": -0.5, "z": 8 },
+		
+		{ "x": 7, "y": -0.5, "z": 6 },
+		{ "x": 7, "y": -0.5, "z": 7 },
+		{ "x": 7, "y": -0.5, "z": 8 },
+		
+		{ "x": 8, "y": -0.5, "z": 6 },
+		{ "x": 8, "y": -0.5, "z": 7 },
+		{ "x": 8, "y": -0.5, "z": 8 },
+		
+		{ "x": 6, "y": 14.5, "z": 6 },
+		{ "x": 6, "y": 14.5, "z": 7 },
+		{ "x": 6, "y": 14.5, "z": 8 },
+		
+		{ "x": 7, "y": 14.5, "z": 6 },
+		{ "x": 7, "y": 14.5, "z": 7 },
+		{ "x": 7, "y": 14.5, "z": 8 },
+		
+		{ "x": 8, "y": 14.5, "z": 6 },
+		{ "x": 8, "y": 14.5, "z": 7 },
+		{ "x": 8, "y": 14.5, "z": 8 },
+					
+  ],
+  "GamePrefabReference": "BF_Radar_111", 
+  "KeepReferenceRenderers":false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [{
+    "SubOverrideName":"Base unit",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Frame.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Frame.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},
+	},{
+    "SubOverrideName":"_spindle",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 0,"z": 0}
+	},{
+    "SubOverrideName":"_spindle2",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 36,"z": 0}
+	},{
+    "SubOverrideName":"_spindle3",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 72,"z": 0}
+	},{
+    "SubOverrideName":"_spindle4",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 108,"z": 0}
+	},{
+    "SubOverrideName":"_spindle5",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 144,"z": 0}
+	},{
+    "SubOverrideName":"_spindle6",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 180,"z": 0}
+	},{
+    "SubOverrideName":"_spindle7",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 216,"z": 0}
+	},{
+    "SubOverrideName":"_spindle8",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 252,"z": 0}
+	},{
+    "SubOverrideName":"_spindle9",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x":90,"y": 288,"z": 0}
+	},{
+    "SubOverrideName":"_spindle10",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield.obj",
+	"MeshTextureName": "Shield_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},"SubRotation": {"x": 90,"y": 324,"z": 0}
+	},
+	{
+    "SubOverrideName":"Stabilizer1_frame",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 12.5},"SubRotation": {"x": 0,"y": 0,"z": 0}
+	},{
+    "SubOverrideName":"Stabilizer1_outer",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 12.5},"SubRotation": {"x": 0,"y": 0,"z": 0},"SubScale": {"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer1_inner",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 12.5},"SubRotation": {"x": 0,"y": 0,"z": 0},"SubScale": {"x": 0.7,"y": 0.7,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer2_frame",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 1.5},"SubRotation": {"x": 0,"y": 180,"z": 0}
+	},{
+    "SubOverrideName":"Stabilizer2_outer",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 1.5},"SubRotation": {"x": 0,"y": 180,"z": 0},"SubScale": {"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer2_inner",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 1.5},"SubRotation": {"x": 0,"y": 180,"z": 0},"SubScale": {"x": 0.7,"y": 0.7,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer3_frame",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"SubPosition": {"x": 12.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 90,"z": 0}
+	},{
+    "SubOverrideName":"Stabilizer3_outer",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"SubPosition": {"x": 12.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 90,"z": 0},"SubScale": {"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer3_inner",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"SubPosition": {"x": 12.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 90,"z": 0},"SubScale": {"x": 0.7,"y": 0.7,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer4_frame",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Frame.obj",
+	"SubPosition": {"x": 1.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 270,"z": 0}
+	},{
+    "SubOverrideName":"Stabilizer4_outer",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Outer.obj",
+	"SubPosition": {"x": 1.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 270,"z": 0},"SubScale": {"x": 0.9,"y": 0.9,"z": 0.9}
+	},{
+    "SubOverrideName":"Stabilizer4_inner",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"MeshTextureName": "Shield_Stab_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Shield_Stabiliser_Inner.obj",
+	"SubPosition": {"x": 1.5,"y": 7,"z": 7},"SubRotation": {"x": 0,"y": 270,"z": 0},"SubScale": {"x": 0.7,"y": 0.7,"z": 0.9}
+	},{
+    "SubOverrideName":"Injector1",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Injector.obj","MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Injector.obj",
+	"SubPosition": {"x": 7,"y": 1.5,"z": 7},"SubRotation": {"x": 0,"y": 0,"z": 0},"SubScale": {"x": 1,"y": 1,"z": 1}
+	},{
+    "SubOverrideName":"Injector2",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Injector.obj","MeshMaterialName": "BF_Main",
+	"ColliderMeshName" : "BF_Reactor_Injector.obj",
+	"SubPosition": {"x": 7,"y": 12.5,"z": 7},"SubRotation": {"x": 180,"y": 0,"z": 0},"SubScale": {"x": 1,"y": 1,"z": 1}
+	},{
+    "SubOverrideName":"Core",
+	"DestroyExistingColliders": true,
+	"MakeBoxCollider": false,
+    "MeshName": "BF_Reactor_Core.obj",
+	"MeshTextureName": "Core_tex.png",
+	"ColliderMeshName" : "BF_Reactor_Core.obj",
+	"SubPosition": {"x": 7,"y": 7,"z": 7},
+	"SubRotation": {"x": 0,"y": 0,"z": 0}
+	}
+    ],
+  "JSONBLOCK":{
+ 
+   "ModuleRadar": {"m_MiniMapType": 0,
+   "m_Range": 50.0},
+   
+    "ModuleDamage": {
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : 0, //What damage modifier the explosion does
+          "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius": 100.0, //PWAWOOOSH!
+          "m_EffectRadiusMaxStrength": 4.0, 
+          "m_MaxDamageStrength": 200, //Resultant heat
+          "m_MaxImpulseStrength": -1250 //Teleportation of large objects creates a large empty area, drawing things in
+        },
+    		"GameObject|ExplosionFlash":null,
+  			"GameObject|Sparks_B":null,
+  			"GameObject|Sparks_A":null,
+  			"GameObject|FX_Parts":null,
+  			"GameObject|FX_Explosion_Smoke":null,
+  			"GameObject|FX_Explosion_Fire":{
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 60.0,
+                "startRotation": 90.0,
+                // "startSpeed": 17.5, //How far you want the particles to spread
+                "startColor": {
+                  "r": 1.0,
+                  "g": 0.6,
+                  "b": 0,
+                  "a": 1.0
+                },
+                "duration": 50.0,
+                "playbackSpeed": 0.2,
+                // "emissionRate": 25.0,
+                "maxParticles": 7,
+                "emission": {
+                  "rateMultiplier": 1.0,
+                  "rateOverTimeMultiplier": 1,
+                }, 
+                "sizeOverLifetime":{
+          	    "enabled":true,
+          	    "size":{
+          	    "mode": 1,
+          	    "curve": {
+          	      "keys": [
+                    {
+                      "time": 0.0,
+                      "value": 1.0,
+                    },
+                    {
+                      "time": 0.4,
+                      "value": 0.0
+                    },
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+  	"Reference|VEN_Cab_111.ModuleDamage.deathExplosion": {
+  	  "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0, "z": 0 },
+    	  "localEulerAngles":		{ "x": 0, "y": 0, "z": 90 }
+      },
+  		"GameObject|ExplosionFlash":null,
+  		"GameObject|Sparks_B":null,
+  		"GameObject|Sparks_A":null,
+  		"GameObject|FX_Parts_A":null,
+  		"GameObject|FX_Explosion_Smoke":null,
+  		"GameObject|FX_Explosion_Fire":null,
+  		"GameObject|FX_Explosion_Shockwave":{
+    		
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": 0, "z": 0 },
+  	      "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        },
+        "ParticleSystem": {
+          "startSize": 20.0,
+          "startRotation": 0.0,
+          // "startSpeed": 17.5, //How far you want the particles to spread
+          "startColor": {
+            "r": 1.0,
+            "g": 0.6,
+            "b": 0.0,
+            "a": 1.0
+          },
+          "duration": 50.0,
+          "playbackSpeed": 0.2,
+          //"emissionRate": 3.0,
+          "maxParticles": 7,
+          "sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 1.0,
+              },
+              {
+                "time": 0.4,
+                "value": 0.0
+              },{
+                "time": 0.8,
+                "value": 0.1
+              },{
+                "time": 1.2,
+                "value": 0.0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "ParticleSystemRenderer": {
+      "renderMode": 0,
+                //--------  There is:  --------
+                // Billboard            (Render particles as billboards facing the active camera.)
+                // Stretch              (Stretch particles in the direction of motion.)
+                // HorizontalBillboard  (Render particles as billboards always facing up along the y-Axis.)
+                // VerticalBillboard    (Render particles as billboards always facing the player, but not pitching along the x-Axis.)
+                // Mesh                 (Render particles as meshes.)
+                // None                 (Do not render particles.)
+
+    },
+  },
+          
+        },//< more closing brackets than opening
+      }
+    },
+    "Damageable": {
+     "m_InvulnerableEndTime": 5.0,},
+	 
+    "ModuleEnergy": {
+      "m_Priority": -100,
+      "m_OutputPerSecond": 1000000,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 1,
+	  "m_GeneratingSFXType": 43,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 60.0,
+	  },
+	 "ModuleSpinWhenAnchored": {},
+  	
+  	"GameObject|_spindle": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":6
+        }},
+		"GameObject|_spindle2": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":12
+        }},"GameObject|_spindle3": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":18
+        }},"GameObject|_spindle4": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":24
+        }},"GameObject|_spindle5": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":30
+        }},"GameObject|_spindle6": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":36
+        }},"GameObject|_spindle7": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":42
+        }},"GameObject|_spindle8": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":48
+        }},"GameObject|_spindle9": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":54
+        },
+		},"GameObject|_spindle10": {
+	 "Spinner":{
+	  "m_Speed": 0.5,
+      "Speed": 0.5, 
+	  "m_RotationAxis": {
+        "axis": 1
+      },
+      "m_SteerAxis": {
+        "axis": 1
+      },
+	  "m_AutoSpin":false,
+  	  "m_SpinUpTime":60
+        }},"GameObject|Stabilizer1_inner": {
+	 "Spinner":{
+	  "m_Speed": -0.6,
+      "Speed": -0.6, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Stabilizer2_inner": {
+	 "Spinner":{
+	  "m_Speed": -0.6,
+      "Speed": -0.6, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Stabilizer3_inner": {
+	 "Spinner":{
+	  "m_Speed": -0.6,
+      "Speed": -0.6, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Stabilizer4_inner": {
+	"Spinner":{
+	  "m_Speed": -0.6,
+      "Speed": -0.6, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},
+		"GameObject|Stabilizer1_outer": {
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 0,
+          "y": 180,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.25,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": 10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 0.2,
+              },
+              {
+                "time": 0.625,
+                "value": 2.75
+              },
+			  {
+                "time": 0.7,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 0.0,"g": 1.0,"b": 1.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 0.0,"g": 0.5,"b": 0.5,},
+                "time": 0.3
+              },{
+                "color": {"r": 1.0,"g": 0.5,"b": 0.0,},
+                "time": 0.6
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+	 "Spinner":{
+	  "m_Speed": 1,
+      "Speed": 1, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},
+		"GameObject|Stabilizer2_outer":{
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 0,
+          "y": 180,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.25,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": 10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 0.2,
+              },
+              {
+                "time": 0.625,
+                "value": 2.75
+              },
+			  {
+                "time": 0.7,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 0.0,"g": 1.0,"b": 1.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 0.0,"g": 0.5,"b": 0.5,},
+                "time": 0.3
+              },{
+                "color": {"r": 1.0,"g": 0.5,"b": 0.0,},
+                "time": 0.6
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+	 "Spinner":{
+	  "m_Speed": 1,
+      "Speed": 1, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Stabilizer3_outer":{
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 0,
+          "y": 180,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.25,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": 10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 0.2,
+              },
+              {
+                "time": 0.625,
+                "value": 2.75
+              },
+			  {
+                "time": 0.7,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 0.0,"g": 1.0,"b": 1.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 0.0,"g": 0.5,"b": 0.5,},
+                "time": 0.3
+              },{
+                "color": {"r": 1.0,"g": 0.5,"b": 0.0,},
+                "time": 0.6
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+	 "Spinner":{
+	  "m_Speed": 1,
+      "Speed": 1, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},"GameObject|Stabilizer4_outer":{
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 0,
+          "y": 180,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.25,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": 10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 0.2,
+              },
+              {
+                "time": 0.625,
+                "value": 2.75
+              },
+			  {
+                "time": 0.7,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 0.0,"g": 1.0,"b": 1.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 0.0,"g": 0.5,"b": 0.5,},
+                "time": 0.3
+              },{
+                "color": {"r": 1.0,"g": 0.5,"b": 0.0,},
+                "time": 0.6
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+	 "Spinner":{
+	  "m_Speed": 1,
+      "Speed": 1, 
+	  "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+	  "m_AutoSpin":true,
+  	  "m_SpinUpTime":1
+        }},
+		"GameObject|Injector1": {
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 270,
+          "y": 0,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.2,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": 10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 0.2,
+              },
+              {
+                "time": 0.625,
+                "value": 2.2
+              },
+			  {
+                "time": 0.7,
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 1.0,"g": 0.0,"b": 0.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 1.0,"g": 0.5,"b": 0.5,},
+                "time": 0.2
+              },{
+                "color": {"r": 1.0,"g": 0.0,"b": 0.0,},
+                "time": 0.4
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    }},"GameObject|Injector2": {
+		"Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 5,
+          "z": 0
+         },
+		 "localEulerAngles":{
+		  "x": 270,
+          "y": 0,
+          "z": 0
+		  },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+	   "startColor": {
+                  "r":1,
+				  "g":1,
+				  "b":1,
+				  "a":1},
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 0.2,
+        "enableEmission": true,
+        "emissionRate": 25,
+        "startSpeed": -10.0,
+        "startSize": 1.0,
+        "startLifetime": 1,
+        "gravityModifier": 0.0,
+        "maxParticles": 100,
+        "simulationSpace": 0,
+        "scalingMode": 0,
+		"sizeOverLifetime":{
+  		    "enabled":true,
+  		    "size":{
+  		    "mode": 1,
+  		    "curve": {
+  		      "keys": [
+              {
+                "time": 0.0,
+                "value": 2.2,
+              },
+              {
+                "time": 0.5,
+                "value": 0.2
+              },
+			  {
+                "time": 0.7,
+                "value": 0.0
+              }
+            ]
+          }
+        }
+      },
+	  "colorOverLifetime":{
+        "enabled": true,
+        "color": {
+          "mode": "Gradient",
+          "gradient": {
+            "alphaKeys": [
+              {
+                "time": 0.0,
+                "alpha": 0.2
+              },
+              {
+                "time": 1.0,
+                "alpha": 0.2
+              }
+            ],
+            "colorKeys": [
+              {
+                "color": {"r": 1.0,"g": 0.0,"b": 0.0,},
+                "time": 0.0
+              },
+              {
+                "color": {"r": 1.0,"g": 0.5,"b": 0.5,},
+                "time": 0.2
+              },{
+                "color": {"r": 1.0,"g": 0.0,"b": 0.0,},
+                "time": 0.4
+              }
+            ],
+            "mode": "Blend"
+          }
+        }
+      }
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 1.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    }}
+		
+	
+  	   
+  }
+}

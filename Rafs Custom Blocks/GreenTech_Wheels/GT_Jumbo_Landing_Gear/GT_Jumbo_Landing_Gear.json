@@ -1,0 +1,184 @@
+{
+  "Name": "GreenTech Jumbo Landing Gear",
+  "Description": "Heavy-load landing gear which only deploys its wheels when the Tech is near the ground, returning to its safe compartment during flight.",
+  "ID": 911251,
+  "PairedBlock": 911251,
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 3,
+  "Price": 4839, 
+  "HP": 2000, 
+  "Mass": 8,
+  "CenterOfMass": {"x": 0.5, "y": 2, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "3, 3, 3, 3, 43, 44, 45, 47, 51",
+  "IconName": "GT_Jumbo_Landing_Gear_Icon.png",
+ 
+  "BlockExtents":{"x": 2,"y": 4, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 1.5, "y": 3, "z": 1},
+	{"x": 1.5, "y": 3, "z": 0},
+	{"x": 1.5, "y": 2, "z": 1},
+	{"x": 1.5, "y": 2, "z": 0},
+	{"x": -0.5, "y": 3, "z": 1},
+	{"x": -0.5, "y": 3, "z": 0},
+	{"x": -0.5, "y": 2, "z": 1},
+	{"x": -0.5, "y": 2, "z": 0},
+	{"x": 0, "y": 2, "z": -0.5},
+	{"x": 1, "y": 2, "z": -0.5},
+	{"x": 0, "y": 3, "z": -0.5},
+	{"x": 1, "y": 3, "z": -0.5},
+	{"x": 0, "y": 2, "z": 1.5},
+	{"x": 1, "y": 2, "z": 1.5},
+	{"x": 0, "y": 3, "z": 1.5},
+	{"x": 1, "y": 3, "z": 1.5},
+	{"x": 0, "y": 3.5, "z": 0},
+	{"x": 0, "y": 3.5, "z": 1},
+	{"x": 1, "y": 3.5, "z": 0},
+	{"x": 1, "y": 3.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "HE_Wheel_Retractable_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 2.5,
+    "z": 0.5
+  },
+  "ReferenceScale": {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+
+  "SubObjects": [
+	  {
+		"SubOverrideName": "Collider1",
+		"Layer": 8
+	  },
+	  {
+		"SubOverrideName": "m_HE_WheelRetractable_112_Base_Base",
+		"MeshName": "GT_Jumbo_Landing_Gear_Base.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	},
+	{
+		"SubOverrideName": "m_HE_WheelRetractable_112_Tyre",
+		"MeshName": "GT_Jumbo_Landing_Gear_Wheel.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	},
+	{
+		"SubOverrideName": "m_HE_WheelRetractable_112_Suspension_A",
+		"MeshName": "GT_Jumbo_Landing_Gear_Suspension_A.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	},
+	{
+		"SubOverrideName": "m_HE_WheelRetractable_112_Suspension_B",
+		"MeshName": "GT_Jumbo_Landing_Gear_Suspension_B.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	},
+	{
+		"SubOverrideName": "m_HE_WheelRetractable_112_Door_Right",
+		"MeshName": "GT_Jumbo_Landing_Gear_Door_Right.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	},
+	{
+		"SubOverrideName": "m_HE_WheelRetractable_112_Door_Left",
+		"MeshName": "GT_Jumbo_Landing_Gear_Door_Left.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png"
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|Collider1": {
+		"UnityEngine.BoxCollider": {
+			"center": { "x": 0.5, "y": 2.5, "z": 0.5 },
+			"size": { "x": 2, "y": 2, "z": 2}
+		  }
+	},
+	"GameObject|HE_WheelRetractable_112": {
+		"GameObject|m_HE_WheelRetractable_112_Base_Base": {
+		  "GameObject|m_HE_WheelRetractable_112_Suspension_A": {
+			"GameObject|m_HE_WheelRetractable_112_Axle": {
+			  "GameObject|_wheel": {
+				"GameObject|m_HE_WheelRetractable_112_Tyre": {
+					"UnityEngine.CapsuleCollider": {
+						"center": {
+						  "x": 0,
+						  "y": 0,
+						  "z": 0
+						},
+						"radius": 0.2,
+						"height": 0.1,
+						"direction": 0
+					}
+				}
+			  }
+			}
+		   }
+	    }
+    },
+	"ModuleLandingGear": {
+		"m_DeployBelowAltitude": 20.0,
+		"m_IsRetractedByDefault": false
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 6000.0,
+			"torqueCurveMaxRpm": 500.0,
+			"passiveBrakeMaxTorque": 1000.0,
+			"reverseBrakeMaxRpm": 200.0,
+			"basicFrictionTorque": 50.0,
+			"fullCompressFrictionTorque": 150.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 2.0
+				}
+			  },
+			  "radius": 0.7,
+			  "thicknessAngular": 40.0,
+			  "suspensionSpring": 15000.0,
+			  "suspensionDamper": 500.0,
+			  "maxSuspensionAcceleration": 15.0,
+			  "suspensionQuadratic": true,
+			  "suspensionTravel": 0.2,
+			  "steerAngleMax": 15.0,
+			  "steerSpeed": 2.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 0.6,
+		"m_DustMinimumRPM": 20.0
+		// "m_WheelGeometry": ["_wheel/Transform.", "_wheel_copy/Transform."]
+	}
+     }
+}

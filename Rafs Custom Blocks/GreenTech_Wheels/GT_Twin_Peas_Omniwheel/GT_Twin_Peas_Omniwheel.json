@@ -1,0 +1,190 @@
+{
+  "Name": "GreenTech Twin Peas Omniwheel",
+  "Description": "A couple omniwheels in a pod, which can make your tech turn fast and also strafe.",
+  "ID": 911026,
+  "PairedBlock": 911026,  
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 1215, 
+  "HP": 800, 
+  "Mass": 2.5,
+  "CenterOfMass": {"x": 0.0, "y": 0, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "3, 3, 3, 3, 5, 7, 11, 11, 43, 43",
+  "IconName": "GT_Twin_Peas_Omniwheel_Icon.png", 
+  "MeshName": "GT_Twin_Peas_Omniwheel.obj", 
+  "ColliderMeshName": "GT_Twin_Peas_Omniwheel_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 1, "z": 2},   
+  "APs": [
+	{"x": 0, "y": 0.5,"z": 0},
+	{"x": 0, "y": 0.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "VEN_Tracks_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Tracks_112_Wheel1",
+		"MeshName": "OmniTire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Twin_Peas_Omniwheel_Wheel_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Tracks_112_Wheel2",
+		"MeshName": "OmniTire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"ColliderMeshName": "GT_Twin_Peas_Omniwheel_Wheel_Collider.obj",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_1",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0.1,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_2",
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0.1,
+			"z": 1
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|m_VEN_Tracks_112_Tracks": { "TankTrack": null },
+	"GameObject|_wheel_1": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":0, "y":0, "z":0 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 1.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			}
+		  }
+		}
+		},
+	"GameObject|_wheel_2": {
+		"GameObject|_tireFrame": {
+		  "GameObject|_suspensionColliderLower": {
+			"UnityEngine.Transform": {
+			  "localPosition": { "x":0, "y":0, "z":0 },
+			  "localScale": { "x":1, "y":1, "z":1 }
+			},
+			"UnityEngine.SphereCollider": {
+			  "center": {
+				"x": 0.0,
+				"y": 1.0,
+				"z": 0.0
+			  },
+			  "radius": 0.05
+			},
+		  }
+		}
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 3000.0,
+			"torqueCurveMaxRpm": 600.0,
+			"passiveBrakeMaxTorque": 1000.0,
+			"reverseBrakeMaxRpm": 50.0,
+			"basicFrictionTorque": 50.0,
+			"fullCompressFrictionTorque": 500.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 2.5
+					
+				}
+			  },
+			"radius": 0.45,
+			"thicknessAngular": 30,
+			"suspensionSpring": 3000.0,
+			"suspensionDamper": 250.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.3,
+			"steerAngleMax": 45.0,
+			"steerSpeed": 10.0,
+			"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.5,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0,
+		"Capacity": 4
+	}
+     }
+}

@@ -1,0 +1,82 @@
+{
+    "Name": "Hawkeye Cascade JSM 750 Prop",
+    "Description": "This Black Labs custom prop was built to serve both as a reliable engine for small vehicles as well as a potent maneuvering thruster for larger craft. Though not quite as powerful as Venture's similar engine, it can provide full thrust in either direction, making it useful in more situations. Like all Hawkeye blocks, it is sturdier and heavier than its competators.",
+    "ID": 117029,
+  
+    "Faction": 5,
+    "Category": 8,
+    "Rarity": 2,
+    "Grade": 2,
+    "Price": 11544,
+    "HP": 400,
+    "Mass": 3,
+  
+    "Recipe":  "44, 44, 44, 45, 45, 45, 57, 57, 63",
+  
+    "IconName": "HE_Small_Cascade_Prop.png",
+    "MeshName": null,
+    "ColliderMeshName": null,
+  
+    "Cells": [
+          {"x": 0, "y": 0, "z": -1},
+          {"x": 0, "y": 0, "z": 0},
+          {"x": 0, "y": 0, "z": 1},
+  
+    ],
+  
+   "APs": [ 
+      { "x": 0,     "y": 0.5,    "z": 0  },
+      { "x": 0,     "y": -0.5,    "z": 0  },
+      { "x": 0.5,     "y": 0,    "z": 0  },
+      { "x": -0.5,     "y": 0,    "z": 0  },
+
+      { "x": 0,     "y": 0.5,    "z": 1  },
+      { "x": 0,     "y": -0.5,    "z": 1  },
+      { "x": 0.5,     "y": 0,    "z": 1  },
+      { "x": -0.5,     "y": 0,    "z": 1  },
+
+      { "x": 0,     "y": 0.5,    "z": -1 },
+      { "x": 0,     "y": -0.5,    "z": -1  },
+      { "x": 0.5,     "y": 0,    "z": -1  },
+      { "x": -0.5,     "y": 0,    "z": -1  },
+
+    ],
+  
+     "GamePrefabReference": "VEN_Prop_Enclosed_113",
+  
+     "SubObjects":[
+        {
+        "SubOverrideName": "m_VEN_EnclosedProp_113",
+        "MeshName": "HE_Small_Cascade_Prop.obj",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 90, "y": 0, "z": 0 },
+        "ColliderMeshName": "HE_Small_Cascade_Prop_Collider.obj",
+        "MeshMaterialName": "HE_Main"
+
+        },
+       {
+        "SubOverrideName": "m_VEN_EnclosedProp_blades_113",
+           "MeshName": "HE_Small_Cascade_Prop_Rotors.obj",
+           "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+           "SubRotation": { "x": 90, "y": 0, "z": 0 },
+           "MeshMaterialName": "HE_Main"
+       },
+       {
+       "SubOverrideName": "_spinner",
+           "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+           "SubRotation": { "x": 0, "y": 0, "z": 0 }
+     }
+    ],
+     
+   "JSONBLOCK": {
+    "GameObject|_fanJet": {
+      "FanJet": {
+         "force": 1250,
+         "backForce": 1250
+          }
+        },
+    "ModuleBooster": {
+        "m_BoosterAudioType": 3,
+        }
+    }
+  }

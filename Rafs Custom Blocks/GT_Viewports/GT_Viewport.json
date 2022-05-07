@@ -1,0 +1,63 @@
+{
+  "Name": "GreenTech Top Viewport Dome",
+  "Description": "Reinforced glass dome with a decorated interior and a very broad field of view, a must have for the watchful ranger.\nPress 'R' to cycle cameras.",
+  "ID": 911201, 
+
+  "Faction": 0, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 768, 
+  "HP": 1200, 
+  "Mass": 4,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 2,
+
+  "Recipe": "5, 5, 7, 7, 32, 32, 43, 43", 
+  "IconName": "GT_Viewport_Icon.png", 
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 1, "z": 2}, 
+
+  "APs": [
+	{"x": 0, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "SubObjects": [
+    {
+      "MeshName": "GT_Viewport.obj", 
+  "ColliderMeshName": "GT_Viewport_Collider.obj",
+      "SubPosition": { "x": 1, "y": 0, "z": 0 },
+      "SubScale": { "x": -1, "y": 1, "z": 1 }
+  },
+    {
+      "SubOverrideName": "ViewProp",
+      "DestroyExistingRenderer": true,
+      "SubPosition": { "x": 0.5, "y": 0.18, "z": 0.5 },
+      "SubScale": { "x": 1, "y": 1, "z": 1 }
+  }
+],
+
+  "JSONBLOCK": {
+    "GameObject|ViewProp": {
+      "Nuterra.BlockInjector.ModuleFirstPerson": { }
+  }
+  }
+}

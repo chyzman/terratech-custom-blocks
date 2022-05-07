@@ -1,0 +1,638 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Garnigho Starship Engine",
+  "Description": "The engine responsible for allowing the Valhalla to maintain reasonable stability while going VERY FAST.  It's dismal at turning and hinders anything that helps it turn, but it sure is <b>SPEED</b> in the linear catagories of mobilius. \n\nIt also features a small on-board gyro to keep your starship upright. \n\n\nYou lift? 'Cause we <b>DO!</b>", //You can make multiple lines with \n
+  "ID": 584218, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 8, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 87570,//The price for TAkeoff
+  //Old cost: 111x2+94x4+1465x2+575x2+1781x4=8240   //222+376+2930+1150+3562=8240
+  "HP": 6500, //Battleship Cannon has 5500 health  //For just how big this is, the health pool it comes with is pathetic.
+  "Mass": 80.0, //Whack into anything and you are bound to break something.
+
+  "IconName": "DontStopMeNow.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 49, 49, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 57, 57, 57, 57, 57, 57, 57, 57, 66, 66", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Front Face -------------------
+    {
+      "x": 1,
+      "y": 0,
+      "z": 7.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": 7.5
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": 7.5
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": 7.5
+    },
+    //Back face -------------------
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "z": -0.5
+    },
+    //L side -------------------
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 5
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 3
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 4
+    },
+    {
+      "x": -0.5,
+      "y": 2,
+      "z": 2
+    },
+    {
+      "x": -0.5,
+      "y": 2,
+      "z": 5
+    },
+    {
+      "x": -0.5,
+      "y": 2,
+      "z": 3
+    },
+    {
+      "x": -0.5,
+      "y": 2,
+      "z": 4
+    },
+    //R side -------------------
+    {
+      "x": 2.5,
+      "y": 1,
+      "z": 2
+    },
+    {
+      "x": 2.5,
+      "y": 1,
+      "z": 5
+    },
+    {
+      "x": 2.5,
+      "y": 1,
+      "z": 3
+    },
+    {
+      "x": 2.5,
+      "y": 1,
+      "z": 4
+    },
+    {
+      "x": 2.5,
+      "y": 2,
+      "z": 2
+    },
+    {
+      "x": 2.5,
+      "y": 2,
+      "z": 5
+    },
+    {
+      "x": 2.5,
+      "y": 2,
+      "z": 3
+    },
+    {
+      "x": 2.5,
+      "y": 2,
+      "z": 4
+    },
+    //Top -------------------
+    {
+      "x": 0,
+      "y": 3.5,
+      "z": 3
+    },
+    {
+      "x": 2,
+      "y": 3.5,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": 3.5,
+      "z": 4
+    },
+    {
+      "x": 2,
+      "y": 3.5,
+      "z": 4
+    },
+    //Bottom -------------------
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 3
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 4
+    },
+    {
+      "x": 2,
+      "y": -0.5,
+      "z": 4
+    }
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 3,
+    "y": 4,
+    "z": 8
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "BF_Hover_Ring_Small(212)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x":1, "y":1.5, "z":3.5 }, //Shift the subobjects of the block prefab by x, y and z
+  "DeathExplosionReference":"HE_DeliveryCannon_353",//bigg
+  // "DeathExplosionReference":"HE_ArmouredBlock_114",//sized explodo
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    {
+      "SubOverrideName": "m_HB_Core",
+      "MakeBoxCollider": true,
+    }, 
+    { //Base
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSE.obj",
+      "ColliderMeshName": "TACGarnighoSE.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Base Detail
+     "SubOverrideName": "m_Core",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSECore.obj",
+      // "ColliderMeshName": "TACGarnighoSECore.obj",
+      "MakeBoxCollider": true,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+    { //Low-Poly Hover Replacement
+     "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy_copy",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACGarnighoSEHover.obj",
+      "MakeBoxCollider": false,
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+    },
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":1.5, "z":3.5 } 
+      },
+    },
+    "GameObject|m_HB_Core": {
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":90, "y":0, "z":270 },
+        "localPosition": { "x":1, "y":1.5, "z":3.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "UnityEngine.CapsuleCollider": {
+        "gameObject": {
+          "layer": 20 //ID 524288
+        },
+        //"contactOffset": 0.00,
+        "enabled": true,
+        "center": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "radius": 0.5,
+        "height": 7,
+        "direction": 2,
+        // "isTrigger": false
+      }
+    },
+    "GameObject|m_BF_Hover_Ring_Small_212_Base": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1, "y":1.5, "z":3.5 } 
+      },
+      "GameObject|m_Core": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 } 
+        }
+      },
+    },
+    "GameObject|m_BF_Hover_Ring_Small_212_Hover": { //topF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":2.25, "z":5.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "HoverJet": {
+          "jetRadius": 1.0,
+          // "forceFunction": {
+          //   "m_Ptr": {
+          //     "m_value": {}
+          //   },
+          //   "keys": [],
+          //   "length": 2,
+          //   "preWrapMode": 8,
+          //   "postWrapMode": 8
+          // },
+          "forceMax": 25000.0, //STRONK for massive vessel
+          "forceRangeMax": 5.0, //How far the hover reaches
+          "m_DampingScale": 0.15, //0.05 //How much we dampen by
+          "m_GroundMaxSlopeAngle": 75.0,
+          "m_MaxClimbDistance": 10.0,
+          "m_VectoredThrustMaxAngle": 45.0, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 3.75,//was 5.0
+          "m_AutoStabiliseStrength": 0.2,//was 5 and worked fine
+          "m_VectoredThrustMaxForceAngle": 10.0,
+          "m_HoverPowerChangePerSecond": 150.0, // Responsiveness
+          "m_HoverPowerMin": 0.0,
+          "m_HoverPowerMax": 2.0
+        },
+        "GameObject|p_Hover": null,
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover": {//topR
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":2.25, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy": {//BottomF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":0.75, "z":5.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy": {//BottomR
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":0.75, "z":1.5 },
+        "localEulerAngles": { "x":180, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy": {//Front
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":1.5, "z":6.5 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy": {//Back
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1, "y":1.5, "z":0.5 },
+        "localEulerAngles": { "x":270, "y":0, "z":0 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy": {//RightF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.7, "y":1.5, "z":5.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy": {//RightB
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.7, "y":1.5, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy": {//LeftF
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.3, "y":1.5, "z":5.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "Duplicate|m_BF_Hover_Ring_Small_212_Hover_copy_copy_copy_copy_copy_copy_copy_copy": {//LeftB
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":0.3, "y":1.5, "z":1.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 } 
+      },
+      "GameObject|_hoverJet": {
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        // "GameObject|p_Hover": {
+        //   "UnityEngine.Transform": { 
+        //     "localPosition": { "x":0, "y":0, "z":0 }
+        //   }
+        // }
+      }
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    // GYROs -Active
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,//related to Trim Gyro - max allowed angle cone
+      "m_TrimAdjustSpeed": 0.0, //related to Trim Gyro
+      "m_UsePassive": 0, //Is this a passive gyro?
+      "m_UseActive": 1, //Is this an active gyro?
+      "m_ActiveSpeed": 200.0, //How forceful is the Gyro?
+      "m_ActiveStability": 0.2, //How much do we want to dampen the movement?
+      // "m_RotationAnimTransform": null, //idk
+      // "m_RotationAnimSpeed": 0.0, //How fast does the trippy gyro animation play?
+      // "m_RotationMinSpeed": 10.0, //Active Speed falloff point
+      // "m_RotationMaxSpeed": 60.0, //max speed for rotating back upright
+      "m_Trim": 0.0, //Starting trim
+      "m_HasTurnInput": false, //Is this a Reaction Wheel?
+      "m_HasDriveInput": false, //Will this do something if "W" is pressed?
+      "m_ControlTrim": 0.0, //idk - likely for Reaction Wheels/Controlled rotation
+      "m_ControlTrimTarget": 0.0 //idk - likely scrapped concept for enemy-based tech auto aiming for MTs
+    },
+    // "Reference|BF_AntiGravityEngine_111/BF_AntiGravityEngine_111": {
+    //   "UnityEngine.Transform": { 
+    //     "localPosition": { "x":4, "y":4, "z":4.5 },
+    //     "localScale": { "x":1, "y":1, "z":2 },
+    //   },
+    // },
+    // "ModuleAntiGravityEngine": {
+    //   "m_Radius": 14.0,
+    //   "m_StrengthAsGravityScale": 1.0,
+    //   "m_SubtractGravity": true,
+    //   "m_EnergyUsedPerFilledCellPerSecond": 0.1,
+    //   "m_SwitchedOn": false,
+    //   "m_HasPower": true,
+    //   "m_GravityTargetsDirty": false,
+    //   "m_GravityDelta": 0.0,
+    //   "m_GravityManipulationZoneDirty": true,
+    //   "m_GravityManipulationZone": {
+    //     "m_Position": {
+    //       "x": 4.0,
+    //       "y": 5.0,
+    //       "z": 4.0
+    //     },
+    //     "m_PositionIsLocal": true,
+    //     "m_Radius": 14,
+    //     "m_ManipulationAmount": -1.0
+    //   },
+    //   "m_LayerMask": 16640,
+    //   "m_ModuleType": 1,
+    // },
+    "Damageable": {
+      "m_DamageableType": 4,//Because hitting this with bullets should make it go critical - Shield typing
+      "m_AoEDamageBlockPercent": 0.0,//Will not stop shotgun attacks
+    },
+  }
+}
+
+
+
+
+
+
+

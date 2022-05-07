@@ -1,0 +1,456 @@
+{
+  "Name": "Old Star Lens Laser",
+  "Description": "Now this is how the Old Star do. Some 'Agent' from Better Future tried to take 'Payment' after we had found, salvaged and reversed engineered their Sky Anchor into our Galleon Anchor. We promptly 'Salvaged' more from the wreck and created our first Beam weapon. its small and simple and great for dealing with annoyances.",
+  "ID": 300119, // This is the Block ID; it must be unique
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 1,
+  "Price": 3882,
+  "EmissionMode": 2,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 32, 43, 43, 50,52",
+  "IconName": "OS_Lense_Laser_Icon.png", // Name of the block's icon. This will be used in the UI screen                            
+  "MeshName": null, // Name of the block's mesh                                        
+  "ColliderMeshName": null, // Name of the block's collider.
+  "SupressBoxColliderFallback": true,
+
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName": "OST2.png",
+  "MeshEmissionTextureName": "OST3.png",
+
+  "HP": 2200,
+
+  "Mass": 2,
+
+  "DamageableType": 1,
+  "Fragility": 0.0,
+  "BlockExtents": //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 2
+  },
+
+  "APs": [
+    // Bottom APs
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0.0
+    },
+    {
+      "x": 0.0,
+      "y": 0.5,
+      "z": 0.0
+    },
+    {
+      "x": 0,
+      "y": 0.0,
+      "z": -0.5
+    },
+    {
+      "x": 0.5,
+      "y": 0.0,
+      "z": 0.0
+    },
+    {
+      "x": -0.5,
+      "y": 0.0,
+      "z": 0.0
+    }
+  ],
+  "GamePrefabReference": "VEN_Laser_MachineGun_112",
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    /*turret*/ {
+      "SubOverrideName": "m_VEN_LaserMachineGun_112_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GL_Verticle.obj",
+      "ColliderMeshName": "OS_GL_Verticle.obj",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    /*spinning part*/ {
+      "SubOverrideName": "m_VEN_LaserMachineGun_112_Front",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GL_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    /*"barrel"*/ {
+      "SubOverrideName": "m_VEN_LaserMachineGun_112_Laser",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GL_Frames.obj",
+      "ColliderMeshName": "OS_GL_Frames.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    /*Horizontal*/ {
+      "SubOverrideName": "m_VEN_LaserMachineGun_112_Mount",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GL_Horizontal.obj",
+      "ColliderMeshName": "OS_GL_Horizontal.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    /*BaseBlock*/ {
+      "SubOverrideName": "m_VEN_LaserMachineGun_112_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_GL_Base.obj",
+      "ColliderMeshName": "OS_GL_Base.obj",
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    /*_spawnBullet*/ {
+      "SubOverrideName": "_spawnBullet",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 1.0,
+        "z": 0.0
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+
+    /*_muzzleFlash*/ {
+      "SubOverrideName": "_muzzleFlash",
+      "SubPosition": {
+        "x": 0,
+        "y": 0.0,
+        "z": 1.5
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    /*_spindle*/ {
+      "SubOverrideName": "_spindle",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.00,
+        "z": 0.8
+      },
+      "SubScale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [
+          -17.0,
+          17.0
+        ]
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -17.0,
+            17.0
+          ]
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "GameObject|m_VEN_LaserMachineGun_112_Body": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -0.5
+              }
+            },
+            "GameObject|_muzzleFlashAnim": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": -0.5
+                }
+              },
+              "GameObject|m_MuzzleLaserFlash_01": {
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.5
+                  }
+                }
+              }
+            },
+            "GameObject|_recoiler": {
+              "GameObject|_spindle": {
+                "GameObject|m_VEN_LaserMachineGun_112_Front": {
+                  "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localEulerAngles": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                  },
+                  "Duplicate|m_VEN_LaserMachineGun_112_Front_copy": {
+                    "UnityEngine.Transform": {
+                      "localPosition": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  }
+                },
+                "UnityEngine.Transform": {
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                  }
+                },
+                "Spinner": {
+                  "m_Speed": 2.0,
+                  "m_RotationAxis": {
+                    "axis": 2
+                  },
+                  "m_SteerAxis": {
+                    "axis": 1
+                  },
+                  "m_AutoSpin": false,
+                  "m_SpinUpTime": 0.5,
+                  "m_CurrentAngle": 0.0,
+                  "m_CurrentAutoSpeed": 0.0,
+                  "m_CurrentSpeedFraction": 0.0,
+                  "m_SpinnerSound": null,
+                  "m_SpinnerSoundOriginalPitch": 0.0,
+                  "Speed": 2.0,
+                  "SpeedFraction": 0.0
+                }
+              }
+            },
+            "GameObject|m_VEN_LaserMachineGun_112_Laser": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "GameObject|m_VEN_LaserMachineGun_112_Mount": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "ModuleWeapon": {
+      "m_FireSFXType": 70,
+      "m_LimitedShootAngle": 90,
+      "m_RotateSpeed": 40.0
+    },
+    "ModuleWeaponGun": {
+      "m_FireControlMode": 0,
+      "m_ShotCooldown": 0.01,
+      "m_CooldownVariancePct": 0.0,
+      "m_BurstShotCount": 0,
+      "m_BurstCooldown": 0.0,
+      "m_HasCooldownAnim": false
+
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 150,
+      "m_KickbackStrength": 3,
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1.05,
+            "y": 1.05,
+            "z": 1.5
+          }
+        },
+        "WeaponRound": {
+          "m_DamageType": 2,
+          "m_Damage": 119
+        }
+      }
+    }
+  }
+}

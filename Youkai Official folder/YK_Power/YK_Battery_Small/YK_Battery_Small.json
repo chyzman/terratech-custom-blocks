@@ -1,0 +1,66 @@
+{
+  "Name": "Youkai Compact HLI Battery",
+  "Description": "The smaller version of the Youkai ''High Lithium-Ion'' Battery. Dense like it's larger counterpart, but obviously can't hold as much.",
+  "ID": 19070, 
+
+  "Faction": 1, 
+  "Category": 6, 
+  "Grade": 2, 
+  "Price": 6420, 
+  "HP": 400, 
+  "Mass": 2,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "45, 45, 56",  
+  "IconName": "YK_Battery_Small.png",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture.png", 
+ 
+ "Cells": [
+
+    { "x": 0, "y": 0, "z": 0 }
+  ],
+
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 0.5},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0.5, "z": 0}
+  ],
+
+  
+  "GamePrefabReference": "GCBattery(222)",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GSO_Battery_111",
+  
+  "SubObjects": [ 
+    {
+    "SubOverrideName":"GC_Battery_222",
+    "MeshName": "YK_Battery_Small.obj",
+	"MeshTextureName": "YK_Texture 1.png", 
+	"MeshGlossTextureName": "YK_Texture 2.png", 
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+	"MakeBoxCollider": true,
+	},
+	{
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "YK_Battery_Small_LEDs.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 2000}
+	}
+}

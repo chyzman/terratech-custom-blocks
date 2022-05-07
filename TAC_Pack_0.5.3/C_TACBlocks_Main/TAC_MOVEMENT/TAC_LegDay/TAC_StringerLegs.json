@@ -1,0 +1,1574 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Stringer Legs",
+  "Description": "Never skip Leg Day. \n\nThe first pair of mech legs safely legalised on the Off-World.  The Stringer Legs are light-purpose mech legs with a slight proficiency in speed and armor, as well as the ability to jump with [shift]. \n\nAs with all mech legs, you should keep in mind your center of mass, as building your walker too lob-sided can end very badly.  Also watch the weight as making your Tech too heavy can cause damage to the legs. \n\nBe advised the Stringer Mech Legs contain built-in self-righting functions.", //You can make multiple lines with \n
+  "ID": 584361, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 93912, //Fairly durable and can replace a set of wheels, weight capacity isn't too great though.
+  "HP": 42500, //Battleship Cannon has 5500 health //- decently bulky
+  "Mass": 30.0,
+
+  "IconName": "RoboTrousers.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "3, 3, 3, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 49, 49, 49, 49, 52, 52, 52, 52, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, 63, 63, 63, 65, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+  //A lotta armor you could count on
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Top Face
+    {"x": 3,"y": 4.5,"z": 3},
+    {"x": 2,"y": 4.5,"z": 3},
+    {"x": 2,"y": 4.5,"z": 2},
+    {"x": 3,"y": 4.5,"z": 2},
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 6,
+    "y": 5,
+    "z": 6
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "GC_Tracks(238)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x":2.5, "y":1.1, "z":1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+    "SubObjects": [ 
+    { //murder aCol
+     "SubOverrideName": "aCol",
+      "DestroyExistingCRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+
+    //Serious matters
+    // { //Wheeel
+    //  "SubOverrideName": "m_Trundle_Wheel",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTrundleWheelWheel.obj",
+    //   "MakeBoxCollider": false,
+    //   // "ColliderMeshName": "Orb.obj",
+    //   // "MeshTextureName": "LED_BeamBlockG.png",
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // { //Wheeeltracker
+    //  "SubOverrideName": "m_WheelTracker",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": false,
+    //   "MeshName": "TACTrundleWheelWheel.obj",
+    //   "MakeBoxCollider": false,
+    //   "ColliderMeshName": "TACTrundleWheelWheel.obj",
+    //   // "MeshTextureName": "LED_BeamBlockG.png",
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    //Leg Drive Wheels
+    { //Wheel 01
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "TACTorqueTankWheel.obj",
+      // // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": null,
+      // "MeshTextureName": null,
+      // "MeshMaterialName": "HE_Main",
+      // //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+    //Leg Drive Alignment Wheel
+    { //Wheel 02
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_02",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "TACTorqueTankWheel.obj",
+      // // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": null,
+      // "MeshTextureName": null,
+      // "MeshMaterialName": "HE_Main",
+      // //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+
+      //Feet Wheels
+    { //Wheel 03 - Left Foot
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_03",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "TACTorqueTankWheel.obj",
+      // // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": null,
+      // "MeshTextureName": null,
+      // "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Wheel 04 - Right Foot
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_04",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "TACTorqueTankWheel.obj",
+      // // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": null,
+      // "MeshTextureName": null,
+      // "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //Overload Prevention Wheel
+    { //Wheel 05
+     "SubOverrideName": "m_GC_Tracks_238_Wheel_05",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      // "MeshName": "TACTorqueTankWheel.obj",
+      // // "ColliderMeshName": "TACTorqueTankWheel.obj",
+      // "ColliderMeshName": null,
+      // "MeshTextureName": null,
+      // "MeshMaterialName": "HE_Main",
+      // //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    // { //Suspension
+    //  "SubOverrideName": "m_Trundle_Suspension",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTrundleWheelSuspension.obj",
+    //   "ColliderMeshName": "TACTrundleWheelSuspension.obj",
+    //   //"MeshTextureName": "LED_BeamBlockG.png",
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // Modifying teh suspension as for some reason If I don't the game freaks out
+    // { //Suspension 01
+    //  "SubOverrideName": "b_Wheel_01",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // { //Suspension 02
+    //  "SubOverrideName": "b_Wheel_02",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // { //Suspension 03
+    //  "SubOverrideName": "b_Wheel_03",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // { //Suspension 04
+    //  "SubOverrideName": "b_Wheel_04",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    // { //Suspension 05
+    //  "SubOverrideName": "b_Wheel_05",
+    //   "DestroySubReferenceRenderer": true,
+    //   "DestroyExistingColliders": true,
+    //   "MeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "ColliderMeshName": "TACTorqueTankTrackSuspension.obj",
+    //   "MeshTextureName": null,
+    //   "MeshMaterialName": "HE_Main",
+    //   //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    // },
+    { //Removing useless things
+     "SubOverrideName": "m_LegsModel_B",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //LEG HANDLERS
+
+    { // 
+     "SubOverrideName": "m_HE_Block_Alt2_121",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerLowerLeg.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { // 
+     "SubOverrideName": "m_HE_Block_111",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerLowerLeg.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    }, 
+    { // 
+     "SubOverrideName": "m_GC_Tracks_238_Tracks",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Base
+     "SubOverrideName": "m_BaseModel",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerBase.obj",
+      "ColliderMeshName": "StringerBase.obj",
+      "MeshTextureName": null,
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Base
+     "SubOverrideName": "m_GC_Tracks_238_Body",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    //
+    // LEGS
+    //
+    // -Feet
+    { //Left Foot
+     "SubOverrideName": "GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerFoot.obj",
+      "ColliderMeshName": null,
+      //"MeshTextureName": "LED_BeamBlockG.png",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Right Foot
+     "SubOverrideName": "m_GSO_Block_112",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerFoot.obj",
+      "ColliderMeshName": null,
+      //"MeshTextureName": "LED_BeamBlockG.png",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    //Upper Legs
+    { // 
+     "SubOverrideName": "LeftLegThighHip/m_HE_Block_111",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerThighUpper.obj",
+      "ColliderMeshName": "StringerThighUpper.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+    { // 
+     "SubOverrideName": "RightLegThighHip/m_HE_Block_111",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerThighUpper.obj",
+      "ColliderMeshName": "StringerThighUpper.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+    { // 
+     "SubOverrideName": "LeftLegThigh/LeftLegThighAimer/m_HE_Block_Alt2_121",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerThighLower.obj",
+      "ColliderMeshName": "StringerThighLower.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+    { // 
+     "SubOverrideName": "RightLegThigh/RightLegThighAimer/m_HE_Block_Alt2_121",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerThighLower.obj",
+      "ColliderMeshName": "StringerThighLower.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+
+    //Hip Rotators
+    { // 
+     "SubOverrideName": "LeftLegThighHipRotSys/m_HE_Block_Alt2_121",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerHipHinge.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+    { // 
+     "SubOverrideName": "RightLegThighHipRotSys/m_HE_Block_Alt2_121",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "StringerHipHinge.obj",
+      "MeshMaterialName": "HE_Main",
+    }, 
+  ],
+	
+  "JSONBLOCK": { //Root GameObject
+
+    //Main Parameters
+
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":1, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      }
+    },
+    "GameObject|m_BaseModel": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.5, "y":3.5, "z":2.5 },
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+      },
+      "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+        "gameObject": {
+          "layer": 8//2 //ID 524288Layers:
+            // (0) Default//Collides with normal things
+            // (1) TransparentFX //Bypasses Shields, hits self
+            // (2) Ignore Raycast//Raycasts cannot detect, hits self
+            // (3) 
+            // (4) Water//
+            // (5) UI//No collision
+            // (6) 
+            // (7) 
+            // (8) Tank //Bypasses shields, collides with self
+            // (9) Cosmetic//Collides with nothing.
+            // (10) Bullet //normal projectile
+            // (11) Container //Crates, Collides with nothing.
+            // (12) Shield //Clips through shields, collides with self
+            // (13) Terrain //
+            // (14) TankIgnoreTerrain //Ignores terrain, hits self
+            // (15) Scenery //normal
+            // (16) Pickup //normal
+            // (17) Trigger //No collision
+            // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+            // (19) 3D UI //No collision
+            // (20) WheelSuspension // normal
+            // (21) ShieldBulletFilter //collides with bullets and shields
+            // (22) TerrainCollidingParticles
+            // (23) ShieldTechFilter //collides with Techs
+            // (24) TerrainOnly //idk
+            // (25) RenderImageForPrefab
+            // (26) SceneryCoarse
+            // (27) Landmarks
+            // (28) 
+            // (29) 
+            // (30) 
+            // (31) 
+        },
+      },
+    },
+    // "GameObject|m_GC_Tracks_238_Body": null,
+    "GameObject|m_GC_Tracks_238_Body": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":3.0, "y":2.0, "z":6.0 },
+      },
+      "GameObject|m_GC_Tracks_238_Tracks": {
+        "TankTrack": null,
+        //Disabled due to spamming output log
+        // "UnityEngine.Transform": {
+        //   "localPosition": { "x":0, "y":1, "z":0 },
+        //   "localScale": { "x":0.001, "y":0.001, "z":0.001 }
+        // },
+      },
+      "GameObject|b_Wheel_00": {
+        // "GameObject|b_Wheel_01": null,
+        // "GameObject|b_Wheel_01": {
+        //   "UnityEngine.Transform": {
+        //     "localScale": { "x":0.01, "y":0.01, "z":0.01 }
+        //   },
+        // },
+        "GameObject|b_Wheel_02": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          },
+        },
+        "GameObject|b_Wheel_03": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          },
+        },
+        "GameObject|b_Wheel_04": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          },
+        },
+        "GameObject|b_Wheel_05": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          },
+        }
+      },
+    },
+
+    "GameObject|m_WheelTracker": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.5, "y":2.5, "z":2.5 },
+        "localScale": { "x":0.5, "y":1.0, "z":1.0 }
+      },
+      "UnityEngine.SphereCollider": {
+        // "center": {
+        //   "x": 0.0,
+        //   "y": -0.2906757,
+        //   "z": 0.0,
+        //   "magnitude": 0.2906757,
+        //   "sqrMagnitude": 0.08449236
+        // },
+        "radius": 2.75 //0.29
+      },
+    },
+
+
+
+    //
+    // LEG
+    //
+
+    // "GameObject|b_Wheel_02": {//Follows the Tyre 
+    //   "UnityEngine.Transform": {
+    //     "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+    //   },
+    //   "GameObject|Suspension_2A": { 
+    //     "GameObject|m_VEN_Tracks_112_Suspension2": {
+    //       "GameObject|WheelAimer": {
+    //         "UnityEngine.Transform": {
+    //           // "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //           "localPosition": { "x":0, "y":-1, "z":0 },
+    //           "localScale": { "x":1, "y":1, "z":1 }
+    //         },
+    //       }
+    //     }
+    //   }
+    // },
+    //
+
+    "GameObject|Suspension_Up": {
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.5, "y":10, "z":-5.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+    "GameObject|SideSuspensionUp": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":270 },
+        "localPosition": { "x":9, "y":5, "z":3.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+    },
+        // "FollowSuspension": {//This is new, will note for later use.
+        //   "m_TargetWheelTrans": "Suspension_Tyre/Suspension_A/m_GSO_Wheel_233_Suspension_A/WheelAimer",
+        //   // "m_TargetUpTrans": "/SuspensionUp",
+        //   "m_KeepOriginalRotationOffset": true,
+        //   "m_ScaleToMatchDistance": false,
+        //   // "m_OriginalDistance": 0.5,
+        // },
+
+    "GameObject|_wheel_02": {//Handles first wheel alignment...
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 }//The y is how high the foot steps up (multiplyer)
+      },
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.0, "z":1 }//MUST BE RESCALED
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            // "radius": 0.1 //0.29
+            "radius": 2.0 //0.29
+          },
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_02": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|SparksWheelGCDiscOffset(Clone)": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "GameObject|FXWheelSparks 2": {
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0, "z":0 },
+              "localScale": { "x":1, "y":1, "z":1 }
+            },
+          }
+        }
+      }
+    },
+
+
+    "GameObject|b_FollowWheel_2": {
+      // "FollowTransform": {//This is new, will note for later use.
+      //   "m_TransformToFollow": "_wheel/m_GSO_Wheel_233_Tyre/m_Trundle_Wheel/AimFootRight",
+      //   "m_FollowOrientation": false,
+      // },
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":2.001, "z":2.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|b_FollowWheel_Part": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localEulerAngles": { "x":270, "y":0, "z":0 }
+        },
+        "GameObject|b_FollowWheel_Bone": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+        },
+      },
+      "FollowSuspension": {//Follow wheel two
+        "m_TargetWheelTrans": "/_wheel_02/m_GC_Tracks_238_Wheel_02",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      //The rear hip section guides
+      "GameObject|LeftLegHip": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":3, "y":-1.5, "z":-3.0 } 
+        },
+      },
+      "GameObject|RightLegHip": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":3, "y":1.5, "z":-3.0 } 
+        },
+      },
+    },
+
+    "GameObject|_wheel_01": {//HANDLES THE LEG CYCLE
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+        //   // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.0, "z":1 }//MUST BE RESCALED
+        },
+        "GameObject|_suspensionColliderLower": {//Adjust the 
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1.0, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            // "radius": 0.1 //0.29
+            "radius": 2.25 //0.29
+          },
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_01": {
+        "GameObject|m_Trundle_Wheel": {
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1.0, "y":1.0, "z":1.0 }
+          },
+        },
+        // "GameObject|WheelDustStandard(Clone)": {
+        // }
+      },
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":2.50, "z":2.5 },
+        // "localPosition": { "x":2.5, "y":2, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 },//cannot change as loading it in by swap tech results in teleporting issues
+        // "localScale": { "x":1, "y":0.15, "z":1 }//The y is how high the foot steps up (multiplyer)
+        // "localScale": { "x":1, "y":0.15, "z":1 }//The y is how high the foot steps up (multiplyer)
+      },
+
+    },
+
+
+    //------------------------
+    //  Start Step Parameter
+    //------------------------
+    "GameObject|_WalkTransform": {//HANDLES THE LEGS
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":0.175, "z":1 }//The y is how high the foot steps up (multiplyer)
+      },
+      "FollowTransform": {//snap to the SECOND wheel's alignment to properly align the animation
+        "m_TransformToFollow": "/b_FollowWheel_2/b_FollowWheel_Part/b_FollowWheel_Bone",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|_WalkTransformWheel": {//HANDLES THE LEGS
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "FollowTransform": {//Snap this to follow the rotation of the walk cycle!
+          "m_TransformToFollow": "/_wheel_01/m_GC_Tracks_238_Wheel_01/m_Trundle_Wheel",
+          "m_FollowOrientation": true,
+        },
+        // "GameObject|FollowBoneL": {
+        //   "UnityEngine.Transform": {
+        //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //     "localPosition": { "x":0, "y":0, "z":0 },
+        //     "localScale": { "x":1, "y":1, "z":1 }
+        //   },        
+          "GameObject|AimFootLeft": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":2.25, "z":-1.5 },//Increase the Y for bigger strides
+              "localScale": { "x":1, "y":1, "z":1 }
+            }
+          },
+        // },
+        // "GameObject|FollowBoneR": {
+        //   "UnityEngine.Transform": {
+        //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //     "localPosition": { "x":0, "y":0, "z":0 },
+        //     "localScale": { "x":1, "y":1, "z":1 }
+        //   },
+          "GameObject|AimFootRight": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-2.25, "z":1.5 },//[Negative side] Increase the Y for bigger strides
+              "localScale": { "x":1, "y":1, "z":1 }
+            }
+          },
+        // }
+      }
+    },
+    //----------------------
+    //  End Step Parameter
+    //----------------------
+
+
+
+    //-------------------------------
+    // Leg-Ground Elevation Handlers
+    //-------------------------------
+
+    "GameObject|OffsetUprightHandler": {//Handles Left foot
+      "FollowTransform": {//snap to the SECOND wheel's alignment to properly align the animation
+        "m_TransformToFollow": "/b_FollowWheel_2/b_FollowWheel_Part/b_FollowWheel_Bone",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|b_OffsetLeft": {//Handles Left foot offset
+        "UnityEngine.Transform": {
+          "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        "FollowTransform": {//This is new, will note for later use.
+          "m_TransformToFollow": "/_WalkTransform/_WalkTransformWheel/AimFootLeft",
+          "m_FollowOrientation": false,
+        },
+        "GameObject|b_OffsetLegNodeLeft": {//Handles Left foot
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":1.60, "z":0 },
+            // "localScale": { "x":1, "y":0.15, "z":1 }
+          },
+        },
+      },
+      "GameObject|b_OffsetRight": {//Handles Right foot offset
+        "UnityEngine.Transform": {
+          "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        "FollowTransform": {//This is new, will note for later use.
+          "m_TransformToFollow": "/_WalkTransform/_WalkTransformWheel/AimFootRight",
+          "m_FollowOrientation": false,
+        },
+        "GameObject|b_OffsetLegNodeRight": {//Handles Left foot
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":1.60, "z":0 },
+            // "localScale": { "x":1, "y":0.15, "z":1 }
+          },
+        },
+      },
+    },
+
+    //now CORRECT it
+
+    "GameObject|b_OffsetLegNodeCorrectorL": {//Handles Left foot
+      "FollowTransform": {//Align and follow UPRIGHT position
+        "m_TransformToFollow": "/OffsetUprightHandler/b_OffsetLeft/b_OffsetLegNodeLeft",
+        "m_FollowOrientation": true,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 },
+        // "localScale": { "x":1, "y":0.15, "z":1 }
+      },
+      "GameObject|b_OffsetLegNodeLeftCorrect": {//Handles Left foot
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":180, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          // "localScale": { "x":1, "y":0.15, "z":1 }
+        },
+      },
+    },
+
+    "GameObject|b_OffsetLegNodeCorrectorR": {//Handles Right foot
+      "FollowTransform": {//Align and follow UPRIGHT position
+        "m_TransformToFollow": "/OffsetUprightHandler/b_OffsetRight/b_OffsetLegNodeRight",
+        "m_FollowOrientation": true,
+      },
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 },
+        // "localScale": { "x":1, "y":0.15, "z":1 }
+      },
+      "GameObject|b_OffsetLegNodeRightCorrect": {//Handles Left foot
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":180, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          // "localScale": { "x":1, "y":0.15, "z":1 }
+        },
+      },
+    },
+
+
+
+    "GameObject|_wheel_03": {//Handles Left foot
+      "UnityEngine.Transform": {
+        "localPosition": { "x":4.5, "y":2.000, "z":2.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 }
+        // "localScale": { "x":1, "y":0.4, "z":1 }
+      },
+      "FollowTransform": {//Align and follow UPRIGHT position
+        "m_TransformToFollow": "/b_OffsetLegNodeCorrectorL/b_OffsetLegNodeLeftCorrect",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.0, "z":1 }//MUST BE RESCALED
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            // "radius": 0.1 //0.29
+            "radius": 1.0 //0.29
+          },
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_03": {
+        "GameObject|b_LeftFootDynamicAnchor": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+        },
+      }
+    },
+
+    "GameObject|_wheel_04": {//Handles Left foot
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":2.000, "z":2.5 },
+        // "localEulerAngles": { "x":0, "y":0, "z":0 }
+      },
+      "FollowTransform": {//Align and follow UPRIGHT position
+        "m_TransformToFollow": "/b_OffsetLegNodeCorrectorR/b_OffsetLegNodeRightCorrect",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.0, "z":1 }//MUST BE RESCALED
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            // "radius": 0.1 //0.29
+            "radius": 1.0 //0.29
+          },
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_04": {
+        "GameObject|b_RightFootDynamicAnchor": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+        },
+      }
+    },
+
+    //-----------------------------------
+    // End Leg-Ground Elevation Handlers
+    //-----------------------------------
+
+
+
+
+    //
+    // CONTAINS THE LEGS
+    //
+
+    "GameObject|b_Wheel_2": {//Follows the second wheel
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":2.00, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        //This is like a game of catch and throw, there MUST be another GameObject at the other side or the game will crash.
+        "m_TargetWheelTrans": "/_wheel_02/m_GC_Tracks_238_Wheel_02",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|Suspension_2A": {
+        "UnityEngine.Transform": {
+          // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+        "GameObject|m_VEN_Tracks_112_Suspension2": {
+          "UnityEngine.Transform": {
+            // "localEulerAngles": { "x":0, "y":90, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "GameObject|WheelAimer": {
+            "UnityEngine.Transform": {
+              // "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-0.0, "z":0 },
+              "localScale": { "x":1, "y":1, "z":1 }
+            },
+          },
+          "GameObject|m_Trundle_Suspension": {
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x":0, "y":270, "z":270 },
+              "localPosition": { "x":2, "y":0, "z":0.2 },
+              "localScale": { "x":1, "y":1, "z":1 }
+            }
+          }
+        }
+      }
+    },
+
+    "GameObject|Suspension_B": {// Follows the part that follows the Tyre, aligns legs
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":2.001, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        //This is like a game of catch and throw, there MUST be another GameObject at the other side or the game will crash.
+        "m_TargetWheelTrans": "/_wheel_02/m_GC_Tracks_238_Wheel_02",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_LegsModel_B": {
+        "UnityEngine.Transform": {
+          // "localEulerAngles": { "x":0, "y":90, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }
+        },
+      },
+      //
+      // The legs are in here so they align with the ground along with the wheels.
+      //
+
+      //LEFT leg
+      "GameObject|LeftLeg": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        },
+        "FollowTransform": {//This is new, will note for later use.
+          "m_TransformToFollow": "_wheel_03/m_GC_Tracks_238_Wheel_03/b_LeftFootDynamicAnchor",
+          "m_FollowOrientation": false,
+        },
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          // "localPosition": { "x":0, "y":-1.0, "z":-0.25 }, //y = -Radius of Wheel
+          "localEulerAngles": { "x":270, "y":0, "z":0 }
+        },
+        "GameObject|LeftLegLowerHingeAnchor": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":-0.25, "y":-2.25, "z":0.0 }, //y = -Radius of Wheel
+            "localEulerAngles": { "x":0, "y":90, "z":0 }
+          },
+        },
+        "Reference|GSO_Block_111/GSO_Block_111": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.2, "y":1.2, "z":1.2 },
+            "localPosition": { "x":0, "y":-2.25, "z":0.0 }, //y = -Radius of Wheel
+            "localEulerAngles": { "x":0, "y":270, "z":0 }
+          },
+        },
+      },
+      //RIGHT leg
+      "GameObject|RightLeg": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        },
+        "FollowTransform": {//This is new, will note for later use.
+          "m_TransformToFollow": "_wheel_04/m_GC_Tracks_238_Wheel_04/b_RightFootDynamicAnchor",
+          "m_FollowOrientation": false,
+        },
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          // "localPosition": { "x":0, "y":-1.0, "z":-0.25 }, //y = -Radius of Wheel
+          "localEulerAngles": { "x":270, "y":0, "z":0 }
+        },
+        "GameObject|RightLegLowerHingeAnchor": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":-0.25, "y":-2.25, "z":0.0 }, //y = -Radius of Wheel
+            "localEulerAngles": { "x":0, "y":90, "z":0 }
+          },
+        },
+        "Reference|GSO_Block_112/m_GSO_Block_112": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1.2, "y":1.2, "z":1.2 },
+            "localPosition": { "x":0, "y":-2.25, "z":0.0 }, //y = -Radius of Wheel
+            "localEulerAngles": { "x":0, "y":270, "z":0 }
+          },
+        },
+      },
+      //
+      // END LEGS
+      //
+    },
+
+
+    //BEGIN the leg handlers - Lower legs
+    "GameObject|LeftLegLowerHinge": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+      },
+      "FollowTransform": {//This is new, will note for later use.
+        "m_TransformToFollow": "Suspension_B/LeftLeg/LeftLegLowerHingeAnchor",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|LeftLegLowerHingeBody": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|LeftLegUpperHinge": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":3.25 } 
+          },
+        },
+        "Reference|HE_Block_112/m_HE_Block_Alt2_121": {//Left Leg Hinge
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":-0.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":270 },
+            "localPosition": { "x":0, "y":0, "z":2.75 } 
+          },
+        },
+        "FollowSuspension": {
+          "m_TargetWheelTrans": "/b_FollowWheel_2/LeftLegHip",
+          "m_TargetUpTrans": "/SideSuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+      },     
+    },
+
+    "GameObject|RightLegLowerHinge": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+      },
+      "FollowTransform": {//This is new, will note for later use.
+        "m_TransformToFollow": "Suspension_B/RightLeg/RightLegLowerHingeAnchor",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|RightLegLowerHingeBody": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "GameObject|RightLegUpperHinge": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":3.25 } 
+          },
+        },
+        "Reference|HE_Block_111/m_HE_Block_111": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":-0.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":270 },
+            "localPosition": { "x":0, "y":0, "z":2.75 } 
+          },
+        },
+        "FollowSuspension": {
+          "m_TargetWheelTrans": "/b_FollowWheel_2/RightLegHip",
+          "m_TargetUpTrans": "/SideSuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+      },
+    },
+
+    //--------------------------
+    // FINAL HINGE - THIGH BONE
+    //--------------------------
+    
+    // The part of the Thigh connected to the Hip
+    "GameObject|LeftLegThighHip": {
+    // "Reference|HE_Block_112/m_HE_Block_Alt2_121": {//LeftLegThighHip
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.0, "y":4, "z":2.5 } 
+      },
+    },
+    "GameObject|RightLegThighHip": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4.0, "y":4, "z":2.5 } 
+      },
+    },
+
+    //
+    // The part of the Thigh connected to the Lower Leg
+    //
+    "GameObject|LeftLegThigh": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":2, "z":2.5 } 
+      },
+      "FollowTransform": {//This is new, will note for later use.
+        "m_TransformToFollow": "/LeftLegLowerHinge/LeftLegLowerHingeBody/LeftLegUpperHinge",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|LeftLegThighAimer": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Reference|HE_Block_112/m_HE_Block_Alt2_121": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":0.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":90 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+        },
+        "FollowSuspension": {//This is new, will note for later use.
+          "m_TargetWheelTrans": "/LeftLegThighHip",
+          "m_TargetUpTrans": "/SideSuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+      },
+    },
+    "GameObject|RightLegThigh": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":2.5, "y":2, "z":2.5 } 
+      },
+      "FollowTransform": {//This is new, will note for later use.
+        "m_TransformToFollow": "/RightLegLowerHinge/RightLegLowerHingeBody/RightLegUpperHinge",
+        "m_FollowOrientation": false,
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1.0, "y":1.0, "z":1.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "GameObject|RightLegThighAimer": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 } 
+        },
+        "Reference|HE_Block_112/m_HE_Block_Alt2_121": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":0.8 },
+            "localEulerAngles": { "x":0, "y":0, "z":90 },
+            "localPosition": { "x":0, "y":0, "z":0 } 
+          },
+        },
+        "FollowSuspension": {//This is new, will note for later use.
+          "m_TargetWheelTrans": "/RightLegThighHip",
+          "m_TargetUpTrans": "/SideSuspensionUp",
+          "m_KeepOriginalRotationOffset": false,
+          "m_ScaleToMatchDistance": false,
+          // "m_OriginalDistance": 0.5,
+        },
+      },
+    },
+
+    //
+    // REDECLARE
+    //
+    "GameObject|LeftLegThighHip": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.0, "y":3.5, "z":2.5 } 
+      },
+      "Reference|HE_Block_111/m_HE_Block_111": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.8, "y":0.8, "z":1.8 },
+          "localEulerAngles": { "x":0, "y":0, "z":270 },
+          "localPosition": { "x":0, "y":0, "z":0.0 } 
+        },
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/LeftLegUpperHinge",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": true,
+        "m_OriginalDistance": 0.0,
+      },
+    },
+    "GameObject|RightLegThighHip": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4.0, "y":3.5, "z":2.5 } 
+      },
+      "Reference|HE_Block_111/m_HE_Block_111": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.8, "y":0.8, "z":1.8 },
+          "localEulerAngles": { "x":0, "y":0, "z":270 },
+          "localPosition": { "x":0, "y":0, "z":0.0 } 
+        },
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/RightLegUpperHinge",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": true,
+        "m_OriginalDistance": 0.0,
+      },
+    },
+    //Hip motors
+    "GameObject|LeftLegThighHipRotSys": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.0, "y":3.5, "z":2.5 } 
+      },
+      "Reference|HE_Block_112/m_HE_Block_Alt2_121": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":-1, "y":-1, "z":-1 },
+          "localEulerAngles": { "x":0, "y":0, "z":90 },
+          "localPosition": { "x":0, "y":0, "z":0.0 } 
+        },
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/LeftLegUpperHinge",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.75,
+      },
+    }, 
+    "GameObject|RightLegThighHipRotSys": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":4.0, "y":3.5, "z":2.5 } 
+      },
+      "Reference|HE_Block_112/m_HE_Block_Alt2_121": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":-1, "z":-1 },
+          "localEulerAngles": { "x":0, "y":0, "z":90 },
+          "localPosition": { "x":0, "y":0, "z":0.0 } 
+        },
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/RightLegUpperHinge",
+        "m_TargetUpTrans": "/SideSuspensionUp",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.75,
+      },
+    },
+
+
+    //Anti-Stall Wheel
+
+    "GameObject|_wheel_05": {//ANTI STALL
+      "UnityEngine.Transform": {
+        // "localEulerAngles": { "x":0, "y":90, "z":0 },
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        "localScale": { "x":1, "y":1, "z":1 }
+      },
+      "GameObject|_tireFrame": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1.0, "z":1 }//MUST BE RESCALED
+        },
+        "GameObject|_suspensionColliderLower": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1, "y":1, "z":1 }
+          },
+          "UnityEngine.SphereCollider": {
+            // "center": {
+            //   "x": 0.0,
+            //   "y": -0.2906757,
+            //   "z": 0.0,
+            //   "magnitude": 0.2906757,
+            //   "sqrMagnitude": 0.08449236
+            // },
+            // "radius": 0.1 //0.29
+            "radius": 2.0 //0.29
+          },
+        }
+      },
+      "GameObject|m_GC_Tracks_238_Wheel_05": {
+      }
+    },
+
+
+
+
+
+    //Rotate Helpers
+    "GameObject|UPRIGHT_HoverAlignmenter": {
+      "FollowTransform": {//UPRIGHT it
+        "m_TransformToFollow": "/b_FollowWheel_2/b_FollowWheel_Part/b_FollowWheel_Bone",
+        "m_FollowOrientation": true,
+      },
+      "Reference|VEN_SteeringHoverSingle_111/boosterFront": {//
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":-6.5, "y":-2, "z":0 }, //1.5
+          "localEulerAngles": { "x":0, "y":90, "z":0 } 
+        },
+        "GameObject|m_BoosterRocketFlame_01": {
+          "GameObject|FX_HoverForce": {
+            "UnityEngine.ParticleSystem": {
+              "maxParticles": 0,
+            }
+          }
+        },
+        "BoosterJet":{
+          "m_Force": 1000.0,
+          "m_BurnRate": 0.0,
+          "m_FireRateFalloff": 0.01,
+          "m_DetachedForceFactor": 1.0,
+          "m_ConsumesFuel": false,
+          "m_AutoStabiliseStrength": 0.1,
+          // "m_TargetRigidBody": null,
+          "m_FireControl": false,
+        }
+      },
+      "Duplicate|boosterFront": {//
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":6.5, "y":-2, "z":0 }, //1.5
+          "localEulerAngles": { "x":00, "y":90, "z":0 } 
+        },
+        // "GameObject|m_BoosterRocketFlame_01": null,
+      },
+      "Duplicate|boosterFront_copy": {//
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":-6.5, "y":-2, "z":0 }, //1.5
+          "localEulerAngles": { "x":0, "y":270, "z":0 } 
+        },
+        // "GameObject|m_BoosterRocketFlame_01": null,
+      },
+      "Duplicate|boosterFront_copy_copy": {//
+        "UnityEngine.Transform": { 
+          "localPosition": { "x":6.5, "y":-2, "z":0 }, //1.5
+          "localEulerAngles": { "x":0, "y":270, "z":0 } 
+        },
+        // "GameObject|m_BoosterRocketFlame_01": null,
+      },
+    },
+    //Jumper one
+    "Reference|VEN_SteeringHoverSingle_111/boosterFront": {//
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":2.5, "y":2.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":270 } 
+      },
+      "BoosterJet":{
+        "m_Force": 107500.0,
+        "m_BurnRate": 500000.0,
+        "m_FireRateFalloff": 0.1,
+        "m_DetachedForceFactor": 1.0,
+        "m_ConsumesFuel": true,
+        "m_AutoStabiliseStrength": 0.1,
+        // "m_TargetRigidBody": null,
+        "m_FireControl": false,
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+          "GameObject|FX_HoverForce": {
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            // "renderMode": 0,
+            // "sortMode": 0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.15,
+            // "motionVectorGenerationMode": 1,
+          },
+          "UnityEngine.ParticleSystem": {
+            "startColor": {
+              "r": 0.65,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            // "startDelay": 0.0,
+            // "loop": true,
+            // "playOnAwake": true,
+            // "playbackSpeed": 1.0,
+            // "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 20.0,
+            "startSize": 2.5,
+            // "startRotation": 1.7,
+            "startLifetime": 0.2,
+            // "gravityModifier": 0.0,
+            "maxParticles": 10,
+            // "simulationSpace": 0,// 0 = Host Gameobject, 1 = World
+            // "scalingMode": 2,
+            // "automaticCullingEnabled": false,
+          }
+        }
+      }
+    },
+
+
+
+
+
+    //the Coding Crab
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 //TAC blocks refuse to go to the enemy
+    },
+    "Reference|VEN_SteeringHoverSingle_111/ModuleBooster.": {
+        "m_ConsumesFuel" : false, //not set yet
+        "m_UseBoostControls": true,//allows shift to jump
+        // "m_IsRocketBooster": true,
+    },
+    "Reference|GSO_Cab_111/ModuleFuelTank.": {//Tiny, fast refueling cache
+      "m_Capacity": 5000.0,
+      "m_RefillRate": 1250.0,
+      // "m_Gauge": null
+    },
+
+    // GYROs -Active
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,//related to Trim Gyro - max allowed angle cone
+      "m_TrimAdjustSpeed": 0.0, //related to Trim Gyro
+      "m_UsePassive": 0, //Is this a passive gyro?
+      "m_UseActive": 1, //Is this an active gyro?
+      "m_ActiveSpeed": 375.0, //How forceful is the Gyro?
+      "m_ActiveStability": 0.2, //How much do we want to dampen the movement?
+      // "m_RotationAnimTransform": null, //idk
+      // "m_RotationAnimSpeed": 0.0, //How fast does the trippy gyro animation play?
+      // "m_RotationMinSpeed": 10.0, //Active Speed falloff point
+      // "m_RotationMaxSpeed": 60.0, //max speed for rotating back upright
+      "m_Trim": 0.0, //Starting trim
+      "m_HasTurnInput": true, //Is this a Reaction Wheel?
+      "m_HasDriveInput": false, //Will this do something if "W" is pressed?
+      "m_ControlTrim": 2000.0, //idk - likely for Reaction Wheels/Controlled rotation
+      "m_ControlTrimTarget": 0.0 //idk - likely scrapped concept for enemy-based tech auto aiming for MTs
+    },
+
+    // Torque Parameters
+    "ModuleWheels": {
+      "m_TorqueParams": {
+        "torqueCurveMaxTorque": 125000.0, //Strong. - This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+        //Mech legs MUST have very high torque values to operate effectively.
+                                            // A high torque value is good for offroad wheels.
+
+        "torqueCurveMaxRpm":    125.0, //Slow       // - Dictates the speed of the wheel. A higher number is faster. 
+                                            // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+        // was 17500.0
+
+        "passiveBrakeMaxTorque": 7500.0,  // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+        "reverseBrakeMaxRpm": 5000.0,       // How much the wheel adds to the "passiveBrakeMaxTorque" when trying to go backwards when already rolling forwards
+        "basicFrictionTorque": 2250.0,      //the Parking brake
+        "fullCompressFrictionTorque": 2500.0, // This is when the wheel is over max weight capacity (suspension overloaded), how much it is slowed by.
+      },
+      
+      // Aesthetic parameters
+      "m_UseTireTracks": false,                  // Enables the wheel to leave tire tracks
+      "m_WheelTrackType": 0,                    // Changes the tracks the wheel leaves behind
+      "m_AudioType": 2,                         // Changes the sound of the wheels when running
+                                                // 1 = Heavy GeoCorp wheels
+      "m_TireTrackWidth": 2,                 // Width of the tires? - doesn't seem to do much...
+
+      "m_WheelParams":{
+        // Basic Wheel parameters
+        "radius":                     2.3,      // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+        "steerAngleMax":              35.0,      // Dictates how much the wheel is able to turn.
+        "steerSpeed":                 2.5,        // Dictates the time it takes for the wheel to fully go into turning position.
+        "thicknessAngular":           0.1,     // Determines how wide the Tire tracks are
+        "strafeSteeringSpeed":        0.0,     //For strafing wheels
+
+        // Tire Parameters
+        "Instantiate|tireProperties":{
+          "props":{
+            "frictionScaleLong": 4.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+            "frictionScaleLat": 2.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+            "gripFactorLong": 5.0,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20 or below 1.5, as all wheels will begin to act strangely.
+            "gripFactorLat": 3.5                // Dictates the tire traction on the sides. Warning: Do not go beyond 20 or below 1.5, as all wheels will begin to act strangely.
+            //Heccing walker legs
+          }
+        },
+
+        // Suspension parameters
+        "suspensionSpring":           2000.0,    // Dictates the amount of bounciness of the suspension's spring. 
+                                                  // It also affects the wheel's ability to carry weight.
+        // "suspensionSpring":           0.0,
+        // "suspensionDamper":           0.0,
+
+        "suspensionDamper":           1250.0,     // This tells the suspension how much the springiness will be dampened. 
+                                                  // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+        "maxSuspensionAcceleration":  3.0,
+        "suspensionQuadratic":        true,  
+        // "suspensionQuadratic":        false,       
+        "suspensionTravel":           1.4,       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   
+        "m_TracksSkidSpeed": 100.0,//0.1 
+        "m_TracksMaxSkidSpeed": 110.0,//1.0
+        "m_TracksMinSpeed": 100.0,
+        "m_TracksMaxSpeed": 110.0,
+        
+        "m_wheels": {
+          "m_DriveTurnPower": 1.0,//was 1.0
+          "m_DriveTurnBrake": 1.0,//was 0.1
+          "m_DriveTurnDifferential": 1.0,//was 0.8
+          "m_TurnOnSpotPower": 1.0,//was 1.0
+          "m_DustMinimumRPM": 20.0,
+          "Capacity": 4,
+        },
+      }
+    },
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.15, //the multiplier for the knock-off value from weapon damage hits x Bullet Velocity. Set to zero to disable.
+      //Normally 1.0 // Walker legs are fairly durable
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.25,//Barely stops shotgun rounds
+    },
+    // TAC Augmented - Mecha Armor
+    "RandomAdditions.ModuleReinforced":{ // Add a special resistance to your block
+      "DoDamagableSwitch": true, // Should we switch the DamageableType of this block?
+      "TypeToSwitch": 0,          // DamageableType to switch to
+
+      "ModifyAoEDamage": true,    // Enable AoE damage changing? (only handles Explosion, not shotguns)
+      "ExplosionMultiplier": 0.6,   // Multiplier for all AoE attacks dealt against this block
+
+      "UseMultipliers": true,     // Should the multipliers be used?
+      //----- DamagableMultipliers -----
+        "Standard":     1,      // Standard multiplier
+        "Bullet":       1,      // Bullet multiplier
+        "Energy":       1,      // Energy multiplier
+        "Explosive":    0.5,      // Explosive multiplier
+        "Impact":       0,      // Impact multiplier
+        "Fire":         0.75,      // Fire multiplier
+        "Cutting":      2,      // Cutting multiplier
+        "Plasma":       1,      // Plasma multiplier
+      //--------------------------------
+    },
+  }
+}
+
+
+
+
+
+
+

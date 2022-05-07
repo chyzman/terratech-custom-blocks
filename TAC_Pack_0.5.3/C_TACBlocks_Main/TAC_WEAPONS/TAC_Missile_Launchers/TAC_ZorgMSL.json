@@ -1,0 +1,735 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Zorg Missile Launcher",
+  "Description": "Slow, very manuverable missiles out of a toaster-like launcher that swarm the enemy to amazing effect. \n\nThis VLRS also features pretty good armor and isn't exposed, unlike the other flawed missile launcher designs that actually lack hatches for missile protection. \n\nSome call this the <b>Zerg</b>, as it launches a swarm of powerful homing missiles that can potentially kill carriers, almost as if they were scourges of the sky. \n\nThis manuverable weapon is not only seen on the TAC Valhalla, it was also seen on the late Golden Retriver. \n\n\n\n<b>But it's still a toaster.</b>", //You can make multiple lines with \n
+  //Starcraft Original reference
+  "ID": 584227, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 68427,//PRICE
+  // Let's compare:
+  //This missile deals 1250 damage in a single salvo against various blocks, explosive modifier. 
+  //It takes 8 secs to reload the 5 shot salvo.
+  //Splash damage 150, weak but nearly uniform throughout.
+  //Health is strong at 7000, thanks to the tanky missile housing.
+  //Missiles at max speed as they leave the launcher, with slightly less range than the cruise missile.
+  //This missile always hits its mark on stationary targets, unless the missiles are intercepted.
+  //Some Tech designs can easily outrun this missile. Turning cannot dodge missile.
+  //IS a VLRS
+  //~
+  //HE cruise missile costs 33960.
+  //It deals 1000 damage in a single missile, but is restricted in placement and manuverability.
+  //explosion deals 1000 damage, but with much greater damage falloff than the TAC missiles.
+  //Reload is 5.0 seconds.
+  //Exposed missile leaves the HE Cruise Missile at a wimpy 100 health.
+  //Missile has booster delay, is faster than the Zorg overall.
+  //Missile hits stationary targets reliably as long as the missile has it within the turning cone.
+  //If aimed correctly, very hard to avoid. Turning can dodge missile.
+  //Is NOT a VLRS
+  //~
+  "HP": 7000,//Slightly less than normal TAC block healths
+  "Mass": 20.0,//Heavy
+
+  "IconName": "MacrossMissileSpamLite.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 51, 53, 53, 53, 53, 53, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 65, 65, 65", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+    //Back
+     { "x": 0, "y": 1.5, "z": 0 },
+     { "x": 0, "y": 1.5, "z": 1 },
+     { "x": 1, "y": 1.5, "z": 1 },
+     { "x": 2, "y": 1.5, "z": 1 },
+     { "x": 3, "y": 1.5, "z": 0 },
+     { "x": 3, "y": 1.5, "z": 1 },
+     //Bottom
+     { "x": 0, "y": 1, "z": -0.5 },
+     { "x": 1, "y": 1, "z": -0.5 },
+     { "x": 2, "y": 1, "z": -0.5 },
+     { "x": 3, "y": 1, "z": -0.5 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 4,
+    "y": 2,
+    "z": 2 //Massive, for now
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_CruiseMissile(121)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 1, "y": 0, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+  //   { //same
+  //   "SubOverrideName": "m_BulletPrefab",
+  //   "DestroySubReferenceRenderer": true,
+  //   "MeshName": "m_GC_JackHammer_Straight_226_Hammer Instance.obj",
+  //   "ColliderMeshName": "m_GC_JackHammer_Straight_226_Hammer Instance.obj",
+  //   "MeshTextureName": null,
+  //   "MeshMaterialName": "GeoCorp_Main",
+  //   //"SubOffset": { "x": 0, "y": 0, "z": 0 },
+  // },TACZorgVLRS
+    { //Base Model
+     "SubOverrideName": "m_HE_CruiseMissile_113_Base",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "TACZorgVLRS.obj",
+      "ColliderMeshName": "TACZorgVLRS.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile3",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile4",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "m_StretchMissile5",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    //Begin Hatches
+    { //Setting up hatches..
+     "SubOverrideName": "m_TAC_VLRS_Hatch1",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting up hatches..
+     "SubOverrideName": "m_TAC_VLRS_Hatch2",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting up hatches..
+     "SubOverrideName": "m_TAC_VLRS_Hatch3",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting up hatches..
+     "SubOverrideName": "m_TAC_VLRS_Hatch4",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting up hatches..
+     "SubOverrideName": "m_TAC_VLRS_Hatch5",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "TACVLRSHatchSingle.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    //Remove aftermath
+    { //Removal
+     "SubOverrideName": "m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    { //Removal
+     "SubOverrideName": "_barrel_copy_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+  ],
+	
+  //
+  // Deadly Missiles
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":1.5, "y":0.5, "z":0.5 }
+      }
+    },
+    "GameObject|m_HE_CruiseMissile_113_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1   },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localPosition": { "x":1.5, "y":0.5, "z":0.5 }
+      }
+    }, //Back to GameObject
+    "GameObject|_barrel": null,
+    "Reference|HE_CannonBattleship_216/_gimbalBase/_gimbalElev/_barrel": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":0.0, "z":0.5 }
+      },
+      "GameObject|_bulletSpawn": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      "GameObject|_muzzleFlash": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        }
+      },
+      // "GameObject|_smoke": {
+      //   "UnityEngine.Transform": {
+      //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+      //     "localPosition": { "x":0, "y":10.0, "z":-0.45 }
+      //   }
+      // },
+      "GameObject|_recoiler": {
+        // "UnityEngine.Transform": {
+        //   "localScale": { "x":1, "y":1, "z":1 },
+        //   "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //   "localPosition": { "x":0, "y":0, "z":0 }
+        // },
+        "GameObject|m_HE_CannonBattleship_216_barrel": {//Reusing as Bone holder
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":2 },
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            "localPosition": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|b_StretchTarget1": {//FollowSuspension bone for missiles
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":0, "z":0.5 }
+            },
+          },
+          "GameObject|b_HatchTarget1": {//FollowSuspension bone for Hatches
+            "UnityEngine.Transform": {
+              "localScale": { "x":1, "y":1, "z":1 },
+              "localEulerAngles": { "x":0, "y":0, "z":0 },
+              "localPosition": { "x":0, "y":-1.65, "z":0 }
+            },
+          }
+        }
+      }
+    },
+    "Duplicate|_barrel": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0.825, "y":0.0, "z":0.5 }
+      },
+    },
+    "Duplicate|_barrel_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":1.50, "y":0.0, "z":0.5 }
+      },
+    },
+    "Duplicate|_barrel_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.175, "y":0.0, "z":0.5 }
+      },
+    },
+    "Duplicate|_barrel_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":2.85, "y":0.0, "z":0.5 }
+      },
+    },
+
+    //Prevent model bugging when using FollowSuspension!
+    "GameObject|SuspensionUp": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":3.5, "z":0.5 }
+      }
+    },
+    "GameObject|SuspensionU2": {
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.5, "y":3.5, "z":0.5 }
+      }
+    },
+
+    //FollowSuspension Animations
+    //- Missile Regrowth
+    "GameObject|StretchMissile1": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile1": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":0.0, "z":0.0 }
+      },
+    },
+    "GameObject|StretchMissile2": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile2": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.825, "y":0.0, "z":0.0 }
+      },
+    },
+    "GameObject|StretchMissile3": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile3": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":1.50, "y":0.0, "z":0.0 }
+      },
+    },
+    "GameObject|StretchMissile4": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile4": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":2.175, "y":0.0, "z":0.0 }
+      },
+    },
+    "GameObject|StretchMissile5": {
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_StretchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp2",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": true,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_StretchMissile5": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localEulerAngles": { "x":00, "y":0, "z":0 },
+          "localPosition": { "x":0.0, "y":0.0, "z":0.5 }
+        },
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":2.85, "y":0.0, "z":0.0 }
+      },
+    },
+
+
+    //Hatch Movement
+    "GameObject|Hatch1": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.15, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch1": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+    "GameObject|Hatch2": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":0.825, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch2": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+    "GameObject|Hatch3": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":1.50, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch3": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+    "GameObject|Hatch4": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":2.175, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch4": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+    "GameObject|Hatch5": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":00, "y":0, "z":0 },
+        "localPosition": { "x":2.85, "y":-0.25, "z":0.4 }
+      },
+      "FollowSuspension": {//This is new, will note for later use.
+        "m_TargetWheelTrans": "/_barrel_copy_copy_copy_copy/_recoiler/m_HE_CannonBattleship_216_barrel/b_HatchTarget1",
+        "m_TargetUpTrans": "/SuspensionUp",
+        "m_KeepOriginalRotationOffset": true,
+        "m_ScaleToMatchDistance": false,
+        // "m_OriginalDistance": 0.5,
+      },
+      "GameObject|m_TAC_VLRS_Hatch5": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":90, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0.75, "z":0.1 }
+        }
+      }
+    },
+
+
+
+
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 1.0,//Stop shotguns - armored doors
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "DeliveryCannon", //Firing noise
+      "m_LimitedShootAngle": 270,
+      "m_RotateSpeed" : 150.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": { // Another component
+      //"UnityEngine.Transform": {"localScale": { "x":6, "y":6, "z":6 }}, //Bigger for placeholder - broken as it crashes the game
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      //"m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      "m_ShotCooldown" : 0.8, //This is the cooldown between every burst shot.
+      "m_ResetBurstOnInterrupt" : false,
+      "m_CooldownVariancePct" : 0.24, 
+      "m_BurstShotCount" : 5, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 8.0, //8 seconds between bursts.
+      //"m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      "m_HasCooldownAnim" : false, //Doesn't change anything
+      "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 10.0, //YEET the missile before booster
+      //"m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      //"m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 1.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"   
+      //AnimCrateOpen 
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : "AnimGSODeliCannonMob",//"AnimCrateOpen",
+        },
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }, //{ "x":1.5, "y":1.5, "z":4 }
+          "localEulerAngles": { "x":0, "y":0, "z":0, "w": 1 },
+        },
+        "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+          "useGravity": false,
+          "centerOfMass": { "x":0, "y":0, "z":0 },
+        },     
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+          },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "TACMissile.obj"
+          },
+          // "UnityEngine.MeshRenderer": {
+          //   "material": {
+          //     "mainTexture": "HE_Main"
+          //   }
+          // },   
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": {
+            "UnityEngine.Transform": {
+            //"localPosition": { "x":0, "y":0, "z":2 },
+            "localScale": { "x":0.0001, "y":0.0001, "z":0.0001 } //{ "x":1.5, "y":1.5, "z":4 }
+            },
+          },
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "radius": 0.15,
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "height": 0.75,
+          "direction": 2
+        },
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.5, "y":0.5, "z":0.5 }, //{ "x":1.5, "y":1.5, "z":4 }
+            "localPosition": { "x":0, "y":0, "z":-0.6 },
+            "localEulerAngles": { "x":0, "y":0, "z":0, "w": 1 }
+          },
+          "BoosterJet": {
+            "m_Force": 0.075,
+            //"m_BurnRate": 60.0,
+            "m_FireRateFalloff": 0.1,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          }
+        },
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Explosive", //What damage modifier the weapon does - To raid shielded Techs
+          "m_Damage": 250 //Damage for successful projectile contact hit
+        },
+        "Projectile": { //Another one (doot doooooot dododoot)
+            "m_LifeTime": 3.0, //Time before BOOM
+            //"m_DeathDelay": 0.25,
+            "m_ExplodeAfterLifetime": true,
+            "m_ExplodeOnTerrain": true,
+            "m_IgnoreCollisionWithBarrel" : true,
+            "m_StickOnContact" : false,
+            "m_ExplodeOnStick" : false,
+            "m_HideProjectileOnStick": false,
+            "m_SingleImpact" : false, // The Bees are Relentless and will continuously deal damge while in the Enemy
+            "m_CanHaveGravity" : false,
+            //"m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+            //"m_StickOnTerrain" : true,
+            "m_ImpactSFXType" : "Mortar", //BAM
+            // "m_FlightSFXType" : "DeliveryBomb", // Allows for homing effect
+            //"m_Trail" : {"startWidth": 3},
+            //"m_Explosion": null
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+            // "m_DamageType" : "Explosion", //What damage modifier the explosion does - Quite powerful.
+            //"m_ExplosionSize": 0, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+            //"m_ExplosionType": "Fuel", //What the explosion looks like
+            "m_EffectRadius": 5, //blop
+            "m_EffectRadiusMaxStrength": 3.75, 
+            "m_MaxDamageStrength": 175, //This affects splash damage
+            "m_MaxImpulseStrength": 200 //How hard to push things, explosion force -YEET
+         
+            }
+          }
+        },
+        "SeekingProjectile": {
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          "m_ActivationDelay": 0.025, //How long before we aim at the target?
+          "m_VisionRange": 175, //How far can we see targets?
+          "m_VisionConeAngle": 360, //How wide can we see targets?
+          "m_TurnSpeed": 150, // How strong the turn is towards the enemy
+          //was 175. 125 tracks much more nicely
+          //Then was nerfed to 100
+        },
+        "MissileProjectile": {
+          "m_UsesGravity" : false,
+          "m_ArmDelay" : 0.25,
+          "m_BoosterActivationDelay" : 0,
+          "m_DeathDelayNotArmed" : 0.25,
+          "m_MaxBoosterLifetime" : 3.5 // How long till the Bees run outta juice
+        }
+      }
+    } 
+  }
+}

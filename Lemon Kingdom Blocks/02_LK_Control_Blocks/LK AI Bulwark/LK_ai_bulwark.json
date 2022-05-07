@@ -1,0 +1,213 @@
+/*
+Description:    The Lemon Kingdom's "Defense" AI Module. When set as an enemy, it will not move, but has excellent visual range.
+Pros:           Armored and doubles as a visual extender and radar.
+Cons:           Heavy, expensive with limited APs (bottom only)
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Bulwark A.I. Module",
+    "Description":          "This A.I. module is housed in a rangefinder-radar system, increasing one's aiming range; best used by defense and artillery Techs, but can be used anywhere.",
+
+    "ID": 419054,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 1,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 22476,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /*  The resources/components needed to make this block. For the full ID Resource/Component list, 
+        please refer to the Terratech Wiki.
+        Recipe:     Main Body:              4 Titania Alloy, 2 Rugged Fiblar, 6 Plubonic Alloy
+                    AI + Power:             1 Mother Brain, 1 Ion Pulse Cell
+                    Radar + Rangefinder:    3 Sensory Transmitter
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 4, "52": 2, "53": 6, 
+        // Radar + Rangefinder
+        "51": 3,
+        // AI + Power
+        "60": 1, "56": 8 
+    },
+      
+    "IconName":                 "LK_ai_bulwark_icon.png",                   // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                 "LK_ai_bulwark_body.obj",                                       // Name of the block's mesh                                        
+    "MeshColliderName":         "LK_ai_bulwark_body_col.obj",                                       // Name of the block's collider.
+    "NoBoxCollider":            false,
+
+    "TextureName":              "LK_tex_1.png",
+    "GlossTextureName":         "LK_tex_2.png",
+    "EmissionTextureName":      "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 5000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 20.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 1,"z": 2 },
+
+    "APs": [ 
+        // Top APs
+        { "x": 0, "y": 0.5, "z": 0 },
+        { "x": 1, "y": 0.5, "z": 0 },
+
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 0 },
+        { "x": 0, "y": -0.5, "z": 1 },
+        { "x": 1, "y": -0.5, "z": 0 },
+        { "x": 1, "y": -0.5, "z": 1 },
+    ],
+
+    "DeathExplosionReference":              "145",  // GeoCorp Battery Block ID
+
+    "Deserializer":{
+        "ModuleTechController": {
+            "m_PlayerInput": false,
+        },
+
+        //----- Module Radar: Usually seen on radar blocks; allows basic detection of targets and radar UI toggling. -----//
+        "ModuleRadar": {
+            "m_Priority": 8,            // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+            "m_MiniMapType": 1,         // Dictates the minimap provided by the block. Only accepts 0 or 1.
+                                        // 0 = Small, blank Radar minimap
+                                        // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+            
+            "m_Range": 400,             // Dictates how far the radar detects objects in the world. For comparison, an HE Radar has a value of 300.
+        },
+
+
+        //----- Module Vision: Usually seen on cabs so they can "see" targets and aim their weapons at a specific range. -----//
+        "ModuleVision": {
+            "visionConeAngle":  360.0,  // Dictates the "vision" cone provided by this block. The cone is aimed at the front of the block. 
+                                        // When an enemy is within this cone angle, weapons attached on the Tech will begin to aim at it. By default value is 360
+
+            "visionRange":      400,    // Dictates how far the Tech detects enemies. 
+                                        // 900 is the maximum reasonable value considering draw and render distance, any more is simply overkill as the game will despawn enemies at a certain distance. 
+        },
+
+
+        //----- Module AI Bot: This is used by A.I. Modules. Place this on a block to turn it into an A.I. module. -----//
+        "ModuleAIBot": {
+            "m_AITypesEnabled":         ["Harvest", "Idle", "Escort"],
+            "m_AimPos":                 { "x": 0.0,"y": 0.0,"z": 0.0 },
+        },
+
+
+        //---------- ModuleDriveBot: This is used both by Player Cabs and A.I. Modules. This will dictate their behavior when not piloted by the player (such as being an enemy) ----------//
+        // So far, Enemy AI behavior is simply that it will move behind the enemy.
+        "ModuleDriveBot": {
+
+            // Combat Attributes: Note that the following attributes only work on enemies
+
+            "targetIdealRange":         100.0,                      // While attacking the enemy, this dictates how far the AI will position itself relative to its target. 
+                                                                    // The higher the value, the farther it will try to stay away from its target.
+
+            "turnToleranceOuter":       45.0,                       // While attacking the enemy, this value dictates the angle of leeway the A.I. can make relative to its target. Sensible values range from 20-45.                   
+            "turnToleranceInner":       20.0,           
+
+            // Navigation Attributes: Note that the following attributes only work on enemies
+
+            "m_DefaultThrottle":        0.01,                       // Dictates the driving speed this A.I. This is a percentile value: 0.0 to 1.0 works here.
+
+            "poweredTurnInsideWheel": 0.2,  //
+
+            "turnAngleFullThrottle":    10.0,                       // Dictates the maximum angle needed to throttle by using m_DefaultThrottle. 
+                                                                    // The higher the value, the more flexible it can be when turning around. Sensible values are around 45.0
+            
+            
+            // Uncatalogued Attributes
+            "waypointDistanceFullThrottle": 0.1,
+
+            "waypointReachedTolerance": 2.0,
+            "waypointPlayerAngularBias": 45.0,
+           
+
+
+            "lookAroundAngleMin": 30.0,
+            "lookAroundAngleMax": 180.0,   
+
+            "m_DefaultPatrolDistMin": 5.0,
+            "m_DefaultPatrolDistMax": 15.0,
+            "patrolThrottle": 0.01,
+            "lookAroundPauseMin": 0.25,
+            "lookAroundPauseMax": 0.5,
+            "lookAroundThrottle": 0.5,
+            
+            "lostTargetMemoryTime": 3.0,
+            "holdTargetDuration": 0.5,
+            "stopCirclingDelay": 2.0,
+            "controlPriority": 50,
+
+            "debugReportThrottle": 0.0, //
+            
+            "recoverTimeout": 0.0, //
+            "forceUnCapsizeTimeout": 0.0, //
+            "capsizedMinSpeed": 1.5,
+            "m_ThrottleD": 1.0,
+            "m_ThrottleT": 1.0,
+            "m_PatrolDistMin": 5.0,
+            "m_PatrolDistMax": 15.0,
+            "lookAroundWaitDecay": 0.0,
+            "lookAroundState": 0,
+            "lostTargetChaseDecay": 0.0,
+            "holdTargetCountdown": 0.0,
+            "stopCirclingTimer": 0.0,
+            
+            "attackTargetRadius": 0.0,          // Warning, do not touch this attribute as it can cause a crash
+            
+            "recoverTime": 0.0,
+            "forceUnCapsizeTime": 0.0,
+            "sumoBoostOn": false,
+        },
+
+    }
+
+
+
+
+
+}

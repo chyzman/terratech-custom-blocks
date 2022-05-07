@@ -1,0 +1,322 @@
+{
+    "Name": "GreenTech Anchored Wind Turbine",
+    "Description": "A reliable source of constant wind power energy, which for safety reasons only generates power when firmly anchored (it will spin loosely if attached to an unanchored Tech).\nAlso comes with a battery and a wireless charger, for transfering energy to nearby power lines or Techs passing by.",
+    "ID": 911215, 
+  
+    "Faction": 1, 
+    "Category": 6, 
+    "Grade": 3,
+    "Price": 7206,
+    "HP": 8000,
+    "Mass": 30,
+    "CenterOfMass": {"x": 0.5, "y": 0, "z": 1.5},
+  
+    "Fragility": 0,
+    "DamageableType": 0,
+    "Rarity": 0,
+    "EmissionMode": 1,
+    
+    "Recipe": "1, 1, 1, 1, 11, 43, 43, 44, 45, 48, 48, 56, 57",
+      
+    "IconName":"GT_Wind_Turbine_Icon.png",
+
+    "Cells":[
+        {"x": 0,"y": 0,"z": 0},{"x": 1,"y": 0,"z": 0},
+        {"x": 0,"y": 1,"z": 0},{"x": 1,"y": 1,"z": 0},
+        {"x": 0,"y": 2,"z": 0},{"x": 1,"y": 2,"z": 0},
+        {"x": 0,"y": 3,"z": 0},{"x": 1,"y": 3,"z": 0},
+        {"x": 0,"y": 4,"z": 0},{"x": 1,"y": 4,"z": 0},
+        {"x": 0,"y": 5,"z": 0},{"x": 1,"y": 5,"z": 0},
+        {"x": 0,"y": 6,"z": 0},{"x": 1,"y": 6,"z": 0},
+        {"x": 0,"y": 7,"z": 0},{"x": 1,"y": 7,"z": 0},
+        {"x": 0,"y": 8,"z": 0},{"x": 1,"y": 8,"z": 0},
+        {"x": 0,"y": 9,"z": 0},{"x": 1,"y": 9,"z": 0},
+        {"x": 0,"y": 10,"z": 0},{"x": 1,"y": 10,"z": 0},
+        {"x": 0,"y": 0,"z": 1},{"x": 1,"y": 0,"z": 1},
+        {"x": 0,"y": 1,"z": 1},{"x": 1,"y": 1,"z": 1},
+        {"x": 0,"y": 2,"z": 1},{"x": 1,"y": 2,"z": 1},
+        {"x": 0,"y": 3,"z": 1},{"x": 1,"y": 3,"z": 1},
+        {"x": 0,"y": 4,"z": 1},{"x": 1,"y": 4,"z": 1},
+        {"x": 0,"y": 5,"z": 1},{"x": 1,"y": 5,"z": 1},
+        {"x": 0,"y": 6,"z": 1},{"x": 1,"y": 6,"z": 1},
+        {"x": 0,"y": 7,"z": 1},{"x": 1,"y": 7,"z": 1},
+        {"x": 0,"y": 8,"z": 1},{"x": 1,"y": 8,"z": 1},
+        {"x": 0,"y": 9,"z": 1},{"x": 1,"y": 9,"z": 1},
+        {"x": 0,"y": 10,"z": 1},{"x": 1,"y": 10,"z": 1},
+        {"x": 0,"y": 0,"z": 2},{"x": 1,"y": 0,"z": 2},
+        {"x": 0,"y": 1,"z": 2},{"x": 1,"y": 1,"z": 2},
+        {"x": 0,"y": 2,"z": 2},{"x": 1,"y": 2,"z": 2},
+        {"x": 0,"y": 3,"z": 2},{"x": 1,"y": 3,"z": 2},
+        {"x": 0,"y": 4,"z": 2},{"x": 1,"y": 4,"z": 2},
+        {"x": 0,"y": 5,"z": 2},{"x": 1,"y": 5,"z": 2},
+        {"x": 0,"y": 6,"z": 2},{"x": 1,"y": 6,"z": 2},
+        {"x": 0,"y": 7,"z": 2},{"x": 1,"y": 7,"z": 2},
+        {"x": 0,"y": 8,"z": 2},{"x": 1,"y": 8,"z": 2},
+        {"x": 0,"y": 9,"z": 2},{"x": 1,"y": 9,"z": 2},
+        {"x": 0,"y": 10,"z": 2},{"x": 1,"y": 10,"z": 2},
+
+{"x": -2,"y": 4,"z": 3},{"x": -1,"y": 4,"z": 3},{"x": 0,"y": 4,"z": 3},
+{"x":  1,"y": 4,"z": 3},{"x":  2,"y": 4,"z": 3},{"x":  3,"y": 4,"z": 3},
+
+{"x": -3,"y": 5,"z": 3},{"x": -2,"y": 5,"z": 3},{"x": -1,"y": 5,"z": 3},{"x": 0,"y": 5,"z": 3},
+{"x":  1,"y": 5,"z": 3},{"x":  2,"y": 5,"z": 3},{"x":  3,"y": 5,"z": 3},{"x":  4,"y": 5,"z": 3},
+
+{"x": -4,"y": 6,"z": 3},{"x": -3,"y": 6,"z": 3},{"x": -2,"y": 6,"z": 3},{"x": -1,"y": 6,"z": 3},{"x": 0,"y": 6,"z": 3},
+{"x":  1,"y": 6,"z": 3},{"x":  2,"y": 6,"z": 3},{"x":  3,"y": 6,"z": 3},{"x":  4,"y": 6,"z": 3},{"x": 5,"y": 6,"z": 3},
+
+{"x": -4,"y": 7,"z": 3},{"x": -3,"y": 7,"z": 3},{"x": -2,"y": 7,"z": 3},{"x": -1,"y": 7,"z": 3},{"x": 0,"y": 7,"z": 3},
+{"x":  1,"y": 7,"z": 3},{"x":  2,"y": 7,"z": 3},{"x":  3,"y": 7,"z": 3},{"x":  4,"y": 7,"z": 3},{"x": 5,"y": 7,"z": 3},
+
+{"x": -4,"y": 8,"z": 3},{"x": -3,"y": 8,"z": 3},{"x": -2,"y": 8,"z": 3},{"x": -1,"y": 8,"z": 3},{"x": 0,"y": 8,"z": 3},
+{"x":  1,"y": 8,"z": 3},{"x":  2,"y": 8,"z": 3},{"x":  3,"y": 8,"z": 3},{"x":  4,"y": 8,"z": 3},{"x": 5,"y": 8,"z": 3},
+{"x": 0,"y": 8,"z": 4},
+{"x":  1,"y": 8,"z": 4},
+
+{"x": -4,"y": 9,"z": 3},{"x": -3,"y": 9,"z": 3},{"x": -2,"y": 9,"z": 3},{"x": -1,"y": 9,"z": 3},{"x": 0,"y": 9,"z": 3},
+{"x":  1,"y": 9,"z": 3},{"x":  2,"y": 9,"z": 3},{"x":  3,"y": 9,"z": 3},{"x":  4,"y": 9,"z": 3},{"x": 5,"y": 9,"z": 3},
+{"x": 0,"y": 9,"z": 4},
+{"x":  1,"y": 9,"z": 4},
+
+{"x": -4,"y": 10,"z": 3},{"x": -3,"y": 10,"z": 3},{"x": -2,"y": 10,"z": 3},{"x": -1,"y": 5,"z": 3},{"x": 0,"y": 10,"z": 3},
+{"x":  1,"y": 10,"z": 3},{"x":  2,"y": 10,"z": 3},{"x":  3,"y": 10,"z": 3},{"x":  4,"y": 5,"z": 3},{"x": 5,"y": 10,"z": 3},
+
+{"x": -4,"y": 11,"z": 3},{"x": -3,"y": 11,"z": 3},{"x": -2,"y": 11,"z": 3},{"x": -1,"y": 11,"z": 3},{"x": 0,"y": 11,"z": 3},
+{"x":  1,"y": 11,"z": 3},{"x":  2,"y": 11,"z": 3},{"x":  3,"y": 11,"z": 3},{"x":  4,"y": 11,"z": 3},{"x": 5,"y": 11,"z": 3},
+
+{"x": -3,"y": 12,"z": 3},{"x": -2,"y": 12,"z": 3},{"x": -1,"y": 12,"z": 3},{"x": 0,"y": 12,"z": 3},
+{"x":  1,"y": 12,"z": 3},{"x":  2,"y": 12,"z": 3},{"x":  3,"y": 12,"z": 3},{"x":  4,"y": 12,"z": 3},
+
+{"x": -2,"y": 13,"z": 3},{"x": -1,"y": 13,"z": 3},{"x": 0,"y": 13,"z": 3},
+{"x":  1,"y": 13,"z": 3},{"x":  2,"y": 13,"z": 3},{"x":  3,"y": 13,"z": 3}
+    ],
+    
+    "APs": [ 
+      {"x": 0,"y": -0.5,"z": 0},
+      {"x": 1,"y": -0.5,"z": 0},
+      {"x": 0,"y": -0.5,"z": 1},
+      {"x": 1,"y": -0.5,"z": 1},
+      {"x": 0,"y": -0.5,"z": 2},
+      {"x": 1,"y": -0.5,"z": 2},
+
+      {"x": -0.5,"y": 0,"z": 0},
+      {"x": 1.5,"y": 0,"z": 0},
+      {"x": 0,"y": 0,"z": -0.5},
+      {"x": 1,"y": 0,"z": -0.5}
+    ],
+
+    "GamePrefabReference": "VEN_RemoteCharger_111",
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+  
+    
+    "SubObjects":[
+        {
+            "MeshName":                   "GT_Wind_Turbine_Base.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Wind_Turbine_Base_Collider.obj",
+            "layer": 8
+        },
+        {
+            "MeshName":                  "GT_Wind_Turbine_Coil.obj",
+            "MeshMaterialName":          "Mat_Pickup_Resource_RodiusCapsule"
+        },
+        {
+            "MeshName":                   "GT_Wind_Turbine_Generator.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Wind_Turbine_Generator_Collider.obj",
+            "SubPosition": {
+                "x": 0.5,
+                "y": 8.44,
+                "z": 1.5
+            },
+            "layer": 8
+        },
+        {
+            "SubOverrideName":            "Prop",
+            "MeshName":                   "GT_Wind_Turbine_Prop.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Wind_Turbine_Prop_Collider.obj",
+            "layer": 8
+        },
+        {
+            "SubOverrideName":            "_anchor/HEAnchor22/HE_Anchor_22",
+            "MeshName":                   "GT_Wind_Turbine_Anchor.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Wind_Turbine_Anchor_Collider.obj",
+            "layer": 8
+        },
+        {
+            "SubOverrideName": "_energyGauge",
+            "MeshName": "GT_Wind_Turbine_LEDs.obj"
+        }
+    ],
+
+    "JSONBLOCK":{
+        // Remote Charger
+
+        "ModuleRemoteCharger": {
+            "m_ChargingRadius": 40.0,
+            "m_PowerTransferPerArc": 200.0,
+            "m_ArcFiringInterval": 1
+            /* "m_ArcEffects": [
+                "/_electricArc",
+                "/_electricArc (1)"
+            ] */
+        },
+        "ModulePlacementZoneEffect": {
+            "m_Radius": 40.0
+            //"m_VFXBubble": "/_bubble"
+        },
+
+        //Generator
+        "GameObject|_spindle": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.5,
+              "y": 8.44,
+              "z": 1.5
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+        },
+          "Spinner": {
+          "m_Speed": 1,
+          "m_RotationAxis": {
+            "axis": 2
+          },
+          "m_SteerAxis": {
+            "axis": 2
+          },
+          "m_SpinUpTime":5
+          },
+          "GameObject|Prop":{
+            "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+            }
+          }
+      },
+        "ModuleRadar":{
+          "m_Range": 0.0,
+          "m_Dish":{
+            "m_Speed":1,
+            "m_AutoSpin":false,
+            "m_SpinUpTime":5
+          }
+        },
+
+        "ModuleEnergy": {
+            "m_OutputPerSecond": 200,
+            "m_OutputEnergyType": 0,
+            "m_OutputConditions": 1,
+            "m_SequentialPowerUp": false,
+            "m_PowerUpDelay": 2.0,
+            "m_GeneratingSFXType": 0
+        },
+
+        //Anchor
+        "Reference|HE_Anchor_Fixed_212/_anchor": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+            },
+            "GameObject|HEAnchor22": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localEulerAngles": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                },
+                "GameObject|HE_Anchor_22": {
+                    "UnityEngine.Transform": {
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localEulerAngles": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        }
+                    }
+                },
+              "BlockAnchor":{
+               "m_GroundPoint":{
+                "localPosition": {
+                "x": 0.0,
+                "y": -3.3,
+                "z": 0.0
+              }},
+              "m_SnapToleranceUp":3.8,
+          "m_SnapToleranceDown":1.5}
+            }
+        },
+
+        "Reference|HE_Anchor_Fixed_212/ModuleAnchor.": {
+          "m_APsBlockedByAnchor": [
+            1, 2, 3, 4, 5, 6
+        ]
+        },
+
+        //Battery
+        "Reference|GCBattery(222)/_energyGauge":{
+            "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+            }
+        },
+        
+        "Reference|GCBattery(222)/ModuleEnergyStore.": {
+            "m_EnergyType": 0,
+            "m_Capacity": 4000.0,
+            "m_AcceptRemoteCharge": false
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "Name": "Old Star Curved Corner Tip Block",
+  "Description": "This here is how the Old Star do. Just 2 cuts of nicely cut Fibron Hardwood held together with a few metal bands and nails. It's a slope block to smooth out spots where other slop blocks need just the tip filled in on our techs that use the main curved slope block.",
+  "ID": 300027,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 1,
+  "Price": 550,
+  "HP": 300,
+  "Mass": 1,
+  "IconName": "OS_Corner_Curved_Slope_icon.png",
+  "MeshName": "OS_Corner_Curved_Slope.obj",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, ", 	
+  "EmissionMode": 2,
+  "ColliderMeshName": "OS_Corner_Curved_Slope.obj",
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SupressBoxColliderFallback": true,
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},   
+  "APs": [ 
+    //Bottom
+    {"x": 0, "y": -0.5, "z": 0},
+    //Side
+	{"x":-0.5, "y": 0, "z": 0},
+	//Back
+    {"x": 0, "y": 0, "z": -0.5}
+  ]
+}

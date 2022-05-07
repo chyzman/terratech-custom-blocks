@@ -1,0 +1,140 @@
+{
+  "Name": "GeoCorp Industrial Hub",
+  "Description": "A very special Tech modulator that focuses all available systems on mining, close range combat and survivability.\n\nThe main modifications are increased contact weapons damage, no damaged block fall-off, lower shield drain, and faster and cheaper repair; with almost no systems left to support projectile weapons functioning.\nThe Industrial Hub also boosts range for many collection and attraction related blocks, making it quite useful for crafting bases.",
+  "ID": 910565, 
+
+  "Faction": 2, 
+  "Category": 5, 
+  "Grade": 2, 
+  "Price": 20298,
+  "HP": 2000,
+  "Mass": 12,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+
+  "IconName": "GC_Industrial_Hub_Icon.png",
+  
+  "Recipe": "56, 56, 56, 56, 57, 57, 60, 60",
+  
+  "EmissionMode": 1,
+
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	{"x": 0, "y": -0.5, "z": 1},
+	{"x": 1, "y": -0.5, "z": 0},
+	{"x": 1, "y": -0.5, "z": 1}
+  ],
+
+  "GamePrefabReference": "GC_Block_222",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_BigBertha_845", 
+  
+  "SubObjects": [
+    {
+    	"MeshName": "GC_Industrial_Hub.obj",
+      "MeshMaterialName": "GC_Main",
+      "ColliderMeshName": "GC_Industrial_Hub_Collider.obj"
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleWeaponGun.m_SeekingRounds", 
+        "ModuleWeaponGun.m_FiringData.m_BulletSprayVariance",
+        "FireData.m_MuzzleVelocity",
+        "ModuleShieldGenerator.m_EnergyConsumedPerDamagePoint", 
+        "ModuleShieldGenerator.m_HealingHeartbeatInterval",
+        "ModuleShieldGenerator.m_EnergyConsumedPerPointHealed",
+        "ModuleDrill.impactDamageMultiplier",
+        "ModuleDrill.damagePerSecond",
+        "ModuleHammer.impactDamage",
+        "ModuleItemPickup.m_PickupRange",
+        "ModuleDamage.m_DamageDetachFragility",
+        "ModuleWeaponGun.m_BurstCooldown" ],
+      "m_Strength": [0, 0, 0, 0.5, 0.5, 0.5, 1.5, 1.5, 1.5, 1.5, 0, 0],
+      "m_AddAfter": [0, 2, -15, 0, 0, 0, 0, 0, 0, 0, 0, 3600]
+    },
+    "Reference|BF_Laser_Turret_313/ModuleWeapon.":{
+      "m_FireSFXType": 0
+    },
+    "Reference|BF_Laser_Turret_313/ModuleWeaponGun.":{},
+    "Reference|BF_Laser_Turret_313/TargetAimer.":{},
+    "Reference|BF_Laser_Turret_313/FireData.":{},
+    "Reference|BF_Laser_Turret_313/_gimbalElev":{
+      "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 4, "z": 0 }  
+          },
+      "GimbalAimer": {
+        "rotationLimits": [-0.1, 0.1] 
+      },
+      "GameObject|_barrel": {
+        "Spinner": {
+          "m_Speed": 0.0
+        },
+          "UnityEngine.Transform": { 
+          "localPosition": { "x": 0, "y": 0, "z": 0 }  
+          },
+           "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": { 
+              "localPosition": { "x": 0, "y": -4.1, "z": 0 }  
+              },
+            "GameObject|_light": null,
+            "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.5, "y": 1, "z": 1.15 },
+                 "localScale": {
+                  "x": 0.06,
+                  "y": 0.06,
+                  "z": 0.06
+                }
+               },
+              "ParticleSystem": {
+                "startDelay": 0.0,
+                "loop": true,
+                "playOnAwake": true,
+                "playbackSpeed": 1.0,
+                "enableEmission": true,
+                "emissionRate": 25.0,
+                "startSpeed": 0.0,
+                "startSize": 0.6,
+                "startColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 0.1
+                },
+                "startLifetime": 1,
+                "gravityModifier": 0.0,
+                "maxParticles": 1000,
+                "simulationSpace": 1,
+                "scalingMode": 2
+              },
+              "ParticleSystemRenderer": {
+                //"material": "Mat_FX_Smoke_Dark"
+              }
+            }
+            /*"GameObject|Test":{
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0.198, "y": 2.6553, "z": 0.698 }
+               }
+            }*/
+           },
+           "GameObject|_beam": {
+						"UnityEngine.Transform": { 
+							"localPosition": { "x": 0, "y": 0, "z": 0 }  
+						  },
+						"BeamWeapon": {
+                "m_Range": 0,
+                "m_DamagePerSecond": 0
+              },
+            "UnityEngine.LineRenderer": {
+                "startWidth": 0,
+                "endWidth": 0
+            }
+          }
+      }
+    }
+  }
+}

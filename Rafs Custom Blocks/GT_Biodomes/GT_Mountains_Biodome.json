@@ -1,0 +1,280 @@
+{
+    "Name": "GreenTech Anchored Mountains Biodome",
+    "Description": "A biodome containing a small mountains patch.\nActs as a sustainable source of Luxite. The crystals are harvested in an underground chamber as it grows and regrows from a symbiotic relation with the trees.\n The mountains biome is not a needy one, however, in order to get optimal Luxite symbiotic growth the biodome conditions need to be highly stable, demanding a quick-response support system and making it somewhat expensive.",
+    "ID": 911219, 
+  
+    "Faction": 1, 
+    "Category": 7, 
+    "Grade": 3,
+    "Price": 8376,
+    "HP": 10000,
+    "Mass": 80,
+    "CenterOfMass": {"x": 3.5, "y": 1, "z": 3.5},
+  
+    "Fragility": 0,
+    "DamageableType": 0,
+    "Rarity": 0,
+    "EmissionMode": 2,
+    
+    "Recipe": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 13, 13, 13, 13, 13, 13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 43, 43, 43, 43, 43, 43, 48, 51",
+      
+    "IconName":"GT_Mountains_Biodome_Icon.png",
+
+    "CellMap":
+	[
+		[
+			"        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx "
+		],
+        [
+			"        ",
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"  xxxx  ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"  xxxx  ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"  xxxx  ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"  xxxx  ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"        ",
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx ",
+            "xxxxxxxx",
+            "xxxxxxxx"
+		],
+        [
+			"        ",
+            "        ",
+            "  xxxx  ",
+            "  xxxx  ",
+            " xxxxxx ",
+            " xxxxxx "
+		]
+    ],
+    
+    "APs": [ 
+      {"x": 3,"y": 0,"z": -0.5},
+      {"x": 3,"y": 1,"z": -0.5},
+      {"x": 4,"y": 0,"z": -0.5},
+      {"x": 4,"y": 1,"z": -0.5},
+
+      {"x": 3,"y": -0.5,"z": 1},
+      {"x": 4,"y": -0.5,"z": 1},
+      {"x": 3,"y": -0.5,"z": 6},
+      {"x": 4,"y": -0.5,"z": 6},
+
+      {"x": 2,"y": -0.5,"z": 2},
+      {"x": 3,"y": -0.5,"z": 2},
+      {"x": 4,"y": -0.5,"z": 2},
+      {"x": 5,"y": -0.5,"z": 2},
+      {"x": 2,"y": -0.5,"z": 5},
+      {"x": 3,"y": -0.5,"z": 5},
+      {"x": 4,"y": -0.5,"z": 5},
+      {"x": 5,"y": -0.5,"z": 5},
+
+      {"x": 1,"y": -0.5,"z": 3},
+      {"x": 2,"y": -0.5,"z": 3},
+      {"x": 3,"y": -0.5,"z": 3},
+      {"x": 4,"y": -0.5,"z": 3},
+      {"x": 5,"y": -0.5,"z": 3},
+      {"x": 6,"y": -0.5,"z": 3},
+      {"x": 1,"y": -0.5,"z": 4},
+      {"x": 2,"y": -0.5,"z": 4},
+      {"x": 3,"y": -0.5,"z": 4},
+      {"x": 4,"y": -0.5,"z": 4},
+      {"x": 5,"y": -0.5,"z": 4},
+      {"x": 6,"y": -0.5,"z": 4}
+      
+    ],
+
+    "GamePrefabReference": "GSO_Autominer_324",
+    "KeepRenderers":    false,
+    "KeepColliders":    false,
+    "ReferenceOffset": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+  
+    
+    "SubObjects":[
+        {
+            "MeshName":                   "GT_Biodome_Base.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Biodome_Collider.obj",
+            "layer": 8
+        },
+        {
+            "SubOverrideName": "GSO_Anchor",
+            "MeshName":                   "GT_Biodome_Anchor.obj",
+            "MeshTextureName": "GreenTech 1.png", 
+            "MeshGlossTextureName": "GreenTech 2.png", 
+            "MeshEmissionTextureName": "GreenTech 3.png",
+            "MeshColliderName":           "GT_Biodome_Anchor_Collider.obj"
+        },
+        {
+            "MeshName": "GT_Biodome_Glass.obj",
+            "MeshMaterialName": "HE_Shield_Edge"
+        },
+        {
+            "MeshName": "GT_Biodome_Glass.obj",
+            "MeshMaterialName": "ObjectHighlight"
+        },
+        {
+            "MeshName": "GT_Biodome_Terrain.obj",
+            "MeshTextureName": "TERRAIN_ROCK_02.png",
+            "MeshGlossTextureName": null, 
+            "MeshEmissionTextureName": null
+        },
+        {
+            "MeshName": "GT_Biodome_Mountains_Vegetation_Rocks.obj",
+            "MeshMaterialName": "Scenery_ALL"
+        }
+    ],
+
+    "JSONBLOCK":{
+        //Anchor
+        "GameObject|_anchor": {
+            "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+            },
+            "GameObject|GSOAnchorAutominer324": {
+                "UnityEngine.Transform": {
+                    "localPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "localEulerAngles": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    }
+                },
+                "GameObject|GSO_Anchor": {
+                    "UnityEngine.Transform": {
+                        "localPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "localEulerAngles": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        }
+                    }
+                },
+              "BlockAnchor":{
+               "m_GroundPoint":{
+                "localPosition": {
+                "x": 0.0,
+                "y": -1.6,
+                "z": 0.0
+              }},
+              "m_SnapToleranceUp":2,
+              "m_SnapToleranceDown":3.5
+            }
+            }
+        },
+
+        "ModuleAnchor": {
+          "m_APsBlockedByAnchor": [
+            // 1, 2, 3, 4, 
+            5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+            17, 18, 19, 20, 21, 22, 23, 24, 24, 26, 27, 28
+        ]
+        },
+
+        //Autominer
+        "GameObject|ItemSpawnLocation":{
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 3.5,
+                "y": 0.8,
+                "z": 7.3
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+          }
+           },
+          "ModuleItemProducer": {
+            "m_ItemSpawnTransform" : "/ItemSpawnLocation/Transform.",
+             "m_CompatibleChunkTypes": [
+              // 1
+              // 3
+               32
+              // 1, 1, 1, 1, 1, 3, 3, 32
+            ],
+            "m_OperationMode": 1, //1 = inf production when anchored
+            "m_SecPerItemProduced": 23,//how long till we spew out chunk //9, 15, 18, 23, 27
+            "m_MinDispenseInterval": 23,//minimum time between chunks
+            "m_ItemSpawnVelocity": 10.0,
+            "m_ItemSpawnAngularVelocity": {
+              "x": 10.0,
+              "y": 10.0,
+              "z": 10.0
+            },
+            /* "m_ProduceWhileUnloaded": true,
+            "m_ResourceSiphonPoint": {
+              "x": -1.0,
+              "y": -1.0,
+              "z": -0.5
+            },
+            "m_ResourceGroundRadius": 100, */
+            "m_OperatingSFXType": 0,
+            "m_ProduceSFXType": 45,
+            "m_ProduceSFXDelay": 0.0
+          }
+    }
+}

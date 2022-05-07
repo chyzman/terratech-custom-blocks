@@ -1,0 +1,341 @@
+/*
+Description:    A smaller radar for LK's support vehicles.
+Pros:           Armored and has decent HP
+                Has 4 infantry-grade guns for defense
+
+Cons:           Heavy and Expensive. 
+                Compared to the Oracle Radar Tower, it has less radar range.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Combat Radar",
+    "Description":          "A heavy-duty radar armed with four machineguns, ruggedly built for frontline use. This is also equipped with a rangefinder, increasing one's weapon range.",
+
+    "ID": 419034,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 5,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 27600,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:     Main Body:    8 Titania Alloy, 4 Plubonic Alloy
+                Radar:        4 Sensory Transmitter, 2 Ion Pulse Cell
+                Guns:         4 Blast Caps
+    */
+    "Recipe" : { 
+        // Main Body
+        "54": 8, "53": 4, 
+        // Radar
+        "51": 12, "56": 8,
+        // Guns
+        "46": 4
+    },
+      
+    "IconName":             "LK_radar_combat_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":             null,                               // Name of the block's mesh                                        
+    "MeshColliderName":     null,                               // Name of the block's collider.
+    "NoBoxCollider":        false,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP": 2400,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels & Electronics
+                            
+    "Mass": 16.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels & Electronics have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents": { "x": 2, "y": 2,"z": 2 },
+
+    "APs": [ 
+        // Bottom Face
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 0, "y": -0.5, "z": 1 },
+        { "x": 1, "y": -0.5, "z": 0 }, { "x": 1, "y": -0.5, "z": 1 },
+    ],
+
+
+    // Advanced Settings
+    "PrefabReference":  "17", // GSO ZK-47 Block ID
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+
+    
+    "SubObjects":[
+        // Replace the original meshes with new ones
+        {
+            "ObjectName":                   "m_GSO_MgunFixed_111_Base",
+            "MeshName":                     "LK_radar_combat_body.obj",    
+            "ColliderMeshName":             "LK_radar_combat_body_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 1, "y": 0, "z": 1 },
+            "Rotation":                     { "x": 0, "y": 90, "z": 0 },
+        },
+        {
+            "ObjectName":                   "m_GSO_MgunFixed_111_Barrel",
+            "MeshName":                     "LK_radar_combat_barrel.obj",    
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+        {
+            "ObjectName":                   "_gimbalRot90/_gimbalBase_copy/_gimbalElev/_barrel/_recoiler/m_GSO_MgunFixed_111_Barrel",
+            "MeshName":                     "LK_radar_combat_barrel.obj",    
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+
+        {
+            "ObjectName":                   "_gimbalRot180/_gimbalBase_copy/_gimbalElev/_barrel/_recoiler/m_GSO_MgunFixed_111_Barrel",
+            "MeshName":                     "LK_radar_combat_barrel.obj",    
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+        {
+            "ObjectName":                   "_gimbalRot270/_gimbalBase_copy/_gimbalElev/_barrel/_recoiler/m_GSO_MgunFixed_111_Barrel",
+            "MeshName":                     "LK_radar_combat_barrel.obj",    
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0, "y": 0, "z": 0 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+
+        // Add the radar mesh
+        {
+            "ObjectName":                   "radar",
+            "MeshName":                     "LK_radar_combat_radar.obj",    
+            "Position":                     { "x": 0.5, "y": 0.25, "z": 0.5 }  
+        },
+
+        // Adjust the other components
+        {
+            "ObjectName":                   "_gimbalBase",
+            "Position":                     { "x": 0.5, "y": -0.13, "z": 0.9 }
+        },
+        {
+            "ObjectName":                   "_gimbalRot90/_gimbalBase_copy",
+            "Position":                     { "x": -0.5, "y": -0.13, "z": 0.9 }
+        },
+        {
+            "ObjectName":                   "_gimbalRot180/_gimbalBase_copy",
+            "Position":                     { "x": -0.5, "y": -0.13, "z": -0.1 }
+        },
+        {
+            "ObjectName":                   "_gimbalRot270/_gimbalBase_copy",
+            "Position":                     { "x": 0.5, "y": -0.13, "z": -0.1 }
+        },
+
+        {
+            "ObjectName":                   "_gimbalRot90",
+            "Rotation":                     { "x": 0, "y": 90, "z": 0},      
+        },
+        {
+            "ObjectName":                   "_gimbalRot180", 
+            "Rotation":                     { "x": 0, "y": 180, "z": 0},      
+        },
+        {
+            "ObjectName":                   "_gimbalRot270",
+            "Rotation":                     { "x": 0, "y": -90, "z": 0},      
+        },
+
+        // Remove the unneeded meshes
+        {
+            "ObjectName":                   "m_GSO_MgunFixed_111_Mount",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot90/_gimbalBase_copy/m_GSO_MgunFixed_111_Mount",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot180/_gimbalBase_copy/m_GSO_MgunFixed_111_Mount",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot270/_gimbalBase_copy/m_GSO_MgunFixed_111_Mount",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+
+        {
+            "ObjectName":                   "m_GSO_MgunFixed_111_Body",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot90/_gimbalBase_copy/_gimbalElev/m_GSO_MgunFixed_111_Body",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot180/_gimbalBase_copy/_gimbalElev/m_GSO_MgunFixed_111_Body",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        {
+            "ObjectName":                   "_gimbalRot270/_gimbalBase_copy/_gimbalElev/m_GSO_MgunFixed_111_Body",  
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+        },
+        
+        
+    ],
+
+    "Deserializer": {
+        "GameObject|radar":{
+            "Spinner": {
+                "m_Speed": 0.1,                         // Dictates the speed of the rotation
+                "m_AutoSpin": true,                    // Enables or disables the object's ability to spin automatically. 
+      
+                                                        // Mileage varies between blocks, but in general, any block that has a spinning component 
+                                                        // will have this module and will work.
+      
+                "m_SpinUpTime": 1.0,                    // Dictates the amount of time required for the object to spin in full speed
+                "m_CurrentAngle": 0,                    // Dictates the starting angle of the object when spawned into the world
+
+                "m_RotationAxis": { "axis": 1 },
+            }
+        },
+
+        "GameObject|_gimbalBase": {
+            // Change the aiming limits
+            "GimbalAimer": {
+                "rotationLimits": [-40, 40],
+                "rotationAxis": 2,          // Changes the axis of rotation for the gimbal component
+                                            // 1 = Y (Vertical)
+                                            // 2 = Z (Horizontal)
+                "aimClampMaxPercent": 360   // Prevent gimbals from neutralizing due to relative angle
+            },
+
+            "GameObject|_gimbalElev": {
+                // Change the aiming limits
+                "GimbalAimer": {
+                    "rotationLimits": [-1, 1],
+                    "rotationAxis": 1,          // Changes the axis of rotation for the gimbal component
+                                                // 1 = Y (Vertical)
+                                                // 2 = Z (Horizontal)
+                    "aimClampMaxPercent": 360   // Prevent gimbals from neutralizing due to relative angle
+                },
+
+                "GameObject|_barrel": {
+                    "GameObject|_bulletSpawn": {
+                        "UnityEngine.Transform": {
+                            "localPosition": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0.7
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        // We must rotate the parent of the GimbalAimers for it to know how to aim relatively for the other sides
+        // "Duplicate|" accepts reference paths for copying GameObjects elsewhere within the block
+        "GameObject|_gimbalRot180": {
+            "Duplicate|/_gimbalBase": {}
+        },
+        "GameObject|_gimbalRot90": {
+            "Duplicate|/_gimbalBase": {}
+        },
+        "GameObject|_gimbalRot270": {
+            "Duplicate|/_gimbalBase": {}
+        },
+    
+        "ModuleWeapon": {
+            "m_FireSFXType": 11,
+        },
+    
+        // Gun Attributes
+        "ModuleWeaponGun": {
+            "m_ShotCooldown": 0.01,
+
+            "m_FireControlMode": 1,     // Dictates how the guns will fire
+                                        //  0 =   The guns will fire one at a time
+                                        //  1 =   All guns will fire at the same time
+                                        
+        },
+
+        //----- Module Radar: Usually seen on radar blocks; allows basic detection of targets and radar UI toggling. -----//
+        "ModuleRadar": {
+            "m_Priority": 9,            // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+            "m_MiniMapType": 1,         // Dictates the minimap provided by the block. Only accepts 0 or 1.
+                                        // 0 = Small, blank Radar minimap
+                                        // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+            
+            "m_Range": 600,             // Dictates how far the radar detects objects in the world. For comparison, an HE Radar has a value of 300.
+        },
+
+        //----- Module Vision: Usually seen on cabs so they can "see" targets and aim their weapons at a specific range. -----//
+        "ModuleVision": {
+            "visionConeAngle":  360.0,  // Dictates the "vision" cone provided by this block. The cone is aimed at the front of the block. 
+                                        // When an enemy is within this cone angle, weapons attached on the Tech will begin to aim at it. By default value is 360
+
+            "visionRange":      600,    // Dictates how far the Tech detects enemies. 
+                                        // 900 is the maximum reasonable value considering draw and render distance, any more is simply overkill as the game will despawn enemies at a certain distance. 
+        },
+
+    },
+
+
+
+
+
+}

@@ -1,0 +1,50 @@
+
+{
+    "Name": "R.R. SCU Event Horizon Extender",
+    "Description": "A handy accessory that makes SCU just a little bit better.",
+    "ID": 546317,
+  
+    "Faction": 3,
+    "Category": 5,
+    "Rarity": 2,
+    "Grade": 0,
+    "Price": 489,
+    "HP": 200,
+    "Mass": 0.5,
+  
+    "Recipe": "5,7,13,32",
+  
+    "IconName": "BuffBlock_RR_SCUExtender.png",
+    "MeshName": "BuffBlock_RR_SCUExtender.obj",
+  
+    "MeshMaterialName": "RR_Main",
+    "EmissionMode": 1,
+  
+    "ColliderMeshName": null,
+  
+    "BlockExtents":
+    {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+  
+   "APs": [
+     //Bottom
+    { "x": 0.0, "y":-0.5, "z": 0.0 }
+  ],
+    
+     "GamePrefabReference": null,
+
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+		"m_BuffPath": [
+			"ModuleHeart.m_EventHorizonRadius",
+			"ModuleHeart.m_StartShrinkingRadius"
+		],
+		"m_Strength": [0.0, 0.0],
+		"m_AddAfter": [5.0, 30.0],
+		"m_NeedsToBeAnchored": [false, false]
+	}
+  }
+}

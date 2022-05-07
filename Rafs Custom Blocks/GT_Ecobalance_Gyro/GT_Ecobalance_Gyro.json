@@ -1,0 +1,272 @@
+{
+  "Name": "GreenTech Ecobalance Gyro",
+  "Description": "The Ecobalance Gyro uses a supercharged Luxite Crystal to restore Tech balance when required, not only keeping it upright but also braking it in any direction.",
+  "ID": 911091, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 20784, 
+  "HP": 2400, 
+  "Mass": 12,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "32, 32, 32, 32, 32, 32, 52, 52, 53, 54, 56, 56, 59, 59, 63",
+  "IconName": "GT_Ecobalance_Gyro_Icon.png", 
+  "MeshName": "GT_Ecobalance_Gyro.obj",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+   "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": 1.5,"z": 0},
+    {"x": 0, "y": 1.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 1, "y": 1.5,"z": 0},
+    {"x": 1, "y": 1.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": 1.5},
+    {"x": -0.5, "y": 1, "z": 0},
+    {"x": -0.5, "y": 1, "z": 1},
+    {"x": 1.5, "y": 1, "z": 0},
+    {"x": 1.5, "y": 1, "z": 1},
+    {"x": 0, "y": 1, "z": -0.5},
+    {"x": 0, "y": 1, "z": 1.5},
+    {"x": 1, "y": 1, "z": -0.5},
+    {"x": 1, "y": 1, "z": 1.5}
+    ],
+  
+  "GamePrefabReference": "BF_AirBrake_411",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "Gyro_Ball",
+      "MeshName": "GT_Ecobalance_Gyro_Ball.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	  "MeshEmissionTextureName": "GreenTech 3.png"
+   }
+  ],
+
+  "JSONBLOCK": {
+   
+    "Reference|GSO_Hoverjet_111/m_GSO_Hover_111_Jet/_hoverJet/ParticleSystem_GSO_HoverPad": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+         },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+       },
+       "ParticleSystem": {
+        "startColor": {
+          "r": 1,
+          "g": 0.6,
+          "b": 0.2,
+          "a": 0.8
+        },
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "duration": 1,
+        "playbackSpeed": 4,
+        "enableEmission": true,
+        "emissionRate": 0.5,
+        "startSpeed": 0.0,
+        "startSize": 1.1,
+        "startLifetime": 6,
+        "gravityModifier": 0.0,
+        "maxParticles": 10,
+        "simulationSpace": 0,
+        "scalingMode": 2
+      },
+      "ParticleSystemRenderer": {
+        "alignment": 0,
+        "renderMode": 4,
+        "sortMode": 0,
+        "lengthScale": 2.0,
+        "velocityScale": 0.0,
+        "cameraVelocityScale": 0.0,
+        "normalDirection": 1.0,
+        "shadowBias": 0.0,
+        "sortingFudge": 0.0,
+        "minParticleSize": 0.0,
+        "maxParticleSize": 0.5,
+        "maskInteraction": 0,
+        "trailMaterial": null,
+        "enableGPUInstancing": false,
+        "allowRoll": true,
+        "mesh": {}
+      }
+    },
+    "Duplicate|ParticleSystem_GSO_HoverPad":{},
+    "GameObject|_spindle1":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+    "GameObject|_spindle2":{
+      "GameObject|Gyro_Ball":{
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+           },
+           "localScale":{
+            "x": 1.1,
+            "y": 1.1,
+            "z": 1.1
+           }
+         }
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       },
+      "Spinner": {
+        "m_Speed": 0.6,
+        "m_RotationAxis": {
+          "axis": 1
+        },
+        "m_SteerAxis": {
+          "axis": 1
+        },
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 0.1
+      }
+    },
+    "Spinner": {
+      "m_Speed": 0.6,
+      "m_RotationAxis": {
+        "axis": 2
+      },
+      "m_SteerAxis": {
+        "axis": 2
+      },
+      "m_AutoSpin": true,
+      "m_SpinUpTime": 0.1
+    }
+  },
+    "GameObject|BF_AirBrake_411": {
+      "GameObject|_effector": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.5, "y":0.5, "z":0.5 }
+          }
+      }
+    },
+    "ModuleAirBrake": {
+      "m_Strength": {
+        "x": 10.0,
+        "y": 10.0,
+        "z": 10.0,
+        "normalized": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "magnitude": 5.0,
+        "sqrMagnitude": 25.0
+      },
+      "m_MinForceThreshold": 28.0
+    },
+    "ModuleGyro": {
+      "m_TrimPitchMax": 0.0,
+      "m_TrimAdjustSpeed": 0.0,
+      "m_UsePassive": 0,
+      "m_PassiveStrength": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "m_UseActive": 1,
+      "m_ActiveSpeed": 290.0,
+      "m_ActiveStability": 0.01,
+      "m_ActiveAxisScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "m_RotationAnimSpeed": 4.0,
+      "m_RotationMinSpeed": 15.0,
+      "m_RotationMaxSpeed": 350.0,
+      //"m_Trim": 0.0,
+      "m_HasTurnInput": false,
+      "m_HasDriveInput": false,
+      "m_ControlTrim": 0.0,
+      "m_ControlTrimTarget": 0.0
+      /*"m_ModuleType": 0,
+      "Trim": 0.0,
+      "useGUILayout": true,
+      "enabled": true,
+      "isActiveAndEnabled": true,
+      "transform": "/",
+      "tag": "_V",
+      "name": "BF_Gyro_AllAxis_Active_111",
+      "hideFlags": 0*/
+    },
+    "ParticleManager.ModuleParticleManager": {
+      "Input": [
+        {
+          "m_system": "/ParticleSystem_GSO_HoverPad/ParticleSystem.",
+          "type": "Attach"
+        },
+         {
+          "m_system": "/ParticleSystem_GSO_HoverPad_copy/ParticleSystem.",
+          "type": "Attach"
+        } 
+      ]
+    }
+  }
+}

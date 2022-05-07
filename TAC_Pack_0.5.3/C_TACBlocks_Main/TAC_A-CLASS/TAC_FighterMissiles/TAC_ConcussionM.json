@@ -1,0 +1,754 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "TAC Impact Interception Missile",
+  "Description": "Impact missiles collide with things.  This basically means they can collide with the enemy, collide with bullets, even collide with themselves! \nThis is used to toss enemies, and despite it's small size, it's not very effective when spammed. \n\nI would also not advise using it against lone cabs as it will ruin your day. \n\n\n\nwait why is this called an impact missile if it deals explosive damage?  Why not Contact Missile?  \nwell someone beat it us to it first.  I think.", //You can make multiple lines with \n
+  //Impact Missiles can intercept many things, given you aim it well.
+  //Indirect reference to R-Type's Contact and Trace Missiles all in one block with Tactics logic.
+  "ID": 584324, //A random ID that MUST be unique
+  //"IDNetHex": "4ff33d9399399999", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 18078,//22188
+  //Compared to the HE Seeker Missile (Price: 22188), which is more expensive:
+  //These missiles, while they have more health, are much more deadly when they self-destruct
+  //Explosion is smaller and weaker in trade-off for much more direct impact damage
+  //Only fires one missile while the seeker fires two
+  //Projectiles can collide with itself unlike the seeker that allows cross-projectile phasing
+  //However, these missiles have unparalleled control at AOE attack denial when they DO hit
+
+
+  "HP": 400,//For the area this consumes compared to the normal 450 per TAC block, this isn't a lot.
+  "Mass": 9.0,//Heavy
+
+  "IconName": "MissilePurse.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+
+  "Recipe":  "13, 13, 13, 13, 19, 19, 44, 45, 46, 47, 52, 52, 54, 65",
+  //Some rodius and erudite here for the green effects
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  /*  EITHER  */
+  "Cells": [ //The grid space to be occupied
+
+  ],
+  "APs": [ //The location of APs on the block. For use with "Cells"
+     //Bottom
+     { "x":0, "y":-0.5, "z":0 },
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1 //Massive, for now
+  }, // A vector of (1, 1, 1) returns a one-celled block
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. Only works with "BlockExtents":
+
+
+
+  // Delete /* and */ if using
+   
+  
+  //OPTIONAL
+
+	"GamePrefabReference": "HE_BombBay_(113)",//Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 }, //Shift the subobjects of the block prefab by x, y and z
+  "ReferenceScale": { "x": 1, "y": 1, "z": 1 }, //Shift the subobjects of the block prefab by x, y and z
+
+ 
+  
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+  "SubObjects": [ 
+    { //Base Model
+      "SubOverrideName": "m_BaseModel",
+      "DestroySubReferenceRenderer": true,
+      // "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+      "MeshName": "FighterMissileBay.obj",
+      "ColliderMeshName": "FighterMissileBay.obj",
+      "MeshMaterialName": "HE_Main",
+      //"SubOffset": { "x": 4.5, "y": 0, "z": 4.5 }
+    },
+    { //Replacing missile with TAC Missile
+     "SubOverrideName": "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Bomb/GSO_Block_111",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterMissileBayMissile.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    //Begin Hatches
+    { //Setting hatch to open
+     "SubOverrideName": "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_R/m_GSO_Block_112",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterMissilebayHatch.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+    { //Setting hatch to open
+     "SubOverrideName": "_barrel_1/_recoiler/m_HE_BombBay_113_Base/m_HE_BombBay_113_Door_L/m_GSO_Block_113",
+      "DestroySubReferenceRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "FighterMissilebayHatch.obj",
+      "MeshTextureName": null,
+      "MakeBoxCollider": false,
+      "MeshMaterialName": "HE_Main"
+    },
+
+    //DESTROY ALL UNWANTED
+    {
+      "SubOverrideName":"m_HE_BombBay_113_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_HE_BombBay_113_Bomb",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_HE_BombBay_113_Door_L",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+    {
+      "SubOverrideName":"m_HE_BombBay_113_Door_R",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+    },
+  ],
+	
+  //
+  // Missssssssssssssssssssile
+  //
+  "JSONBLOCK": { //Root GameObject
+    "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0}
+      }
+    },
+    "GameObject|m_BaseModel": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":-0.5, "z":0.0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+      },
+      "UnityEngine.MeshCollider":{
+        "gameObject": {
+          "layer": 8, 
+        }
+      },
+    },
+
+    "GameObject|_barrel_1": {
+      "UnityEngine.Transform": {
+        // "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0},
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+      },
+      "GameObject|_spawnBullet": {//This literally is the bulletSpawn
+        "UnityEngine.Transform": {
+          // "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":-0.25, "z":0},
+          // "localEulerAngles": { "x":0, "y":0, "z":0 },
+        }
+      },
+      "GameObject|_recoiler": {
+        "UnityEngine.Transform": {
+          "localScale": { "x":0.5, "y":0.5, "z":0.5 },
+          "localPosition": { "x":0, "y":-0.5, "z":0.5 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        "GameObject|m_HE_BombBay_113_Base": {
+          "GameObject|m_HE_BombBay_113_Door_R": {
+            "Reference|GSO_Block_112/m_GSO_Block_112": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":2, "y":2, "z":2 },
+                "localPosition": { "x":0.475, "y":0, "z":0.025 },
+                "localEulerAngles": { "x":270, "y":0, "z":0 },
+              },
+            },
+          },
+          "GameObject|m_HE_BombBay_113_Door_L": {
+            "Reference|GSO_Block_311/m_GSO_Block_113": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":-2, "y":2, "z":2 },
+                "localPosition": { "x":-0.475, "y":0, "z":0.025 },
+                "localEulerAngles": { "x":270, "y":0, "z":0 },
+              },
+            },
+          },
+          "GameObject|m_HE_BombBay_113_Bomb": {
+            "Reference|GSO_Block_111/GSO_Block_111": {
+              "UnityEngine.Transform": {
+                "localScale": { "x":3, "y":3, "z":3 },
+                "localPosition": { "x":0, "y":0, "z":-0.35 },
+                "localEulerAngles": { "x":270, "y":0, "z":0 },
+              },
+            },
+          },
+        }
+      }
+    },
+
+
+    //Back to GameObject
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.0,
+      //Remember, always say no to "die"
+      "Instantiate|deathExplosion": {
+        "Explosion": { //wOW a component
+          "m_DamageType" : "Plasma", //What damage modifier the explosion does
+          "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+          "m_ExplosionType": "Chemical", //What the explosion SOUNDS like
+          "m_EffectRadius": 3.5, //
+          "m_EffectRadiusMaxStrength": 2.5, 
+          "m_MaxDamageStrength": 1250, //This affects splash damage
+          "m_MaxImpulseStrength": 200 //How hard to push things, explosion force
+        },
+        "Reference|GSO_BigBertha_845.FireData.m_BulletPrefab/Projectile.m_Explosion/Sparks": { 
+          "UnityEngine.ParticleSystemRenderer": {
+            // "alignment": 0,
+            "renderMode": 0,
+            // "sortMode": 0,
+          },
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startDelay": 0.0,
+                "startColor": {
+                  "r": 0.25,
+                  "g": 1.0,
+                  "b": 0.4,
+                  "a": 0.6
+                },
+                "playbackSpeed": 1.0,
+                "gravityModifier": 0.0,//No gravity
+                "shape": {
+                  // "radiusMode": true,
+                  "shapeType": "Sphere",
+                  "arc": 360.0,
+                  "radius": 0.0,
+                  "radiusSpread": 5.0,
+                  "angle": 360.0,
+                  "length": 0.5,
+                  "randomDirectionAmount": 10.0,
+                },
+                "startSize": 10,
+                "startSpeed": 5,               //How far you want the particles to spread
+                // "emissionRate": 75.0,
+                "maxParticles": 7500,
+                // "maxParticles": 0,
+                // "emission": {
+                //   "rateMultiplier": 50.0,
+                //   "rateOverTimeMultiplier": 0.2,
+                // }
+                //"shape": {
+                //  "texture": {
+                //    "mainTexture": "EPMCEnergyBall.png",
+                    // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                //  }
+                //},
+              }
+            }
+          }
+        },
+        "Duplicate|Sparks": { 
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localEulerAngles": { "x":180, "y":0, "z":0 },
+          },
+        },
+      },
+    },
+    "Damageable": {
+      "m_DamageableType": 1, 
+      "m_AoEDamageBlockPercent": 0.2,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleWeapon": { //Component
+      "m_FireSFXType": "VENRPGLauncher", //Firing noise
+      "m_LimitedShootAngle": 30,
+      "m_RotateSpeed" : 150.0 //SPEED of turret aiming, not homing
+    },
+    "ModuleWeaponGun": { // Another component
+      //"m_NumCannonBarrels" : 3,//[doesn't change anything]How many shots can be fired before animation plays
+      //"m_FireControlMode": "AllAtOnce", //Sequenced for salvo
+      "m_ShotCooldown" : 3.5, //This is the cooldown between every burst shot.
+      // "m_DeploySFXType": "BFLaserGatlingDeploy",
+      // "m_ResetBurstOnInterrupt" : true,
+      // "m_CooldownVariancePct" : 0.24, 
+      "m_BurstShotCount" : 1, //Number of shots before the gun "overheats"
+      "m_BurstCooldown" : 0.0, //8 seconds between bursts.
+      //"m_SeekingRounds" : true, //Rounds that home in. Missiles have these without gravity(0.0 "m_BulletSpin") - Fails to do this currently
+      // "m_HasCooldownAnim" : false, //Doesn't change anything
+      // "m_Animator" : null,
+      "m_FiringData": null //Test to clear internal cache, probably does nothing good or bad
+      //"m_DeploySFXType": 77 //This is supposed to make it sound like a big bertha(When it deploys on pressing Space[BF Block] or open when anchored)
+    
+    },//comma
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 10, //YEET the missile before booster
+      //"m_BulletSprayVariance": 0.0, //Bullet inverse-accuracy 
+      //"m_BulletSpin": 0, //Adds Gravity and likely reduces tracking ability - 
+      "m_KickbackStrength": 1.0, // Would you like to become a plane
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"    
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 }, 
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+        },
+        // "UnityEngine.Rigidbody": {//This is how to enable/disable gravioli
+        //   "useGravity": true,
+        //   "centerOfMass": { "x":0, "y":0, "z":0 },
+        // },     
+        // "UnityEngine.MeshFilter": {
+        //   "sharedMesh": "FighterMissileBayMissile.obj"
+        // },
+        "GameObject|m_HE_Bomb": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":0 },
+            "localScale": { "x":1.5, "y":1.5, "z":1.5 }, 
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+          },
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": "FighterMissileBayMissile.obj"
+          },
+        },  
+        "PlayAudioLoop": { //Component
+          "m_SFXType" : "AnimGSODeliCannonMob",//"AnimCrateOpen",
+        },
+        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+          "gameObject": {
+            "layer": 8 //ID 524288Layers:
+              // (0) Default//Collides with normal things
+              // (1) TransparentFX //Bypasses Shields, hits self
+              // (2) Ignore Raycast//Raycasts cannot detect, hits self
+              // (3) 
+              // (4) Water//
+              // (5) UI//No collision
+              // (6) 
+              // (7) 
+              // (8) Tank //Bypasses shields, collides with self
+              // (9) Cosmetic//Collides with nothing.
+              // (10) Bullet //normal projectile
+              // (11) Container //Crates, Collides with nothing.
+              // (12) Shield //Clips through shields, collides with self
+              // (13) Terrain //
+              // (14) TankIgnoreTerrain //Ignores terrain, hits self
+              // (15) Scenery //normal
+              // (16) Pickup //normal
+              // (17) Trigger //No collision
+              // (18) SceneryIgnoreRaycast //Raycasts cannot detect
+              // (19) 3D UI //No collision
+              // (20) WheelSuspension // normal
+              // (21) ShieldBulletFilter //collides with bullets and shields
+              // (22) TerrainCollidingParticles
+              // (23) ShieldTechFilter //collides with Techs
+              // (24) TerrainOnly //idk
+              // (25) RenderImageForPrefab
+              // (26) SceneryCoarse
+              // (27) Landmarks
+              // (28) 
+              // (29) 
+              // (30) 
+              // (31) 
+          },
+          "radius": 0.2,
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "height": 0.2,
+          "direction": 2
+        },
+        "GameObject|_particles": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":1, "y":1, "z":1 }, 
+            "localPosition": { "x":0, "y":0, "z":-0.2 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "GameObject|SmokeTrail": {
+            "UnityEngine.LineRenderer": {
+              // "startWidth": 0.35,
+              // "endWidth": 0.175,
+              // "textureMode": 1,
+              // "numCapVertices": 8,
+              "startColor": {
+                "r": 0.3,
+                "g": 0.3,
+                "b": 1.0,
+                "a": 0.8, 
+              },
+              // "endColor": {
+              //   "r": 0.6,
+              //   "g": 0.6,
+              //   "b": 1.0,
+              //   "a": 0.2, 
+              // },
+            },
+            "SmokeTrail": {
+              "numberOfPoints": 15,
+              // "updateSpeed": 0.07,
+              "riseSpeed": 0.1,
+            }
+          }
+        },
+        "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/_boostJet": {
+          "UnityEngine.Transform": {
+            "localScale": { "x":0.8, "y":0.8, "z":1.25 }, 
+            "localPosition": { "x":0, "y":0, "z":-0.5 },
+            // "localEulerAngles": { "x":0, "y":0, "z":0 }
+          },
+          "BoosterJet": {
+            "m_Force": 0.1,
+            //"m_BurnRate": 60.0,
+            //"m_FireRateFalloff": 3.0,
+            //"m_ConsumesFuel": true,
+            //"BurnRate": 60.0,
+            //"ConsumesFuel": true
+          },
+          "GameObject|m_BoosterRocketFlame_01": {
+            "UnityEngine.Transform": {
+              // "localScale": { "x":1, "y":1, "z":1.5 }, 
+              "localPosition": { "x":0, "y":0, "z":0 },
+              // "localEulerAngles": { "x":0, "y":0, "z":0 }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              "UnityEngine.Transform": {
+                // "localScale": { "x":1, "y":1, "z":1.5 }, 
+                "localPosition": { "x":0, "y":0, "z":0 },
+                // "localEulerAngles": { "x":0, "y":0, "z":0 }
+              },
+              "UnityEngine.MeshRenderer": {
+                "material": {
+                  "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                  "shaderKeywords": [
+                    "_ALBEDO",
+                    "_EMISSION",
+                    "_NORMALMAP"
+                  ],
+                  "mainTexture": "EPMCEnergyBall.png",
+                  "globalIlluminationFlags": 1,
+                }
+              },
+              "UnityEngine.ParticleSystem": {
+                "startColor": {         //Determine the color of the projectile
+                  "r": 0.1,
+                  "g": 0.1,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                // "startDelay": 0.0,
+                // "loop": true,
+                // "playOnAwake": true,
+                // "duration": 0.2,
+                // "playbackSpeed": 1.0,
+              },
+            }
+          }
+        },
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : "Explosive", //What damage modifier the weapon does
+          "m_Damage": 500 //Damage for successful projectile contact hit
+        },
+        // "PlayAudioLoop": { //Component
+        //   "m_SFXType" : "PayloadIncoming",//" CabDetachKlaxon", -earrip lol //IntroCabImpact,Artefact,IntroWhoosh,IntroWindAndAlarm
+        // },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_LifeTime": 2.5, //Time before BOOM
+          "m_DeathDelay": 0.00001,
+          "m_ExplodeAfterLifetime": true,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel" : true,
+          "m_StickOnContact" : false,
+          "m_ExplodeOnStick" : false,
+          "m_HideProjectileOnStick": false,
+          "m_SingleImpact" : false, // The Bees are Relentless and will continuously deal damge while in the Enemy
+          "m_CanHaveGravity" : true,
+          //"m_GravityScale" : 0, //You can do a fraction of gravity to allow for dramatic effect
+          //"m_StickOnTerrain" : true,
+          "m_ImpactSFXType" : "Mortar", //BAM
+          "m_FlightSFXType" : "MissileMicro", // Allows for homing effect
+          //"m_Trail" : {"startWidth": 3},
+          //"m_Explosion": null
+          "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+            "Explosion": { //wOW a component
+              "m_DamageType" : "Plasma", //What damage modifier the explosion does
+              "m_ExplosionSize": 2, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+              "m_ExplosionType": "Fuel", //What the explosion SOUNDS like
+              "m_EffectRadius": 2, //Blompf
+              //Was 20
+              "m_EffectRadiusMaxStrength": 1, 
+              //Was 12.5
+              "m_MaxDamageStrength": 25,// Most of the damage is already done by the shieldiercing missile
+              "m_MaxImpulseStrength": 200 //How hard to push things, explosion force -YEET
+            },
+            "GameObject|Sparks": { 
+              "UnityEngine.ParticleSystemRenderer": {
+                // "alignment": 0,
+                "renderMode": 0,
+                // "sortMode": 0,
+              },
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startDelay": 0.0,
+                    "startColor": {
+                      "r": 0.25,
+                      "g": 1.0,
+                      "b": 0.4,
+                      "a": 0.6
+                    },
+                    "playbackSpeed": 1.0,
+                    "gravityModifier": 0.0,//No gravity
+                    "shape": {
+                      // "radiusMode": true,
+                      "shapeType": "Sphere",
+                      "arc": 360.0,
+                      "radius": 0.0,
+                      "radiusSpread": 5.0,
+                      "angle": 360.0,
+                      "length": 0.5,
+                      "randomDirectionAmount": 10.0,
+                    },
+                    "startSize": 10,
+                    "startSpeed": 5,               //How far you want the particles to spread
+                    // "emissionRate": 75.0,
+                    "maxParticles": 7500,
+                    // "maxParticles": 0,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    // }
+                    "shape": {
+                      "texture": {
+                        "mainTexture": "EPMCEnergyBall.png",
+                        // "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                      }
+                    },
+                  }
+                }
+              }
+            },
+            "Duplicate|Sparks": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":180, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+            "Duplicate|Sparks_copy": { //Alternate type for actual collisions
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":270, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startDelay": 0.0,
+                    "startColor": {
+                      "r": 0.25,
+                      "g": 1.0,
+                      "b": 0.4,
+                      "a": 0.0
+                    },
+                    "playbackSpeed": 1.0,
+                    "gravityModifier": 0.0,//No gravity
+                    "shape": {
+                      // "radiusMode": true,
+                      "shapeType": "Sphere",
+                      "arc": 360.0,
+                      "radius": 0.0,
+                      "radiusSpread": 5.0,
+                      "angle": 360.0,
+                      "length": 0.5,
+                      "randomDirectionAmount": 10.0,
+                    },
+                    "startSize": 10,
+                    "startSpeed": 2.5,               //How far you want the particles to spread
+                    // "emissionRate": 75.0,
+                    "startLifetime": 3.00,
+                    "maxParticles": 50,
+                    // "maxParticles": 0,
+                    // "emission": {
+                    //   "rateMultiplier": 50.0,
+                    //   "rateOverTimeMultiplier": 0.2,
+                    // }
+                    "collision": {
+                      "enabled": true, 
+                      "type": 1, //Planes or World 
+                      "mode": 0, //3D or 2D 
+                      "colliderForce": 0.15,
+                      "collidesWith": 
+                      {
+                        "m_Mask": -1,
+                        "value": -1//512
+                      },
+                      "radiusScale": 4.0,
+                      "maxCollisionShapes": 250,
+                      "enableDynamicColliders": true,
+                      "multiplyColliderForceByCollisionAngle": 0.1,
+                      "multiplyColliderForceByParticleSize": 0.1,
+                      "multiplyColliderForceByParticleSpeed": 0.1,
+                      // "enabled": false,                              //Setting this to false will break the Particle Weapon
+                      "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                      "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+                      "lifetimeLossMultiplier": 0.25,                     //How fast it will dissappear after contact
+                      "minKillSpeed": 0.0,
+                      "maxKillSpeed": 10000.0,
+                    },
+                  }
+                }
+              }
+            },
+            "Duplicate|Sparks_copy_copy": { 
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localEulerAngles": { "x":270, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+            },
+
+
+            "GameObject|ExplosionBright": null,
+            "GameObject|ExplosionDark": null,
+            "GameObject|ExplosionSmoke": null,
+            // "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Shockwave": {
+            //   "UnityEngine.Transform": {
+            //     "localPosition": { "x": 0, "y": 0, "z": 0 } // Recenter it
+            //   },
+            //   "UnityEngine.ParticleSystem": {
+            //     "main": {
+            //       "m_ParticleSystem": {
+            //         "startSize": 1750.0,
+            //         // "startRotation": 5.0,
+            //         // "startSpeed": 17.5, //How far you want the particles to spread
+            //         "startColor": {
+            //           "r": 1.0,
+            //           "g": 1.0,
+            //           "b": 0.6,
+            //           "a": 1.0
+            //         },
+            //         "duration": 10.0,
+            //         "playbackSpeed": 0.10,
+            //         // "emissionRate": 25.0,
+            //         "maxParticles": 7,
+            //         "emission": {
+            //           "rateMultiplier": 50.0,
+            //           "rateOverTimeMultiplier": 0.2,
+            //           "burst": {
+            //             "count": 7,
+            //             //"cycleCount": 1,
+            //             "maxCount": 7,
+            //             "minCount": 7,
+            //             // "probability": 150,
+            //             // "repeatInterval": 150,
+            //             //"time": 0
+            //           }
+            //         },
+            //       }
+            //     }
+            //   }
+            // },
+            "GameObject|Point light": {//Does work
+              "UnityEngine.Transform": {
+                "localPosition": { "x":0, "y":0, "z":0 },
+                "localScale": { "x":1, "y":1, "z":1 },
+              },  //                  
+              "UnityEngine.Light": {
+                // "cookie": {
+                //   "mainTexture": "LED_BeamBlockB.png",
+                //   "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                //   "color": {
+                //     "r": 0.1,
+                //     "g": 0.2,
+                //     "b": 1.0,
+                //     "a": 0.2
+                //   },
+                // },
+                "cookieSize": 4.0,
+                "spotAngle": 360.0,
+                // "innerSpotAngle": 360.0,
+                "color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 0.0,
+                  "a": 1.0
+                },
+                "colorTemperature": 6570.0,
+                // "areaSize": 25.0,//2.0
+                "intensity": 2.0,//2.0
+                "bounceIntensity": 1.0,
+                "shadowCustomResolution": -1,
+                "shadowBias": 0.5,
+                "shadowNormalBias": 1.0,
+                "shadowNearPlane": 0.2,
+                "renderMode": "Auto",
+                //Auto, ForcePixel, ForceVertex
+                "type": "point",
+                //Spot, Directional, Point, Rectangle, Disc
+                "range": 7.50,
+                "flare": null
+              }, 
+              "FadeInOutLight": {
+                "StartDelay": 0.0,
+                "FadeInSpeed": 0.1,
+                "FadeOutDelay": 0.2,
+                "FadeOutSpeed": 0.2,
+                "FadeOutAfterCollision": true,
+                "UseHideStatus": true,
+                // "goLight": "TheLightSpecifiedAbove",
+                // "canStart": true,
+              }
+            }
+          }
+        },
+        "SeekingProjectile": {
+          "m_TargetingType" : "RandomBlockOnVehicle", //Where we head to when locked onto a target
+          //   public enum TargetType
+          // {
+          //   CenterOfMass,
+          //   BestAimCabOrCentre,
+          //   RandomBlockOnVehicle
+          // }
+          // }
+          "m_ActivationDelay": 0.15, //How long before we aim at the target?
+          "m_VisionRange": 150, //How far can we see targets?
+          //Was 200
+          "m_VisionConeAngle": 90, //How wide can we see targets?
+          "m_TurnSpeed": 30 // How strong the turn is towards the enemy
+        },
+        "Reference|HE_CruiseMissile_121/FireData.m_BulletPrefab/MissileProjectile.": {
+          "m_UsesGravity" : true,
+          "m_ArmDelay" : 0.15,
+          "m_BoosterActivationDelay" : 0.15,
+          "m_DeathDelayNotArmed" : 0.15,
+          "m_MaxBoosterLifetime" : 1.75 // How long till the Bees run outta juice
+        }
+      }
+    } 
+  }
+}

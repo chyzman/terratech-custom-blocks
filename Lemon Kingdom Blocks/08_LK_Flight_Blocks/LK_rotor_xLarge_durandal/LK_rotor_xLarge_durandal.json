@@ -1,0 +1,1017 @@
+/*
+Description:    A large rotor designed by Saelem Black as part of a block trade.
+Pros:           Possibly the strongest rotor in the game. Can also do melee damage.
+Cons:           Heavy and expensive. Very fragile for its size.
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Durandal XL Rotor",
+    "Description":          "An extremely powerful rotor capable of carrying the Lemon Kingdom's crusading and civilian materiel. Its sharpened rotor blades can also damage enemies.\n\n\"We should do more of this 'Technology Exchange' more often! Dr. Black has given such ideas! And his taste for coffee is to be admired!\"\n\n - Gregory Rook, Guildsman, Note #64" ,
+    "ID": 117017,           // This is the Block ID; it must be unique
+  
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)  
+                            // 7        = Better Future
+
+    "Category": 8,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+                                       
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+
+    "Price": 262560,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+    /*
+    Recipe:     Body:                   32 Rugged Fiblar, 8 Plubonic Alloy
+                Rotor/Sword Blades:     656 Fibre Plating
+                Engine:                 24 Thermo Jet, 16 Fuel Injector
+    */
+    "Recipe":  {
+        // Body
+        "52": 32,  "53": 8,
+        // Rotor/Sword Blades
+        "43": 656, 
+        // Engine
+        "63": 24, "47": 16
+    },
+
+    "IconName":                     "LK_rotor_xLarge_durandal_rotor_icon.png",                  // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                     null,                                                       // Name of the block's mesh                                        
+    "MeshColliderName":             null,                                                       // Name of the block's collider.
+    "NoBoxCollider":                false,
+
+    "TextureName":                  "LK_tex_1.png",
+    "GlossTextureName":             "LK_tex_2.png",
+    "EmissionTextureName":          "LK_tex_3.png",
+
+    // Basic Block Values
+    "HP": 6000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            // 750/cell = Rotors (Exclude the propeller blades)
+
+    "Mass": 32.0,           // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons & Rotors have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+                            // LK Bubble Projectors have 6 mass per cell
+                            // LK Generators have 3 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+    // This block has 688 Cells
+    "Cells": [
+    // 2x2 Core
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": 1, "z": 0},
+        {"x": -1, "y": 0, "z": 0},
+        {"x": -1, "y": 1, "z": 0},
+        {"x": 0, "y": 0, "z": 1},
+        {"x": 0, "y": 1, "z": 1},
+        {"x": -1, "y": 0, "z": 1},
+        {"x": -1, "y": 1, "z": 1},
+    // Two front
+        {"x": 1, "y": 0, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+        {"x": 2, "y": 0, "z": 0},
+        {"x": 2, "y": 1, "z": 0},
+        {"x": 1, "y": 0, "z": 1},
+        {"x": 1, "y": 1, "z": 1},
+        {"x": 2, "y": 0, "z": 1},
+        {"x": 2, "y": 1, "z": 1},
+    // Two rear
+        {"x": -2, "y": 0, "z": 0},
+        {"x": -2, "y": 1, "z": 0},
+        {"x": -3, "y": 0, "z": 0},
+        {"x": -3, "y": 1, "z": 0},
+        {"x": -2, "y": 0, "z": 1},
+        {"x": -2, "y": 1, "z": 1},
+        {"x": -3, "y": 0, "z": 1},
+        {"x": -3, "y": 1, "z": 1},
+    // Two left 
+        {"x": 0, "y": 0, "z": -1},
+        {"x": 0, "y": 1, "z": -1},
+        {"x": -1, "y": 0, "z": -1},
+        {"x": -1, "y": 1, "z": -1},
+        {"x": 0, "y": 0, "z": -2},
+        {"x": 0, "y": 1, "z": -2},
+        {"x": -1, "y": 0, "z": -2},
+        {"x": -1, "y": 1, "z": -2},
+    // Two right
+        {"x": 0, "y": 0, "z": 2},
+        {"x": 0, "y": 1, "z": 2},
+        {"x": -1, "y": 0, "z": 2},
+        {"x": -1, "y": 1, "z": 2},
+        {"x": 0, "y": 0, "z": 3},
+        {"x": 0, "y": 1, "z": 3},
+        {"x": -1, "y": 0, "z": 3},
+        {"x": -1, "y": 1, "z": 3},
+    // Two catty-corner front/left
+        {"x": 1, "y": 0, "z": -1},
+        {"x": 1, "y": 1, "z": -1},
+        {"x": 2, "y": 0, "z": -1},
+        {"x": 2, "y": 1, "z": -1},
+        {"x": 1, "y": 0, "z": -2},
+        {"x": 1, "y": 1, "z": -2},
+        {"x": 2, "y": 0, "z": -2},
+        {"x": 2, "y": 1, "z": -2},
+    // Two catty-corner front/right
+        {"x": 1, "y": 0, "z": 2},
+        {"x": 1, "y": 1, "z": 2},
+        {"x": 2, "y": 0, "z": 2},
+        {"x": 2, "y": 1, "z": 2},
+        {"x": 1, "y": 0, "z": 3},
+        {"x": 1, "y": 1, "z": 3},
+        {"x": 2, "y": 0, "z": 3},
+        {"x": 2, "y": 1, "z": 3},
+    // Two catty-corner back/right
+        {"x": -2, "y": 0, "z": 2},
+        {"x": -2, "y": 1, "z": 2},
+        {"x": -3, "y": 0, "z": 2},
+        {"x": -3, "y": 1, "z": 2},
+        {"x": -2, "y": 0, "z": 3},
+        {"x": -2, "y": 1, "z": 3},
+        {"x": -3, "y": 0, "z": 3},
+        {"x": -3, "y": 1, "z": 3},
+    // Two catty-corner back/left
+        {"x": -2, "y": 0, "z": -1},
+        {"x": -2, "y": 1, "z": -1},
+        {"x": -3, "y": 0, "z": -1},
+        {"x": -3, "y": 1, "z": -1},
+        {"x": -2, "y": 0, "z": -2},
+        {"x": -2, "y": 1, "z": -2},
+        {"x": -3, "y": 0, "z": -2},
+        {"x": -3, "y": 1, "z": -2},
+    // Now array previous cells in 6x6x2 groups
+        // Left Core
+        {"x": -6, "y": 0, "z": 0},
+        {"x": -6, "y": 1, "z": 0},
+        {"x": -7, "y": 0, "z": 0},
+        {"x": -7, "y": 1, "z": 0},
+        {"x": -6, "y": 0, "z": 1},
+        {"x": -6, "y": 1, "z": 1},
+        {"x": -7, "y": 0, "z": 1},
+        {"x": -7, "y": 1, "z": 1},
+    // Two front
+        {"x": -4, "y": 0, "z": 0},
+        {"x": -4, "y": 1, "z": 0},
+        {"x": -5, "y": 0, "z": 0},
+        {"x": -5, "y": 1, "z": 0},
+        {"x": -4, "y": 0, "z": 1},
+        {"x": -4, "y": 1, "z": 1},
+        {"x": -5, "y": 0, "z": 1},
+        {"x": -5, "y": 1, "z": 1},
+    // Two rear
+        {"x": -8, "y": 0, "z": 0},
+        {"x": -8, "y": 1, "z": 0},
+        {"x": -9, "y": 0, "z": 0},
+        {"x": -9, "y": 1, "z": 0},
+        {"x": -8, "y": 0, "z": 1},
+        {"x": -8, "y": 1, "z": 1},
+        {"x": -9, "y": 0, "z": 1},
+        {"x": -9, "y": 1, "z": 1},
+    // Two left 
+        {"x": -6, "y": 0, "z": -1},
+        {"x": -6, "y": 1, "z": -1},
+        {"x": -7, "y": 0, "z": -1},
+        {"x": -7, "y": 1, "z": -1},
+        {"x": -6, "y": 0, "z": -2},
+        {"x": -6, "y": 1, "z": -2},
+        {"x": -7, "y": 0, "z": -2},
+        {"x": -7, "y": 1, "z": -2},
+    // Two right
+        {"x": -6, "y": 0, "z": 2},
+        {"x": -6, "y": 1, "z": 2},
+        {"x": -7, "y": 0, "z": 2},
+        {"x": -7, "y": 1, "z": 2},
+        {"x": -6, "y": 0, "z": 3},
+        {"x": -6, "y": 1, "z": 3},
+        {"x": -7, "y": 0, "z": 3},
+        {"x": -7, "y": 1, "z": 3},
+    // Two catty-corner front/left
+        {"x": -4, "y": 0, "z": -1},
+        {"x": -4, "y": 1, "z": -1},
+        {"x": -5, "y": 0, "z": -1},
+        {"x": -5, "y": 1, "z": -1},
+        {"x": -4, "y": 0, "z": -2},
+        {"x": -4, "y": 1, "z": -2},
+        {"x": -5, "y": 0, "z": -2},
+        {"x": -5, "y": 1, "z": -2},
+    // Two catty-corner front/right
+        {"x": -4, "y": 0, "z": 2},
+        {"x": -4, "y": 1, "z": 2},
+        {"x": -5, "y": 0, "z": 2},
+        {"x": -5, "y": 1, "z": 2},
+        {"x": -4, "y": 0, "z": 3},
+        {"x": -4, "y": 1, "z": 3},
+        {"x": -5, "y": 0, "z": 3},
+        {"x": -5, "y": 1, "z": 3},
+    // Two catty-corner back/right
+        {"x": -8, "y": 0, "z": 2},
+        {"x": -8, "y": 1, "z": 2},
+        {"x": -9, "y": 0, "z": 2},
+        {"x": -9, "y": 1, "z": 2},
+        {"x": -8, "y": 0, "z": 3},
+        {"x": -8, "y": 1, "z": 3},
+        {"x": -9, "y": 0, "z": 3},
+        {"x": -9, "y": 1, "z": 3},
+    // Two catty-corner back/left
+        {"x": -8, "y": 0, "z": -1},
+        {"x": -8, "y": 1, "z": -1},
+        {"x": -9, "y": 0, "z": -1},
+        {"x": -9, "y": 1, "z": -1},
+        {"x": -8, "y": 0, "z": -2},
+        {"x": -8, "y": 1, "z": -2},
+        {"x": -9, "y": 0, "z": -2},
+        {"x": -9, "y": 1, "z": -2},
+    
+    // Left front core
+        {"x": -6, "y": 0, "z": 6},
+        {"x": -6, "y": 1, "z": 6},
+        {"x": -7, "y": 0, "z": 6},
+        {"x": -7, "y": 1, "z": 6},
+        {"x": -6, "y": 0, "z": 7},
+        {"x": -6, "y": 1, "z": 7},
+        {"x": -7, "y": 0, "z": 7},
+        {"x": -7, "y": 1, "z": 7},
+    // Two front
+        {"x": -4, "y": 0, "z": 6},
+        {"x": -4, "y": 1, "z": 6},
+        {"x": -5, "y": 0, "z": 6},
+        {"x": -5, "y": 1, "z": 6},
+        {"x": -4, "y": 0, "z": 7},
+        {"x": -4, "y": 1, "z": 7},
+        {"x": -5, "y": 0, "z": 7},
+        {"x": -5, "y": 1, "z": 7},
+    // Two rear
+        {"x": -8, "y": 0, "z": 6},
+        {"x": -8, "y": 1, "z": 6},
+        {"x": -9, "y": 0, "z": 6},
+        {"x": -9, "y": 1, "z": 6},
+        {"x": -8, "y": 0, "z": 7},
+        {"x": -8, "y": 1, "z": 7},
+        {"x": -9, "y": 0, "z": 7},
+        {"x": -9, "y": 1, "z": 7},
+    // Two left 
+        {"x": -6, "y": 0, "z": 4},
+        {"x": -6, "y": 1, "z": 4},
+        {"x": -7, "y": 0, "z": 4},
+        {"x": -7, "y": 1, "z": 4},
+        {"x": -6, "y": 0, "z": 5},
+        {"x": -6, "y": 1, "z": 5},
+        {"x": -7, "y": 0, "z": 5},
+        {"x": -7, "y": 1, "z": 5},
+    // Two right
+        {"x": -6, "y": 0, "z": 8},
+        {"x": -6, "y": 1, "z": 8},
+        {"x": -7, "y": 0, "z": 8},
+        {"x": -7, "y": 1, "z": 8},
+        {"x": -6, "y": 0, "z": 9},
+        {"x": -6, "y": 1, "z": 9},
+        {"x": -7, "y": 0, "z": 9},
+        {"x": -7, "y": 1, "z": 9},
+    // Two catty-corner front/left
+        {"x": -4, "y": 0, "z": 4},
+        {"x": -4, "y": 1, "z": 4},
+        {"x": -5, "y": 0, "z": 4},
+        {"x": -5, "y": 1, "z": 4},
+        {"x": -4, "y": 0, "z": 5},
+        {"x": -4, "y": 1, "z": 5},
+        {"x": -5, "y": 0, "z": 5},
+        {"x": -5, "y": 1, "z": 5},
+    // Two catty-corner front/right
+        {"x": -4, "y": 0, "z": 8},
+        {"x": -4, "y": 1, "z": 8},
+        {"x": -5, "y": 0, "z": 8},
+        {"x": -5, "y": 1, "z": 8},
+        {"x": -4, "y": 0, "z": 9},
+        {"x": -4, "y": 1, "z": 9},
+        {"x": -5, "y": 0, "z": 9},
+        {"x": -5, "y": 1, "z": 9},
+    // Two catty-corner back/right
+        {"x": -8, "y": 0, "z": 8},
+        {"x": -8, "y": 1, "z": 8},
+     //   {"x": -9, "y": 0, "z": 8},
+     //   {"x": -9, "y": 1, "z": 8},
+     //   {"x": -8, "y": 0, "z": 9},
+     //   {"x": -8, "y": 1, "z": 9},
+     //   {"x": -9, "y": 0, "z": 9},
+      //  {"x": -9, "y": 1, "z": 9},
+    // Two catty-corner back/left
+        {"x": -8, "y": 0, "z": 4},
+        {"x": -8, "y": 1, "z": 4},
+        {"x": -9, "y": 0, "z": 4},
+        {"x": -9, "y": 1, "z": 4},
+        {"x": -8, "y": 0, "z": 5},
+        {"x": -8, "y": 1, "z": 5},
+        {"x": -9, "y": 0, "z": 5},
+        {"x": -9, "y": 1, "z": 5},
+   
+     // Front core
+        {"x": 0, "y": 0, "z": 6},
+        {"x": 0, "y": 1, "z": 6},
+        {"x": -1, "y": 0, "z": 6},
+        {"x": -1, "y": 1, "z": 6},
+        {"x": 0, "y": 0, "z": 7},
+        {"x": 0, "y": 1, "z": 7},
+        {"x": -1, "y": 0, "z": 7},
+        {"x": -1, "y": 1, "z": 7},
+    // Two front
+        {"x": 1, "y": 0, "z": 6},
+        {"x": 1, "y": 1, "z": 6},
+        {"x": 2, "y": 0, "z": 6},
+        {"x": 2, "y": 1, "z": 6},
+        {"x": 1, "y": 0, "z": 7},
+        {"x": 1, "y": 1, "z": 7},
+        {"x": 2, "y": 0, "z": 7},
+        {"x": 2, "y": 1, "z": 7},
+    // Two rear
+        {"x": -2, "y": 0, "z": 6},
+        {"x": -2, "y": 1, "z": 6},
+        {"x": -3, "y": 0, "z": 6},
+        {"x": -3, "y": 1, "z": 6},
+        {"x": -2, "y": 0, "z": 7},
+        {"x": -2, "y": 1, "z": 7},
+        {"x": -3, "y": 0, "z": 7},
+        {"x": -3, "y": 1, "z": 7},
+    // Two left 
+        {"x": 0, "y": 0, "z": 4},
+        {"x": 0, "y": 1, "z": 4},
+        {"x": -1, "y": 0, "z": 4},
+        {"x": -1, "y": 1, "z": 4},
+        {"x": 0, "y": 0, "z": 5},
+        {"x": 0, "y": 1, "z": 5},
+        {"x": -1, "y": 0, "z": 5},
+        {"x": -1, "y": 1, "z": 5},
+    // Two right
+        {"x": 0, "y": 0, "z": 8},
+        {"x": 0, "y": 1, "z": 8},
+        {"x": -1, "y": 0, "z": 8},
+        {"x": -1, "y": 1, "z": 8},
+        {"x": 0, "y": 0, "z": 9},
+        {"x": 0, "y": 1, "z": 9},
+        {"x": -1, "y": 0, "z": 9},
+        {"x": -1, "y": 1, "z": 9},
+    // Two catty-corner front/left
+        {"x": 1, "y": 0, "z": 4},
+        {"x": 1, "y": 1, "z": 4},
+        {"x": 2, "y": 0, "z": 4},
+        {"x": 2, "y": 1, "z": 4},
+        {"x": 1, "y": 0, "z": 5},
+        {"x": 1, "y": 1, "z": 5},
+        {"x": 2, "y": 0, "z": 5},
+        {"x": 2, "y": 1, "z": 5},
+    // Two catty-corner front/right
+        {"x": 1, "y": 0, "z": 8},
+        {"x": 1, "y": 1, "z": 8},
+        {"x": 2, "y": 0, "z": 8},
+        {"x": 2, "y": 1, "z": 8},
+        {"x": 1, "y": 0, "z": 9},
+        {"x": 1, "y": 1, "z": 9},
+        {"x": 2, "y": 0, "z": 9},
+        {"x": 2, "y": 1, "z": 9},
+    // Two catty-corner back/right
+        {"x": -2, "y": 0, "z": 8},
+        {"x": -2, "y": 1, "z": 8},
+        {"x": -3, "y": 0, "z": 8},
+        {"x": -3, "y": 1, "z": 8},
+        {"x": -2, "y": 0, "z": 9},
+        {"x": -2, "y": 1, "z": 9},
+        {"x": -3, "y": 0, "z": 9},
+        {"x": -3, "y": 1, "z": 9},
+    // Two catty-corner back/left
+        {"x": -2, "y": 0, "z": 4},
+        {"x": -2, "y": 1, "z": 4},
+        {"x": -3, "y": 0, "z": 4},
+        {"x": -3, "y": 1, "z": 4},
+        {"x": -2, "y": 0, "z": 5},
+        {"x": -2, "y": 1, "z": 5},
+        {"x": -3, "y": 0, "z": 5},
+        {"x": -3, "y": 1, "z": 5},
+    
+    // Front right core
+        {"x": 5, "y": 0, "z": 6},
+        {"x": 5, "y": 1, "z": 6},
+        {"x": 6, "y": 0, "z": 6},
+        {"x": 6, "y": 1, "z": 6},
+        {"x": 5, "y": 0, "z": 7},
+        {"x": 5, "y": 1, "z": 7},
+        {"x": 6, "y": 0, "z": 7},
+        {"x": 6, "y": 1, "z": 7},
+    // Two front
+        {"x": 7, "y": 0, "z": 6},
+        {"x": 7, "y": 1, "z": 6},
+        {"x": 8, "y": 0, "z": 6},
+        {"x": 8, "y": 1, "z": 6},
+        {"x": 7, "y": 0, "z": 7},
+        {"x": 7, "y": 1, "z": 7},
+        {"x": 8, "y": 0, "z": 7},
+        {"x": 8, "y": 1, "z": 7},
+    // Two rear
+        {"x": 3, "y": 0, "z": 6},
+        {"x": 3, "y": 1, "z": 6},
+        {"x": 4, "y": 0, "z": 6},
+        {"x": 4, "y": 1, "z": 6},
+        {"x": 3, "y": 0, "z": 7},
+        {"x": 3, "y": 1, "z": 7},
+        {"x": 4, "y": 0, "z": 7},
+        {"x": 4, "y": 1, "z": 7},
+    // Two left 
+        {"x": 5, "y": 0, "z": 4},
+        {"x": 5, "y": 1, "z": 4},
+        {"x": 6, "y": 0, "z": 4},
+        {"x": 6, "y": 1, "z": 4},
+        {"x": 5, "y": 0, "z": 5},
+        {"x": 5, "y": 1, "z": 5},
+        {"x": 6, "y": 0, "z": 5},
+        {"x": 6, "y": 1, "z": 5},
+    // Two right
+        {"x": 5, "y": 0, "z": 8},
+        {"x": 5, "y": 1, "z": 8},
+        {"x": 6, "y": 0, "z": 8},
+        {"x": 6, "y": 1, "z": 8},
+        {"x": 5, "y": 0, "z": 9},
+        {"x": 5, "y": 1, "z": 9},
+        {"x": 6, "y": 0, "z": 9},
+        {"x": 6, "y": 1, "z": 9},
+    // Two catty-corner front/left
+        {"x": 7, "y": 0, "z": 4},
+        {"x": 7, "y": 1, "z": 4},
+        {"x": 8, "y": 0, "z": 4},
+        {"x": 8, "y": 1, "z": 4},
+        {"x": 7, "y": 0, "z": 5},
+        {"x": 7, "y": 1, "z": 5},
+        {"x": 8, "y": 0, "z": 5},
+        {"x": 8, "y": 1, "z": 5},
+    // Two catty-corner front/right
+        {"x": 7, "y": 0, "z": 8},
+        {"x": 7, "y": 1, "z": 8},
+      //  {"x": 8, "y": 0, "z": 8},
+      //  {"x": 8, "y": 1, "z": 8},
+       // {"x": 7, "y": 0, "z": 9},
+       // {"x": 7, "y": 1, "z": 9},
+       // {"x": 8, "y": 0, "z": 9},
+       // {"x": 8, "y": 1, "z": 9},
+    // Two catty-corner back/right
+        {"x": 3, "y": 0, "z": 8},
+        {"x": 3, "y": 1, "z": 8},
+        {"x": 4, "y": 0, "z": 8},
+        {"x": 4, "y": 1, "z": 8},
+        {"x": 3, "y": 0, "z": 9},
+        {"x": 3, "y": 1, "z": 9},
+        {"x": 4, "y": 0, "z": 9},
+        {"x": 4, "y": 1, "z": 9},
+    // Two catty-corner back/left
+        {"x": 3, "y": 0, "z": 4},
+        {"x": 3, "y": 1, "z": 4},
+        {"x": 4, "y": 0, "z": 4},
+        {"x": 4, "y": 1, "z": 4},
+        {"x": 3, "y": 0, "z": 5},
+        {"x": 3, "y": 1, "z": 5},
+        {"x": 4, "y": 0, "z": 5},
+        {"x": 4, "y": 1, "z": 5},
+    
+    // Right Core
+        {"x": 5, "y": 0, "z": 0},
+        {"x": 5, "y": 1, "z": 0},
+        {"x": 6, "y": 0, "z": 0},
+        {"x": 6, "y": 1, "z": 0},
+        {"x": 5, "y": 0, "z": 1},
+        {"x": 5, "y": 1, "z": 1},
+        {"x": 6, "y": 0, "z": 1},
+        {"x": 6, "y": 1, "z": 1},
+    // Two front
+        {"x": 7, "y": 0, "z": 0},
+        {"x": 7, "y": 1, "z": 0},
+        {"x": 8, "y": 0, "z": 0},
+        {"x": 8, "y": 1, "z": 0},
+        {"x": 7, "y": 0, "z": 1},
+        {"x": 7, "y": 1, "z": 1},
+        {"x": 8, "y": 0, "z": 1},
+        {"x": 8, "y": 1, "z": 1},
+    // Two rear
+        {"x": 3, "y": 0, "z": 0},
+        {"x": 3, "y": 1, "z": 0},
+        {"x": 4, "y": 0, "z": 0},
+        {"x": 4, "y": 1, "z": 0},
+        {"x": 3, "y": 0, "z": 1},
+        {"x": 3, "y": 1, "z": 1},
+        {"x": 4, "y": 0, "z": 1},
+        {"x": 4, "y": 1, "z": 1},
+    // Two left 
+        {"x": 5, "y": 0, "z": -2},
+        {"x": 5, "y": 1, "z": -2},
+        {"x": 6, "y": 0, "z": -2},
+        {"x": 6, "y": 1, "z": -2},
+        {"x": 5, "y": 0, "z": -1},
+        {"x": 5, "y": 1, "z": -1},
+        {"x": 6, "y": 0, "z": -1},
+        {"x": 6, "y": 1, "z": -1},
+    // Two right
+        {"x": 5, "y": 0, "z": 2},
+        {"x": 5, "y": 1, "z": 2},
+        {"x": 6, "y": 0, "z": 2},
+        {"x": 6, "y": 1, "z": 2},
+        {"x": 5, "y": 0, "z": 3},
+        {"x": 5, "y": 1, "z": 3},
+        {"x": 6, "y": 0, "z": 3},
+        {"x": 6, "y": 1, "z": 3},
+    // Two catty-corner front/left
+        {"x": 7, "y": 0, "z": -2},
+        {"x": 7, "y": 1, "z": -2},
+        {"x": 8, "y": 0, "z": -2},
+        {"x": 8, "y": 1, "z": -2},
+        {"x": 7, "y": 0, "z": -1},
+        {"x": 7, "y": 1, "z": -1},
+        {"x": 8, "y": 0, "z": -1},
+        {"x": 8, "y": 1, "z": -1},
+    // Two catty-corner front/right
+        {"x": 7, "y": 0, "z": 2},
+        {"x": 7, "y": 1, "z": 2},
+        {"x": 8, "y": 0, "z": 2},
+        {"x": 8, "y": 1, "z": 2},
+        {"x": 7, "y": 0, "z": 3},
+        {"x": 7, "y": 1, "z": 3},
+        {"x": 8, "y": 0, "z": 3},
+        {"x": 8, "y": 1, "z": 3},
+    // Two catty-corner back/right
+        {"x": 3, "y": 0, "z": 2},
+        {"x": 3, "y": 1, "z": 2},
+        {"x": 4, "y": 0, "z": 2},
+        {"x": 4, "y": 1, "z": 2},
+        {"x": 3, "y": 0, "z": 3},
+        {"x": 3, "y": 1, "z": 3},
+        {"x": 4, "y": 0, "z": 3},
+        {"x": 4, "y": 1, "z": 3},
+    // Two catty-corner back/left
+        {"x": 3, "y": 0, "z": -1},
+        {"x": 3, "y": 1, "z": -1},
+        {"x": 4, "y": 0, "z": -1},
+        {"x": 4, "y": 1, "z": -1},
+        {"x": 3, "y": 0, "z": -2},
+        {"x": 3, "y": 1, "z": -2},
+        {"x": 4, "y": 0, "z": -2},
+        {"x": 4, "y": 1, "z": -2},
+    
+    // Back Right Core
+        {"x": 5, "y": 0, "z": -5},
+        {"x": 5, "y": 1, "z": -5},
+        {"x": 6, "y": 0, "z": -5},
+        {"x": 6, "y": 1, "z": -5},
+        {"x": 5, "y": 0, "z": -6},
+        {"x": 5, "y": 1, "z": -6},
+        {"x": 6, "y": 0, "z": -6},
+        {"x": 6, "y": 1, "z": -6},
+    // Two front
+        {"x": 7, "y": 0, "z": -5},
+        {"x": 7, "y": 1, "z": -5},
+        {"x": 8, "y": 0, "z": -5},
+        {"x": 8, "y": 1, "z": -5},
+        {"x": 7, "y": 0, "z": -6},
+        {"x": 7, "y": 1, "z": -6},
+        {"x": 8, "y": 0, "z": -6},
+        {"x": 8, "y": 1, "z": -6},
+    // Two rear
+        {"x": 3, "y": 0, "z": -5},
+        {"x": 3, "y": 1, "z": -5},
+        {"x": 4, "y": 0, "z": -5},
+        {"x": 4, "y": 1, "z": -5},
+        {"x": 3, "y": 0, "z": -6},
+        {"x": 3, "y": 1, "z": -6},
+        {"x": 4, "y": 0, "z": -6},
+        {"x": 4, "y": 1, "z": -6},
+    // Two left 
+        {"x": 5, "y": 0, "z": -7},
+        {"x": 5, "y": 1, "z": -7},
+        {"x": 6, "y": 0, "z": -7},
+        {"x": 6, "y": 1, "z": -7},
+        {"x": 5, "y": 0, "z": -8},
+        {"x": 5, "y": 1, "z": -8},
+        {"x": 6, "y": 0, "z": -8},
+        {"x": 6, "y": 1, "z": -8},
+    // Two right
+        {"x": 5, "y": 0, "z": -3},
+        {"x": 5, "y": 1, "z": -3},
+        {"x": 6, "y": 0, "z": -3},
+        {"x": 6, "y": 1, "z": -3},
+        {"x": 5, "y": 0, "z": -4},
+        {"x": 5, "y": 1, "z": -4},
+        {"x": 6, "y": 0, "z": -4},
+        {"x": 6, "y": 1, "z": -4},
+    // Two catty-corner front/left
+        {"x": 7, "y": 0, "z": -3},
+        {"x": 7, "y": 1, "z": -3},
+        {"x": 8, "y": 0, "z": -3},
+        {"x": 8, "y": 1, "z": -3},
+        {"x": 7, "y": 0, "z": -4},
+        {"x": 7, "y": 1, "z": -4},
+        {"x": 8, "y": 0, "z": -4},
+        {"x": 8, "y": 1, "z": -4},
+    // Two catty-corner front/right
+        {"x": 7, "y": 0, "z": -7},
+        {"x": 7, "y": 1, "z": -7},
+       // {"x": 8, "y": 0, "z": -7},
+      //  {"x": 8, "y": 1, "z": -7},
+       // {"x": 7, "y": 0, "z": -8},
+       // {"x": 7, "y": 1, "z": -8},
+       // {"x": 8, "y": 0, "z": -8},
+       // {"x": 8, "y": 1, "z": -8},
+    // Two catty-corner back/right
+        {"x": 3, "y": 0, "z": -7},
+        {"x": 3, "y": 1, "z": -7},
+        {"x": 4, "y": 0, "z": -7},
+        {"x": 4, "y": 1, "z": -7},
+        {"x": 3, "y": 0, "z": -8},
+        {"x": 3, "y": 1, "z": -8},
+        {"x": 4, "y": 0, "z": -8},
+        {"x": 4, "y": 1, "z": -8},
+    // Two catty-corner back/left
+        {"x": 3, "y": 0, "z": -3},
+        {"x": 3, "y": 1, "z": -3},
+        {"x": 4, "y": 0, "z": -3},
+        {"x": 4, "y": 1, "z": -3},
+        {"x": 3, "y": 0, "z": -4},
+        {"x": 3, "y": 1, "z": -4},
+        {"x": 4, "y": 0, "z": -4},
+        {"x": 4, "y": 1, "z": -4},
+
+    // Back core
+        {"x": 0, "y": 0, "z": -5},
+        {"x": 0, "y": 1, "z": -5},
+        {"x": -1, "y": 0, "z": -5},
+        {"x": -1, "y": 1, "z": -5},
+        {"x": 0, "y": 0, "z": -6},
+        {"x": 0, "y": 1, "z": -6},
+        {"x": -1, "y": 0, "z": -6},
+        {"x": -1, "y": 1, "z": -6},
+    // Two front
+        {"x": 1, "y": 0, "z": -5},
+        {"x": 1, "y": 1, "z": -5},
+        {"x": 2, "y": 0, "z": -5},
+        {"x": 2, "y": 1, "z": -5},
+        {"x": 1, "y": 0, "z": -6},
+        {"x": 1, "y": 1, "z": -6},
+        {"x": 2, "y": 0, "z": -6},
+        {"x": 2, "y": 1, "z": -6},
+    // Two rear
+        {"x": -2, "y": 0, "z": -5},
+        {"x": -2, "y": 1, "z": -5},
+        {"x": -3, "y": 0, "z": -5},
+        {"x": -3, "y": 1, "z": -5},
+        {"x": -2, "y": 0, "z": -6},
+        {"x": -2, "y": 1, "z": -6},
+        {"x": -3, "y": 0, "z": -6},
+        {"x": -3, "y": 1, "z": -6},
+    // Two left 
+        {"x": 0, "y": 0, "z": -7},
+        {"x": 0, "y": 1, "z": -7},
+        {"x": -1, "y": 0, "z": -7},
+        {"x": -1, "y": 1, "z": -7},
+        {"x": 0, "y": 0, "z": -8},
+        {"x": 0, "y": 1, "z": -8},
+        {"x": -1, "y": 0, "z": -8},
+        {"x": -1, "y": 1, "z": -8},
+    // Two right
+        {"x": 0, "y": 0, "z": -3},
+        {"x": 0, "y": 1, "z": -3},
+        {"x": -1, "y": 0, "z": -3},
+        {"x": -1, "y": 1, "z": -3},
+        {"x": 0, "y": 0, "z": -4},
+        {"x": 0, "y": 1, "z": -4},
+        {"x": -1, "y": 0, "z": -4},
+        {"x": -1, "y": 1, "z": -4},
+    // Two catty-corner front/left
+        {"x": 1, "y": 0, "z": -3},
+        {"x": 1, "y": 1, "z": -3},
+        {"x": 2, "y": 0, "z": -3},
+        {"x": 2, "y": 1, "z": -3},
+        {"x": 1, "y": 0, "z": -4},
+        {"x": 1, "y": 1, "z": -4},
+        {"x": 2, "y": 0, "z": -4},
+        {"x": 2, "y": 1, "z": -4},
+    // Two catty-corner front/right
+        {"x": 1, "y": 0, "z": -7},
+        {"x": 1, "y": 1, "z": -7},
+        {"x": 2, "y": 0, "z": -7},
+        {"x": 2, "y": 1, "z": -7},
+        {"x": 1, "y": 0, "z": -8},
+        {"x": 1, "y": 1, "z": -8},
+        {"x": 2, "y": 0, "z": -8},
+        {"x": 2, "y": 1, "z": -8},
+    // Two catty-corner back/right
+        {"x": -2, "y": 0, "z": -7},
+        {"x": -2, "y": 1, "z": -7},
+        {"x": -3, "y": 0, "z": -7},
+        {"x": -3, "y": 1, "z": -7},
+        {"x": -2, "y": 0, "z": -8},
+        {"x": -2, "y": 1, "z": -8},
+        {"x": -3, "y": 0, "z": -8},
+        {"x": -3, "y": 1, "z": -8},
+    // Two catty-corner back/left
+        {"x": -2, "y": 0, "z": -3},
+        {"x": -2, "y": 1, "z": -3},
+        {"x": -3, "y": 0, "z": -3},
+        {"x": -3, "y": 1, "z": -3},
+        {"x": -2, "y": 0, "z": -4},
+        {"x": -2, "y": 1, "z": -4},
+        {"x": -3, "y": 0, "z": -4},
+        {"x": -3, "y": 1, "z": -4},
+    
+    // Back left core
+        {"x": -6, "y": 0, "z": -5},
+        {"x": -6, "y": 1, "z": -5},
+        {"x": -7, "y": 0, "z": -5},
+        {"x": -7, "y": 1, "z": -5},
+        {"x": -6, "y": 0, "z": -6},
+        {"x": -6, "y": 1, "z": -6},
+        {"x": -7, "y": 0, "z": -6},
+        {"x": -7, "y": 1, "z": -6},
+    // Two front
+        {"x": -8, "y": 0, "z": -5},
+        {"x": -8, "y": 1, "z": -5},
+        {"x": -9, "y": 0, "z": -5},
+        {"x": -9, "y": 1, "z": -5},
+        {"x": -8, "y": 0, "z": -6},
+        {"x": -8, "y": 1, "z": -6},
+        {"x": -9, "y": 0, "z": -6},
+        {"x": -9, "y": 1, "z": -6},
+    // Two rear
+        {"x": -4, "y": 0, "z": -5},
+        {"x": -4, "y": 1, "z": -5},
+        {"x": -5, "y": 0, "z": -5},
+        {"x": -5, "y": 1, "z": -5},
+        {"x": -4, "y": 0, "z": -6},
+        {"x": -4, "y": 1, "z": -6},
+        {"x": -5, "y": 0, "z": -6},
+        {"x": -5, "y": 1, "z": -6},
+    // Two left 
+        {"x": -6, "y": 0, "z": -7},
+        {"x": -6, "y": 1, "z": -7},
+        {"x": -7, "y": 0, "z": -7},
+        {"x": -7, "y": 1, "z": -7},
+        {"x": -6, "y": 0, "z": -8},
+        {"x": -6, "y": 1, "z": -8},
+        {"x": -7, "y": 0, "z": -8},
+        {"x": -7, "y": 1, "z": -8},
+    // Two right
+        {"x": -6, "y": 0, "z": -3},
+        {"x": -6, "y": 1, "z": -3},
+        {"x": -7, "y": 0, "z": -3},
+        {"x": -7, "y": 1, "z": -3},
+        {"x": -6, "y": 0, "z": -4},
+        {"x": -6, "y": 1, "z": -4},
+        {"x": -7, "y": 0, "z": -4},
+        {"x": -7, "y": 1, "z": -4},
+    // Two catty-corner front/left
+        {"x": -8, "y": 0, "z": -3},
+        {"x": -8, "y": 1, "z": -3},
+        {"x": -9, "y": 0, "z": -3},
+        {"x": -9, "y": 1, "z": -3},
+        {"x": -8, "y": 0, "z": -4},
+        {"x": -8, "y": 1, "z": -4},
+        {"x": -9, "y": 0, "z": -4},
+        {"x": -9, "y": 1, "z": -4},
+    // Two catty-corner front/right
+        {"x": -8, "y": 0, "z": -7},
+        {"x": -8, "y": 1, "z": -7},
+      //  {"x": -9, "y": 0, "z": -7},
+      //  {"x": -9, "y": 1, "z": -7},
+      //  {"x": -8, "y": 0, "z": -8},
+       // {"x": -8, "y": 1, "z": -8},
+       // {"x": -9, "y": 0, "z": -8},
+      //  {"x": -9, "y": 1, "z": -8},
+    // Two catty-corner back/right
+        {"x": -4, "y": 0, "z": -7},
+        {"x": -4, "y": 1, "z": -7},
+        {"x": -5, "y": 0, "z": -7},
+        {"x": -5, "y": 1, "z": -7},
+        {"x": -4, "y": 0, "z": -8},
+        {"x": -4, "y": 1, "z": -8},
+        {"x": -5, "y": 0, "z": -8},
+        {"x": -5, "y": 1, "z": -8},
+    // Two catty-corner back/left
+        {"x": -4, "y": 0, "z": -3},
+        {"x": -4, "y": 1, "z": -3},
+        {"x": -5, "y": 0, "z": -3},
+        {"x": -5, "y": 1, "z": -3},
+        {"x": -4, "y": 0, "z": -4},
+        {"x": -4, "y": 1, "z": -4},
+        {"x": -5, "y": 0, "z": -4},
+        {"x": -5, "y": 1, "z": -4},
+
+    // Blade Tips
+    //Back
+        {"x": 0, "y": 0, "z": -9},
+        {"x": 0, "y": 1, "z": -9},
+        {"x": -1, "y": 0, "z": -9},
+        {"x": -1, "y": 1, "z": -9},
+        {"x": 1, "y": 0, "z": -9},
+        {"x": 1, "y": 1, "z": -9},
+        {"x": -2, "y": 0, "z": -9},
+        {"x": -2, "y": 1, "z": -9},
+
+        {"x": 2, "y": 0, "z": -9},
+        {"x": 2, "y": 1, "z": -9},
+        {"x": 3, "y": 0, "z": -9},
+        {"x": 3, "y": 1, "z": -9},
+        {"x": -3, "y": 0, "z": -9},
+        {"x": -3, "y": 1, "z": -9},
+        {"x": -4, "y": 0, "z": -9},
+        {"x": -4, "y": 1, "z": -9},
+
+    // Left
+        {"x": -10, "y": 0, "z": 0},
+        {"x": -10, "y": 1, "z": 0},
+        {"x": -10, "y": 0, "z": 1},
+        {"x": -10, "y": 1, "z": 1},
+        {"x": -10, "y": 0, "z": 2},
+        {"x": -10, "y": 1, "z": 2},
+        {"x": -10, "y": 0, "z": -1},
+        {"x": -10, "y": 1, "z": -1},
+
+        {"x": -10, "y": 0, "z": 3},
+        {"x": -10, "y": 1, "z": 3},
+        {"x": -10, "y": 0, "z": 4},
+        {"x": -10, "y": 1, "z": 4},
+        {"x": -10, "y": 0, "z": -2},
+        {"x": -10, "y": 1, "z": -2},
+        {"x": -10, "y": 0, "z": -3},
+        {"x": -10, "y": 1, "z": -3},
+
+    // Right
+        {"x": 9, "y": 0, "z": 0},
+        {"x": 9, "y": 1, "z": 0},
+        {"x": 9, "y": 0, "z": 1},
+        {"x": 9, "y": 1, "z": 1},
+        {"x": 9, "y": 0, "z": 2},
+        {"x": 9, "y": 1, "z": 2},
+        {"x": 9, "y": 0, "z": -1},
+        {"x": 9, "y": 1, "z": -1},
+
+        {"x": 9, "y": 0, "z": 3},
+        {"x": 9, "y": 1, "z": 3},
+        {"x": 9, "y": 0, "z": 4},
+        {"x": 9, "y": 1, "z": 4},
+        {"x": 9, "y": 0, "z": -2},
+        {"x": 9, "y": 1, "z": -2},
+        {"x": 9, "y": 0, "z": -3},
+        {"x": 9, "y": 1, "z": -3},
+
+    // Front
+        {"x": 0, "y": 0, "z": 10},
+        {"x": 0, "y": 1, "z": 10},
+        {"x": -1, "y": 0, "z": 10},
+        {"x": -1, "y": 1, "z": 10},
+        {"x": 1, "y": 0, "z": 10},
+        {"x": 1, "y": 1, "z": 10},
+        {"x": -2, "y": 0, "z": 10},
+        {"x": -2, "y": 1, "z": 10},
+
+        {"x": 2, "y": 0, "z": 10},
+        {"x": 2, "y": 1, "z": 10},
+        {"x": 3, "y": 0, "z": 10},
+        {"x": 3, "y": 1, "z": 10},
+        {"x": -3, "y": 0, "z": 10},
+        {"x": -3, "y": 1, "z": 10},
+        {"x": -4, "y": 0, "z": 10},
+        {"x": -4, "y": 1, "z": 10}
+    ],
+
+    "APs": [ 
+        // Back & Front APs
+        { "x": 0.0,  "y": -0.5, "z": -1.0 }, { "x": -1.0, "y": -0.5, "z": -1.0 },
+        { "x": 0.0,  "y": -0.5, "z":  2.0 }, { "x": -1.0, "y": -0.5, "z": 2.0  },
+        // Right APss
+        { "x": -2.0, "y": -0.5, "z": 0.0  }, { "x": -2.0, "y": -0.5, "z": 1.0  },
+        // Left APs
+        { "x": 1.0,  "y": -0.5, "z": 0.0  }, { "x": 1.0,  "y": -0.5, "z": 1.0  }
+    ],
+
+    // Advanced Settings
+    "PrefabReference":  "417",      // HE Atlas Rotor Block ID
+    "KeepRenderers":    false,
+    "KeepColliders":    true,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+
+    "SubObjects":[
+        // Replace the original meshes with new ones 
+        {
+            "ObjectName":                   "m_HE_Rotors_Small_882",
+            "MeshName":                     "LK_rotor_xLarge_durandal_base.obj",
+            "ColliderMeshName":             "LK_rotor_xLarge_durandal_base_col.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": -0.5, "y": -0.5, "z": 0.5 },
+            "Rotation":                     { "x": 0, "y": 0, "z": 0 },
+        },
+
+        {
+            "ObjectName":                   "m_HE_Rotors_Large_rotors",
+            "MeshName":                     "LK_rotor_xLarge_durandal_rotor.obj",
+            "DestroyExistingRenderer":      true,
+            "DestroyExistingColliders":     true,
+            "Position":                     { "x": 0,  "y": 0,  "z": 0 },
+            "Rotation":                     { "x": 0, "y": -90, "z": 90 },
+            "Scale":                        { "x": -1, "y": 1, "z": 1 }
+        },
+        {
+            "ObjectName":                   "blades",
+            "ColliderMeshName":             "LK_rotor_xLarge_durandal_blade_col.obj",
+            "Position":                     { "x": 0,  "y": 0,  "z": 0 },
+            "Rotation":                     { "x": 0, "y": -90, "z": 90 },
+        },
+        
+
+        // Move the Spinners to their proper places
+        {
+            "ObjectName":       "_spinner",
+            "Position":         { "x": -0.5,  "y": -0.5,  "z": 0.5 },
+            "Rotation":         { "x": 90, "y": 0, "z": 0 }
+        },
+        {
+            "ObjectName":       "_fanJet",
+            "Position":         { "x": -0.5, "y": 0.0, "z": 0.5 },
+            "Rotation":         { "x": 90.0, "y": 0.0, "z": 0.0 }
+        }
+    ],
+   
+    "Deserializer": {  
+        "GameObject|_spinner":{
+            "Spinner": {
+                "m_RotationAxis":   { "axis": 2 },
+                "m_SteerAxis":      { "axis": 1 },
+            },
+            "GameObject|m_HE_Rotors_Large_rotors": {},
+            // Add the blade subobject and declare the MeshCollider for the ModuleDrill to use
+            "GameObject|blades":{ "UnityEngine.MeshCollider": {} }
+                
+        },
+
+
+        /*  
+        FanJets use an effector system: Where the effector points will be the point of push force for the rotor/propeller. 
+        It is recommended to place a primitive here during the placement stage for a more clear setup.
+        */
+        "GameObject|_fanJet": {
+            //********** FanJet:  The main module for all rotor/propeller based blocks. Only one is required for all _fanJet objects to function. 
+            "FanJet": {
+                "m_Effector": "/_fanJet/_effector",
+                /*
+                    LK Aeral Block formula:
+                    For Blocks that pushes in 1 direction:  3000 Force/Cell
+                    For Blocks that are more than or equal to 32 cells: 3300 Force/Cell ( +10% "Size Bonus" ), with +10% for every 32 cells with a maximum of +50%
+                    For every additional direction, divide the Force/Cell for every direction, then deduct by -10% for every direction (Maneuverability Tax)
+                */
+                "force":        1393200,    // The amount of force applied "upwards" or in front of the fan. This will normally push a vehicle downwards.
+                "backForce":    1393200,    // The amount of force applied "downwards" or behind the fan. This will normally push a vehicle upwards.
+
+                "spinDelta":     0.1,       // The amount of time required for the fans to be at maximum speed. 
+                                            // This will override the Spinner module's "m_SpinUpTime" parameter.
+
+                "spinSpeed":    500.0,      // The fan's maximum spinning speed. This overrides the Spinner module's "m_speed" parameter
+            },
+        },
+
+        //********** ModuleBooster: The main module for aerial blocks, from propellers to thrusters. This controls the _fanJet's functions as part of the player controls.
+        //                          Without this module, the aerial block in question will not work.
+        "ModuleBooster": {},
+        "ModuleDrill":{
+            "activeColliders": [
+                "_spinner/blades/MeshCollider."
+            ],
+            "impactDamageMultiplier":   20,         // Dictates the damage the weapon deals when hitting an enemy.
+            "damagePerSecond":          1000.0,     // Dictates the damage this weapon deals per second.
+            "m_DamageType":             6           // Dictates the damage type that the weapon will deal
+        }               
+    }
+
+}

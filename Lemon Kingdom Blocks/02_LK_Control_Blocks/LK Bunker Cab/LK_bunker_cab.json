@@ -1,0 +1,335 @@
+// This is the "Basic Cab" for LK.
+// Pros: The most durable cab in any available corporation.
+//       Includes a power & fuel gauge, a speedometer, an altimeter and a radar with +50 range to the GSO cab.
+//       Also has twin-linked 3-pounder cannons, making this cab the most heavily armed cab as well.
+// Cons: It has no wheels and its weapons have limited traverse rotation.
+{
+    // Basic Block Information
+    "Name":                 "LK Bunker Cab",
+    "Description":          "Repurposed for off-world use, this bunker comes fully equipped with a full sensor suite and twin-linked 3-pounder cannons. It's also stocked with a month's worth of supplies for any Knight who seeks room and board.",
+
+    "ID": 419004,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 1,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 25881,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    // The resources/components needed to make this block. For the full ID Resource/Component list, 
+    // please refer to the Terratech Wiki.
+
+    // Recipe: Base Block:    8 Titanic Alloy, 4 Rugged Fiblar, 4 Plubonic Alloy 
+    //         Sensor Suite:  5 Sensory Transmitter
+    //         Weapons:       2 Blast Caps
+    "Recipe": "54, 54, 54, 54, 54, 54, 54, 54, 52, 52, 52, 52, 53, 53, 53, 53, 51, 51, 51, 51, 51, 46, 46",
+    
+    "IconName":                   "LK_bunker_cab_icon.png",         // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "LK_bunker_cab_body.obj",         // Name of the block's mesh                                        
+    "ColliderMeshName":           "LK_bunker_cab_col_body.obj",     // Name of the block's collider.
+    "SupressBoxColliderFallback": true,
+
+    "MeshTextureName":            "LK_tex_1.png",
+    "MeshGlossTextureName":       "LK_tex_2.png",
+    "MeshEmissionTextureName":    "LK_tex_3.png",
+
+    // Basic Block HP Values
+    "HP": 7000,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels
+                            
+    "Mass": 40,             // LK Standard Blocks have 2.5 mass per cell,
+                            // LK Cabs have 5 mass per cell
+                            // LK Weapons have 4 mass per cell
+                            // LK Wheels have 2 mass per cell
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0.0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+    
+    // Block Dimensions
+    "BlockExtents":         //Makes a grid box with these dimensions. IGNORED if "Cells": is used
+    { "x": 2,"y": 2, "z": 2 },
+
+    "APs": [
+        // Bottom APs
+        {"x": 0.0, "y": -0.5, "z": 0.0 }, {"x": 1.0, "y": -0.5, "z": 0.0 },
+
+        // Back APs
+        {"x": 0.0, "y": 0.0, "z": -0.5 }, {"x": 1.0, "y": 0.0, "z": -0.5 }        
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference": "GSO_Cannon_Turret(111)",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "ReferenceOffset": { "x": 0.5, "y": 1.0, "z": 0.5 },
+    
+    "SubObjects":[
+      {
+        // Adds the barrel's base onto the null _gimbalElev, since the original GSO 3-Pounder cannon doesn't have a barrel base or similar.
+        "SubOverrideName": "_gimbalElev",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshName": "LK_bunker_cab_gun_base.obj",
+        "ColliderMeshName": null,
+      },
+
+      {
+        // Then add the base again to the duplicated _gimbalElev.
+        "SubOverrideName": "_gimbalElev_copy",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshName": "LK_bunker_cab_gun_base.obj",
+        "ColliderMeshName": null,
+      },
+
+      {
+        // Replace the mesh of the barrel. 
+        "SubOverrideName": "GSO_Cannon_111_Barrel",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshName": "LK_bunker_cab_barrel.obj",
+        "ColliderMeshName": "LK_bunker_cab_barrel.obj"
+      },
+
+      {
+        // Do the same to the duplicate of the barrel
+        "SubOverrideName": "_gimbalElev_copy/_barrel/_recoiler/GSO_Cannon_111_Barrel",
+        "DestroyExistingRenderer": true,
+        "DestroyExistingColliders": true,
+        "MeshName": "LK_bunker_cab_barrel.obj",
+        "ColliderMeshName": "LK_bunker_cab_barrel.obj"
+      }
+    ],
+
+    "Deserializer":{
+      "ModuleWeaponGun": {
+        "m_FireControlMode": 1,           // Dictates how the guns will fire
+                                          //  0 =   The guns will fire one at a time
+                                          //  1 =   All guns will fire at the same time
+
+        "m_ShotCooldown": 2.0             // Dictates the reload time of the gun(s)
+      },
+      "FireData": {
+        "m_CasingEjectVariance": 0.2,     // Dictates the amount of randomness of the casing's movement when being ejected
+        "m_CasingVelocity": 10            // Dictates the speed of the casing when ejected
+      },
+      "ModuleAltimeter": {                // Enables the Altimeter UI for the block. 
+        "m_Priority": 0                   // No need to tweak this value; Altimeter performance doesn't change because there are no value to modify, 
+                                          // hence no need to prioritize which blocks are better.
+      },
+      "ModulePowerGauge": {},             // Enables the Power Gauge UI
+      "ModuleFuelGauge": {},              // Enables the Fuel Gauge UI
+
+      //---------- ModuleDriveBot: This is used both by Player Cabs and A.I. Modules. This will dictate their behavior when not piloted by the player (such as being an enemy) ----------//
+        // So far, Enemy AI behavior is simply that it will move behind the enemy.
+        "ModuleDriveBot": {
+
+          // Combat Attributes: Note that the following attributes only work on enemies
+
+          "targetIdealRange":         100.0,                      // While attacking the enemy, this dictates how far the AI will position itself relative to its target. 
+                                                                  // The higher the value, the farther it will try to stay away from its target.
+
+          "turnToleranceOuter":       45.0,                       // While attacking the enemy, this value dictates the angle of leeway the A.I. can make relative to its target. Sensible values range from 20-45.                   
+          "turnToleranceInner":       20.0,           
+
+          // Navigation Attributes: Note that the following attributes only work on enemies
+
+          "m_DefaultThrottle":        1.0,                       // Dictates the driving speed this A.I. This is a percentile value: 0.0 to 1.0 works here.
+
+          "poweredTurnInsideWheel": 0.2,  //
+
+          "turnAngleFullThrottle":    10.0,                       // Dictates the maximum angle needed to throttle by using m_DefaultThrottle. 
+                                                                  // The higher the value, the more flexible it can be when turning around. Sensible values are around 45.0
+          
+          
+          // Uncatalogued Attributes
+          "waypointDistanceFullThrottle": 0.1,
+
+          "waypointReachedTolerance": 2.0,
+          "waypointPlayerAngularBias": 45.0,
+         
+
+
+          "lookAroundAngleMin": 30.0,
+          "lookAroundAngleMax": 180.0,   
+
+          "m_DefaultPatrolDistMin": 5.0,
+          "m_DefaultPatrolDistMax": 15.0,
+          "patrolThrottle": 0.01,
+          "lookAroundPauseMin": 0.25,
+          "lookAroundPauseMax": 0.5,
+          "lookAroundThrottle": 0.5,
+          
+          "lostTargetMemoryTime": 3.0,
+          "holdTargetDuration": 0.5,
+          "stopCirclingDelay": 2.0,
+          "controlPriority": 50,
+
+          "debugReportThrottle": 0.0, //
+          
+          "recoverTimeout": 0.0, //
+          "forceUnCapsizeTimeout": 0.0, //
+          "capsizedMinSpeed": 1.5,
+          "m_ThrottleD": 1.0,
+          "m_ThrottleT": 1.0,
+          "m_PatrolDistMin": 5.0,
+          "m_PatrolDistMax": 15.0,
+          "lookAroundWaitDecay": 0.0,
+          "lookAroundState": 0,
+          "lostTargetChaseDecay": 0.0,
+          "holdTargetCountdown": 0.0,
+          "stopCirclingTimer": 0.0,
+          
+          "attackTargetRadius": 0.0,          // Warning, do not touch this attribute as it can cause a crash
+          
+          "recoverTime": 0.0,
+          "forceUnCapsizeTime": 0.0,
+          "sumoBoostOn": false,
+      },
+
+      "ModuleSpeedo": {
+        "m_SpinnerRotationModifier": null,
+        "m_SpinnerMaxRotationSpeedChange": null,
+        "m_StationaryEpsilon": null,
+        "m_Spinners": [],
+        "m_CurrentSpeed": null
+      },
+                                        
+      "ModuleTechController": {           // When this is added to a block, it will behave as a Cab. 
+        "m_PlayerInput": true,            // Dictates whether the player can take control of the cab
+
+        "HandlesPlayerInput": true        // DOES NOT WORK: the name suggest that it should control whether the player can input controls while in 
+                                          // control of the cab. But it seems that this is already done by "m_PlayerInput"
+      },
+
+
+      "ModuleRadar": {
+        "m_Priority": 1,            // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+        "m_MiniMapType": 1,         // Dictates the minimap provided by the block. Only accepts 0 or 1.
+                                    // 0 = Small, blank Radar minimap
+                                    // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+        
+        "m_Range": 200.0,           // Dictates how far the radar detects objects in the world.
+                  
+
+        "m_Dish": null,
+        "m_MiniMap": null,
+        "MiniMapType": 0,           // This does not work; use "m_MiniMapType" instead.
+        "Range": 150.0,             // This does not work; use "m_Range" instead.
+        "m_RadarOnSfxEvent": {
+            "m_EventPath": "event:/OldAssets/RadarAttach",
+            "EventPath": "event:/OldAssets/RadarAttach"
+          }
+      },
+      
+      "GameObject|_gimbalBase": {
+        "GameObject|GSO_Cannon_111_Mount" : {
+          "UnityEngine.MeshFilter": {
+            "sharedMesh": null
+          },
+        },
+        "GimbalAimer": {
+          "rotationLimits": [0.5, -45],     // Dictates the rotation limits. Placing the same value on both array elements will make it rotate 360 degrees.
+          "rotationAxis": 1                 // Dictates the rotation axis.
+                                            // 1 = Vertical Aim
+                                            // 2 = Horizontal Aim
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+          "localPosition": { "x": 0.5, "y": 1.3, "z": 0.6}
+        },
+        
+        "GameObject|_gimbalElev": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+            "localPosition": { "x": 0.3, "y": 0.0, "z": 0.0}
+          },
+          "GimbalAimer": {
+            "rotationLimits": [-5, 5 ],
+            "rotationAxis": 2
+          },
+
+          "GameObject|_barrel": {
+            "GameObject|_casingSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0.4, "z": -1.0 }
+              }
+            },
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": -0.1, "z": 0.65 }
+              }
+            },
+            "GameObject|_muzzleFlash": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0.4 }
+              }
+            },
+            "GameObject|_smoke": {
+              "UnityEngine.Transform": {
+                "localPosition": { "x": 0, "y": 0, "z": 0.4 }
+              }
+            },
+
+            "GameObject|_recoiler": {
+              // Due to a peculiar issue regarding GSO's 3-pounder, 
+              // it is simpler to remove the barrel mesh entirely and use _recoiler as a barrel instead. (See SubObjects for details)
+              "GameObject|GSO_Cannon_111_Barrel": {
+                "UnityEngine.Transform": {
+                  "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+                  "localPosition": { "x": 0.0, "y": -0.1, "z": -0.43}
+                },
+
+              }
+            }
+          }
+
+        },
+
+        // Duplicate the cannon. It will also duplicate anything within the original's hierarchy. 
+        "Duplicate|_gimbalElev": {            
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+            "localPosition": { "x": -0.3, "y": 0.0, "z": 0.0 }
+          },
+          "GimbalAimer": {
+            "rotationLimits": [ -5, 5 ],
+            "rotationAxis": 2
+          },
+
+          "GameObject|_barrel": {
+            "GameObject|_recoiler": {
+            }
+          }
+        }
+
+      }
+
+    }
+
+}

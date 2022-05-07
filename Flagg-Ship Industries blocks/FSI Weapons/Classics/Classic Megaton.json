@@ -1,0 +1,47 @@
+{
+  "Name": "GSO Megaton Cannon, Classic Edition",
+  "Description": "An old variant of the current Megaton. fires faster",
+  "ID": 1700050, 
+
+  "Faction": 1, 
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 21845, 
+  "HP": 3000, 
+  "Mass": 4.0,
+
+  "Recipe": "plubonicalloy, plubonicalloy, blastcaps, blastcaps, z4explosives, dervishgel, gluonbeam ",
+
+  "IconName": "EXP_Megaton.png",
+
+  "MeshName": null,
+
+  "MeshMaterialName": null, 
+
+
+  "BlockExtents":
+  { "x": 2, "y": 2, "z": 2 },
+
+  "APs": [
+    { "x": 0, "y": -0.5, "z": 0},
+    { "x": 1, "y": -0.5, "z": 0},
+    { "x": 0, "y": -0.5, "z": 1},
+    { "x": 1, "y": -0.5, "z": 1},
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_Cannon_Medium_222", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": 
+  { "x": 1, "y": 0, "z": 1 }, 
+  "JSONBLOCK": {
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 1,
+	    "m_CooldownVariancePct": 0,
+    },"ModuleWeapon": {
+      "m_FireSFXType": 75, 
+      "m_RotateSpeed": 90 //Speed at which a weapon can aim at something
+    }
+  }}

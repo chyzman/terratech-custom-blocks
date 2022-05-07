@@ -1,0 +1,152 @@
+{
+  "Name": "GSO Autominer Pump",
+  "Description": "A strong pump that greatly increases the efficiency of Auto Miners, making it extract chunks four times faster.",
+  "ID": 910695, 
+
+  "Faction": 1, 
+  "Category": 7, 
+  "Grade": 3, 
+  "Price": 5019,
+  "HP": 800,
+  "Mass": 5,
+  "CenterOfMass": {"x": 0, "y": 0.5, "z": 0.5},
+
+  "IconName": "GSO_Autominer_Pump_Icon.png",
+  
+  "Recipe": "5, 5, 7, 7, 49, 57, ",
+  
+  "EmissionMode": 0,
+
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 2,
+    "z": 2
+  },
+
+  "APs": [
+    {"x": 0, "y": -0.5,"z": 0},
+    {"x": 0, "y": -0.5,"z": 1},
+    {"x": -0.5, "y": 0,"z": 0},
+    {"x": -0.5, "y": 0,"z": 1},
+    {"x": 0.5, "y": 0,"z": 0},
+    {"x": 0.5, "y": 0,"z": 1},
+    {"x": 0, "y": 0,"z": -0.5},
+    {"x": 0, "y": 0,"z": 1.5}
+  ],
+
+  "GamePrefabReference": "GSO_Block_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_Booster_112", 
+  
+  "SubObjects": [
+    {
+    	"MeshName": "GSO_Autominer_Pump.obj",
+      "MeshMaterialName": "GSO_Main",
+      "ColliderMeshName": "GSO_Autominer_Pump_Collider.obj"
+    },
+    {
+      "SubOverrideName": "m_BF_Radar_111_Sensor",
+      "MeshName": "GSO_Autominer_Pump_Rotor.obj",
+      "MeshMaterialName": "GSO_Main"
+    }
+  ],
+  "JSONBLOCK": {
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleItemProducer.m_SecPerItemProduced", 
+        "ModuleItemProducer.m_MinDispenseInterval"],
+      "m_Strength": [0.25, 0.25],
+      "m_AddAfter": [0, 0],
+      "m_NeedsToBeAnchored": [false, false]
+    },
+    "Reference|BF_Radar_111/_spindle": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0.43,
+          "z": 0.5
+        }
+      },
+      "Spinner": {
+        "m_Speed": 0.4,
+        "m_RotationAxis": {
+          "axis": 0
+        },
+        "m_SteerAxis": {
+          "axis": 0
+        },
+        "m_AutoSpin": true,
+        "m_SpinUpTime": 2
+      }
+    },
+    "ModuleRadar": {
+      "m_Range": 0,
+      "Range": 0
+    },
+     "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1.43,
+          "z": 0.68
+         },
+        "localEulerAngles": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+         "localScale": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        }
+       },
+      "UnityEngine.ParticleSystem": {
+        "startDelay": 0.0,
+        "loop": true,
+        "playOnAwake": true,
+        "playbackSpeed": 5.0,
+        "enableEmission": true,
+        "emissionRate": 5.0,
+        "startSpeed": 0.2,
+        "startSize": 20,
+        "startColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 0.1
+        },
+        "startLifetime": 40,
+        "gravityModifier": 0.0,
+        "maxParticles": 1000,
+        "simulationSpace": 1,
+        "scalingMode": 1
+      },
+      "ParticleSystemRenderer": {
+        "minParticleSize": 0.0,
+      "maxParticleSize": 1.0,
+        "material": "Mat_FX_Smoke_Dark"
+      }
+    } ,      
+    "Duplicate|FX_Smoker_Steam":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1.43,
+          "z": 0.89
+        }
+      }
+    },
+    "Duplicate|FX_Smoker_Steam_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1.43,
+          "z": 1.1
+        }
+      }
+    }       
+  }
+}

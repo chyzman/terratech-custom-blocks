@@ -1,0 +1,169 @@
+{
+  "Name": "Old Star Conveyor Belt",
+  "Description": "Now this is how the Old Star do. After discovering how conveyor beams work the design team at old star developed how to use them in our techs by adding a cooling fan to keep the collector beem emitters away from fibron ignition.",
+  "ID": 300112,
+  "Faction": 4,
+  "Category": 7,
+  "Grade": 1,
+  "Price": 420,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 32",
+  "HP": 500,
+  "Mass": 0.8,
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+  "IconName": "OS_Conveyor_Belt_Icon.png",
+
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0.5
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0.5,
+      "y": 0,
+      "z": 0
+    }
+  ],
+
+  "GamePrefabReference": "VEN_Conveyor_111",
+  "KeepRenderers": false,
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_Conveyor_Base",
+      "MeshName": "OS_Conveyor_Base.obj",
+      "ColliderMeshName": "OS_Conveyor_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png"
+    },
+    {
+      "SubOverrideName": "OS_Conveyor_spinner",
+      "MeshName": "OS_Conveyor_spinner.obj",
+      "ColliderMeshName": "OS_Conveyor_spinner.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_VEN_Conveyor_Belt_RTurn",
+      "MeshName": "OS_Conveyor_RT.obj",
+      "ColliderMeshName": "OS_Conveyor_RT.obj",
+      "MeshMaterialName": "GSO_ConveyorBelt_Main"
+    },
+    {
+      "SubOverrideName": "m_VEN_Conveyor_Belt_LTurn",
+      "MeshName": "OS_Conveyor_LT.obj",
+      "ColliderMeshName": "OS_Conveyor_LT.obj",
+      "MeshMaterialName": "GSO_ConveyorBelt_Main"
+    },
+    {
+      "SubOverrideName": "m_VEN_Conveyor_Belt",
+      "MeshName": "OS_Conveyor_Belt.obj",
+      "ColliderMeshName": "OS_Conveyor_Belt.obj",
+      "MeshMaterialName": "GSO_ConveyorBelt_Main"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|m_VEN_Conveyor_Base": {
+      "GameObject|_spindle": {
+        "Spinner": {
+          "m_Speed": 1.55,
+          "m_RotationAxis": {
+            "axis": 1
+          },
+          "m_SteerAxis": {
+            "axis": 1
+          },
+          "m_AutoSpin": true,
+          "m_SpinUpTime": 0.1,
+          "m_CurrentAngle": 0.0,
+          "m_CurrentAutoSpeed": 0.0,
+          "m_CurrentSpeedFraction": 0.0,
+          "m_SpinnerSound": null,
+          "m_SpinnerSoundOriginalPitch": 0.0,
+          "AtFullSpeed": false
+        },
+        "GameObject|OS_Conveyor_spinner": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "localEulerAngles": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "localEulerAngles": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      }
+    },
+    "ModuleItemHolder": {
+      "m_CapacityPerStack": 1,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        {
+          "x": 0,
+          "y": 0.2,
+          "z": 0
+        }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [ 0, 1, 3, 4 ] } ]
+    },
+    "ModuleItemHolderBeam": {
+      "m_BeamBaseHeight": 1.0,
+      "m_BeamStrength": 500.0
+    }
+  }
+}

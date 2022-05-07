@@ -1,0 +1,72 @@
+{
+  "Name": "GreenTech Vapour Radar",
+  "Description": "This small and compact radar is the predecessor of ''The Eye'', therefore it also sports increased range. However, due to it's compact size it lacks the speed and altitude measuring capabilities, while also packing a bit more weight than other radars.",
+  "ID": 19053, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 3, 
+  "Price": 4542, 
+  "HP": 250, 
+  "Mass": 2,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "5, 5, 43, 43, 43, 48, 48, 56" ,
+  "IconName": "GT_Vapour_Radar_Icon.png", 
+  "MeshName": "GT_Vapour_Radar.obj",
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+  
+  "GamePrefabReference": "BF_Radar_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_BF_Radar_111_Sensor",
+      "MeshName": "GT_Vapour_Radar_Sphere.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+	  "MeshEmissionTextureName": "GreenTech 3.png",
+	  "SubPosition": { "x":  0, "y": 0, "z": 0 }
+	},
+	{
+	"MakeSphereCollider": true,
+	"SubPosition": { "x": 0, "y": 0, "z": 0 },
+	"SubScale": { "x": 1.8, "y": 1.8, "z": 1.8 }
+	}
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_spindle": {
+      "UnityEngine.transform": {
+		"localPosition": { "x": 0, "y": 0, "z": 0 }
+      },
+      "Spinner": {
+        "m_Speed": 0.08,
+        "Speed": 0.08
+      }
+    },
+    "ModuleRadar": {
+      "m_Range": 400,
+      "Range": 400
+    }
+  }
+}

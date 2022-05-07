@@ -1,0 +1,598 @@
+
+{
+  "Name": "TAC Parallel Mixed Silo",
+  "Description": "A fairly bulky but strong and sturdy mixed silo. \n\nThe 72 chunk capacity may not seem like a lot, but it's all chunks kept within a cage to prevent them from drifting off.  It also comes with a mini receiver function incase any of the resources come loose.",
+  "ID": 584406, 
+
+  "Faction": 5,//
+  "Category": 7,
+  "Grade": 3,
+  "Price": 25233,//
+  "Rarity": 2,
+  "HP": 15000,//decent HP
+  "Mass": 16.0,//Fairly heavy
+
+  "IconName": "WaroHouse.png",
+  "MeshName": null,
+
+  "Recipe":  "53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 59",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 2,
+    "y": 6,
+    "z": 6
+  },
+
+  "GameObject|_wheel": {
+    "GameObject|m_GSO_Wheel_222_Tyre": {
+    },
+  },
+
+  "GameObject|Main_Part": {
+    "FollowTransform": {
+      "m_TransformToFollow": "/_wheel/m_GSO_Wheel_222_Tyre",//Very center of the wheel
+      "m_FollowOrientation": false //Remain aligned with the root
+    },
+    "GameObject|m_ModelMain_Part": {//The actual model is here, offsetting the model from the very center of the wheel
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0},//Controls rotation relative to parent
+        "localPosition": { "x":0.5, "y":0, "z": 0 }, //Controls position relative to parent
+        "localScale": { "x":1, "y":1, "z":1 }       //Controls scale relative to parent
+      },
+    }
+  },
+
+  "APs": [
+    //Leveled APs
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 5.5 },
+    { "x": 1, "y": 0, "z": 5.5 },
+    { "x": 1.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": 1.5, "y": 0, "z": 1 },
+    { "x": -0.5, "y": 0, "z": 1 },
+    { "x": 1.5, "y": 0, "z": 2 },
+    { "x": -0.5, "y": 0, "z": 2 },
+    { "x": 1.5, "y": 0, "z": 3 },
+    { "x": -0.5, "y": 0, "z": 3 },
+    { "x": 1.5, "y": 0, "z": 4 },
+    { "x": -0.5, "y": 0, "z": 4 },
+    { "x": 1.5, "y": 0, "z": 5 },
+    { "x": -0.5, "y": 0, "z": 5 },
+    //Ring APs
+    { "x": 0, "y": 3, "z": -0.5 },
+    { "x": 1, "y": 3, "z": -0.5 },
+    { "x": 0, "y": 3, "z": 5.5 },
+    { "x": 1, "y": 3, "z": 5.5 },
+    { "x": 1.5, "y": 3, "z": 0 },
+    { "x": -0.5, "y": 3, "z": 0 },
+    { "x": 1.5, "y": 3, "z": 1 },
+    { "x": -0.5, "y": 3, "z": 1 },
+    { "x": 1.5, "y": 3, "z": 2 },
+    { "x": -0.5, "y": 3, "z": 2 },
+    { "x": 1.5, "y": 3, "z": 3 },
+    { "x": -0.5, "y": 3, "z": 3 },
+    { "x": 1.5, "y": 3, "z": 4 },
+    { "x": -0.5, "y": 3, "z": 4 },
+    { "x": 1.5, "y": 3, "z": 5 },
+    { "x": -0.5, "y": 3, "z": 5 },
+    //Top APs
+    { "x":0, "y":5.5, "z":0 },
+    { "x":1, "y":5.5, "z":0 },
+    { "x":0, "y":5.5, "z":2 },
+    { "x":1, "y":5.5, "z":2 },
+    { "x":0, "y":5.5, "z":3 },
+    { "x":1, "y":5.5, "z":3 },
+    { "x":0, "y":5.5, "z":5 },
+    { "x":1, "y":5.5, "z":5 },
+    //Bottom APs
+    { "x":0, "y":-0.5, "z":0 },
+    { "x":1, "y":-0.5, "z":0 },
+    { "x":0, "y":-0.5, "z":5 },
+    { "x":1, "y":-0.5, "z":5 },
+  ],
+
+
+  "GamePrefabReference": "GSO_Silo(212)", 
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_GSO_Silo_212",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACSilo.obj",
+      // "ColliderMeshName": "TACSilo.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_WinL",
+      // "MakeBoxCollider": true,
+      // "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_WinR",
+      // "MakeBoxCollider": true,
+      // "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_WinF",
+      // "MakeBoxCollider": true,
+      // "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+    {
+      "SubOverrideName": "m_WinB",
+      // "MakeBoxCollider": true,
+      // "DestroyExistingColliders": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "WindowBlock.obj",
+      // "ColliderMeshName": "WindowBlock.obj",
+      "MeshTextureName": "ForcefeedBlur.png",
+      "MeshMaterialName": "BF_Receiver_Forcefield"
+    },
+
+    // {
+    //   "SubOverrideName": "m_GSO_Refinery_222_Hatch",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingRenderer": true,
+    // }
+  ],
+
+  "JSONBLOCK": {
+    //WINDOW MODELS
+    "GameObject|m_WinF": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":4.0, "z":5.46 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1.95, "y":2.5, "z":0.05 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },   
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 0.5 },//Give it drivable surface
+        "gameObject": { "layer": 27 }//Allow Techs to collide and drive on with it but no grab
+      },
+    },
+    "GameObject|m_WinB": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":4.0, "z":-0.46 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1.95, "y":2.5, "z":0.05 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },    
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 0.5 },//Give it drivable surface
+        "gameObject": { "layer": 27 }//Allow Techs to collide with it but no grab
+      },  
+    },
+    "GameObject|m_WinL": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":-0.46, "y":4.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.05, "y":2.5, "z":5.95 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },   
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 0.5 },//Give it drivable surface
+        "gameObject": { "layer": 27 }//Allow Techs to collide and drive on with it but no grab
+      },
+    },
+    "GameObject|m_WinR": {//Window
+      "UnityEngine.Transform": {
+        "localPosition": { "x":1.46, "y":4.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0.05, "y":2.5, "z":5.95 },
+      },
+      // "UnityEngine.MeshRenderer": {
+      //   "material": { "mainTexture": "ForcefeedBlur.png" }
+      // },   
+      "UnityEngine.BoxCollider": {
+        "enabled": true,
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 0.5 },//Give it drivable surface
+        "gameObject": { "layer": 27 }//Allow Techs to collide and drive on with it but no grab
+      },
+    },
+
+
+
+
+    "GameObject|GSO_Silo_212": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "GameObject|AntennaFx": {
+        "GameObject|FX_AntennaSignal_B": {
+          "GameObject|FX_AntennaSignal_Glow": {
+          },
+          "GameObject|FX_AntennaSignal_Rings": {
+          },
+          "GameObject|FX_AntennaSignal_Lightning": {
+          },
+          "GameObject|FX_AntennaSignal_Pulse": {
+          },
+          // "GameObject|FX_AntennaSignal_Pulse (1)": {
+        },
+      },
+      "GameObject|m_GSO_Silo_212_Antenna_Base": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":0.5, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+        },
+        "GameObject|m_GSO_Silo_212_Antenna_B": {
+        },
+        "GameObject|m_GSO_Silo_212_Antenna_A": {
+        },
+      },
+      "GameObject|m_GSO_Silo_212": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+      },
+    },
+
+
+
+    "GameObject|c_BasePlat": {//Platform collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":2, "y":1, "z":6 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 1 },//Give it drivable surface
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+
+
+
+    //Overhead Colliders
+    "GameObject|OverhangCol": {//Top collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":0.0, "z":2.5 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "GameObject|c_TopX": {//Top collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":5.4, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":2.0, "y":0.2, "z":6 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 27 }//Allow Techs to collide and drive on with it but no grab
+        },
+      },
+      "GameObject|c_ForLeft": {//Forwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.975, "y":3.0, "z":2.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForRight": {//Forwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.975, "y":3.0, "z":2.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacLeft": {//Backwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.975, "y":3.0, "z":-2.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacRight": {//Backwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.975, "y":3.0, "z":-2.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForLeftMid": {//Forwards-Left-Middle Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.975, "y":3.0, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.1},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForRightMid": {//Forwards-Right-Middle Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.975, "y":3.0, "z":1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.1},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacLeftMid": {//Backwards-Left-Middle Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.975, "y":3.0, "z":-1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.1},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacRightMid": {//Backwards-Right-Middle Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.975, "y":3.0, "z":-1 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":5, "z": 0.1},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+    },
+
+    "GameObject|_anchor": null,
+
+    //Tube Colliders - JSONBLOCK edition
+    "GameObject|TubeCol": {//Top collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0.5, "y":3.0, "z":2.5 },
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "GameObject|c_aColT": {//Top collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":2.475, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":2, "y":0.05, "z":1 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_aColL": {//Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.975, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":6, "z":1 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_aColR": {//Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.975, "y":0, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":6, "z":1 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_aColB": {//Bottom Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":-2.475, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":2, "y":0.05, "z":1 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "material": { "staticFriction": 1 },//Give it drivable surface
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+    },
+    //Controls the input direction grabber
+    "GameObject|PickUpRadiusUp": {
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "right": {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        "up": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        },
+         "forward": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "name": "PickUpRadiusUp"
+       }
+    },
+
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    "ModuleAnchor": null,//remove anchor
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25,
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleItemHolderBeam": { //The beams used for holding the item
+      "m_BeamBaseHeight": 0.675,
+      "m_BeamColumnRadius": 1.0,
+      "m_BeamStrength": 750.0,
+      "m_HeightIncrementScale": 0.75,
+      // "m_BeamQuadPrefab": {
+      //   "transform": {
+      //     "eulerAngles": {
+      //       "x": 0.0,
+      //       "y": 90.0,
+      //       "z": 0.0
+      //     },
+      //   },
+      // },
+      // "m_ShowParticlesWhenHeld": true,
+      // "m_IsOmniDirectionalStack": false,
+      // "m_SFXGrabbed": 49,
+      // "m_UsePhysicsForHeldItems": false,
+      // "m_Pickup": null,
+      // "m_OverrideDropAfterMinTime": -1.0,
+      // "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      // "m_ScaleChanged": false,
+      // "NumStacks": 3
+    },
+    "ModuleItemHolder": { //This is the holder locations
+      "m_OverrideBasePositons": [
+        { "x": 0.0, "y": 0.5, "z": 0 },
+        { "x": 1.0, "y": 0.5, "z": 0 },
+        { "x": 0.0, "y": 0.5, "z": 1 },
+        { "x": 1.0, "y": 0.5, "z": 1 },
+        { "x": 0.0, "y": 0.5, "z": 2 },
+        { "x": 1.0, "y": 0.5, "z": 2 },
+        { "x": 0.0, "y": 0.5, "z": 3 },
+        { "x": 1.0, "y": 0.5, "z": 3 },
+        { "x": 0.0, "y": 0.5, "z": 4 },
+        { "x": 1.0, "y": 0.5, "z": 4 },
+        { "x": 0.0, "y": 0.5, "z": 5 },
+        { "x": 1.0, "y": 0.5, "z": 5 },
+        // { "x": 0.5, "y": 0.5, "z": 2.5 },//Receiver one
+      ],
+      // // "m_OverrideAPConnections": [//Instant crash
+      // //   {
+      // //     "indices": [
+      // //       0,
+      // //       1,
+      // //     ]
+      // //   }
+      // // ],
+      // "m_StackUpDir": {
+      //   "x": 0.0,
+      //   "y": 0.0,
+      //   "z": 1.0
+      // },
+      "m_CapacityPerStack": 6,
+      // "m_Flags": 0,
+      // "m_AcceptFlags": 2,//Determine if the beam grabs from nearby sources or not
+      // "m_HorizontalBoundsRadius": 1.80277562,
+      // "m_ContentsModificationIndex": 3,
+      // "m_AnonItemTimeStamp": 0,
+      // "NumContents": 0,
+      // "NumStacks": 3,
+      // "IsEmpty": true,
+      // "IsFull": false,
+      // "TotalCapacityForLimiter": 30,
+      // "Acceptance": 2,
+    },
+    "Reference|GSO_Reciver_111/ModuleItemPickup.": {
+      "m_PickupRange": 3.25,// meh
+      "m_VisionRefreshInterval": 2.0,//scannnn\
+      "m_PickUpRadiusFwd": "PickUpRadiusUp",
+      "m_PickUpRadiusAngle": 270.0,//good
+    },
+    "ModuleItemStore": {
+      "m_Capacity": 72,
+      "m_SingleType": false,//Is this a filter silo?
+      // "m_CurrentItemType": {},//Determined by game
+      // "m_LastRequestHeartbeat": -1,//Determined by game
+      // "m_ModuleType": 0,
+    },
+  }
+}

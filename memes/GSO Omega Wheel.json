@@ -1,0 +1,78 @@
+{
+  "Name": "GSO Omega Wheel",
+  "Description": "My soul, it is in pain",
+  "ID": 5349702,
+  "Faction": 1,
+  "Category": 3,
+  "Grade": 4,
+  "Price": 4128768,
+  "HP": 8192000,
+  "Mass": 32768.0,
+  "CenterOfMass": {"x": 7.5, "y": 7.5, "z": 7.5},
+
+  "Fragility": 1.0,
+  "Rarity": 0,
+
+  "Recipe": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+
+  "BlockExtents": { "x": 16, "y": 16, "z": 16 },
+
+  "APs": [ // THis block is TOO BIG for the gAme to handle properly in a grid system
+     { "x": -0.5,  "y": 7,    "z": 7   }, { "x": -0.5,  "y": 8,    "z": 7   }, { "x": -0.5,  "y": 7,    "z": 8   }, { "x": -0.5,  "y": 8,    "z": 8   },
+  ],
+  "GamePrefabReference": "GSO_Wheel_Small_111",
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "ReferenceOffset": { "x": 7.5, "y": 7.5, "z": 7.5 },
+  "ReferenceScale": { "x": 16, "y": 16, "z": 16 },
+  "JSONBLOCK":{
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":7, "y":1, "z":7.5 }
+        },
+      },
+      "ModuleWheels": {
+        "m_TorqueParams": {
+          "torqueCurveMaxTorque": 8640000.0,
+          "torqueCurveMaxRpm":    4000.0,
+          "passiveBrakeMaxTorque": 300000.0,
+          "reverseBrakeMaxRpm": 3000.0,
+          "basicFrictionTorque": 100000.0,
+          "fullCompressFrictionTorque": 5000.0
+        },
+        
+        "m_UseTireTracks": true,
+        "m_WheelTrackType": 0,
+        "m_AudioType": 0,
+        "m_TireTrackWidth": 1000,
+
+        "m_WheelParams":{
+          "radius": 6,
+          "steerAngleMax": 30.0,
+          "steerSpeed": 1,
+          "thicknessAngular": 5,
+
+          "tireProperties":{
+            "props":{
+              "frictionScaleLong": 1.0,
+              "frictionScaleLat": 1.0,
+              "gripFactorLong": 20.0,
+              "gripFactorLat": 20.0
+            }
+          },
+		  "suspensionSpring":           45000.0,
+          "suspensionDamper":           1000.0,
+          "maxSuspensionAcceleration":  0.0,
+          "suspensionQuadratic":        true,
+          "suspensionTravel":           0.25,
+          "m_wheels": {
+            "m_DriveTurnPower": 5.0,
+            "m_DriveTurnBrake": 5.0,
+            "m_DriveTurnDifferential": 0.8,
+            "m_TurnOnSpotPower": 1.0,
+            "Capacity": 4,
+          },
+        }
+      },
+    }
+}

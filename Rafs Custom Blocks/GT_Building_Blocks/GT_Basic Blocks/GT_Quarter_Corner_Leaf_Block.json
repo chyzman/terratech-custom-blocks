@@ -1,0 +1,45 @@
+{
+  "Name": "GreenTech Quarter Corner Leaf Block",
+  "Description": "The Leaf Block is an armored version of the Recycled Block, trading some APs and fire immunity for a special protective structure that halves most sources of damage, including impacts.",
+  "ID": 911013, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3, 
+  "Price": 1146, 
+  "HP": 1350, 
+  "Mass": 3,
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe":  "5, 5, 9, 32, 32, 43, 43, 45",
+  "IconName": "GT_Quarter_Corner_Leaf_Block_Icon.png", 
+  "MeshName": "GT_Quarter_Corner_Leaf_Block.obj", 
+  "ColliderMeshName": "GT_Quarter_Corner_Leaf_Block_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "Cells": [ 
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+	  { "x": 1, "y": 0, "z": 1 }
+  ],
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0.5, "y": 0, "z": 0},
+    {"x": 1, "y": 0, "z": 0.5},
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5}
+
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false
+}

@@ -1,0 +1,50 @@
+{
+  "Name": "Hawkeye Cascade Engine Nose Fairing",
+  "Description": "This air intake was designed to be mounted on Black Lab's Cascade engines. It can sense speed and altitude and provides forward protection for the engine.",
+  "ID": 1170076,
+
+  "Faction": 5,
+  "Category": 5,
+  "Rarity": 1,
+  "Grade": 1,
+  "Price": "3741",
+  "HP": 8000,
+  "Mass": 5,
+
+  "Recipe": "7, 7, 7, 9, 9, 9, 52, 52, 52, 57 ",
+
+  "IconName": "HE_Cascade_Engine_Nose_Fairing.png",
+  "MeshName": "HE_Cascade_Engine_Nose_Fairing.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_Cascade_Engine_Nose_Fairing_Collider.obj",
+
+  "Cells": [
+    {"x": 0, "y": 0, "z": 0},
+    {"x": 0, "y": -1, "z": 0},
+    {"x": 0, "y": 1, "z": 0},
+    {"x": 1, "y": 0, "z": 0},
+    {"x": -1, "y": 0, "z": 0},
+    {"x": 1, "y": 1, "z": 0},
+    {"x": -1, "y": -1, "z": 0},
+    {"x": -1, "y": 1, "z": 0},
+    {"x": 1, "y": -1, "z": 0}
+
+],
+
+  "APs": [ 
+    { "x": 0,     "y": 0,     "z": 0.5  },
+  ],
+
+   "JSONBLOCK":{
+    "ModuleSpeedo": {
+        "m_SpinnerRotationModifier": null,
+        "m_SpinnerMaxRotationSpeedChange": null,
+        "m_StationaryEpsilon": null,
+        "m_Spinners": [],
+        "m_CurrentSpeed": null
+      },
+      "ModuleAltimeter": {},
+   }
+}

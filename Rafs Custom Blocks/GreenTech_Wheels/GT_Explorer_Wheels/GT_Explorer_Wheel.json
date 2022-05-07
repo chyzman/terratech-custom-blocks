@@ -1,0 +1,215 @@
+{
+  "Name": "GreenTech Explorer Wheel",
+  "Description": "A small wheel with a relatively large engine for its size; with a high and flexible suspension for exploring rough, uncharted terrain.",
+  "ID": 911063,
+  "PairedBlock": 911063,  
+
+  "Faction": 0,
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 972, 
+  "HP": 350, 
+  "Mass": 2.0,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 3, 3, 5, 5, 7, 11, 43, 43", 
+  "IconName": "GT_Explorer_Wheel_Icon.png", 
+
+  "BlockExtents":{"x": 2,"y": 2, "z": 1}, 
+  
+  "APs": [ 
+    {"x": -0.5, "y": 1, "z": 0},
+	{"x": 0, "y": 1.5, "z": 0},
+	{"x": 0, "y": 1, "z": 0.5},
+    {"x": 0, "y": 1, "z": -0.5}
+  ],
+  
+  "GamePrefabReference": "VEN_Wheel_211",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 1,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Base",
+		"MeshName": "GT_Explorer_Wheel.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+		"MeshEmissionTextureName": "GreenTech 3.png",
+		"MakeBoxCollider": true,
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}, 
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Tyre",
+		"MeshName": "GT_Explorer_Wheel_Tire.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "m_VEN_Wheel_211_Suspension",
+		"MeshName": "GT_Explorer_Wheel_Suspension.obj",
+		"MeshTextureName": "GreenTech 1.png", 
+        "MeshGlossTextureName": "GreenTech 2.png", 
+        "MeshEmissionTextureName": "GreenTech 3.png",
+		"SubPosition": {
+			"x": 0,
+			"y": 0.15,
+			"z": 0.4
+		},
+		"SubRotation": {
+			"x": 180,
+			"y": -90,
+			"z": 55
+		}
+	},
+	{
+		"SubOverrideName": "Suspension",
+		"SubPosition": {
+			"x": 0.0,
+			"y": 0.7,
+			"z": 0.0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "_wheel",
+		"SubPosition": {
+			"x": 1.08,
+			"y": 0.6,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Up",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	},
+	{
+		"SubOverrideName": "Suspension_Tyre",
+		"SubPosition": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"SubRotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		}
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|_wheel": {
+		"GameObject|_tireFrame": {
+			"GameObject|_suspensionColliderLower": {
+			  "UnityEngine.Transform": {
+				"localPosition": { "x":0, "y":0, "z":0 },
+				"localScale": { "x":1, "y":1, "z":1 }
+			  }
+			  /*"UnityEngine.SphereCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.05
+			  }*/
+			}
+		  },
+		  "UnityEngine.SphereCollider": {
+			"center": {
+			  "x": 0.0,
+			  "y": 0.0,
+			  "z": 0.0
+			},
+			"radius": 0.35
+		  }
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 1000,
+		   "torqueCurveMaxRpm": 800,
+		  "passiveBrakeMaxTorque": 800,
+		   "reverseBrakeMaxRpm": 600,
+		   "basicFrictionTorque": 100.0,
+		   "fullCompressFrictionTorque": 200
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 4.0,
+					"gripFactorLat": 2.5
+				}
+			  },
+			"radius": 0.46,
+			"thicknessAngular": 35,
+			"suspensionSpring": 5000.0,
+			"suspensionDamper": 200.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.5,
+			"steerAngleMax": 30,
+			"steerSpeed": 2
+			//"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	}
+     }
+}

@@ -1,0 +1,48 @@
+/*
+Description:    A small corner arch
+Pros:           High HP and is armored
+Cons:           Heavy, expensive and not a lot of HPs
+*/
+{
+    // Basic Block Information
+    "Name":                 "LK Small Corner Arch",
+    "Description":          "This small yet durable armored arch can support just about anything from buildings to vehicles; a common sight in cities and bases alike.",
+
+    "ID":                   419061,           
+    "Faction":              2,
+    "Category":             2,
+    "Rarity":               2,
+    "Grade":                3,             
+    "Price":                7524,         
+
+    "Recipe" :              { "54": 4, "53": 6, "7": 4 },
+      
+    "IconName":             "LK_arch_corner_small_icon.png",                    
+    "MeshName":             "LK_arch_corner_small_body.obj",                                        
+    "MeshColliderName":     "LK_arch_corner_small_body_col.obj",              
+    "NoBoxCollider":        true,
+
+    "TextureName":          "LK_tex_1.png",
+    "GlossTextureName":     "LK_tex_2.png",
+    "EmissionTextureName":  "LK_tex_3.png",
+  
+    // Basic Block Values
+    "HP":                   2000,             
+    "Mass":                 10.0,           
+    "DamageableType":       1,    
+    "DetachFragility":      0.0,
+    
+    // Block Dimensions
+    "BlockExtents":         { "x": 1, "y": 2,"z": 2 },
+
+    "APs": [ 
+        // Bottom & Top APs
+        { "x": 0, "y": -0.5, "z": 0.0 },
+        { "x": 0, "y": 1.5, "z": 0.0 }, { "x": 0, "y": 1.5, "z": 1.0 },
+
+        // Front & Back APs
+        { "x": 0, "y": 1.0, "z": 1.5 },    
+        { "x": 0, "y": 0, "z": -0.5 }, { "x": 0, "y": 1, "z": -0.5 },            
+    ],
+
+}

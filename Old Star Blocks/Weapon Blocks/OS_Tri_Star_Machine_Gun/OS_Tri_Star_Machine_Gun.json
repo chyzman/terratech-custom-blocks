@@ -1,0 +1,631 @@
+{
+  "Name": "OS Tri Star Machine Gun",
+  "Description": "Now this is how the Old Star do. The Tri Star Machine Gun is a strong and small weapon for the starting techs of Old Star. Boasting high rate of fire and traverse speed at the cost of obtaining above average recoil. A small weapon great to showing what Old Star fire Power will become at higher Grades.",
+  "ID": 300200,
+  "Faction": 4,
+  "Category": 4,
+  "Grade": 1,
+  "Price": 1770,
+  "Recipe": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 10, 10, 46",
+  "IconName": "OS_Tri_Star_MG_icon.png",
+  "SupressBoxColliderFallback": true,
+
+  // Basic Block HP Values
+  "HP": 1200,
+  "Mass": 0.7,
+  "CenterofMass": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "DamageableType": 0,
+  // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+  // 0    = Standard
+  // 1    = Armor
+  // 2    = Rubber
+  // 3    = Volatile
+  // 4    = Shield
+  // 5    = Wood
+  // 6    = Rock
+  "Fragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+  "EmissionMode": 2,
+  // Block Dimensions
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    }
+  ],
+
+  // Advanced Settings
+  "GamePrefabReference": "HE_SMG_111",
+  "KeepReferenceRenderers": true, // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+  "ReferenceOffset": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_SMG_111_Base", //base
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_TSMG_Base.obj",
+      "ColliderMeshName": "OS_TSMG_Base.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_HE_SMG_111_RotatingArm", //horizontal
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "OS_TSMG_Horizontal.obj",
+      "ColliderMeshName": "OS_TSMG_Horizontal.obj",
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+
+    {
+      "SubOverrideName": "m_HE_SMG_111_Gun", //verticle
+      "MeshName": "OS_TSMG_Verticle.obj",
+      "ColliderMeshName": "OS_TSMG_Verticle.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_HE_SMG_111_Barrel_A",
+      "MeshName": "OS_TSMG_BarrelA.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_HE_SMG_111_Barrel_B",
+      "MeshName": "OS_TSMG_BarrelB.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "SubOverrideName": "m_HE_SMG_111_Barrel_C",
+      "MeshName": "OS_TSMG_BarrelC.obj",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshTextureName": "OST1.png",
+      "MeshGlossTextureName": "OST2.png",
+      "MeshEmissionTextureName": "OST3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|m_HE_SMG_111_Base": {
+      "GameObject|_gimbalBase": {
+        "GameObject|m_HE_SMG_111_RotatingArm": {
+          "GameObject|_gimbalElev": {
+            "GameObject|m_HE_SMG_111_Gun": {
+              "GameObject|_barrel_C": {
+                "GameObject|_smoke": {
+                  //gun smoke
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_muzzleFlash": {
+                  //muzzle flash location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_spawnCasing": {
+                  //spent Casing location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0.167,
+                      "y": 0.168,
+                      "z": -0.5
+                    }
+                  }
+                },
+                "GameObject|_spawnBullet": {
+                  //bullet spawner location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_recoiler": {
+                  "GameObject|m_HE_SMG_111_Barrel_C": {
+                    "UnityEngine.Transform": {
+                      "localScale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|_barrel_B": {
+                "GameObject|_smoke": {
+                  //gun smoke
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": -0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_muzzleFlash": {
+                  //muzzle flash location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": -0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_spawnCasing": {
+                  //spent Casing location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": -0.167,
+                      "y": 0.168,
+                      "z": -0.5
+                    }
+                  }
+                },
+                "GameObject|_spawnBullet": {
+                  //bullet spawner location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": -0.167,
+                      "y": 0.168,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_recoiler": {
+                  "GameObject|m_HE_SMG_111_Barrel_B": {
+                    "UnityEngine.Transform": {
+                      "localScale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "GameObject|_barrel_A": {
+                "GameObject|_smoke": {
+                  //gun smoke
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_muzzleFlash": {
+                  //muzzle flash location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_spawnCasing": {
+                  //spent Casing location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0,
+                      "y": 0,
+                      "z": -0.5
+                    }
+                  }
+                },
+                "GameObject|_spawnBullet": {
+                  //bullet spawner location
+                  "UnityEngine.Transform": {
+                    "localScale": {
+                      "x": 1,
+                      "y": 1,
+                      "z": 1
+                    },
+                    "localEulerAngles": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0,
+                      "w": 1
+                    },
+                    "localPosition": {
+                      "x": 0,
+                      "y": 0,
+                      "z": 0.6
+                    }
+                  }
+                },
+                "GameObject|_recoiler": {
+                  "GameObject|m_HE_SMG_111_Barrel_A": {
+                    "UnityEngine.Transform": {
+                      "localScale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                      },
+                      "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0,
+                        "w": 1
+                      },
+                      "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0,
+                  "w": 1
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "GimbalAimer": {
+              "rotationAxis": 1,
+              "rotationLimits": [
+                -55.0,
+                15.0
+              ]
+            }
+          },
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          }
+        },
+        "UnityEngine.Transform": {
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GimbalAimer": {
+          "rotationAxis": 2,
+          "rotationLimits": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "ModuleWeapon": {
+      "m_AimType": 0,
+      "m_RotateSpeed": 220.0,
+      "m_ChangeTargetInteval": 0.5,
+      "m_AutoFire": false,
+      "m_PreventShootingTowardsFloor": false,
+      "m_DeployOnHasTarget": false,
+      "m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0.2,
+      "m_FireSFXType": 11
+
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.2,
+      "m_ResetBurstOnInterrupt": true,
+      "m_ResetFiringTAfterNotFiredFor": 1.0,
+      "m_DeploySFXType": 0,
+      "m_NumCannonBarrels": 3,
+      "m_ShotTimer": 0.0,
+      "m_ModuleType": 0,
+      "SFXType": 0
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 90.0,
+      "m_CasingVelocity": 15.0,
+      "m_BulletSprayVariance": 0.02,
+      "m_BulletSpin": 0.0,
+      "m_CasingEjectVariance": 0.5,
+      "m_CasingEjectSpin": 50.0,
+      "m_KickbackStrength": 30.0,
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_DamageType": "Bullet",
+          "m_Damage": 97
+        }
+      }
+    }
+  }
+}

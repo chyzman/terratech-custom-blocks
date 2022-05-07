@@ -1,0 +1,67 @@
+{
+	"Name": "GSO Medium Capacitor",
+	"Description": "A Cheap alternative to a battery. Has a very low internal storage, but is stronger then the battery.", //You can make multiple lines with \n
+	"ID": 1700038, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 1, //The grade minus one
+	"Price": 250,
+	"HP": 700,
+	"Mass": 5,
+
+	"IconName": "Small_Cap_Icon.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "plumbiaingot,fibronchunk,plumbiaingot,fibronchunk", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": "GSO_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 },
+		{ "x": 0, "y": 1, "z": 0 }
+		
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+		{ "x": 0, "y": -0.5, "z": 0 }
+		
+		
+					
+    ],
+	
+	
+	"GamePrefabReference": "GCBattery(222)",
+	"KeepReferenceRenderers": true,
+	
+	"SubObjects": [ {
+    "SubOverrideName":"GC_Battery_222",
+	"DestroyExistingColliders": true,
+    "MeshName": "Small_Cap.obj","ColliderMeshName": "Small_Cap.obj",
+	"MeshMaterialName": "GSO_Main",
+    
+	"SubPosition":{"x":0,"y":0,"z":0},
+	"SubScale":{"x":1,"y":1,"z":1}
+	
+	},
+	{
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "Small_Cap_LED.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0},
+	  "SubScale": { "x": 1, "y": 1, "z": 1}
+	}
+    ],
+	
+	"JSONBLOCK": {
+    "ModuleEnergyStore": {"m_Capacity": 250}
+	
+	}
+}

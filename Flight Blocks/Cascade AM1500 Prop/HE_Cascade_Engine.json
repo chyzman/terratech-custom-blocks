@@ -1,0 +1,71 @@
+
+{
+  "Name": "Hawkeye Cascade AM1500 Prop",
+  "Description": "Noting a lack of performance in the popular Twister Prop, Hawkeye Black Labs set to improve it. The result is the Cascade AM1500 Prop, a turbine designed to be stacked in large columns for unparalleled thrust.",
+  "ID": 117008,
+
+  "Faction": 5,
+  "Category": 8,
+  "Rarity": 2,
+  "Grade": 2,
+  "Price": 31143,
+  "HP": 750,
+  "Mass": 5,
+
+  "Recipe":  "47, 52, 52, 57, 62, 66, 66",
+
+  "IconName": "HE_Cascade_Turbine.png",
+  "MeshName": "HE_Cascade_Turbine.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_Cascade_Turbine_Collider.obj",
+
+  "Cells": [
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": -1, "z": 0},
+        {"x": 0, "y": 1, "z": 0},
+        {"x": 1, "y": 0, "z": 0},
+        {"x": -1, "y": 0, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+        {"x": -1, "y": -1, "z": 0},
+        {"x": -1, "y": 1, "z": 0},
+        {"x": 1, "y": -1, "z": 0}
+
+  ],
+
+ "APs": [ 
+    { "x": 0,     "y": 0,    "z": 0.5  },
+    { "x": 0,     "y": 0,     "z": -0.5  },
+    { "x": 1.5,     "y": 0,    "z": 0  },
+    { "x": 0,     "y": -1.5,       "z": 0  },
+    { "x": -1.5,     "y": 0,       "z": 0  },
+    { "x": 0,     "y": 1.5,       "z": 0  }
+  ],
+
+   "GamePrefabReference": "HE_Gyroprop_313",
+
+   "SubObjects":[
+     {
+      "SubOverrideName": "m_HE_GyroProp_rotors",
+         "MeshName": "HE_Cascade_Turbine_Rotors.obj",
+         "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+         "SubRotation": { "x": 0, "y": 180, "z": 0 }
+     },
+     {
+     "SubOverrideName": "_spinner",
+         "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+         "SubRotation": { "x": 0, "y": 180, "z": 0 }
+   }
+  ],
+   
+ "JSONBLOCK": {
+  "GameObject|_fanJet": {
+    "FanJet": {
+       "force": 2250.0,
+       "backForce": 1750.0
+        }
+       
+      }
+   }
+}

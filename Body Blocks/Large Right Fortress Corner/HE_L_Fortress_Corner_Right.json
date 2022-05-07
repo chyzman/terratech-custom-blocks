@@ -1,0 +1,38 @@
+{
+  "Name": "Hawkeye Large Right Corner Fortress Armor",
+  "Description": "A large exterior corner block from Hawkeye Black Labs. The right member in a pair.",
+  "ID": 117005,
+
+  "Faction": 5,
+  "Category": 0,
+  "Rarity": 0,
+  "Grade": 1,
+  "Price": 1710,
+  "HP": 3000,
+  "Mass": 3.5,
+
+  "Recipe": "3, 9, 9, 9, 9, 54",
+
+  "IconName": "HE_L_Fortress_Corner_Right.png",
+  "MeshName": "HE_L_Fortress_Corner_Right.obj",
+
+  "MeshMaterialName": "HE_Main",
+
+  "ColliderMeshName": "HE_L_Fortress_Corner_Right_Collider.obj",
+
+  "BlockExtents":
+  {
+    "x": 3,
+    "y": 1,
+    "z": 1
+  },
+
+  "APs": [ 
+    { "x": 0,     "y": -0.5,    "z": 0  },
+    { "x": 1,     "y": -0.5,    "z": 0  },
+    { "x": 2,     "y": -0.5,    "z": 0  },
+    { "x": 0,     "y": 0,       "z": 0.5  }
+  ],
+
+   "GamePrefabReference": "HE_ArmouredBlock_113",
+}

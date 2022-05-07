@@ -1,0 +1,355 @@
+{
+  "Name": "GreenTech Bioreactor",
+  "Description": "This device uses bioengineered microorganisms to convert fuel into energy. Each bioreactor unit will process fuel at its own rate, with all units starting when fuel tanks are full and halting when they're empty in order to wait for the complete fuel refill, to only then resume the cycle.",
+  "ID": 911243, 
+
+  "Faction": 0,
+  "Category": 6, 
+  "Grade": 3, 
+  "Price": 12720, 
+  "HP": 6000, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 1.5, "y": 0.5, "z": -0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "43, 43, 43, 43, 45, 45, 47, 47, 51, 51, 56, 56",
+  "IconName": "GT_Bioreactor_Icon.png", 
+  "MeshName": "GT_Bioreactor.obj",
+  "ColliderMeshName": "GT_Bioreactor_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "Cells":[
+    {"x": 0,"y": 0, "z": 0},
+    {"x": 1,"y": 0, "z": 0},
+    {"x": 2,"y": 0, "z": 0},
+    {"x": 3,"y": 0, "z": 0},
+    {"x": 0,"y": 1, "z": 0},
+    {"x": 1,"y": 1, "z": 0},
+    {"x": 2,"y": 1, "z": 0},
+    {"x": 3,"y": 1, "z": 0},
+    {"x": 0,"y": 0, "z": -1},
+    {"x": 1,"y": 0, "z": -1},
+    {"x": 2,"y": 0, "z": -1},
+    {"x": 3,"y": 0, "z": -1},
+    {"x": 0,"y": 1, "z": -1},
+    {"x": 1,"y": 1, "z": -1},
+    {"x": 2,"y": 1, "z": -1},
+    {"x": 3,"y": 1, "z": -1}
+  ], 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+	  {"x": 0, "y": -0.5, "z": -1},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": -1},
+    {"x": 2, "y": -0.5, "z": 0},
+	  {"x": 2, "y": -0.5, "z": -1},
+    {"x": 3, "y": -0.5, "z": 0},
+    {"x": 3, "y": -0.5, "z": -1}
+  ],
+  
+  "GamePrefabReference": "VEN_FuelPod_111",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference": "GSO_BigBertha_845",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "Rotor",
+      "MeshName": "GT_Bioreactor_Rotor.obj",
+      "MeshTextureName": "GreenTech 1.png",
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_VEN_FuelPod_111",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "_energyGauge",
+	  "MeshName": "GT_Bioreactor_LED_Energy.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+      "SubOverrideName": "LED2",
+      "MeshName": "GT_Bioreactor_LED_Fuel_1.obj"
+    },
+    {
+      "SubOverrideName": "LED1",
+      "MeshName": "GT_Bioreactor_LED_Fuel_2.obj"
+    },
+    {
+      "SubOverrideName": "LED0",
+      "MeshName": "GT_Bioreactor_LED_Fuel_3.obj"
+    },
+    {
+      "MeshName": "GT_Bioreactor_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    }
+    /* {
+      "MeshName": "GT_Bioreactor_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Bioreactor_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    } */
+  ],
+
+  "JSONBLOCK": {
+    "Reference|GCBattery(222)/_energyGauge": {},
+    
+    "ModuleFuelTank": {
+      "m_Capacity": 3.0,
+      "m_RefillRate": 0.0
+    },
+    "RandomAdditions.ModuleFuelEnergyGenerator":{ // Burn fuel, get power
+      "GenerateCondition": "Alternating",   // 
+      // Manual for shift to generate,  
+      // Automatic to begin generating when full
+      // Alternating to begin generating on full tank, and stop when empty
+      "FuelConsumeRate": 20,                  // Rate to consume the fuel per second
+      "FuelToEnergyRate": 8.0,                // Rate to convert fuel to energy per second
+      "GenerateSFX": "Generator"   // The generating SFX to use
+      // fuel burning * FuelToEnergyRate = generated energy
+    }, // To add effects while running, make a new Gameobject named "_MFEG_effect" to store those particleSystem and Spinner effects.
+    "Reference|GCBattery(222)/ModuleEnergyStore.": {
+      "m_EnergyType": 0,
+      "m_Capacity": 1500.0,
+      "m_AcceptRemoteCharge": false
+    },
+    "GameObject|_MFEG_effect":{
+      "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0.06,
+            "z": 0
+           },
+           "localScale": {
+            "x": 100,
+            "y": 0.5,
+            "z": 0.01
+          },
+          "localEulerAngles": {
+            "x": 90,
+            "y": 0,
+            "z": 0
+          }
+         },
+        "ParticleSystem": {
+          "startDelay": 0.0,
+          "loop": true,
+          "playOnAwake": true,
+          "playbackSpeed": 0.5,
+          "enableEmission": true,
+          "emissionRate": 10000.0,
+          "startSpeed": 0.1,
+          "startSize": 0.001,
+          "startColor": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.1
+          },
+          "startLifetime": 1,
+          "gravityModifier": -0.01,
+          "maxParticles": 30,
+          "simulationSpace": 0,
+          "scalingMode": 2,
+          "sizeOverLifetime": {
+            "enabled": true,
+            "sizeMultiplier": 0.5
+          },
+          "velocityOverLifetime": {
+            "enabled": true,
+            "xMultiplier": 0.0,
+            "yMultiplier": 0.0,
+            "zMultiplier": 0.0,
+            "radialMultiplier": 2
+          },
+          "limitVelocityOverLifetime": {
+            "enabled": true,
+            "dragMultiplier": 1.2,
+            "multiplyDragByParticleSize": false,
+            "multiplyDragByParticleVelocity": false
+          },
+          "sizeBySpeed": {
+            "enabled": false,
+            "sizeMultiplier": 0.7
+          },
+          "shape": {
+            "box": {
+              "x": 0.1,
+              "y": 0.1,
+              "z": 0.01
+            },
+            "randomDirection": true,
+            "enabled": true,
+            "shapeType": 0,
+            "randomDirectionAmount": 0.4,
+            "sphericalDirectionAmount": 0.0,
+            "randomPositionAmount": 0.0,
+            "radiusMode": 0,
+            "radiusSpread": 0.0,
+            "radiusSpeedMultiplier": 1.0,
+            "radiusThickness": 0.1,
+            "angle": 360,
+            "length": 1.0,
+            "boxThickness": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "arcSpeedMultiplier": 0.0,
+            "donutRadius": 0.01
+          }
+        },
+        "ParticleSystemRenderer":{
+          "minParticleSize": 0.0,
+          "maxParticleSize": 0.08
+        }
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 2.53,
+          "y": 1.14,
+          "z": -0.5
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localScale": {
+          "x": 0.01,
+          "y": 2,
+          "z": 1
+        }
+      },
+      "GameObject|Spinner1":{
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0.03,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          }
+        },
+        "Spinner": {
+          "m_Speed": 0.5,
+          "m_RotationAxis": {
+            "axis": 2
+          },
+          "m_SteerAxis": {
+            "axis": 2
+          },
+          "m_AutoSpin": false,
+          "m_SpinUpTime": 0.5
+        },
+        "GameObject|Spinner2":{
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": -0.03,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localScale": {
+              "x": 100,
+              "y": 0.5,
+              "z": 1
+            }
+          },
+          "Spinner": {
+            "m_Speed": -0.5,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_AutoSpin": false,
+            "m_SpinUpTime": 0.5
+          },
+          "GameObject|Spinner3":{
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              }
+            },
+            "Spinner": {
+              "m_Speed": 0.3,
+              "m_RotationAxis": {
+                "axis": 1
+              },
+              "m_SteerAxis": {
+                "axis": 1
+              },
+              "m_AutoSpin": false,
+              "m_SpinUpTime": 0.5
+            },
+            "GameObject|Rotor":{
+              
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,166 @@
+{
+	"Name": "Better Future Hollow Support",
+	"Description": "A hollow support block for the 5x5x5 series of blocks", //You can make multiple lines with \n
+	"ID": 1700057, //A random ID that must be unique		
+	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
+
+	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
+	"Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+	"Grade": 2, //The grade minus one
+	"Price": 17170,
+	"HP": 1000,
+	"Mass": 5,
+
+	"IconName": "BF Base Structure hollow icon.png",
+
+	"MeshName": null, //Name of mesh, such as "mesh.obj"
+	
+	"Recipe":  "titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,titanicalloy,", // Separate chunk names or IDs with a comma. Not case sensitive.
+	
+	"MeshMaterialName": null, //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+	
+	"Cells": [ //The grid space to be occupied
+        { "x": 0, "y": 0, "z": 0 }, 
+		{ "x": 0, "y": 0, "z": 1 },
+		{ "x": 0, "y": 0, "z": 2 },
+		{ "x": 0, "y": 0, "z": 3 },
+		{ "x": 0, "y": 0, "z": 4 },		
+        { "x": 1, "y": 0, "z": 0 }, 
+        { "x": 2, "y": 0, "z": 0 }, 
+        { "x": 3, "y": 0, "z": 0 }, 
+		{ "x": 1, "y": 0, "z": 4 }, 
+        { "x": 2, "y": 0, "z": 4 }, 
+        { "x": 3, "y": 0, "z": 4 }, 
+        { "x": 4, "y": 0, "z": 0 }, 
+		{ "x": 4, "y": 0, "z": 1 },
+		{ "x": 4, "y": 0, "z": 2 },
+		{ "x": 4, "y": 0, "z": 3 },
+		{ "x": 4, "y": 0, "z": 4 },
+		
+		{ "x": 0, "y": 1, "z": 0 }, 
+		{ "x": 0, "y": 1, "z": 4 },		
+        { "x": 4, "y": 1, "z": 0 }, 
+		{ "x": 4, "y": 1, "z": 4 },
+		
+		{ "x": 0, "y": 2, "z": 0 }, 
+		{ "x": 0, "y": 2, "z": 4 },		
+        { "x": 4, "y": 2, "z": 0 }, 
+		{ "x": 4, "y": 2, "z": 4 },
+		
+		{ "x": 0, "y": 3, "z": 0 }, 
+		{ "x": 0, "y": 3, "z": 4 },		
+        { "x": 4, "y": 3, "z": 0 }, 
+		{ "x": 4, "y": 3, "z": 4 },
+		
+		{ "x": 0, "y": 4, "z": 0 }, 
+		{ "x": 0, "y": 4, "z": 1 },
+		{ "x": 0, "y": 4, "z": 2 },
+		{ "x": 0, "y": 4, "z": 3 },
+		{ "x": 0, "y": 4, "z": 4 },		
+        { "x": 1, "y": 4, "z": 0 }, 
+        { "x": 2, "y": 4, "z": 0 }, 
+        { "x": 3, "y": 4, "z": 0 }, 
+		{ "x": 1, "y": 4, "z": 4 }, 
+        { "x": 2, "y": 4, "z": 4 }, 
+        { "x": 3, "y": 4, "z": 4 }, 
+        { "x": 4, "y": 4, "z": 0 }, 
+		{ "x": 4, "y": 4, "z": 1 },
+		{ "x": 4, "y": 4, "z": 2 },
+		{ "x": 4, "y": 4, "z": 3 },
+		{ "x": 4, "y": 4, "z": 4 },
+		
+		
+		
+		
+		
+		
+
+		
+    ],
+    "APs": [ //The location of APs on the block. For use with "Cells"
+       { "x": -0.5, "y": 0, "z": 0 }, 
+		{ "x": -0.5, "y": 0, "z": 4 },
+		{ "x": -0.5, "y": 4, "z": 0 },
+		{ "x": -0.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 4 },
+		{ "x": 4.5, "y": 0, "z": 0 }, 
+		{ "x": 4.5, "y": 4, "z": 4 },
+		{ "x": 4.5, "y": 4, "z": 0 }, 
+		
+	    { "x": 0, "y": -0.5, "z": 0 }, 
+		{ "x": 0, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": -0.5, "z": 0 },
+		{ "x": 4, "y": -0.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 4 },
+		{ "x": 0, "y": 4.5, "z": 0 }, 
+		{ "x": 0, "y": 4.5, "z": 4 },
+		{ "x": 4, "y": 4.5, "z": 0 }, 
+
+		{ "x": 0, "y": 0, "z": -0.5 }, 
+		{ "x": 0, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 0, "z": -0.5 },
+		{ "x": 4, "y": 0, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": 4.5 },
+		{ "x": 0, "y": 4, "z": -0.5 }, 
+		{ "x": 0, "y": 4, "z": 4.5 },
+		{ "x": 4, "y": 4, "z": -0.5 } 
+
+					
+    ],
+	
+	
+	"GamePrefabReference": "GSO_Block_Half_Long_211",
+	"ReferenceOffset": { "x": 2, "y": 2, "z": 2 },
+	
+	"KeepReferenceRenderers": false,
+	"SubObjects": [ {
+    "SubOverrideName":"Block",
+    "MeshName": "BF_Struture_Hollow.obj",
+	"MeshMaterialName": "BF_Main",
+    
+	"SubPosition":{"x":2,"y":2,"z":2}
+	
+	},{"SubOverrideName":"BFBSHC1",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider.obj",
+	"SubPosition":{"x":2,"y":2,"z":2}},
+	{"SubOverrideName":"BFBSHC2",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider.obj",
+	"SubPosition":{"x":-2,"y":2,"z":2}},
+	{"SubOverrideName":"BFBSHC3",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider.obj",
+	"SubPosition":{"x":2,"y":6,"z":2}},
+	{"SubOverrideName":"BFBSHC4",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider.obj",
+	"SubPosition":{"x":-2,"y":6,"z":2}},
+	
+	{"SubOverrideName":"BFBSHC5",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider2.obj",
+	"SubPosition":{"x":2,"y":2,"z":2}},
+	{"SubOverrideName":"BFBSHC6",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider2.obj",
+	"SubPosition":{"x":2,"y":2,"z":-2}},
+	{"SubOverrideName":"BFBSHC7",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider2.obj",
+	"SubPosition":{"x":2,"y":6,"z":2}},
+	{"SubOverrideName":"BFBSHC8",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider2.obj",
+	"SubPosition":{"x":2,"y":6,"z":-2}},
+	
+	{"SubOverrideName":"BFBSHC9",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider3.obj",
+	"SubPosition":{"x":2,"y":2,"z":2}},
+	{"SubOverrideName":"BFBSHC10",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider3.obj",
+	"SubPosition":{"x":2,"y":2,"z":6}},
+	{"SubOverrideName":"BFBSHC11",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider3.obj",
+	"SubPosition":{"x":-2,"y":2,"z":2}},
+	{"SubOverrideName":"BFBSHC12",
+	"ColliderMeshName": "BF_Base_structure_hollow_Colider3.obj",
+	"SubPosition":{"x":-2,"y":2,"z":6}},
+	
+    ]
+	
+	
+	
+	}

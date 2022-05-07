@@ -1,0 +1,256 @@
+
+{
+    "Name":                 "Hawkeye Blutgang ETC Howitzer",
+    "Description":          "The Blutgang is a Black Labs artillery piece which uses a hybrid ignition technology called ETC. Using a high energy plasma to detonate the prop-charge, the Blutgang can achieve much higher velocity and accuracy than conventional guns while not requiring the sheer energy draw of railguns. Though powerful, the Blutgang has no aiming by itself and requires clever tech engineering to fully utilize.",
+
+    "ID": 117070,
+
+    "Faction": 5,        
+
+    "Category": 4,        
+    "Rarity": 2,
+    "Grade": 3,             
+    "Price": 73530,        
+  
+    "Recipe":  {"53": 4, "54": 4, "58": 4, "61":4, "64": 2},	
+	
+    "IconName":                   "HE_Blutgang_Howitzer.png",  
+    "MeshName":                   null,                                                                 
+    "ColliderMeshName":           null,                           
+    "SupressBoxColliderFallback": true,
+
+    "HP": 6000,                            
+    "Mass": 20,
+
+    "DamageableType": 0,    
+    "Fragility": 0,
+    
+    "BlockExtents":
+    { "x": 1,"y": 1, "z": 14 },
+
+    "APs": [
+        {"x": 0, "y": 0, "z": -0.5 },
+
+        {"x": 0, "y": 0.5, "z": 1 },
+        {"x": 0, "y": 0.5, "z": 0 },
+        
+        {"x": 0, "y": -0.5, "z": 1 },
+        {"x": 0, "y": -0.5, "z": 3 },
+
+        {"x": 0.5, "y": 0, "z": 0 },
+        {"x": -0.5, "y": 0, "z": 0 },
+        {"x": 0.5, "y": 0, "z": 1 },
+        {"x": -0.5, "y": 0, "z": 1 },
+        {"x": 0.5, "y": 0, "z": 2 },
+        {"x": -0.5, "y": 0, "z": 2 },
+        {"x": 0.5, "y": 0, "z": 3 },
+        {"x": -0.5, "y": 0, "z": 3 },
+
+    ],
+
+    "GamePrefabReference":    "HE_Cannon_Battleship_216",
+    "KeepRenderers": true,
+    "KeepColliders": false,
+    "ReferenceOffset":        { "x": 0, "y": 0, "z": 0 },
+
+    "SubObjects":[
+      { 
+        "SubOverrideName":          "m_HE_CannonBattleship_216_body", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Blutgang_Howitzer_Base.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Blutgang_Howitzer_Base_Collider.obj",
+      },
+      { 
+        "SubOverrideName":          "_barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 null,
+        "MeshMaterialName":         "null",
+        "ColliderMeshName":         null,
+        "SubPosition":              { "x": -0.5, "y": 0, "z": 0 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 2 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "m_HE_CannonBattleship_216_barrel", 
+        "DestroyExistingRenderer":  true,
+        "DestroyExistingColliders": true,
+        "MeshName":                 "HE_Blutgang_Howitzer_Barrel.obj",
+        "MeshMaterialName":         "HE_Main",
+        "ColliderMeshName":         "HE_Blutgang_Howitzer_Barrel_Collider.obj",
+        "SubPosition":              { "x": 0, "y": 0, "z": -0.25 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 0.5 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+     { 
+        "SubOverrideName":          "_bulletSpawn", 
+        "SubPosition":              { "x": 0, "y": 0, "z": 7},
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 },
+        "SubRotation":              { "x": 0, "y": 0, "z": 0 }
+      },
+      { 
+        "SubOverrideName":          "_muzzleFlash",
+        "SubPosition":              { "x": 0, "y": 0, "z": 7 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 4 },
+      },
+      { 
+        "SubOverrideName":          "_smoke",
+        "SubPosition":              { "x": 0, "y": 0, "z": 7 },
+        "SubScale":                 { "x": 1, "y": 1, "z": 1 }
+      },
+   ],
+
+    "Deserializer": {    
+      "GameObject|_gimbalBase": {
+        "GimbalAimer": {
+          "rotationLimits": [0, 0]
+        },
+        "GameObject|_gimbalElev": {
+          "GimbalAimer": {
+            "rotationLimits": [0, 0] 
+          },
+        }
+      },
+
+      "ModuleWeaponGun": {
+        "m_ShotCooldown": 4,                  // The length of pause between shots. A higher value lengthens the pause and vice versa.
+        "m_CooldownVariancePct": 0,          // Dictates how random the length of pause between shots.
+        "m_SeekingRounds": true,               // Dictates whether the projectiles fired by this weapon will home toward targets     
+        },
+
+      "FireData": {
+                "m_MuzzleVelocity": 300.0,              // Dictates the projectile's speed. The higher the value, the faster it will travel.
+                "m_KickbackStrength": 500.0,            // Dictates the strength of the recoil when firing the gun
+                "m_BulletSprayVariance": 0,             // Dictates how accurate the gun is. The lower the value, the more accurate it fires its shots.
+                "m_BulletSpin": 0.0,                    // Dictates the rate of the bullet spinning in mid-air. Set to 0 by default
+    
+                
+                /********** Bullet Prefab **********/
+                "Instantiate|m_BulletPrefab": {
+                    "SeekingProjectile": {
+                        "m_VisionConeAngle": 90,
+                        "m_VisionRange": 50,
+                        "m_TurnSpeed": 5,
+                        "m_ActivationDelay": 1,
+                        "m_LockOntoTarget": true,
+                        "m_ApplyRotationTowardsTarget": false,
+                        "m_SeekType": 1,
+                        "m_TargetingType": 2,
+                        "m_IgnoreTeam": 0,
+                      },
+    
+
+                    "LineRenderer": {
+                        "startWidth": 1,
+                        "endWidth": 0.4,
+                        "widthMultiplier": 1.0,
+
+                        "startColor":   { "r": 1.0, "g": 0, "b": 0, "a": 1.0 },
+                        "endColor":     { "r": 1.0, "g": 0, "b": 0, "a": 1.0 }
+                    },
+                  
+                    "Projectile":{
+                        "m_Damage": 4000,                  // The damage of the bullet when directly hitting a block
+                        "m_LifeTime": 10.0,                  // The duration of the bullet's existence before despawning
+                        "m_ExplodeAfterLifetime": true,     // If set to true, the bullet will explode when despawning
+                        "m_IgnoreCollisionWithBarrel": true,
+                        "Instantiate|m_Explosion": {
+                            "Explosion": {
+                                "m_EffectRadiusMaxStrength": 6,
+                                "m_EffectRadius": 12,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+                                "m_MaxDamageStrength":      500,        // The splash damage done
+                                "m_MaxImpulseStrength":     100      // The strength of the knockback done by the explosion
+                            },
+                            "GameObject|Sparks": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                                "main": {
+                                  "m_ParticleSystem": {
+                                    "startSize": 7,
+                                    "startSpeed": 10.0,
+                                    "emissionRate": 100.0,
+                                    "maxParticles": 750,
+                                    "emission": {
+                                      "rateMultiplier": 2450.0,
+                                      "rateOverTimeMultiplier": 0.2,
+                                      "burst": {
+                                        "count": 750,
+                                        "maxCount": 650,
+                                        "minCount": 400
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "GameObject|ExplosionBright": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                              }
+                            },
+                            "GameObject|ExplosionDark": { 
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                              }
+                            },
+                            "GameObject|ExplosionSmoke": {
+                              "UnityEngine.ParticleSystem": {
+                                "shape": {
+                                  "shapeType": "Sphere",
+                                },
+                                "main": {
+                                    "m_ParticleSystem": {
+                                      "startSize": 12,
+                                      "startSpeed": 15.0,
+                                      "emissionRate": 200.0,
+                                      "maxParticles": 1500,
+                                      "emission": {
+                                        "rateMultiplier": 2450.0,
+                                        "rateOverTimeMultiplier": 0.2,
+                                        "burst": {
+                                          "count": 750,
+                                          "maxCount": 650,
+                                          "minCount": 400
+                                        }
+                                      }
+                                    }
+                                  }
+                              }
+                            } 
+                        }
+                    }
+                },
+    
+                "Instantiate|m_BulletCasingPrefab": null       
+          
+        },
+
+      "ModuleWeapon": {
+        "m_AutoFire": false, 
+        "m_AimType": 0,
+        "m_RotateSpeed": 0, 
+        "m_ChangeTargetInteval": 0.5,
+
+        "m_PreventShootingTowardsFloor": false,
+        "m_DeployOnHasTarget": false,
+        "m_LimitedShootAngle": 90.0,
+
+        "m_FireSFXType": 77,
+
+        "m_RemoteShotFiredPending": 0,
+        "m_HasTargetInFiringCone": false,
+        "FireControl": false,
+        "AimControl": 0,
+
+      },
+
+  }   
+}

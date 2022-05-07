@@ -1,0 +1,364 @@
+{
+  "Name": "GeoCorp Geomagnetic Hover Platform",
+  "Description": "This powerful flying platform uses unique geomagnetic technology paired with hovering in order to repel surfaces but also attract them, clinging to hills and most structures without touching them.\nMovement may feel a little rough on a terrain full of obstacles, and an upside down platform will catch itself in the world's electromagnetic field, making it fly uncontrollably; deploy the Build Beam if that happens.",
+  "ID": 910953, 
+
+  "Faction": 2, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 12786, 
+  "HP": 3200, 
+  "Mass": 20,
+
+  "Recipe":  "44, 44, 44, 44, 48, 48, 48, 48, 48, 48, 54, 54, 57, 57", 
+  "IconName": "GC_Geomagnetic_Hover_Icon.png", 
+  "SupressBoxColliderFallback": true,
+  "MeshName": "GC_Geomagnetic_Hover.obj",
+  "MeshMaterialName": "GC_Main",
+  "ColliderMeshName": "GC_Geomagnetic_Hover_Collider.obj",
+  "BlockExtents": 
+  {
+    "x": 4,
+    "y": 2,
+    "z": 4
+  },   
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 1.5,
+      "z": 2
+    },
+	{
+      "x": 1,
+      "y": 1.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 1.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 1.5,
+      "z": 2
+    },
+	{
+      "x": 1,
+      "y": 1.5,
+      "z": 3
+    },
+	{
+      "x": 2,
+      "y": 1.5,
+      "z": 0
+    },
+	{
+      "x": 2,
+      "y": 1.5,
+      "z": 1
+    },
+	{
+      "x": 2,
+      "y": 1.5,
+      "z": 2
+    },
+	{
+      "x": 2,
+      "y": 1.5,
+      "z": 3
+    },
+	 {
+      "x": 3,
+      "y": 1.5,
+      "z": 1
+    },
+	{
+      "x": 3,
+      "y": 1.5,
+      "z": 2
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": -0.5,
+      "y": 0,
+      "z": 2
+    },
+	{
+      "x": -0.5,
+      "y": 1,
+      "z": 1
+    },
+	{
+      "x": -0.5,
+      "y": 1,
+      "z": 2
+    },
+	{
+      "x": 3.5,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 3.5,
+      "y": 0,
+      "z": 2
+    },
+	{
+      "x": 3.5,
+      "y": 1,
+      "z": 1
+    },
+	{
+      "x": 3.5,
+      "y": 1,
+      "z": 2
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 2,
+      "y": 0,
+      "z": -0.5
+    },
+	{
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    },
+	{
+      "x": 2,
+      "y": 1,
+      "z": -0.5
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 3.5
+    },
+	{
+      "x": 2,
+      "y": 0,
+      "z": 3.5
+    },
+	{
+      "x": 1,
+      "y": 1,
+      "z": 3.5
+    },
+	{
+      "x": 2,
+      "y": 1,
+      "z": 3.5
+    }
+  ],
+  "GamePrefabReference": "GC_Hover_222",
+  "KeepReferenceRenderers": false,
+  
+  "SubObjects": [
+     {
+     "MeshName": "GC_Geomagnetic_Hover_Spires.obj",
+     "MeshMaterialName": "GSO_Main"
+	 },
+     {
+      "SubOverrideName": "m_GC_Hover_222_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MakeBoxCollider": false,
+
+	  "SubPosition": { "x": 0, "y": 0, "z": 0},
+	  "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0 
+         
+      }
+	  },
+	  {
+      "SubOverrideName": "m_GC_Hover_222_Jet",
+	  "DestroyExistingRenderer": true,
+	   "SubPosition": { "x": 1.5, "y": 0, "z": 1.5},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 0  
+      }
+	  },
+	  {
+    "SubOverrideName": "m_GC_Hover_222_Jet_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 1.5, "y": -0.4, "z": 1.5},
+	   "SubRotation": {
+        "x": 180,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GC_Hover_222_Jet_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 1.5, "y": 0, "z": 0},
+	   "SubRotation": {
+        "x": 45,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GC_Hover_222_Jet_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 1.5, "y": 0, "z": 3},
+	   "SubRotation": {
+        "x": -45,
+        "y": 0, 
+        "z": 0  
+      }
+	},
+	{
+    "SubOverrideName": "m_GC_Hover_222_Jet_copy_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 3, "y": 0, "z": 1.5},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": 45  
+      }
+	},
+	{
+    "SubOverrideName": "m_GC_Hover_222_Jet_copy_copy_copy_copy_copy",
+	"DestroyExistingRenderer": true,
+    "SubPosition": { "x": 0, "y": 0, "z": 1.5},
+	   "SubRotation": {
+        "x": 0,
+        "y": 0, 
+        "z": -45  
+      }
+	},
+	{
+	"MakeBoxCollider": true,
+	"SubPosition": { "x": 1.5, "y": 0.5, "z": 1.5},
+    "SubScale": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.5
+    },
+	"layer": 20
+	}
+],
+ "JSONBLOCK": {
+ "GameObject|CentreOfMass": {
+      "UnityEngine.Transform": { 
+        "localPosition": { "x":1.5, "y":0.5, "z":1.5 } 
+      }
+    },
+ "GameObject|m_GC_Hover_222_Jet": {
+ "UnityEngine.Transform": { 
+        "localScale": { "x":0, "y":0, "z":0 } 		
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad (1)": {
+	 "UnityEngine.ParticleSystem": {
+	 "startSize": 3,
+	 "duration": 1,
+	 "maxParticles": 8,
+	 "startLifetime": 2.0,
+	 "emissionRate": 3.0
+	 }
+	},
+	"HoverJet": {
+	
+	"forceMax": 400000.0,
+	"forceRangeMax": 16,
+	"m_DampingScale": 0.008,
+	"m_MaxClimbDistance": 16,
+	"m_VectoredThrustMaxAngle": 0,
+    "m_VectoredThrustMaxForceAngle": 0
+	
+	
+} 
+}  
+},
+"Duplicate|m_GC_Hover_222_Jet": {
+"UnityEngine.Transform": { 
+        "localScale": { "x":0, "y":0, "z":0 }  
+      },
+    "GameObject|_hoverJet": {
+	"GameObject|ParticleSystem_GSO_HoverPad (1)": {
+	 "UnityEngine.ParticleSystem": {
+	 "loop": false,
+     "playOnAwake": false,
+	 "isPlaying": false,
+     "isEmitting": false,
+     "isStopped": true,
+     "isPaused": false,
+     "maxParticles": 0
+		  
+	 }
+	},
+	"HoverJet": {
+	
+	"forceMax": 50000.0,
+	"forceRangeMax": 2.0,
+	"m_DampingScale": 0.003,
+	"m_MaxClimbDistance": 2.0,
+	"m_VectoredThrustMaxAngle": 1,
+    "m_VectoredThrustMaxForceAngle": 1
+	}
+}  
+},
+ "Duplicate|m_GC_Hover_222_Jet_copy": {
+ "UnityEngine.Transform": { 
+        "localScale": { "x":0, "y":0, "z":0 }  
+      },
+    "GameObject|_hoverJet": {
+	"HoverJet": {
+	
+	"forceMax": 400000.0,
+	"forceRangeMax": 14,
+	"m_DampingScale": 0.008,
+	"m_MaxClimbDistance": 14,
+	"m_VectoredThrustMaxAngle": 0,
+    "m_VectoredThrustMaxForceAngle": 0
+  }
+}  
+},
+"Duplicate|m_GC_Hover_222_Jet_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      }  
+},
+"Duplicate|m_GC_Hover_222_Jet_copy_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 } 
+      }  
+},
+"Duplicate|m_GC_Hover_222_Jet_copy_copy_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 }  
+      }  
+},
+"Duplicate|m_GC_Hover_222_Jet_copy_copy_copy_copy_copy": {
+ "UnityEngine.Transform": { 
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":0, "y":0, "z":0 } 
+}  
+}
+} 
+}  
+
+

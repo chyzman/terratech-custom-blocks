@@ -1,0 +1,399 @@
+
+{
+  "Name": "TAC Catwalk Conveyor",
+  "Description": "A fairly bulky but strong and sturdy conveyor. \n\nThis conveyor may be bulky, but hey, it has a nice AP on top so you can suspend it from underneath something nicely, plus it reserves spots where the resources travel through so you don't end up in a logistics disaster!",
+  "ID": 584400, 
+
+  "Faction": 5,//
+  "Category": 7,
+  "Grade": 3,
+  "Price": 4272,//
+  "Rarity": 2,
+  "HP": 1000,//More HP than TAC One Block - normal GSO conveyor has 150 HP
+  "Mass": 1.0,//light
+
+  "IconName": "TallConveyor.png",
+  "MeshName": null,
+
+  "Recipe": "53, 53, 54, 53, 53, 54",
+
+
+  "MeshTextureName": null,
+
+  "MeshMaterialName": null,
+  "ColliderMeshName": null,
+
+  "BlockExtents":
+  {
+    "x": 1,
+    "y": 3,
+    "z": 1
+  },
+
+  "APs": [
+    //Main APs
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 0.5 },
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": 0.5, "y": 0, "z": 0 },
+    //Top AP
+    { "x":0, "y":2.5, "z":0 },
+    //Bottom AP
+    { "x":0, "y":-0.5, "z":0 },
+  ],
+
+
+  // "GamePrefabReference": "VEN_Conveyor(111)", //VEN Template
+  "GamePrefabReference": "GSO_Conveyor(111)", //GSO Template
+  "KeepReferenceRenderers": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    // {//VEN Template
+    //   "SubOverrideName": "m_VEN_Conveyor_Base",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingColliders": false,
+    //   "DestroyExistingRenderer": true,
+    //   "MeshName": "TACConveyorBase2.obj",
+    //   // "ColliderMeshName": "TACConveyorBase2.obj",
+    //   "MeshMaterialName": "HE_Main"
+    // },
+    {//GSO Template
+      "SubOverrideName": "m_GSO_Conveyer_111_Base",
+      "MakeBoxCollider": false,
+      "DestroyExistingColliders": false,
+      "DestroyExistingRenderer": true,
+      "MeshName": "TACConveyorBase2.obj",
+      // "ColliderMeshName": "TACConveyorBase2.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+
+    // {
+    //   "SubOverrideName": "m_GSO_Refinery_222_Hatch",
+    //   "MakeBoxCollider": false,
+    //   "DestroyExistingRenderer": true,
+    // }
+  ],
+
+  "JSONBLOCK": {
+
+    // "GameObject|Geometry": {//VEN Template
+    //   "UnityEngine.Transform": {
+    //     "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //     "localScale": { "x":1, "y":1, "z":1 },
+    //     "localPosition": { "x":0, "y":0, "z":0 }
+    //   },
+    //   "GameObject|m_VEN_Conveyor_Base": {
+    //     "UnityEngine.Transform": {
+    //       "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //       "localScale": { "x":1, "y":1, "z":1 },
+    //       "localPosition": { "x":0, "y":0, "z":0 }
+    //     },
+    //     "GameObject|m_VEN_Conveyor_Belt_RTurn": {
+    //       "UnityEngine.Transform": {
+    //         "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //         "localScale": { "x":-1, "y":1, "z":1 },
+    //         "localPosition": { "x":0, "y":0, "z":0 }
+    //       },
+    //       "UnityEngine.MeshFilter": {
+    //         "sharedMesh": "TACConveyorPath90.obj"
+    //       },   
+    //     },
+    //     "GameObject|m_VEN_Conveyor_Belt_LTurn": {
+    //       "UnityEngine.Transform": {
+    //         "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //         "localScale": { "x":1, "y":1, "z":1 },
+    //         "localPosition": { "x":0, "y":0, "z":0 }
+    //       },
+    //       "UnityEngine.MeshFilter": {
+    //         "sharedMesh": "TACConveyorPath90.obj"
+    //       },   
+    //     },
+    //     "GameObject|m_VEN_Conveyor_Belt": {
+    //       "UnityEngine.Transform": {
+    //         "localEulerAngles": { "x":0, "y":0, "z":0 },
+    //         "localScale": { "x":-1, "y":1, "z":1 },
+    //         "localPosition": { "x":0, "y":0, "z":0 }
+    //       },
+    //       "UnityEngine.MeshFilter": {
+    //         "sharedMesh": "TACConveyorPathStraight.obj"
+    //       },   
+    //     },
+    //   }
+    // },
+    "GameObject|m_GSO_Conveyer_111_Base": {//GSO Template
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+      "GameObject|m_GSO_Conveyer_111_Belt_RTurn": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":-1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "TACConveyorPath90.obj"
+        },   
+      },
+      "GameObject|m_GSO_Conveyer_111_Belt_LTurn": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "TACConveyorPath90.obj"
+        },   
+      },
+      "GameObject|m_GSO_Conveyer_111_Belt": {
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":-1, "y":1, "z":1 },
+          "localPosition": { "x":0, "y":0, "z":0 }
+        },
+        "UnityEngine.MeshFilter": {
+          "sharedMesh": "TACConveyorPathStraight.obj"
+        },   
+      }
+    },
+
+
+    //Bendpoint Collision
+    "Reference|HE_Block_Alt_01_111/m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "UnityEngine.MeshRenderer": null,//Remove unwanted visuals
+      "UnityEngine.BoxCollider": { "extents": { "x": 0.3, "y": 0.3, "z": 0.5 } }
+    },
+    "Duplicate|m_HE_Block_111": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      }, 
+      "UnityEngine.MeshRenderer": null,//Remove unwanted visuals
+      "UnityEngine.BoxCollider": { "extents": { "x": 0.5, "y": 0.3, "z": 0.3 } }
+    },
+    "Duplicate|m_HE_Block_111_copy": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":0, "z":0 } 
+      },
+      "UnityEngine.MeshRenderer": null,//Remove unwanted visuals
+      "UnityEngine.BoxCollider": { "extents": { "x": 0.3, "y": 0.5, "z": 0.3 } }
+    },
+
+
+    "GameObject|c_BasePlat": {//Platform collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0.4, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":0.2, "z":1 },
+      },
+      "UnityEngine.BoxCollider": {
+        "center": { "x": 0, "y": 0, "z": 0 },
+        "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+        "material": { "staticFriction": 1 },//Give it drivable surface
+        "gameObject": { "layer": 8 }//Give it Grabbable colliders
+      },
+    },
+
+
+
+    //Overhead Colliders
+    "GameObject|OverhangCol": {//Top collider
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0, "z":0 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localScale": { "x":1, "y":1, "z":1 },
+      },
+      "GameObject|c_TopX": {//Top collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0, "y":2.4, "z":0 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.5, "y":0.2, "z":0.5 },
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          // "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForLeft": {//Forwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.475, "y":1.5, "z":0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_ForRight": {//Forwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.475, "y":1.5, "z":0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacLeft": {//Backwards-Left Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":-0.475, "y":1.5, "z":-0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+      "GameObject|c_BacRight": {//Backwards-Right Collider
+        "UnityEngine.Transform": {
+          "localPosition": { "x":0.475, "y":1.5, "z":-0.475 },
+          "localEulerAngles": { "x":0, "y":0, "z":0 },
+          "localScale": { "x":0.05, "y":2, "z": 0.05},
+        },
+        "UnityEngine.BoxCollider": {
+          "center": { "x": 0, "y": 0, "z": 0 },
+          "extents": { "x": 0.5, "y": 0.5, "z":0.5},
+          "gameObject": { "layer": 8 }//Give it Grabbable colliders
+        },
+      },
+    },
+
+
+    //---------------------------------------------------------------------------
+    //Modules go Here
+    //"RandomAdditions.ModuleItemFixedHolderBeam": {},
+    "ModuleDamage": {
+      "m_DamageDetachFragility": 0.25,
+      //Remember, always say no to "die"
+    },
+    "Damageable": {
+      // "m_DamageableType": 0, 
+      "m_AoEDamageBlockPercent": 0.1,//Explosions are pathetic on TAC Blocks in general
+    },
+    "ModuleItemHolderBeam": { //The beams used for holding the item
+      "m_BeamBaseHeight": 0.5,
+      "m_BeamColumnRadius": 1.0,
+      "m_BeamStrength": 650.0,
+      "m_HeightIncrementScale": 1.0,
+      // "m_BeamQuadPrefab": {
+      //   "transform": {
+      //     "eulerAngles": {
+      //       "x": 0.0,
+      //       "y": 90.0,
+      //       "z": 0.0
+      //     },
+      //   },
+      // },
+      // "m_ShowParticlesWhenHeld": true,
+      // "m_IsOmniDirectionalStack": false,
+      // "m_SFXGrabbed": 49,
+      // "m_UsePhysicsForHeldItems": false,
+      // "m_Pickup": null,
+      // "m_OverrideDropAfterMinTime": -1.0,
+      // "m_OverrideHeightCorrectionLiftFactor": -1.0,
+      // "m_ScaleChanged": false,
+      // "NumStacks": 3
+    },
+    "ModuleItemHolder": { //This is the input port location
+      "m_OverrideBasePositons": [
+        {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0
+        }
+      ],
+      // // "m_OverrideAPConnections": [//Instant crash
+      // //   {
+      // //     "indices": [
+      // //       0,
+      // //       1,
+      // //     ]
+      // //   }
+      // // ],
+      // "m_StackUpDir": {
+      //   "x": 0.0,
+      //   "y": 0.5,
+      //   "z": 1.0
+      // },
+      "m_CapacityPerStack": 1,
+      // "m_Flags": 0,
+      // "m_AcceptFlags": 2,//Determine if the beam grabs from nearby sources or not
+      // "m_HorizontalBoundsRadius": 1.80277562,
+      // "m_ContentsModificationIndex": 3,
+      // "m_AnonItemTimeStamp": 0,
+      // "NumContents": 0,
+      // "NumStacks": 3,
+      // "IsEmpty": true,
+      // "IsFull": false,
+      // "TotalCapacityForLimiter": 30,
+      // "Acceptance": 2,
+    },
+    "ModuleItemConveyor": {
+      // "m_RotationGeometry": [
+      //   [],
+      //   [],
+      //   [],
+      //   null
+      // ],
+      // "m_OppositeDirections": [//How it handles APs and directions
+      //   {
+      //     "m_Direction": 1,
+      //     "m_Opposite": 2
+      //   },
+      //   {
+      //     "m_Direction": 2,
+      //     "m_Opposite": 1
+      //   },
+      //   {
+      //     "m_Direction": 5,
+      //     "m_Opposite": 6
+      //   },
+      //   {
+      //     "m_Direction": 6,
+      //     "m_Opposite": 5
+      //   }
+      // // ],
+      // //All of the below is strictly determined by the game.
+      // "m_Holder": null,
+      // "m_FromConveyor": null,
+      // "m_ToConveyor": null,
+      // "m_PushConveyor": null,
+      // "m_LastPassHeartbeat": -1,
+      // "m_FirstPasserThisHeartbeat": false,
+      // "m_FromAPLocal": {
+      //   "x": 0.0,
+      //   "y": 0.0,
+      //   "z": 0.0
+      // },
+      // "m_ToAPLocal": {
+      //   "x": 0.0,
+      //   "y": 0.0,
+      //   "z": 0.0
+      // },
+      // "m_CurrentRotation": 0,
+      // "m_OppositeLookup": null,
+      // "m_ModuleType": 0,
+    },
+  }
+}

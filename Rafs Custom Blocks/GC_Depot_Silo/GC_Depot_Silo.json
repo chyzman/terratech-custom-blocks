@@ -1,0 +1,189 @@
+{
+	"Name": "GeoCorp Depot Silo",
+	"Description": "The Depot Silo features very high storage capacity, also coming with a large anchor and plenty of APs for crafting connections.", 
+	"ID": 910311, 	
+
+	"Faction": 2, 
+	"Category": 7, 
+	"Grade": 2, 
+	"Price": 1746,
+	"HP": 16000,
+	"Mass": 20.0,
+	
+	"Recipe":  "5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 9, 9, 9, 32, 32, 32", 
+
+	"IconName": "GC_Depot_Silo_Icon.png",
+	
+	"BlockExtents":{"x": 4,"y": 2, "z": 4}, 
+
+    "APs": [ 
+        { "x": -0.5, "y": 0, "z": 0 },
+        { "x": -0.5, "y": 0, "z": 1 },
+        { "x": -0.5, "y": 0, "z": 2 },
+        { "x": -0.5, "y": 0, "z": 3 },
+		{ "x": 3.5, "y": 0, "z": 0 },
+        { "x": 3.5, "y": 0, "z": 1 },
+        { "x": 3.5, "y": 0, "z": 2 },
+        { "x": 3.5, "y": 0, "z": 3 },
+        { "x": 0, "y": 0, "z": -0.5 },
+        { "x": 1, "y": 0, "z": -0.5 },
+        { "x": 2, "y": 0, "z": -0.5 },
+        { "x": 3, "y": 0, "z": -0.5 },
+		{ "x": 0, "y": 0, "z": 3.5 },
+        { "x": 1, "y": 0, "z": 3.5 },
+        { "x": 2, "y": 0, "z": 3.5 },
+        { "x": 3, "y": 0, "z": 3.5 },	
+
+		{ "x": 0, "y": -0.5, "z": 0 },
+        { "x": 0, "y": -0.5, "z": 1 },
+		{ "x": 0, "y": -0.5, "z": 2 },
+		{ "x": 0, "y": -0.5, "z": 3 },
+		{ "x": 1, "y": -0.5, "z": 0 },    
+		{ "x": 1, "y": -0.5, "z": 3 },
+        { "x": 2, "y": -0.5, "z": 0 },
+		{ "x": 2, "y": -0.5, "z": 3 },
+		{ "x": 3, "y": -0.5, "z": 0 },
+        { "x": 3, "y": -0.5, "z": 1 },
+		{ "x": 3, "y": -0.5, "z": 2 },
+		{ "x": 3, "y": -0.5, "z": 3 }	
+    ],
+	
+	
+	"GamePrefabReference": "VEN_Silo_212", 
+	"KeepRenderers": true,
+	"KeepColliders": false,
+	"ReferenceOffset": {
+		"x": 2.16,
+		"y": 0.65,
+		"z": -0.47
+	},
+	"ReferenceRotationOffset": {
+		"x": 0, // Pitch
+		"y": 90, // Yaw
+		"z": 0  // Roll
+	},
+	"ReferenceScale": {
+		"x": 0.5,
+		"y": 0.5,
+		"z": 0.5
+	  },
+	"SubObjects": [
+		{
+			"MeshName": "GC_Depot_Silo.obj",
+			"MeshMaterialName": "GC_Main",
+			"ColliderMeshName": "GC_Depot_Silo_Collider.obj"
+		},
+		{
+			"SubOverrideName": "AntennaFx",
+			"SubPosition": {
+			  "x": 1.5,
+			  "y": 0.65,
+			  "z": -0.32
+			},
+			//"SubScale": { "x": 1, "y": 1, "z": 1 },
+			"SubRotation": {
+				"x": 0, // Pitch
+				"y": 90, // Yaw
+				"z": 0  // Roll
+			}
+		},
+		{
+			"SubOverrideName": "m_VEN_Silo_212",
+			"DestroyExistingRenderer": true
+		},
+		{
+			"SubOverrideName": "m_VEN_Silo_111_Antenna_B",
+			"DestroyExistingRenderer": true
+		},
+		{
+			"SubOverrideName": "m_VEN_Silo_111_Antenna_A",
+			"MeshName": "GC_Depot_Silo_Antenna.obj",
+			"MeshMaterialName": "GC_Main"
+
+		},
+		{
+			"SubOverrideName":"m_VEN_Anchor",
+			"MeshName": "GC_Depot_Silo_Anchor.obj",
+			"MeshMaterialName": "GC_Main"
+		},
+
+	],
+	
+	"JSONBLOCK": {
+		"GameObject|_anchor":{
+			"UnityEngine.Transform": {
+				"localPosition": {
+				  "x": 0,
+				  "y": 0,
+				  "z": 0
+				},
+				"localScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				},
+				"localEulerAngles": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			"GameObject|VENAnchorFixed": {
+				"UnityEngine.BoxCollider": {
+					"center": {
+					  "x": 1.5,
+					  "y": -2,
+					  "z": 1.5
+					},
+					"size": {
+					  "x": 3.6,
+					  "y": 4,
+					  "z": 3.6
+					}
+				},
+				"BlockAnchor":{
+					"m_GroundPoint":{
+						"localPosition": {
+							"x": 0.0,
+							"y": -1.5,
+							"z": 0.0
+						}
+					},
+					"m_SnapToleranceUp":2,
+					"m_SnapToleranceDown":1.5
+				}
+			}
+		},
+		"ModuleItemHolderBeam": {
+			"m_BeamBaseHeight": 1.0,
+			"m_BeamColumnRadius": 1.0,
+			"m_BeamStrength": 250.0,
+			"m_HeightIncrementScale": 1.0
+		},
+
+		"ModuleItemStore": {
+			"m_Capacity": 160
+		},
+		"ModuleItemHolder": {
+			"m_OverrideBasePositons": [
+				{ "x": 0, "y": 0, "z": 0 },
+				{ "x": 0, "y": 0, "z": 1 },
+				{ "x": 0, "y": 0, "z": 2 },
+				{ "x": 0, "y": 0, "z": 3 },
+				{ "x": 1, "y": 0, "z": 0 },
+				{ "x": 1, "y": 0, "z": 1 },
+				{ "x": 1, "y": 0, "z": 2 },
+				{ "x": 1, "y": 0, "z": 3 },
+				{ "x": 2, "y": 0, "z": 0 },
+				{ "x": 2, "y": 0, "z": 1 },
+				{ "x": 2, "y": 0, "z": 2 },
+				{ "x": 2, "y": 0, "z": 3 },
+				{ "x": 3, "y": 0, "z": 0 },
+				{ "x": 3, "y": 0, "z": 1 },
+				{ "x": 3, "y": 0, "z": 2 },
+				{ "x": 3, "y": 0, "z": 3 }	
+			]
+		}
+    }
+	
+}

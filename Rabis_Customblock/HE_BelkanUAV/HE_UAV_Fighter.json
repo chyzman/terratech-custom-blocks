@@ -1,0 +1,1837 @@
+{
+  "Name": "Hawkeye ADF-35 EULE",
+  "Description": "Very small UAV operated via satcom. With the assistance of onboard AI, it is as easy to fly as if you were controlling an RC car.", //You can make multiple lines with \n
+  "ID": 546400, //A random ID that MUST be unique
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 1, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 247509,
+  "HP": 1800,
+  "Fragility": 0.1,
+  // Weak against FLAK
+  "DamageableType": 3, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+  "Rarity": 1,
+  "Mass": 5,
+  "CenterOfMass": {"x": 0, "y": 0, "z": 0},
+
+  "Recipe": "13, 13, 13, 13, 13, 13, 17, 17, 17, 17, 17, 17, 43, 43, 43, 43, 44, 44, 45, 45, 47, 47, 49, 49, 49, 49, 50,50,50,50,50,50,51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 51, 52, 52, 52, 52, 53, 53, 54, 54, 56, 56, 56, 56, 56, 56, 56, 56, 57, 57, 57, 57, 58, 58, 58, 58, 59, 60, 60, 60, 60, 61, 62, 62, 63, 63, 64, 65, 65, 65, 65, 66, 66, ",
+  "DropFromCrates": false, // No change = true
+
+  "IconName": "HE_UAV_Fighter.png", 
+  "MeshName": null, 
+  //"MeshTextureName": "_texAnimTest_A.png",
+  //"MeshEmissionTextureName": "_texAnimTest_E.png",
+  "MeshMaterialName": null,
+  "EmissionMode": 1, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  //"ColliderMeshName": "_texAnimTest.obj",
+  "SupressBoxColliderFallback": false, 
+  "BlockExtents": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "APs": [
+      //{"x": 0,"y": -0.5,"z": 0}
+  ],
+  // BF_Cab_112
+  "GamePrefabReference": "BF_Cab_112", // BF_Cab_112  EXP_Cab_112
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [
+    // Main Mesh
+    {
+      "SubOverrideName": "UAV_Mesh",
+      "MeshName": "HE_UAV_Fighter.obj",
+      "ColliderMeshName": "HE_UAV_Fighter_c.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+
+
+    {
+      "SubOverrideName": "HoverDeflector",
+      "MakeSphereCollider": true,
+      "SubPosition": {"x": 0,"y": 0,"z": 0},
+      "SubScale": {"x": 0.2,"y": 0.2,"z": 0.2}
+    },
+    {
+      "SubOverrideName": "m_BF_Hover_Ring_Small_212_Hover",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+
+    // Wing  remove mesh
+    {
+      "SubOverrideName": "/_wing_Pitch1/_Pivot/m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "/_wing_Pitch2/_Pivot/m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    {
+      "SubOverrideName": "/_wing_Pitch3/_Pivot/m_HE_Wingtip_121_Flap",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+
+
+    // Booster flame
+    {
+      "ObjectName": "/_boostJet/m_BoosterRocketFlame_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    {
+      "ObjectName": "/_boostJet_copy/m_BoosterRocketFlame_01",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+    },
+    {
+      "ObjectName": "/_boostJet_copy_copy/m_BoosterRocketFlame_01",
+      "MeshName": "HE_UAV_Fighter_boosterFlame.obj",
+      "MeshTextureName": "HE_UAV_Fighter_boosterFlame.png"
+    },
+    {
+      "ObjectName": "/_boostJet_copy_copy_copy/m_BoosterRocketFlame_01",
+      "MeshName": "HE_UAV_Fighter_boosterFlame2.obj",
+      "MeshTextureName": "HE_UAV_Fighter_boosterFlame2.png"
+    },
+
+    // just like shooting game
+    {
+      "ObjectName": "Funnel1_mesh",
+      "MeshName": "HE_UAV_Fighter_Funnel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "ObjectName": "Funnel2_mesh",
+      "MeshName": "HE_UAV_Fighter_Funnel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "ObjectName": "Funnel3_mesh",
+      "MeshName": "HE_UAV_Fighter_Funnel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "ObjectName": "Funnel4_mesh",
+      "MeshName": "HE_UAV_Fighter_Funnel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    /*
+    {
+      "ObjectName": "Funnel_BoxCol1",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0,"y": 0,"z": 0.134141},
+      "SubScale": {"x": 0.46675,"y": 0.46675,"z": 1.31679}
+    },
+    {
+      "ObjectName": "Funnel_BoxCol2",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0,"y": 0,"z": 0.134141},
+      "SubScale": {"x": 0.46675,"y": 0.46675,"z": 1.31679}
+    },
+    {
+      "ObjectName": "Funnel_BoxCol3",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0,"y": 0,"z": 0.134141},
+      "SubScale": {"x": 0.46675,"y": 0.46675,"z": 1.31679}
+    },
+    {
+      "ObjectName": "Funnel_BoxCol4",
+      "MakeBoxCollider": true,
+      "SubPosition": {"x": 0,"y": 0,"z": 0.134141},
+      "SubScale": {"x": 0.46675,"y": 0.46675,"z": 1.31679}
+    },
+    */
+    // Muzzle Flash
+    {
+      "ObjectName": "/_gimbalElev/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_UAV_Fighter_MuzzleFlash.png"
+    },
+    {
+      "ObjectName": "/_gimbalElev_copy/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_UAV_Fighter_MuzzleFlash.png"
+    },
+    {
+      "ObjectName": "/_gimbalElev_copy_copy/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_UAV_Fighter_MuzzleFlash.png"
+    },
+    {
+      "ObjectName": "/_gimbalElev_copy_copy_copy/_barrel/_muzzleFlash/_muzzleFlashAnim/m_MuzzleFlash_01",
+      "MeshTextureName": "HE_UAV_Fighter_MuzzleFlash.png"
+    },
+    
+  ],
+
+  "Deserializer": {
+    /* 
+
+    Controls 
+
+    Acceleration
+      HoverBug FanJet BoosterJet
+    Strafe
+      HoverBug FanJet
+    Lift
+      HoverBug FanJet
+
+    Pitch
+      TrymGyro
+    Yaw
+      FanJet
+    Roll
+      none
+
+    */
+
+
+
+    //I'm here!
+    "GameObject|HoverDeflector":{
+      "UnityEngine.Transform": {
+        "gameObject": {"layer": 20}
+      }
+    },
+    "GameObject|Suspension_Up":{
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+    },
+    "GameObject|EffectorAttachPoint":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":180, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+    },
+    "GameObject|CenterOfMass":{
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+    },
+    /*
+    "GameObject|AirBreakEffector":{
+      "UnityEngine.Transform": {
+        "localPosition": { "x":0, "y":0, "z":0 }
+      },
+    },*/
+
+    // Remove existing GameObject
+    //"GameObject|_gimbalBase_R": null,
+    //"GameObject|_gimbalBase_L": null,
+    //"GameObject|_spotlight": null,
+    //"GameObject|booster": null,
+    //"GameObject|booster (1)": null, // wth
+    //"GameObject|booster (2)": null, // no
+    //"GameObject|booster (3)": null, // stop
+    //"GameObject|Geometry": null,
+
+
+
+
+    // Wing (UpwardsHoverAttachPoint) --------------------------------------------------------------------------------------------
+    "GameObject|_wing_Pitch1":{
+      "Reference|HE_Wing_Tip_121/_Pivot":{
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": 0, "z": -3 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|m_HE_Wingtip_121_Flap": {
+          "GameObject|UpwardsHoverGimbal":{
+            //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+            "FollowTransform": {
+              "m_TransformToFollow": "/CenterOfMass",
+              "m_FollowOrientation": false,
+            },
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 }, 
+            },
+            "GameObject|UpwardsHoverAttachPoint":{
+              //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x":0, "y":0, "z":90 },
+                //"localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":-0.2, "y":0, "z":0 }
+              },
+            },
+          },
+        },
+      }
+    },
+    // Wing (SubBoosterAttachPoint)
+    "GameObject|_wing_Pitch3":{
+      "Reference|HE_Wing_Tip_121/_Pivot":{
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": 0, "z": 3 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|m_HE_Wingtip_121_Flap": {
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+          
+          "GameObject|SubBoosterGimbal":{
+            //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+            "FollowTransform": {
+              "m_TransformToFollow": "/CenterOfMass",
+              "m_FollowOrientation": false,
+            },
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 }, 
+            },
+            "GameObject|SubBoosterAttachPoint":{
+              //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+              "UnityEngine.Transform": {
+                "localEulerAngles": { "x":0, "y":180, "z":-90 },
+                //"localScale": { "x":1, "y":1, "z":1 },
+                "localPosition": { "x":0, "y":0, "z":0 }
+              },
+            },
+          },
+        },
+      }
+    },
+
+
+
+    // Hover --------------------------------------------------------------------------------------------
+    // all axis hover bug
+    // that functions as an air brake
+    // also acts as a thruster
+    // Z 
+    "Reference|BF_Hover_Ring_Large_424/m_BF_Hover_Ring_Large_424_Hover/_hoverJet":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":90, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":0.2 }
+      },
+      "HoverJet": {
+        "forceMax": 250.0, //
+         "forceRangeMax": 0.2, //How far the hover reaches
+        // "m_DampingScale": 0.1, //0.05 //How much we dampen by
+        // "m_GroundMaxSlopeAngle": 75.0,
+        // "m_MaxClimbDistance": 10.0,
+        "m_VectoredThrustMaxAngle": 0, //How far the Hover can Gimbal
+        "m_VectoredThrustAnglePerSecond": 0.0,
+        // "m_AutoStabiliseStrength": 0.5,
+        // "m_VectoredThrustMaxForceAngle": 10.0,
+        "m_VectoredThrustMaxForceAngle": 1.0,
+        "m_HoverPowerChangePerSecond": 5.0, // Responsiveness
+        // "m_HoverPowerMin": 0.0,
+        // "m_HoverPowerMax": 2.0
+      },
+      "GameObject|p_Hover":null,
+    },
+    "Duplicate|_hoverJet":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":-90, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0, "z":-0.2 }
+      },
+    },
+    // X - strafe
+    "Duplicate|_hoverJet_copy":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":90 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":-0.2, "y":0, "z":0 }
+      },
+      "HoverJet": {
+        "forceMax": 250.0,
+      },
+    },
+    "Duplicate|_hoverJet_copy_copy":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":-90 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.2, "y":0, "z":0 }
+      },
+    },
+    // Y - up down
+    "Duplicate|_hoverJet_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":0.2, "z":0 }
+      },
+      "HoverJet": {
+        "forceMax": 250.0,
+      },
+    },
+    "Duplicate|_hoverJet_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localEulerAngles": { "x":180, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0, "y":-0.2, "z":0 }
+      },
+    },
+    // Main hover - hover at certain altitude during idle
+    // but now it's disabled
+    /*"Duplicate|_hoverJet_copy_copy_copy_copy_copy": {
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.Transform": {
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0},
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": {"x": 0,"y": -2.0,"z": 0}
+      },
+      "HoverJet": {
+        "forceMax": 0.0, // Is this necessary?
+        "forceRangeMax": 2.0,
+      },
+    },*/
+    // float hover  Always push upward to prevent the aircraft from falling
+    "Duplicate|_hoverJet_copy_copy_copy_copy_copy": {
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "FollowTransform": {
+        "m_TransformToFollow": "/UpwardsHoverAttachPoint",
+        "m_FollowOrientation": true,
+      },
+      "HoverJet": {
+        "forceMax": 600, //600.0,
+        "forceRangeMax": 0.2,
+      },
+    },
+
+
+    // dummy -  FollowSuspension target
+    "Reference|BF_Hover_Ring_Small_212/m_BF_Hover_Ring_Small_212_Hover": {
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.Transform": {
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0},
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": {"x": 0,"y": 0,"z": 5}
+      },
+      "GameObject|HoverGimbalTarget1":{
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0},
+          //"localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": {"x": 5,"y": 0,"z": 0}
+        },
+      },
+      "GameObject|_hoverJet":{
+        "HoverJet": {
+          "forceMax": 0.0,
+          "m_VectoredThrustMaxAngle": 45, //How far the Hover can Gimbal
+          "m_VectoredThrustAnglePerSecond": 2.0,
+          "m_AutoStabiliseStrength": 0.0,
+        },
+        "GameObject|p_Hover": null,
+      },
+    },
+
+    /*"Reference|BF_Hover_Ring_Large_424/ModuleHover.":{
+      "m_UseBoosterAudio": true,  //Change hover sound to propeller
+      "m_BoosterAudioType": 5
+      // 0 Propeller (noisy)
+      // 1 HE Rotor
+      // 2 BF Rotor
+      // 3 HE Twister prop (ring propeller)
+      // 4 unused? idk
+      // 5~ silence
+    },*/
+    "Reference|BF_Cab_212/ModuleHover.":{
+      "m_UseBoosterAudio": true, //Change hover sound to propeller
+      "m_BoosterAudioType": 5
+      // 0 Propeller (noisy)
+      // 1 HE Rotor
+      // 2 BF Rotor
+      // 3 HE Twister prop (ring propeller)
+      // 4 unused? idk
+      // 5~ silence
+    },
+    "GameObject|HoverGimbalTarget2":{
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "FollowTransform": {
+        "m_TransformToFollow": "/HoverGimbalTarget1",
+        "m_FollowOrientation": false,
+      },
+      "GameObject|HoverGimbalTarget":{
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0},
+          //"localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": {"x": 0,"y": 0,"z": -5}
+        },
+      }
+    },
+
+
+    // Wing (Mesh Target) --------------------------------------------------------------------------------------------
+    "GameObject|_wing_Pitch2":{
+      "FollowSuspension": {
+        "m_TargetWheelTrans": "/HoverGimbalTarget",
+        "m_TargetUpTrans": "/Suspension_Up",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        //"m_OriginalDistance": 2.0,
+      },
+      "GameObject|MeshTarget":{
+        "UnityEngine.Transform": {
+          "localEulerAngles": { "x": 0, "y": 180, "z": -90 }
+        },
+      },
+      //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+      "UnityEngine.Transform": {
+        "localPosition": { "x": 0, "y": 0.0, "z": -0.001 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 }
+      },
+      "Reference|HE_Wing_Tip_121/_Pivot": {
+        //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+        "UnityEngine.Transform": {
+          "localPosition": { "x": 0, "y": 0.0, "z": 0.001 },
+          "localEulerAngles": { "x": 0, "y": 90, "z": 0 }
+        },
+        "GameObject|m_HE_Wingtip_121_Flap": {
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+          "UnityEngine.Transform": {
+            "localPosition": { "x": 0, "y": 0, "z": 0 }, 
+          },
+          /*
+          "GameObject|MeshTarget":{
+            "UnityEngine.Transform": {
+              "localEulerAngles": { "x": 0, "y": 180, "z": -90 }
+            },
+          },*/
+        },
+      },
+    },
+    
+
+
+    // Mesh Setting --------------------------------------------------------------------------------------------
+    "GameObject|MeshAngleReset":{
+      "FollowSuspension": {
+        "m_TargetWheelTrans": "/HoverGimbalTarget",
+        "m_TargetUpTrans": "/Suspension_Up",
+        "m_KeepOriginalRotationOffset": false,
+        "m_ScaleToMatchDistance": false,
+        //"m_OriginalDistance": 2.0,
+      },
+      "GameObject|UAV_Mesh":{
+        "UnityEngine.MeshCollider": {
+          "gameObject": {
+            "layer": 8
+          },
+        },
+        "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":-90, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0.0, "z":0.0 }
+          },
+        "GameObject|BoosterAttachPoint":{
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0.13591, "z":-1.28604 }
+          },
+        },
+        "GameObject|BoosterAttachPoint2":{ // small side booster flame
+          //"UnityEngine.MeshFilter": {"sharedMesh": "_testMarker.obj"},"UnityEngine.MeshRenderer": {"material": "ExplosionLaser"},
+          "UnityEngine.Transform": {
+            "localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0, "y":0.080648, "z":-1.23943 }
+          },
+        },
+        // Engine Particle
+        //"GameObject|EngineParticle": {},
+      },
+    },
+    
+    
+
+
+    // Thruster --------------------------------------------------------------------------------------------
+    // Adjustment RCS
+    // BoosterJet -------------
+    /*
+    // back
+    "Reference|VEN_SteeringHover_Single_111/boosterFront":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+      "GameObject|m_BoosterRocketFlame_01":null,
+      "BoosterJet": {
+        "m_Force": 300.0,
+        "m_BurnRate": 0.0,
+      }
+    },
+    // right turn
+    "Duplicate|boosterFront":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+      },
+      "BoosterJet": {
+        "m_Force": 10.0,
+        "m_BurnRate": 0.0,
+      }
+    },
+    "Duplicate|boosterFront_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+      },
+    },
+    // left turn
+    "Duplicate|boosterFront_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 1.0},
+        "localEulerAngles": {"x": 0,"y": 180,"z": 0}
+      },
+    },
+    "Duplicate|boosterFront_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -1.0},
+        "localEulerAngles": {"x": 0,"y": 180,"z": 0}
+      },
+    },
+    // right
+    "Duplicate|boosterFront_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+      },
+      "BoosterJet": {
+        "m_Force": 500.0,
+        "m_BurnRate": 0.0,
+      }
+    },
+    // left
+    "Duplicate|boosterFront_copy_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": 180,"z": 0}
+      },
+    },
+    // up
+    "Duplicate|boosterFront_copy_copy_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": -90}
+      },
+      "BoosterJet": {
+        "m_Force": 6.5,
+        "m_BurnRate": 0.0,
+      }
+    },
+    "Duplicate|boosterFront_copy_copy_copy_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": -90}
+      },
+    },
+    // down
+    "Duplicate|boosterFront_copy_copy_copy_copy_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 90}
+      },
+    },
+    "Duplicate|boosterFront_copy_copy_copy_copy_copy_copy_copy_copy_copy":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -1.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 90}
+      },
+    },
+    */
+
+
+    
+    // FanJet -------------
+    // front - back
+    "Reference|BF_IonDrive_Small_112/_fanJet":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+      },
+      "FanJet":{
+        "force": 0.0,
+        "backForce": 300.0,
+        "spinDelta": 50,
+        "spinSpeed": 100.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    // left - right
+    "Duplicate|_fanJet": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+      "FanJet": {
+        "force": 600.0,
+        "backForce": 0.0,
+        "spinDelta": 50,
+        "spinSpeed": 0.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    "Duplicate|_fanJet_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": 90,"z": 0}
+      },
+    },
+    // up- down
+    "Duplicate|_fanJet_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 90,"y": 0,"z": 0}
+      },
+      "FanJet": {
+        "force": 600.0,
+        "backForce": 0.0,
+        "spinDelta": 50,
+        "spinSpeed": 0.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    "Duplicate|_fanJet_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": -90,"y": 0,"z": 0}
+      },
+    },
+    // Yaw
+    "Duplicate|_fanJet_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 10.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+      "FanJet": {
+        "force": 1.1,
+        "backForce": 1.1,
+        "spinDelta": 50,
+        "spinSpeed": 0.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    "Duplicate|_fanJet_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -10.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+    },
+    // Roll
+    /*
+    "Duplicate|_fanJet_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 10.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+      "FanJet": {
+        "force": 2,
+        "backForce": 1.2,
+        "spinDelta": 50,
+        "spinSpeed": 0.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    "Duplicate|_fanJet_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": -10.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": -90,"z": 0}
+      },
+    },*/
+    // Pitch
+    /*
+    "Duplicate|_fanJet_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 10.0},
+        "localEulerAngles": {"x": 90,"y": 0,"z": 0}
+      },
+      "FanJet": {
+        "force": 0.6,
+        "backForce": 0.0,
+        "spinDelta": 50,
+        "spinSpeed": 0.0,
+        "m_AutoStabiliseStrength": 0.0,
+      }
+    },
+    "Duplicate|_fanJet_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -10.0},
+        "localEulerAngles": {"x": 90,"y": 0,"z": 0}
+      },
+    },
+    "Duplicate|_fanJet_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 10.0},
+        "localEulerAngles": {"x": -90,"y": 0,"z": 0}
+      },
+    },
+    "Duplicate|_fanJet_copy_copy_copy_copy_copy_copy": {
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": -10.0},
+        "localEulerAngles": {"x": -90,"y": 0,"z": 0}
+      },
+    },
+    */
+
+
+    // Main booster
+    "Reference|HE_Jet_131/_boostJet":{
+      "FollowTransform": {
+        "m_TransformToFollow": "/BoosterAttachPoint",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|m_BoosterRocketFlame_01":{
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.0,
+            "startSize": 0.0,
+          }
+        }
+      },
+      "GameObject|Effector":{
+        "FollowTransform": {
+          "m_TransformToFollow": "/EffectorAttachPoint",
+          "m_FollowOrientation": true,
+        },
+      },
+      "BoosterJet": {
+        "m_Force": 1800.0, //1600 2600
+        "m_BurnRate": 0.0,
+        "m_FireRateFalloff": 0.0,
+        "m_ConsumesFuel": false,
+      }
+    },
+    // Sub booster (Corrects the direction of pitch angle acceleration)
+    // not perfect but a little better
+    "Duplicate|_boostJet": {
+      "FollowTransform": {
+        "m_TransformToFollow": "/SubBoosterAttachPoint",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|m_BoosterRocketFlame_01": {
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.0,
+            "startSize": 0.0,
+          }
+        }
+      },
+      "GameObject|Effector": {
+        "FollowTransform": {
+          "m_TransformToFollow": "/SubBoosterAttachPoint",
+          "m_FollowOrientation": true,
+        },
+      },
+      "BoosterJet": {
+        "m_Force": 1400.0,
+        "m_BurnRate": 0.0,
+        "m_FireRateFalloff": 0.0,
+        "m_ConsumesFuel": false,
+      }
+    },
+
+    // Dummy (booster flame FX)
+    "Duplicate|_boostJet_copy":{
+      "FollowTransform": {
+        "m_TransformToFollow": "/BoosterAttachPoint",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|m_BoosterRocketFlame_01":{
+        "UnityEngine.Transform": { // ????
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+          "localEulerAngles": {"x": 0,"y": 90,"z": 0}
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame":{
+          "UnityEngine.ParticleSystem":{
+            "startLifetime": 0.0,
+            "startSize": 0.0,
+          }
+        }
+      },
+      "GameObject|Effector":{
+        "FollowTransform": {
+          "m_TransformToFollow": "/EffectorAttachPoint",
+          "m_FollowOrientation": true,
+        },
+      },
+      "BoosterJet": {
+        "m_Force": 0.0,
+        "m_BurnRate": 0.0,
+        "m_FireRateFalloff": 2.0,
+        "m_ConsumesFuel": false,
+      }
+    },
+    // Dummy2 (booster flame FX)
+    "Duplicate|_boostJet_copy_copy":{
+      "FollowTransform": {
+        "m_TransformToFollow": "/BoosterAttachPoint2",
+        "m_FollowOrientation": true,
+      },
+      "GameObject|m_BoosterRocketFlame_01":{
+        "UnityEngine.Transform": { // ????
+          "localScale": { "x":1, "y":1, "z":1 },
+          "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+          "localEulerAngles": {"x": 0,"y": 90,"z": 0}
+        },
+        "GameObject|ParticleSystemBoosterRocketFlame": {
+          "UnityEngine.Transform": {
+            "localScale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 90,
+              "z": 0
+            },
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            // "renderMode": 0,
+            // "sortMode": 0,
+            // "minParticleSize": 0.05,
+            // "maxParticleSize": 0.15,
+            // "motionVectorGenerationMode": 1,
+          },
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": true,
+            "playOnAwake": true,
+            "duration": 0.2,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 30.0,
+            "startSpeed": 20.0,
+            "startSize": 0.5,
+            "startRotation": 1.7,
+            "startLifetime": 0.2,
+            "gravityModifier": 0.0,
+            "maxParticles": 100,
+            "simulationSpace": 0, // 0 = Host Gameobject, 1 = World
+            "scalingMode": 2,
+            "automaticCullingEnabled": false,
+            "isPlaying": false,
+            "isEmitting": false,
+            "isStopped": true,
+            "isPaused": false,
+            "particleCount": 0,
+            "useAutoRandomSeed": true,
+            "proceduralSimulationSupported": false,
+          },
+        }
+      },
+      "GameObject|Effector":{
+        "FollowTransform": {
+          "m_TransformToFollow": "/EffectorAttachPoint",
+          "m_FollowOrientation": true,
+        },
+      },
+      "BoosterJet": {
+        "m_FireRateFalloff": 1.4,
+        "m_ConsumesFuel": false,
+      }
+    },
+
+    "Reference|VEN_SteeringHover_Single_111/ModuleBooster.": {
+      "m_BoosterAudioType": 6,
+    },
+    /*"Reference|HE_Jet_131/ModuleBooster.": {
+      "m_ModuleType": 0,
+      "m_UseBoostControls": true,
+      "m_UseDriveControls": true,
+      "m_IsRocketBooster": false,
+      "m_EnablesThrottleControl": false,
+      "m_BoosterAudioType": 6,
+      "m_ConsumesFuel": false,
+      "m_IsFiringBoost": false,
+      "m_IsFiringSteer": false,
+    },*/
+
+
+
+    // Weapons (GunPod) --------------------------------------------------------------------------------------------
+    /*"GameObject|WeaponSet":{
+      "FollowTransform": {
+        "m_TransformToFollow": "/_Pivot/m_HE_Wingtip_121_Flap/MeshTarget",
+        "m_FollowOrientation": true,
+      },
+      "Reference|HE_ChainGun_112/_gimbalBase/_gimbalElev":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": -0.434488,"y": -0.125037,"z": 1.11114},
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+        },
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [
+            -10.0,
+            10.0
+          ],
+          "aimClampMaxPercent": 1.0,
+          "currentAngle": 0.0,
+          "currentResetAngle": 0.0,
+          "m_XAngleAimOffset": 0.0,
+        },
+        "GameObject|m_HE_50Cal_112_Gun":null,
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+            "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+          },
+          "GimbalAimer": {
+            "rotationAxis": 2,
+            "rotationLimits": [
+              -10.0,
+              10.0
+            ],
+            "aimClampMaxPercent": 1.0,
+            "currentAngle": 0.0,
+            "currentResetAngle": 0.0,
+            "m_XAngleAimOffset": 0.0,
+          },
+          "GameObject|_muzzleFlash":{
+            "UnityEngine.Transform": {
+              "localPosition": {"x": 0.0,"y": 0.0,"z": 0.328892},
+            },
+            "GameObject|_light":{
+              "Light": {
+                "m_BakedIndex": 0,
+                "type": 2,
+                "spotAngle": 93.1,
+                "intensity": 5.0,
+                "range": 1.0,
+                "color": {
+                  "r": 0.6,
+                  "g": 0.7,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+              }
+            },
+            "GameObject|_muzzleFlashAnim":{
+              "GameObject|m_MuzzleFlash_01":{
+              },
+              "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+                "UnityEngine.ParticleSystem": {
+                  "startSize": 0.15,
+                  "main": {
+                    "m_ParticleSystem": {
+                      "startColor": {
+                        "r": 0.7,
+                        "g": 0.9,
+                        "b": 1.0,
+                        "a": 0.4
+                      },
+                      "emission": {
+                        "rateMultiplier": 2650.0,
+                        "rateOverTimeMultiplier": 0.2
+                      }
+                    }
+                  }
+                },
+                "UnityEngine.ParticleSystemRenderer": {
+                  "lengthScale": 1.5,
+                  "activeVertexStreamsCount": 5,
+                }
+              }
+            },
+          },
+          "GameObject|_recoiler":{
+            "GameObject|m_HE_50Cal_112_Barrel":null,
+          },
+          "GameObject|_smoke":{
+            "UnityEngine.ParticleSystem":{
+              "startSize": 0.0,
+              "startLifetime": 0.0,
+            }
+          },
+        },
+      },
+      "Duplicate|_gimbalElev":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": 0.434488,"y": -0.125037,"z": 1.11114},
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+        },
+      },
+      "Duplicate|_gimbalElev_copy":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": -0.6093  ,"y": -0.125037,"z": 0.971809},
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+        },
+      },
+      "Duplicate|_gimbalElev_copy_copy":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": 0.6093  ,"y": -0.125037,"z": 0.971809},
+          "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+        },
+      },
+    },*/
+
+    // Weapons (UAV) --------------------------------------------------------------------------------------------
+    "GameObject|WeaponSet":{
+      "UnityEngine.Transform": {
+        "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+        "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+      },
+      "GameObject|FunnelAP1":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": 4.0,"y": 0.0,"z": -3.0},
+        },
+      },
+      "GameObject|FunnelAP2":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": -4.0,"y": 0.0,"z": -3.0},
+        },
+      },
+      "GameObject|FunnelAP3":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": 6.0,"y": 0.0,"z": -4.2},
+        },
+      },
+      "GameObject|FunnelAP4":{
+        "UnityEngine.Transform": {
+          "localPosition": {"x": -6.0,"y": 0.0,"z": -4.2},
+        },
+      },
+      "GameObject|GimbalFixer1":{// I don't know if it works..
+        "GimbalAimer": {
+          "rotationAxis": 1,
+          "rotationLimits": [-20.0,20.0],
+        },
+        "GameObject|GimbalFixer2":{// but it's better than nothing
+          "GimbalAimer": {
+            "rotationAxis": 2,
+            "rotationLimits": [-20.0,20.0],
+          },
+          "GameObject|BarrelsInHere":{
+            "Reference|HE_ChainGun_112/_gimbalBase/_gimbalElev":{
+              "FollowTransform": {
+                "m_TransformToFollow": "/FunnelAP1",
+                "m_FollowOrientation": false,
+              },
+              "GimbalAimer": {
+                "rotationAxis": 1,
+                "rotationLimits": [
+                  -5.0,
+                  5.0
+                ],
+              },
+              "GameObject|m_HE_50Cal_112_Gun":null,
+              "GameObject|_barrel": {
+                "UnityEngine.Transform": {
+                  "localPosition": {"x": 0.0,"y": 0.0,"z": 0.0},
+                  "localEulerAngles": {"x": 0,"y": 0,"z": 0}
+                },
+                "GimbalAimer": {
+                  "rotationAxis": 2,
+                  "rotationLimits": [
+                    -5.0,
+                    5.0
+                  ],
+                },
+                "GameObject|_muzzleFlash":{
+                  "UnityEngine.Transform": {
+                    "localPosition": {"x": 0.0,"y": 0.0,"z": 0.328892},
+                  },
+                  "GameObject|_light":{
+                    "Light": {
+                      "m_BakedIndex": 0,
+                      "type": 2,
+                      "spotAngle": 93.1,
+                      "intensity": 25.0,
+                      "range": 4.0,
+                      "color": {
+                        "r": 0.6,
+                        "g": 0.7,
+                        "b": 1.0,
+                        "a": 1.0
+                      }
+                    }
+                  },
+                  "GameObject|_muzzleFlashAnim":{
+                    "GameObject|m_MuzzleFlash_01":{
+                    },
+                    "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+                      "UnityEngine.ParticleSystem": {
+                        "startSize": 0.15,
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.7,
+                              "g": 0.9,
+                              "b": 1.0,
+                              "a": 0.4
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      },
+                      "UnityEngine.ParticleSystemRenderer": {
+                        "lengthScale": 1.5,
+                        "activeVertexStreamsCount": 5,
+                      }
+                    }
+                  },
+                },
+                "GameObject|_recoiler":{
+                  "GameObject|m_HE_50Cal_112_Barrel":null,
+                },
+                "GameObject|_smoke":{
+                  "UnityEngine.ParticleSystem":{
+                    "startSize": 0.0,
+                    "startLifetime": 0.0,
+                  }
+                },
+                "CannonBarrel": {
+                  //"m_FireSpinner": "/Funnel1_mesh/Spinner." 
+                  //idk why this isn't work, but after adding ModuleDrill, it works without the fire spinner
+                  //
+                  //ok
+                },
+              },
+            },
+            "Duplicate|_gimbalElev":{
+              "FollowTransform": {
+                "m_TransformToFollow": "/FunnelAP2",
+                "m_FollowOrientation": false,
+              },
+            },
+            "Duplicate|_gimbalElev_copy":{
+              "FollowTransform": {
+                "m_TransformToFollow": "/FunnelAP3",
+                "m_FollowOrientation": false,
+              },
+            },
+            "Duplicate|_gimbalElev_copy_copy":{
+              "FollowTransform": {
+                "m_TransformToFollow": "/FunnelAP4",
+                "m_FollowOrientation": false,
+              },
+            },
+          },
+        },
+      },
+      "GameObject|Funnel_1":{
+        
+        "FollowTransform": {
+          "m_TransformToFollow": "/_gimbalElev/_barrel",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|Funnel1_mesh": {
+          "Spinner": {
+            "m_Speed": 0.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,
+            "Speed": 0.2,
+          }
+        },
+        //"GameObject|Funnel_BoxCol1":{"UnityEngine.BoxCollider": {"gameObject": {"layer": 8,},},}
+      },
+      "GameObject|Funnel_2": {
+        "FollowTransform": {
+          "m_TransformToFollow": "/_gimbalElev_copy/_barrel",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|Funnel2_mesh": {
+          "Spinner": {
+            "m_Speed": -0.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,
+            "m_CurrentAngle": 0.0,
+            "m_SpinnerSound": null,
+            "m_SpinnerSoundOriginalPitch": 0.0,
+            "Speed": 0.2,
+            "enabled": true,
+          }
+        },
+        //"GameObject|Funnel_BoxCol2": {"UnityEngine.BoxCollider": {"gameObject": {"layer": 8,},},}
+      },
+      "GameObject|Funnel_3": {
+        "FollowTransform": {
+          "m_TransformToFollow": "/_gimbalElev_copy_copy/_barrel",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|Funnel3_mesh": {
+          "Spinner": {
+            "m_Speed": 0.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,
+            "m_CurrentAngle": 0.0,
+            "m_SpinnerSound": null,
+            "m_SpinnerSoundOriginalPitch": 0.0,
+            "Speed": 0.2,
+            "enabled": true,
+          }
+        },
+        //"GameObject|Funnel_BoxCol3": {"UnityEngine.BoxCollider": {"gameObject": {"layer": 8,},},}
+      },
+      "GameObject|Funnel_4": {
+        "FollowTransform": {
+          "m_TransformToFollow": "/_gimbalElev_copy_copy_copy/_barrel",
+          "m_FollowOrientation": true,
+        },
+        "GameObject|Funnel4_mesh": {
+          "Spinner": {
+            "m_Speed": -0.2,
+            "m_RotationAxis": {
+              "axis": 2
+            },
+            "m_SteerAxis": {
+              "axis": 2
+            },
+            "m_AutoSpin": true,
+            "m_SpinUpTime": 1.0,
+            "m_CurrentAngle": 0.0,
+            "m_SpinnerSound": null,
+            "m_SpinnerSoundOriginalPitch": 0.0,
+            "Speed": 0.2,
+            "enabled": true,
+          }
+        },
+        //"GameObject|Funnel_BoxCol4": {"UnityEngine.BoxCollider": {"gameObject": {"layer": 8,},},}
+      },
+    },
+
+    // Other --------------------------------------------------------------------------------------------
+    // Bubble (repair)
+    "Reference|VEN_Repair_Bubble_111/_shield": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GameObject|_bubble": {
+        "GameObject|ShieldSphereEdge": null,
+      }
+    },
+
+    // Anchor
+    //"Reference|GSO_Anchor_Fixed_111/ModuleAnchor":{},
+
+    //Causing motion sickness
+    /*
+    "GameObject|FPV": {
+      "UnityEngine.Transform": {
+        "localScale": { "x":1, "y":1, "z":1 },
+        "localEulerAngles": { "x":0, "y":0, "z":0 },
+        "localPosition": { "x":0, "y":2.2, "z":-9 } 
+      },
+      "ModuleFirstPerson": {
+        // "_anchor": null,
+        "LockCursor": true,
+        "AdaptToMainRot": false,
+        "thisBlock": null,
+      }
+    },*/
+
+    // Modules --------------------------------------------------------------------------------------------
+    // Energy
+    "ModuleEnergyStore": {
+      "m_Capacity": 100, //8000,
+      "m_EnergyGauges": null
+    },
+    "ModuleEnergy": {
+      "m_Priority": -100,
+      "m_OutputPerSecond": 100,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 0,
+      "m_GeneratingSFXType": 0,
+      "m_SequentialPowerUp": false,
+      "m_PowerUpDelay": 0.0,
+    },
+    
+    // Bubble
+    "Reference|VEN_Repair_Bubble_111/ModuleShieldGenerator.": {
+      "m_InitialChargeEnergy": 0.0,
+      "m_EnergyConsumptionPerSec": 0.001,
+      "m_HealingHeartbeatInterval": 4,
+      "m_MaxHealingPerHeartbeat": 200.0,
+      "m_EnergyConsumedPerPointHealed": 0.001,
+    },
+
+
+    "ModuleFuelTank": {
+      "m_Capacity": 10.0,
+      "m_RefillRate": 10.0,
+    },
+    "ModuleGyro": {
+      "m_TrimPitchMax": 30.0, //related to Trim Gyro - max allowed angle cone
+      "m_TrimAdjustSpeed": 8.5, //related to Trim Gyro
+      "m_UsePassive": 0, //Is this a passive gyro?
+      "m_UseActive": 1, //Is this an active gyro?
+      "m_ActiveSpeed": 8.5, //How forceful is the Gyro?
+      "m_ActiveStability": 1.1, //How much do we want to dampen the movement?
+      // "m_RotationAnimTransform": null, //idk
+      // "m_RotationAnimSpeed": 0.0, //How fast does the trippy gyro animation play?
+      // "m_RotationMinSpeed": 10.0, //Active Speed falloff point
+      // "m_RotationMaxSpeed": 60.0, //max speed for rotating back upright
+      "m_Trim": 0.0, //Starting trim
+      "m_HasTurnInput": false, //Is this a Reaction Wheel?
+      "m_HasDriveInput": false, //Will this do something if "W" is pressed?
+      "m_ControlTrim": 1.0, //idk - likely for Reaction Wheels/Controlled rotation
+      "m_ControlTrimTarget": 0.0 //idk - likely scrapped concept for enemy-based tech auto aiming for MTs
+    },
+    "Reference|GSO_Radar_111/ModuleRadar.": {},
+
+    // UI
+    "ModulePowerGauge": {},
+    //"ModuleFuelGauge": {},
+    "ModuleAltimeter": {},
+
+    //Control
+    //"Reference|EXP_Cab_112/ModuleTechController.": {},
+    /*"Reference|EXP_Cab_112/ModuleVision.": {
+      "visionConeAngle": 360.0,
+      "visionRange": 350.0,
+      "m_Range": 500.0,
+      "m_ModuleType": 0,
+    },*/
+    "ModuleVision": {
+      "visionConeAngle": 360.0,
+      "visionRange": 300.0, //default is 150
+      // "m_Range": 300.0,
+      "m_ModuleType": 0,
+    },
+    
+    /*
+    "ModuleAirBrake": {
+      "m_Effector": "/AirBreakEffector",
+      "m_MinForceThreshold": 0.0,
+      "m_Strength": { //How much dampening effect?
+        "x": 2.0, //+Right and -Left
+        "y": 2.0, //+Up and -Down
+        "z": 2.0 //+Forwards and -Backwards
+      }
+    },*/
+    "Reference|HE_Wing_Tip_121/ModuleWing.": {
+      "m_AttackAngleDamping": 0.0000001,
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 1.1,
+      "m_Aerofoils": [
+        {
+          "trans": "_wing_Pitch1/_Pivot",
+          "flap": "_wing_Pitch1/_Pivot/Spinner.",
+          "liftStrength": 0.0000001,
+          "flapAngleRangeVisual": 30,
+          "flapAngleRangeActual": 20,
+          "flapTurnSpeed": 0.35
+        },
+        { 
+          "trans": "_wing_Pitch2/_Pivot",
+          "flap": "_wing_Pitch2/_Pivot/Spinner.",
+          "liftStrength": 0.0000001,
+          "flapAngleRangeVisual": 90,
+          "flapAngleRangeActual": 90,
+          "flapTurnSpeed": 0.5
+        },
+        {
+          "trans": "_wing_Pitch3/_Pivot",
+          "flap": "_wing_Pitch3/_Pivot/Spinner.",
+          "liftStrength": 0.0000001,
+          "flapAngleRangeVisual": 30,
+          "flapAngleRangeActual": 30,
+          "flapTurnSpeed": 0.8
+        },
+      ],
+      "m_AverageLiftCoeff": 0.0,
+    },
+    "Reference|BF_Cab_212/ModuleBlockAttributes.": {},
+
+    // FOX4
+    /*"ModuleDrill": {
+      "activeColliders": ["MeshAngleReset/UAV_Mesh/MeshCollider."],
+      "impactDamageMultiplier": 50.0,
+      "damagePerSecond": 800.0,
+    },*/
+
+    // worked! Use to make modular weapons
+    /*
+    "Exund.WeaponGroups.ModuleWeaponGroupController": {
+      "groups": [],
+      "m_ModuleType": 0,
+      "enabled": true,
+    },*/
+
+
+    // FireData (gauss gunpod)
+    /*
+    "Reference|HE_ChainGun_112/ModuleWeapon.":{
+      "m_FireSFXType": 13, //79
+    },
+    "Reference|HE_ChainGun_112/ModuleWeaponGun.": {
+      "m_ShotCooldown": 0.35,
+      "m_CooldownVariancePct": 0.001,
+      "m_BurstShotCount": 24,
+      "m_BurstCooldown": 2.5,
+    },
+    "Reference|HE_Cannon_Battleship_216/FireData.": {
+      "m_MuzzleVelocity": 1000.0,
+      "m_KickbackStrength": 0.0,
+      "m_BulletSprayVariance": 0.01,
+      "m_BulletSpin": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": null,
+        "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":2 }
+          },
+          "ParticleSystem": {
+            "startLifetime": 0.175,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0.4
+              },
+              "startColor": {
+                "mode": "Color",
+                "color": { //Railgun FX color, alpha doesn't work
+                  "r": 0.3,
+                  "g": 0.2,
+                  "b": 0.3,
+                  "a": 1.0
+                }
+              }
+            }
+          }
+        },
+        "GameObject|LaserFX":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":6 }
+          },
+          "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystem.": {
+            "main": {
+              "startLifetimeMultiplier": 0.5,
+              "startSpeedMultiplier": 15.0,
+              "startSizeMultiplier": 0.25,
+              "loop": true,
+              "startDelay": 0.0,
+              "prewarm": true,
+              "playOnAwake": true,
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.6,
+                  "g": 0.8,
+                  "b": 1.0,
+                  "a": 1
+                },
+              }
+            },
+            "shape": {
+              "shapeType": "Cone",
+              "angle": 0.0,
+              "radius": 0.01,
+              "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+            }
+          },
+          "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.": {
+          },
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360,
+          "m_VisionRange": 500,
+          "m_TurnSpeed": 500.0,
+          "m_ActivationDelay": 0,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType": "RandomBlockOnVehicle",
+          //"m_SeekType": 1,
+          //"m_TargetingType": 2,
+        },
+        "Rigidbody": {
+          "useGravity": false
+        },
+        "UnityEngine.CapsuleCollider": {// looooooong collider
+          "height": 12.0, // how long
+          "radius": 0.45,
+          "direction": 2, // 0=x 1=y 2=z
+          "center": { "x": 0.0, "y": 0.0, "z": 6 },
+          "gameObject": {
+            "layer": 29 // Shield piercing
+          },
+        },
+        "SmokeTrail": {
+          "numberOfPoints": 4,
+          "spread": 0.0,
+          "riseSpeed": 0.0,
+          "updateSpeed": 0.2,
+        },
+        "LineRenderer": {
+          "startWidth": 0.2,
+          "endWidth": 0.1,
+          "widthMultiplier": 1.0,
+          "startColor": {
+            "r": 0.4,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "endColor": {
+            "r": 0.4,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Projectile": {
+          "m_Damage": 150,
+          "m_LifeTime": 2.0,
+          "m_ImpactSFXType": 2,
+          "m_ExplodeAfterLifetime": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionType": 3,
+              "m_EffectRadiusMaxStrength": 1,
+              "m_EffectRadius": 2,
+              "m_MaxDamageStrength": 50,
+              "m_MaxImpulseStrength": 3.0
+            },
+            "GameObject|Sparks":null,
+            "GameObject|ExplosionBright": null,
+            "GameObject|ExplosionDark": null,
+            "GameObject|ExplosionSmoke": null,
+            "GameObject|Point light": null,
+            "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0.1,
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.4,
+                      "g": 0.5,
+                      "b": 0.9,
+                      "a": 1.0
+                    },
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2
+                    }
+                  }
+                }
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                "lengthScale": 2.5,
+                "activeVertexStreamsCount": 20,
+              }
+            }
+          }
+        },
+      },
+      "Instantiate|m_BulletCasingPrefab": null,
+    },
+    */
+
+    // FireData (UAV)
+    "Reference|HE_ChainGun_112/ModuleWeapon.": {
+      "m_FireSFXType": 79,
+    },
+    "Reference|HE_ChainGun_112/ModuleWeaponGun.": {
+      "m_ShotCooldown": 0.4,
+      "m_CooldownVariancePct": 0.001,
+      "m_BurstShotCount": 16,
+      "m_BurstCooldown": 1.2,
+      //"m_ResetBurstOnInterrupt": false,
+    },
+    "Reference|HE_Cannon_Battleship_216/FireData.": {
+      "m_MuzzleVelocity": 300.0,
+      "m_KickbackStrength": 0.0,
+      "m_BulletSprayVariance": 0.01,
+      "m_BulletSpin": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "UnityEngine.MeshFilter": null,
+        "Reference|HE_RailGun_113/FireData.m_BulletPrefab/FX_SemiCircle": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":2 }
+          },
+          "ParticleSystem": {
+            "startLifetime": 0.175,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 1.4
+              },
+              "startColor": {
+                "mode": "Color",
+                "color": { //Railgun FX color, alpha doesn't work
+                  "r": 0.3,
+                  "g": 0.2,
+                  "b": 0.3,
+                  "a": 1.0
+                }
+              }
+            }
+          }
+        },
+        "GameObject|LaserFX":{
+          "UnityEngine.Transform": {
+            "localPosition": { "x":0, "y":0, "z":6 }
+          },
+          "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystem.": {
+            "main": {
+              "startLifetimeMultiplier": 0.5,
+              "startSpeedMultiplier": 15.0,
+              "startSizeMultiplier": 0.6,
+              "loop": true,
+              "startDelay": 0.0,
+              "prewarm": true,
+              "playOnAwake": true,
+              "m_ParticleSystem": {
+                /*"startColor": {
+                  "r": 1.0,
+                  "g": 0.15,
+                  "b": 0.1,
+                  "a": 1
+                },*/
+              }
+            },
+            "shape": {
+              "shapeType": "Cone",
+              "angle": 0.0,
+              "radius": 0.01,
+              "rotation": { "x": 0.0, "y": 180.0, "z": 0.0 }
+            }
+          },
+          "Reference|GC_PlasmaCutter_222/_barrel/_beam/BeamWeapon.m_BeamParticlesPrefab/ParticleSystemRenderer.": {
+          },
+        },
+        "SeekingProjectile": {
+          "m_VisionConeAngle": 360,
+          "m_VisionRange": 500,
+          "m_TurnSpeed": 500.0,
+          "m_ActivationDelay": 0,
+          "m_LockOntoTarget": true,
+          "m_ApplyRotationTowardsTarget": true,
+          "m_TargetingType": "RandomBlockOnVehicle",
+          //"m_SeekType": 1,
+          //"m_TargetingType": 2,
+        },
+        "Rigidbody": {
+          "useGravity": false
+        },
+        "UnityEngine.CapsuleCollider": {
+          "height": 3.0,
+          "radius": 0.1,
+          "direction": 2,
+          "center": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.5
+          },
+        },
+        "SmokeTrail": {
+          "numberOfPoints": 4,
+          "spread": 0.0,
+          "riseSpeed": 0.0,
+          "updateSpeed": 0.2,
+        },
+        "LineRenderer": {
+          "startWidth": 0.6,
+          "endWidth": 0.4,
+          "widthMultiplier": 1.0,
+          "startColor": {
+            "r": 0.4,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "endColor": {
+            "r": 0.4,
+            "g": 0.3,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "Projectile": {
+          "m_Damage": 200,
+          "m_LifeTime": 1.2,
+          "m_ExplodeAfterLifetime": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionType": 3,
+              "m_EffectRadiusMaxStrength": 2.5,
+              "m_EffectRadius": 5,
+              "m_MaxDamageStrength": 50,
+              "m_MaxImpulseStrength": 3.0
+            },
+            "GameObject|Sparks":null,
+            "GameObject|ExplosionBright": null,
+            "GameObject|ExplosionDark": null,
+            "GameObject|ExplosionSmoke": null,
+            "GameObject|Point light": {
+              "UnityEngine.Light": {
+                "intensity": 10.0,
+                "range": 6.0,
+                "color": {
+                  "r": 0.6,
+                  "g": 0.5,
+                  "b": 1.0,
+                  "a": 1.0
+                }
+              }
+            },
+            "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0.5,
+                "main": {
+                  "m_ParticleSystem": {
+                    "startColor": {
+                      "r": 0.6,
+                      "g": 0.5,
+                      "b": 0.8,
+                      "a": 1.0
+                    },
+                    "emission": {
+                      "rateMultiplier": 2650.0,
+                      "rateOverTimeMultiplier": 0.2
+                    }
+                  }
+                }
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                "lengthScale": 2.5,
+                "activeVertexStreamsCount": 20,
+              }
+            }
+          }
+        },
+      },
+      "Instantiate|m_BulletCasingPrefab": null,
+    },
+  }
+}
+

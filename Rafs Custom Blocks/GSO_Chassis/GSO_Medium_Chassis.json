@@ -1,0 +1,65 @@
+
+{
+  "Name": "GSO Medium Chassis Block",
+  "Description": "A weighted chassis for placement at the bottom of the tech, increasing stability and protecting against impacts. Comes with rubber bumpers.",
+  "ID": 910408, 
+
+  "Faction": 1,
+  "Category": 0, 
+  "Grade": 1, 
+  "Price": 216,
+  "HP": 600,
+  "Mass": 1.5,
+  "Fragility": 0,
+  "DamageableType": 2,
+  "Friction": 0,
+  
+
+  "IconName": "GSO_Medium_Chassis_Icon.png", 
+  "MeshName": "GSO_Medium_Chassis.obj",
+  
+  "Recipe": "3, 5, 5", 
+  
+  "MeshMaterialName": "GSO_Main", 
+  "ColliderMeshName": "GSO_Medium_Chassis_Collider.obj",
+  "SupressBoxColliderFallback": true, 
+  
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0,
+      "z": 2
+    }
+  ],
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 1
+    },
+	{
+      "x": 0,
+      "y": 0.5,
+      "z": 2
+    }
+  ],
+  
+  "GamePrefabReference": "GSO_ArmourPlate_Medium_211",
+  "KeepReferenceRenderers": false,
+}

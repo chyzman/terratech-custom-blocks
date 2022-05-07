@@ -1,0 +1,39 @@
+{
+  "Name": "Old Star 4 by 4 Slab",
+  "Description": "This here is how the Old Star do. This is just two LARGE slabs of fibron strapped together. It's even better at filling the floors of any large OS tech, more than the '3 by 2' or '2 by 2' by a decent margen, but beware it's still made from fibron so its very frail for its size.",
+  "ID": 300029,
+  "Faction": 4,
+  "Category": 2,
+  "Grade": 2,
+  "Price": 2100,
+  "HP": 800,
+  "Mass": 4,
+  "IconName": "4x4_icon.png",
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, ", 	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "MeshName": null,
+  "ColliderMeshName":null,
+  "BlockExtents":
+  {
+    "x": 4,
+    "y": 1,
+    "z": 4
+  }, 
+  "APsOnlyAtBottom": false,
+  "SubObjects": [ 
+    {
+    "SubOverrideName":"GSO_Block_112",
+    "MeshName": "OS_4x4_Block.obj",
+    "ColliderMeshName":"OS_4x4_BlockC.obj",
+    "SubPosition": { "x": 0, "y": 0, "z": 0 },
+	"MakeBoxCollider": true
+  }
+  ]
+}

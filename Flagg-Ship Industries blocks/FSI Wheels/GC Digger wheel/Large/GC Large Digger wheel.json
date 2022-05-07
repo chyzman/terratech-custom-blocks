@@ -1,0 +1,282 @@
+
+{
+    // Basic Block Information
+    "Name":                 "GeoCorp Large Digger Wheel",
+    "Description":          "An armored, front-facing wheel. The spikes are made to crush anything they run into, which makes it perfect for clearing out those pesky rocks, crystals, and trees while also harvesting them. \n\nOctuple griding wheels makes this the largest and strongest of it's kind, however it has a horrible turning range.",
+
+    "ID": 1700106,           // This is the Block ID; it must be unique
+
+    "Faction": 2,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 3,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Grade": 2,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    "Price": 47610,        // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+   
+   "Recipe":  "17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 57, 57, 57, 57, " 	
+	
+	
+	
+	
+	
+	,	
+	
+	
+	
+	
+	
+	  
+    
+  
+    "MeshName": null,                                       //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+    "IconName": "Digger3.png",
+
+    // Basic Block HP Values
+    "HP": 20000,            // A GSO one block has 250 health
+                            
+    "Mass": 40,           
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+    "Fragility": 0,       // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+   
+    // Block Dimensions
+    "BlockExtents":{
+    "x": 4,
+    "y": 6,
+    "z": 6
+  },
+
+    "APs": [{ "x": 0,"y": 4, "z": -0.5},
+			{ "x": 1,"y": 4, "z": -0.5},
+			{ "x": 2,"y": 4, "z": -0.5},
+			{ "x": 3,"y": 4, "z": -0.5},
+			
+			{ "x": 0,"y": 5, "z": -0.5},
+			{ "x": 1,"y": 5, "z": -0.5},
+			{ "x": 2,"y": 5, "z": -0.5},
+			{ "x": 3,"y": 5, "z": -0.5},
+			
+			{ "x": 0,"y": 5.5, "z": 0},
+			{ "x": 1,"y": 5.5, "z": 0},
+			{ "x": 2,"y": 5.5, "z": 0},
+			{ "x": 3,"y": 5.5, "z": 0},
+			
+			{ "x": 0,"y": 5.5, "z": 1},
+			{ "x": 1,"y": 5.5, "z": 1},
+			{ "x": 2,"y": 5.5, "z": 1},
+			{ "x": 3,"y": 5.5, "z": 1},
+			
+			{ "x": -0.5,"y": 5, "z": 0},
+			{ "x": 3.5,"y": 5, "z": 0},
+      
+    ],
+
+    // Advanced Settings
+    "GamePrefabReference":      "HE_Wheel_Armoured_122",
+    "KeepReferenceRenderers":   true,
+    "ReferenceOffset":          { "x": 1.5, "y": 5, "z": 5 },
+     
+    "SubObjects": [
+        {
+          "SubOverrideName":          "m_HE_ArmouredWheel_122",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+      "MeshMaterialName": "GC_Main",
+          "MeshName":                 "Lrg Digger Brace.obj",
+          "ColliderMeshName":         "Lrg Digger Brace col.obj",
+          "SubPosition":              { "x": 1.5, "y": 3, "z": 2 },
+        },
+        
+        {
+          "SubOverrideName":          "m_HE_EnclosedWheel_Wheel_122",
+          "DestroyExistingRenderer":  true, //With this false, it will use the material on the subobject if it exists instead of root. Can still be modified with below properties
+          "DestroyExistingColliders": true,
+          "ColliderMeshName":         "Lrg Digger col.obj",
+      "MeshMaterialName": "GC_Main",
+          "MeshName":                 "Lrg Digger.obj",
+        },
+		{
+		"SubOverrideName": "Box_1",
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_2",
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_3",
+		"SubRotation": {
+			"x": 45,
+			"y": 0,
+			"z": 0
+		},
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Box_4",
+		"SubRotation": {
+			"x": 45,
+			"y": 0,
+			"z": 0
+		},
+		"Layer":14
+	}
+    ],
+    
+    "JSONBLOCK":{
+	"GameObject|Box_1": {
+		"UnityEngine.BoxCollider":{
+			"center": {
+				"x": 1.5,
+				"y": 2,
+				"z": 3
+			  },
+			  "size": {
+				"x": 4,
+				"y": 1,
+				"z": 5.3
+			  }
+		  }
+ },
+ "GameObject|Box_2": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 1.5,
+			"y": 2,
+			"z": 3
+		  },
+		  "size": {
+			"x": 4,
+			"y": 5.3,
+			"z": 1
+		  }
+	  }
+},
+"GameObject|Box_3": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 1.5,
+			"y": 2,
+			"z": 3
+		  },
+		  "size": {
+			"x": 4,
+			"y": 5.3,
+			"z": 1
+		  }
+	  }
+},
+"GameObject|Box_4": {
+	"UnityEngine.BoxCollider":{
+		"center": {
+			"x": 1.5,
+			"y": 2,
+			"z": 3
+		  },
+		  "size": {
+			"x": 4,
+			"y": 5.3,
+			"z": 1
+		  }
+	  }
+},
+	"ModuleDrill": {
+		"activeColliders": [
+			"Box_1/BoxCollider.",
+			"Box_2/BoxCollider.",
+			"Box_3/BoxCollider.",
+			"Box_4/BoxCollider."
+		],
+		"impactDamageMultiplier": 12.0,
+		"damagePerSecond": 2800.0,
+		"m_SpinOnCollisionDuration": 1,
+		"m_DamageType": 0
+	},
+      "GameObject|_wheel": {
+        "UnityEngine.Transform": {
+          "localPosition": { "x":1.5, "y":2, "z":3 }
+        },
+      },
+      // Torque Parameters
+      "ModuleWheels": {
+        "m_TorqueParams": {
+          "torqueCurveMaxTorque": 18000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                                // A high torque value is good for offroad wheels.
+
+          "torqueCurveMaxRpm":    250.0,         //  Dictates the speed of the wheel. A higher number is faster. 
+                                                // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+          "passiveBrakeMaxTorque": 6500.0,    // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+          "reverseBrakeMaxRpm": 300.0,         // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+          "basicFrictionTorque": 300.0,        // Dictates how strong the wheel brakes are when not moving.
+          "fullCompressFrictionTorque": 300
+        },
+        
+        // Aesthetic parameters
+        "m_UseTireTracks": true,                  // Enables the wheel to leave tire tracks
+        "m_WheelTrackType": 1,                    // Changes the tracks the wheel leaves behind
+        "m_AudioType": 0,                         // Changes the sound of the wheels when running
+                                                  // 1 = Heavy GeoCorp wheels
+        "m_TireTrackWidth": 1000,                // Does not work; supposedly, it should be able to change the width of the tire tracks.
+
+        "m_WheelParams":{
+          // Basic Wheel parameters
+          "radius":                     2.5,      // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+          "steerAngleMax":              3,      // Dictates how much the wheel is able to turn.
+          "steerSpeed":                 5,        // Dictates the time it takes for the wheel to fully go into turning position.
+          "thicknessAngular":           40,     // Dictates the width of the tire tracks
+
+          // Tire Parameters
+          "tireProperties":{
+            "props":{
+              "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+              "frictionScaleLat": 1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+              "gripFactorLong": 20.0,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+              "gripFactorLat": 20.0                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+            }
+          },
+
+          // Suspension parameters
+          "suspensionSpring":           10000,    // Dictates the amount of bounciness of the suspension's spring. 
+                                                    // It also affects the wheel's ability to carry weight.
+
+          "suspensionDamper":           100,     // This tells the suspension how much the springiness will be dampened. 
+                                                    // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+          "maxSuspensionAcceleration":  15,
+          "suspensionQuadratic":        false,
+          "suspensionTravel":           0.5,       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+          
+          "m_wheels": {
+            "m_DriveTurnPower": 1.0,
+            "m_DriveTurnBrake": 1,
+            "m_DriveTurnDifferential": 1,
+            "m_TurnOnSpotPower": 0.9,
+            "Capacity": 4,
+          },
+        }
+      },
+    }
+}

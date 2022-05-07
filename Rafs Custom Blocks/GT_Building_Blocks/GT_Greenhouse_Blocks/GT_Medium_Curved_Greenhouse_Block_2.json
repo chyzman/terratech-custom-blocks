@@ -1,0 +1,81 @@
+{
+  "Name": "GreenTech Medium Curved Greenhouse Block Two",
+  "Description": "A curvy see-through, bulletproof glass with a sturdy metallic frame.",
+  "ID": 911159, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4,
+  "Price": 1689,
+  "HP": 2200, 
+  "Mass": 2.2,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "7, 7, 7, 7, 7, 7, 7, 32, 32, 32, 32, 32, 32, 32, 43, 43, 43, 43" ,  
+  "IconName": "GT_Medium_Curved_Greenhouse_Block_2_Icon.png", 
+  "MeshName": "GT_Medium_Curved_Greenhouse_Block_2.obj", 
+  "ColliderMeshName": "GT_Medium_Curved_Greenhouse_Block_2_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+    [
+      "  x",
+      "  x",
+      "  x"
+    ],
+    [
+      " xx",
+      " xx",
+      " xx"
+    ],
+    [
+      "xx ",
+      "xx ",
+      "xx "
+    ]
+],  
+  "APs": [
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 2, "y": 2.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 2},
+    {"x": 0, "y": 2.5, "z": 2},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": -0.5, "y": 1, "z": 2},
+    {"x": 2, "y": 0, "z": -0.5},
+    {"x": 2, "y": 1, "z": -0.5},
+    {"x": -0.5, "y": 2, "z": 2},
+    {"x": 2, "y": 2, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Medium_Curved_Greenhouse_Block_2_Glass.obj",
+      "MeshMaterialName": "RR_ClearPanel"
+    } */
+    {
+      "MeshName": "GT_Medium_Curved_Greenhouse_Block_2_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Medium_Curved_Greenhouse_Block_2_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Medium_Curved_Greenhouse_Block_2_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "ColliderMeshName": "GT_Medium_Curved_Greenhouse_Block_2_Collider2.obj",
+      "Layer": 8
+    }
+  ]
+}

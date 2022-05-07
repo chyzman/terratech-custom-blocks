@@ -1,0 +1,243 @@
+{
+  "Name": "Old Star Goose Roost",
+  "Description": "Now this is how the Old Star do . . . if one raided our weapons. This WAS a 'Barrel Cannon' But the raider has chosen to make itself a home inside it. It still works but the raider does not like seeing others approach and releases a deafening sound to the point blocks explode with prolonged exposure. So have fun with it. We DON'T want it!                                                                                                                                                                                                                                                                                                                                                                                                          Honk",  
+  "ID": 300102,
+  "Faction": 4, 
+  "Category": 4, 
+  "Grade": 2, 
+  "Price": 19536,
+  "HP": 5000,
+  "Mass": 26,
+  "CenterofMass": {"x": 2.5,"y": 2.0,"z": 2.5},
+  "IconName": "Goose_Roost_icon.png",
+  "MeshName": null, 
+  "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 43, 43, 43, 43, 43, 43, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 52, 52, 55, 55, 55, 55, 55, 55, ",	
+  "EmissionMode": 2,
+  "MeshTextureName": "OST1.png",
+  "MeshGlossTextureName":"OST2.png",
+  "MeshEmissionTextureName":"OST3.png",
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "CellMap": [
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "      "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],     
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     " TTTT "],    
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT", 
+     " TTTT "],
+    ["TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "TTTTTT",
+     "      "]
+ 
+   ],
+
+  "APs": [
+    // Bottom
+    {"x": 1.0,"y":-0.5,"z": 1.0},{"x": 2.0,"y":-0.5,"z": 1.0},{"x": 3.0,"y":-0.5,"z": 1.0},{"x": 4.0,"y":-0.5,"z": 1.0},
+    {"x": 1.0,"y":-0.5,"z": 2.0},                                                          {"x": 4.0,"y":-0.5,"z": 2.0},
+    {"x": 1.0,"y":-0.5,"z": 3.0},                                                          {"x": 4.0,"y":-0.5,"z": 3.0},
+    {"x": 1.0,"y":-0.5,"z": 4.0},{"x": 2.0,"y":-0.5,"z": 4.0},{"x": 3.0,"y":-0.5,"z": 4.0},{"x": 4.0,"y":-0.5,"z": 4.0},
+
+    // Back
+    {"x": 1.0,"y": 0.0,"z": 0.5},{"x": 2.0,"y": 0.0,"z": 0.5},{"x": 3.0,"y": 0.0,"z": 0.5},{"x": 4.0,"y": 0.0,"z": 0.5},
+
+    // Front
+    {"x": 1.0,"y": 0.0,"z": 4.5},{"x": 2.0,"y": 0.0,"z": 4.5},{"x": 3.0,"y": 0.0,"z": 4.5},{"x": 4.0,"y": 0.0,"z": 4.5},
+
+    //Left
+    {"x": 0.5,"y": 0.0,"z": 1.0},{"x": 0.5,"y": 0.0,"z": 2.0},{"x": 0.5,"y": 0.0,"z": 3.0},{"x": 0.5,"y": 0.0,"z": 4.0},
+
+    //Right
+    {"x": 4.5,"y": 0.0,"z": 1.0},{"x": 4.5,"y": 0.0,"z": 2.0},{"x": 4.5,"y": 0.0,"z": 3.0},{"x": 4.5,"y": 0.0,"z": 4.0}
+
+  ],
+
+  "GamePrefabReference": "VEN_Flamethrower_121",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {"x": 0.0,"y": 0.0,"z": 0.0},
+    
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Goose_Base.obj",
+      "ColliderMeshName": "OS_Goose_Base.obj",
+      "SubScale":                 { "x": 1, "y": 1, "z": 1},
+      "SubRotation":              {"x": 0,"y": 0,"z": 0},
+      "SubPosition":              {"x": 2.5,"y": 0.0,"z":2.5 }
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_Goose_Horizontal.obj",
+      "ColliderMeshName": "OS_Goose_Horizontal.obj"
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "OS_BC_Goose.obj",
+      "ColliderMeshName": "OS_BC_Goose.obj"
+    },
+    {
+      "SubOverrideName": "FXFlameThrower",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 0.2,
+        "z": 2.25
+      },
+     "MeshMaterialName": "FX_Teleporter_Distortion_Ring"
+    },
+    {
+      "SubOverrideName": "_gimbalHorizontal",
+      "SubPosition": {
+        "x": 2.5,
+        "y": 0.0,
+        "z": 2.5
+      }
+    },
+    {
+      "SubOverrideName": "_gimbalVertical",
+      "SubPosition": {
+        "x": 0.0,
+        "y": 2.0,
+        "z": 0.0
+      }
+    }
+  ],
+
+  "JSONBLOCK": {
+      //Horizontal aim
+    "GameObject|_gimbalHorizontal": {
+      "GimbalAimer": {
+        "rotationAxis": 2,
+        "rotationLimits": [-180, 180]
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+      },
+      "GameObject|m_VEN_FlameThrower_121_RotatingPart": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0, "w": 1 },
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        }
+      },
+      //Verticle aim
+      "GameObject|_gimbalVertical": {
+        "GimbalAimer": {
+            "rotationAxis": 1,
+          "rotationLimits": [-91, 20]
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|m_VEN_FlameThrower_121_Barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          }
+        },  
+    "GameObject|m_VEN_FlameThrower_121_Base": {
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": -90, "z": 0 },
+        "localPosition": { "x": 2.0, "y":0.0, "z":2.0 }
+      }
+    },
+    "GameObject|FXFlameThrower": { 
+      "UnityEngine.ParticleSystem": {
+        "main": {
+          "m_ParticleSystem": {
+            "collision": {
+              "enabled": true,                                   //Setting this to false will break the Particle Weapon
+              "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+              "bounceMultiplier": 0.0,//0.5 is default          //How hard it bounces on contact with something
+              "lifetimeLossMultiplier": 0.05,
+              "dampenMultiplier": 1.0              
+            }
+          }
+        }
+      }
+    }
+  }
+},
+"GameObject|m_VEN_FlameThrower_121_Base": {
+    "UnityEngine.Transform": {
+      "localScale": { "x": 1, "y": 1, "z": 1 },
+      "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+      "localPosition": { "x": 2.5, "y":0.0, "z":2.5 }
+    }
+},
+"ModuleWeaponFlamethrower": {
+    "m_MaxFlameLength": 136.0,
+  "m_DPS": 700.0,
+  "m_DamageType": 2,
+  "m_ExtendTime": 0.25,
+  "m_RetractTime": 0.05,
+  "m_Particles": {
+    "startDelay": 0.0,
+    "loop": true,
+    "playOnAwake": false,
+    "playbackSpeed": 1.0,
+    "enableEmission": true,
+    "emissionRate": 50.0,
+    "startSpeed": 15.0,
+    "startSize": 15,
+    "startLifetime": 10,
+    "gravityModifier": 0.0,
+    "maxParticles": 20000,
+    "simulationSpace": 0,
+    "scalingMode": 2,
+    "randomSeed": 0,
+    "useAutoRandomSeed": false,
+    "startColor": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1
+    },
+    "trails": {
+      "enabled": true
+    }
+},
+  "m_TipLight": {
+    "intensity": 0,
+    "range": 0
+  },
+  "m_JetLight": {
+    "intensity": 0,
+    "range": 0
+  }
+  }  
+}
+}

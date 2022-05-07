@@ -1,0 +1,204 @@
+{
+    // Basic Block Information
+    "Name":                 "Tar'gith Radar",
+    "Description":          "Radar system utilising Crystallid tech to have increadible range and even allow weapons to aim further",
+
+    "ID": 620031,           // This is the Block ID; it must be unique
+
+    "Faction": 5,           // Tells TT what Corporation this block belongs to.
+                            // 1 or 0   = GSO
+                            // 2        = GeoCorp
+                            // 3        = EXP/Reticule Research
+                            // 4        = Venture
+                            // 5        = HawkEye
+                            // 6        = Special (Decorative)
+                            // 7        = Better Future
+
+    "Category": 5,          // Tells TT what type of block this is.
+                            // 1    = Control (Cabs)
+                            // 2    = Standard (Basic Blocks)
+                            // 3    = Wheels
+                            // 4    = Weapons
+                            // 5    = Accessory (Radar, Lights, etc.)
+                            // 6    = Power (Batteries, Shields, etc.)
+                            // 7    = Manufacturing
+                            // 8    = Flight (Wings, Fans, etc.)
+
+    "Rarity": 2,            // Dictates the rarity of the block.
+                            // 0 = Common 
+                            // 1 = Uncommon
+                            // 2 = Rare
+
+    "Grade": 3,             // The Grade is equal to X + 1 (e.g. "Grade": 4 is read by TT as Grade 5.)
+    
+    "Price": 300000,         // The price is equal to the sum of the resources/components used by this block times 3. (e.g. P = ((R1 + R2 + R3) * 3) )
+    
+    /* 
+    The resources/components needed to make this block. For the full ID Resource/Component list, 
+    please refer to the Terratech Wiki.
+    
+    Recipe:     Main Body:      8 Titanic Alloy, 8 Rugged Fiblar, 4 Plubonic Alloy
+                Electronics:    12 Sensory Transmitter, 2 Ion Pulse Cells, 2 Seed AI
+    */
+    "Recipe" : {
+    },
+      
+    "IconName":                   "Targith_icon.png",                 // Name of the block's icon. This will be used in the UI screen                            
+    "MeshName":                   "Tar'gith_body.obj",                 // Name of the block's mesh                                        
+	"MeshColliderName":           "Tar'gith_body.obj",             // Name of the block's collider.
+	"NoBoxCollider":              true,
+	"MeshTextureName": "Ellydium 1blue.png", 
+			"MeshGlossTextureName": "Ellydium 2.png", 
+			"MeshEmissionTextureName": "Ellydium 3.png",
+  
+    // Basic Block Values
+    "HP": 8800,             // A GSO one block has 250 health
+                            // LK Stats:
+                            // 500/cell = Standard & Armor blocks (Add 3000 for Cabs, and add 50% for Armor blocks)
+                            // 400/cell = Weapons
+                            // 300/cell = Wheels & Electronics
+                            
+    "Mass": 70,             
+                            
+                            
+                            
+                            
+                            
+
+    "DamageableType": 1,    // Tells TT the block's Armor type, which makes it more resilient to one type of damage over another.
+                            // 0    = Standard
+                            // 1    = Armor
+                            // 2    = Rubber
+                            // 3    = Volatile
+                            // 4    = Shield
+                            // 5    = Wood
+                            // 6    = Rock
+
+    "DetachFragility": 0.0, // Tells TT how likely this block can fall off when attacked. 0 is none at all, while 2 is twice as likely.
+
+    // Block Dimensions
+    "BlockExtents": { "x": 4, "y": 11,"z": 2 },
+
+    "APs": [ 
+        // Bottom APs
+        { "x": 0, "y": -0.5, "z": 0 }, { "x": 1, "y": -0.5, "z": 0 },
+        { "x": 0, "y": -0.5, "z": 1 }, { "x": 1, "y": -0.5, "z": 1 },
+		{ "x": 2, "y": -0.5, "z": 0 }, { "x": 3, "y": -0.5, "z": 0 },
+        { "x": 2, "y": -0.5, "z": 1 }, { "x": 3, "y": -0.5, "z": 1 },
+    ],
+
+    // Advanced Settings
+    "PrefabReference": "GSO_Radar_111",
+    "KeepReferenceRenderers": true,                      // Setting this to false will remove any mesh instances the original block will be spawning with the modded block
+    "PrefabPosition": { "x": 0, "y": 0.0, "z": 0.0 },
+
+    "SubObjects":[
+        // Remove the original body
+        {
+            "ObjectName":                 "m_GSO_Radar_111_Base",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true,
+			
+			"Position":                   { "x": 1.0, "y": 0.0, "z": 0.0 },
+			"MeshTextureName": "Ellydium 1blue.png", 
+			"MeshGlossTextureName": "Ellydium 2.png", 
+			"MeshEmissionTextureName": "Ellydium 3.png",
+        },
+        {
+            "ObjectName":                 "m_GSO_Radar_111_Dish",
+            "DestroyExistingRenderer":    true,
+            "DestroyExistingColliders":   true,
+        },
+        
+        // Add the new radar pieces
+        {
+            "ObjectName":                 "radarTop",
+            "MeshName":                   "Tar'gith_dome.obj",
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 },
+			"MeshTextureName": "Ellydium 1blue.png", 
+			"MeshGlossTextureName": "Ellydium 2.png", 
+			"MeshEmissionTextureName": "Ellydium 3.png",
+        }
+    ],
+
+    "JSONBLOCK":{
+
+		"GameObject|energyGaugeParticles": {
+            "Reference|GC_SamSite_Charger_444/fx_Lightning":{
+                "GameObject|Light_Point": null,
+                "ParticleSystem": {
+                    "startSize": 1.5,
+                    "startSpeed": 2,
+                    "startLifetime": 0.5,
+                    "startColor":{ "r": 0.1, "g": 1.0, "b": 0.1, "a": 0.5 },
+
+                    "shape": {
+                      "shapeType": 5,
+                      "randomDirectionAmount": 1000,
+                      "alignToDirection": true,
+                      "meshRenderer": null,
+                      "normalOffset": 0,
+                      "position": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "rotation": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                      "scale": { "x": 1, "y": 30, "z": 1 }
+                    },
+                    "emission": {
+                      "rateOverTimeMultiplier": 50000.0
+                    }
+                },
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 1.5, "y": 4, "z": 0.5},
+                    "localScale": { "x": 0.2, "y": 0.2, "z": 0.2},
+                    "localEulerAngles": { "x": 0, "y": 0, "z": 0}
+                }
+            },
+        },
+
+        "GameObject|_spindle":{
+            "UnityEngine.Transform": { "localPosition": { "x": 1.5, "y": 0.5, "z": 0.5 } },
+            "UnityEngine.Transform": { "localPosition": { "x": 1.5, "y": 0.5, "z": 0.5 } },
+            "GameObject|radarTop":{}
+        },
+
+        "GameObject|radar_1":{
+            "Spinner": {
+                "m_Speed": 0.1,                         // Dictates the speed of the rotation
+                "m_AutoSpin": false,                    // Enables or disables the object's ability to spin automatically. 
+      
+                                                        // Mileage varies between blocks, but in general, any block that has a spinning component 
+                                                        // will have this module and will work.
+      
+                "m_SpinUpTime": 1.0,                    // Dictates the amount of time required for the object to spin in full speed
+                "m_CurrentAngle": 0,                    // Dictates the starting angle of the object when spawned into the world
+
+                "m_RotationAxis": { "axis": 1 },
+            }
+        },
+
+        /***** Module Radar: Usually seen on radar blocks; allows basic detection of targets and radar UI toggling. *****/
+        "ModuleRadar": {
+            "m_Priority": 10,           // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+            "m_MiniMapType": 1,         // Dictates the minimap provided by the block. Only accepts 0 or 1.
+                                        // 0 = Small, blank Radar minimap
+                                        // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+            
+            "m_Range": 600,             // Dictates how far the radar detects objects in the world. For comparison, an HE Radar has a value of 300.
+        },
+
+        /***** Module Vision: Usually seen on cabs so they can "see" targets and aim their weapons at a specific range. *****/
+        "ModuleVision": {
+            "visionConeAngle":  360.0,  // Dictates the "vision" cone provided by this block. The cone is aimed at the front of the block. 
+                                        // When an enemy is within this cone angle, weapons attached on the Tech will begin to aim at it. By default value is 360
+
+            "visionRange":      900,    // Dictates how far the Tech detects enemies. 
+                                        // 900 is the maximum reasonable value considering draw and render distance, any more is simply overkill as the game will despawn enemies at a certain distance. 
+
+            "m_Range": 0,               // Same as ModuleRadar's "m_Range", this dictates how far the radar detects objects in the world. For comparison, an HE Radar has a value of 300.
+        }
+    }
+
+
+
+
+
+}

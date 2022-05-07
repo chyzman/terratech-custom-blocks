@@ -1,0 +1,80 @@
+
+{
+  "Name": "GeoCorp Ballast Tank",
+  "Description": "When attached to a Tech, this tank pumps in a lot of air from the exterior, increasing its own density and acting like a ballast.",
+  "ID": 910608, 
+
+  "Faction": 2, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 4908,
+  "HP": 700,
+  "Mass": 8,
+
+  "IconName": "GC_Ballast_Tank_Icon.png",
+  "MeshName": "GC_Ballast_Tank.obj", 
+  
+  "Recipe": "5, 5, 7, 7, 45, 45, 57, 57",
+  
+  "MeshMaterialName": "GC_Main", 
+  "SupressBoxColliderFallback": false, 
+
+  "Cells": [ 
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": 0,
+      "z": 1
+    }
+  ],
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+  "GamePrefabReference": "GC_Block_222",
+  "KeepReferenceRenderers": false, 
+  
+  "JSONBLOCK": {
+  "MotionBlocks.ModuleFloater": {
+//  "MinHeight": 600,
+    "MaxHeight": -85,
+    "MaxStrength": -80,
+    "VelocityDampen": 0.5
+}
+    
+  }
+}

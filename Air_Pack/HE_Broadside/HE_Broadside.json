@@ -1,0 +1,413 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Hawkeye Broadside Mount",
+  "Description": "A powerful dual-barreled cannon array for use in angled armor faces.", //You can make multiple lines with \n
+  "ID": 10018, //A random ID that MUST be unique
+
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 60384,
+  "HP": 10000,
+  "Mass": 75,
+
+  "Fragility": 0.25,
+
+  "IconName": "HE_Broadside.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe":  "46, 46, 46, 46, 47, 47, 47, 47, 52, 52, 52, 52, 52, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 55, 55, 55, 55, 57, 57, 61, 61, 64, 64",
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "HE_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 2,
+    "y": 2,
+    "z": 5
+  }, // A vector of (1, 1, 1) returns a one-celled block
+
+  "APs": [
+    // Back Bottom
+    {
+      "x":0.0,
+      "y":0.0,
+      "z":-0.5
+    },
+    {
+      "x":0.0,
+      "y":1.0,
+      "z":-0.5
+    },
+    {
+      "x":1.0,
+      "y":0.0,
+      "z":-0.5
+    },
+    {
+      "x":1.0,
+      "y":1.0,
+      "z":-0.5
+    },
+    // Top
+    {
+      "x":0.0,
+      "y":1.5,
+      "z":0.0
+    },
+    {
+      "x":1.0,
+      "y":1.5,
+      "z":0.0
+    },
+    // Bottom
+    {
+      "x":0.0,
+      "y":-0.5,
+      "z":0.0
+    },
+    {
+      "x":1.0,
+      "y":-0.5,
+      "z":0.0
+    },
+    {
+      "x":0.0,
+      "y":-0.5,
+      "z":1.0
+    },
+    {
+      "x":1.0,
+      "y":-0.5,
+      "z":1.0
+    },
+    // Left
+    {
+      "x":-0.5,
+      "y":0.0,
+      "z":0.0
+    },
+    {
+      "x":-0.5,
+      "y":1.0,
+      "z":0.0
+    },
+    {
+      "x":-0.5,
+      "y":0.0,
+      "z":1.0
+    },
+    // Right
+    {
+      "x":1.5,
+      "y":0.0,
+      "z":0.0
+    },
+    {
+      "x":1.5,
+      "y":1.0,
+      "z":0.0
+    },
+    {
+      "x":1.5,
+      "y":0.0,
+      "z":1.0
+    },
+  ],
+
+  "GamePrefabReference": "HE_CannonBattleship(216)",
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "_barrel/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Broadside_Barrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "_barrel_copy/_recoiler/m_HE_CannonBattleship_216_barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Broadside_Barrel.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "m_HE_CannonBattleship_216_body",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Broadside_Base.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Turret_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Broadside_Turret_Mount.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    {
+      "SubOverrideName": "Barrel_Mount",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "MeshName": "HE_Broadside_Barrel_Mount.obj",
+      "MeshMaterialName": "HE_Main"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|_gimbalBase": {
+      "GimbalAimer": {
+        "rotationLimits": [-32, 32]
+      },
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localPosition": { "x": 0.5, "y": 0.5, "z": 0.5 }
+      },
+      "GameObject|Turret_Mount": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0, "w": 1 },
+          "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 }
+        }
+      },
+      "GameObject|_gimbalElev": {
+        "GimbalAimer": {
+          "rotationLimits": [-50, 30]
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1, "y": 1, "z": 1 },
+          "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+          "localPosition": { "x": 0, "y": 0, "z": 0 }
+        },
+        "GameObject|Barrel_Mount": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+            "localPosition": { "x": 0, "y": 0, "z": 0 }
+          }
+        },
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0, "w": 1 },
+            "localPosition": { "x": 0.23, "y": 0, "z": 1.25 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_CannonBattleship_216_barrel": {
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localPosition": { "x": 0, "y": 0, "z": 0.0 }
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": -1.0 }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          }
+        },
+        "Duplicate|_barrel": {
+          "UnityEngine.Transform": {
+            "localScale": { "x": 1, "y": 1, "z": 1 },
+            "localEulerAngles": { "x": 0, "y": 0, "z": 0, "w": 1 },
+            "localPosition": { "x": -0.23, "y": 0, "z": 1.25 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 0.0 }
+            },
+            "GameObject|m_HE_CannonBattleship_216_barrel": {
+              "UnityEngine.Transform": {
+                "localScale": { "x": 1, "y": 1, "z": 1 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+                "localPosition": { "x": 0, "y": 0, "z": 0.0 }
+              }
+            }
+          },
+          "GameObject|_casingSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": -1.0 }
+            }
+          },
+          "GameObject|_smoke": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 2, "y": 2, "z": 2 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          },
+          "GameObject|_muzzleFlash": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          },
+          "GameObject|_bulletSpawn": {
+            "UnityEngine.Transform": {
+              "localScale": { "x": 1, "y": 1, "z": 1 },
+              "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+              "localPosition": { "x": 0, "y": 0, "z": 2.0 }
+            }
+          }
+        }
+      }
+    },
+    "GameObject|m_HE_CannonBattleship_216_body": {
+      "UnityEngine.Transform": {
+        "localScale": { "x": 1, "y": 1, "z": 1 },
+        "localEulerAngles": { "x": 0, "y": 0, "z": 0 },
+        "localPosition": { "x": 0.5, "y": 0.5, "z": -0.5 }
+      }
+    },
+    "ModuleWeapon": {
+      "m_FireSFXType": 75,
+      "m_RotateSpeed" : 55
+    },
+    "ModuleWeaponGun": {
+      "m_FireControlMode": "AllAtOnce",
+      "m_ShotCooldown" : 0,
+      "m_FiringData": null,
+	    "m_CooldownVariancePct": 0,
+      "m_BurstShotCount": 2,
+      "m_BurstCooldown": 3,
+      "m_ResetBurstOnInterrupt": false,
+      "m_NumCannonBarrels": 2
+    },
+    "FireData": {
+      "m_MuzzleVelocity": 175,
+      "m_BulletSprayVariance": 0.06,
+      "m_KickbackStrength": 750,
+      "Instantiate|m_BulletCasingPrefab": {
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1.0, "y": 1.0, "z": 1.0 }
+        }
+      },
+      "Instantiate|m_BulletPrefab": {
+        "WeaponRound": {
+          "m_Damage": 1500
+        },
+        "UnityEngine.Transform": {
+          "localScale": { "x": 1.5, "y": 1.5, "z": 2.0 }
+        },
+        "SmokeTrail":{
+          "numberOfPoints":   15.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+                                      // Do not decrease this too much as it will begin to act strangely.
+
+          "spread":           1.5,   // Dictates how erratic the trail is.
+          "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+          "updateSpeed":      0.15,   // DIctates the speed of the trail.
+        },
+        // This is attached to the SmokeTrail and controls some of its shape. Please refer to the Unity Scripting API for more information and modules
+        "LineRenderer": {
+            "startWidth": 0.45,
+            "endWidth": 0.25,
+            "widthMultiplier": 1.0,
+
+            // The color at the start of the trail
+            "startColor": {
+                "r": 1.0,
+                "g": 0.5,
+                "b": 0.0,
+                "a": 1.0                
+            },
+
+            // The color at the end of the trail
+            "endColor":{
+                "r": 1.0,
+                "g": 0.3,
+                "b": 0.0,
+                "a": 1.0                
+            }
+        },
+        "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": {  
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.125,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0.75
+              }
+            }
+          }
+        },
+        "Duplicate|FX_SemiCircle": {  
+          "UnityEngine.ParticleSystem": {
+            "startLifetime": 0.25,
+            "main": {
+              "m_ParticleSystem": {
+                "startSize": 0.35
+              }
+            }
+          }
+        },
+        "Projectile": {
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel": true,
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionSize": 2,
+              "m_EffectRadius": 5,
+              "m_EffectRadiusMaxStrength": 2,
+              "m_MaxDamageStrength": 750,
+              "m_MaxImpulseStrength": 100
+            }
+          }
+        }
+      }
+    }
+  }
+}

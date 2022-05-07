@@ -1,0 +1,1127 @@
+{
+  "Name": "Hawkeye Ambriel HVM",
+  "Description": "Supersonic Large Plasma Missile.\nAfter firing, the Ambriel HVM stabilizes in place with its eight RCS thrusters and accelerates rapidly after targeting the enemy.\nIt consumes power at launch to pre-charge the micro warp drive.\n\n<color=red>Requires:</color>\n<color=red>RandomAdditions (TTMM mod)</color>", //You can make multiple lines with \n
+  "ID": 546398, //A random ID that MUST be unique
+  "Faction": 5, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 2, //The desired grade minus one
+  "Price": 69276,
+  "HP": 1000,
+  "Fragility": 0.1,
+  "Rarity": 1,
+  "Mass": 12,
+  "CenterOfMass": {"x": 0, "y": 0.0, "z": 0},
+
+  "Recipe": "47, 47, 47, 47, 54, 54, 56, 58, 63, 63, 64, 64, 65, 66, ",
+  "DamageableType": 3,
+
+  "IconName": "HE_SanctaMissile_Ambriel.png", 
+  "MeshName": null, 
+  //"MeshTextureName": "_texAnimTest_A.png",
+  //"MeshEmissionTextureName": "_texAnimTest_E.png",
+  "MeshMaterialName": null,
+  "EmissionMode": 0, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  //"ColliderMeshName": "_texAnimTest.obj",
+  "SupressBoxColliderFallback": false, 
+  "Cells": [
+    {"x": 0,"y": 0,"z": 4},
+    {"x": 0,"y": 0,"z": 3},
+    {"x": 0,"y": 0,"z": 2},
+    {"x": 0,"y": 0,"z": 1},
+    {"x": 0,"y": 0,"z": 0},
+    {"x": 0,"y": 0,"z": -1},
+    {"x": 0,"y": 0,"z": -2},
+
+    {"x": 0,"y": 1,"z": 4},
+    {"x": 0,"y": 1,"z": 3},
+    {"x": 0,"y": 1,"z": 2},
+    {"x": 0,"y": 1,"z": 1},
+    {"x": 0,"y": 1,"z": 0},
+    {"x": 0,"y": 1,"z": -1},
+    {"x": 0,"y": 1,"z": -2},
+    {"x": 0,"y": 2,"z": 4},
+    {"x": 0,"y": 2,"z": 3},
+    {"x": 0,"y": 2,"z": 2},
+    {"x": 0,"y": 2,"z": 1},
+    {"x": 0,"y": 2,"z": 0},
+    {"x": 0,"y": 2,"z": -1},
+    {"x": 0,"y": 2,"z": -2},
+    {"x": 0,"y": 3,"z": 4},
+    {"x": 0,"y": 3,"z": 3},
+    {"x": 0,"y": 3,"z": 2},
+    {"x": 0,"y": 3,"z": 1},
+    {"x": 0,"y": 3,"z": 0},
+    {"x": 0,"y": 3,"z": -1},
+    {"x": 0,"y": 3,"z": -2},
+    {"x": 0,"y": 4,"z": 4},
+    {"x": 0,"y": 4,"z": 3},
+    {"x": 0,"y": 4,"z": 2},
+    {"x": 0,"y": 4,"z": 1},
+    {"x": 0,"y": 4,"z": 0},
+    {"x": 0,"y": 4,"z": -1},
+    {"x": 0,"y": 4,"z": -2},
+
+    {"x": -1,"y": 4,"z": 4},
+    {"x": -1,"y": 4,"z": 3},
+    {"x": -1,"y": 4,"z": 2},
+    {"x": -1,"y": 4,"z": 1},
+    {"x": -1,"y": 4,"z": 0},
+    {"x": -1,"y": 4,"z": -1},
+    {"x": -1,"y": 4,"z": -2},
+    {"x": 1,"y": 4,"z": 4},
+    {"x": 1,"y": 4,"z": 3},
+    {"x": 1,"y": 4,"z": 2},
+    {"x": 1,"y": 4,"z": 1},
+    {"x": 1,"y": 4,"z": 0},
+    {"x": 1,"y": 4,"z": -1},
+    {"x": 1,"y": 4,"z": -2},
+    {"x": 0,"y": 5,"z": 4},
+    {"x": 0,"y": 5,"z": 3},
+    {"x": 0,"y": 5,"z": 2},
+    {"x": 0,"y": 5,"z": 1},
+    {"x": 0,"y": 5,"z": 0},
+    {"x": 0,"y": 5,"z": -1},
+    {"x": 0,"y": 5,"z": -2},
+
+  ],
+  "APs": [
+      {"x": 0,"y": -0.5,"z": 1},
+      {"x": 0,"y": -0.5,"z": 0},
+      {"x": 0,"y": -0.5,"z": -1},
+  ],
+
+  "GamePrefabReference": "HE_CruiseMissile_121",
+  "KeepRenderers": true,
+  "KeepColliders": true,
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_HE_CruiseMissile_113_Base",
+      "MeshName": "HE_SanctaMissile_Ambriel_base.obj",
+      "ColliderMeshName": "HE_SanctaMissile_Ambriel_base.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    { 
+      "SubOverrideName": "m_HE_CruiseMissile_113_Missile",
+      "MeshName": "HE_SanctaMissile_Ambriel_missile.obj",
+      "ColliderMeshName": "HE_SanctaMissile_Ambriel_missile.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+
+
+
+
+    { // Missile
+      "SubOverrideName": "FireData.m_BulletPrefab",
+      "MeshName": "HE_SanctaMissile_Ambriel_missile.obj",
+      "MeshMaterialName": "HE_Main"
+    },
+    { // booster flame texture
+      "SubOverrideName": "FireData.m_BulletPrefab/_boostJet/m_BoosterRocketFlame_01",
+      "MeshTextureName": "HE_SanctaMissile_Ambriel_flame.png"
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|m_HE_CruiseMissile_113_Base":{
+      "UnityEngine.Transform": {
+        //"localEulerAngles": { "x":0, "y":0, "z":0 },
+        //"localScale": { "x":1, "y":1, "z":1 },
+        "localPosition": { "x":0.0, "y":0, "z":0 }
+      },
+    },
+    "GameObject|_barrel":{
+      "GameObject|_recoiler": {
+        "GameObject|_spawnBullet":{
+          "UnityEngine.Transform": {
+            //"localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":0.109558, "z":0 }
+          },
+        },
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "UnityEngine.MeshCollider": { //Give it Grabbable colliders
+            "gameObject": {
+              "layer": 8,
+            },
+          },
+          "UnityEngine.Transform": {
+            //"localEulerAngles": { "x":0, "y":0, "z":0 },
+            //"localScale": { "x":1, "y":1, "z":1 },
+            "localPosition": { "x":0.0, "y":0.109558, "z":0 }
+          },
+        },
+      },
+    },
+    /*
+    // test
+    "Duplicate|_barrel":{},
+    "Duplicate|_barrel_copy":{},
+    "Duplicate|_barrel_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy_copy_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy": {},
+    "Duplicate|_barrel_copy_copy_copy_copy_copy_copy_copy_copy": {},
+*/
+    "ModuleDamage": { // death explosion FX
+      // NuterraSteam doesn't seem to be able to load deathExplosion... for now
+      //"deathExplosion": "Reference|475/FireData.m_BulletPrefab/Projectile.m_Explosion", //reference bigbertha
+      "Instantiate|deathExplosion": { // Instantiate after referencing to modify
+        "Explosion": {
+          "m_EffectRadius": 8.0,
+          "m_EffectRadiusMaxStrength": 4.0,
+          "m_MaxDamageStrength": 150,
+          //"m_MaxImpulseStrength": 500,
+          "m_DamageType": 7 //plasma
+        },
+        "GameObject|ExplosionBright": {
+          "UnityEngine.ParticleSystem": {
+            "startSize": 40.0,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.2,
+                  "g": 0.4,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          },
+        },
+        "GameObject|ExplosionDark": {
+          "UnityEngine.ParticleSystem": {
+            "startSize": 18.0,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.2,
+                  "g": 0.4,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          }
+        },
+        "GameObject|ExplosionSmoke": {
+          "UnityEngine.ParticleSystem": {
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.2,
+                  "g": 0.4,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          }
+        },
+        "GameObject|Point light": {
+          "UnityEngine.Light": {
+            "intensity": 20.0,
+            "range": 22.0,
+            "color": {
+              "r": 0.6,
+              "g": 0.7,
+              "b": 1.0,
+              "a": 1.0
+            }
+          }
+        },
+        "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+          "UnityEngine.ParticleSystem": {
+            "sizeOverLifetime": {
+              "sizeMultiplier": 0.08
+            },
+            "startColor": {
+              "r": 0.2,
+              "g": 0.4,
+              "b": 1.0,
+              "a": 1.0
+            }
+          }
+        },
+        "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+          "UnityEngine.ParticleSystem": {
+            "startSize": 0.9,
+            "main": {
+              "m_ParticleSystem": {
+                "startColor": {
+                  "r": 0.7,
+                  "g": 0.5,
+                  "b": 1.0,
+                  "a": 1
+                },
+                "emission": {
+                  "rateMultiplier": 2650.0,
+                  "rateOverTimeMultiplier": 0.2
+                }
+              }
+            }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "lengthScale": 2.5,
+            "activeVertexStreamsCount": 20,
+          }
+        }
+      }
+    },
+
+
+
+    "ModuleWeapon": {
+      "m_ShotCooldown": 8,
+    },
+    "ModuleWeaponGun":{
+      "m_ShotCooldown": 8, // ??
+      "m_BurstShotCount": 1,
+      "m_BurstCooldown": 8,
+    },
+    "ModuleConsumeEnergyToShell": {
+      "EnergyCost":           1000,   // How much energy is needed to fire one round 
+                                      // (For continuous weapons, how much energy per second)
+      "EnergyCapacity":       1000,   // How much energy this block can hold
+                                      
+      // The two below are intended for flamethrowers and beam weapons
+      "LowestPermittedEnergy": 0,    // The minimum amount of energy that can be left in a system 
+                                      // (Useful for continuous weapons: Don't drain all energy)
+      "TimeBeforeRetry":      1,      // How many seconds to wait after failing to fire 
+                                      // (Useful for continuous weapons: Prevents studdering effect)
+    },
+    "Reference|HE_CruiseMissile_121/FireData.": { // Stage 1 ------------------------------------------------------------------------------
+      "m_MuzzleVelocity": 25.0,
+      "m_KickbackStrength": 0.0,
+      "Instantiate|m_BulletPrefab": {
+        "GameObject|m_HE_CruiseMissile_113_Missile": {
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": null,
+          "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": null,
+        },
+        "GameObject|_boostJet": {
+          "UnityEngine.Transform": { 
+                "localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+                "localPosition": { "x":0, "y":0, "z":0 },
+                //"localEulerAngles": { "x":0, "y":0, "z":0, }
+          },
+          "BoosterJet": { // missiles booster power
+            "m_Force": 0.0 //0.01
+          },
+          "GameObject|m_BoosterRocketFlame_01": { // main engine
+            "UnityEngine.MeshRenderer": {
+              "material": {"mainTexture": "HE_SanctaMissile_Ambriel_flame2.png"}
+            },
+            "UnityEngine.Transform": {
+              "localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+              "localPosition": { "x":0, "y":0.0, "z":-2.7 },
+              //"localEulerAngles": { "x":0, "y":0, "z":0, }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame": {
+              "UnityEngine.ParticleSystem":{
+                "startSize": 1,
+                "startColor": {
+                  "r": 0.1,
+                  "g": 0.1,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                //"lengthScale": 10.0,
+                "isVisible": true,
+                //"material": "FX_Teleporter_Distortion",
+                "shadowCastingMode": 0
+              }
+            },
+          },
+          "Duplicate|m_BoosterRocketFlame_01":{ //rear vertical
+            "UnityEngine.MeshRenderer": {
+              "material": {"mainTexture": "HE_SanctaMissile_Ambriel_flame2.png"}
+            },
+            "UnityEngine.Transform": {
+              "localPosition": { "x":0, "y":0.501858, "z":-1.54873 },
+              "localEulerAngles": { "x":-30, "y":0, "z":90, }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame":{
+              "UnityEngine.Transform": { // good bye!
+                "localPosition": { "x":0, "y":0.0, "z":10000 },
+              },
+            }
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy":{
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":0, "y":-0.501858, "z":-1.54873 },
+              "localEulerAngles": { "x":30, "y":0, "z":-90, }
+            },
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy":{ // front vertical
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":0, "y":0.374007, "z":1.73028 },
+              "localEulerAngles": { "x":30, "y":0, "z":90, }
+            },
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy":{
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":0, "y":-0.374007, "z":1.73028 },
+              "localEulerAngles": { "x":-30, "y":0, "z":-90, }
+            },
+          },
+          // large flame 
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy":{ // rear side
+            //"UnityEngine.MeshFilter": { "sharedMesh": "HE_SanctaMissile_Ambriel_flame1.obj" },
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":0.501858, "y":0, "z":-1.54873 },
+              "localEulerAngles": { "x":0, "y":30, "z":-50, }
+            },
+            "GameObject|ParticleSystemBoosterRocketFlame":{
+              "UnityEngine.Transform": { // oh welcome back
+                "localPosition": { "x":0, "y":0.0, "z":0 },
+              },
+              "UnityEngine.ParticleSystem": {
+                //"startSpeed": 20.0,
+                "startSize": 0.4,
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                "lengthScale": -0.7,
+              }
+            }
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy":{
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":-0.501858, "y":0, "z":-1.54873 },
+              "localEulerAngles": { "x":0, "y":-30, "z":-130, }
+            },
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy_copy":{ // front side
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":-0.374007, "y":0, "z":1.73028 },
+              "localEulerAngles": { "x":0, "y":30, "z":-130, }
+            },
+          },
+          "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy_copy_copy":{
+            "UnityEngine.Transform": { 
+              "localPosition": { "x":0.374007, "y":0, "z":1.73028 },
+              "localEulerAngles": { "x":0, "y":-30, "z":-50, }
+            },
+          },
+        },
+        "GameObject|_particles":null,
+        /*"GameObject|_particles":{
+          "UnityEngine.Transform": { 
+            //"localScale": {"x": 1.0,"y": 1.0,"z": 1},
+            "localPosition": { "x":0.501858, "y":0, "z":-1.54873 },
+            "localEulerAngles": { "x":60, "y":90, "z":0, }
+          },
+        },
+        "Duplicate|_particles":{
+          "UnityEngine.Transform": { 
+            //"localScale": {"x": 1.0,"y": 1.0,"z": 1},
+            "localPosition": { "x":-0.501858, "y":0, "z":-1.54873 },
+            "localEulerAngles": { "x":120, "y":90, "z":0, }
+          },
+        },
+        "Duplicate|_particles_copy":{
+          "UnityEngine.Transform": { 
+              //"localScale": {"x": 1.0,"y": 1.0,"z": 1},
+              "localPosition": { "x":0.374007, "y":0, "z":1.73028 },
+              "localEulerAngles": { "x":60, "y":90, "z":0, }
+            },
+        },
+        "Duplicate|_particles_copy_copy":{
+          "UnityEngine.Transform": { 
+              //"localScale": {"x": 1.0,"y": 1.0,"z": 1},
+              "localPosition": { "x":-0.374007, "y":0, "z":1.73028 },
+              "localEulerAngles": { "x":120, "y":90, "z":0, }
+            },
+        },*/
+        "Rigidbody":{
+          "freezeRotation": true,
+        },
+        "Projectile": {
+          "m_LifeTime": 0.7, // 0.5
+          "m_ImpactSFXType": 2,
+          "m_ExplodeOnTerrain": true,
+          "m_IgnoreCollisionWithBarrel": true, // Is this really working?
+          //"Instantiate|m_Explosion": null,
+          //"Reference|EXP_Flares_121/FireData.m_BulletPrefab/Projectile.m_Explosion":{}
+        },
+        //"MissileProjectile": null,
+        "MissileProjectile": {
+          "m_MaxBoosterLifetime": 10,
+          "m_BoosterActivationDelay": 0, // 999
+          "m_ArmDelay": 0,
+          "m_DeathDelayNotArmed": 0.1,
+          "Instantiate|m_SmokeTrailPrefab": { // remove white smoke
+            "GameObject|ParticleSystemVaporTrail": null
+          }
+        },
+        "SeekingProjectile":{
+          "m_TurnSpeed": 0,
+          "m_ApplyRotationTowardsTarget": false,
+        },
+        "SmokeTrail": null,
+
+
+        "RandomAdditions.GravitateProjectile":{ // Add a special movement effect to your projectile
+            "WorldGravitateDirection":  {"x": 0, "y": -1, "z": 0}, // Gravitate direction
+            "GravitatePosition":        {"x": 0, "y": 0, "z": 0}, // Center of the gravitation
+            "WorldGravitateStrength": 0.00017,     // Force of the gravitation
+
+            "WorldAugmentedDragEnabled": true, // Should this projectile slow down faster? (WARNING! MESSES WITH AIMING WEAPONS!)
+            "WorldAugmentedDragStrength": 0.08,  // The strength of the drag effect  [MULTIPLIER!]
+
+            //-----------------------------------------------------------------------------
+            "MovementDampening": 0,            // Dampener for the operations below
+        
+            "WorldHeightBiasEnabled": false,    // Should this float at a set altitude?
+            "WorldHeightBias": 50,              // The height to float at
+            "WorldUseTerrainOffset": false,     // Should this projectile float in relation to the height above terrain/water?
+
+            "AffectedByWater": false,           // Should this projectile act differently in water?
+            "WaterDepth": 1,                    // The depth to float at in relation to water (overrides WorldHeightBias)
+            "WaterDepthSeekingStrength": 1,     // The strength we should try to enforce the depth  [MULTIPLIER!]
+        },
+        "RandomAdditions.SpiltProjectile":{ 
+            "SpawnAmount": 1,               // How many of these SplitPayloads to spawn - Max 100
+            "UseSeeking": true,            // Enable Seeking for the SplitPayload
+
+            "DeployOnExplode": true,        // Deploy on explosion
+            "DeployOnEveryExplode": false,  // Deploy each time this explodes
+
+            "DeployInFlight": false,        // Deply over time while airborne
+            "ShotCooldown": 1.0,            // Rate per second to deploy SplitPayloads
+        },// ^ Reference an existing FireData (and be sure to edit it) below this
+        "Reference|HE_CruiseMissile_121/FireData.": { // Stage 2 ------------------------------------------------------------------------------
+          "m_MuzzleVelocity": 0,
+          //"m_CasingVelocity": 0.0,
+          "m_BulletSprayVariance": 0.08,
+          "m_BulletSpin": 0.0,
+          "m_CasingEjectVariance": 0.0,
+          "m_CasingEjectSpin": 0.0,
+          //"m_KickbackStrength": 10.0,
+          "Instantiate|m_BulletPrefab": {
+            "GameObject|m_HE_CruiseMissile_113_Missile":{
+              "UnityEngine.MeshFilter": {
+                "sharedMesh": "HE_SanctaMissile_Ambriel_missile.obj"
+              },
+              "UnityEngine.MeshRenderer": {
+                "material": "HE_Main"
+              },
+              "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": null,
+              "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": null,
+              "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": null,
+              "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": null,
+            },
+            "GameObject|_boostJet": {
+              "UnityEngine.Transform": { 
+                "localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+                "localPosition": { "x":0, "y":0, "z":0 },
+                //"localEulerAngles": { "x":0, "y":0, "z":0, }
+              },
+              "BoosterJet": { // missiles booster power
+                "m_Force": 0.01 //0.01
+              },
+              "GameObject|m_BoosterRocketFlame_01": { // main engine
+                "UnityEngine.MeshRenderer": {
+                  "material": {"mainTexture": "HE_SanctaMissile_Ambriel_flame2.png"}
+                },
+                "UnityEngine.Transform": {
+                  "localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+                  "localPosition": { "x":0, "y":0.0, "z":-2.7 },
+                  //"localEulerAngles": { "x":0, "y":0, "z":0, }
+                },
+                "GameObject|ParticleSystemBoosterRocketFlame": {
+                  "UnityEngine.ParticleSystem":{
+                    "startSize": 1,
+                    "startColor": {
+                      "r": 0.1,
+                      "g": 0.1,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+                  },
+                  "UnityEngine.ParticleSystemRenderer": {
+                    //"lengthScale": 10.0,
+                    "isVisible": true,
+                    //"material": "FX_Teleporter_Distortion",
+                    "shadowCastingMode": 0
+                  }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01":{ //rear vertical
+                "UnityEngine.MeshFilter": {
+                  "sharedMesh": "HE_SanctaMissile_Ambriel_flame1.obj"
+                },
+                "UnityEngine.MeshRenderer": {
+                  "material": {"mainTexture": "HE_SanctaMissile_Ambriel_flame2.png"}
+                },
+                "UnityEngine.Transform": {
+                  "localPosition": { "x":0, "y":0.501858, "z":-1.54873 },
+                  "localEulerAngles": { "x":-30, "y":0, "z":90, }
+                },
+                "GameObject|ParticleSystemBoosterRocketFlame":{
+                  /*
+                  "UnityEngine.Transform": { // good bye!
+                    "localPosition": { "x":0, "y":0.0, "z":10000 },
+                  },
+                  */
+                  "UnityEngine.ParticleSystem":{
+                    "startSpeed": 20.0,
+                    "startSize": 0.3,
+                  },
+                  "UnityEngine.ParticleSystemRenderer":{
+                    "lengthScale": -0.5,
+                    "maxParticleSize": 0.2,
+                  }
+
+                }
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy":{
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":-0.501858, "z":-1.54873 },
+                  "localEulerAngles": { "x":30, "y":0, "z":-90, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy":{ // rear side
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0.501858, "y":0, "z":-1.54873 },
+                  "localEulerAngles": { "x":0, "y":30, "z":0, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy":{
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":-0.501858, "y":0, "z":-1.54873 },
+                  "localEulerAngles": { "x":0, "y":-30, "z":180, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy":{ // front vertical
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":0.374007, "z":1.73028 },
+                  "localEulerAngles": { "x":30, "y":0, "z":90, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy":{
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0, "y":-0.374007, "z":1.73028 },
+                  "localEulerAngles": { "x":-30, "y":0, "z":-90, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy_copy":{ // front side
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":-0.374007, "y":0, "z":1.73028 },
+                  "localEulerAngles": { "x":0, "y":30, "z":180, }
+                },
+              },
+              "Duplicate|m_BoosterRocketFlame_01_copy_copy_copy_copy_copy_copy_copy":{
+                "UnityEngine.Transform": { 
+                  "localPosition": { "x":0.374007, "y":0, "z":1.73028 },
+                  "localEulerAngles": { "x":0, "y":-30, "z":0, }
+                },
+              },
+
+            },
+            "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": { // sancta halo
+              "UnityEngine.Transform": {
+                //"localScale": {"x": 1.0,"y": 1.0,"z": 1.0},
+                "localPosition": { "x":0, "y":0.0, "z":-2.8 },
+                //"localEulerAngles": { "x":0, "y":0, "z":0, }
+              },
+              "UnityEngine.ParticleSystem": {
+                "startLifetime": 0.175,
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 1.4
+                  },
+                  "startColor": {
+                    "mode": "Color",
+                    "color": { //Railgun FX color, alpha doesn't work
+                      "r": 0.2,
+                      "g": 0.1,
+                      "b": 0.2,
+                      "a": 1.0
+                    }
+                  }
+                }
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                //"renderMode": 0,
+                "alignment": 2,
+                //"normalDirection": 0,
+                "shadowCastingMode": 0
+              },
+            },
+            //"Duplicate|FX_SemiCircle": {},
+
+
+            "GameObject|CentreOfMass": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "localEulerAngles": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                }
+              }
+            },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "localEulerAngles": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            "Rigidbody": {
+              "useGravity": false,
+              "centerOfMass": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "mass": 0.0001
+            },
+            "SeekingProjectile": {
+              "m_VisionConeAngle": 359.0, //
+              "m_VisionRange": 380.0, //
+              "m_TurnSpeed": 120, //
+              "m_UpdateVisibleInterval": 0.01,
+              "m_ActivationDelay": 0.001,
+              "m_LockOntoTarget": true,
+              "m_ApplyRotationTowardsTarget": true,
+              "m_TargetingType": "RandomBlockOnVehicle"
+              //CenterOfMass
+              //BestAimCabOrCentre
+            },
+            "Projectile": {
+              "m_LifeTime": 1.5, //1.5
+              "m_ImpactSFXType": 2,
+              "m_ExplodeOnTerrain": true,
+              "m_IgnoreCollisionWithBarrel": true, // Is this really working?
+              //"Instantiate|m_Explosion": null,
+              "Instantiate|m_Explosion":{
+                "Explosion": {
+                  "m_EffectRadius": 0.1,
+                  "m_EffectRadiusMaxStrength": 0.1,
+                  "m_MaxDamageStrength": 1,
+                  "m_MaxImpulseStrength": 0,
+                },
+                "GameObject|ExplosionBright":null,
+                "GameObject|ExplosionDark": null,
+                "GameObject|ExplosionSmoke": null,
+                "GameObject|Sparks": null,
+
+                "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+                  "UnityEngine.ParticleSystem": {
+                    "sizeOverLifetime": {
+                      "sizeMultiplier": 0.6
+                    },
+                    "startColor": {
+                      "r": 0.2,
+                      "g": 0.4,
+                      "b": 0.7,
+                      "a": 1.0
+                    }
+                  },
+                  "UnityEngine.ParticleSystemRenderer": {
+                    //"renderMode": 0,
+                    //"alignment": 2,
+                    //"normalDirection": 0,
+                    "material": "FX_Teleporter_Distortion_Spiral",
+                    "shadowCastingMode": 0
+                  },
+                },
+
+              },
+              "GameObject|_particles": {
+                "UnityEngine.Transform": {
+                  "localScale": {
+                    "x": 0.1,
+                    "y": 0.1,
+                    "z": 0.1
+                  },
+                  "localPosition": {
+                    "x": 0.0,
+                    "y": 0,
+                    "z": 0.0
+                  },
+                  "localEulerAngles": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0
+                  }
+                }
+              }
+            },
+            "MissileProjectile": {
+              "m_MaxBoosterLifetime": 500,
+              "m_BoosterActivationDelay": 0,
+              "m_ArmDelay": 0,
+              "m_DeathDelayNotArmed": 0.1,
+              "Instantiate|m_SmokeTrailPrefab": { // save FPS!
+                "GameObject|ParticleSystemVaporTrail": {
+                  "UnityEngine.ParticleSystem": {
+                    "duration": 0.01,
+                    "startLifetime": 0.01
+                  }
+                }
+              }
+            },
+
+
+            "RandomAdditions.GravitateProjectile": { // Add a special movement effect to your projectile
+              "WorldGravitateStrength": 0, // Force of the gravitation
+              "WorldAugmentedDragEnabled": true, // Should this projectile slow down faster? (WARNING! MESSES WITH AIMING WEAPONS!)
+              "WorldAugmentedDragStrength": 1, // The strength of the drag effect  [MULTIPLIER!]
+              "MovementDampening": 0, // Dampener for the operations below
+            },
+            "RandomAdditions.SpiltProjectile":{ 
+              "SpawnAmount": 1,               // How many of these SplitPayloads to spawn - Max 100
+              "UseSeeking": true,            // Enable Seeking for the SplitPayload
+
+              "DeployOnExplode": true,        // Deploy on explosion
+              "DeployOnEveryExplode": false,  // Deploy each time this explodes
+
+              "DeployInFlight": false,        // Deply over time while airborne
+              "ShotCooldown": 1.0,            // Rate per second to deploy SplitPayloads
+            },// ^ Reference an existing FireData (and be sure to edit it) below this
+            "Reference|HE_CruiseMissile_121/FireData.": { // Stage 3 ------------------------------------------------------------------------------
+              "Instantiate|m_BulletPrefab":{
+                "GameObject|m_HE_CruiseMissile_113_Missile": {
+                  "UnityEngine.MeshFilter": {
+                    "sharedMesh": "HE_SanctaMissile_Ambriel_missile.obj"
+                  },
+                  "UnityEngine.MeshRenderer": {
+                    "material": "HE_Main"
+                  },
+                  "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_B": null,
+                  "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Small_A": null,
+                  "GameObject|m_HE_CruiseMissile_113_Missile_Wing_BigA": null,
+                  "GameObject|m_HE_CruiseMissile_113_Missile_Wing_Big_B": null,
+                },
+                "GameObject|_boostJet": {
+                  "UnityEngine.Transform": { 
+                    "localScale": {"x": 1.5,"y": 1.5,"z": 15}
+                    //"localPosition": { "x":0, "y":0, "z":0 },
+                    //"localEulerAngles": { "x":0, "y":0, "z":0, }
+                  },
+                  "BoosterJet": { // missiles booster power
+                    "m_Force": 1 // 1
+                  },
+                  "GameObject|m_BoosterRocketFlame_01": {
+                    "UnityEngine.MeshFilter": {
+                      "sharedMesh": "HE_SanctaMissile_Ambriel_flame1.obj"
+                    },
+                    "UnityEngine.MeshRenderer": {
+                      "material": {
+                        "mainTexture": "HE_SanctaMissile_Ambriel_flame2.png"
+                      }
+                    },
+                    "UnityEngine.Transform": { 
+                      //"localScale": {"x": 1.5,"y": 1.5,"z": 15}
+                      "localPosition": { 
+                        "x": -0.0,
+                        "y": 0.0,
+                        "z": -0.1 },
+                      //"localEulerAngles": { "x":0, "y":0, "z":0, }
+                    },
+                    "GameObject|ParticleSystemBoosterRocketFlame": {
+                      "UnityEngine.Light": {
+                        "spotAngle": 360.0,
+                        "color": {
+                          "r": 0.7,
+                          "g": 0.6,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "areaSize": 10.5,
+                        "intensity": 2,
+                        "type": "point",
+                        "range": 6,
+                        "flare": null
+                      }
+                    }
+                  },
+                },
+                "Reference|HE_RailGunTurret(213).FireData.m_BulletPrefab/FX_SemiCircle": { //Railgun FX
+                  "UnityEngine.ParticleSystem": {
+                    "startLifetime": 0.175,
+                    "main": {
+                      "m_ParticleSystem": {
+                        "startSize": 3
+                      },
+                      "startColor": {
+                        "mode": "Color",
+                        "color": { //Railgun FX color, alpha doesn't work
+                          "r": 0.2,
+                          "g": 0.1,
+                          "b": 0.2,
+                          "a": 1.0
+                        }
+                      }
+                    }
+                  },
+                  "UnityEngine.ParticleSystemRenderer": {
+                    //"renderMode": 0,
+                    //"alignment": 2,
+                    //"normalDirection": 0,
+                    //"material": "FX_Teleporter_Distortion",
+                    "shadowCastingMode": 0
+                  },
+                },
+                "UnityEngine.CapsuleCollider": {// looooooong collider
+                    "height": 18.0, // how long
+                    "radius": 0.45,
+                    "direction": 2, // 0=x 1=y 2=z
+                    "center": { "x": 0.0, "y": 0.0, "z": 9 },
+                    "gameObject": {
+                      "layer": 29 // Shield piercing
+                    },
+                  },
+                "SeekingProjectile": {
+                  "m_VisionConeAngle": 30.0, //
+                  "m_VisionRange": 800.0, //
+                  "m_TurnSpeed": 20, //
+                },
+                "Projectile": {
+                  "m_LifeTime": 2.0, //2
+                  "m_ExplodeOnTerrain": true,
+                  "m_Damage": 3000,
+                  "Instantiate|m_Explosion": {
+                    "Explosion": {
+                      "m_EffectRadius": 12.0,
+                      "m_EffectRadiusMaxStrength": 6.0,
+                      "m_MaxDamageStrength": 250,
+                      //"m_MaxImpulseStrength": 500,
+                      "m_DamageType": 7 //plasma
+                    },
+                    "GameObject|ExplosionBright": {
+                      "UnityEngine.ParticleSystem": {
+                        "startSize": 40.0,
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.2,
+                              "g": 0.4,
+                              "b": 1.0,
+                              "a": 1.0
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      },
+                    },
+                    "GameObject|ExplosionDark": {
+                      "UnityEngine.ParticleSystem": {
+                        "startSize": 18.0,
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.2,
+                              "g": 0.4,
+                              "b": 1.0,
+                              "a": 1.0
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "GameObject|ExplosionSmoke": {
+                      "UnityEngine.ParticleSystem": {
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.2,
+                              "g": 0.4,
+                              "b": 1.0,
+                              "a": 1.0
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "GameObject|Point light": {
+                      "UnityEngine.Light": {
+                        "intensity": 20.0,
+                        "range": 22.0,
+                        "color": {
+                          "r": 0.6,
+                          "g": 0.7,
+                          "b": 1.0,
+                          "a": 1.0
+                        }
+                      }
+                    },
+                    "Reference|EXP_Cannon_Repulsor_444/FireData.m_BulletPrefab/Projectile.m_Explosion/FX_Shockwave": {
+                      "UnityEngine.ParticleSystem": {
+                        "sizeOverLifetime": {
+                          "sizeMultiplier": 0.08
+                        },
+                        "startColor": {
+                          "r": 0.2,
+                          "g": 0.4,
+                          "b": 1.0,
+                          "a": 1.0
+                        }
+                      }
+                    },
+                    "Reference|EXP_TeslaCoil_252/ModuleWeaponTeslaCoil.m_TeslaImpact/FX_Electricity": {
+                      "UnityEngine.ParticleSystem": {
+                        "startSize": 0.9,
+                        "main": {
+                          "m_ParticleSystem": {
+                            "startColor": {
+                              "r": 0.7,
+                              "g": 0.5,
+                              "b": 1.0,
+                              "a": 1
+                            },
+                            "emission": {
+                              "rateMultiplier": 2650.0,
+                              "rateOverTimeMultiplier": 0.2
+                            }
+                          }
+                        }
+                      },
+                      "UnityEngine.ParticleSystemRenderer": {
+                        "lengthScale": 2.5,
+                        "activeVertexStreamsCount": 20,
+                      }
+                    }
+                  },
+                  "GameObject|_particles": {
+                    "UnityEngine.Transform": {
+                      "localScale": {
+                        "x": 0.1,
+                        "y": 0.1,
+                        "z": 0.1
+                      },
+                      "localPosition": {
+                        "x": 0.0,
+                        "y": 0,
+                        "z": 0.0
+                      },
+                      "localEulerAngles": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0
+                      }
+                    }
+                  }
+                },
+                "MissileProjectile": {
+                  "m_MaxBoosterLifetime": 300.0,
+                  "m_BoosterActivationDelay": 0.0,
+                  "m_ArmDelay": 0,
+                  "m_DeathDelayNotArmed": 0.1,
+                  "Instantiate|m_SmokeTrailPrefab": { // save FPS!
+                    "GameObject|ParticleSystemVaporTrail": {
+                      "UnityEngine.ParticleSystem": {
+                        "duration": 0.01,
+                        "startLifetime": 0.01
+                      }
+                    }
+                  }
+                },
+                // mmmmmm doesn't work
+                /*"GameObject|_smokeTrail":{
+                  "UnityEngine.Transform": {
+                    //"localEulerAngles": { "x":0, "y":0, "z":0 },
+                    //"localScale": { "x":1, "y":1, "z":1 },
+                    "localPosition": { "x":10, "y":0, "z":0 }
+                  },
+                  "SmokeTrail": {
+                    "numberOfPoints": 60.0,
+                    "spread": 0,
+                    "riseSpeed": 0.0,
+                    "updateSpeed": 0.01
+                  },
+                  "LineRenderer": {
+                    "startWidth": 0.3,
+                    "endWidth": 0.08,
+                    "widthMultiplier": 3,
+                    // The color at the start of the trail
+                    "startColor": {
+                      "r": 0.1,
+                      "g": 0.4,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+                    // The color at the end of the trail
+                    "endColor": {
+                      "r": 0.4,
+                      "g": 0.0,
+                      "b": 0.8,
+                      "a": 1.0
+                    }
+                  },
+                },
+                "SmokeTrail": null,*/
+                "SmokeTrail": {
+                  "numberOfPoints": 60.0,
+                  "spread": 0,
+                  "riseSpeed": 0.0,
+                  "updateSpeed": 0.01
+                },
+                "LineRenderer": {
+                  "startWidth": 0.3,
+                  "endWidth": 0.08,
+                  "widthMultiplier": 3,
+                  // The color at the start of the trail
+                  "startColor": {
+                    "r": 0.1,
+                    "g": 0.4,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  // The color at the end of the trail
+                  "endColor": {
+                    "r": 0.4,
+                    "g": 0.0,
+                    "b": 0.8,
+                    "a": 1.0
+                  }
+                },
+              },
+              "m_MuzzleVelocity": 20, //180
+            }
+          },
+        }
+      },
+    },
+  }
+}
+

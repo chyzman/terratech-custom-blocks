@@ -1,0 +1,117 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value
+{
+  "Name": "Youkai Kosei Wheel",
+  "Description": "A larger wheel than the slim wheel, is also armored. Sports a high weight load and also relatively fast.", //You can make multiple lines with \n
+  "ID": 19026, //A random ID that MUST be unique
+  "PairedBlock": 19026,
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 3, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 2430,
+  "HP": 1900,
+  "Mass": 8.0,
+  "Rarity": 0,
+  "Fragility": 0.25, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all. For example, SCUs do not fall off when attacked
+  "DamageableType": 1, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+
+  "IconName": "YK_Wheel_Large.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //"GSO_BigBertha_845_MOD.obj"  FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "3, 3, 3, 3, 3, 3, 3, 3, 45, 45, 45, 45, 45, 45", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+
+  /*  OPTIONAL  */ "ColliderMeshName": null, //FILE Name of the mesh, such as "collider.obj". Leaving as null will make a box collider relative to the mesh
+
+  /*  EITHER  */
+ "Cells": [
+
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 0, "y": 0, "z": -1 },
+    { "x": 0, "y": 1, "z": -1 }
+  ],
+
+  "APs": [  
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": -1},
+    {"x": -0.5, "y": 1, "z": 0},
+    {"x": -0.5, "y": 1, "z": -1},
+    {"x": 0, "y": 0,"z": 0.5},
+    {"x": 0, "y": 0, "z": -1.5},
+    {"x": 0, "y": 1, "z": -1.5},
+    {"x": 0, "y": 1,"z": 0.5},
+    {"x": 0, "y": 1.5,"z": 0},
+    {"x": 0, "y": 1.5,"z": -1}
+  ],
+  /*  OR  */
+  "BlockExtents": //Makes a grid box with these dimensions. Is ignored if "Cells": is used
+  {
+    "x": 1,
+    "y": 1,
+    "z": 1 //Small
+  }, 
+  "APsOnlyAtBottom": false, 
+
+    "GamePrefabReference":      "HE_Wheel_Armoured_122",
+    "KeepReferenceRenderers":   false,
+    "ReferenceOffset":          { "x": 0, "y": 0.85, "z": -1 },
+	
+  // Sub Objects can modify existing sub gameobjects on a prefab reference
+    "SubObjects": [
+        {
+          "SubOverrideName":          "m_HE_ArmouredWheel_122",
+          "DestroyExistingRenderer":  true, 
+          "DestroyExistingColliders": true,
+          "MeshName":                 "YK_Wheel_Large_Base.obj",
+          "ColliderMeshName":         "YK_Wheel_Large_Base.obj",
+          "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        },
+        
+        {
+          "SubOverrideName":          "m_HE_EnclosedWheel_Wheel_122",
+          "DestroyExistingRenderer":  true, 
+          "DestroyExistingColliders": true,
+          "ColliderMeshName":         "YK_Wheel_Large_Tire.obj",
+          "MeshName":                 "YK_Wheel_Large_Tire.obj",
+	  "SubPosition":              { "x": 0, "y": 0, "z": 0 },
+        }
+    ],
+	
+  "JSONBLOCK": {
+	"ModuleWheels": {
+		"m_TorqueParams": {
+		 "torqueCurveMaxTorque": 3250,
+		   "torqueCurveMaxRpm": 320,
+		  "passiveBrakeMaxTorque": 750,
+		   "reverseBrakeMaxRpm": 120,
+		   "basicFrictionTorque": 100,
+		   "fullCompressFrictionTorque": 175
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		"m_AudioType": 0,
+		"m_TireTrackWidth": 15,
+		"m_WheelParams": {
+			"radius": 0.85,
+			"thicknessAngular": 30,
+			"suspensionSpring": 4000.0,
+			"suspensionDamper": 800.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.2,
+			"steerAngleMax": 20.0,
+			"steerSpeed": 3.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.1,
+		"m_DriveTurnDifferential": 0.8,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0,
+	}
+     }
+}

@@ -1,0 +1,3 @@
+This folder contains the various Textures that TAC Pack blocks use.
+
+Please let me know if the textures are not working the way they should.

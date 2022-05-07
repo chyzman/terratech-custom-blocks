@@ -1,0 +1,84 @@
+{
+  "Name": "GreenTech Junction Block Two",
+  "Description": "A special curved block section with a wooden bridge to another section.",
+  "ID": 911184, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4, 
+  "Price": 2001,
+  "HP": 4500,
+  "Mass": 9,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 9, 9, 9, 32, 32, 43, 43, 45", 
+  "IconName": "GT_Junction_Block_2_Icon.png", 
+  "MeshName": "GT_Junction_Block_2.obj", 
+  "ColliderMeshName": "GT_Junction_Block_2_Collider_A.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+  [
+    "  x "
+  ],
+	[
+    " xx "
+  ],
+  [
+    "xxx "
+  ],
+  [
+    " xx "
+  ],
+  [
+    "  xx"
+  ],
+  [
+    "  xx"
+  ]
+],  
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 2},	
+    {"x": 2, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 0, "y": 0.5,"z": 2},
+    {"x": 2, "y": 0.5,"z": 0},
+    {"x": 1, "y": 0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": 2, "y": 0, "z": -0.5},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 0.5, "y": 0, "z": 1},
+    {"x": 1, "y": 0, "z": 0.5},
+
+    {"x": 2,"y": 0.5,"z": 4},
+    {"x": 2,"y": 0.5,"z": 5},
+    {"x": 3,"y": 0.5,"z": 4},
+    {"x": 3,"y": 0.5,"z": 5},
+    {"x": 2,"y": -0.5,"z": 4},
+    {"x": 2,"y": -0.5,"z": 5},
+    {"x": 3,"y": -0.5,"z": 4},
+    {"x": 3,"y": -0.5,"z": 5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    {
+      "ColliderMeshName": "GT_Junction_Block_2_Collider_B.obj",
+      "Layer": 8
+    },
+    {
+      "ColliderMeshName": "GT_Junction_Block_2_Collider_C.obj",
+      "Layer": 8
+    }
+  ]
+}

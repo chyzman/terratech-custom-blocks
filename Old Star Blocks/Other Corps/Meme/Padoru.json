@@ -1,0 +1,305 @@
+{
+  "Name": "Padoru Padoru",
+  "Description": "HASHIRE SORI YO~ KAZE NO YOU NI~ TSUKIMI HARA WO~ PADORU PADORU!",
+  
+  "ID": 300131,
+  "Faction": 6, 
+  "Category": 1, 
+  "Grade": 1, 
+  "Price": 8055, 
+  "HP": 10000, 
+  "Mass": 8,
+  "CenterOfMass": {"x": 0.5, "y": -0.5, "z": 0.5},
+  "IconName": "Padoru.png",
+  "MeshName": "Padoru.obj",
+  "ColliderMeshName": "PadoruC.obj",
+  "MeshTextureName": "Padoru_Tex1.png",
+  "MeshGlossTextureName": "Padoru_Tex2.png",
+  "MeshEmissionTextureName":"Padoru_Tex3.png",
+  "DamageableType": 1,
+  "GamePrefabReference": "VEN_Tracks_124",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "DeathExplosionReference": "GSO_BigBertha_845",
+  "EmissionMode": 2,
+  "Recipe": { // "ID": Count
+    "0": 200
+  },
+"Cells":[
+  // Layer1
+  { "x": 0, "y": 0, "z": 0},{ "x": 1, "y": 0, "z": 0},
+  { "x": 0, "y": 0, "z": 1},{ "x": 1, "y": 0, "z": 1},
+  //Layer2
+  { "x": 0, "y": 1, "z": 0},{ "x": 1, "y": 1, "z": 0},
+  { "x": 0, "y": 1, "z": 1},{ "x": 1, "y": 1, "z": 1},
+  //Layer3
+  { "x": 0, "y": 2, "z": 0},{ "x": 0, "y": 2, "z": 1},
+  { "x": 0, "y": 2, "z": 1}, { "x": 1, "y": 2, "z": 1}
+
+
+],
+  "APs":       [ 
+    // Bottom Face
+    { "x": 0, "y": -0.5, "z": 0 },{ "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 0 },{ "x": 1, "y": -0.5, "z": 1 }
+    ],
+     // X is right and left, Y is up and down, and Z is forward and backward
+
+  "APsOnlyAtBottom": false,
+  "SubObjects":[
+    // Replace the original meshes with new ones
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Body",
+      "DestroyExistingRenderer":    true,
+      "DestroyExistingColliders":   true,
+      "Position":                   { "x": 0, "y": 1, "z": 1.5 }      
+    },
+
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Wheel1",
+      "DestroyExistingRenderer":    true,
+
+      "Position":                   { "x": 0, "y": 0, "z": 0 },  
+      "Scale":                      {"x": 1, "y": 1, "z": 1}        
+    },
+    
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Wheel2",
+      "DestroyExistingRenderer":    true,
+      "Position":                   { "x": 0, "y": 0, "z": 0 },
+      "Scale":                      {"x": 1, "y": 1, "z": 1}          
+    },
+
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Wheel3",
+      "DestroyExistingRenderer":    true,
+      "Position":                   { "x": 0, "y": 0, "z": 0 },   
+      "Scale":                      {"x": 1, "y": 1, "z": 1}       
+    },    
+
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Wheel4",
+      "DestroyExistingRenderer":    true,
+      "Position":                   { "x": 0, "y": 0, "z": 0 },  
+      "Scale":                      {"x": 1, "y": 1, "z": 1}        
+    },
+
+
+    // Remove the unnecessary meshes
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Suspension4",
+      "DestroyExistingRenderer":    true,
+      "DestroyExistingColliders":   true
+    },
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Suspension3",
+      "DestroyExistingRenderer":    true,
+      "DestroyExistingColliders":   true 
+    },      
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Suspension2",
+      "DestroyExistingRenderer":    true,
+      "DestroyExistingColliders":   true 
+    },
+    {
+      "ObjectName":                 "m_VEN_Tracks_124_Suspension1",
+      "DestroyExistingRenderer":    true,
+      "DestroyExistingColliders":   true 
+    },
+
+// X is right and left, Y is up and down, and Z is forward and backward
+    // Move these objects to their proper positions. Note that the track's bones are constrained to the wheel objects
+    {
+      "ObjectName":                 "b_Static",
+      "Position":                   { "x": 0.2, "y":  2, "z": 0.5 },  
+      "Scale":                      { "x": 1, "y": 1, "z": 1 }     
+    },
+    {
+      "ObjectName":                 "_wheel_1",
+      "Position":                   { "x": 1.5, "y": -0.1, "z":   1.5 }       
+    },
+    {
+      "ObjectName":                 "_wheel_2",
+      "Position":                   { "x": 1.5, "y": -0.1, "z":   -0.5 }       
+    },    
+    {
+      "ObjectName":                 "_wheel_3",
+      "Position":                   { "x": -0.5, "y": -0.1, "z":   1.5 },
+      "Rotation":                   { "x": 0, "y":    0, "z": 180 }     
+    },  
+    {
+      "ObjectName":                 "_wheel_4",
+      "Position":                   { "x": -0.5, "y": -0.1, "z": -0.5   },
+      "Rotation":                   { "x": 0, "y":    0, "z": 180 }
+    },    
+    {
+      "ObjectName":                 "b_Wheel_1",
+      "Rotation":                   { "x": -20, "y": 0, "z": 0 },  
+      "Scale":                      { "x": 1, "y": 1.45, "z": 1.5 }        
+    },  
+    {
+      "ObjectName":                 "b_Wheel_2",
+      "Scale":                      { "x": 1, "y": 1.45, "z": 1 }      
+    },  
+    {
+      "ObjectName":                 "b_Wheel_3",
+      "Scale":                      { "x": 1, "y": 1.45, "z": 1}       
+    },  
+    {
+      "ObjectName":                 "b_Wheel_4",
+      "Rotation":                   { "x": 20, "y": 0, "z": 0 },         
+      "Scale":                      { "x": 1, "y": 1.45, "z": 1.5 }        
+    },
+    {
+      "OverrideName": "_sparksLocator",
+      "SubPosition": { "x": 1, "y": 0.7, "z": 1}
+    }
+  ],
+
+  "JSONBLOCK":{
+
+    "ModuleSpeedo": {
+      "m_SpinnerRotationModifier": null,
+      "m_SpinnerMaxRotationSpeedChange": null,
+      "m_StationaryEpsilon": null,
+      "m_Spinners": [],
+      "m_CurrentSpeed": null
+    },
+    "ModuleTechController": {           // When this is added to a block, it will behave as a Cab. 
+      "m_PlayerInput": true,            // Dictates whether the player can take control of the cab
+      "HandlesPlayerInput": true
+    },
+    "ModuleAIBot": {
+      "m_AITypesEnabled": ["Harvest", "Idle", "Escort"]
+    },
+	  "ModuleDriveBot": {
+      "targetIdealRange": 20.0, //How far do we want to stay from the target? Far for sniping. Works best with unlimited-range weapon.
+      //AI freezes at 150
+      //within this range we turn "turnToleranceInner"
+      "turnToleranceOuter": 45.0, //How hard we steer when far from target
+      "turnToleranceInner": 25.0, //How hard we steer when close to target
+      "m_DefaultThrottle": 1.75, //How hard we press on the "W" key and other keys to illegally turn beyond the max
+      "poweredTurnInsideWheel": 0.05, //how much the wheels by the enemy slows by when turning
+      "waypointDistanceFullThrottle": 10.0, //If beyond this we move FAST
+      "turnAngleFullThrottle": 15.0, //Max safe angle to turn while pressing "W"
+      "waypointReachedTolerance": 15.0, //The location error the Tech can have before assuming that it is "close enough" to the target location
+      "waypointPlayerAngularBias": 25.0, //How hard we should turn in relation to the player when trying to flank them
+      "lookAroundAngleMin": 30.0, //idk
+      "lookAroundAngleMax": 45.0, //idk
+      "m_DefaultPatrolDistMin": 200.0, //Idle movement distance before engaging player
+      "m_DefaultPatrolDistMax": 1500.0, //Idle movement distance before FREEEZE
+      "patrolThrottle": 0.75, //Idle movements
+      "lookAroundPauseMin": 2.0, //Minimum time before moving randomly while idle
+      "lookAroundPauseMax": 8.0, //Maximum time before moving randomly while idle
+      "lookAroundThrottle": 0.6, //How hard we press "W" when idle
+      "lostTargetMemoryTime": 2.0, //How long we attempt to reach a location from where someone attacked us
+      "holdTargetDuration": 3.0, //Max time before we update our pursued target to the closest target in agro range
+      "stopCirclingTimer": -999999.0, //how long until we stop circling the target
+      "stopCirclingDelay": -2.0, //how long until we stop circling the target
+      "controlPriority": 100, //idk
+      "recoverTimeout": 3.0, //How long before we attempt to Build Beam(right self) again
+      "forceUnCapsizeTimeout": 5.0, //How longe before we give up on the Build Beam self-righting attempt
+      "capsizedMinSpeed": 1.0, //How slow we must be going in order to attempt Build Beam
+      "m_ThrottleD": 1.0, //Max Throttle Forwards/Backwards
+      "m_ThrottleT": 0.5, //Max Throttle Turning
+      "m_PatrolDistMin": 8.0, //Idle movement distance before engaging player
+      "m_PatrolDistMax": 500.0, //Idle movement distance before FREEEZE 
+      "m_CurrentState": "AIState_FaceTarget", //Idle movement distance before FREEEZE 
+      "AIProcessorGetBehindTarget":{
+        "stopCirclingTimer": 10
+      },
+      // public enum StateType
+      // {
+      //   AIState_SumoCharge,
+      //   AIState_GetBehindTarget,
+      //   AIState_FaceTarget,
+      //   AIState_Waypoint,
+      //   AIState_LookAround,
+      //   AIState_RecoverCapsize,
+      //   AIState_WaitUntilSeen,
+      //   AIState_ChargeTarget,
+      //   None
+      // }
+	    "sumoBoostOn": true, //Will hold shift to KILL ENEMY
+	    "attackTargetRadius": 1000//When the AI will attack when possible targets are within this range
+	    // "OnSpawn": {
+	    // "hostileTarget": true, //ATTACK ON SPAWN
+	    // "friendlyTarget": false, //Is this an ally of Player
+	    // }, //
+	  },
+    "ModuleRadar": {
+      "m_Priority": 1,            // Dictates how good this radar is compared to others; the radar with the highest value will be used by the Tech.
+      "m_MiniMapType": 1,         // Dictates the minimap provided by the block. Only accepts 0 or 1.
+                                  // 0 = Small, blank Radar minimap
+                                  // 1 = Expanded Radar minimap with 2 indicator rings within (Similar to a Tech with a Radar block attached.)
+      
+      "m_Range": 200.0,           // Dictates how far the radar detects objects in the world.
+                
+
+      "m_Dish": null,
+      "m_MiniMap": null,
+      "MiniMapType": 0,           // This does not work; use "m_MiniMapType" instead.
+      "Range": 150.0,             // This does not work; use "m_Range" instead.
+      "m_RadarOnSfxEvent": {
+          "m_EventPath": "event:/OldAssets/RadarAttach",
+          "EventPath": "event:/OldAssets/RadarAttach"
+        }
+   },
+  // Torque Parameters
+  "ModuleWheels": {
+    "m_TorqueParams": {
+      "torqueCurveMaxTorque":       80000.0,    // This dictates the wheel's strength. The higher the value, the less it will decelerate when encountering obstacles.
+                                                // A high torque value is good for offroad wheels.
+
+      "torqueCurveMaxRpm":          800.0,      //  Dictates the speed of the wheel. A higher number is faster. 
+                                                // Use this in conjunction with torqueCurveMaxTorque to tweak the speed.
+
+      "passiveBrakeMaxTorque":      600.0,     // Dictates how strong the passive brakes are. This also contributes to the overall grip of the wheel
+      "reverseBrakeMaxRpm":         65.0,       // Dictates how much "passiveBrakeMaxTorque" is added when the wheel goes backwards when already rolling forwards.
+      "basicFrictionTorque":        100.0,      // Dictates how strong the wheel brakes are when not moving. If set too high it will prevent the wheels from moving at all
+      "fullCompressFrictionTorque": 200.0       // Dictates how strong the wheel brakes when the suspension is fully loaded. Do not set too high as it will prevent the wheels from moving.
+    },
+    
+    // Aesthetic parameters
+    "m_UseTireTracks":              false,       // Enables the wheel to leave tire tracks
+    "m_WheelTrackType":             3,          // Changes the tracks the wheel leaves behind
+    "m_AudioType":                  4,          // Changes the sound of the wheels when running
+                                                // 1 = Heavy GeoCorp wheels
+    "m_TireTrackWidth":             7,         // Does not work; supposedly, it should be able to change the width of the tire tracks.
+    
+    
+    "m_DustMinimumRPM":             5.0,       // When the wheel(s)' RPM exceed the input value, they will spawn dust when in contact with the ground
+                                                // This is related to "torqueCurveMaxRpm"
+    "m_DriveTurnPower": 1.0,
+    "m_DriveTurnBrake": 0.3,
+    "m_DriveTurnDifferential": 1.0,
+    "m_TurnOnSpotPower": 4.0,
+
+    "m_WheelParams":{
+      // Basic Wheel parameters
+      "radius":                     0.46,     // The radius of the wheel. This is important as it contributes to the calculation of torque and RPM
+      "steerAngleMax":              0.5,      // Dictates how much the wheel is able to turn.
+      "steerSpeed":                 0,        // Dictates the time it takes for the wheel to fully go into turning position.
+      "thicknessAngular":           31,       // Dictates the width of the tire tracks
+      // Tire Parameters
+      "Instantiate|tireProperties":{
+        "Instantiate|props":{
+          "frictionScaleLong": 1.0,            // Multiplies the amount of overall friction of the wheel's front and back. Warning: Do not change this value as all wheels will begin to act strangely.
+          "frictionScaleLat":1.0,             // Multiplies the amount of overall friction of the wheel's sides. Warning: Do not change this value as all wheels will begin to act strangely.
+          "gripFactorLong": 14.5,              // Dictates the tire traction on the front and back. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+          "gripFactorLat": 7.5                // Dictates the tire traction on the sides. Warning: Do not go beyond 20, as all wheels will begin to act strangely.
+        }
+      },
+
+      // Suspension parameters
+      "suspensionSpring":           500.0,  // Dictates the amount of bounciness of the suspension's spring. 
+                                                // It also affects the wheel's ability to carry weight.
+      "suspensionDamper":           200.0,     // This tells the suspension how much the springiness will be dampened. 
+                                                // It will not lessen the wheel's ability to carry, only slow the bounciness of it.
+      "maxSuspensionAcceleration":  1.0,
+      "suspensionQuadratic":        true,
+      "suspensionTravel":           0.15       // Dictates how much the suspension moves upwards and downwards. 0 will make the wheel not move up or down.
+   }
+  }
+ }
+}

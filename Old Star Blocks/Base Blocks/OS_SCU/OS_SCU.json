@@ -1,0 +1,337 @@
+{
+    "Name":                 "Old Star Mobile SCU",
+    "Description":          "Now this something the Old Star learned from GEO Corp. SCU or 'Singularity Containment Unit' technology is something the Old Star wanted to be sure we get right the first time as we've heard that early SCU tests made entire labs disappear. So we called a favor from GEOcorp to teach our techs how to create one for our own use. By using an internal motor it just needs a jumpstart from any tech to turn on and to prevent it form going haywire it has a kill switch for whenever its not attached to keep things safe. Doing so allowed us to make a SCU equivalent to GEOcorp except without the need for an anchor but will explode if it takes some damage.",
+    "ID": 300100,
+    "Faction": 4,
+    "Category": 7,
+    "Rarity": 2,
+    "Grade": 2,
+    "Price": 43038,
+    "Recipe":  "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 43, 43, 43, 43, 43, 47, 47, 53, 53, 53, 53, 53, 54, 54, 54, 54, 54, 58, 60, 65, 66 ",
+    "EmissionMode": 2,
+    "DeathExplosionReference":    "GC_Booster_422", 
+    "IconName":                   "OS_SCU_icon.png",                           
+    "MeshName":                   null,                                                                                    
+    "MeshColliderName":           null,                                             
+    "NoBoxCollider":              false,
+
+    "HP": 400,        
+    "Mass": 8.0,
+    "DamageableType": 2,
+    "DetachFragility": 0.0,
+    "Cells": [
+      //bottom to top
+        //layer1
+        { "x": 0, "y": 0, "z": 0 },{ "x":-1, "y": 0, "z": 0 },{ "x":-2, "y": 0, "z": 0 },{ "x":-3, "y": 0, "z": 0 },
+        { "x": 0, "y": 0, "z":-1 },{ "x":-1, "y": 0, "z":-1 },{ "x":-2, "y": 0, "z":-1 },{ "x":-3, "y": 0, "z":-1 },
+        { "x": 0, "y": 0, "z":-2 },{ "x":-1, "y": 0, "z":-2 },{ "x":-2, "y": 0, "z":-2 },{ "x":-3, "y": 0, "z":-2 },
+        { "x": 0, "y": 0, "z":-3 },{ "x":-1, "y": 0, "z":-3 },{ "x":-2, "y": 0, "z":-3 },{ "x":-3, "y": 0, "z":-3 },
+
+        //layer2
+        { "x": 0, "y": 1, "z": 0 },{ "x":-1, "y": 1, "z": 0 },{ "x":-2, "y": 1, "z": 0 },{ "x":-3, "y": 1, "z": 0 },
+        { "x": 0, "y": 1, "z":-1 },{ "x":-1, "y": 1, "z":-1 },{ "x":-2, "y": 1, "z":-1 },{ "x":-3, "y": 1, "z":-1 },
+        { "x": 0, "y": 1, "z":-2 },{ "x":-1, "y": 1, "z":-2 },{ "x":-2, "y": 1, "z":-2 },{ "x":-3, "y": 1, "z":-2 },
+        { "x": 0, "y": 1, "z":-3 },{ "x":-1, "y": 1, "z":-3 },{ "x":-2, "y": 1, "z":-3 },{ "x":-3, "y": 1, "z":-3 },
+                                   { "x":-1, "y": 1, "z":-4 },{ "x":-2, "y": 1, "z":-4 },
+
+         //layer3
+        { "x": 0, "y": 2, "z": 0 },{ "x":-1, "y": 2, "z": 0 },{ "x":-2, "y": 2, "z": 0 },{ "x":-3, "y": 2, "z": 0 },
+        { "x": 0, "y": 2, "z":-1 },{ "x":-1, "y": 2, "z":-1 },{ "x":-2, "y": 2, "z":-1 },{ "x":-3, "y": 2, "z":-1 },
+        { "x": 0, "y": 2, "z":-2 },{ "x":-1, "y": 2, "z":-2 },{ "x":-2, "y": 2, "z":-2 },{ "x":-3, "y": 2, "z":-2 },
+        { "x": 0, "y": 2, "z":-3 },{ "x":-1, "y": 2, "z":-3 },{ "x":-2, "y": 2, "z":-3 },{ "x":-3, "y": 2, "z":-3 },
+                                   { "x":-1, "y": 2, "z":-4 },{ "x":-2, "y": 2, "z":-4 },      
+                                   
+        //layer3
+        { "x": 0, "y": 3, "z": 0 },{ "x":-1, "y": 3, "z": 0 },{ "x":-2, "y": 3, "z": 0 },{ "x":-3, "y": 3, "z": 0 },
+        { "x": 0, "y": 3, "z":-1 },{ "x":-1, "y": 3, "z":-1 },{ "x":-2, "y": 3, "z":-1 },{ "x":-3, "y": 3, "z":-1 },
+        { "x": 0, "y": 3, "z":-2 },{ "x":-1, "y": 3, "z":-2 },{ "x":-2, "y": 3, "z":-2 },{ "x":-3, "y": 3, "z":-2 },
+        { "x": 0, "y": 3, "z":-3 },{ "x":-1, "y": 3, "z":-3 },{ "x":-2, "y": 3, "z":-3 },{ "x":-3, "y": 3, "z":-3 },
+                                   { "x":-1, "y": 3, "z":-4 },{ "x":-2, "y": 3, "z":-4 },                             
+        //layer4
+        { "x": 0, "y": 3, "z": 0 },{ "x":-1, "y": 3, "z": 0 },{ "x":-2, "y": 3, "z": 0 },{ "x":-3, "y": 3, "z": 0 },
+        { "x": 0, "y": 3, "z":-1 },{ "x":-1, "y": 3, "z":-1 },{ "x":-2, "y": 3, "z":-1 },{ "x":-3, "y": 3, "z":-1 },
+        { "x": 0, "y": 3, "z":-2 },{ "x":-1, "y": 3, "z":-2 },{ "x":-2, "y": 3, "z":-2 },{ "x":-3, "y": 3, "z":-2 },
+        { "x": 0, "y": 3, "z":-3 },{ "x":-1, "y": 3, "z":-3 },{ "x":-2, "y": 3, "z":-3 },{ "x":-3, "y": 3, "z":-3 },
+        //layer5
+        { "x": 0, "y": 4, "z": 0 },{ "x":-1, "y": 4, "z": 0 },{ "x":-2, "y": 4, "z": 0 },{ "x":-3, "y": 4, "z": 0 },
+        { "x": 0, "y": 4, "z":-1 },{ "x":-1, "y": 4, "z":-1 },{ "x":-2, "y": 4, "z":-1 },{ "x":-3, "y": 4, "z":-1 },
+        { "x": 0, "y": 4, "z":-2 },{ "x":-1, "y": 4, "z":-2 },{ "x":-2, "y": 4, "z":-2 },{ "x":-3, "y": 4, "z":-2 },
+        { "x": 0, "y": 4, "z":-3 },{ "x":-1, "y": 4, "z":-3 },{ "x":-2, "y": 4, "z":-3 },{ "x":-3, "y": 4, "z":-3 }
+
+
+
+    ],
+
+    "APs": [ 
+       //Bottom Note it looks like this as its easier for me to see where each AP is
+                                     { "x":-1, "y":-0.5, "z": 0 },{ "x":-2, "y":-0.5, "z": 0 },
+        { "x": 0, "y":-0.5, "z":-1 },{ "x":-1, "y":-0.5, "z":-1 },{ "x":-2, "y":-0.5, "z":-1 },{ "x":-3, "y":-0.5, "z":-1 },
+        { "x": 0, "y":-0.5, "z":-2 },{ "x":-1, "y":-0.5, "z":-2 },{ "x":-2, "y":-0.5, "z":-2 },{ "x":-3, "y":-0.5, "z":-2 },
+                                     { "x":-1, "y":-0.5, "z":-3 },{ "x":-2, "y":-0.5, "z":-3 }
+      ],
+
+    "PrefabReference":  "GC_SCU_454",         
+    "KeepRenderers":    true,
+    "KeepColliders":    false,
+    "PrefabPosition":   { "x": 0, "y": 0, "z": 0 },
+  
+    
+    "SubObjects":[
+         {
+            "ObjectName":                 "m_GC_SCU_454_Anchor",
+            "MeshName":                   "OS_Anchor_Closed.png",
+            "DestroyExistingRenderer":    true,
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }         
+        },
+        {
+            "ObjectName":                 "_anchor",
+            "MeshName":                   "OS_Anchor_Closed.png",
+            "DestroyExistingRenderer":    true,
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 },
+            "Scale":                      { "x": 0.01, "y": 0.01, "z": 0.01 }
+        },
+        {
+            "ObjectName":                 "m_GC_Anchor_Hook_02",
+            "MeshName":                   "OS_Anchor_Closed.png",
+            "DestroyExistingRenderer":    true,
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }       
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Base",
+            "MeshName":                   "OS_Base_Block.obj",
+            "MeshColliderName":           "OS_Base_Block.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Cogs",
+            "MeshName":                   "OS_Cogs.obj",
+            "MeshColliderName":           "OS_Cogs.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Arms_A",
+            "MeshName":                   "OS_Arm1.obj",
+            "MeshColliderName":           "OS_Arm1.obj.obj", 
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Arms_B",
+            "MeshName":                   "OS_Arm2.obj",
+            "MeshColliderName":           "OS_Arm2.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",   
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Arms_C",
+            "MeshName":                   "OS_Arm3.obj",
+            "MeshColliderName":           "OS_Arm3.obj.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Hatch",
+            "MeshName":                   "OS_Large_Hatch.obj",
+            "MeshColliderName":           "OS_Large_Hatch.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",   
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Ray_1",
+            "MeshName":                   "OS_Ray.obj",
+            "MeshColliderName":           "OS_Ray.obj", 
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Ray_2",
+            "MeshName":                   "OS_Ray.obj",
+            "MeshColliderName":           "OS_Ray.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",   
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Ray_3",
+            "MeshName":                   "OS_Ray.obj",
+            "MeshColliderName":           "OS_Ray.obj", 
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Ray_4",
+            "MeshName":                   "OS_Ray.obj",
+            "MeshColliderName":           "OS_Ray.obj", 
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",  
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Shutter",
+            "MeshName":                   "OS_Small_Hatch.obj",
+            "MeshColliderName":           "OS_Small_Hatch.obj", 
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",    
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        {
+            "ObjectName":                 "m_GC_SCU_454_Sphere",
+            "MeshName":                   "OS_Sphere.obj",
+            "MeshColliderName":           "OS_Sphere.obj",
+            "MeshTextureName":            "OST1.png",
+            "MeshGlossTextureName":       "OST2.png",
+            "MeshEmissionTextureName":    "OST3.png",    
+            "Position":                   { "x": 0.0, "y": 0.0, "z": 0.0 }
+        },
+        //LEDs are atm impossible for me to get working BUT you need to have a model for eash one or it breaks the game
+        {
+            "SubOverrideName":"LED0",
+            "DestroyExistingRenderer":    false,
+            "MeshName": "OS_LED1.obj"
+            },
+            
+            {"SubOverrideName":"LED1",
+            "DestroyExistingRenderer":    false,
+            "MeshName": "OS_LED2.obj"
+            },
+            
+            {"SubOverrideName":"LED2",
+            "DestroyExistingRenderer":    false,
+            "MeshName": "OS_LED3.obj"
+            },
+            
+            {"SubOverrideName":"LED3",
+            "DestroyExistingRenderer":    false,
+            "MeshName": "OS_LED4.obj"
+            },
+            
+            {"SubOverrideName":"LED4",
+            "DestroyExistingRenderer":    false,    
+            "MeshName": "OS_LED5.obj"
+            }
+    ],
+
+    "Deserializer":{
+      "ModuleAnchor": null,
+
+        "Reference|SPE_Xmas_Turkey_323/FX_Smoker_Steam": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0.2,
+                "y": 1.1,
+                "z":-3.4
+               },
+               "localScale": {
+                "x": 0.06,
+                "y": 0.06,
+                "z": 0.06
+              }
+             },
+            "ParticleSystem": {
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": true,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+              "emissionRate": 25.0,
+              "startSpeed": 0.0,
+              "startSize": 0.6,
+              "startColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.5
+              },
+              "startLifetime": 1.8,
+              "gravityModifier": 0.0,
+              "maxParticles": 1000,
+              "simulationSpace": 1,
+              "scalingMode": 2
+            },
+            "ParticleSystemRenderer": {
+              "material": "Mat_FX_Smoke_Dark"
+            }
+          },
+          "Duplicate|FX_Smoker_Steam":{
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x":-3.2,
+                "y": 1.1,
+                "z":-3.4
+               }
+             }
+          },
+          "ModuleItemHolder": {
+            "m_OverrideBasePositons": {"x":-2,"y":3,"z":-1.0},
+            "PickupPriority": 20,
+            "HasPickupContentionPeriod": true,
+            "PickupContentionPeriod": 4.0
+           /*  "m_AcceptFlags": 1,
+            "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] } ] */
+          },
+          "ModuleItemHolderBeam": {
+            "m_BeamColumnRadius": 40.0,
+            "m_OverrideDropAfterMinTime": 3.0,
+            "m_PrePickupPeriod": 5.0,
+            "m_PickupAfterMinInterval": 2.0,
+            "m_HandoverAfterMinInterval": 2.0
+          },
+          "ModuleItemPickup": {
+            "m_PickupRange": 150.0
+          },
+          "ModuleHeart": {
+            "m_SetupTime": 10,
+            "m_DamageFactorInterruption": 0.1,
+            "m_EjectSpeedBase": 35.0,
+            "m_EjectSpeedVariance": 5.0,
+            "m_EjectSpin": 10.0,
+            "m_EventHorizonRadius": 2.5,
+            "m_MinTimeBeforeDrop": 15.0,
+            "m_StartShrinkingRadius": 20.0
+          },
+        "ParticleManager.ModuleParticleManager": {
+          "Input": [
+            {
+              "m_system": "/ParticleSystem_GSO_HoverPad/ParticleSystem.",
+              "type": "Attach"
+              /*  Attach = 0,
+              Anchor = 1,
+              WeaponCharge = 2,
+              BarrelCharge = 3,
+              WeaponFiring = 4,
+              None = 6 */
+            }
+          ]
+        }          
+    }
+  }    

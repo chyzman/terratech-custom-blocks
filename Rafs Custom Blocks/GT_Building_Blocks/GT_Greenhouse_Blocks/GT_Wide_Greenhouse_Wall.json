@@ -1,0 +1,60 @@
+{
+  "Name": "GreenTech Wide Greenhouse Wall",
+  "Description": "A 3-wide wall of see-through, bulletproof glass with a sturdy metallic frame.",
+  "ID": 911151, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 3,
+  "Price": 1227,
+  "HP": 1500, 
+  "Mass": 1.5,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "7, 7, 7, 7, 7, 32, 32, 32, 32, 32, 43, 43, 43",  
+  "IconName": "GT_Wide_Greenhouse_Wall_Icon.png", 
+  "MeshName": "GT_Wide_Greenhouse_Wall.obj", 
+  "SupressBoxColliderFallback": false,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 1,"y": 2, "z": 3},  
+  "APs": [
+  {"x": 0, "y": -0.5, "z": 0},
+  {"x": 0, "y": 1.5, "z": 0},
+  {"x": 0, "y": -0.5, "z": 1},
+  {"x": 0, "y": 1.5, "z": 1},
+  {"x": 0, "y": -0.5, "z": 2},
+  {"x": 0, "y": 1.5, "z": 2},
+	{"x": 0, "y": 0, "z": 2.5},
+  {"x": 0, "y": 1, "z": 2.5},
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 0, "y": 1, "z": -0.5}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Wide_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "RR_ClearPanel"
+    } */
+    {
+      "MeshName": "GT_Wide_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Wide_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Wide_Greenhouse_Wall_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+  ]
+}

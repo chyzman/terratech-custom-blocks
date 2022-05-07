@@ -1,0 +1,98 @@
+{
+  "Name": "GreenTech Small Curved Greenhouse Block",
+  "Description": "A curvy see-through, bulletproof glass with a sturdy metallic frame.",
+  "ID": 911155,
+  "Faction": 0,
+  "Category": 0,
+  "Grade": 3,
+  "Price": 924,
+  "HP": 1000,
+  "Mass": 1,
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+  "Recipe": "7, 7, 7, 7, 32, 32, 32, 32, 43, 43",
+  "IconName": "GT_Small_Curved_Greenhouse_Block_Icon.png",
+  "MeshName": "GT_Small_Curved_Greenhouse_Block.obj",
+  "ColliderMeshName": "GT_Small_Curved_Greenhouse_Block_Collider.obj",
+  "MeshTextureName": "GreenTech 1.png",
+  "MeshGlossTextureName": "GreenTech 2.png",
+  "MeshEmissionTextureName": "GreenTech 3.png",
+  "CellMap": [
+    [
+      " x",
+      " x"
+    ],
+    [
+      "xx",
+      "xx"
+    ]
+  ],
+  "APs": [
+    {
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+    {
+      "x": 1,
+      "y": 1.5,
+      "z": 0
+    },
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+    {
+      "x": 0,
+      "y": 1.5,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 0,
+      "z": 1
+    },
+    {
+      "x": -0.5,
+      "y": 1,
+      "z": 1
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "z": -0.5
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "z": -0.5
+    }
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false,
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Small_Curved_Greenhouse_Block_Glass.obj",
+      "MeshMaterialName": "RR_ClearPanel"
+    } */
+    {
+      "MeshName": "GT_Small_Curved_Greenhouse_Block_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Small_Curved_Greenhouse_Block_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Small_Curved_Greenhouse_Block_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "ColliderMeshName": "GT_Small_Curved_Greenhouse_Block_Collider2.obj",
+      "Layer": 8
+    }
+  ]
+}

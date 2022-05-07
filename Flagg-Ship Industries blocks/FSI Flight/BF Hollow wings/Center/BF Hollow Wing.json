@@ -1,0 +1,149 @@
+{
+  "Name": "BF Center Inline Wing",
+  "Description": "A large 5x5 wing with a hollow slot for an aleron/flap. Effective and efficent.",
+  "ID": 1700142, 
+
+  "Faction": 7,
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 2694, 
+  "HP": 2500, 
+  "Mass": 5,
+  "CenterOfMass": {"x": 2, "y": 0, "z": 2},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 1, 1, 9, 9, 43, 43, 44, 44, 45, 45, 52, 52",
+  "IconName": "Cube Wing.png", 
+  "MeshName": null,
+  "ColliderMeshName": null,
+  "SupressBoxColliderFallback": true,
+  	"MeshMaterialName": "BF_Main",
+ 
+   "BlockExtents":{"x": 5,"y": 1, "z": 5}, 
+  
+  "APs": [ 
+    {"x": -0.5, "y": 0, "z": 0},
+	{"x": -0.5, "y": 0, "z": 1},
+	{"x": -0.5, "y": 0, "z": 2},
+	{"x": -0.5, "y": 0, "z": 3},
+	{"x": -0.5, "y": 0, "z": 4},
+	
+	{"x": 4.5, "y": 0, "z": 0},
+	{"x": 4.5, "y": 0, "z": 1},
+	{"x": 4.5, "y": 0, "z": 2},
+	{"x": 4.5, "y": 0, "z": 3},
+	{"x": 4.5, "y": 0, "z": 4},
+	
+	{"x": 0, "y": 0, "z": -0.5},
+	{"x": 1, "y": 0, "z": -0.5},
+	{"x": 2, "y": 0, "z": -0.5},
+	{"x": 3, "y": 0, "z": -0.5},
+	{"x": 4, "y": 0, "z": -0.5},
+	
+	{"x": 0, "y": 0, "z": 4.5},
+	{"x": 1, "y": 0, "z": 4.5},
+	{"x": 2, "y": 0, "z": 4.5},
+	{"x": 3, "y": 0, "z": 4.5},
+	{"x": 4, "y": 0, "z": 4.5},
+	
+	
+	
+	
+  ],
+  
+  "GamePrefabReference": "VEN_Wing_Middle_312",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 2.5,
+    "y": 0,
+    "z": 2.5
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 0  // Roll
+  },
+  "ReferenceScale": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+
+  "SubObjects": [
+    
+  {
+    "SubOverrideName": "m_VEN_Wing_Middle_312_Flap",
+    "MeshName": "BF_Hollow_Wing_Center_flap.obj",
+    "MakeBoxCollider": true,
+  	"MeshMaterialName": "BF_Main",
+    "SubPosition": { "x":  2.0, "y": 0, "z": -1.25},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "SubScale":  { "x":  1, "y": 1, "z": 1}
+},
+
+{
+  "SubOverrideName": "_pivot",
+  "SubPosition": { "x":  0, "y": 0, "z": 3.25 },
+  "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+},
+{
+  "SubOverrideName": "m_VEN_Wing_Middle_312_Base",
+  "DestroyExistingRenderer": true,
+  "MeshName": "BF_Hollow_Wing_Center_body.obj",
+    "MakeBoxCollider": true,
+  	"MeshMaterialName": "BF_Main",
+    "SubPosition": { "x":  2.0, "y": 0, "z": 2.0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "SubScale":  { "x":  1, "y": 1, "z": 1}
+},
+{
+  "SubOverrideName": "SmokeTrail",
+  "SubPosition": { "x":  2, "y": 0, "z": 0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+},
+{
+  "SubOverrideName": "SmokeTrail (1)",
+  "SubPosition": { "x": 0, "y": 0, "z": 0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+}
+  ],
+
+  "Deserializer": {
+    "ModuleWing": {
+      "m_Aerofoils": [{
+         "liftStrength": 3,
+          "flapAngleRangeVisual": 34,
+          "flapAngleRangeActual": 34,
+        "flapTurnSpeed": 2
+      }],
+      "m_AttackAngleDamping": 10000.0,
+    "m_TrailMinVelocity": 60.0,
+    "m_TrailAlphaStrength": 0.02,
+    "m_TrailFadeSpeed": 0.1
+    }
+  }
+}

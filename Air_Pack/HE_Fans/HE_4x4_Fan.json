@@ -1,0 +1,107 @@
+
+{
+    "Name": "Hawkeye Rhino F-3120 Prop",
+    "Description": "A bigger fan. This was the original prototype of the later Twister Prop, which underwent miniaturization efforts at the expense of thrust capacity.",
+    "ID": 10030,
+
+    "Faction": 5,
+    "Category": 8,
+    "Rarity": 2,
+    "Grade": 1,
+    "Price": 24384,
+    "HP": 950,
+    "Mass": 7.0,
+
+    "Recipe":  "47, 47, 49, 51, 52, 54, 57, 57, 66",
+
+    "IconName": "Hawkeye_4x4_Fan.png",
+    "MeshName": null,
+
+    "MeshMaterialName": "HE_Main",
+    "ColliderMeshName": "HE_4x4_Fan_Collider.obj",
+
+    "Cells": [
+        {"x": 1, "y": 0, "z": 0},
+        {"x": 2, "y": 0, "z": 0},
+
+        {"x": 0, "y": 1, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+        {"x": 2, "y": 1, "z": 0},
+        {"x": 3, "y": 1, "z": 0},
+
+        {"x": 0, "y": 2, "z": 0},
+        {"x": 1, "y": 2, "z": 0},
+        {"x": 2, "y": 2, "z": 0},
+        {"x": 3, "y": 2, "z": 0},
+
+        {"x": 1, "y": 3, "z": 0},
+        {"x": 2, "y": 3, "z": 0}
+   ],
+
+    "APs": [ 
+        { "x": 1,     "y": -0.5,    "z": 0  },
+        { "x": 2,     "y": -0.5,    "z": 0  },
+        { "x": 1,     "y": 3.5,    "z": 0  },
+        { "x": 2,     "y": 3.5,    "z": 0  },
+        { "x": -0.5,     "y": 1,    "z": 0  },
+        { "x": -0.5,     "y": 2,    "z": 0  },
+        { "x": 3.5,     "y": 1,    "z": 0  },
+        { "x": 3.5,     "y": 2,    "z": 0  }
+    ],
+
+    "GamePrefabReference": "HE_Gyroprop_313",
+    "KeepRenderers": true,
+
+    "SubObjects":[
+        {
+            "SubOverrideName": "m_HE_GyroProp_331",
+            "MeshName": "HE_4x4_Fan_Body_Textured.obj",
+            "MakeBoxCollider": false
+        },
+        {
+            "SubOverrideName": "_spinner/m_HE_GyroProp_rotors",
+            // This is a reskinned (slightly) version of the rotor Saelem Black made for his Cascade prop
+            "MeshName": "HE_3x3_Fan.obj",
+            "MakeBoxCollider": false
+        }
+    ],
+
+    "Deserializer": {
+        "GameObject|m_HE_GyroProp_331": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 1.0, "y": 1.0, "z": 0.0 },
+                "localEulerAngles": { "x": 0, "y": 0, "z": 0.0 }
+            }
+        },
+        "GameObject|_spinner": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 1.5, "y": 1.5, "z": 0.0 },
+                "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|m_HE_GyroProp_rotors": {
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localScale": { "x": 1.5, "y": 1.5, "z": 1.25 }
+                }
+            }
+        },
+        "GameObject|_fanJet": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 1.5, "y": 1.5, "z": 0.0 },
+                "localEulerAngles": { "x": 0.0, "y": 0.0, "z": 0.0 }
+            },
+            "GameObject|_effector": {
+                "UnityEngine.Transform": {
+                    "localPosition": { "x": 0.0, "y": 0.0, "z": 0.0 },
+                    "localEulerAngles": { "x": 180.0, "y": 0.0, "z": 0.0 }
+                }
+            },
+            "FanJet": {
+                "force": 3120.0,
+                "backForce": 2080.0,
+                "spinSpeed": -1500.0
+            }
+        }
+    }
+}

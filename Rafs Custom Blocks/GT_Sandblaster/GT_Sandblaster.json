@@ -1,0 +1,378 @@
+{
+  "Name": "GreenTech Sandblaster",
+  "Description": "A jet of sand so highly pressurized it can easily push things on its way, and the abrasiveness makes for a great cutting tool.",
+  "ID": 911200, 
+
+  "Faction": 0,
+  "Category": 4, 
+  "Grade": 3, 
+  "Price": 8340, 
+  "HP": 1600,
+  "Mass": 4,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "9, 9, 43, 43, 44, 45, 45, 49, 57, 57", 
+  "IconName": "GT_Sandblaster_Icon.png",
+  "MeshName": "GT_Sandblaster.obj",
+  "ColliderMeshName": "GT_Sandblaster_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 1,"y": 2, "z": 4}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 2},
+	  {"x": 0, "y": -0.5, "z": 1}
+  ],
+  
+  "GamePrefabReference": "VEN_Flamethrower_121", 
+  "KeepRenderers": true, 
+  "KeepColliders": true,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Base",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_RotatingPart",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "m_VEN_FlameThrower_121_Barrel",
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true
+    },
+    {
+      "SubOverrideName": "FXFlameThrower",
+      "MeshMaterialName": "SnowMedium", //"HoverSmoke" "SandDust" "mat_SFX_PowerShieldSpray_01" "Mat_FX_Dust_02" "SnowMedium"
+      "MeshTextureName": "Sand.png", //"Sand_Opaque.png"
+      "MeshEmissionTextureName": "Sand_Emission.png"
+    },
+    {
+      "MeshName": "GT_Sandblaster_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight" //"HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Sandblaster_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Sandblaster_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }
+  ],
+
+  "Deserializer": {
+    "GameObject|_gimbalHorizontal": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0.52,
+          "z": 3.4
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "GimbalAimer": {
+        "rotationLimits": [
+          -0.1,
+          0.1
+        ]
+      },
+      "GameObject|_gimbalVertical": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "GimbalAimer": {
+          "rotationLimits": [
+            -0.1,
+          0.1
+          ]
+      },
+      "GameObject|FirePoint": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      "GameObject|FXFlameThrower": { 
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "main": {
+            "m_ParticleSystem": {
+              "startDelay": 0.0,
+              "loop": true,
+              "playOnAwake": false,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+              "emissionRate": 300.0, //1000
+              /* "emission": {
+                "type": 0,
+                "rateMultiplier": 300.0,
+                "enabled": true,
+                "rateOverTimeMultiplier": 300.0,
+                "rateOverDistanceMultiplier": 0.0,
+                "burstCount": 0
+              }, */
+              "startSpeed": 60,
+              "startSize": 0.0001,
+              "startLifetime": 2,
+              "gravityModifier": 0.2,
+              "maxParticles": 20000,
+              "simulationSpace": 0,
+              "inheritVelocity": {
+                "enabled": false
+                },
+              "scalingMode": 1,
+              "time": 0.0,
+              "randomSeed": 0,
+              "useAutoRandomSeed": false,
+              "startColor": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.2
+              },
+              "trails": {
+                "enabled": true,
+                "inheritParticleColor": true,
+                "lifetime": {
+                  "mode": 0,
+                  "constant": 1.0,
+                  "constantMin": 0.0,
+                  "constantMax": 1.0,
+                  "curve": null,
+                  "curveMax": null,
+                  "curveMin": null
+                },
+                "lifetimeMultiplier": 0.2,
+                "sizeAffectsLifetime": false,
+                "minVertexDistance": 0.0001,
+                "widthOverTrail": {
+                  "mode": 0,
+                  "constant": 1.0,
+                  "constantMin": 0.0,
+                  "constantMax": 1.0,
+                  "curve": null,
+                  "curveMax": null,
+                  "curveMin": null
+                },
+                "widthOverTrailMultiplier": 0.7,
+                "sizeAffectsWidth": false,
+                "ribbonCount": 1,      
+                "worldSpace": false,      
+                "textureMode": 0,      
+                "mode": 0,
+                "dieWithParticles": true,      
+                "colorOverLifetime": {
+                  "mode": 0,
+                  "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "colorMin": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "colorMax": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "gradient": null,
+                  "gradientMin": null,
+                  "gradientMax": null
+                }      
+              },
+              "collision": {
+                "colliderForce": 5000,
+                "enabled": true,                                   //Setting this to false will break the Particle Weapon
+                "enableInteriorCollisions": false,                 //Can the weapon's own particles collide with each other?
+                "bounceMultiplier": 1,//0.5 is default          //How hard it bounces on contact with something
+                "lifetimeLossMultiplier": 0.5,
+                "dampenMultiplier": 0.0, 
+                "collidesWith": {
+                  "value": 45312 //272637952
+                },
+                "voxelSize": 0.3,
+                "radiusScale": 0.4                
+              },
+              "sizeOverLifetime": { //Annoying module that manages size
+                "enabled": false
+              },
+              "shape": {
+                "box": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "meshScale": 1,
+                "randomDirection": true,
+                "enabled": true,
+                "shapeType": 4,
+                "randomDirectionAmount": 1.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "alignToDirection": false,
+                "radius": 0.0,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "radiusSpeedMultiplier": 1,
+                "radiusThickness": 1,
+                "angle": 1,
+                "length": 0.0,
+                "boxThickness": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "meshShapeType": 0,
+                "mesh": null,
+                "meshRenderer": null,
+                "skinnedMeshRenderer": null,
+                "sprite": null,
+                "spriteRenderer": null,
+                "useMeshMaterialIndex": false,
+                "meshMaterialIndex": 0,
+                "useMeshColors": true,
+                "normalOffset": 0.0,
+                "meshSpawnMode": 0,
+                "meshSpawnSpread": 0.0,
+                "meshSpawnSpeed": {
+                  "mode": 0,
+                  "curveMultiplier": 0.0,
+                  "curveMax": null,
+                  "curveMin": null,
+                  "constantMax": 1.0,
+                  "constantMin": 0.0,
+                  "constant": 1.0,
+                  "curve": null
+                },
+                "meshSpawnSpeedMultiplier": 1.0,
+                "arc": 360.0,
+                "arcMode": 0,
+                "arcSpread": 0.0,
+                "arcSpeed": {
+                  "mode": 0,
+                  "curveMultiplier": 0.0,
+                  "curveMax": null,
+                  "curveMin": null,
+                  "constantMax": 1.0,
+                  "constantMin": 0.0,
+                  "constant": 1.0,
+                  "curve": null
+                },
+                "arcSpeedMultiplier": 1.0,
+                "donutRadius": 0.0,
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "rotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "scale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "texture": null,
+                "textureClipChannel": 3,
+                "textureClipThreshold": 0.0,
+                "textureColorAffectsParticles": true,
+                "textureAlphaAffectsParticles": true,
+                "textureBilinearFiltering": false,
+                "textureUVChannel": 0
+              }
+            }
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          "castShadows": true,
+          "shadowCastingMode": 0,
+          "receiveShadows": true
+        }
+      }
+    }
+    },
+
+    "ModuleWeapon": {
+      "m_FireSFXType": 26 //32, 65
+    },
+    "ModuleWeaponFlamethrower": {
+      "m_MaxFlameLength": 50.0,
+      "m_DPS": 600.0,
+      "m_DamageType": 0,
+      "m_ExtendTime": 0.01,
+      "m_RetractTime": 0.001,
+      "m_Particles": {
+     
+  },
+    "m_TipLight": {
+      "intensity": 0,
+      "range": 0
+    },
+    "m_JetLight": {
+      "intensity": 0,
+      "range": 0
+    }
+    }
+    
+  }
+}

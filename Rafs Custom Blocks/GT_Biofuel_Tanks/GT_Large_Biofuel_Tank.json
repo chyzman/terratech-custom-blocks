@@ -1,0 +1,88 @@
+{
+  "Name": "GreenTech Large Biofuel Tank",
+  "Description": "Bioengineered algae produces clean biofuel at this special glass domed tank, which is not as dense as regular fuel but regenerates quickly.",
+  "ID": 911082, 
+
+  "Faction": 0, 
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 18690, 
+  "HP": 1000, 
+  "Mass": 30,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 47, 47, 47, 47, 47, 47, 52, 52, 52, 52, 52, 52, 57", 
+  "IconName": "GT_Large_Biofuel_Tank_Icon.png",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "BlockExtents":{"x": 2,"y": 3, "z": 2},   
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 0},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": 1.5, "y": 0, "z": 0},
+    {"x": 1.5, "y": 0, "z": 1},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 0, "y": 0, "z": 1.5},
+    {"x": 1, "y": 0, "z": -0.5},
+    {"x": 1, "y": 0, "z": 1.5}
+  ],
+  
+  "GamePrefabReference": "VEN_FuelPod_111",
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "DeathExplosionReference":"GC_Battery_222",
+  
+  "SubObjects": [ 
+    {
+      "SubOverrideName":"m_VEN_FuelPod_111",
+      "MeshName": "GT_Large_Biofuel_Tank.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": { "x": 0, "y": 0, "z": 0 },
+      "MakeBoxCollider": true
+    },
+    {
+      "MeshName": "GT_Large_Biofuel_Tank_Dome.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "SubOverrideName": "LED0",
+      "MeshName": "GT_Large_Biofuel_Tank_LED_1.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+      "SubOverrideName": "LED1",
+      "MeshName": "GT_Large_Biofuel_Tank_LED_2.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+    },
+    {
+      "SubOverrideName": "LED2",
+      "MeshName": "GT_Large_Biofuel_Tank_LED_3.obj",
+      "SubPosition": { "x": 0, "y": 0, "z": 0}
+    }
+  ],
+	
+	"JSONBLOCK": {
+    "ModuleFuelTank": {
+      "m_Capacity": 200.0,
+      "m_RefillRate": 10.0
+    }
+	}
+}

@@ -1,0 +1,312 @@
+{
+  "Name": "Reticule Research Screw Wheel",
+  "Description": "A pair of massive, sturdy screws with very high grip and capable of tearing and drilling resources. Albeit slow and hard to maneuver, it can strafe.",
+  "ID": 910722,
+  "PairedBlock": 910722,  
+
+  "Faction": 3,
+  "Category": 3, 
+  "Grade": 2, 
+  "Price": 7038, 
+  "HP": 6000, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 1.18, "y": 0.87, "z": 2.5},
+  
+  "Fragility": 1,
+  "DamageableType": 1,
+  "Rarity": 0,
+
+  "Recipe":  "52, 52, 54, 63",
+  "IconName": "RR_Screw_Wheel_Icon.png", 
+  "MeshName": "RR_Screw_Wheel_Base.obj",
+  
+  "MeshMaterialName": "RR_Main",
+ 
+  "CellMap":[
+	[
+    "  ",
+    "xx",
+    "xx"
+   ],
+   [
+    "  ",
+    "xx",
+    "xx"
+   ],
+   [
+    "x ",
+    "xx",
+    "xx"
+   ],
+   [
+    "x ",
+    "xx",
+    "xx"
+   ],
+   [
+    "  ",
+    "xx",
+    "xx"
+   ],
+   [
+    "  ",
+    "xx",
+    "xx"
+   ]
+  ],
+
+  "APs": [
+	{"x": -0.5, "y": 2,"z": 2},
+	{"x": -0.5, "y": 2, "z": 3}
+  ],
+  
+  "GamePrefabReference": "VEN_Tracks_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "SubObjects": [
+	{
+		"SubOverrideName": "Tire_1",
+		"MeshName": "RR_Screw_Wheel_Tire.obj",
+		"MeshMaterialName": "RR_Main"
+	},
+	{
+		"SubOverrideName": "Tire_2",
+		"MeshName": "RR_Screw_Wheel_Tire.obj",
+		"MeshMaterialName": "RR_Main"
+	},
+	{
+		"SubOverrideName": "_wheel_1",
+		"SubRotation": {
+			"x": 0,
+			"y": -90,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.68,
+			"y": 1,
+			"z": 4.01
+		}
+	},
+	{
+		"SubOverrideName": "_wheel_2",
+		"SubRotation": {
+			"x": 0,
+			"y": -90,
+			"z": 0
+		},
+		"SubPosition": {
+			"x": 0.68,
+			"y": 1,
+			"z": 0.98
+		}
+	},
+	{
+		"SubOverrideName": "Screw_Drill",
+		"Layer":14
+	},
+	{
+		"SubOverrideName": "Collider_1",
+		"Layer":8
+	},
+	{
+		"SubOverrideName": "Collider_2",
+		"Layer":8
+	}
+  ],
+  
+  
+  
+  "JSONBLOCK": {
+	"GameObject|m_VEN_Tracks_112_Tracks": { "TankTrack": null },
+	"GameObject|_wheel_1": {
+		"GameObject|m_VEN_Tracks_112_Wheel1": {
+			"GameObject|Tire_1":{
+				"UnityEngine.Transform": {
+					"localPosition": {
+					  "x": 0,
+					  "y": 0,
+					  "z": 0
+					 },
+					 "localEulerAngles": {
+					  "x": 0,
+					  "y": 0,
+					  "z": 180
+					 }
+				   }
+			},
+			"UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 90,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+			"CapsuleCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.35,
+				"height": 1.8
+			}
+		}
+	},
+	"GameObject|_wheel_2": {
+		"GameObject|m_VEN_Tracks_112_Wheel2": {
+			"GameObject|Tire_2":{
+				"UnityEngine.Transform": {
+					"localPosition": {
+					  "x": 0,
+					  "y": 0,
+					  "z": 0
+					 },
+					 "localEulerAngles": {
+					  "x": 0,
+					  "y": 0,
+					  "z": 0
+					 }
+				   }
+			},
+			"UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 90,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+			"CapsuleCollider": {
+				"center": {
+				  "x": 0.0,
+				  "y": 0.0,
+				  "z": 0.0
+				},
+				"radius": 0.3,
+				"height": 1.6
+			}
+		}
+	},
+	"ModuleWheels": {
+		"m_TorqueParams": {
+			"torqueCurveMaxTorque": 10000.0,
+			"torqueCurveMaxRpm": 350.0,
+			"passiveBrakeMaxTorque": 10000.0,
+			"reverseBrakeMaxRpm": 50.0,
+			"basicFrictionTorque": 50.0,
+			"fullCompressFrictionTorque": 800.0
+		},
+		"m_UseTireTracks": true,
+		"m_WheelTrackType": 0,              
+		  "m_AudioType": 0,
+		"m_WheelParams": {
+			"Instantiate|tireProperties": {
+				"Instantiate|props": {
+					"frictionScaleLong": 1.0,
+					"frictionScaleLat": 1.0,
+					"gripFactorLong": 3.0,
+					"gripFactorLat": 4.0
+					
+				}
+			  },
+			"radius": 0.65,
+			"thicknessAngular": 65,
+			"suspensionSpring": 20000.0,
+			"suspensionDamper": 800.0,
+			"maxSuspensionAcceleration": 15.0,
+			"suspensionQuadratic": true,
+			"suspensionTravel": 0.28,
+			"steerAngleMax": 5.0,
+			"steerSpeed": 10.0,
+			"strafeSteeringSpeed": 50.0
+		},
+		"m_DriveTurnPower": 1.0,
+		"m_DriveTurnBrake": 0.5,
+		"m_DriveTurnDifferential": 1.0,
+		"m_TurnOnSpotPower": 1.0,
+		"m_DustMinimumRPM": 20.0
+	},
+	"GameObject|Collider_1": {
+		"UnityEngine.BoxCollider":{
+			"center": {
+				"x": -0.4,
+				"y": 2,
+				"z": 2.5
+			  },
+			  "size": {
+				"x": 0.2,
+				"y": 0.72,
+				"z": 1.45
+			  }
+		  }
+	},
+	"GameObject|Collider_2": {
+		"UnityEngine.Transform": {
+			 "localEulerAngles": {
+			  "x": 0,
+			  "y": 0,
+			  "z": 45
+			 }
+		   },
+		"UnityEngine.BoxCollider":{
+			"center": {
+				"x": 0.14,
+				"y": 1.56,
+				"z": 2.5
+			  },
+			  "size": {
+				"x": 1.2,
+				"y": 0.3,
+				"z": 0.6
+			  }
+		  }
+	},
+	"GameObject|Screw_Drill": {
+		"UnityEngine.Transform": {
+			"localPosition": {
+				"x": 0.68,
+				"y": 0.87,
+				"z": 2.5
+			 },
+			 "localEulerAngles": {
+			  "x": 90,
+			  "y": 0,
+			  "z": 0
+			 }
+		   },
+		"UnityEngine.CapsuleCollider": {
+			"center": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			},
+			"radius": 0.7,
+			"height": 6
+		}
+    },
+	"ModuleDrill": {
+		"activeColliders": [
+			"Screw_Drill/CapsuleCollider."
+		],
+		"impactDamageMultiplier": 5.0,
+		"damagePerSecond": 500.0,
+		"m_SpinOnCollisionDuration": 1,
+		"m_DamageType": 0
+	}
+     }
+}

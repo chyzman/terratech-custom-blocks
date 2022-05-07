@@ -1,0 +1,75 @@
+// -- Make a copy of this file, change the ID and Hex, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value of
+
+
+{
+  "Name": "GSO Flotation Tank",
+  "Description": "When attached to a Tech, this tank reacts Oleite to produce a very low density gas, which decreases the block density and makes it float.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere. Also, the gas is highly flamable.",
+  "ID": 910606, 
+
+  "Faction": 1, 
+  "Category": 8, 
+  "Grade": 2, 
+  "Price": 3084,
+  "HP": 800,
+  "Mass": 4,
+
+  "IconName": "GSO_Flotation_Tank_Icon.png",
+  "MeshName": "GSO_Flotation_Tank.obj", 
+  
+  "Recipe": "5, 5, 5, 5, 11, 11, 11, 46, 47",
+  
+  "MeshMaterialName": "GSO_Main", 
+  "SupressBoxColliderFallback": true,
+  "ColliderMeshName": "GSO_Flotation_Tank.obj",  
+
+  "BlockExtents": 
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  
+  "APs": [ 
+    {
+      "x": 0,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 0
+    },
+	{
+      "x": 0,
+      "y": -0.5,
+      "z": 1
+    },
+	{
+      "x": 1,
+      "y": -0.5,
+      "z": 1
+    }
+  ],
+
+  "GamePrefabReference": "GSO_FuelTank_222",
+  "KeepReferenceRenderers": false, 
+  
+  "JSONBLOCK": {
+   "ModuleFuelTank": {
+    "m_Capacity": 0,
+    "m_RefillRate": 0,
+	"Capacity": 0,
+    "RefillRate": 0
+	},
+  "MotionBlocks.ModuleFloater": {
+//  "MinHeight": -85,
+    "MaxHeight": 400,
+    "MaxStrength": 70,
+    "VelocityDampen": 0.25
+}
+    
+  }
+}
