@@ -3,7 +3,7 @@
   "Description": "Three omniwheels mounted on a base, capable of strafing and turning fast.",
   "ID": 911032,
   "PairedBlock": 911032, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 4, 

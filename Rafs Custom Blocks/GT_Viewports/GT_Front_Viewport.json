@@ -2,7 +2,7 @@
   "Name": "GreenTech Front Viewport Dome",
   "Description": "Reinforced glass dome with a neat interior and a very broad field of view, a must have for the watchful ranger.\nPress 'R' to cycle cameras.",
   "ID": 911202, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0, 
   "Category": 5, 
   "Grade": 2, 

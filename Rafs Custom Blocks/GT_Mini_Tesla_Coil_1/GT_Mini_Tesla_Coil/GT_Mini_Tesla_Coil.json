@@ -1,0 +1,760 @@
+{
+  "Name": "GreenTech Mini Tesla Coil",
+  "Description": "Zaps nearby enemies for a small energy cost. The Mini Tesla packs quite a punch for its small size and can be hidden behind other blocks.",
+  "ID": 911258, 
+
+  "Faction": 0,
+  "Category": 4,
+  "Grade": 2,
+  "Price": 1893,
+  "HP": 250,
+  "Mass": 1.0,
+  "CenterOfMass": {"x": 0, "y": -0.4, "z": 0},
+  
+  "Fragility": 0,
+  "DamageableType": 1,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "5, 7, 19, 48",
+  "IconName": "GT_Mini_Tesla_Coil_Icon.png",
+  
+  "BlockExtents":{"x": 1,"y": 1, "z": 1},  
+  "APs": [
+    {"x": 0, "y": -0.5, "z": 0}
+  ],
+  
+  "GamePrefabReference": "EXP_TeslaCoil_252",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference": "VEN_Battery_111",
+
+  "SubObjects": [
+    {
+      "SubOverrideName": "m_RR_TeslaCoil_252",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "Mesh",
+      "MeshName": "GT_Mini_Tesla_Coil.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "ColliderMeshName": "GT_Mini_Tesla_Coil_Collider.obj",
+      "layer": 8
+    },
+    {
+      "MeshName": "GT_Mini_Tesla_Coil_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    /*{
+      "MeshName": "GT_Mini_Tesla_Coil_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    }, */
+    {
+      "MeshName": "GT_Mini_Tesla_Coil_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    }
+  ],
+
+  "JSONBLOCK": {
+    "GameObject|Mesh": {},
+    "GameObject|_bubble": {
+      "GameObject|ShieldSphereOuter": {
+
+      },
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
+   /*  "GameObject|_electricArc": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "LineRenderer": {
+        "numPositions": 2,
+        "startWidth": 1.0,
+        "endWidth": 1.0,
+        "widthMultiplier": 1.0,
+        "numCornerVertices": 0,
+        "numCapVertices": 0,
+        "useWorldSpace": true,
+        "loop": false,
+        "positionCount": 2,
+        "shadowBias": 0.0,
+        "generateLightingData": false,
+        "textureMode": 0,
+        "alignment": 0
+      }
+    },
+    "Reference|EXP_TeslaCoil_252/_electricArc": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "LineRenderer": {
+        "numPositions": 2,
+        "startWidth": 1.0,
+        "endWidth": 1.0,
+        "widthMultiplier": 1.0,
+        "numCornerVertices": 0,
+        "numCapVertices": 0,
+        "useWorldSpace": true,
+        "loop": false,
+        "positionCount": 2,
+        "shadowBias": 0.0,
+        "generateLightingData": false,
+        "textureMode": 0,
+        "alignment": 0
+      }
+    }, */
+    "ModuleEnergy": {},
+    "ModulePlacementZoneEffect": {
+      "m_Radius": 40.0,
+      "m_VFXBubbleRadiusFudgeFactor": 1.0
+    },
+    "ModuleWeaponTeslaCoil": {
+      "m_EnergyType": 0,
+      "m_TargetRadius": 40.0,
+      "m_PowerUsagePerArc": 100.0,
+      "m_ArcFiringCooldown": 1,
+      "m_DamagePerArc": 250.0,
+      "m_EnergyCutOffPercentage": 1.0,
+      "m_ChargeDurationBeforeFiring": 1.0,
+      "m_DamageType": 3,
+      "m_checkLOS": true,
+      "Instantiate|m_TeslaImpact": {
+        "GameObject|FX_Sparks": {
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": false,
+            "playOnAwake": true,
+            "duration": 0.25,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 0.0,
+            "startSpeed": 1,
+            "startSize": 0.05,
+            "startRotation": 0.0,
+            "startLifetime": 0.5,
+            "gravityModifier": 1.0,
+            "maxParticles": 1000,
+            "simulationSpace": 1,
+            "scalingMode": 0,
+            "shape": {
+              "box": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              },
+              "meshScale": 1.0,
+              "shapeType": 0
+            },
+            "sizeOverLifetime": {
+              "enabled": true,
+              "sizeMultiplier": 1.0
+            }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 1,
+            "sortMode": 0,
+            "lengthScale": 3.13,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 0.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 0.5
+          }
+        },
+        "GameObject|FX_Electricity": {
+          "UnityEngine.ParticleSystem": {
+            "startDelay": 0.0,
+            "loop": false,
+            "playOnAwake": true,
+            "duration": 0.5,
+            "playbackSpeed": 1.0,
+            "enableEmission": true,
+            "emissionRate": 0.0,
+            "startSpeed": -0.1,
+            "startSize": 0.6,
+            "startRotation": 3.1415925,
+            "startRotation3D": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 3.1415925
+            },
+            "startLifetime": 0.2,
+            "gravityModifier": 0.0,
+            "maxParticles": 1000,
+            "simulationSpace": 0,
+            "scalingMode": 0,
+            "shape": {
+              "box": {
+                "x": 0.1,
+                "y": 0.1,
+                "z": 0.1
+              },
+              "meshScale": 0.2,
+              "shapeType": 0
+            },
+            "velocityOverLifetime": {
+              "enabled": true,
+              "speedModifierMultiplier": 1.0
+            },
+            "sizeOverLifetime": {
+              "enabled": true,
+              "sizeMultiplier": 0.22
+            },
+            "rotationOverLifetime": {
+              "enabled": true,
+              "xMultiplier": 1.0,
+              "yMultiplier": 1.0,
+              "zMultiplier": 0.7853981
+            }
+          },
+          "UnityEngine.ParticleSystemRenderer": {
+            "alignment": 0,
+            "renderMode": 1,
+            "sortMode": 1,
+            "lengthScale": 3.32,
+            "velocityScale": 0.0,
+            "cameraVelocityScale": 0.0,
+            "normalDirection": 1.0,
+            "shadowBias": 0.0,
+            "sortingFudge": 1000.0,
+            "minParticleSize": 0.0,
+            "maxParticleSize": 100.0
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "startDelay": 0.0,
+          "loop": false,
+          "playOnAwake": true,
+          "duration": 0.05,
+          "playbackSpeed": 1.0,
+          "enableEmission": true,
+          "emissionRate": 0.0,
+          "startSpeed": 0.0,
+          "startSize": 0.6,
+          "startRotation": 3.1415925,
+          "startRotation3D": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 3.1415925
+          },
+          "startLifetime": 0.2,
+          "gravityModifier": 0.0,
+          "maxParticles": 1000,
+          "simulationSpace": 0,
+          "scalingMode": 1,
+          "shape": {
+            "box": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "meshScale": 1.0,
+            "randomDirection": false,
+            "enabled": false,
+            "shapeType": 2,
+            "randomDirectionAmount": 0.0,
+            "sphericalDirectionAmount": 0.0,
+            "randomPositionAmount": 0.0,
+            "alignToDirection": false,
+            "radius": 0.15,
+            "radiusMode": 0,
+            "radiusSpread": 0.0,
+            "radiusSpeedMultiplier": 1.0,
+            "radiusThickness": 1.0,
+            "angle": 8.918654,
+            "length": 5.0,
+            "arc": 360.0,
+            "arcMode": 0,
+            "arcSpread": 0.0,
+            "arcSpeedMultiplier": 1.0,
+            "donutRadius": 0.2
+          },
+          "sizeOverLifetime": {
+            "enabled": true,
+            "sizeMultiplier": 1.0
+          },
+          "rotationOverLifetime": {
+            "enabled": true,
+            "xMultiplier": 1.0,
+            "yMultiplier": 1.0,
+            "zMultiplier": 0.7853981
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          "alignment": 0,
+          "renderMode": 0,
+          "sortMode": 1,
+          "lengthScale": 2.0,
+          "velocityScale": 0.0,
+          "cameraVelocityScale": 0.0,
+          "normalDirection": 1.0,
+          "shadowBias": 0.0,
+          "sortingFudge": 1000.0,
+          "minParticleSize": 0.0,
+          "maxParticleSize": 100.0
+        },
+        "Explosion": {
+          "m_EffectRadius": 3.0,
+          "m_EffectRadiusMaxStrength": 1.0,
+          "m_MaxDamageStrength": 150.0,
+          "m_MaxImpulseStrength": 0.0,
+          "m_DamageType": 2,
+          "m_ExplosionType": 1
+        }
+      },
+      "m_ChargeSfxDelays": [
+        
+      ],
+      "Instantiate|m_ParticleSetupPrefab": {
+        "GameObject|Stage_Final": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "GameObject|FX_Shockwave": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.8,
+              "loop": false,
+              "playOnAwake": true,
+              "duration": 1,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+              "emissionRate": 0.0,
+              "startSpeed": 0.0,
+              "startSize": 1.2,
+              "startLifetime": 0.3,
+              "gravityModifier": 0.0,
+              "maxParticles": 1000,
+              "simulationSpace": 0,
+              "scalingMode": 2,
+              "shape": {
+                "box": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "meshScale": 1.0,
+                "randomDirection": false,
+                "enabled": false,
+                "shapeType": 2,
+                "randomDirectionAmount": 0.0,
+                "sphericalDirectionAmount": 0.0,
+                "randomPositionAmount": 0.0,
+                "alignToDirection": false,
+                "radius": 0.15,
+                "radiusMode": 0,
+                "radiusSpread": 0.0,
+                "radiusSpeedMultiplier": 1.0,
+              "radiusThickness": 1.0,
+              "angle": 8.918654,
+              "length": 5.0,
+              "arc": 360.0,
+              "arcMode": 0,
+              "arcSpread": 0.0,
+              "arcSpeedMultiplier": 1.0,
+              "donutRadius": 0.2
+              },
+              "sizeOverLifetime": {
+                "enabled": true,
+                "sizeMultiplier": 1.0
+              },
+              "rotationOverLifetime": {
+                "enabled": false,
+                "xMultiplier": 1.0,
+                "yMultiplier": 1.0,
+                "zMultiplier": 0.7853981
+              }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "alignment": 0,
+              "renderMode": 0,
+              "sortMode": 1,
+              "lengthScale": 2.0,
+              "velocityScale": 0.0,
+              "cameraVelocityScale": 0.0,
+              "normalDirection": 1.0,
+              "shadowBias": 0.0,
+              "sortingFudge": 1000.0,
+              "minParticleSize": 0.0,
+              "maxParticleSize": 100.0
+            }
+          },
+          "GameObject|FX_ElectricityBurst_Final": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.8,
+              "loop": false,
+              "playOnAwake": true,
+              "duration": 1,
+              "playbackSpeed": 1.0,
+              "enableEmission": true,
+              "emissionRate": 0.0,
+              "startSpeed": -0.1,
+              "startSize": 0.03,
+              "startLifetime": 0.3,
+              "gravityModifier": 0.0,
+              "maxParticles": 1000,
+              "simulationSpace": 0,
+              "scalingMode": 2,
+              "shape": {
+                "box": {
+                  "x": 0.1,
+                  "y": 0.1,
+                  "z": 0.1
+                },
+                "meshScale": 0.1
+              },
+              "velocityOverLifetime": {
+                "enabled": true,
+                "speedModifierMultiplier": 1.0
+              },
+              "sizeOverLifetime": {
+                "enabled": true,
+                "sizeMultiplier": 0.28
+              },
+              "rotationOverLifetime": {
+                "enabled": true,
+                "xMultiplier": 1.0,
+                "yMultiplier": 1.0,
+                "zMultiplier": 0.7853981
+              }
+            },
+            "UnityEngine.ParticleSystemRenderer": {
+              "alignment": 0,
+              "renderMode": 1,
+              "sortMode": 1,
+              "lengthScale": 3.32,
+              "velocityScale": 0.0,
+              "cameraVelocityScale": 0.0,
+              "normalDirection": 1.0,
+              "shadowBias": 0.0,
+              "sortingFudge": 1000.0,
+              "minParticleSize": 0.0,
+              "maxParticleSize": 100.0
+            }
+          }
+        },
+        "GameObject|Stage_4": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            }
+          },
+          "GameObject|FX_CoilHeatup_4": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityLoop_4": {
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            },
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          }
+        },
+        "GameObject|Stage_3": {
+          "GameObject|FX_CoilHeatup_3": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_SparksBurst_3": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityBurst_3": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityLoop_3": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          }
+        },
+        "GameObject|Stage_2": {
+          "GameObject|FX_CoilHeatup_2": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_SparksBurst_2": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityBurst_2": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityLoop_2": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          }
+        },
+        "GameObject|Stage_1": {
+          "GameObject|FX_CoilHeatup_1": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_SparksBurst_1": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityBurst_1": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          },
+          "GameObject|FX_ElectricityLoop_1": {
+            "UnityEngine.ParticleSystem": {
+              "startDelay": 0.0,
+              "emissionRate": 0,
+              "emission":  {
+                "enabled": false
+              }
+            }
+          }
+        },
+        "UnityEngine.ParticleSystem": {
+          "startDelay": 0.0,
+          "loop": false,
+          "playOnAwake": true,
+          "duration": 0.3,
+          "playbackSpeed": 1.0,
+          "enableEmission": false,
+          "emissionRate": 200.0,
+          "startSpeed": 5.0,
+          "startSize": 3.0,
+          "startRotation": 3.1415925,
+          "startRotation3D": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 3.1415925
+          },
+          "startLifetime": 0.2,
+          "gravityModifier": 0.0,
+          "maxParticles": 1000,
+          "simulationSpace": 0,
+          "scalingMode": 2,
+          "shape": {
+            "box": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "meshScale": 1.0,
+            "randomDirection": false,
+            "enabled": false,
+            "shapeType": 6,
+            "randomDirectionAmount": 0.0,
+            "sphericalDirectionAmount": 0.0,
+            "randomPositionAmount": 0.0,
+            "alignToDirection": false,
+            "radius": 0.01,
+            "radiusMode": 0,
+            "radiusSpread": 0.0,
+            "radiusSpeedMultiplier": 1.0,
+            "radiusThickness": 1.0,
+            "angle": 8.918654,
+            "length": 5.0,
+            "arc": 360.0,
+            "arcMode": 0,
+            "arcSpread": 0.0,
+            "arcSpeedMultiplier": 1.0,
+            "donutRadius": 0.2
+          }
+        },
+        "UnityEngine.ParticleSystemRenderer": {
+          "alignment": 0,
+          "renderMode": 0,
+          "sortMode": 1,
+          "lengthScale": 2.0,
+          "velocityScale": 0.0,
+          "cameraVelocityScale": 0.0,
+          "normalDirection": 1.0,
+          "shadowBias": 0.0,
+          "sortingFudge": 1000.0,
+          "minParticleSize": 0.0,
+          "maxParticleSize": 100.0
+        },
+        "TeslaParticleSetup": {
+          "m_CoilStages": [
+            //"ModuleWeaponTeslaCoil.m_ParticleSetupPrefab/Stage_4/Transform.",
+            "ModuleWeaponTeslaCoil.m_ParticleSetupPrefab/Stage_Final/Transform."
+          ]
+        },
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "localEulerAngles": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+    }
+  }
+}

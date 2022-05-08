@@ -3,7 +3,7 @@
   "Description": "Heavy-load landing gear which only deploys its wheels when the Tech is near the ground, returning to its safe compartment during flight.",
   "ID": 911251,
   "PairedBlock": 911251,
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 3,

@@ -6,16 +6,16 @@
   "Faction": 0,
   "Category": 8, 
   "Grade": 4, 
-  "Price": 2694, 
-  "HP": 1300, 
-  "Mass": 4.5,
-  "CenterOfMass": {"x": 1.5, "y": 0.5, "z": 2.5},
+  "Price": 2856, 
+  "HP": 1200, 
+  "Mass": 4,
+  "CenterOfMass": {"x": 1.5, "y": 0, "z": 2},
   
   "Fragility": 0,
   "DamageableType": 0,
   "Rarity": 0,
 
-  "Recipe":  "1, 1, 1, 1, 9, 9, 43, 43, 44, 44, 45, 45, 52, 52",
+  "Recipe":  "1, 1, 1, 1, 9, 9, 9, 9, 44, 44, 45, 45, 52, 52",
   "IconName": "GT_Jumbo_Wing_Icon.png", 
   "MeshName": "GT_Jumbo_Wing.obj",
   "ColliderMeshName": "GT_Jumbo_Wing_Collider.obj",
@@ -29,26 +29,26 @@
   
   "APs": [ 
     {"x": 2, "y": -0.5, "z": 3},
-	{"x": 2, "y": -0.5, "z": 2},
-	{"x": 1, "y": -0.5, "z": 3},
-  {"x": 1, "y": -0.5, "z": 2},
-  {"x": -0.5, "y": 0, "z": 1},
-  {"x": -0.5, "y": 0, "z": 2},
-  {"x": -0.5, "y": 0, "z": 3},
-  {"x": -0.5, "y": 0, "z": 4},
-  {"x": 3.5, "y": 0, "z":1},
-  {"x": 3.5, "y": 0, "z": 2},
-  {"x": 3.5, "y": 0, "z": 3},
-  {"x": 3.5, "y": 0, "z":4}
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 3},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": -0.5, "y": 0, "z": 4},
+    {"x": 3.5, "y": 0, "z":1},
+    {"x": 3.5, "y": 0, "z": 2},
+    {"x": 3.5, "y": 0, "z": 3},
+    {"x": 3.5, "y": 0, "z":4}
   ],
   
   "GamePrefabReference": "VEN_Wing_Middle_312",
-  "KeepRenderers": true, 
+  "KeepRenderers": false, 
   "KeepColliders": false,
   "ReferenceOffset": {
-    "x": 0.17,
+    "x": 0.05,
     "y": 0,
-    "z": 3.5
+    "z": 1.6
   },
   "ReferenceRotationOffset": {
     "x": 0, // Pitch
@@ -56,9 +56,9 @@
     "z": 0  // Roll
   },
   "ReferenceScale": {
-    "x": 1.33,
+    "x": 1,
     "y": 1,
-    "z": 2.5
+    "z": 1
   },
 
   "SubObjects": [
@@ -66,22 +66,22 @@
   {
     "SubOverrideName": "m_VEN_Wing_Middle_312_Flap",
     "MeshName": "GT_Jumbo_Wing_Flap.obj",
-    "MakeBoxCollider": true,
+    "ColliderMeshName": "GT_Jumbo_Wing_Flap_Collider.obj",
     "MeshTextureName": "GreenTech 1.png", 
     "MeshGlossTextureName": "GreenTech 2.png", 
     "MeshEmissionTextureName": "GreenTech 3.png",
-    "SubPosition": { "x":  0, "y": -0.16, "z": -0.14},
+    "SubPosition": { "x":  -1.5, "y": 0, "z": 0},
     "SubRotation": {
       "x": 0,
       "y": 0,
       "z": 0
     },
-    "SubScale":  { "x":  0.752, "y": 1, "z": 0.4}
+    "SubScale":  { "x":  1, "y": 1, "z": 1}
 },
 
 {
   "SubOverrideName": "_pivot",
-  "SubPosition": { "x":  0, "y": 0.16, "z": 0.35 }
+  "SubPosition": { "x":  1.5, "y": 0, "z": 0.35 }
 },
 {
   "SubOverrideName": "m_VEN_Wing_Middle_312_Base",
@@ -89,36 +89,51 @@
 },
 {
   "SubOverrideName": "SmokeTrail",
-  "SubPosition": { "x":  3.5, "y": 0, "z": 0},
-    "SubRotation": {
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-},
-{
-  "SubOverrideName": "SmokeTrail (1)",
-  "SubPosition": { "x": 0, "y": 0, "z": 0},
+  "SubPosition": { "x":  3.4, "y": 0, "z": 0.4},
     "SubRotation": {
       "x": 0,
       "y": 0,
       "z": 0
     }
 }
+/* {
+  "SubOverrideName": "SmokeTrail (1)",
+  "SubPosition": { "x": -0.3, "y": 0.16, "z": 0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+} */
   ],
 
   "Deserializer": {
+    "GameObject|LiftLocator": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1.5,
+          "y": 0,
+          "z": 2
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
     "ModuleWing": {
       "m_Aerofoils": [{
-         "liftStrength": 3,
-          "flapAngleRangeVisual": 10,
-          "flapAngleRangeActual": 10,
+        "trans": "LiftLocator/Transform.",
+        "liftStrength": 4,
+        "flapAngleRangeVisual": 20,
+        "flapAngleRangeActual": 20,
         "flapTurnSpeed": 2
       }],
       "m_AttackAngleDamping": 10000.0,
-    "m_TrailMinVelocity": 14.0,
-    "m_TrailAlphaStrength": 0.02,
-    "m_TrailFadeSpeed": 0.1
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1
     }
   }
 }

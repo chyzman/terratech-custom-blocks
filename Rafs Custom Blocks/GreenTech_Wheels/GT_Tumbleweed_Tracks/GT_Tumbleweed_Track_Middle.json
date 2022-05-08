@@ -3,7 +3,7 @@
   "Description": "The Tumbleweed Tracks comes in left, right and middle pieces.\nWith these you can seamlessly build long and strong land vehicles, or even mobile operation bases for extensive expeditions.",
   "ID": 911137, 
   "PairedBlock": 911137,
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 1, 
   "Category": 3, 
   "Grade": 4, 

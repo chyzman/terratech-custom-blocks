@@ -1,0 +1,175 @@
+{
+  "Name": "GreenTech Compact Silo",
+  "Description": "A boxed-in silo that holds chunks tightly in short beams.",
+  "ID": 911259,
+
+  "Faction": 0, 
+  "Category": 7, 
+  "Grade": 2, 
+  "Price": 612, 
+  "HP": 4000, 
+  "Mass": 4,
+  "CenterOfMass": {"x": 0.5, "y": 0, "z": 0.5},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe": "1, 1, 5, 7, 13, 32, 32",  
+  "IconName": "GT_Compact_Silo_Icon.png", 
+  
+  "BlockExtents":{"x": 2,"y": 2, "z": 2}, 
+  
+   "APs": [ 
+    { "x": -0.5, "y": 0, "z": 0 },
+    { "x": -0.5, "y": 0, "z": 1 },
+    { "x": 1.5, "y": 0, "z": 0 },
+    { "x": 1.5, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": 1, "y": 0, "z": -0.5 },
+    { "x": 0, "y": 0, "z": 1.5 },
+    { "x": 1, "y": 0, "z": 1.5 },
+    { "x": 0, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": 0, "y": 1.5, "z": 0 },
+    { "x": 1, "y": 1.5, "z": 0 },
+    { "x": 0, "y": 1.5, "z": 1 },
+    { "x": 1, "y": 1.5, "z": 1 }
+  ],
+  
+  "GamePrefabReference": "VEN_Silo_212", 
+  "KeepRenderers": true,
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.95,
+    "y": 0.32,
+    "z": 0.9
+  },
+  "ReferenceScale": {
+    "x": 0.9,
+    "y": 0.9,
+    "z": 0.9
+  },
+  "SubObjects": [
+    {
+      "MeshName": "GT_Compact_Silo.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "SubPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "SubOverrideName": "AntennaFx",
+      "SubPosition": {
+        "x": 0.5,
+        "y": 0.33,
+        "z": -0.29
+      }
+    },
+  {
+  "MakeBoxCollider": true,
+  "SubPosition": { "x": 0.5, "y": -0.43, "z": 0.5 },
+  "SubScale": { "x": 1.6, "y": 0.14, "z": 1.6 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 0.5, "y": 1.45, "z": 0.5 },
+    "SubScale": { "x": 1.6, "y": 0.05, "z": 1.6 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": -0.45, "y": -0.15, "z": 0.5 },
+    "SubScale": { "x": 0.05, "y": 0.6, "z": 1.6 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 1.45, "y": -0.15, "z": 0.5 },
+    "SubScale": { "x": 0.05, "y": 0.6, "z": 1.6 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 0.5, "y": -0.15, "z": -0.45 },
+    "SubScale": { "x": 1.6, "y": 0.6, "z": 0.05 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 0.5, "y": -0.15, "z": 1.45},
+    "SubScale": { "x": 1.6, "y": 0.6, "z": 0.05 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": -0.4, "y": 0.5, "z": -0.4},
+    "SubScale": { "x": 0.2, "y": 1.8, "z": 0.2 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": -0.4, "y": 0.5, "z": 1.4},
+    "SubScale": { "x": 0.2, "y": 1.8, "z": 0.2 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 1.4, "y": 0.5, "z": -0.4},
+    "SubScale": { "x": 0.2, "y": 1.8, "z": 0.2 }
+  },
+  {
+    "MakeBoxCollider": true,
+    "SubPosition": { "x": 1.4, "y": 0.5, "z": 1.4},
+    "SubScale": { "x": 0.2, "y": 1.8, "z": 0.2 }
+  },
+  {
+    "SubOverrideName": "m_VEN_Silo_212",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_VEN_Silo_111_Antenna_B",
+    "MeshName": "GT_Stacker_Silo_Antenna.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+  },
+  {
+    "SubOverrideName": "m_VEN_Silo_111_Antenna_A",
+    "MeshName": "GT_Stacker_Silo_Antenna.obj", 
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+  }
+  ],
+
+ "JSONBLOCK": {
+  "RandomAdditions.ModuleItemFixedHolderBeam": {},
+
+  "GameObject|_anchor": null,
+  "ModuleAnchor": null,
+
+  "ModuleItemHolder": {
+      "m_CapacityPerStack": 4,
+      "m_AcceptFlags": 2,
+      "m_OverrideBasePositons": [
+        { "x": 0.1, "y": -0.35, "z": 0.1 },
+        { "x": 0.1, "y": -0.35, "z": 0.9 },
+        { "x": 0.9, "y": -0.35, "z": 0.1 },
+        { "x": 0.9, "y": -0.35, "z": 0.9 }
+      ],
+      "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7] } ]
+	},
+  "ModuleItemHolderBeam": {
+    "m_BeamBaseHeight": 0.1,
+    "m_BeamStrength":1000.0,
+    "m_HeightIncrementScale": 0.36
+  },
+  "ModuleItemStore": {"m_Capacity": 16}
+  }			
+}

@@ -1,7 +1,8 @@
 {
     "Name": "GreenTech Mobile Grasslands Biodome",
     "Description": "A compact biodome containing a very small grasslands patch.\nActs as a sustainable, mobile source of Fibron.\n The compact grasslands biome, unlike the larger anchored one, is much less resilient, confined to a very limited area and suffering the constant physical stress of movement. The high technology employed within makes it the most expensive biodome, despite its tiny size.",
-    "ID": 911221,
+    "ID": 911221, 
+    "RotationGroup": "GSOFabricator",
   
     "Faction": 1,
     "Category": 7, 
@@ -101,9 +102,7 @@
         },
         {
             "MeshName": "GT_Biodome_Terrain_M.obj",
-            "MeshTextureName": "TERRAIN_GRASS_01.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "TERRAIN_GRASS_01.png"
         },
         {
             "MeshName": "GT_Biodome_Grassland_Vegetation_M.obj",
@@ -111,9 +110,7 @@
         },
         {
             "MeshName": "GT_Biodome_Grassland_Rocks_M.obj",
-            "MeshTextureName": "SubObject_203_Clutter_TextureSheet_1.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "SubObject_203_Clutter_TextureSheet_1.png"
         }
     ],
 

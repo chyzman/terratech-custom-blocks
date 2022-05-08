@@ -1,0 +1,58 @@
+{
+  "Name": "GreenTech Hover Power Controller",
+  "Description": "Allows control of hover height via radial menu slider, from 0 to 2 times the default value. Can also simply turn them off.",
+  "ID": 911266, 
+
+  "Faction": 0,
+  "Category": 5, 
+  "Grade": 4, 
+  "Price": 3351, 
+  "HP": 300, 
+  "Mass": 1.25,
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "Recipe":  "43, 48, 52, 56",
+  "IconName": "GT_Hover_Power_Controller_Icon.png", 
+  "MeshName": "GT_Hover_Power_Controller.obj",
+  "ColliderMeshName": "GT_Gauge_Computer_Collider.obj",
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+   "BlockExtents":{"x": 1,"y": 1, "z": 1}, 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": -0.5, "y": 0, "z": 0},
+    {"x": 0.5, "y": 0, "z": 0}
+  ],
+  
+  "GamePrefabReference": "BF_Control_HoverPower_111",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "DeathExplosionReference":"GSO_Block_111",
+
+  "SubObjects": [
+    {
+    "SubOverrideName": "m_BF_Control_HoverPower_111_On",
+	  "MeshName": "GT_Hover_Power_Controller_LED.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+    }
+  ],
+
+  "JSONBLOCK": {
+  }
+}

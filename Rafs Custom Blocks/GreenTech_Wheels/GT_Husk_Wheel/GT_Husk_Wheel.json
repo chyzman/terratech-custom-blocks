@@ -3,7 +3,7 @@
   "Description": "The structure of the Husk Wheel comes with plenty of APs and a small hollow interior for carrying blocks within.",
   "ID": 911024, 
   "PairedBlock": 911024,
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 3, 

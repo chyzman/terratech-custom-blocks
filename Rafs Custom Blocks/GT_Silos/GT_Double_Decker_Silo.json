@@ -6,20 +6,20 @@
   "Faction": 0, 
   "Category": 7, 
   "Grade": 4, 
-  "Price": 1584, 
-  "HP": 12000, 
-  "Mass": 12,
-  "CenterOfMass": {"x": 0.5, "y": 1, "z": 1},
+  "Price": 2202, 
+  "HP": 16000, 
+  "Mass": 16,
+  "CenterOfMass": {"x": 0.5, "y": 1, "z": 1.5},
   
   "Fragility": 0,
   "DamageableType": 0,
   "Rarity": 0,
   "EmissionMode": 1,
 
-  "Recipe": "5, 5, 7, 7, 13, 13, 13, 32, 32, 32, 43, 43",  
+  "Recipe": "13, 13, 13, 13, 32, 32, 32, 32, 43, 43, 44, 45",  
   "IconName": "GT_Double_Decker_Silo_Icon.png", 
   
-  "BlockExtents":{"x": 2,"y": 4, "z": 3}, 
+  "BlockExtents":{"x": 2,"y": 4, "z": 4}, 
   
    "APs": [ 
     { "x": -0.5, "y": 0, "z": 0 },
@@ -34,14 +34,18 @@
     { "x": 1.5, "y": 0, "z": 2 },
     { "x": -0.5, "y": 2, "z": 2 },
     { "x": 1.5, "y": 2, "z": 2 },
+    { "x": -0.5, "y": 0, "z": 3 },
+    { "x": 1.5, "y": 0, "z": 3 },
+    { "x": -0.5, "y": 2, "z": 3 },
+    { "x": 1.5, "y": 2, "z": 3 },
     { "x": 0, "y": 0, "z": -0.5 },
     { "x": 1, "y": 0, "z": -0.5 },
-    { "x": 0, "y": 0, "z": 2.5 },
-    { "x": 1, "y": 0, "z": 2.5 }, 
+    { "x": 0, "y": 0, "z": 3.5 },
+    { "x": 1, "y": 0, "z": 3.5 }, 
     { "x": 0, "y": 2, "z": -0.5 },
     { "x": 1, "y": 2, "z": -0.5 },
-    { "x": 0, "y": 2, "z": 2.5 },
-    { "x": 1, "y": 2, "z": 2.5 },
+    { "x": 0, "y": 2, "z": 3.5 },
+    { "x": 1, "y": 2, "z": 3.5 },
     { "x": 0, "y": -0.5, "z": 0 },
     { "x": 1, "y": -0.5, "z": 0 },
     { "x": 0, "y": -0.5, "z": 1 },
@@ -53,7 +57,11 @@
     { "x": 0, "y": -0.5, "z": 2 },
     { "x": 1, "y": -0.5, "z": 2 },
     { "x": 0, "y": 3.5, "z": 2 },
-    { "x": 1, "y": 3.5, "z": 2 }
+    { "x": 1, "y": 3.5, "z": 2 },
+    { "x": 0, "y": -0.5, "z": 3 },
+    { "x": 1, "y": -0.5, "z": 3 },
+    { "x": 0, "y": 3.5, "z": 3 },
+    { "x": 1, "y": 3.5, "z": 3 }
   ],
   
   "GamePrefabReference": "VEN_Silo_212", 
@@ -96,23 +104,23 @@
     },
   {
   "MakeBoxCollider": true,
-  "SubPosition": { "x": 0.5, "y": -0.3, "z": 1 },
-  "SubScale": { "x": 1.6, "y": 0.4, "z": 2.6 }
+  "SubPosition": { "x": 0.5, "y": -0.3, "z": 1.5 },
+  "SubScale": { "x": 1.6, "y": 0.4, "z": 3.6 }
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": 0.5, "y": 3.45, "z": 1 },
-    "SubScale": { "x": 1.6, "y": 0.05, "z": 2.6 }
+    "SubPosition": { "x": 0.5, "y": 3.45, "z": 1.5 },
+    "SubScale": { "x": 1.6, "y": 0.05, "z": 3.6 }
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": -0.45, "y": 1.85, "z": 1 },
-    "SubScale": { "x": 0.05, "y": 0.6, "z": 2.6 }
+    "SubPosition": { "x": -0.45, "y": 1.85, "z": 1.5 },
+    "SubScale": { "x": 0.05, "y": 0.6, "z": 3.6 }
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": 1.45, "y": 1.85, "z": 1 },
-    "SubScale": { "x": 0.05, "y": 0.6, "z": 2.6 }
+    "SubPosition": { "x": 1.45, "y": 1.85, "z": 1.5 },
+    "SubScale": { "x": 0.05, "y": 0.6, "z": 3.6 }
   },
   {
     "MakeBoxCollider": true,
@@ -121,7 +129,7 @@
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": 0.5, "y": 1.85, "z": 2.45},
+    "SubPosition": { "x": 0.5, "y": 1.85, "z": 3.45},
     "SubScale": { "x": 1.6, "y": 0.6, "z": 0.05 }
   },
   {
@@ -131,7 +139,7 @@
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": -0.4, "y": 1.5, "z": 2.4},
+    "SubPosition": { "x": -0.4, "y": 1.5, "z": 3.4},
     "SubScale": { "x": 0.2, "y": 3.8, "z": 0.2 }
   },
   {
@@ -141,7 +149,7 @@
   },
   {
     "MakeBoxCollider": true,
-    "SubPosition": { "x": 1.4, "y": 1.5, "z": 2.4},
+    "SubPosition": { "x": 1.4, "y": 1.5, "z": 3.4},
     "SubScale": { "x": 0.2, "y": 3.8, "z": 0.2 }
   },
   {
@@ -165,7 +173,7 @@
   ],
 
  "JSONBLOCK": {
-
+  "RandomAdditions.ModuleItemFixedHolderBeam": {},
 
   "GameObject|_anchor": null,
   "ModuleAnchor": null,
@@ -174,20 +182,22 @@
       "m_CapacityPerStack": 7,
       "m_AcceptFlags": 2,
       "m_OverrideBasePositons": [
-        { "x": 0, "y": -0.1, "z": 0 },
-        { "x": 0, "y": -0.1, "z": 1 },
-        { "x": 1, "y": -0.1, "z": 0 },
-        { "x": 1, "y": -0.1, "z": 1 },
-        { "x": 0, "y": -0.1, "z": 2 },
-        { "x": 1, "y": -0.1, "z": 2 }
+        { "x": 0.1, "y": -0.1, "z": 0.1 },
+        { "x": 0.9, "y": -0.1, "z": 0.1 },
+        { "x": 0.1, "y": -0.1, "z": 1 }, 
+        { "x": 0.9, "y": -0.1, "z": 1 },
+        { "x": 0.1, "y": -0.1, "z": 2 },
+        { "x": 0.9, "y": -0.1, "z": 2 },
+        { "x": 0.1, "y": -0.1, "z": 2.9 },
+        { "x": 0.9, "y": -0.1, "z": 2.9 }
       ],
-      "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] } ]
+      "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] } ]
 	},
   "ModuleItemHolderBeam": {
     "m_BeamBaseHeight": 0.25,
     "m_BeamStrength": 1000.0,
     "m_HeightIncrementScale": 0.4
   },
-  "ModuleItemStore": {"m_Capacity": 42}
+  "ModuleItemStore": {"m_Capacity": 56}
   }			
 }

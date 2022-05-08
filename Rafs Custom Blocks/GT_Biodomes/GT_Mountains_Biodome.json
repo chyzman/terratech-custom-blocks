@@ -1,7 +1,8 @@
 {
     "Name": "GreenTech Anchored Mountains Biodome",
     "Description": "A biodome containing a small mountains patch.\nActs as a sustainable source of Luxite. The crystals are harvested in an underground chamber as it grows and regrows from a symbiotic relation with the trees.\n The mountains biome is not a needy one, however, in order to get optimal Luxite symbiotic growth the biodome conditions need to be highly stable, demanding a quick-response support system and making it somewhat expensive.",
-    "ID": 911219, 
+    "ID": 911219,  
+    "RotationGroup": "GSOFabricator",
   
     "Faction": 1, 
     "Category": 7, 
@@ -160,9 +161,7 @@
         },
         {
             "MeshName": "GT_Biodome_Terrain.obj",
-            "MeshTextureName": "TERRAIN_ROCK_02.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "TERRAIN_ROCK_02.png"
         },
         {
             "MeshName": "GT_Biodome_Mountains_Vegetation_Rocks.obj",

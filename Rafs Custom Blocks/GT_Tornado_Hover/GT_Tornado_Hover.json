@@ -2,7 +2,7 @@
   "Name": "GreenTech Tornado Hover",
   "Description": "An odd creation of the weather research department, the Tornado Hover creates a rotating collumn of air to generate propulsion above the ground. A sophisticated ion-pressure modulator can be activated to create even more powerful funneled winds, flinging debris around and ripping trees and Techs apart.",
   "ID": 911118, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0, 
   "Category": 8, 
   "Grade": 4, 

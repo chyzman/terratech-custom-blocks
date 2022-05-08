@@ -2,6 +2,7 @@
     "Name": "GreenTech Anchored Grasslands Biodome",
     "Description": "A biodome containing a small grasslands patch.\nActs as a sustainable source of Fibron, extracted carefully from the roots of the trees.\n The grasslands biome is lush and highly stable, demanding very little care and making it the cheapest biodome; a great starting point for any prospector trying to go green.",
     "ID": 911217, 
+    "RotationGroup": "GSOFabricator",
   
     "Faction": 1, 
     "Category": 7, 
@@ -160,9 +161,7 @@
         },
         {
             "MeshName": "GT_Biodome_Terrain.obj",
-            "MeshTextureName": "TERRAIN_GRASS_01.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "TERRAIN_GRASS_01.png"
         },
         {
             "MeshName": "GT_Biodome_Grassland_Vegetation.obj",
@@ -170,9 +169,7 @@
         },
         {
             "MeshName": "GT_Biodome_Grassland_Rocks.obj",
-            "MeshTextureName": "SubObject_203_Clutter_TextureSheet_1.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "SubObject_203_Clutter_TextureSheet_1.png"
         }
     ],
 

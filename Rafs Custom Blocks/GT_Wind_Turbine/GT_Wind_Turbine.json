@@ -2,7 +2,7 @@
     "Name": "GreenTech Anchored Wind Turbine",
     "Description": "A reliable source of constant wind power energy, which for safety reasons only generates power when firmly anchored (it will spin loosely if attached to an unanchored Tech).\nAlso comes with a battery and a wireless charger, for transfering energy to nearby power lines or Techs passing by.",
     "ID": 911215, 
-  
+    "RotationGroup": "GSOFabricator",
     "Faction": 1, 
     "Category": 6, 
     "Grade": 3,
@@ -232,10 +232,11 @@
         "ModuleEnergy": {
             "m_OutputPerSecond": 200,
             "m_OutputEnergyType": 0,
-            "m_OutputConditions": 1,
+            "m_OutputConditions": 1,//8
             "m_SequentialPowerUp": false,
             "m_PowerUpDelay": 2.0,
             "m_GeneratingSFXType": 0
+            //"m_ThermalGroundRadius": 1.60000229,
         },
 
         //Anchor

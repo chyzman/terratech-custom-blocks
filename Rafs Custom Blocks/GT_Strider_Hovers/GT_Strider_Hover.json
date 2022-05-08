@@ -3,7 +3,7 @@
   "Description": "The Strider Hover has an unique leg-like design which raises the Tech and provides ground clearance, despite the hovering height being quite low. Also comes with impact bumpers around the hovers to protect it from eventual terrain collision.",
   "ID": 911237,
   "PairedBlock": 911237,  
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 8, 
   "Grade": 4, 

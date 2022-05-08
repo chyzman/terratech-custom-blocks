@@ -1,8 +1,9 @@
 {
   "Name": "GreenTech Terra Wheel",
   "Description": "The gargantuan Terra Wheel is one of the largest wheel models ever built. A light but highly sophisticated wooden structure holds it together while strong built-in engines work to rotate the giant tire.\nIt was born from a collaboration between scientists and environmental organizations in efforts to provide a green alternative to the highly popular Behemoth Wheel, which creates miles and miles of new tire dumps every year.",
-  "ID": 911090, 
-
+  "ID": 911090,
+  "PairedBlock": 911090, 
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 4, 

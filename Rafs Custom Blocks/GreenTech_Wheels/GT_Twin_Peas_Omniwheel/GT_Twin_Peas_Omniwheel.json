@@ -3,7 +3,7 @@
   "Description": "A couple omniwheels in a pod, which can make your tech turn fast and also strafe.",
   "ID": 911026,
   "PairedBlock": 911026,  
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 2, 

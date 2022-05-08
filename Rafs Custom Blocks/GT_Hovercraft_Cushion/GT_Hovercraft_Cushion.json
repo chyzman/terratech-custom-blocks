@@ -1,6 +1,8 @@
 {
 	"Name": "GreenTech Hovercraft Cushion",
 	"ID": 911039,
+	"PairedBlock": 911039,
+	"RotationGroup": "GSOFabricator",
 	"Faction": 0,
 	"Category": 8,
 	"Grade": 2,

@@ -26,28 +26,28 @@
   "CellMap":
   [
     [
-      "xxx ",
+      "xx  ",
+      " xx ",
       "  xx",
-      "   x",
       "   x"
     ],
     [
       "xx  ",
-      " xx ",
+      "xxx ",
       "  xx",
       "  xx"
     ],
     [
-      "x   ",
+      "    ",
+      "xx  ",
       "xxx ",
-      " xx ",
-      " xxx"
+      " xx "
     ],
     [
       "    ",
-      "x   ",
+      "    ",
       "xx  ",
-      "xxx "
+      "xx  "
     ]
 ], 
   "APs": [
@@ -80,6 +80,6 @@
     {
       "MeshName": "GT_Large_Greenhouse_Block_Corner_Glass.obj",
       "MeshMaterialName": "ObjectHighlight"
-    },
+    }
   ]
 }

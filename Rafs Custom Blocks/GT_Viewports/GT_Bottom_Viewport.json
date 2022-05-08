@@ -2,7 +2,7 @@
   "Name": "GreenTech Bottom Viewport Dome",
   "Description": "Reinforced glass dome with an additional layer of strong glass for someone to stand on and look through to see the world below.\nPress 'R' to cycle cameras.",
   "ID": 911203, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0, 
   "Category": 5, 
   "Grade": 2, 

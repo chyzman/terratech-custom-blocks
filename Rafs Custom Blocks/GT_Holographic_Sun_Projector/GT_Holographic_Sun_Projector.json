@@ -2,7 +2,7 @@
   "Name": "GreenTech Holographic Sun Projector",
   "Description": "An holographic representation of the Sun which creates a powerful light, capable of iluminating the entire surroundings of a tech as if it was daytime.\nThe low-radiation light created by the hologram cannot power solar panels.",
   "ID": 911131, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0, 
   "Category": 5, 
   "Grade": 4, 

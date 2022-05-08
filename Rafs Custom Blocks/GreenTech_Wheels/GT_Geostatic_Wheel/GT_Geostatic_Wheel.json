@@ -3,7 +3,7 @@
   "Description": "A wheel with strong attraction to the terrain, preventing Tech destabilization and unwanted flights.\nThe coils around the wheel acts as a powerful electrostatic generator, creating an effect akin to hovering but negative. Can be managed by hover control systems.",
   "ID": 911194,
   "PairedBlock": 911194,
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3,
   "Grade": 3, 

@@ -1,0 +1,289 @@
+{
+  "Name": "GreenTech Jumbo Tail Rudder",
+  "Description": "A massive rudder for large planes and other oversized aircrafts.",
+  "ID": 911270, 
+
+  "Faction": 0,
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 5208, 
+  "HP": 2000, 
+  "Mass": 6,
+  "CenterOfMass": {"x": 0.5, "y": 1, "z": 2},
+  
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+
+  "Recipe":  "1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 9, 9, 44, 44, 44, 44, 45, 45, 45, 45, 52, 52, 52, 52",
+  "IconName": "GT_Jumbo_Tail_Rudder_Icon.png", 
+  "MeshName": "GT_Jumbo_Tail_Rudder.obj",
+  "ColliderMeshName": "GT_Jumbo_Tail_Rudder_Collider.obj",
+  "SupressBoxColliderFallback": true,
+  
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+	[
+    "xx",
+    "xx",
+    "xx",
+    "xx"
+  ],
+  [
+    "xx",
+    "xx",
+    "xx",
+    "xx"
+  ],
+  [
+    "xx",
+    "xx",
+    "xx",
+    "xx"
+  ],
+  [
+    "xx",
+    "xx",
+    "xx",
+    "xx"
+  ],
+  [
+    "  ",
+    "xx",
+    "xx",
+    "xx"
+  ]
+], 
+  
+  "APs": [ 
+    {"x": 0, "y": -0.5, "z": 1},
+    {"x": 0, "y": -0.5, "z": 2},
+    {"x": 0, "y": -0.5, "z": 3},
+    {"x": 0, "y": -0.5, "z": 4},
+    {"x": 1, "y": -0.5, "z": 1},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 3},
+    {"x": 1, "y": -0.5, "z": 4},
+    {"x": 0, "y": 3.5, "z": 1},
+    {"x": 0, "y": 3.5, "z": 2},
+    {"x": 1, "y": 3.5, "z": 1},
+    {"x": 1, "y": 3.5, "z": 2}
+  ],
+  
+  "GamePrefabReference": "BF_Wing_Tail_532",
+  "KeepRenderers": true, 
+  "KeepColliders": false,
+  "ReferenceOffset": {
+    "x": 0.5,
+    "y": 1.5,
+    "z": 0
+  },
+  "ReferenceRotationOffset": {
+    "x": 0, // Pitch
+    "y": 0, // Yaw
+    "z": 90  // Roll
+  },
+
+
+  "SubObjects": [
+    
+    {
+      "SubOverrideName": "m_BF_Wing_Tail_332_Wings_V",
+      "MeshName": "GT_Jumbo_Tail_Rudder_Flap.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png",
+      "SubPosition": { "x":  -4.5, "y": 0, "z": 0},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": -90
+      },
+      "SubScale": {
+        "x": -1,
+        "y": 1,
+        "z": 10
+      }
+  },
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Wings_H",
+    "MeshName": "GT_Jumbo_Tail_Rudder_Flap.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png",
+    "SubPosition": { "x":  -4.9, "y": 0, "z": 0},
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": -90
+    },
+    "SubScale": {
+      "x": 1,
+      "y": 1,
+      "z": 10
+    }
+  },
+  {
+    "SubOverrideName": "_Pivot1",
+    "DestroyExistingRenderer": true,
+    "SubPosition": { "x":  0, "y": 4.9, "z": 0.35 },
+    "SubScale": {
+      "x": 1,
+      "y": 1,
+      "z": 0.1
+    }
+  },
+  {
+    "SubOverrideName": "_Pivot2",
+    "DestroyExistingRenderer": true,
+    "SubPosition": { "x":  1, "y": 4.5, "z": 0.35 },
+    "SubRotation": {
+      "x": 0,
+      "y": 0,
+      "z": 90
+    },
+    "SubScale": {
+      "x": 1,
+      "y": 1,
+      "z": 0.1
+    }
+  },
+
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Base",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Arm_4",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Arm_3",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Arm_2",
+    "DestroyExistingRenderer": true
+  },
+  {
+    "SubOverrideName": "m_BF_Wing_Tail_332_Arm_1",
+    "DestroyExistingRenderer": true
+  }
+    ],
+
+  "Deserializer": {
+    "GameObject|_Pivot1": {
+      "GameObject|SmokeTrail": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": -5.2,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }/* 
+      "GameObject|SmokeTrail (1)": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 3.3,
+            "z": 0
+          }
+        }
+      } */
+    },
+    "GameObject|_Pivot2": {
+      "GameObject|SmokeTrail": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": -4.8,
+            "y": 0,
+            "z": 0
+          }
+        }
+      }
+      /* "GameObject|SmokeTrail (1)": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0,
+            "y": 3.3,
+            "z": 0
+          }
+        }
+      } */
+    },
+    /* "GameObject|Pivot2ForceApplicationPoint": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1,
+          "z": 2
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+         },
+         "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+         }
+       }
+    }, */
+    "GameObject|LiftLocator1": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 1,
+          "y": 1,
+          "z": 2
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+        }
+      }
+    },
+    "GameObject|LiftLocator2": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 1,
+          "z": 2
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+        }
+      }
+    },
+    "ModuleWing": {
+      "m_Aerofoils": [
+        {
+          "trans": "LiftLocator1/Transform.",
+          "liftStrength": 10,
+          "flapAngleRangeVisual": 20,
+          "flapAngleRangeActual": 20,
+          "flapTurnSpeed": 2
+        },
+        {
+          "trans": "LiftLocator2/Transform.",
+          "liftStrength": 10,
+          "flapAngleRangeVisual": 20,
+          "flapAngleRangeActual": 20,
+          "flapTurnSpeed": 2
+        }
+    ],
+      "m_AttackAngleDamping": 10000.0,
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1
+    }
+  }
+}

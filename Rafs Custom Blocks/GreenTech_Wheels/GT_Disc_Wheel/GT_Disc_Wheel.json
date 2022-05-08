@@ -3,6 +3,7 @@
   "Description": "Although not very maneuverable or fast, the Disc Wheel is a small powerhouse of GreenTech, also durable and easily stackable to make long rollers.",
   "ID": 911129,
   "PairedBlock": 911129,
+  "RotationGroup": "GSOFabricator",
 
   "Faction": 0,
   "Category": 3, 

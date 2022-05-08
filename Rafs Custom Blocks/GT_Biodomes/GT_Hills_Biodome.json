@@ -1,7 +1,8 @@
 {
     "Name": "GreenTech Anchored Hills Biodome",
     "Description": "A biodome containing a small rocky ridge patch.\nActs as a sustainable, variable source of Fibron, Rubber and Luxite, utilizing many methods to syphon those from the soil and roots of the trees.\n The hills biome is complex and diversified, a sophisticated caretaking system is required to keep it stable in such small artificial environment.",
-    "ID": 911220,
+    "ID": 911220, 
+    "RotationGroup": "GSOFabricator",
   
     "Faction": 1, 
     "Category": 7, 
@@ -160,9 +161,7 @@
         },
         {
             "MeshName": "GT_Biodome_Terrain.obj",
-            "MeshTextureName": "TERRAIN_GRASS_02.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "TERRAIN_GRASS_02.png"
         },
         {
             "MeshName": "GT_Biodome_Hills_Vegetation_Rocks.obj",

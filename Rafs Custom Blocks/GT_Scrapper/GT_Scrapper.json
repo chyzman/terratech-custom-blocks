@@ -2,7 +2,7 @@
   "Name": "GreenTech Mobile All-Block Scrapper",
   "Description": "A scrapper that can scrap any block, on the move.\n\nFollowing public pressure for a better resolution to the galactic trash problem, the Corporations joined with GreenTech to create this complex mobile recycling machine. Environment cleaning operations are now switfly returning many worlds to their natural state, and in a very lucrative way.",
   "ID": 911234,
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 7, 
   "Grade": 4,

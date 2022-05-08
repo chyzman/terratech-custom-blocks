@@ -157,7 +157,7 @@
   ],
 
  "JSONBLOCK": {
-
+  "RandomAdditions.ModuleItemFixedHolderBeam": {},
 
   "GameObject|_anchor": null,
   "ModuleAnchor": null,
@@ -166,16 +166,16 @@
       "m_CapacityPerStack": 7,
       "m_AcceptFlags": 2,
       "m_OverrideBasePositons": [
-        { "x": 0, "y": -0.1, "z": 0 },
-        { "x": 0, "y": -0.1, "z": 1 },
-        { "x": 1, "y": -0.1, "z": 0 },
-        { "x": 1, "y": -0.1, "z": 1 }
+        { "x": 0.1, "y": -0.1, "z": 0.1 },
+        { "x": 0.1, "y": -0.1, "z": 0.9 },
+        { "x": 0.9, "y": -0.1, "z": 0.1 },
+        { "x": 0.9, "y": -0.1, "z": 0.9 }
       ],
       "m_OverrideAPConnections": [ { "indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] } ]
 	},
   "ModuleItemHolderBeam": {
     "m_BeamBaseHeight": 0.25,
-    "m_BeamStrength": 1000.0,
+    "m_BeamStrength":1000.0,
     "m_HeightIncrementScale": 0.4
   },
   "ModuleItemStore": {"m_Capacity": 28}

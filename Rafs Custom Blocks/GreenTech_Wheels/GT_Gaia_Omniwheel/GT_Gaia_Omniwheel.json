@@ -3,7 +3,7 @@
   "Description": "A huge spherical omniwheel magnetized to a support, for 'riding around the world' in any direction you feel like.",
   "ID": 911083, 
   "PairedBlock": 911083, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 4, 

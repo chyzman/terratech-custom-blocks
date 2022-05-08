@@ -6,104 +6,99 @@
   "Faction": 0,
   "Category": 8, 
   "Grade": 4, 
-  "Price": 8220, 
+  "Price": 9396, 
   "HP": 4000, 
-  "Mass": 14,
-  "CenterOfMass": {"x": 5.5, "y": 0.5, "z": 1.5},
+  "Mass": 12,
+  "CenterOfMass": {"x": 4, "y": 0, "z": 2},
   
   "Fragility": 0,
   "DamageableType": 0,
   "Rarity": 0,
 
-  "Recipe":  "1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 44, 44, 52, 52, 52, 52, 54, 54, 57, 57",
+  "Recipe":  "44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 52, 52, 52, 52, 52, 52, 56, 57",
   "IconName": "GT_Jumbo_Wing_Left_Icon.png", 
-  "MeshName": "GT_Jumbo_Wing_Left.obj",
-  "ColliderMeshName": "GT_Jumbo_Wing_Left_Collider.obj",
-  "SupressBoxColliderFallback": true,
-  
-  "MeshTextureName": "GreenTech 1.png", 
-  "MeshGlossTextureName": "GreenTech 2.png", 
-  "MeshEmissionTextureName": "GreenTech 3.png",
- 
+
   "Cells": [ 
     { "x": 0, "y": 0, "z": 0 },
     { "x": 1, "y": 0, "z": 0 },
-	{ "x": 2, "y": 0, "z": 0 },
+	  { "x": 2, "y": 0, "z": 0 },
     { "x": 3, "y": 0, "z": 0 },
-	{ "x": 4, "y": 0, "z": 0 },
+	  { "x": 4, "y": 0, "z": 0 },
     { "x": 5, "y": 0, "z": 0 },
-	{ "x": 6, "y": 0, "z": 0 },
+	  { "x": 6, "y": 0, "z": 0 },
     { "x": 7, "y": 0, "z": 0 },
-	{ "x": 8, "y": 0, "z": 0 },
+	  { "x": 8, "y": 0, "z": 0 },
     { "x": 9, "y": 0, "z": 0 },
-	{ "x": 10, "y": 0, "z": 0 },
+  	{ "x": 10, "y": 0, "z": 0 },
     { "x": 11, "y": 0, "z": 0 },
-	{ "x": 0, "y": 0, "z": 1 },
+  	{ "x": 0, "y": 0, "z": 1 },
     { "x": 1, "y": 0, "z": 1 },
-	{ "x": 2, "y": 0, "z": 1 },
+  	{ "x": 2, "y": 0, "z": 1 },
     { "x": 3, "y": 0, "z": 1 },
-	{ "x": 4, "y": 0, "z": 1 },
+  	{ "x": 4, "y": 0, "z": 1 },
     { "x": 5, "y": 0, "z": 1 },
-	{ "x": 6, "y": 0, "z": 1 },
+  	{ "x": 6, "y": 0, "z": 1 },
     { "x": 7, "y": 0, "z": 1 },
-	{ "x": 8, "y": 0, "z": 1 },
+  	{ "x": 8, "y": 0, "z": 1 },
     { "x": 9, "y": 0, "z": 1 },
-	{ "x": 10, "y": 0, "z": 1 },
+  	{ "x": 10, "y": 0, "z": 1 },
     { "x": 11, "y": 0, "z": 1 },
-	{ "x": 0, "y": 0, "z": 2 },
+  	{ "x": 0, "y": 0, "z": 2 },
     { "x": 1, "y": 0, "z": 2 },
-	{ "x": 2, "y": 0, "z": 2 },
+  	{ "x": 2, "y": 0, "z": 2 },
     { "x": 3, "y": 0, "z": 2 },
-	{ "x": 4, "y": 0, "z": 2 },
+  	{ "x": 4, "y": 0, "z": 2 },
     { "x": 5, "y": 0, "z": 2 },
-	{ "x": 6, "y": 0, "z": 2 },
+  	{ "x": 6, "y": 0, "z": 2 },
     { "x": 7, "y": 0, "z": 2 },
-	{ "x": 8, "y": 0, "z": 2 },
+  	{ "x": 8, "y": 0, "z": 2 },
     { "x": 9, "y": 0, "z": 2 },
-	{ "x": 10, "y": 0, "z": 2 },
+  	{ "x": 10, "y": 0, "z": 2 },
     { "x": 11, "y": 0, "z": 2 },
-	{ "x": 0, "y": 0, "z": 3 },
+  	{ "x": 0, "y": 0, "z": 3 },
     { "x": 1, "y": 0, "z": 3 },
-	{ "x": 2, "y": 0, "z": 3 },
+  	{ "x": 2, "y": 0, "z": 3 },
     { "x": 3, "y": 0, "z": 3 },
-	{ "x": 4, "y": 0, "z": 3 },
+  	{ "x": 4, "y": 0, "z": 3 },
     { "x": 5, "y": 0, "z": 3 },
-	{ "x": 6, "y": 0, "z": 3 },
+  	{ "x": 6, "y": 0, "z": 3 },
     { "x": 7, "y": 0, "z": 3 },
-	{ "x": 8, "y": 0, "z": 3 },
+  	{ "x": 8, "y": 0, "z": 3 },
     { "x": 9, "y": 0, "z": 3 },
-	{ "x": 10, "y": 0, "z": 3 },
+  	{ "x": 10, "y": 0, "z": 3 },
     { "x": 11, "y": 0, "z": 3 },
-	{ "x": 0, "y": 0, "z": 4 },
+  	{ "x": 0, "y": 0, "z": 4 },
     { "x": 1, "y": 0, "z": 4 },
-	{ "x": 2, "y": 0, "z": 4 },
+  	{ "x": 2, "y": 0, "z": 4 },
     { "x": 3, "y": 0, "z": 4 },
-	{ "x": 4, "y": 0, "z": 4 },
+  	{ "x": 4, "y": 0, "z": 4 },
     { "x": 5, "y": 0, "z": 4 },
-	{ "x": 6, "y": 0, "z": 4 },
+  	{ "x": 6, "y": 0, "z": 4 },
     { "x": 7, "y": 0, "z": 4 },
-	{ "x": 8, "y": 0, "z": 4 },
-	{ "x": 11, "y": 0, "z": -1 }
+    { "x": 8, "y": 0, "z": 4 },
+    { "x": 11, "y": 0, "z": -1 },
+    { "x": 10, "y": 0, "z": -1 },
+    { "x": 9, "y": 0, "z": -1 }
   ],
   
   "APs": [ 
     {"x": 2, "y": -0.5, "z": 3},
-	{"x": 2, "y": -0.5, "z": 2},
-	{"x": 1, "y": -0.5, "z": 3},
-  {"x": 1, "y": -0.5, "z": 2},
-  {"x": -0.5, "y": 0, "z": 1},
-  {"x": -0.5, "y": 0, "z": 2},
-  {"x": -0.5, "y": 0, "z": 3},
-  {"x": -0.5, "y": 0, "z": 4}
+    {"x": 2, "y": -0.5, "z": 2},
+    {"x": 1, "y": -0.5, "z": 3},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": -0.5, "y": 0, "z": 1},
+    {"x": -0.5, "y": 0, "z": 2},
+    {"x": -0.5, "y": 0, "z": 3},
+    {"x": -0.5, "y": 0, "z": 4}
   ],
   
   "GamePrefabReference": "VEN_Wing_Middle_312",
   "KeepRenderers": true, 
   "KeepColliders": false,
   "ReferenceOffset": {
-    "x": 1.5,
+    "x": 0.05,
     "y": 0,
-    "z": 3.5
+    "z": 1.6
   },
   "ReferenceRotationOffset": {
     "x": 0, // Pitch
@@ -117,49 +112,55 @@
   },
 
   "SubObjects": [
-    
-  {
-    "SubOverrideName": "m_VEN_Wing_Middle_312_Flap",
-    "DestroyExistingRenderer": true
-},
-{
-  "SubOverrideName": "m_VEN_Wing_Middle_312_Base",
-  "DestroyExistingRenderer": true
-},
-{
-  "SubOverrideName": "SmokeTrail",
-  "SubPosition": { "x":  11.0, "y": 0, "z": 0},
-    "SubRotation": {
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-},
-{
-  "SubOverrideName": "SmokeTrail (1)",
-  "SubPosition": { "x": 0, "y": 0, "z": 0},
-    "SubRotation": {
-      "x": 0,
-      "y": 0,
-      "z": 0
-    }
-},
-{
-    "SubOverrideName": "m_GSO_Fan_Blades_212",
-   "MeshName": "GT_Jumbo_Wing_Left_Prop.obj",
+    {
+      "MeshName": "GT_Jumbo_Wing_Left.obj",
+      "ColliderMeshName": "GT_Jumbo_Wing_Left_Collider.obj",
       "MeshTextureName": "GreenTech 1.png", 
       "MeshGlossTextureName": "GreenTech 2.png", 
-      "MeshEmissionTextureName": "GreenTech 3.png",
-}
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    },
+    {
+      "SubOverrideName": "m_VEN_Wing_Middle_312_Flap",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "m_VEN_Wing_Middle_312_Base",
+      "DestroyExistingRenderer": true
+    },
+    {
+      "SubOverrideName": "SmokeTrail",
+      "SubPosition": { "x":  11.4, "y": 0, "z": 0.4},
+      "SubRotation": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      }
+    },
+    /* {
+      "SubOverrideName": "SmokeTrail (1)",
+      "SubPosition": { "x": -0.3, "y": 0, "z": -0.3},
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }, */
+    {
+      "SubOverrideName": "m_GSO_Fan_Blades_212",
+      "MeshName": "GT_Jumbo_Wing_Left_Prop.obj",
+      "MeshTextureName": "GreenTech 1.png", 
+      "MeshGlossTextureName": "GreenTech 2.png", 
+      "MeshEmissionTextureName": "GreenTech 3.png"
+    }
   ],
 
   "Deserializer": {
     "Reference|GSO_Fan_221/_spinner": {
       "UnityEngine.Transform": {
         "localPosition": {
-          "x": 7.05,
+          "x": 7,
           "y": 0,
-          "z": 1.8
+          "z": 2
         },
         "localEulerAngles": {
           "x": -90,
@@ -170,27 +171,27 @@
       "GameObject|m_GSO_Fan_Blades_212": {
         "UnityEngine.Transform": {
           "localPosition": {
-            "x": -7.05,
-            "y": -1.8,
-            "z": 0,
+            "x": 0,
+            "y": 0,
+            "z": 0
           },
           "localEulerAngles": {
             "x": -90,
             "y": 0,
             "z": 0
           }
-        },
+        }
       },
       "Spinner": {
-        "m_SpinUpTime": 1.0,
+        "m_SpinUpTime": 1.0
       }
     },
   "Reference|GSO_Fan_221/_fanJet": {
           "UnityEngine.Transform": {
             "localPosition": {
-              "x": 7.05,
+              "x": 7,
               "y": 0,
-              "z": 1.8
+              "z": 2
             },
             "localEulerAngles": {
               "x": 90,
@@ -209,17 +210,32 @@
 		 "Reference|GSO_Fan_221/ModuleBooster.": {
       "m_BoosterAudioType": 3
     },
+    "GameObject|LiftLocator": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 7,
+          "y": 0,
+          "z": 2
+        },
+        "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    },
     "ModuleWing": {
       "m_Aerofoils": [{
-         "liftStrength": 9,
-          "flapAngleRangeVisual": 0,
-          "flapAngleRangeActual": 0,
+        "trans": "LiftLocator/Transform.",
+        "liftStrength": 12,
+        "flapAngleRangeVisual": 0,
+        "flapAngleRangeActual": 0,
         "flapTurnSpeed": 0
       }],
       "m_AttackAngleDamping": 10000.0,
-    "m_TrailMinVelocity": 14.0,
-    "m_TrailAlphaStrength": 0.02,
-    "m_TrailFadeSpeed": 0.1
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1
     }
   }
 }

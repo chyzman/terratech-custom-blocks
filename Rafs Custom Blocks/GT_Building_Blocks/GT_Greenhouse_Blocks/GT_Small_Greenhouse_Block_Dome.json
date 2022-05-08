@@ -17,7 +17,7 @@
   "Recipe": "7, 7, 7, 7, 7, 7, 7, 32, 32, 32, 32, 32, 32, 32, 43, 43, 43, 43" ,  
   "IconName": "GT_Small_Greenhouse_Block_Dome_Icon.png", 
   "MeshName": "GT_Small_Greenhouse_Block_Dome.obj", 
-  
+  "SupressBoxColliderFallback": true,
   "MeshTextureName": "GreenTech 1.png", 
   "MeshGlossTextureName": "GreenTech 2.png", 
   "MeshEmissionTextureName": "GreenTech 3.png",

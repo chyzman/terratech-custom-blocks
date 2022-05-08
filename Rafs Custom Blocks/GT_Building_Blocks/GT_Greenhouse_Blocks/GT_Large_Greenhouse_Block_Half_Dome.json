@@ -1,0 +1,114 @@
+{
+  "Name": "GreenTech Large Greenhouse Block Half Dome",
+  "Description": "A curvy see-through, bulletproof glass with a sturdy metallic frame.",
+  "ID": 911265, 
+
+  "Faction": 0, 
+  "Category": 0, 
+  "Grade": 4,
+  "Price": 2760,
+  "HP": 7000,
+  "Mass": 6,
+  
+  "Fragility": 0,
+  "DamageableType": 6,
+  "Rarity": 0,
+
+  "Recipe": "7, 7, 7, 7, 7, 7, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 43, 43, 43, 43, 43, 43, 45, 45",  
+  "IconName": "GT_Large_Greenhouse_Block_Half_Dome_Icon.png", 
+  "MeshName": "GT_Large_Greenhouse_Block_Half_Dome.obj",
+  "SupressBoxColliderFallback": true,
+  "MeshTextureName": "GreenTech 1.png", 
+  "MeshGlossTextureName": "GreenTech 2.png", 
+  "MeshEmissionTextureName": "GreenTech 3.png",
+ 
+  "CellMap":
+  [
+    [
+      " xxxxxx ",
+      "xx    xx",
+      "x      x",
+      "x      x"
+    ],
+    [
+      "  xxxx  ",
+      " xx  xx ",
+      "xx    xx",
+      "xx    xx"
+    ],
+    [
+      "   xx   ",
+      " xxxxxx ",
+      " xx  xx ",
+      "xxx  xxx"
+    ],
+    [
+      "        ",
+      "   xx   ",
+      "  xxxx  ",
+      " xxxxxx "
+    ]
+],
+  "APs": [
+    {"x": 0, "y": 0, "z": -0.5},
+    {"x": 7, "y": 0, "z": -0.5},
+    {"x": 4, "y": 3, "z": -0.5},
+    {"x": 3, "y": 3, "z": -0.5},
+    {"x": 0, "y": -0.5, "z": 0},
+    {"x": 7, "y": -0.5, "z": 0},
+    {"x": 4, "y": -0.5, "z": 3},
+    {"x": 3, "y": -0.5, "z": 3},
+
+    {"x": 1, "y": 2, "z": -0.5},
+    {"x": 6, "y": 2, "z": -0.5},
+    {"x": 1, "y": -0.5, "z": 2},
+    {"x": 6, "y": -0.5, "z": 2}
+  ],
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+  "SubObjects": [
+    /* {
+      "MeshName": "GT_Large_Greenhouse_Block_Half_Dome_Glass.obj",
+      "MeshMaterialName": "RR_ClearPanel"
+    }*/
+    {
+      "MeshName": "GT_Large_Greenhouse_Block_Half_Dome_Glass.obj",
+      "MeshMaterialName": "HE_Shield_Edge"
+    },
+    {
+      "MeshName": "GT_Large_Greenhouse_Block_Half_Dome_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "MeshName": "GT_Large_Greenhouse_Block_Half_Dome_Glass.obj",
+      "MeshMaterialName": "ObjectHighlight"
+    },
+    {
+      "ColliderMeshName": "GT_Large_Greenhouse_Block_Corner_Collider.obj",
+      "SubPosition": {
+        "x": 4,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "ColliderMeshName": "GT_Large_Greenhouse_Block_Corner_Collider.obj",
+      "SubPosition": {
+        "x": 3,
+        "y": 0,
+        "z": 0
+      },
+      "SubRotation": {
+        "x": 0,
+        "y": -90,
+        "z": 0
+      }
+    }
+  ]
+}

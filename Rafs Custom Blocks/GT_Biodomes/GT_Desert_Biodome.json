@@ -1,7 +1,8 @@
 {
     "Name": "GreenTech Anchored Desert Biodome",
     "Description": "A biodome containing a small desert patch.\nActs as a sustainable source of Rubber. The rubber drips through the dry sand soil, coming from the trees as an abundant byproduct of their heat protection mechanism.\n The desert biome is hardy but needs heat and moisture control, demanding basic support systems and making it more expensive than the grasslands biodome.",
-    "ID": 911218,
+    "ID": 911218, 
+    "RotationGroup": "GSOFabricator",
   
     "Faction": 1, 
     "Category": 7, 
@@ -160,9 +161,7 @@
         },
         {
             "MeshName": "GT_Biodome_Terrain.obj",
-            "MeshTextureName": "TERRAIN_SAND_03.png",
-            "MeshGlossTextureName": null, 
-            "MeshEmissionTextureName": null
+            "MeshTextureName": "TERRAIN_SAND_03.png"
         },
         {
             "MeshName": "GT_Biodome_Desert_Vegetation_Rocks.obj",

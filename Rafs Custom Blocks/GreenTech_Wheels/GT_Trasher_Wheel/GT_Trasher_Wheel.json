@@ -3,7 +3,7 @@
   "Description": "Heavy armoured wheel used at GreenTech' operated landfills for crushing trash, with strong spikes that can break even the hardest rubble.",
   "ID": 911041, 
   "PairedBlock": 911041, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 0,
   "Category": 3, 
   "Grade": 4, 

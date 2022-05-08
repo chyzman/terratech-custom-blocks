@@ -2,7 +2,7 @@
   "Name": "GreenTech Tumbleweed Track Left",
   "Description": "The Tumbleweed Tracks comes in left, right and middle pieces for seamlessly building long and strong land vehicles, or even mobile operation bases for long expeditions.",
   "ID": 911136, 
-
+  "RotationGroup": "GSOFabricator",
   "Faction": 1, 
   "Category": 3, 
   "Grade": 4, 
