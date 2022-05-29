@@ -1,0 +1,104 @@
+{
+    "Name": "Youkai Tenshi Middle Wing",
+    "Description": "Despite previous Youkai trends this wing is rather lightweight and can manuever easily through the air. It also has underwing attachment points for accessories and weapons.",
+    "ID": 19089, 
+  
+    "Faction": 0,
+    "Category": 8, 
+    "Grade": 2, 
+    "Price": 1473, 
+    "HP": 1250, 
+    "Mass": 3,
+    "CenterOfMass": {"x": 0.5, "y": 0, "z": 0.5},
+    
+    "Fragility": 1,
+    "DamageableType": 0,
+    "Rarity": 2,
+  
+    "Recipe":  "43, 43, 43, 43, 45, 52, 52",
+    "IconName": "YK_Wing_Mid.png",
+    "MeshName": null,
+    "ColliderMeshName": null,
+    "SupressBoxColliderFallback": true,
+   
+    "Cells": [
+      {"x": 0, "y": 0, "z": 0},
+      {"x": 0, "y": 0, "z": 1},
+      {"x": 1, "y": 0, "z": 0},
+      {"x": 1, "y": 0, "z": 1}
+  
+    ],
+    
+    "APs": [ 
+      {"x": -0.5, "y": 0, "z": 0},
+      {"x": -0.5, "y": 0, "z": 1},
+      {"x": 1.5, "y": 0, "z": 0},
+      {"x": 1.5, "y": 0, "z": 1},
+
+      {"x": 0, "y": -0.5, "z": 1},    
+      {"x": 1, "y": -0.5, "z": 1},
+      {"x": 0, "y": 0, "z": 1.5},
+      {"x": 1, "y": 0, "z": 1.5}
+  
+    ],
+    
+    "GamePrefabReference":   "BF_Wing_Medium_Outside_413",
+    "ReferenceOffset":        { "x": -1, "y": 0, "z": 1 },
+    "KeepRenderers":         false,
+    "KeepColliders":         false,
+  
+  
+    "SubObjects": [
+      {
+      "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Base",
+      "MeshName":            "YK_Wing_Mid.obj",
+      "ColliderMeshName":    "YK_Wing_Mid_Collider.obj",
+      "SubPosition":         { "x": 1,  "y": 0,  "z": 0 },
+      "SubRotation":         { "x": 0, "y": 90, "z": 0},
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+      },  
+      {
+      "SubOverrideName":     "_Pivot",
+      "SubPosition":         { "x": 1,  "y": 0,  "z": 0 },
+      "SubRotation":         { "x": 0, "y": 0, "z": 0 },
+      },
+      {
+      "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Wing",
+      "MeshName":            "YK_Wing_Mid_Flap.obj",
+      "ColliderMeshName":    null,
+      "SubPosition":         { "x": 0,  "y": 0.0,  "z": 0 },
+      "SubRotation":         { "x": 0, "y": 90, "z": 0 },
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+      },
+    ],
+  
+    "Deserializer": {
+        "GameObject|SmokeTrail": {
+            "UnityEngine.Transform": {
+                "localPosition": { "x": 1.4, "y": 0, "z": 0 },
+                "localRotation": { "x": 0, "y":0, "z": 0 }
+              }
+        },
+        "Duplicate|SmokeTrail": {
+          "UnityEngine.Transform": {
+              "localPosition": { "x": -0.4, "y": 0, "z": 0 },
+              "localRotation": { "x": 0, "y":0, "z": 0 }
+            }
+       },
+       "ModuleWing": {
+        "m_Aerofoils": [{
+           "liftStrength": 3,
+            "flapAngleRangeVisual": 10,
+            "flapAngleRangeActual": 10,
+          "flapTurnSpeed": 2
+        }],
+        "m_AttackAngleDamping": 10000.0,
+      "m_TrailMinVelocity": 14.0,
+      "m_TrailAlphaStrength": 0.02,
+      "m_TrailFadeSpeed": 0.1
+      }
+
+    }
+  }

@@ -3,360 +3,1016 @@
 	"Description": "Someone had the bright idea of overcharging an SCU to 1500%. and it seems to have worked. The Implosion SCU has the largest radius of all SCUs, however, it takes the longest to charge up as a result.", //You can make multiple lines with \n
 	"ID": 1700015, //A random ID that must be unique		
 	"IDNetHex": "D0737D93CAC83952", //Get a random hex from https://www.random.org/bytes/ (8 bytes work)
-
 	"Faction": 7, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6
 	"Category": 7, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
 	"Grade": 2, //The grade minus one
 	"Price": 162548,
 	"HP": 1250,
 	"Mass": 50,
-	
-  "CenterOfMass": {"x": 2, "y": 2, "z": 2},
-
+	"CenterOfMass": {
+		"x": 2,
+		"y": 2,
+		"z": 2
+	},
 	"IconName": "Implosion_SCU.png",
-
 	"MeshName": null, //Name of mesh, such as "mesh.obj"
-	
-	"Recipe":  "seedai,seedai,seedai,proximadark,proximadark,proximadark,zeropointsplitter,zeropointsplitter,zeropointsplitter", // Separate chunk names or IDs with a comma. Not case sensitive.
-	
+	"Recipe": "seedai,seedai,seedai,proximadark,proximadark,proximadark,zeropointsplitter,zeropointsplitter,zeropointsplitter", // Separate chunk names or IDs with a comma. Not case sensitive.
 	"MeshMaterialName": "BF_Main", //Name of an in-game material to use, such as "GSO_Main", "GC_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
-	
 	"Cells": [ //The grid space to be occupied
-        { "x": 0, "y": 0, "z": 0 }, 
-		{ "x": 0, "y": 0, "z": 1 },
-		{ "x": 0, "y": 0, "z": 2 },
-		{ "x": 0, "y": 0, "z": 3 },
-		{ "x": 0, "y": 0, "z": 4 },		
-        { "x": 1, "y": 0, "z": 0 }, 
-		{ "x": 1, "y": 0, "z": 1 },
-		{ "x": 1, "y": 0, "z": 2 },
-		{ "x": 1, "y": 0, "z": 3 },
-		{ "x": 1, "y": 0, "z": 4 },
-        { "x": 2, "y": 0, "z": 0 }, 
-		{ "x": 2, "y": 0, "z": 1 },
-		{ "x": 2, "y": 0, "z": 2 },
-		{ "x": 2, "y": 0, "z": 3 },
-		{ "x": 2, "y": 0, "z": 4 },
-        { "x": 3, "y": 0, "z": 0 }, 
-		{ "x": 3, "y": 0, "z": 1 },
-		{ "x": 3, "y": 0, "z": 2 },
-		{ "x": 3, "y": 0, "z": 3 },
-		{ "x": 3, "y": 0, "z": 4 },	
-        { "x": 4, "y": 0, "z": 0 }, 
-		{ "x": 4, "y": 0, "z": 1 },
-		{ "x": 4, "y": 0, "z": 2 },
-		{ "x": 4, "y": 0, "z": 3 },
-		{ "x": 4, "y": 0, "z": 4 },
-		
-		{ "x": 0, "y": 1, "z": 0 }, 
-		{ "x": 0, "y": 1, "z": 1 },
-		{ "x": 0, "y": 1, "z": 2 },
-		{ "x": 0, "y": 1, "z": 3 },
-		{ "x": 0, "y": 1, "z": 4 },		
-        { "x": 1, "y": 1, "z": 0 }, 
-		{ "x": 1, "y": 1, "z": 1 },
-		{ "x": 1, "y": 1, "z": 2 },
-		{ "x": 1, "y": 1, "z": 3 },
-		{ "x": 1, "y": 1, "z": 4 },
-        { "x": 2, "y": 1, "z": 0 }, 
-		{ "x": 2, "y": 1, "z": 1 },
-		{ "x": 2, "y": 1, "z": 2 },
-		{ "x": 2, "y": 1, "z": 3 },
-		{ "x": 2, "y": 1, "z": 4 },
-        { "x": 3, "y": 1, "z": 0 }, 
-		{ "x": 3, "y": 1, "z": 1 },
-		{ "x": 3, "y": 1, "z": 2 },
-		{ "x": 3, "y": 1, "z": 3 },
-		{ "x": 3, "y": 1, "z": 4 },	
-        { "x": 4, "y": 1, "z": 0 }, 
-		{ "x": 4, "y": 1, "z": 1 },
-		{ "x": 4, "y": 1, "z": 2 },
-		{ "x": 4, "y": 1, "z": 3 },
-		{ "x": 4, "y": 1, "z": 4 },
-		
-		{ "x": 0, "y": 2, "z": 0 }, 
-		{ "x": 0, "y": 2, "z": 1 },
-		{ "x": 0, "y": 2, "z": 2 },
-		{ "x": 0, "y": 2, "z": 3 },
-		{ "x": 0, "y": 2, "z": 4 },		
-        { "x": 1, "y": 2, "z": 0 }, 
-		{ "x": 1, "y": 2, "z": 1 },
-		{ "x": 1, "y": 2, "z": 2 },
-		{ "x": 1, "y": 2, "z": 3 },
-		{ "x": 1, "y": 2, "z": 4 },
-        { "x": 2, "y": 2, "z": 0 }, 
-		{ "x": 2, "y": 2, "z": 1 },
-		{ "x": 2, "y": 2, "z": 2 },
-		{ "x": 2, "y": 2, "z": 3 },
-		{ "x": 2, "y": 2, "z": 4 },
-        { "x": 3, "y": 2, "z": 0 }, 
-		{ "x": 3, "y": 2, "z": 1 },
-		{ "x": 3, "y": 2, "z": 2 },
-		{ "x": 3, "y": 2, "z": 3 },
-		{ "x": 3, "y": 2, "z": 4 },	
-        { "x": 4, "y": 2, "z": 0 }, 
-		{ "x": 4, "y": 2, "z": 1 },
-		{ "x": 4, "y": 2, "z": 2 },
-		{ "x": 4, "y": 2, "z": 3 },
-		{ "x": 4, "y": 2, "z": 4 },
-		
-		{ "x": 0, "y": 3, "z": 0 }, 
-		{ "x": 0, "y": 3, "z": 1 },
-		{ "x": 0, "y": 3, "z": 2 },
-		{ "x": 0, "y": 3, "z": 3 },
-		{ "x": 0, "y": 3, "z": 4 },		
-        { "x": 1, "y": 3, "z": 0 }, 
-		{ "x": 1, "y": 3, "z": 1 },
-		{ "x": 1, "y": 3, "z": 2 },
-		{ "x": 1, "y": 3, "z": 3 },
-		{ "x": 1, "y": 3, "z": 4 },
-        { "x": 2, "y": 3, "z": 0 }, 
-		{ "x": 2, "y": 3, "z": 1 },
-		{ "x": 2, "y": 3, "z": 2 },
-		{ "x": 2, "y": 3, "z": 3 },
-		{ "x": 2, "y": 3, "z": 4 },
-        { "x": 3, "y": 3, "z": 0 }, 
-		{ "x": 3, "y": 3, "z": 1 },
-		{ "x": 3, "y": 3, "z": 2 },
-		{ "x": 3, "y": 3, "z": 3 },
-		{ "x": 3, "y": 3, "z": 4 },	
-        { "x": 4, "y": 3, "z": 0 }, 
-		{ "x": 4, "y": 3, "z": 1 },
-		{ "x": 4, "y": 3, "z": 2 },
-		{ "x": 4, "y": 3, "z": 3 },
-		{ "x": 4, "y": 3, "z": 4 },
-		
-		{ "x": 0, "y": 4, "z": 0 }, 
-		{ "x": 0, "y": 4, "z": 1 },
-		{ "x": 0, "y": 4, "z": 2 },
-		{ "x": 0, "y": 4, "z": 3 },
-		{ "x": 0, "y": 4, "z": 4 },		
-        { "x": 1, "y": 4, "z": 0 }, 
-		{ "x": 1, "y": 4, "z": 1 },
-		{ "x": 1, "y": 4, "z": 2 },
-		{ "x": 1, "y": 4, "z": 3 },
-		{ "x": 1, "y": 4, "z": 4 },
-        { "x": 2, "y": 4, "z": 0 }, 
-		{ "x": 2, "y": 4, "z": 1 },
-		{ "x": 2, "y": 4, "z": 2 },
-		{ "x": 2, "y": 4, "z": 3 },
-		{ "x": 2, "y": 4, "z": 4 },
-        { "x": 3, "y": 4, "z": 0 }, 
-		{ "x": 3, "y": 4, "z": 1 },
-		{ "x": 3, "y": 4, "z": 2 },
-		{ "x": 3, "y": 4, "z": 3 },
-		{ "x": 3, "y": 4, "z": 4 },	
-        { "x": 4, "y": 4, "z": 0 }, 
-		{ "x": 4, "y": 4, "z": 1 },
-		{ "x": 4, "y": 4, "z": 2 },
-		{ "x": 4, "y": 4, "z": 3 },
-		{ "x": 4, "y": 4, "z": 4 },
-		
-		
-		
-		
-		
-
-		
-    ],
-    "APs": [ //The location of APs on the block. For use with "Cells"
-        { "x": -0.5, "y": 0, "z": 0 }, 
-		{ "x": -0.5, "y": 0, "z": 4 },
-		{ "x": -0.5, "y": 4, "z": 0 },
-		{ "x": -0.5, "y": 4, "z": 4 },
-		{ "x": 4.5, "y": 0, "z": 4 },
-		{ "x": 4.5, "y": 0, "z": 0 }, 
-		{ "x": 4.5, "y": 4, "z": 4 },
-		{ "x": 4.5, "y": 4, "z": 0 }, 
-		
-	    { "x": 0, "y": -0.5, "z": 0 }, 
-		{ "x": 0, "y": -0.5, "z": 4 },
-		{ "x": 4, "y": -0.5, "z": 0 },
-		{ "x": 4, "y": -0.5, "z": 4 },
-		{ "x": 4, "y": 4.5, "z": 4 },
-		{ "x": 0, "y": 4.5, "z": 0 }, 
-		{ "x": 0, "y": 4.5, "z": 4 },
-		{ "x": 4, "y": 4.5, "z": 0 }, 
-
-		{ "x": 0, "y": 0, "z": -0.5 }, 
-		{ "x": 0, "y": 0, "z": 4.5 },
-		{ "x": 4, "y": 0, "z": -0.5 },
-		{ "x": 4, "y": 0, "z": 4.5 },
-		{ "x": 4, "y": 4, "z": 4.5 },
-		{ "x": 0, "y": 4, "z": -0.5 }, 
-		{ "x": 0, "y": 4, "z": 4.5 },
-		{ "x": 4, "y": 4, "z": -0.5 }
-
-					
-    ],
-	
-	
+		{
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 1
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 2
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 3
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"z": 1
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"z": 2
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"z": 3
+		},
+		{
+			"x": 1,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"z": 1
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"z": 2
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"z": 3
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 3,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 0,
+			"z": 1
+		},
+		{
+			"x": 3,
+			"y": 0,
+			"z": 2
+		},
+		{
+			"x": 3,
+			"y": 0,
+			"z": 3
+		},
+		{
+			"x": 3,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 2
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 3
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"z": 1
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"z": 2
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"z": 3
+		},
+		{
+			"x": 0,
+			"y": 1,
+			"z": 4
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"z": 0
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"z": 1
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"z": 2
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"z": 3
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"z": 4
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"z": 0
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"z": 1
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"z": 2
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"z": 3
+		},
+		{
+			"x": 2,
+			"y": 1,
+			"z": 4
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"z": 1
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"z": 2
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"z": 3
+		},
+		{
+			"x": 3,
+			"y": 1,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 1,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 1,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 1,
+			"z": 2
+		},
+		{
+			"x": 4,
+			"y": 1,
+			"z": 3
+		},
+		{
+			"x": 4,
+			"y": 1,
+			"z": 4
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"z": 1
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"z": 2
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"z": 3
+		},
+		{
+			"x": 0,
+			"y": 2,
+			"z": 4
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"z": 0
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"z": 1
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"z": 2
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"z": 3
+		},
+		{
+			"x": 1,
+			"y": 2,
+			"z": 4
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"z": 0
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"z": 1
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"z": 2
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"z": 3
+		},
+		{
+			"x": 2,
+			"y": 2,
+			"z": 4
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"z": 1
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"z": 2
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"z": 3
+		},
+		{
+			"x": 3,
+			"y": 2,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 2,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 2,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 2,
+			"z": 2
+		},
+		{
+			"x": 4,
+			"y": 2,
+			"z": 3
+		},
+		{
+			"x": 4,
+			"y": 2,
+			"z": 4
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"z": 1
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"z": 2
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"z": 3
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"z": 4
+		},
+		{
+			"x": 1,
+			"y": 3,
+			"z": 0
+		},
+		{
+			"x": 1,
+			"y": 3,
+			"z": 1
+		},
+		{
+			"x": 1,
+			"y": 3,
+			"z": 2
+		},
+		{
+			"x": 1,
+			"y": 3,
+			"z": 3
+		},
+		{
+			"x": 1,
+			"y": 3,
+			"z": 4
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 0
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 1
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 2
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 3
+		},
+		{
+			"x": 2,
+			"y": 3,
+			"z": 4
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"z": 1
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"z": 2
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"z": 3
+		},
+		{
+			"x": 3,
+			"y": 3,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 3,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 3,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 3,
+			"z": 2
+		},
+		{
+			"x": 4,
+			"y": 3,
+			"z": 3
+		},
+		{
+			"x": 4,
+			"y": 3,
+			"z": 4
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 1
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 2
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 3
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 1,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 1,
+			"y": 4,
+			"z": 1
+		},
+		{
+			"x": 1,
+			"y": 4,
+			"z": 2
+		},
+		{
+			"x": 1,
+			"y": 4,
+			"z": 3
+		},
+		{
+			"x": 1,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 2,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 2,
+			"y": 4,
+			"z": 1
+		},
+		{
+			"x": 2,
+			"y": 4,
+			"z": 2
+		},
+		{
+			"x": 2,
+			"y": 4,
+			"z": 3
+		},
+		{
+			"x": 2,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 3,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 3,
+			"y": 4,
+			"z": 1
+		},
+		{
+			"x": 3,
+			"y": 4,
+			"z": 2
+		},
+		{
+			"x": 3,
+			"y": 4,
+			"z": 3
+		},
+		{
+			"x": 3,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 1
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 2
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 3
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 4
+		},
+	],
+	"APs": [ //The location of APs on the block. For use with "Cells"
+		{
+			"x": -0.5,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": -0.5,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": -0.5,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": -0.5,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 4.5,
+			"y": 0,
+			"z": 4
+		},
+		{
+			"x": 4.5,
+			"y": 0,
+			"z": 0
+		},
+		{
+			"x": 4.5,
+			"y": 4,
+			"z": 4
+		},
+		{
+			"x": 4.5,
+			"y": 4,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": -0.5,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": -0.5,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": -0.5,
+			"z": 0
+		},
+		{
+			"x": 4,
+			"y": -0.5,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 4.5,
+			"z": 4
+		},
+		{
+			"x": 0,
+			"y": 4.5,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 4.5,
+			"z": 4
+		},
+		{
+			"x": 4,
+			"y": 4.5,
+			"z": 0
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": -0.5
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 4.5
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": -0.5
+		},
+		{
+			"x": 4,
+			"y": 0,
+			"z": 4.5
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": 4.5
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": -0.5
+		},
+		{
+			"x": 0,
+			"y": 4,
+			"z": 4.5
+		},
+		{
+			"x": 4,
+			"y": 4,
+			"z": -0.5
+		}
+	],
 	"GamePrefabReference": "GSO_Heart_343",
-	"ReferenceOffset": { "x": 2, "y": 0, "z": 2 },
-	
+	"ReferenceOffset": {
+		"x": 2,
+		"y": 0,
+		"z": 2
+	},
 	"KeepRenderers": false,
 	"KeepColliders": false,
-	
-	"SubObjects": [ 
-	
-	
-	
-	{"SubOverrideName":"m_IB_Base_01",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_Anchor",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_GSO_Anchor_SCU_Hook",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_Ray_01",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_Ray_02",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_Ray_03",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_Ray_04",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_RayHinge_01",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_RayHinge_02",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_RayHinge_03",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_RayHinge_04",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_SRod_01",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_SRod_02",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"m_IB_Base_SRod_03",
-	"DestroyExistingRenderer": true,
-	"DestroyExistingColliders": true},
-	{"SubOverrideName":"LED0",
-	"MeshName": "Implosion_SCU_LED2.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,},
-    
-	{"SubOverrideName":"LED1",
-	"MeshName": "Implosion_SCU_LED1.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,},
-    
-	{"SubOverrideName":"LED2",
-	"MeshName": "Implosion_SCU_LED1.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,},
-    
-	{"SubOverrideName":"LED3",
-	"MeshName": "Implosion_SCU_LED1.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,},
-    
-	{"SubOverrideName":"LED4",
-	"MeshName": "Implosion_SCU_LED1.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,},
-    
-	
-	{"SubOverrideName":"ISCU_Base",
-	"MeshName": "Implosion_SCU_base.obj",
-	"DestroyExistingRenderer": true,
-        "DestroyExistingColliders": true,
-	"ColliderMeshName": "Implosion_SCU_base.obj",
-	"MeshMaterialName": "BF_Main",
-    
-	"SubPosition":{"x":2,"y":2,"z":2},
-	"SubScale":{"x":1,"y":1,"z":1}},
-    ],
-	
-	
-	"Deserializer":{
-        "ModuleAnchor": null,
-		"Reference|GSO_Heart_343/GSO_Inventory_Block_334/Active_Particles/Singularity_EventHorizon":{
-            "UnityEngine.Transform": { "localPosition": { "x": 2, "y": 2, "z": 2 },
-"localScale": { "x": 1, "y": 1, "z": 1 }			},
-            // Slow down the effect
-            "ParticleSystem": {
-                "playbackSpeed": 1,
-            },
-			"GameObject|Initialisation_Singularity_Distortion":null,
-			"GameObject|Initialisation_Burst":null,
-			"GameObject|Singularity_Geometry":{"UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 }},
-			"ParticleSystem": {
-        "startColor": {
-          "r": 1,
-          "g": 1,
-          "b": 1,
-          "a": 0.5
-        },
-        "startDelay": 0.0,
-        "loop": true,
-        "playOnAwake": true,
-        "duration": 1,
-        "playbackSpeed": 1,
-        "enableEmission": true,
-        "emissionRate": 40,
-        "startSpeed": 0.0,
-        "startSize": 2,
-        "startLifetime": 1,
-        "gravityModifier": 0.0,
-        "maxParticles": 1000,
-        "simulationSpace": 0,
-        "scalingMode": 2
-      }},
-			"GameObject|Singularity_Distortion":{"UnityEngine.Transform": { "localPosition": { "x": 0, "y": 0, "z": 0 }},
-			"ParticleSystem": {
-        
-        "startDelay": 0.0,
-        "loop": true,
-        "playOnAwake": true,
-        "duration": 5,
-        "playbackSpeed": 1,
-        "enableEmission": true,
-        "emissionRate": 200,
-        "startSpeed": 0.0,
-        "startSize": 2.5,
-        "startLifetime": 1,
-        "gravityModifier": 0.0,
-        "maxParticles": 1000,
-        "simulationSpace": 0,
-        "scalingMode": 2
-      }}},
-		 "Gameobject|GSO_Heart_343":{
-		  "GameObject|GSO_Inventory_Block_334":{
-		   "GameObject|Charging_Particles":{},
-		   "GameObject|Active_Particles":{}}},
-		
-		"ModuleHeart": {
-			"m_EventHorizonRadius":10, //How far for the singularity to put blocks in your inventory
-			"m_SetupTime":23, //How long in seconds for the SCU to fully charge.
-			"m_StartShrinkingRadius":50, //How far do the items start shrinking when getting close to the singularity
-			"m_ReadyAftertime":150,
-			"m_MinTimeBeforeDrop":20,
-			"m_Pickup":"ModuleItemPickup",
-			"m_Animator":"ModuleAnimator"},
-		"ModuleItemHolder":{ 
-		"m_OverrideBasePositons": [{"x":2,"y":2,"z":2}], //Lets you move the Singularity center.
-		"m_CapacityPerStack": 500,},
-		"ModuleItemPickup":{
-			"m_PickupRange":150, //Pickup range in blocks
-			"m_RangeIndicator":{"x":2,"y":2,"z":2},
-			"m_RangeIndicatorPrefab":{"x":2,"y":2,"z":2},
-			"m_VisionRefreshInterval": 0.1, //Delay in seconds before the SCU detects dropped blocks.
-							//DO NOT SET TO 0!
-			"m_PrePickupPeriod": 5.0, //Delay in seconds before dropped blocks can get picked up by the SCU
-			
+	"SubObjects": [
+		{
+			"SubOverrideName": "m_IB_Base_01",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_Anchor",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_GSO_Anchor_SCU_Hook",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_Ray_01",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_Ray_02",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_Ray_03",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_Ray_04",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_RayHinge_01",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_RayHinge_02",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_RayHinge_03",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_RayHinge_04",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_SRod_01",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_SRod_02",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "m_IB_Base_SRod_03",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true
+		},
+		{
+			"SubOverrideName": "LED0",
+			"MeshName": "Implosion_SCU_LED2.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+		},
+		{
+			"SubOverrideName": "LED1",
+			"MeshName": "Implosion_SCU_LED1.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+		},
+		{
+			"SubOverrideName": "LED2",
+			"MeshName": "Implosion_SCU_LED1.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+		},
+		{
+			"SubOverrideName": "LED3",
+			"MeshName": "Implosion_SCU_LED1.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+		},
+		{
+			"SubOverrideName": "LED4",
+			"MeshName": "Implosion_SCU_LED1.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+		},
+		{
+			"SubOverrideName": "ISCU_Base",
+			"MeshName": "Implosion_SCU_base.obj",
+			"DestroyExistingRenderer": true,
+			"DestroyExistingColliders": true,
+			"ColliderMeshName": "Implosion_SCU_base.obj",
+			"MeshMaterialName": "BF_Main",
+			"SubPosition": {
+				"x": 2,
+				"y": 2,
+				"z": 2
+			},
+			"SubScale": {
+				"x": 1,
+				"y": 1,
+				"z": 1
 			}
+		},
+	],
+	"Deserializer": {
+		"ModuleAnchor": null,
+		"Reference|GSO_Heart_343/GSO_Inventory_Block_334/Active_Particles/Singularity_EventHorizon": {
+			"UnityEngine.Transform": {
+				"localPosition": {
+					"x": 2,
+					"y": 2,
+					"z": 2
+				},
+				"localScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			// Slow down the effect
+			"ParticleSystem": {
+				"playbackSpeed": 1,
+			},
+			"GameObject|Initialisation_Singularity_Distortion": null,
+			"GameObject|Initialisation_Burst": null,
+			"GameObject|Singularity_Geometry": {
+				"UnityEngine.Transform": {
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},
+				"ParticleSystem": {
+					"startColor": {
+						"r": 1,
+						"g": 1,
+						"b": 1,
+						"a": 0.5
+					},
+					"startDelay": 0.0,
+					"loop": true,
+					"playOnAwake": true,
+					"duration": 1,
+					"playbackSpeed": 1,
+					"enableEmission": true,
+					"emissionRate": 40,
+					"startSpeed": 0.0,
+					"startSize": 2,
+					"startLifetime": 1,
+					"gravityModifier": 0.0,
+					"maxParticles": 1000,
+					"simulationSpace": 0,
+					"scalingMode": 2
+				}
+			},
+			"GameObject|Singularity_Distortion": {
+				"UnityEngine.Transform": {
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					}
+				},
+				"ParticleSystem": {
+					"startDelay": 0.0,
+					"loop": true,
+					"playOnAwake": true,
+					"duration": 5,
+					"playbackSpeed": 1,
+					"enableEmission": true,
+					"emissionRate": 200,
+					"startSpeed": 0.0,
+					"startSize": 2.5,
+					"startLifetime": 1,
+					"gravityModifier": 0.0,
+					"maxParticles": 1000,
+					"simulationSpace": 0,
+					"scalingMode": 2
+				}
+			}
+		},
+		"Gameobject|GSO_Heart_343": {
+			"GameObject|GSO_Inventory_Block_334": {
+				"GameObject|Charging_Particles": {},
+				"GameObject|Active_Particles": {}
+			}
+		},
+		"ModuleHeart": {
+			"m_EventHorizonRadius": 10, //How far for the singularity to put blocks in your inventory
+			"m_SetupTime": 23, //How long in seconds for the SCU to fully charge.
+			"m_StartShrinkingRadius": 50, //How far do the items start shrinking when getting close to the singularity
+			"m_ReadyAftertime": 150,
+			"m_MinTimeBeforeDrop": 20,
+			"m_Pickup": "ModuleItemPickup",
+			"m_Animator": "ModuleAnimator"
+		},
+		"ModuleItemHolder": {
+			"m_OverrideBasePositons": [
+				{
+					"x": 2,
+					"y": 2,
+					"z": 2
+				}
+			], //Lets you move the Singularity center.
+			"m_CapacityPerStack": 500,
+		},
+		"ModuleItemPickup": {
+			"m_PickupRange": 150, //Pickup range in blocks
+			"m_RangeIndicator": {
+				"x": 2,
+				"y": 2,
+				"z": 2
+			},
+			"m_RangeIndicatorPrefab": {
+				"x": 2,
+				"y": 2,
+				"z": 2
+			},
+			"m_VisionRefreshInterval": 0.1, //Delay in seconds before the SCU detects dropped blocks.
+			//DO NOT SET TO 0!
+			"m_PrePickupPeriod": 5.0, //Delay in seconds before dropped blocks can get picked up by the SCU
 		}
 	}
+}

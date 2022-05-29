@@ -1,0 +1,543 @@
+{
+    "Name": "Youkai Shigure 4-Barrel Fixed Mortar",
+    "Description": "This mortar is designed for close combat encounters where a normal mortar might have too much velocity and overshoot your target.",
+  
+    "ID": 19101,
+    "Faction": 0,
+    "Category": 4,
+    "Grade": 3,  
+    "Price": 6966,
+    "HP": 1200,
+    "Mass": 4,
+    "CenterOfMass": {"x": 0.5, "y": 0, "z": 0},
+  
+    "Fragility": 0,
+    "Rarity": 0,
+    "DamageableType": 0,
+    
+    "Recipe": "43, 45, 45, 45, 45, 47, 47, 55, 55", 
+    
+    "IconName": "YK_Mortar_Medium.png",
+    "EmissionMode": 1, 
+    
+    "BlockExtents":{"x": 2,"y": 1, "z": 1}, 
+    
+    "APs": [ 
+      {"x": 0, "y": -0.5, "z": 0},
+      {"x": 0, "y": 0, "z": -0.5},
+      {"x": -0.5, "y": 0, "z": 0},
+      {"x": 1, "y": -0.5, "z": 0},
+      {"x": 1, "y": 0, "z": -0.5},
+      {"x": 1.5, "y": 0, "z": 0}
+    ],
+      
+    "ColliderMeshName": "YK_Mortar_Medium_Collider.obj",
+    "GamePrefabReference": "GSO_Cannon_Turret_111", 
+    "KeepRenderers": true,
+    "KeepColliders": false,
+  
+    "SubObjects": [
+      {
+        "SubOverrideName": "GSO_Cannon_111_Base",
+        "MeshName": "YK_Mortar_Medium_Base.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png", 
+        "MakeBoxcollider": true
+      },
+      {
+        "SubOverrideName": "GSO_Cannon_111_Mount",
+        "DestroyExistingRenderer": true,
+      },
+      {
+        "SubOverrideName": "GSO_Cannon_111_Barrel",
+        "MeshName": "YK_Mortar_Medium_Barrel.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": -0.1, "y": 0.25, "z": -0.2}
+      },
+      {
+        "SubOverrideName": "_barrel_copy/_recoiler/GSO_Cannon_111_Barrel",
+        "MeshName": "YK_Mortar_Medium_Barrel.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": 0.3, "y": 0.25, "z": -0.2}
+      },
+      {
+        "SubOverrideName": "_barrel_copy_copy/_recoiler/GSO_Cannon_111_Barrel",
+        "MeshName": "YK_Mortar_Medium_Barrel.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": 0.7, "y": 0.25, "z": -0.2}
+      },
+      {
+        "SubOverrideName": "_barrel_copy_copy_copy/_recoiler/GSO_Cannon_111_Barrel",
+        "MeshName": "YK_Mortar_Medium_Barrel.obj", 
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        "SubPosition": { "x": 1.1, "y": 0.25, "z": -0.2}
+      },
+      {
+        "SubOverrideName": "_gimbalBase",
+        "SubPosition": { "x": 0, "y": 0, "z": 0}
+      }
+      
+    ],
+  
+    "JSONBLOCK": {
+      "GameObject|_gimbalBase": {
+        "UnityEngine.Transform": {
+          "localPosition": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0
+           },
+           "localEulerAngles": {
+            "x": -45,
+            "y": 0,
+            "z": 0
+           }
+         },
+        "GimbalAimer": {
+          "rotationAxis": 2,
+          "rotationLimits": [
+            -0.1,
+            0.1
+          ]
+        },
+        "GameObject|GSO_Cannon_111_Mount": {
+          "UnityEngine.SphereCollider": {
+            "center": {
+              "x": 0.0,
+              "y": -0.1,
+              "z": 0.0
+            },
+            "radius": 0.4
+          },
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0,
+              "y": -0.05,
+              "z": 0.2
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+        },
+        "GameObject|_gimbalElev": {
+          "GameObject|_barrel": {
+             "GameObject|_recoiler": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               },
+            "GameObject|GSO_Cannon_111_Barrel": {
+              "UnityEngine.Transform": {
+                "localScale": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "localPosition": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+            }
+          },
+            "UnityEngine.Transform": {
+              "localPosition": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               },
+               "localEulerAngles": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+               }
+             },
+            "GameObject|_smoke": {
+              "UnityEngine.ParticleSystem": {
+                "startSize": 0
+              }
+            },
+            "GameObject|_muzzleFlash": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": -0.1,
+                  "y": 0.25,
+                  "z": 0.3
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+              },
+            "GameObject|_casingSpawn": null,
+            "GameObject|_bulletSpawn": {
+              "UnityEngine.Transform": {
+                "localPosition": {
+                  "x": -0.1,
+                  "y": 0.25,
+                  "z": 0.6
+                 },
+                 "localEulerAngles": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                 }
+               }
+            }
+          },
+          "Duplicate|_barrel": {
+          "GameObject|_recoiler": {
+           "UnityEngine.Transform": {
+             "localPosition": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+              },
+              "localScale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+               },
+              "localEulerAngles": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+              }
+            },
+         "GameObject|GSO_Cannon_111_Barrel": {
+           "UnityEngine.Transform": {
+             "localPosition": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+              },
+              "localEulerAngles": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+              }
+            }
+         }
+       },
+         "UnityEngine.Transform": {
+           "localPosition": {
+             "x": 0,
+             "y": 0,
+             "z": 0
+            },
+            "localEulerAngles": {
+             "x": 0,
+             "y": 0,
+             "z": 0
+            }
+          },
+         "GameObject|_smoke": {
+           "UnityEngine.ParticleSystem": {
+             "startSize": 0
+           }
+         },
+         "GameObject|_muzzleFlash": {
+          "UnityEngine.Transform": {
+            "localPosition": {
+              "x": 0.3,
+              "y": 0.25,
+              "z": 0.3
+             },
+             "localEulerAngles": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+             }
+           }
+          },
+         "GameObject|_casingSpawn": null,
+         "GameObject|_bulletSpawn": {
+           "UnityEngine.Transform": {
+             "localPosition": {
+               "x": 0.3,
+               "y": 0.25,
+               "z": 0.6
+              },
+              "localEulerAngles": {
+               "x": 0,
+               "y": 0,
+               "z": 0
+              }
+            }
+         }
+       },
+     "Duplicate|_barrel_copy": {
+      "GameObject|_recoiler": {
+       "UnityEngine.Transform": {
+         "localPosition": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          },
+          "localScale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+           },
+          "localEulerAngles": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+        },
+     "GameObject|GSO_Cannon_111_Barrel": {
+       "UnityEngine.Transform": {
+         "localPosition": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          },
+          "localEulerAngles": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+        }
+     }
+   },
+     "UnityEngine.Transform": {
+       "localPosition": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        },
+        "localEulerAngles": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        }
+      },
+     "GameObject|_smoke": {
+       "UnityEngine.ParticleSystem": {
+         "startSize": 0
+       }
+     },
+     "GameObject|_muzzleFlash": {
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.7,
+          "y": 0.25,
+          "z": 0.3
+         },
+         "localEulerAngles": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         }
+       }
+      },
+     "GameObject|_casingSpawn": null,
+     "GameObject|_bulletSpawn": {
+       "UnityEngine.Transform": {
+         "localPosition": {
+           "x": 0.7,
+           "y": 0.25,
+           "z": 0.6
+          },
+          "localEulerAngles": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+        }
+     }
+   },
+   "Duplicate|_barrel_copy_copy": {
+    "GameObject|_recoiler": {
+     "UnityEngine.Transform": {
+       "localPosition": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        },
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+         },
+        "localEulerAngles": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        }
+      },
+   "GameObject|GSO_Cannon_111_Barrel": {
+     "UnityEngine.Transform": {
+       "localPosition": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        },
+        "localEulerAngles": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        }
+      }
+   }
+ },
+   "UnityEngine.Transform": {
+     "localPosition": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      },
+      "localEulerAngles": {
+       "x": 0,
+       "y": 0,
+       "z": 0
+      }
+    },
+   "GameObject|_smoke": {
+     "UnityEngine.ParticleSystem": {
+       "startSize": 0
+     }
+   },
+   "GameObject|_muzzleFlash": {
+    "UnityEngine.Transform": {
+      "localPosition": {
+        "x": 1.1,
+        "y": 0.25,
+        "z": 0.3
+       },
+       "localEulerAngles": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       }
+     }
+    },
+   "GameObject|_casingSpawn": null,
+   "GameObject|_bulletSpawn": {
+     "UnityEngine.Transform": {
+       "localPosition": {
+         "x": 1.1,
+         "y": 0.25,
+         "z": 0.6
+        },
+        "localEulerAngles": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        }
+      }
+   }
+ },
+          "GimbalAimer": {
+            "rotationAxis": 1,
+            "rotationLimits": [
+              -0.01,
+              0.01
+            ]
+          }
+          }
+          
+        },
+        "ModuleWeapon": { 
+          "m_FireSFXType": 5,
+          "m_RotateSpeed": 180.0
+        },
+        "ModuleWeaponGun": {
+          "m_FireControlMode": 0,
+          "m_ShotCooldown": 2.5,
+          "m_CooldownVariancePct": 0.1,
+          "m_SeekingRounds": true
+        },
+        "FireData": { //Component, but with a catch
+          "m_MuzzleVelocity": 30, //Bullet speed
+          "m_BulletSprayVariance": 0.1, //Bullet inverse-accuracy
+          "m_KickbackStrength": 50, // Would you like to become a plane
+          "m_BulletCasingPrefab": null,
+          "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+            "UnityEngine.Transform": {"localScale": { "x":3, "y":3, "z":3 }},  // Size of Bullet    
+            "WeaponRound": { //Component because we are in GameObject right now
+              "m_DamageType" : "Bullet",
+              "m_Damage": 500 //This does nothing apparently, so you can probably just delete this block
+            },
+            "SmokeTrail":{
+              "numberOfPoints":   10.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+              "spread":           0.0,   // Dictates how erratic the trail is.
+              "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+              "updateSpeed":      0.15   // DIctates the speed of the trail.
+          },
+          "LineRenderer": {
+            "startWidth": 0.5,
+            "endWidth": 0.1,
+            "widthMultiplier": 1.0,
+            "startColor": {
+                "r": 1.0,
+                "g": 0.0,
+                "b": 0.3,
+                "a": 1.0
+            },
+            "endColor":{
+                "r": 1.0,
+                "g": 0.1,
+                "b": 0.2,
+                "a": 1.0
+            }
+          },
+          "SeekingProjectile": {
+            "m_VisionConeAngle": 200.0,
+            "m_VisionRange": 50.0,
+            "m_TurnSpeed": 50,
+            "m_SeekType": 1,
+            "m_UpdateVisibleInterval": 0.1,
+            "m_ActivationDelay": 0.5,
+            "m_LockOntoTarget": true,
+            "m_ApplyRotationTowardsTarget": true,
+            "m_TargetingType" :  "RandomBlockOnVehicle"//"BestAimCabOrCentre"
+              },
+          "Projectile": {
+            "m_ExplodeOnTerrain": true,
+            "m_SingleImpact": true,
+            "m_RotateWithVelocity": true,
+            "m_IgnoreCollisionWithBarrel": true,
+            "m_ImpactSFXType": 2,//2
+            "m_FlightSFXType": 1,
+            "m_GravityScale": 0.1,
+            "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+              "Explosion": {
+                "m_ExplosionSize": 0, //This is an enum with values 0 1 and 2 for SFX
+                "m_EffectRadius": 3, //Yes let us clear the entire amazon forest
+                "m_EffectRadiusMaxStrength": 2, //Max Radius before the effect deals less damage outwards
+                "m_MaxDamageStrength": 125, //I think this should be lower
+                "m_MaxImpulseStrength": 100 //How hard to push things, explosion force
+              },
+              "UnityEngine.ParticleSystemRenderer": {
+                "lengthScale": 3
+              }
+            }
+            }
+          }
+        }
+      }
+  }

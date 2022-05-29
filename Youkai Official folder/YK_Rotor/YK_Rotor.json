@@ -1,0 +1,72 @@
+{
+      "Name": "Youkai Senkai Rotor",
+      "Description": "This moderate rotor is relatively strong and like the Kaze propeller, it has gold blades!",
+      "ID": 19105,
+    
+      "Faction": 0,
+      "Category": 8,
+      "Rarity": 2,
+      "Grade": 3,
+      "Price": 5520,
+      "HP": 1200,
+      "Mass": 4,
+    
+      "Recipe":  "45, 45, 45, 45, 43, 43, 57, 57",
+    
+      "IconName": "YK_Rotor.png",
+      "MeshName": null,
+      "ColliderMeshName": "YK_Rotor_Collider.obj",
+      
+      "BlockExtents":{"x": 5,"y": 1, "z": 5}, 
+    
+     "APs": [ 
+        { "x": 2,     "y": -0.5,    "z": 2  },
+        { "x": 2,     "y": 0.5,    "z": 2  }
+  
+      ],
+      "KeepReferenceRenderers": false,
+      "ReferenceOffset": {
+        "x": 3,
+        "y": 0,
+        "z": 1
+      }, 
+       "GamePrefabReference": "BF_Rotor_Small_313",
+       "DeathExplosionReference":  "HE_Block_Alt_01_111",
+       "SubObjects":[
+          {
+          "SubOverrideName": "m_BF_Rotor_Small_313_Base",
+          "MeshName": "YK_Rotor.obj",
+          "SubPosition": { "x": -1,  "y": 0,  "z": 1 },
+          "SubRotation": { "x": 0, "y": 0, "z": 0 },
+          "MeshTextureName": "YK_Texture 1.png", 
+          "MeshGlossTextureName": "YK_Texture 2.png",
+  
+          },
+         {
+          "SubOverrideName": "m_BF_Rotor_Small_313_Blades",
+             "MeshName": "YK_Rotor_Blades.obj",
+             "ColliderMeshName": "YK_Rotor_Blades_Collider.obj",
+             "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+             "SubRotation": { "x": 0, "y": 0, "z": 0 },
+             "MeshTextureName": "YK_Texture 1.png", 
+             "MeshGlossTextureName": "YK_Texture 2.png",
+         },
+         {
+         "SubOverrideName": "_spinner",
+             "SubPosition": { "x": 3,  "y": 0,  "z": 1 },
+             "SubRotation": { "x": 0, "y": 0, "z": 0 }
+       }
+      ],
+       
+     "JSONBLOCK": {
+      "GameObject|_fanJet": {
+        "FanJet": {
+           "force": 2500,
+           "backForce": 2000
+            }
+          },
+      "ModuleBooster": {
+          "m_BoosterAudioType": 4,
+          }
+      }
+    }

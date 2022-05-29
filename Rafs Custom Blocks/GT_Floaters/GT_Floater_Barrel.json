@@ -1,0 +1,80 @@
+{
+  "Name": "GreenTech Floater Barrel",
+  "Description": "When attached to a Tech, this tank heats Celestian Crystals contained within, sublimating these into Celestian Gas, which has high atmospheric buyoancy due to antigravity properties.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.",
+  "ID": 911271, 
+
+  "Faction": 1, 
+  "Category": 8, 
+  "Grade": 3, 
+  "Price": 6571,
+  "HP": 2000,
+  "Mass": 2,
+  "CenterOfMass": {"x": 0.5, "y": 0.5, "z": 0.5},
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "IconName": "GT_Floater_Barrel_Icon.png",
+  
+  "Recipe": "17, 17, 17, 17, 43, 43, 43, 43, 43, 45, 45, 49, 49",
+
+    "BlockExtents":
+  {
+    "x": 2,
+    "y": 2,
+    "z": 2
+  },
+  
+  "APs": [ 
+	{"x": 0,"y": 0,"z": -0.5},
+  {"x": 0,"y": 1,"z": -0.5},
+  {"x": 1,"y": 0,"z": -0.5},
+  {"x": 1,"y": 1,"z": -0.5},
+  {"x": 0,"y": 0,"z": 1.5},
+  {"x": 0,"y": 1,"z": 1.5},
+  {"x": 1,"y": 0,"z": 1.5},
+  {"x": 1,"y": 1,"z": 1.5}
+  ],
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+	"SubObjects": [
+	{
+    "MeshName": "GT_Floater_Barrel.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png",
+    "MeshEmissionTextureName": "GreenTech 3.png"
+	},
+  {
+    "SubOverrideName": "Collider",
+    "ColliderMeshName": "GT_Floater_Barrel_Collider.obj",
+    "layer": 8
+	}
+	],
+	
+	"Deserializer":{
+		"GameObject|Collider":{
+      "UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "localScale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      }
+    },
+    "MotionBlocks.ModuleFloater": {
+      "MaxHeight": 400,
+      "MaxStrength": 60,
+      "VelocityDampen": 0.25
+    }
+  } 
+}

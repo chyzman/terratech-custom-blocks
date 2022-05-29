@@ -1,0 +1,135 @@
+{
+  "Name": "Youkai Sakura Power Complex",
+  "Description": "This block collects local radiation from all sources and redirects it to power generating blocks to boost their productivity. In short, it's a power flower! It can even accept trace amounts of radiation from nuclear power cells to generate some power.",
+  "ID": 19108, 
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 6, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 4968,
+  "HP": 4500,
+  "Mass": 45,
+  "CenterOfMass": {"x": 1, "y": 1, "z": 1 },
+
+  "Recipe": "45, 45, 13, 13, 56, 56, 56",
+
+  "IconName": "YK_Large_Generator.png",
+
+  "MeshName": null,
+
+  "EmissionMode": 3, // No change = 0, Glow = 1, Glow at night = 2, Glow when anchored = 3
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+
+  "ColliderMeshName": null,
+
+  "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": 1, "y": 0, "z": 0 },
+    { "x": 2, "y": 0, "z": 0 },
+    { "x": 0, "y": 0, "z": 1 },
+    { "x": 1, "y": 0, "z": 1 },
+    { "x": 2, "y": 0, "z": 1 },
+    { "x": 0, "y": 0, "z": 2 },
+    { "x": 1, "y": 0, "z": 2 },
+    { "x": 2, "y": 0, "z": 2 },
+
+    { "x": 0, "y": 1, "z": 0 },
+    { "x": 1, "y": 1, "z": 0 },
+    { "x": 2, "y": 1, "z": 0 },
+    { "x": 0, "y": 1, "z": 1 },
+    { "x": 1, "y": 1, "z": 1 },
+    { "x": 2, "y": 1, "z": 1 },
+    { "x": 0, "y": 1, "z": 2 },
+    { "x": 1, "y": 1, "z": 2 },
+    { "x": 2, "y": 1, "z": 2 }
+  ],
+
+  "APs": [
+    { "x": 0, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 1 },
+    { "x": 1, "y": -0.5, "z": 0 },
+    { "x": 1, "y": -0.5, "z": 2 },
+    { "x": 2, "y": -0.5, "z": 1 }
+  ],
+
+  "GamePrefabReference": "GSO_Block_111",
+	"ReferenceOffset": { "x": 0, "y": 0, "z": 0 },
+	
+	"KeepReferenceRenderers": false,
+	
+	"SubObjects": [ 
+	{
+    "SubOverrideName":"Sakura Base",
+	"DestroyExistingColliders": true,
+  "MeshName": "YK_Large_Generator_Base.obj",
+	"MakeBoxCollider": true,
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+	"SubPosition":{"x":1,"y":0,"z":1},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	},
+  {
+    "SubOverrideName":"_spindle",
+	"DestroyExistingColliders": true,
+  "MeshName": "YK_Large_Generator_Spinner.obj",
+	"MakeBoxCollider": true,
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+	"SubPosition":{"x":1,"y":0,"z":1},
+	"SubRotation":{"x":0,"y":0,"z":0}
+	}
+	],
+
+	"JSONBLOCK": 
+	{
+    "FFW_TT_BuffBlock.ModuleBuffMk2": {
+      "m_BuffPath": [
+        "ModuleEnergy.m_OutputPerSecond","ModuleWeapon.m_RotateSpeed","ModuleWeaponGun.m_FiringData.m_MuzzleVelocity"],
+      "m_Strength": [1.2, 0.01, 0.2],
+      "m_AddAfter": [10, 0, 0],
+      "m_NeedsToBeAnchored": [true, true, true]
+    },
+    "GameObject|_spindle": {
+      "Spinner": {
+        "m_AutoSpin":true,
+        "m_SpinUpTime": 5,
+        "Speed": 0.1,
+        "m_Speed": 0.2,
+        "m_RotationAxis": {
+            "axis": 1
+          },
+        "m_SteerAxis": {
+            "axis": 1
+          }
+     }
+    },
+    "ModuleAudioProvider": {
+      "m_LoopedAdsrSFX": [
+        {
+          "SFXType": 39,
+          "NoteOn": false,
+          "AdditionalParams": null
+        }
+      ],
+      "m_SFXLookup": {
+        "Fabricator": {
+          "SFXType": 39,
+          "NoteOn": false,
+          "AdditionalParams": null
+        }
+      }
+    },
+    "ModuleAnchor": null,
+    "ModuleSpinWhenAnchored": {},
+     "ModuleEnergy": {
+      "m_Priority": -10,
+      "m_OutputPerSecond": 0,
+      "m_OutputEnergyType": 0,
+      "m_OutputConditions": 1,
+      "m_SequentialPowerUp": true,
+      "m_PowerUpDelay": 1,
+      "m_GeneratingSFXType": 1,
+       },
+  }
+  }

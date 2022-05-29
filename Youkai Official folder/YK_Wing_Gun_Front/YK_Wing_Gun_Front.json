@@ -1,0 +1,242 @@
+{
+  "Name": "Youkai Mikoto Type Wing Cannon",
+  "Description": "This small cannon is intended for the front of Youkai Wings. It shoots high velocity rounds, so hitting ground or air targets will be rather easy, but it lacks some damage in return.", //You can make multiple lines with \n
+  "ID": 19096, //A random ID that MUST be unique
+  //Original Creator: Saiko-Sama~!
+  //Tweaked by: Legionite | Thank you so much Legionite~!
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 4, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 4761,
+  "HP": 500,
+  "Mass": 2,
+
+  "Fragility": 1,
+  "IconName": "YK_Wing_Gun_Front.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": null, //Moved it to SubObjects so that it can be aligned- FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "Recipe": "45, 45, 45, 46, 46, 56", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+
+  /*  EITHER  */
+  "MeshTextureName": null, //FILE Name of image for texture, such as "texture.png". File can be anywhere and should be uniquely named
+  /*  OR  */
+  "MeshMaterialName": null, //Name of one of the GAME'S materials to use, such as "Corp_Main", "GSO_Main", "GeoCorp_Main", "Venture_Main", and "HE_Main". This material flashes and everything!
+
+
+  /*  OPTIONAL  */
+  "ColliderMeshName": "YK_Wing_Gun_Front_Collider.obj",
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+  
+  "Cells": [ 
+	{"x": 0, "y": 0, "z": 0}
+  ],
+  "APs": [
+    { "x": 0, "y": 0, "z": -0.5 }
+  ],
+
+  //
+  // Changed this to an existing weapon with one barrel so that the firing animation can work properly
+  //
+  "GamePrefabReference": "HE_Cannon_Battleship_216", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "SubObjects": [
+    {
+      "ObjectName": "GSO_Cannon_111_Barrel",
+      "MakeBoxCollider": true,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "YK_Wing_Gun_Front_Barrel.obj",
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+
+    },
+    {
+      "ObjectName": "Base",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "YK_Wing_Gun_Front_Base.obj",
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+    },
+    {
+      "ObjectName": "Mount",
+      "MakeBoxCollider": false,
+      "DestroyExistingRenderer": true,
+      "DestroyExistingColliders": true,
+      "MeshName": "YK_Wing_Gun_Front_Mount.obj",
+      "MeshTextureName": "YK_Texture 1.png", 
+      "MeshGlossTextureName": "YK_Texture 2.png",
+    },
+    {
+      "SubOverrideName": "_spawnBullet",
+      "SubPosition": { "x": 0, "y": -0.1, "z": 0.2 }
+    },
+    {
+      "SubOverrideName": "_smoke",
+      "SubPosition": { "x": 0, "y": 0.1, "z": 0.5 }
+    }
+  ],
+
+  "JSONBLOCK": { //Root GameObject
+      "GameObject|_gimbalBase": {
+        "UnityEngine.Transform": { //Placing the Autocannon where it belongs
+          "localPosition": { "x":0, "y": 0, "z":0 }
+        },
+        "GimbalAimer": { //Useful component - Horizontal Aiming
+          "rotationLimits": [-25, 25] //[-Left,+Right](Degrees)
+        },
+        "GameObject|_gimbalElev": {
+          "GimbalAimer": { //Useful component - Vertical Aiming
+            "rotationLimits": [-25, 25] //[-Up,+Down](Degrees)
+          },
+          "GameObject|Mount": { //GameObject in child
+        },          
+        "GameObject|_barrel": {
+          "UnityEngine.Transform": { //Moving the barrel
+            "localScale": { "x":0.15, "y":0.15, "z":0.15 }
+          },
+          "GameObject|_recoiler": {
+            "UnityEngine.Transform": { //Moving the barrel
+              "localScale": { "x":7.5 , "y":7.5 , "z":7.5 }
+            },
+            "GameObject|GSO_Cannon_111_Barrel": {
+              "UnityEngine.Transform": { //Moving the barrel
+                "localScale": { "x":1, "y":1, "z":1 }
+              }
+            }
+      }
+    }
+    }
+    }, //Back to GameObject
+
+    "ModuleWeapon": {
+      //"m_AimType": 0,
+      "m_RotateSpeed": 100.0,
+      //"m_ChangeTargetInteval": 0.5,
+      //"m_AutoFire": false,
+      //"m_PreventShootingTowardsFloor": false,
+      //"m_DeployOnHasTarget": false,
+      //"m_LimitedShootAngle": 90.0,
+      "m_ShotCooldown": 0,
+      "m_FireSFXType": 14
+    },
+    "ModuleWeaponGun": {
+      "m_ShotCooldown": 0.025,
+      "m_CooldownVariancePct": 0.0,
+      "m_FireControlMode": 0,
+      "m_BurstShotCount": 4,
+      "m_BurstCooldown": 0.5,
+      "m_ResetBurstOnInterrupt": true,
+      "m_SeekingRounds": false,
+      // "m_RegisterWarningAfter": 1.0,
+      // "m_ResetFiringTAfterNotFiredFor": 1.0,
+      // "m_HasSpinUpDownAnim": false,
+      // "m_HasCooldownAnim": false,
+      // "m_CanInterruptSpinUpAnim": false,
+      // "m_CanInterruptSpinDownAnim": false,
+      // "m_SpinUpAnimLayerIndex": 0,
+      "m_DeploySFXType": 0,
+      "m_FiringData": null,
+      "m_NumCannonBarrels": 1,
+    },
+    "FireData": { //Component, but with a catch
+      "m_MuzzleVelocity": 250, //SPEED - I am Speed. Bullet speed
+      "m_BulletSprayVariance": 0.05, //Innaccruate because GSO ZK-47 exists? Bullet inverse-accuracy
+      "m_BulletSpin": 0.0, //To give it more SPRAY
+      "m_KickbackStrength": 25, // Would you like to become a plane
+      "Instantiate|m_BulletCasingPrefab": null,
+      "Instantiate|m_BulletPrefab": { //Makes bullet unique, enters like "GameObject|m_BulletPrefab"
+        "UnityEngine.Transform": {"localScale": { "x":1, "y":1, "z":1 }},  // Size of Bullet    
+        "WeaponRound": { //Component because we are in GameObject right now
+          "m_DamageType" : 1, //What damage modifier the weapon does
+          "m_Damage": 50 //This may seem weak, but do keep in mind 40 rounds per second, faster than the HE Autocannon. This actually does something - edit damage values
+        },
+        "SmokeTrail":{
+          "numberOfPoints":   10.0,   // Dictates the length of the trail by telling the lineRenderer how many points to create while being spawned.
+          "spread":           0.0,   // Dictates how erratic the trail is.
+          "riseSpeed":        0.1,   // Dictates how fast the trail rises. This will make the trail act more like a smoke
+          "updateSpeed":      0.15,   // DIctates the speed of the trail.
+      },
+      "LineRenderer": {
+        "startWidth": 0.5,
+        "endWidth": 0.1,
+        "widthMultiplier": 1.0,
+        "startColor": {
+            "r": 1.0,
+            "g": 0.0,
+            "b": 0.3,
+            "a": 1.0
+        },
+        "endColor":{
+            "r": 1.0,
+            "g": 0.1,
+            "b": 0.2,
+            "a": 1.0
+        }
+      },
+        "Projectile": { //Another one (doot doooooot dododoot)
+          "m_ImpactSFXType" : "Cannon", //Makes for more intense hit noises
+          "Instantiate|m_Explosion": {
+            "Explosion": {
+              "m_ExplosionType": 3,
+              "m_EffectRadiusMaxStrength": 0,                    // Dictates the damage type of the explosion
+              "m_EffectRadius": 0,                    // Dictates the explosion's damage radius. The HE MK3 Battleship cannon's radius is 10.
+              "m_MaxDamageStrength":      0,          // The splash damage done
+              "m_MaxImpulseStrength":     0           // The strength of the knockback done by the explosion
+          },
+            "GameObject|Sparks": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0,
+                "maxParticles": 0
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionBright": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0,
+                "maxParticles": 0
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionDark": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0,
+                "maxParticles": 0
+                  }
+                }
+              }
+            },
+            "GameObject|ExplosionSmoke": { 
+              "UnityEngine.ParticleSystem": {
+                "main": {
+                  "m_ParticleSystem": {
+                    "startSize": 0,
+                "maxParticles": 0
+                  }
+                  }
+                }
+            }
+          }
+        }
+      }
+    }
+	}
+}

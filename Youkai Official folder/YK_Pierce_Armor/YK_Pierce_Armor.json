@@ -1,0 +1,81 @@
+// -- Make a copy of this file, change the ID, and modify the values shown to make your own block --
+// "PropertyName" : Value,
+// Only change the Value, and make sure it ends with a comma
+
+// Helpful site for https://danny-alexander.github.io/terratech-block-list/block-list.html
+{
+  "Name": "Youkai Pierce Armour Plate",
+  "Description": "A special armour plate with spikes! It still works as armour but now it also works as a ramming melee weapon.", //You can make multiple lines with \n
+  "ID": 19113, //A random ID that MUST be unique
+
+  "Faction": 1, //GSO = 1|0, GeoCorp = 2, EXP = 3, Venture = 4, HawkEye = 5, Special = 6, BetterFuture = 7
+  "Category": 2, //Control = 1, Standard = 2|0, Wheels = 3, Weapons = 4, Accessories = 5, Power = 6, Base = 7, Flight = 8
+  "Grade": 3, //The desired grade minus one
+  "Price": 2817, //The price is measured by sum of recipe value times 3
+  "HP": 1000, //A GSO one block has 250 health
+  "Mass": 2,
+  "Rarity": 1,
+  "Fragility": 0, //How likely the block is to fall off from being attacked. 2 is two times as likely, 0 is none at all. For example, SCUs do not fall off when attacked
+  "DamageableType": 1, // Standard = 0, Armour = 1, Rubber = 2, Volatile = 3, Shield = 4, Wood = 5, Rock = 6
+
+  "Recipe": "5, 5, 5, 43, 43, 43, 45, 45, 45, 45, 45, 45", // Separate chunk names or IDs with a comma. Not case sensitive.
+
+  "IconName": "YK_Pierce_Armor.png", //FILE Name of image, such as "icon.png". File can be anywhere and should be uniquely named
+
+  "MeshName": "YK_Pierce_Armor.obj", //FILE Name of mesh, such as "mesh.obj". File can be anywhere and should be uniquely named
+
+  "MeshTextureName": "YK_Texture 1.png", 
+  "MeshGlossTextureName": "YK_Texture 2.png", 
+
+  "ColliderMeshName": "YK_Pierce_Armor_Collider.obj", //FILE Name of the mesh, such as "collider.obj". Leaving as null will make an upright box collider relative to the mesh's extents
+  "SupressBoxColliderFallback": false, //Disable creation of BoxCollider. Useful for if a collider will be already provided
+
+  // X is right and left, Y is up and down, and Z is forward and backward
+
+ "Cells": [
+    { "x": 0, "y": 0, "z": 0 },
+    { "x": -1, "y": 0, "z": 0 }
+  ],
+
+  "APsOnlyAtBottom": false, //Make APs only on the bottom, or have all faces covered. IGNORED if "APs": is used. ONLY works with "BlockExtents":
+  /*  OR  */
+  "APs": [ //The location of APs on the block. Delete this or set to null if you'd rather use "APsOnlyAtBottom": with "BlockExtents": 
+
+    { "x": 0, "y": 0, "z": -0.5 },
+    { "x": -1, "y": 0, "z": -0.5 }
+
+  ],
+
+  // Delete /* and */ if using
+
+  //OPTIONAL
+  "GamePrefabReference": "GSO_Block_111", //Use a block prefab from the GAME'S RESOURCES as a base. For example, "GSOBlock(111)"
+  "KeepReferenceRenderers": false,
+  "ReferenceOffset": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  }, 
+  "SubObjects": [
+    {
+      "ObjectName":                 "Spikes",
+      "MeshName":                   "YK_Pierce_Armor_Spikes.obj",
+      "ColliderMeshName":           "YK_Pierce_Armor_Spikes_Collider.obj"
+    }
+  ],
+  "JSONBLOCK": {
+    "GameObject|Spikes": {
+      "UnityEngine.MeshCollider": { "sharedMesh": "YK_Pierce_Armor_Spikes_Collider.obj", "convex": true }
+    },
+    "ModuleDrill":{
+      "activeColliders": [                    // The list of colliders the weapon will use. This is required for the melee weapon to function
+        "Spikes/MeshCollider."             // Use the collider from above
+      ],
+      "m_SpinOnCollisionDuration": 1,
+      "impactDamageMultiplier": 10.0,         // Dictates the damage the weapon deals when hitting an enemy.
+      "m_DamageType": 6,                      // Dictates the damage type that the weapon will deal
+      "damagePerSecond": 500.0,
+      "scaleHitParticles": 1.0                // Dictates the size of the particles emitted when the weapon hits something. (Somehow doesn't work)
+    }
+  }
+}

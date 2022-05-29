@@ -1,0 +1,81 @@
+{
+  //I basically edited Saelem's Small Cascade Prop to make this block! Go check out Saelem Black and all of their awesome Black Labs blocks!
+    "Name": "Youkai Kaze N-B Propeller",
+    "Description": "Using some borrowed tech from the Hawkeye Black labs, this propeller has two inline fans for more force than something like the Venture Zero, but has less attachment points. You can mount it under a wing, mount a wing onto it, or maybe if you are clever enough, you could stack them together to make a fast inline engine!",
+    "ID": 19091,
+  
+    "Faction": 0,
+    "Category": 8,
+    "Rarity": 2,
+    "Grade": 3,
+    "Price": 6900,
+    "HP": 1000,
+    "Mass": 4.5,
+  
+    "Recipe":  "43, 43, 43, 43, 43, 43, 53, 53, 54, 57, 57",
+  
+    "IconName": "YK_Wing_Prop.png",
+    "MeshName": null,
+  
+    "Cells": [
+          {"x": 0, "y": 0, "z": -1},
+          {"x": 0, "y": 0, "z": 0},
+          {"x": 0, "y": 0, "z": 1},
+  
+    ],
+  
+   "APs": [ 
+      { "x": 0,     "y": 0.5,    "z": 0  },
+      { "x": 0,     "y": -0.5,    "z": 0  },
+
+
+      { "x": 0,     "y": 0.5,    "z": 1  },
+      { "x": 0,     "y": -0.5,    "z": 1  },
+
+
+      { "x": 0,     "y": 0.5,    "z": -1 },
+      { "x": 0,     "y": -0.5,    "z": -1  },
+
+
+    ],
+  
+     "GamePrefabReference": "VEN_Prop_Enclosed_113",
+  
+     "SubObjects":[
+        {
+        "SubOverrideName": "m_VEN_EnclosedProp_113",
+        "MeshName": "YK_Wing_Prop.obj",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 90, "y": 0, "z": 0 },
+        "ColliderMeshName": "YK_Wing_Prop_Collider.obj",
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+
+        },
+       {
+        "SubOverrideName": "m_VEN_EnclosedProp_blades_113",
+           "MeshName": "YK_Wing_Prop_Blades.obj",
+           "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+           "SubRotation": { "x": 90, "y": 0, "z": 0 },
+           "MeshTextureName": "YK_Texture 1.png", 
+           "MeshGlossTextureName": "YK_Texture 2.png",
+       },
+       {
+       "SubOverrideName": "_spinner",
+           "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+           "SubRotation": { "x": 0, "y": 0, "z": 0 }
+     }
+    ],
+     
+   "JSONBLOCK": {
+    "GameObject|_fanJet": {
+      "FanJet": {
+         "force": 2000,
+         "backForce": 1500
+          }
+        },
+    "ModuleBooster": {
+        "m_BoosterAudioType": 4,
+        }
+    }
+  }

@@ -1,0 +1,74 @@
+{
+    "Name": "Youkai Wireless Charger",
+    "Description": "This rather compact wireless charger can take power from one tech and transfer it to another. It has good range, slower arc speed and moderate arc power.",
+    "ID": 19106,
+  
+    "Faction": 0,
+    "Category": 6,
+    "Rarity": 2,
+    "Grade": 2,
+    "Price": 6633,
+    "HP": 1000,
+    "Mass": 5,
+  
+    "Recipe":  "45, 45, 45, 53, 53, 58",
+  
+    "IconName": "YK_Charger.png",
+    "MeshName": null,
+    "ColliderMeshName": "YK_Charger.obj",
+    
+    "Cells": [
+        { "x": 0, "y": 0,"z": 0 },
+        { "x": 0, "y": 0,"z": 1 }
+    ],
+   "APs": [
+      { "x": 0,  "y": 0.5, "z": 0  },
+      { "x": 0,  "y": 0.5, "z": 1  },
+      { "x": 0,  "y": -0.5, "z": 0  },
+      { "x": 0,  "y": -0.5, "z": 1  },
+
+      { "x": 0.5,  "y": 0, "z": 0  },
+      { "x": 0.5,  "y": 0, "z": 1  },
+      { "x": -0.5,  "y": 0, "z": 0  },
+      { "x": -0.5,  "y": 0, "z": 1  },
+
+      { "x": 0,  "y": 0, "z": -0.5  },
+      { "x": 0,  "y": 0, "z": 1.5  }
+
+    ],
+    "KeepReferenceRenderers": true,
+    "ReferenceOffset": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }, 
+     "GamePrefabReference": "VEN_RemoteCharger_111",
+     "DeathExplosionReference":  "HE_Block_Alt_01_111",
+     "SubObjects":[
+        {
+        "SubOverrideName": "m_VEN_RemoteCharger_111_Base",
+        "MeshName": "YK_Charger.obj",
+        "ColliderMeshName": "YK_Charger_Collider.obj",
+        "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+        "SubRotation": { "x": 0, "y": 0, "z": 0 },
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+
+        },
+       {
+        "SubOverrideName": "m_VEN_RemoteCharger_111_Pipes",
+        "DestroyExistingRenderer": true
+       }
+    ],
+     
+   "JSONBLOCK": {
+    "ModuleRemoteCharger": {
+        "m_ChargingRadius": 25.0,
+        "m_PowerTransferPerArc": 30.0,
+        "m_ArcFiringInterval": 0.6
+    },
+    "ModulePlacementZoneEffect": {
+        "m_Radius": 25.0
+    }
+    }
+  }

@@ -1,0 +1,81 @@
+{
+      "Name": "Youkai Tatsu Type Propeller",
+      "Description": "This front mounted propeller is strong and sturdy. It also has golden blades, what's not to love?",
+      "ID": 19093,
+    
+      "Faction": 0,
+      "Category": 8,
+      "Rarity": 2,
+      "Grade": 2,
+      "Price": 4116,
+      "HP": 700,
+      "Mass": 2,
+    
+      "Recipe":  "43, 43, 43, 43, 43, 53, 54, 57",
+    
+      "IconName": "YK_Front_Prop.png",
+      "MeshName": null,
+      "ColliderMeshName": "YK_Front_Prop_Collider.obj",
+      
+      "Cells": [
+        {"x": -1, "y": 1, "z": 0},
+        {"x": 0, "y": 1, "z": 0},
+        {"x": 1, "y": 1, "z": 0},
+
+        {"x": -1, "y": 0, "z": 0},
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 1, "y": 0, "z": 0},
+
+        {"x": -1, "y": -1, "z": 0},
+        {"x": 0, "y": -1, "z": 0},
+        {"x": 1, "y": -1, "z": 0}
+
+  ],
+    
+     "APs": [ 
+        { "x": 0,     "y": 0,    "z": -0.5  },
+        { "x": 0,     "y": 0,    "z": 0.5  }
+  
+  
+      ],
+    
+       "GamePrefabReference": "VEN_Prop_Nose_331",
+       "DeathExplosionReference":  "HE_Block_Alt_01_111",
+       "SubObjects":[
+          {
+          "SubOverrideName": "m_VEN_NoseProp_331_Base",
+          "MeshName": "YK_Front_Prop.obj",
+          "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+          "SubRotation": { "x": 90, "y": 0, "z": 0 },
+          "MeshTextureName": "YK_Texture 1.png", 
+          "MeshGlossTextureName": "YK_Texture 2.png",
+  
+          },
+         {
+          "SubOverrideName": "m_VEN_NoseProp_331_Prop",
+             "MeshName": "YK_Front_Prop_Blades.obj",
+             "ColliderMeshName": "YK_Front_Prop_Blades_Collider.obj",
+             "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+             "SubRotation": { "x": 90, "y": 0, "z": 0 },
+             "MeshTextureName": "YK_Texture 1.png", 
+             "MeshGlossTextureName": "YK_Texture 2.png",
+         },
+         {
+         "SubOverrideName": "_spinner",
+             "SubPosition": { "x": 0,  "y": 0,  "z": 0 },
+             "SubRotation": { "x": 0, "y": 0, "z": 0 }
+       }
+      ],
+       
+     "JSONBLOCK": {
+      "GameObject|_fanJet": {
+        "FanJet": {
+           "force": 2000,
+           "backForce": 1000
+            }
+          },
+      "ModuleBooster": {
+          "m_BoosterAudioType": 4,
+          }
+      }
+    }

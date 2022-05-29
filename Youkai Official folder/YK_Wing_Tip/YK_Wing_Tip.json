@@ -1,0 +1,111 @@
+{
+    //I basically edited Saelem's Knife Wings to make this block! Go check out Saelem Black and all of their awesome Black Labs blocks!
+      "Name": "Youkai Tenshi Tip Wing",
+      "Description": "This small wing can be attached to the ends of larger wings or used for rudders and tail wings.",
+      "ID": 19090,
+    
+      "Faction": 0,
+      "Category": 8,
+      "Rarity": 2,
+      "Grade": 2,
+      "Price": 1329,
+      "HP": 1000,
+      "Mass": 2,
+    
+      "Recipe":  "43, 43, 43, 45, 52, 52",
+    
+      "IconName": "YK_Wing_Tip.png",
+      "MeshName": null,
+      "ColliderMeshName": null,
+    
+      "Cells": [
+        {"x": 0, "y": 0, "z": 0},
+        {"x": 0, "y": 0, "z": 1},
+        {"x": 1, "y": 0, "z": 0},
+        {"x": 1, "y": 0, "z": 1}
+    
+      ],
+      
+      "APs": [ 
+        {"x": 1.5, "y": 0, "z": 0},
+        {"x": 1.5, "y": 0, "z": 1},
+      ],
+      
+      "DeathExplosionReference":  "HE_Block_Alt_01_111",
+       "GamePrefabReference": "BF_Wing_Medium_Outside_413",
+    
+       "SubObjects": [
+        {
+        "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Base",
+        "MeshName":            "YK_Wing_Tip.obj",
+        "ColliderMeshName":    "YK_Wing_Tip_Collider.obj",
+        "SubPosition":         { "x": 1,  "y": 0,  "z": 0 },
+        "SubRotation":         { "x": 0, "y": 90, "z": 0},
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        },  
+        {
+        "SubOverrideName":     "_Pivot",
+        "SubPosition":         { "x": 1,  "y": 0,  "z": 0 },
+        "SubRotation":         { "x": 0, "y": 0, "z": 0 },
+        },
+        {
+        "SubOverrideName":     "m_BF_Wing_Medium_Outside_413_Wing",
+        "MeshName":            "YK_Wing_Tip_Flap.obj",
+        "ColliderMeshName":    null,
+        "SubPosition":         { "x": 0,  "y": 0.0,  "z": 0 },
+        "SubRotation":         { "x": 0, "y": 90, "z": 0 },
+        "MeshTextureName": "YK_Texture 1.png", 
+        "MeshGlossTextureName": "YK_Texture 2.png",
+        },
+      ],
+       
+      "Deserializer": {
+        "GameObject|SmokeTrail": {
+          "UnityEngine.Transform": {
+            "localPosition": { "x": -0.4, "y": 0, "z": 0 },
+            "localRotation": { "x": 0, "y":0, "z": 0 }
+          },
+        "LineRenderer": {
+          "startColor":{
+            "r": 1.0,
+            "g": 0.3,
+            "b": 0.01,
+            "a": 0.05
+          },
+          "endColor":{
+            "r": 1.0,
+            "g": 0.3,
+            "b": 0.01,
+            "a": 0.01
+          },
+          "numPositions": 2,
+          "startWidth": 0.6,
+          "endWidth": 0.1,
+          "widthMultiplier": 1.0,
+          "numCornerVertices": 0,
+          "numCapVertices": 0
+        },
+        "SmokeTrail": {
+          "numberOfPoints": 5,
+          "updateSpeed": 0.07,
+          "riseSpeed": 0.1,
+          "spread": 0.1
+        }
+      },
+
+        "ModuleWing": {
+            "m_Aerofoils": [{
+               "liftStrength": 3,
+                "flapAngleRangeVisual": 10,
+                "flapAngleRangeActual": 10,
+              "flapTurnSpeed": 2
+            }],
+            "m_AttackAngleDamping": 10000.0,
+          "m_TrailMinVelocity": 14.0,
+          "m_TrailAlphaStrength": 0.02,
+          "m_TrailFadeSpeed": 0.1
+          }
+    }
+  }
+    

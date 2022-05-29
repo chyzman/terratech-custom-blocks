@@ -1,0 +1,120 @@
+{
+  "Name": "GreenTech Large Floater Tank",
+  "Description": "When attached to a Tech, this tank heats Celestian Crystals contained within, sublimating these into Celestian Gas, which has high atmospheric buyoancy due to antigravity properties.\nHowever, at higher altitudes it has decreased effect, due to the thin atmosphere.",
+  "ID": 911274, 
+
+  "Faction": 1, 
+  "Category": 8, 
+  "Grade": 4, 
+  "Price": 18093,
+  "HP": 4500,
+  "Mass": 6,
+  "CenterOfMass": {"x": 1.25, "y": 1.25, "z": 0.5},
+
+  "Fragility": 0,
+  "DamageableType": 0,
+  "Rarity": 0,
+  "EmissionMode": 1,
+
+  "IconName": "GT_Large_Floater_Tank_Icon.png",
+  
+  "Recipe": "17, 17, 17, 17, 17, 17, 17, 17, 49, 49, 49, 52, 52, 52, 52, 54, 54, 54, 54",
+
+  "CellMap":
+  [
+	[
+    "xxx ",
+    "xxxx",
+    "xxxx",
+    "xxxx"
+  ],
+  [
+    "xxx ",
+    "xxxx",
+    "xxxx",
+    "xxxx"
+  ]
+],
+  
+  "APs": [ 
+	{"x": 0,"y": 0,"z": -0.5},
+  {"x": 0,"y": 1,"z": -0.5},
+  {"x": 1,"y": 0,"z": -0.5},
+  {"x": 0,"y": 0,"z": 1.5},
+  {"x": 0,"y": 1,"z": 1.5},
+  {"x": 1,"y": 0,"z": 1.5},
+  {"x": 2,"y": 0,"z": -0.5},
+  {"x": 0,"y": 2,"z": -0.5},
+  {"x": 1,"y": 1,"z": -0.5},
+  {"x": 2,"y": 0,"z": 1.5},
+  {"x": 0,"y": 2,"z": 1.5},
+  {"x": 1,"y": 1,"z": 1.5},
+  {"x": 3,"y": 0,"z": -0.5},
+  {"x": 0,"y": 3,"z": -0.5},
+  {"x": 2,"y": 2,"z": -0.5},
+  {"x": 3,"y": 0,"z": 1.5},
+  {"x": 0,"y": 3,"z": 1.5},
+  {"x": 2,"y": 2,"z": 1.5},
+  {"x": 2,"y": 1,"z": -0.5},
+  {"x": 1,"y": 2,"z": -0.5},
+  {"x": 2,"y": 1,"z": 1.5},
+  {"x": 1,"y": 2,"z": 1.5},
+
+  {"x": -0.5,"y": 0,"z": 0},
+  {"x": -0.5,"y": 0,"z": 1},
+  {"x": -0.5,"y": 1,"z": 0},
+  {"x": -0.5,"y": 1,"z": 1},
+  {"x": 0,"y": -0.5,"z": 0},
+  {"x": 0,"y": -0.5,"z": 1},
+  {"x": 1,"y": -0.5,"z": 0},
+  {"x": 1,"y": -0.5,"z": 1},
+  {"x": -0.5,"y": 2,"z": 0},
+  {"x": -0.5,"y": 2,"z": 1},
+  {"x": 2,"y": -0.5,"z": 1},
+  {"x": 2,"y": -0.5,"z": 0},
+  {"x": -0.5,"y": 3,"z": 0},
+  {"x": -0.5,"y": 3,"z": 1},
+  {"x": 3,"y": -0.5,"z": 1},
+  {"x": 3,"y": -0.5,"z": 0}
+  ],
+
+  "GamePrefabReference": "GSO_Block_112",
+  "KeepRenderers": false, 
+  "KeepColliders": false,
+
+	"SubObjects": [
+	{
+    "MeshName": "GT_Large_Floater_Tank.obj",
+    "MeshTextureName": "GreenTech 1.png", 
+    "MeshGlossTextureName": "GreenTech 2.png", 
+    "MeshEmissionTextureName": "GreenTech 3.png"
+	},
+  {
+    "SubOverrideName": "Collider",
+    "ColliderMeshName": "GT_Floater_Tank_Collider.obj",
+    "layer": 8
+	}
+	],
+	
+	"Deserializer":{
+		"GameObject|Collider":{
+			"UnityEngine.Transform": {
+        "localPosition": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0
+        },
+        "localScale": {
+          "x": 2,
+          "y": 2,
+          "z": 1
+        }
+      }
+    },
+    "MotionBlocks.ModuleFloater": {
+      "MaxHeight": 400,
+      "MaxStrength": 180,
+      "VelocityDampen": 0.75
+    }
+  } 
+}

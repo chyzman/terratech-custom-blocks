@@ -82,7 +82,7 @@
           "r": 1,
           "g": 0.5,
           "b": 0.1,
-          "a": 1
+          "a": 0.25
         },
         "startLifetime": 2,
         "gravityModifier": 0.02,
